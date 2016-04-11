@@ -1,0 +1,26 @@
+﻿[
+  {
+    "outputFile": "styles/component/blockui.css",
+    "inputFile": "styles/component/blockui.scss"
+  },
+  {
+    "outputFile": "styles/component/test.css",
+    "inputFile": "styles/component/test.scss"
+  },
+  {
+    "outputFile": "styles/component/modals.css",
+    "inputFile": "styles/component/modals.scss"
+  },
+  {
+    "outputFile": "styles/component/dropdown.css",
+    "inputFile": "styles/component/dropdown.scss"
+  },
+  {
+    "outputFile": "styles/component/buttons.css",
+    "inputFile": "styles/component/buttons.scss"
+  },
+  {
+    "outputFile": "styles/component/tables.css",
+    "inputFile": "styles/component/tables.scss"
+  }
+]
