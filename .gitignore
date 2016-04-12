@@ -37,7 +37,8 @@ _ReSharper*/
 !/styles/base/reset.css
 !/styles/vendor/*
 
-
+*.min.js
+*/bundle/**/*.js
 
 
 
