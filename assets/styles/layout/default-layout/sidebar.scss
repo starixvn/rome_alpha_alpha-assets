@@ -1,0 +1,83 @@
+﻿
+.sidebar {
+    background: #f9f9f9;
+    -webkit-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    width: 256px;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    transition: width 0.7s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s;
+    z-index: 99;
+    //sidebar when collapsed
+    &.collapsed {
+        width: 46px;
+        transition: width 0.7s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s;
+
+        .userinfo {
+            display: none;
+        }
+
+        .profile-avatar {
+            display: inline-block;
+            height: 30px;
+            width: 32px;
+            margin: 8px 6px;
+        }
+
+        .navigation {
+            .main-tab {
+                display: none;
+            }
+
+            .extra-box {
+                display: block;
+                background: #f9f9f9;
+                height: 48px;
+                width: 46px;
+
+                .icon-extra {
+                    right: -22px;
+                    top: 12px;
+                    font-size: 14px;
+                }
+            }
+
+            .icon-user {
+                display: block;
+                left: 14px;
+                position: relative;
+            }
+
+            .accinfo-content, .menu-item a .icon-arrow-right, .panel-collapse .sub-menu {
+                display: none;
+            }
+        }
+        // hover over collapsed sidebar
+        &:hover {
+            width: 256px;
+            z-index: 1003;
+
+            .profile-avatar {
+                display: inline-block;
+                height: 48px;
+                width: 48px;
+                float: left;
+                margin: 18px;
+                cursor: pointer;
+            }
+
+            .main-tab, .userinfo, .accinfo-content, .menu-item a .icon-arrow-right, .panel-collapse .sub-menu,
+            .list-menu .menu-item .txt-item, list-menu .menu-item i {
+                display: block;
+            }
+
+            .extra-box, .icon-user {
+                display: none;
+            }
+        }
+    }
+}

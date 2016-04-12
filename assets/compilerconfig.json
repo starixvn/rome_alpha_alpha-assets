@@ -18,5 +18,37 @@
   {
     "outputFile": "styles/components/tables.css",
     "inputFile": "styles/components/tables.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/header.css",
+    "inputFile": "styles/layout/default-layout/header.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/navigation.css",
+    "inputFile": "styles/layout/default-layout/navigation.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/sidebar.css",
+    "inputFile": "styles/layout/default-layout/sidebar.scss"
+  },
+  {
+    "outputFile": "styles/vendors/bootstrap.css",
+    "inputFile": "styles/vendors/bootstrap.scss"
+  },
+  {
+    "outputFile": "styles/components/icon.css",
+    "inputFile": "styles/components/icon.scss"
+  },
+  {
+    "outputFile": "styles/themes/master.css",
+    "inputFile": "styles/themes/master.scss"
+  },
+  {
+    "outputFile": "styles/themes/super.css",
+    "inputFile": "styles/themes/super.scss"
+  },
+  {
+    "outputFile": "styles/base/scaffolding.css",
+    "inputFile": "styles/base/scaffolding.scss"
   }
 ]

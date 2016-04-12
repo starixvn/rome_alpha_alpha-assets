@@ -1,0 +1,53 @@
+﻿.icon {
+    position: relative;
+    top: 2px;
+    cursor: pointer;
+    font-size: 17px;
+    margin-right: 5px;
+}
+
+.icon-add {
+    padding-right: 8px;
+    font-size: 16px;
+}
+
+.icon-flag {
+    background: url(Images/flag_sprite.png) no-repeat;
+    display: inline-block;
+    height: 12px;
+    width: 17px;
+}
+
+.langFlag-en-us {
+    background-position: 0 0;
+}
+
+.langFlag-zh-tw {
+    background-position: 0 -12px;
+}
+
+.langFlag-zh-cn {
+    background-position: 0 -12px;
+}
+
+.langFlag-ko-kr {
+    background-position: 0 -51px;
+    height: 13px;
+}
+
+.langFlag-th-th {
+    background-position: 0 -39px;
+}
+
+.langFlag-ja-jp {
+    background-position: 0 -26px;
+}
+
+.langFlag-vi-vn {
+    background-position: 0 -65px;
+}
+
+.icon-time {
+    cursor: default;
+    opacity: 0.8;
+}

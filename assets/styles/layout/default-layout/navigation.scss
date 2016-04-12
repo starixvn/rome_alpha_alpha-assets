@@ -1,0 +1,43 @@
+﻿
+.navigation {
+    position: relative;
+    height: calc(100% - 88px);
+
+    .icon {
+        color: #333;
+    }
+
+    .main-tab {
+        overflow: hidden;
+
+        li {
+            float: left;
+            width: 50%;
+            background: #5c1218;
+
+            a {
+                text-transform: uppercase;
+                text-decoration: none;
+                display: block;
+                height: 40px;
+                line-height: 40px;
+                text-align: center;
+                font-weight: bold;
+                color: #fff;
+                white-space: nowrap;
+            }
+
+            &.active {
+                background: #f9f9f9;
+
+                a {
+                    color: #5c1218;
+                }
+            }
+        }
+    }
+
+    .extra-box {
+        display: none;
+    }
+}

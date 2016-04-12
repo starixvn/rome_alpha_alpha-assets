@@ -1,0 +1,27 @@
+﻿html, body {
+    height: 100%;
+    width: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Arial;
+    font-size: 12px !important;
+    overflow: hidden;
+}
+
+a, a:focus, a:active, a:target, a:hover {
+    outline: none;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.center {
+    text-align: center;
+}
+
+.display-none {
+    display: none;
+}

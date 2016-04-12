@@ -1,0 +1,56 @@
+[
+  {
+    "outputFileName": "bundle/main-site/agent-main.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors/bootstrap.css",
+      "styles/vendors/bootstrap-material-design.css",
+      "styles/vendors/ripples.css",
+      "styles/vendors/jquery.mCustomScrollbar.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding.css",
+      "styles/components/icon.css",
+      "styles/components/modals.css",
+      "styles/layout/default-layout/header.css",
+      "styles/layout/default-layout/navigation.css",
+      "styles/layout/default-layout/sidebar.css",
+      "styles/themes/agent.css"
+    ]
+  },
+  {
+    "outputFileName": "bundle/main-site/master-main.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors/bootstrap.css",
+      "styles/vendors/bootstrap-material-design.css",
+      "styles/vendors/ripples.css",
+      "styles/vendors/jquery.mCustomScrollbar.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding.css",
+      "styles/components/icon.css",
+      "styles/components/modals.css",
+      "styles/layout/default-layout/header.css",
+      "styles/layout/default-layout/navigation.css",
+      "styles/layout/default-layout/sidebar.css",
+      "styles/themes/master.css"
+    ]
+  }, 
+  {
+    "outputFileName": "bundle/main-site/super-main.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors/bootstrap.css",
+      "styles/vendors/bootstrap-material-design.css",
+      "styles/vendors/ripples.css",
+      "styles/vendors/jquery.mCustomScrollbar.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding.css",
+      "styles/components/icon.css",
+      "styles/components/modals.css",
+      "styles/layout/default-layout/header.css",
+      "styles/layout/default-layout/navigation.css",
+      "styles/layout/default-layout/sidebar.css",
+      "styles/themes/super.css"
+    ]
+  }
+]

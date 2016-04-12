@@ -1,0 +1,161 @@
+﻿
+.header {
+    position: relative;
+    z-index: 90;
+}
+/********************************** Header Navigation ************************************/
+.header-nav {
+    height: 48px;
+    margin-bottom: 0;
+
+    .icon-collapse {
+        display: inline-block;
+        padding: 16px 15px;
+        cursor: pointer;
+        font-size: 17px;
+        color: #fff;
+    }
+
+    .old-view-text {
+        cursor: pointer;
+    }
+
+    .list-top {
+        float: right;
+        color: #fff;
+        font-size: 13px;
+
+        .icon-swap-horizontal, .icon-squares, .icon-logout {
+            opacity: 0.8;
+        }
+
+        > li {
+            display: inline-block;
+            padding: 15px 10px;
+            position: relative;
+
+            .txt-top {
+                opacity: 0.8;
+            }
+
+            &.dropdown {
+                margin: 0;
+                padding: 0;
+
+                > a {
+                    padding: 15px;
+                    opacity: 0.8;
+
+                    &.language-selector-container {
+                        margin-top: 2px;
+
+                        .icon-flag {
+                            margin-right: 8px;
+                        }
+                    }
+                }
+
+                .dropdown-menu {
+                    &.list-setting {
+                        right: 0;
+                        left: auto;
+                    }
+
+                    li > a {
+                        font-size: 13px;
+                    }
+                }
+            }
+
+            .list-setting, .list-language {
+                -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+                -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+                box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+                background: #fff;
+                color: #5c1218;
+
+                > li {
+                    a {
+                        display: block;
+                        padding: 6px 15px;
+                        font-weight: 600;
+                        color: #333;
+                        cursor: pointer;
+
+                        .icon-flag {
+                            margin-right: 8px;
+                        }
+
+                        .icon {
+                            position: relative;
+                            top: 1px;
+                            margin-right: 10px;
+                        }
+                    }
+
+                    &:hover {
+                        background: #ddd;
+
+                        a {
+                            text-decoration: none;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/********************************** Header Notification *************************************/
+.header-msg {
+    background: #fff;
+    height: 40px;
+    padding: 10px 0;
+    position: relative;
+    -webkit-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
+    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
+
+    .icon-home {
+        padding: 11px 15px;
+    }
+
+    .nav-iconbox {
+        position: absolute;
+        right: 16px;
+        top: 8px;
+    }
+
+    .marquee-box {
+        float: left;
+        padding: 0 10px;
+    }
+
+    .maquee {
+        color: #045ace;
+        font-size: 13px;
+    }
+
+    .live-message, .private-message {
+        cursor: pointer;
+    }
+
+
+    .email-box {
+        display: inline-block;
+        position: relative;
+        margin-top: 2px;
+
+        .value {
+            -webkit-border-radius: 50%;
+            -moz-border-radius: 50%;
+            border-radius: 50%;
+            background: #da1625;
+            color: #fff;
+            padding: 2px 5px;
+            position: absolute;
+            top: -6px;
+            right: -4px;
+        }
+    }
+}

@@ -1,0 +1,21 @@
+﻿@import "../abstracts/_agent-variables.scss";
+
+.customer-profile {
+    background: $text-color none repeat scroll 0 0;
+}
+
+.sidebar .main-tab li {
+    background: $text-color none repeat scroll 0 0;
+}
+
+.header-nav {
+    background: $background-color url($header-background) no-repeat scroll 0 0;
+}
+
+.icon-home, .icon-add, .icon-message  {
+    color: $text-color;
+}
+
+.sidebar .main-tab li.active a {
+    color: $text-color;
+}
