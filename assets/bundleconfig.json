@@ -34,7 +34,7 @@
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/master.css"
     ]
-  }, 
+  },
   {
     "outputFileName": "bundle/main-site/super-main.css",
     "inputFiles": [
@@ -51,6 +51,18 @@
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundle/main-site/default.js",
+    "inputFiles": [
+      "js/jquery/jquery-1.11.3.js",
+      "js/bootstrap/bootstrap.js",
+      "js/scrollbar/jquery.mCustomScrollbar.js",
+      "js/bootstrap-material/material.js",
+      "js/bootstrap-material/ripples.js",
+      "js/moment/moment-with-locales.js",
+      "js/jquery/jquery.cookie.js"
     ]
   }
 ]
