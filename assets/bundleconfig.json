@@ -3,8 +3,8 @@
     "outputFileName": "bundle/main-site/agent-main.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors/bootstrap.css",
-      "styles/vendors/bootstrap-material-design.css",
+      "styles/vendors-extensions/site-main/bootstrap-ex.css",
+      "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
       "styles/fonts/iconalpha/style.css",
@@ -21,8 +21,8 @@
     "outputFileName": "bundle/main-site/master-main.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors/bootstrap.css",
-      "styles/vendors/bootstrap-material-design.css",
+      "styles/vendors-extensions/site-main/bootstrap-ex.css",
+      "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
       "styles/fonts/iconalpha/style.css",
@@ -39,8 +39,8 @@
     "outputFileName": "bundle/main-site/super-main.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors/bootstrap.css",
-      "styles/vendors/bootstrap-material-design.css",
+     "styles/vendors-extensions/site-main/bootstrap-ex.css",
+      "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
       "styles/fonts/iconalpha/style.css",

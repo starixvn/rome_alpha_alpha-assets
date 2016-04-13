@@ -54,5 +54,13 @@
   {
     "outputFile": "styles/themes/agent.css",
     "inputFile": "styles/themes/agent.scss"
+  },
+  {
+    "outputFile": "styles/vendors-extensions/site-main/bootstrap-ex.css",
+    "inputFile": "styles/vendors-extensions/site-main/bootstrap-ex.scss"
+  },
+  {
+    "outputFile": "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
+    "inputFile": "styles/vendors-extensions/site-main/bootstrap-material-ex.scss"
   }
 ]
