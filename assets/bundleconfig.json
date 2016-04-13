@@ -1,6 +1,6 @@
 [
   {
-    "outputFileName": "bundle/main-site/agent-main.css",
+    "outputFileName": "bundles/site-main/agent.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-main/bootstrap-ex.css",
@@ -18,7 +18,7 @@
     ]
   },
   {
-    "outputFileName": "bundle/main-site/master-main.css",
+    "outputFileName": "bundles/site-main/master.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-main/bootstrap-ex.css",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "outputFileName": "bundle/main-site/super-main.css",
+    "outputFileName": "bundles/site-main/super.css",
     "inputFiles": [
       "styles/base/reset.css",
      "styles/vendors-extensions/site-main/bootstrap-ex.css",
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "outputFileName": "bundle/main-site/default.js",
+    "outputFileName": "bundles/site-main/default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/bootstrap.js",

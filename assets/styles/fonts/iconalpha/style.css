@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Iconalpha';
-    src:    url('fonts/Iconalpha.eot?tdepgw');
-    src:    url('fonts/Iconalpha.eot?tdepgw#iefix') format('embedded-opentype'),
-        url('fonts/Iconalpha.ttf?tdepgw') format('truetype'),
-        url('fonts/Iconalpha.woff?tdepgw') format('woff'),
-        url('fonts/Iconalpha.svg?tdepgw#Iconalpha') format('svg');
+    src:    url('fonts/Iconalpha.eot?sg4hu4');
+    src:    url('fonts/Iconalpha.eot?sg4hu4#iefix') format('embedded-opentype'),
+        url('fonts/Iconalpha.ttf?sg4hu4') format('truetype'),
+        url('fonts/Iconalpha.woff?sg4hu4') format('woff'),
+        url('fonts/Iconalpha.svg?sg4hu4#Iconalpha') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,19 +24,58 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-arrow-left:before {
-    content: "\e938";
+.icon-betsandforecast:before {
+    content: "\e946";
 }
-.icon-arrow-right2:before {
-    content: "\e939";
+.icon-arrow-down-bold-circle-outline:before {
+    content: "\e945";
 }
-.icon-alert:before {
-    content: "\e937";
-}
-.icon-play:before {
-    content: "\e936";
+.icon-table-edit1:before {
+    content: "\e944";
 }
 .icon-star:before {
+    content: "\e943";
+}
+.icon-chevron-left:before {
+    content: "\e93f";
+}
+.icon-skip-previous:before {
+    content: "\e940";
+}
+.icon-skip-next:before {
+    content: "\e941";
+}
+.icon-chevron-right:before {
+    content: "\e942";
+}
+.icon-check-circle:before {
+    content: "\e93b";
+}
+.icon-alert-circle:before {
+    content: "\e93c";
+}
+.icon-alert:before {
+    content: "\e93d";
+}
+.icon-close-circle:before {
+    content: "\e93e";
+}
+.icon-eye:before {
+    content: "\e939";
+}
+.icon-view-grid:before {
+    content: "\e93a";
+}
+.icon-pencil-box-outline:before {
+    content: "\e938";
+}
+.icon-border-color:before {
+    content: "\e937";
+}
+.icon-content-copy:before {
+    content: "\e936";
+}
+.icon-printer:before {
     content: "\e935";
 }
 .icon-swap-horizontal:before {
