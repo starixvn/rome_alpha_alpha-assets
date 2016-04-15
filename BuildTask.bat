@@ -9,7 +9,7 @@
 
 @set currentFolder=%cd%
 @set configFolder=%currentFolder%\assets
-@set visualStudioExtensions=%UserProfile%\AppData\Local\Microsoft\VisualStudio\14.0\Extensions
+@set visualStudioExtensions=%UserProfile%\AppData\BuildExternsions
 
 @set bundleConfigFile=bundleconfig.json
 @set compilerConfigFile=compilerconfig.json
@@ -21,7 +21,7 @@
 @call :FindWebCompilerApp webCompilerApp
 
 @cd %configFolder%
-@for %%f in (*) do (	
+@for %%f in (*) do (
 	@if /i "%%f"=="%compilerConfigFile%" (
 		@echo "Compile %%f"
 		@call !webCompilerApp! "%configFolder%\%%f"
@@ -32,38 +32,10 @@
 	@if /i "%%f"=="%bundleConfigFile%" (
 		@echo "Bundle&Minify %%f"
 		@call !bundleAndMinifyApp! "%configFolder%\%%f"
-	)		
-)
-
-@pause
-
-:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
-:FindBundlerMinifierApp bundleAndMinifyApp
-
-@for /d %%d in (%visualStudioExtensions%\*) do (	
-	@set folder=%%d\
-	@set bundleApp=!folder!BundlerMinifier.exe
-	@for %%f in (!folder!*) do (
-		@if /i "%%f"=="!bundleApp!" (
-			@set bundleAndMinifyApp=%%f
-			@goto :breakFindBundlerMinifierApp
-		)	
 	)	
 )
 
-:breakFindBundlerMinifierApp
-
-(
-	endLocal 
-	@if "%~1" NEQ "" (
-		set %~1=%bundleAndMinifyApp%
-	)
-)
-
-
-exit /b
-
-
+@pause
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :FindWebCompilerApp webCompilerApp
@@ -85,6 +57,33 @@ exit /b
 	endLocal 
 	@if "%~1" NEQ "" (
 		set %~1=%webCompilerApp%
+	)
+)
+
+
+exit /b
+
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:FindBundlerMinifierApp bundleAndMinifyApp
+
+@for /d %%d in (%visualStudioExtensions%\*) do (	
+	@set folder=%%d\
+	@set bundleApp=!folder!BundlerMinifier.exe
+	@for %%f in (!folder!*) do (
+		@if /i "%%f"=="!bundleApp!" (
+			@set bundleAndMinifyApp=%%f
+			@goto :breakFindBundlerMinifierApp
+		)	
+	)	
+)
+
+:breakFindBundlerMinifierApp
+
+(
+	endLocal 
+	@if "%~1" NEQ "" (
+		set %~1=%bundleAndMinifyApp%
 	)
 )
 
