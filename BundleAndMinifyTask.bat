@@ -21,16 +21,18 @@
 @call :FindWebCompilerApp webCompilerApp
 
 @cd %configFolder%
-@for %%f in (*) do (
-	@if /i "%%f"=="%bundleConfigFile%" (
-		@echo "Bundle&Minify %%f"
-		@call !bundleAndMinifyApp! "%configFolder%\%%f"
-	)	
-	
+@for %%f in (*) do (	
 	@if /i "%%f"=="%compilerConfigFile%" (
 		@echo "Compile %%f"
 		@call !webCompilerApp! "%configFolder%\%%f"
 	)	
+)
+
+@for %%f in (*) do (
+	@if /i "%%f"=="%bundleConfigFile%" (
+		@echo "Bundle&Minify %%f"
+		@call !bundleAndMinifyApp! "%configFolder%\%%f"
+	)		
 )
 
 @pause
