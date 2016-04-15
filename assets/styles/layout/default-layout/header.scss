@@ -61,7 +61,6 @@
                     }
 
                     &.language-selector-container {
-                        margin-top: 2px;
 
                         .icon-flag {
                             margin-right: 8px;
@@ -85,14 +84,14 @@
                 -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
                 -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
                 box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-                background: $text-color;
+                border-radius: 0;
+                background: #fff;
                 color: #5c1218;
 
                 > li {
                     a {
                         display: block;
-                        padding: 6px 15px;
-                        font-weight: 600;
+                        padding: 8px 15px;
                         color: #333;
                         cursor: pointer;
 
