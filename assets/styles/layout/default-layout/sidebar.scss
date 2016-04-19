@@ -14,8 +14,8 @@
     z-index: 99;
     //sidebar when collapsed
     &.collapsed {
-        width: 46px;
-        transition: width 0.7s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s;
+        width: 48px;
+        transition: width 0.5s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s;
 
         .userinfo {
             display: none;
@@ -29,15 +29,16 @@
         }
 
         .navigation {
+            width: 48px;
             .main-tab {
                 display: none;
             }
 
             .extra-box {
                 display: block;
-                background: #f9f9f9;
+                background: #fff;
                 height: 48px;
-                width: 46px;
+                width: 48px;
 
                 .icon-extra {
                     right: -22px;
@@ -61,10 +62,15 @@
             width: 256px;
             z-index: 1003;
 
+            .navigation {
+                width: 256px;
+            }
             .profile-avatar {
                 display: inline-block;
-                height: 48px;
-                width: 48px;
+                height: 50px;
+                width: 50px;
+                border: 3px solid rgba(255, 255, 255, 0.3);
+                border-radius: 50%;
                 float: left;
                 margin: 18px;
                 cursor: pointer;

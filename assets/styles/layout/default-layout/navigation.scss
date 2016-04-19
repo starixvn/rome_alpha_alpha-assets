@@ -1,7 +1,9 @@
 ﻿
 .navigation {
-    position: relative;
-    height: calc(100% - 88px);
+    position: fixed;
+    top: 88px;
+    bottom: 0;
+    width: 256px;
 
     .icon {
         color: #333;
