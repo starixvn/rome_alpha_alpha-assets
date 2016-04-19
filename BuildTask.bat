@@ -9,7 +9,7 @@
 
 @set currentFolder=%cd%
 @set configFolder=%currentFolder%\assets
-@set visualStudioExtensions=%UserProfile%\AppData\BuildExternsions
+@set visualStudioExtensions=%UserProfile%\AppData\Local\Microsoft\VisualStudio\14.0\Extensions
 
 @set bundleConfigFile=bundleconfig.json
 @set compilerConfigFile=compilerconfig.json
