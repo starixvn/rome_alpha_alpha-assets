@@ -11,12 +11,13 @@
 @set configFolder=%currentFolder%\assets
 @set visualStudioExtensions=%UserProfile%\AppData\Local\Microsoft\VisualStudio\14.0\Extensions
 
-@set bundleConfigFile=bundleconfig.json
 @set compilerConfigFile=compilerconfig.json
+@set bundleConfigFile=bundleconfig.json
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 @echo off
 @setlocal EnableDelayedExpansion
+@call :CleanSourceFolder
 @call :FindBundlerMinifierApp bundleAndMinifyApp
 @call :FindWebCompilerApp webCompilerApp
 
@@ -35,6 +36,12 @@
 	)	
 )
 
+@exit /b 0
+
+:::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
+:CleanSourceFolder 
+@git clean -d -x -f
+exit /b
 
 :::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::::
 :FindWebCompilerApp webCompilerApp
