@@ -34,7 +34,11 @@
         color: $text-color;
         font-size: 13px;
 
-        .icon-swap-horizontal, .icon-squares, .icon-logout {
+        .icon-squares, .icon-logout {
+            opacity: 0.8;
+            margin-right: 0;
+        }
+        .icon-swap-horizontal {
             opacity: 0.8;
         }
 
