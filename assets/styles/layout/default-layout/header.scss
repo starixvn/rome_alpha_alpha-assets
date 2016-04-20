@@ -164,15 +164,16 @@
         margin-top: 2px;
 
         .value {
-            -webkit-border-radius: 50%;
-            -moz-border-radius: 50%;
-            border-radius: 50%;
+            -webkit-border-radius: 2px;
+            -moz-border-radius: 2px;
+            border-radius: 2px;
             background: #da1625;
             color: $text-color;
-            padding: 2px 5px;
+            font-size: 11px;
+            padding: 0 2px;
             position: absolute;
-            top: -6px;
-            right: -4px;
+            top: -7px;
+            right: -5px;
         }
     }
 }
