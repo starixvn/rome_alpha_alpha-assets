@@ -56,8 +56,12 @@
     {
         "outputFileName": "bundles/site-main/default.js",
         "inputFiles": [
-            "js/libs/jquery/jquery-1.11.3.js",
-            "js/libs/bootstrap/bootstrap.js",
+          "js/libs/jquery/jquery-1.11.3.js",
+          "js/libs/bootstrap/button.js",
+          "js/libs/bootstrap/dropdown.js",
+          "js/libs/bootstrap/modal.js",
+          "js/libs/bootstrap/tooltip.js",
+
             "js/libs/bootstrap-material/material.js",
             "js/libs/bootstrap-material/ripples.js",
             "js/libs/jquery/jquery.cookie.js",
