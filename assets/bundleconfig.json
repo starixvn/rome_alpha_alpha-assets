@@ -62,7 +62,8 @@
             "js/libs/bootstrap-material/ripples.js",
             "js/libs/jquery/jquery.cookie.js",
             "js/components/scrollbar/jquery.mCustomScrollbar.js",
-            "js/libs/jQuery-tinyDraggable/jquery.tiny-draggable.js"
+            "js/libs/jQuery-tinyDraggable/jquery.tiny-draggable.js",
+            "js/components/bootbox/bootbox.js"
         ]
     }
 ]
