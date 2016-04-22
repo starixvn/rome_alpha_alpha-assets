@@ -1,4 +1,7 @@
-﻿#helpModal {
+﻿@import '../abstracts/_variables.scss';
+@import '../components/buttons.scss';
+
+#helpModal {
     .modal-header {
         padding: 10px 15px;
         #myModalLabel {
@@ -11,52 +14,83 @@
     }
 }
 
-#page-popup {
+#page-popup, .modal {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
     height: auto;
-    .modal-dialog {
-        margin: 0 auto;
-        &.ex-modal {
-            width: 100%;
-            height: 100%;
-        }
-    }
+    
+}
 
-    .modal-content {
-        border-radius: 2px;        
-        margin: auto;
+.modal-dialog {
+    margin: 0 auto;
+    &.ex-modal {
+        width: 100%;
         height: 100%;
-
-        .modal-header {
-            padding: 0 15px;
-            border-bottom: none;
-            .icon-close {
-                margin-right: 0;
-                color: #333;
-                opacity: 1;
-                font-size: 18px;
-                top: 10px;
-                right: -4px;
-            }
-
-            .modal-title {
-                border-bottom: 1px solid #dfdfdf;
-                color: #333;
-                font-weight: 700;
-                padding: 10px 0;
-                font-size: 13px;
-                .popup-title:empty {
-                    height: 20px;
-                    display: block;
-                }
-            }
-        }
-
-        .modal-body {
-            padding: 2px 16px 8px;
-            line-height: 22px;
-            overflow: auto;
-        }
     }
 }
 
+.modal-content {
+    border-radius: 2px;        
+    margin: auto;
+    height: 100%;
+
+    .modal-header {
+        padding: 0 15px;
+        border-bottom: none;
+        .icon-close {
+            margin-right: 0;
+            color: #333;
+            opacity: 1;
+            font-size: 18px;
+            top: 10px;
+            right: -4px;
+        }
+
+        .modal-title {
+            border-bottom: 1px solid #dfdfdf;
+            color: #333;
+            font-weight: 700;
+            padding: 10px 0;
+            font-size: 13px;
+            .popup-title:empty {
+                height: 20px;
+                display: block;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 2px 16px 8px;
+        line-height: 22px;
+        overflow: auto;
+    }
+
+    .modal-footer {
+        padding: 0 16px;
+    }
+}
+
+/*********************************/
+/* Bootboxjs*/
+/*********************************/
+.bootbox {
+    .modal-body {
+        padding: 16px 17px 12px;
+    }
+
+    .modal-footer {
+        .btn {
+            margin: 8px;
+            text-transform: capitalize;
+            font-size: $font-size;
+        }
+
+        button.btn.btn-primary {
+            margin-right: 0;
+            @extend .btn-submit;
+        }
+
+        button.btn.btn-default {
+            @extend .btn-cancel;
+        }
+    }
+}

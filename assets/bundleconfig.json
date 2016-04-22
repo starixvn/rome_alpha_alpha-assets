@@ -9,7 +9,7 @@
             "styles/vendors/jquery.mCustomScrollbar.css",
             "styles/fonts/iconalpha/style.css",
             "styles/base/scaffolding.css",
-            "styles/components/icon.css",
+          "styles/components/icon.css",
             "styles/components/modals.css",
             "styles/layout/default-layout/header.css",
             "styles/layout/default-layout/navigation.css",

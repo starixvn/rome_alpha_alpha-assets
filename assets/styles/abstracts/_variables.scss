@@ -4,3 +4,7 @@ $btn-default-color: #e1e1e1;
 $btn-submit-color: #0b599c;
 $btn-refresh-color: #1bac69;
 
+$btn-cancel-bg: #909090;
+$btn-cancel-color: #fff;
+$btn-cancel-bg-hover: darken($btn-cancel-bg, 5%);
+$btn-cancel-color-hover: #fff;
