@@ -5,12 +5,10 @@
     bottom: 0;
     width: 256px;
 
-    .icon {
-        color: #333;
-    }
 
     .main-tab {
         overflow: hidden;
+        margin-bottom: 16px;
 
         li {
             float: left;
@@ -21,8 +19,8 @@
                 text-transform: uppercase;
                 text-decoration: none;
                 display: block;
-                height: 40px;
-                line-height: 40px;
+                height: 36px;
+                line-height: 36px;
                 text-align: center;
                 font-weight: bold;
                 color: #fff;

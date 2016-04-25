@@ -16,6 +16,7 @@
         cursor: pointer;
         font-size: 17px;
         color: $text-color;
+        opacity: 0.8;
     }
 
     .old-view-text {
@@ -44,19 +45,20 @@
 
         > li {
             display: inline-block;
-            padding: 15px 10px;
+            padding: 14px 10px 13px;
             position: relative;
 
             .txt-top {
                 opacity: 0.8;
             }
 
+
             &.dropdown {
                 margin: 0;
                 padding: 0;
 
                 > a {
-                    padding: 15px;
+                    padding: 15px 15px 13px;
                     opacity: 0.8;
                     color: $text-color;
 
@@ -85,9 +87,9 @@
             }
 
             .list-setting, .list-language {
-                -webkit-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-                -moz-box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
-                box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+                -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
                 border-radius: 0;
                 background: #fff;
                 color: #5c1218;

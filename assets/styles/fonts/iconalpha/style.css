@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Iconalpha';
-    src:    url('fonts/Iconalpha.eot?84oeeq');
-    src:    url('fonts/Iconalpha.eot?84oeeq#iefix') format('embedded-opentype'),
-        url('fonts/Iconalpha.ttf?84oeeq') format('truetype'),
-        url('fonts/Iconalpha.woff?84oeeq') format('woff'),
-        url('fonts/Iconalpha.svg?84oeeq#Iconalpha') format('svg');
+    src:    url('fonts/Iconalpha.eot?n36g60');
+    src:    url('fonts/Iconalpha.eot?n36g60#iefix') format('embedded-opentype'),
+        url('fonts/Iconalpha.ttf?n36g60') format('truetype'),
+        url('fonts/Iconalpha.woff?n36g60') format('woff'),
+        url('fonts/Iconalpha.svg?n36g60#Iconalpha') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -24,6 +24,12 @@
     -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-account-circle:before {
+    content: "\e926";
+}
+.icon-announcements:before {
+    content: "\e901";
+}
 .icon-account-key:before {
     content: "\e947";
 }
@@ -123,17 +129,11 @@
 .icon-chart-bar:before {
     content: "\e927";
 }
-.icon-bullhorn:before {
-    content: "\e926";
-}
 .icon-dots:before {
     content: "\e925";
 }
 .icon-ic_list:before {
     content: "\e900";
-}
-.icon-announcements:before {
-    content: "\e901";
 }
 .icon-arrow-down:before {
     content: "\e902";

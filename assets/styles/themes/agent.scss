@@ -1,21 +1,36 @@
 ﻿@import "../abstracts/_agent-variables.scss";
 
 .customer-profile {
-    background: $text-color none repeat scroll 0 0;
+    background: $profile-bg-color none repeat scroll 0 0;
 }
 
 .sidebar .main-tab li {
-    background: $text-color none repeat scroll 0 0;
+    background: $primary-color none repeat scroll 0 0;
 }
 
 .header-nav {
-    background: $background-color url($header-background) no-repeat scroll 0 0;
+    background: $primary-color url($header-background) no-repeat scroll 0 0;
 }
 
 .icon-home, .icon-add, .icon-message  {
-    color: $text-color;
+    //color: $text-color;
 }
 
 .sidebar .main-tab li.active a {
-    color: $text-color;
+    color: $text-hover-active-color;
+}
+
+.header-nav .list-top>li:not(.datetime):hover, .header-nav .list-top>li.dropdown:active:focus,
+.header-nav .icon-collapse:hover,
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background: $header-nav-icon-hover;
+}
+
+.mainmenu-container .sub-menu .sub-menu-item:hover a,
+.mainmenu-container .sub-menu .sub-menu-item.active a{
+    color: $text-hover-active-color;
+}
+
+.announcement-modal .modal-content .modal-header {
+    background: $primary-color;
 }
