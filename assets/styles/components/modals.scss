@@ -81,7 +81,8 @@
         .btn {
             margin: 8px;
             text-transform: capitalize;
-            font-size: $font-size;
+            line-height: 32px;
+            padding: 0 16px;
         }
 
         button.btn.btn-primary {
