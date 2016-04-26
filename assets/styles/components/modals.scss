@@ -4,11 +4,13 @@
 #helpModal {
     .modal-header {
         padding: 10px 15px;
+
         #myModalLabel {
             font-size: 14px;
             font-weight: bold;
         }
     }
+
     .note-content {
         padding: 0;
     }
@@ -17,11 +19,11 @@
 #page-popup, .modal {
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
     height: auto;
-    
 }
 
 .modal-dialog {
     margin: 0 auto;
+
     &.ex-modal {
         width: 100%;
         height: 100%;
@@ -29,13 +31,14 @@
 }
 
 .modal-content {
-    border-radius: 2px;        
+    border-radius: 2px;
     margin: auto;
     height: 100%;
 
     .modal-header {
         padding: 0 15px;
         border-bottom: none;
+
         .icon-close {
             margin-right: 0;
             color: #333;
@@ -50,6 +53,7 @@
             font-weight: 700;
             padding: 10px 0;
             font-size: 13px;
+
             .popup-title:empty {
                 height: 20px;
                 display: block;
@@ -74,6 +78,10 @@
 .bootbox {
     .modal-body {
         padding: 16px 17px 12px;
+    }
+
+    .modal-dialog {
+        margin: 0;
     }
 
     .modal-footer {
