@@ -76,14 +76,23 @@
 /* Bootboxjs*/
 /*********************************/
 .bootbox {
+
     .modal-body {
-        padding: 16px 17px 12px;
+        padding: 20px 17px 16px;
     }
 
     .modal-dialog {
         margin: 0;
+        width: initial;
+        max-width: 600px;
+        display: table;
     }
 
+    .close {
+        position: relative;
+        top: -3px;
+        right: -4px;
+    }
     .modal-footer {
         .btn {
             margin: 8px;
