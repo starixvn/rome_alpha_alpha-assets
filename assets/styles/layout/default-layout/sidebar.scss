@@ -14,7 +14,7 @@
     z-index: 99;
     //sidebar when collapsed
     &.collapsed {
-        width: 48px;
+        width: 42px;
         transition: width 0.5s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s;
 
         .userinfo {
@@ -29,7 +29,7 @@
         }
 
         .navigation {
-            width: 48px;
+            width: 42px;
             .main-tab {
                 display: none;
             }
@@ -37,11 +37,11 @@
             .extra-box {
                 display: block;
                 background: #fff;
-                height: 48px;
-                width: 48px;
+                height: 42px;
+                width: 42px;
 
                 .icon-extra {
-                    right: -22px;
+                    right: -19px;
                     top: 12px;
                     font-size: 14px;
                 }
