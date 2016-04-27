@@ -78,7 +78,8 @@
 .bootbox {
 
     .modal-body {
-        padding: 20px 17px 16px;
+        padding: 40px 16px 16px;
+        font-size: 14px;
     }
 
     .modal-dialog {
@@ -89,25 +90,36 @@
     }
 
     .close {
+        color: $text-color;
+        opacity: 1;
         position: relative;
-        top: -3px;
+        top: -18px;
         right: -4px;
     }
+
     .modal-footer {
+        border-top: none;
+        padding-bottom: 4px;
+
         .btn {
-            margin: 8px;
-            text-transform: capitalize;
+            background: none;
+            color: #045ace;
+            font-weight: bold;
             line-height: 32px;
             padding: 0 16px;
-        }
+            margin: 8px;
+            text-transform: capitalize;
+            text-transform: uppercase;
+            @include border-radius(1px);
+            @include box-shadow(0, 0, 0, transparent);
 
-        button.btn.btn-primary {
-            margin-right: 0;
-            @extend .btn-submit;
-        }
+            &:hover, &:focus {
+                background-color: #ececec;
+            }
 
-        button.btn.btn-default {
-            @extend .btn-cancel;
+            &.btn-default {
+                color: $text-color;
+            }
         }
     }
 }
