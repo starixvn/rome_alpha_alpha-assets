@@ -11,40 +11,41 @@
     font-size: 16px;
 }
 
-.icon-flag {
-    background: url(../images/flag.svg) no-repeat;
+.icon-flag:before {
+    background: url("../images/flag.svg");
+    content: '';
     display: inline-block;
+    background-size: 32px 36px;
+    width: 16px;
     height: 12px;
-    width: 15px;
 }
 
-.langFlag-en-us {
+.langFlag-en-us:before {
+    background-position: -16px -24px;
+}
+
+.langFlag-zh-tw:before {
+    background-position: 0 -12px;
+}
+
+.langFlag-zh-cn:before {
+    background-position: 0 -12px;
+}
+
+.langFlag-ko-kr:before {
+    background-position: -16px 0;
+}
+
+.langFlag-th-th:before {
+    background-position: -16px -12px;
+}
+
+.langFlag-ja-jp:before {
     background-position: 0 0;
 }
 
-.langFlag-zh-tw {
-    background-position: 0 -12px;
-}
-
-.langFlag-zh-cn {
-    background-position: 0 -12px;
-}
-
-.langFlag-ko-kr {
-    background-position: 0 -51px;
-    height: 13px;
-}
-
-.langFlag-th-th {
-    background-position: 0 -39px;
-}
-
-.langFlag-ja-jp {
-    background-position: 0 -26px;
-}
-
-.langFlag-vi-vn {
-    background-position: 0 -65px;
+.langFlag-vi-vn:before {
+    background-position: 0 -24px;
 }
 
 .icon-time {
