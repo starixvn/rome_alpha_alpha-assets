@@ -20,8 +20,9 @@
     color: $text-hover-active-color;
 }
 
-.header-nav .list-top>li:not(.datetime):hover, .header-nav .list-top>li.dropdown:active:focus,
-.header-nav .icon-collapse:hover,
+.header-nav .list-top>li.language:hover, 
+.header-nav .list-top>li.view-type:hover, 
+.header-nav .list-top>li.dropdown:active:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background: $header-nav-icon-hover;
 }
@@ -38,4 +39,5 @@
 .announcement-modal .modal-content .modal-header {
     background: $primary-color;
 }
+
 

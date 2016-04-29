@@ -54,6 +54,13 @@
   }
 }
 
+/// Transform
+/// @param {List} $params - Params
+/// @require {mixin} css3-prefix
+
+@mixin transform($params) {
+  @include css3-prefix('transform', $params);
+}
 
 @mixin shadow($top, $left, $blur, $color, $inset: false) {
  @if $inset {
@@ -65,6 +72,22 @@
     -moz-box-shadow: $top $left $blur $color;
     box-shadow: $top $left $blur $color;
   }
+}
+
+//Keyframes
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
 }
 
 @mixin icon($height, $width, $x, $y) {
@@ -79,5 +102,69 @@
     color: $color;
     font-size: $font-size;
     font-family: $font-family;
+}
+
+/*******************************************/
+/* Ripple Effect */
+/*******************************************/
+@mixin keyframes-ripple() {
+    @include keyframes(ripple) {
+        0% {
+            @include transform(scale(0));
+        }
+
+        20% {
+            @include transform(scale(1));
+        }
+
+        100% {
+            opacity: 0;
+            @include transform(scale(1));
+        }
+    }
+    
+}
+
+@mixin keyframes-rippleDuplicate() {
+    @include keyframes(rippleDuplicate) {
+          0% {
+            transform: scale(0);
+          }
+          40% {
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1);
+          }
+    }
+}
+
+@mixin ripple-effect-icon($background: #b1aea3, $top: 2px, $margin-left: -3px, $margin-right: -4px, $width: 26px, $height: 26px) {
+    position: relative;
+
+    &:after {
+        position: relative;
+        content: '';
+        display: block;
+    }      
+
+    &:hover:after {
+        position: absolute;
+        left: 0;
+        top: $top;
+        width: $width;
+        height: $height;
+        margin-left: $margin-left;
+        margin-top: $margin-right;
+        background: $background;
+        border-radius: 100%;
+        opacity: 1;
+        @include transform(scale(0));
+        -moz-animation: ripple 1s ease-out;
+        -o-animation: ripple 1s ease-out;
+        -webkit-animation: ripple 1s ease-out;
+        animation: ripple 1s ease-out;
+    }
 }
 
