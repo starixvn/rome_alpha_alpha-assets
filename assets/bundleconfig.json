@@ -9,7 +9,7 @@
             "styles/vendors/jquery.mCustomScrollbar.css",
             "styles/fonts/iconalpha/style.css",
             "styles/base/scaffolding.css",
-          "styles/components/icon.css",
+            "styles/components/icon.css",
             "styles/components/modals.css",
             "styles/layout/default-layout/header.css",
             "styles/layout/default-layout/navigation.css",
@@ -56,17 +56,16 @@
     {
         "outputFileName": "bundles/site-main/default.js",
         "inputFiles": [
-          "js/libs/jquery/jquery-1.11.3.js",
-          "js/libs/bootstrap/button.js",
-          "js/libs/bootstrap/dropdown.js",
-          "js/libs/bootstrap/modal.js",
-          "js/libs/bootstrap/tooltip.js",
+            "js/libs/jquery/jquery-1.11.3.js",
+            "js/libs/bootstrap/button.js",
+            "js/libs/bootstrap/dropdown.js",
+            "js/libs/bootstrap/modal.js",
+            "js/libs/bootstrap/tooltip.js",
 
             "js/libs/bootstrap-material/material.js",
             "js/libs/bootstrap-material/ripples.js",
             "js/libs/jquery/jquery.cookie.js",
             "js/components/scrollbar/jquery.mCustomScrollbar.js",
-            "js/libs/jQuery-tinyDraggable/jquery.tiny-draggable.js",
             "js/components/bootbox/bootbox.js"
         ]
     }
