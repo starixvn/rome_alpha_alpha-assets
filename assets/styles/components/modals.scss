@@ -1,4 +1,5 @@
 ﻿@import '../abstracts/_variables.scss';
+@import '../abstracts/_mixins.scss';
 @import '../components/buttons.scss';
 
 #helpModal {
@@ -17,7 +18,7 @@
 }
 
 #page-popup, .modal {
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.4);
+    @include box-shadow(0, 0, 8px, rgba(0, 0, 0, 0.4));
     height: auto;
 }
 
@@ -31,7 +32,7 @@
 }
 
 .modal-content {
-    border-radius: 2px;
+    @include border-radius(2px);
     margin: auto;
     height: 100%;
 

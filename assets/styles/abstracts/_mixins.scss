@@ -22,6 +22,10 @@
   }
 }
 
+@mixin box-shadow-multiple($string) {
+    @include css3-prefix('box-shadow', $string);
+}
+
 
 /// Box Sizing
 /// @param {*} $type [border-box] - Type

@@ -1,10 +1,8 @@
-﻿
+﻿@import "../../abstracts/_mixins.scss";
+
 .sidebar {
-    display: table-cell;
+    @include box-shadow(1px, 0, 3px, rgba(0, 0, 0, 0.3));
     background: #fff;
-    -webkit-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
     position: fixed;
     width: 256px;
     top: 0;
@@ -67,11 +65,11 @@
                 width: 256px;
             }
             .profile-avatar {
+                @include border-radius(50%);
                 display: inline-block;
                 height: 50px;
                 width: 50px;
                 border: 3px solid rgba(255, 255, 255, 0.3);
-                border-radius: 50%;
                 float: left;
                 margin: 18px;
                 cursor: pointer;

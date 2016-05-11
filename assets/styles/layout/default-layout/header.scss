@@ -1,4 +1,6 @@
-﻿$text-color: #fff;
+﻿@import "../../abstracts/_mixins.scss";
+
+$text-color: #fff;
 
 .header {
     position: fixed;
@@ -9,12 +11,12 @@
 }
 /********************************** Header Navigation ************************************/
 .header-nav {
+    @include border-radius(0);
     height: 48px;
     margin-bottom: 0;
-    border-radius: 0;
 
     .icon-collapse {
-        border-radius: 50%;
+        @include border-radius(50%);
         display: inline-block;
         padding: 8px;
         margin: 8px 0 9px 7px;
@@ -48,6 +50,7 @@
 
         .icon-squares {
             font-size: 14px;
+            top: 2px;
         }
 
         .icon-swap-horizontal {
@@ -59,6 +62,10 @@
             display: inline-block;
             padding: 14px 10px 13px;
             position: relative;
+
+            &.datetime {
+                cursor: default;
+            }
 
             .txt-top {
                 padding: 0;
@@ -73,8 +80,8 @@
                 line-height: 49px;
                 padding: 9px 5px;
                 > a {
+                    @include border-radius(50%);
                     padding: 6px 9px;
-                    border-radius: 50%;
                 }
             }
 
@@ -82,8 +89,8 @@
                 line-height: 49px;
                 padding: 7px 0 9px;
                 > a {
+                    @include border-radius(50%);
                     padding: 6px 9px;
-                    border-radius: 50%;
                     &:hover {
                         background: transparent;
                     }
@@ -126,10 +133,8 @@
             }
 
             .list-setting, .list-language {
-                -webkit-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-                -moz-box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
-                border-radius: 0;
+                @include border-radius(0);
+                @include box-shadow-multiple((0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)));
                 background: #fff;
                 color: #5c1218;
 
@@ -168,16 +173,14 @@
 
 /********************************** Header Notification *************************************/
 .header-msg {
+    @include box-shadow(1px, 0, 3px, rgba(0, 0, 0, 0.3));
     background: $text-color;
     height: 40px;
     padding: 10px 0;
     position: relative;
-    -webkit-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
-    box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
 
     .icon-home {
-        border-radius: 50%;
+        @include border-radius(50%);
         padding: 8px;
         margin: -8px 7px 2px;
         display: inline-block;
@@ -216,9 +219,7 @@
         }
 
         .value {
-            -webkit-border-radius: 2px;
-            -moz-border-radius: 2px;
-            border-radius: 2px;
+            @include border-radius(2px);
             background: #da1625;
             color: $text-color;
             font-size: 11px;
