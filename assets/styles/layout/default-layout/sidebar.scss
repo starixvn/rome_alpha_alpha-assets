@@ -1,5 +1,6 @@
 ﻿
 .sidebar {
+    display: table-cell;
     background: #fff;
     -webkit-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
     -moz-box-shadow: 1px 0 3px rgba(0, 0, 0, 0.3);
@@ -14,7 +15,7 @@
     z-index: 99;
     //sidebar when collapsed
     &.collapsed {
-        width: 42px;
+        width: 40px;
         transition: width 0.5s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s;
 
         .userinfo {
@@ -29,7 +30,7 @@
         }
 
         .navigation {
-            width: 42px;
+            width: 40px;
             .main-tab {
                 display: none;
             }
@@ -37,8 +38,8 @@
             .extra-box {
                 display: block;
                 background: #fff;
-                height: 42px;
-                width: 42px;
+                height: 40px;
+                width: 40px;
 
                 .icon-extra {
                     right: -19px;
