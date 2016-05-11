@@ -1,8 +1,11 @@
 ﻿$text-color: #fff;
 
 .header {
-    position: relative;
+    position: fixed;
     z-index: 90;
+    left: 256px;
+    top: 0;
+    right: 0;
 }
 /********************************** Header Navigation ************************************/
 .header-nav {
