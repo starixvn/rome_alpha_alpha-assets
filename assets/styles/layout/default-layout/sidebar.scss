@@ -57,7 +57,7 @@
             }
         }
         // hover over collapsed sidebar
-        &:hover {
+        &.hovered {
             width: 256px;
             z-index: 1003;
 
