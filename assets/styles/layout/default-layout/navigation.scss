@@ -8,13 +8,14 @@
 
     .main-tab {
         overflow: hidden;
-        margin-bottom: 16px;
+        margin-bottom: 0;
 
         li {
             cursor: pointer;
             float: left;
             width: 50%;
             background: #5c1218;
+            margin-bottom: 16px;
             &.disabledViewAccInfo {
                 margin-bottom: 0;
             }
