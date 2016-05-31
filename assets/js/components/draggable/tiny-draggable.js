@@ -32,14 +32,13 @@
                     if (e.which === 3) { //// If mouse right
                         return;
                     }
-
                     e.preventDefault();
                     var os = el.offset(); dx = e.pageX - os.left, dy = e.pageY - os.top;
                     var currentWidth = el.width();
                     var currentHeight = el.height();
 
                     $mask.css({
-                        width: currentWidth + "px",
+                        width: currentWidth - 20 + "px",
                         height: currentHeight + "px",
                         display: "block"
                     })
