@@ -53,6 +53,12 @@
       "styles/themes/super.css"
     ]
   },
+    {
+    "outputFileName": "bundles/site-main/pageIElower10.css",
+    "inputFiles": [
+      "styles/fonts/iconalpha/style.css"
+    ]
+  },
   {
     "outputFileName": "bundles/site-main/default.js",
     "inputFiles": [
