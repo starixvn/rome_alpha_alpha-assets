@@ -117,6 +117,7 @@
             line-height: 32px;
             padding: 0 16px;
             margin: 8px;
+            min-width: 86px;
             text-transform: capitalize;
             text-transform: uppercase;
             @include border-radius(1px);
@@ -128,6 +129,7 @@
 
             &.btn-default {
                 color: $text-color;
+                float: right;
             }
         }
     }
