@@ -42,7 +42,9 @@
                         width: currentWidth + "px",
                         height: currentHeight + "px",
                         display: "block"
-                    }).data('current-popup', el.attr('id'));
+                    })
+                        .data('current-popup', el.attr('id'))
+                        .offset({ top: e.pageY - dy, left: e.pageX - dx });
 
                     $body.on('mousemove.drag#' + el.attr('id'), function (e) {
                         $mask.offset({ top: e.pageY - dy, left: e.pageX - dx });
