@@ -1,6 +1,6 @@
 ﻿(function ($) {
     $.fn.tinyDraggable = function (options) {
-        var settings = $.extend({ handle: 0, exclude: 0 }, options);
+        var settings = $.extend({ handle: 0, exclude: 'button.icon.icon-close.close' }, options);
 
         return this.each(function () {
             var dx, dy, el = $(this), handle = settings.handle ? $(settings.handle, el) : el,
