@@ -38,7 +38,7 @@
                     var currentHeight = el.height();
 
                     $mask.css({
-                        width: currentWidth - 55 + "px",
+                        width: currentWidth + "px",
                         height: currentHeight + "px",
                         display: "block"
                     })
