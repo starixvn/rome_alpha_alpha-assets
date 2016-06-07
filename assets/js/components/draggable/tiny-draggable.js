@@ -1,6 +1,7 @@
 ﻿(function ($) {
     $.fn.tinyDraggable = function (options) {
         var settings = $.extend({ handle: 0, exclude: 'button.icon.icon-close.close' }, options);
+        var maxMobileLeft = 1000;
 
         return this.each(function () {
             var dx, dy, el = $(this), handle = settings.handle ? $(settings.handle, el) : el,
@@ -16,16 +17,20 @@
                 if (keyEvent.which === 3) { //// If mouse right
                     return;
                 }
-                var markOffset = $mask.offset();
-                $('#' + $mask.data('current-popup')).offset(markOffset);
-
-                $mask.hide();
-                
                 $.each($('iframe'), function (index, iframeObject) {
-                    $(iframeObject).contents().off('mousemove.drag');
+                    $(iframeObject).contents().off('mousemove.drag touchmove.drag');
                 });
 
-                $('body').off('mousemove.drag');
+                if (!$mask.is(":visible"))
+                {
+                    return;
+                }
+
+                $('body').off('mousemove.drag touchmove.drag');
+
+                var markOffset = $mask.offset();
+                $('#' + $mask.data('current-popup')).offset(markOffset);
+                $mask.hide();
             };
 
             handle.on({
@@ -67,10 +72,77 @@
                     });
                    
                 },
-                mouseup: movePopup
+                mouseup: movePopup,
+                touchstart: function(e)
+                {
+                    if (settings.exclude && ~$.inArray(e.target, $(settings.exclude, el))) {
+                        return;
+                    }
+
+                    if (e.which === 3) { //// If mouse right
+                        return;
+                    }
+
+                    e.preventDefault();
+
+                    var os = el.offset();
+                    dx = e.originalEvent.touches[0].pageX - os.left;
+                    dy = e.originalEvent.touches[0].pageY - os.top;
+                    var currentWidth = el.width();
+                    var currentHeight = el.height();
+
+                    $mask.css({
+                        width: currentWidth + "px",
+                        height: currentHeight + "px",
+                        display: "block"
+                    })
+                        .data('current-popup', handle.attr('id'))
+                        .offset(
+                        {
+                            top: e.originalEvent.touches[0].pageY - dy,
+                            left: e.originalEvent.touches[0].pageX - dx
+                        });
+
+                    $('body').off('touchmove.drag').on('touchmove.drag', function (e) {
+                        var newLeft = e.originalEvent.touches[0].pageX - dx;
+
+                        if (newLeft > maxMobileLeft) {
+                            return;
+                        }
+
+                        $mask.offset(
+                            {
+                                top: e.originalEvent.touches[0].pageY - dy,
+                                left: newLeft
+                            });
+
+                        console.log($mask.offset());
+                    });
+
+                    $.each($('iframe'), function (index, iframeObject) {
+                        var currentIframe = $(iframeObject);
+                        currentIframe.contents()
+                            .off('touchmove.drag')
+                            .on('touchmove.drag', function (e) {
+                                var iframeOffset = currentIframe.offset();
+                                var newLeft = e.originalEvent.touches[0].pageX - dx + iframeOffset.left;
+
+                                if (newLeft > maxMobileLeft) {
+                                    return;
+                                }
+
+                                $mask.offset(
+                                    {
+                                        top: e.originalEvent.touches[0].pageY - dy - currentIframe.contents().scrollTop() + iframeOffset.top,
+                                        left: e.originalEvent.touches[0].pageX - dx + iframeOffset.left
+                                    });
+                            });
+                    });
+                },
+                touchend: movePopup
             });
 
-            $mask.off('mouseup.drag').on('mouseup.drag', movePopup);
+            $mask.off('mouseup.drag touchend.drag').on('mouseup.drag touchend.drag', movePopup);
         });
     }
 }(jQuery));
