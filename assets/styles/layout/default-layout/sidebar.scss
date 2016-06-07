@@ -10,7 +10,7 @@
     left: 0;
     overflow: hidden;
     transition: width 0.7s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s;
-    z-index: 99;
+    z-index: 1054;
     //sidebar when collapsed
     &.collapsed {
         width: 40px;
@@ -59,7 +59,7 @@
         // hover over collapsed sidebar
         &.hovered {
             width: 256px;
-            z-index: 1003;
+            z-index: 1054;
 
             .navigation {
                 width: 256px;
