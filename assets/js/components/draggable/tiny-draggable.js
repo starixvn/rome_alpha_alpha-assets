@@ -20,13 +20,10 @@
                 $('#' + $mask.data('current-popup')).offset(markOffset);
 
                 $mask.hide();
-                if ($('iframe#main').length > 0) {
-                    $('iframe#main').contents().off('mousemove.drag');
-                }
-
-                if ($('popup-iframe').length > 0) {
-                    $('popup-iframe').contents().off('mousemove.drag');
-                }
+                
+                $.each($('iframe'), function (index, iframeObject) {
+                    $(iframeObject).contents().off('mousemove.drag');
+                });
 
                 $('body').off('mousemove.drag');
             };
@@ -59,23 +56,16 @@
                         $mask.offset({ top: e.pageY - dy, left: e.pageX - dx });
                     });
 
-                    if ($('iframe#main').length > 0) {
-                        $('iframe#main').contents().off('mousemove.drag').on('mousemove.drag', function (e) {
-                            var $this = $('iframe#main');
-                            var iframeOffset = $('iframe#main').offset();
-                            $mask.offset({ top: e.pageY - dy - $('iframe#main').contents().scrollTop() + iframeOffset.top, left: e.pageX - dx + iframeOffset.left });
-                            //window.console.log($mask.offset());
+                    $.each($('iframe'), function (index, iframeObject) {
+                        var currentIframe = $(iframeObject);
+                        currentIframe.contents()
+                            .off('mousemove.drag')
+                            .on('mousemove.drag', function (e) {
+                                var iframeOffset = currentIframe.offset();
+                                $mask.offset({ top: e.pageY - dy - currentIframe.contents().scrollTop() + iframeOffset.top, left: e.pageX - dx + iframeOffset.left });
                         });
-                    }
-
-                    if ($('#popup-iframe').length > 0) {
-                        $('#popup-iframe').contents().off('mousemove.drag').on('mousemove.drag', function (e) {
-                            var $this = $('#popup-iframe');
-                            var iframeOffset = $this.offset();
-                            $mask.offset({ top: e.pageY - dy - $this.contents().scrollTop() + iframeOffset.top, left: e.pageX - dx + iframeOffset.left });
-                            //window.console.log($mask.offset());
-                        });
-                    }
+                    });
+                   
                 },
                 mouseup: movePopup
             });
