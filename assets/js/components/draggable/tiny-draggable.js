@@ -18,7 +18,8 @@
                     return;
                 }
                 $.each($('iframe'), function (index, iframeObject) {
-                    $(iframeObject).contents().off('mousemove.drag touchmove.drag');
+                    var iframeContent = iframeObject.contentWindow || iframeObject.contentDocument;
+                    $(iframeContent.document).off('mousemove.drag touchmove.drag');
                 });
 
                 if (!$mask.is(":visible"))
@@ -62,8 +63,9 @@
                     });
 
                     $.each($('iframe'), function (index, iframeObject) {
+                        var iframeContent = iframeObject.contentWindow || iframeObject.contentDocument;
                         var currentIframe = $(iframeObject);
-                        currentIframe.contents()
+                        $(iframeContent.document)
                             .off('mousemove.drag')
                             .on('mousemove.drag', function (e) {
                                 var iframeOffset = currentIframe.offset();
@@ -103,7 +105,8 @@
                             left: e.originalEvent.touches[0].pageX - dx
                         });
 
-                    $('body').off('touchmove.drag').on('touchmove.drag', function (e) {
+                    $('body').off('touchmove.drag')
+                        .on('touchmove.drag', function (e) {
                         var newLeft = e.originalEvent.touches[0].pageX - dx;
 
                         if (newLeft > maxMobileLeft) {
@@ -115,14 +118,12 @@
                                 top: e.originalEvent.touches[0].pageY - dy,
                                 left: newLeft
                             });
-
-                        console.log($mask.offset());
                     });
 
                     $.each($('iframe'), function (index, iframeObject) {
+                        var iframeContent = iframeObject.contentWindow || iframeObject.contentDocument;
                         var currentIframe = $(iframeObject);
-                        currentIframe.contents()
-                            .off('touchmove.drag')
+                        $(iframeContent.document).off('touchmove.drag')
                             .on('touchmove.drag', function (e) {
                                 var iframeOffset = currentIframe.offset();
                                 var newLeft = e.originalEvent.touches[0].pageX - dx + iframeOffset.left;
