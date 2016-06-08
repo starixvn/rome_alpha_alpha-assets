@@ -54,8 +54,13 @@
             opacity: 1;
             font-size: 18px;
             top: 10px;
-            width: 30px;
+            width: 60px;
             height: 30px;
+            left: 10px;
+            &:before {
+                position: relative;
+                left: 13px;
+            }
         }
 
         .modal-title {
