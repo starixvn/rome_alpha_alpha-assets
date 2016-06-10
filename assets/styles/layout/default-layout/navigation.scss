@@ -16,8 +16,10 @@
             width: 50%;
             background: #5c1218;
             margin-bottom: 16px;
+
             &.disabledViewAccInfo {
                 margin-bottom: 0;
+                cursor: default;
             }
 
             a {
