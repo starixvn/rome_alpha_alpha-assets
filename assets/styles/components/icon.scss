@@ -60,6 +60,6 @@
     opacity: 0.8;
 }
 
-.icon-logout, .setting > a, .icon-collapse, .icon-home, .icon-add, .icon-message {
+.icon-logout, .setting > a, .icon-home, .icon-add, .icon-message {
     @include ripple-effect-icon($margin-left: 0, $margin-right: -4px, $height: 32px, $width: 32px, $top: 4px);
 }
