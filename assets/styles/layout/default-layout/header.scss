@@ -15,6 +15,17 @@ $text-color: #fff;
     height: 48px;
     margin-bottom: 0;
 
+    .icon-collapse {
+        @include border-radius(50%);
+        display: inline-block;
+        padding: 8px;
+        margin: 8px 0 9px 7px;
+        cursor: pointer;
+        font-size: 16px;
+        color: $text-color;
+        opacity: 0.8;
+    }
+
     .old-view-text {
         cursor: pointer;
         display: inline;
