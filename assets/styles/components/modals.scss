@@ -19,16 +19,7 @@
 
 .modal[id^="page-popup"] {
     position: absolute !important;
-    visibility: visible;
     overflow: visible !important;
-
-    &:before, &:after {
-        content: " ";
-        display: table !important;
-    }
-    &:after {
-        clear: both;
-    }
 }
 
 #page-popup, .modal {
@@ -56,7 +47,7 @@
 .modal-content {
     @include border-radius(2px);
     margin: auto;
-    height: auto;
+    height: 100%;
 
     .modal-header {
         padding: 0 15px;
