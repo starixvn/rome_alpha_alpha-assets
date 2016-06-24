@@ -60,6 +60,29 @@
     opacity: 0.8;
 }
 
+.icon-instruction {
+    background-color: #3261f9;
+    padding: 10px;
+    position: fixed;
+    top: 104px;
+    right: -5px;
+    z-index: 1000;
+    @include border-radius(2px);
+    @include box-shadow(0, 0, 8px, rgba(0, 0, 0, 0.4));
+
+    &:before {
+        color: #fff;
+        font:{
+            size: 16px;
+            weight: 100;
+        }
+    }
+
+    &:hover {
+        background-color: darken(#3261f9, 5%)
+    }
+}
+
 .icon-logout, .setting > a, .icon-collapse, .icon-home, .icon-add, .icon-message {
     @include ripple-effect-icon($margin-left: 0, $margin-right: -4px, $height: 32px, $width: 32px, $top: 4px);
 }
