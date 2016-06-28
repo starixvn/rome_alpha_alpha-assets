@@ -1,15 +1,15 @@
 ﻿@import "../abstracts/_master-variables.scss";
 
 .customer-profile {
-    background: $profile-bg-color none repeat scroll 0 0;
+    background-color: $profile-bg-color;
 }
 
 .sidebar .main-tab li {
-    background: $primary-color none repeat scroll 0 0;
+    background-color: $primary-color;
 }
 
 .header-nav {
-    background: $primary-color url($header-background) no-repeat scroll 0 0;
+    background-color: $primary-color;
 }
 
 .icon-home, .icon-add, .icon-message {

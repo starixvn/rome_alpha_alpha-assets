@@ -14,7 +14,6 @@
             cursor: pointer;
             float: left;
             width: 50%;
-            background: #5c1218;
             margin-bottom: 16px;
 
             &.disabledViewAccInfo {
@@ -36,10 +35,6 @@
 
             &.active {
                 background: #fff;
-
-                a {
-                    color: #ab121d;
-                }
             }
         }
     }

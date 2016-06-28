@@ -12,6 +12,7 @@ $text-color: #fff;
 /********************************** Header Navigation ************************************/
 .header-nav {
     @include border-radius(0);
+    background-image: url('../../images/headerbg.png');
     height: 48px;
     margin-bottom: 0;
 
@@ -136,7 +137,6 @@ $text-color: #fff;
                 @include border-radius(0);
                 @include box-shadow-multiple((0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)));
                 background: #fff;
-                color: #5c1218;
 
                 > li {
                     a {
