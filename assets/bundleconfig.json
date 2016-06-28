@@ -90,5 +90,32 @@
       "js/components/bootbox/bootbox.js",
       "js/components/draggable/tiny-draggable.js"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-results/default.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/vendors/select2.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding.css",
+      "styles/components/icon.css",
+      "styles/components/tabs.css",
+      "styles/components/buttons.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-results/default.js",
+    "inputFiles": [
+      "js/libs/jquery/jquery-1.11.3.js",
+      "js/libs/bootstrap/button.js",
+      "js/libs/bootstrap/dropdown.js",
+      "js/libs/bootstrap/modal.js",
+      "js/libs/moment/moment.js",
+      "js/components/datetimepicker/datepicker.js",
+      "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/select2/select2.js"
+    ]
   }
 ]

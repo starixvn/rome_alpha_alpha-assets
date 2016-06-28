@@ -1,13 +1,30 @@
 ﻿@import "../abstracts/_variables.scss";
 @import "../abstracts/_mixins.scss";
 
+
+@font-face {
+    font-family: 'Roboto';
+    src:    url('../Fonts/Roboto/Roboto-Regular.woff2') format("woff2");
+    src:    url('../Fonts/Roboto/Roboto-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src:    url('../Fonts/Roboto/Roboto-Medium.woff2') format("woff2");
+    src:    url('../Fonts/Roboto/Roboto-Medium.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+}
+
 @font-face {
     font-family: 'Iconalpha';
-    src: url('../Fonts/Iconalpha/fonts/Iconalpha.eot?o3vrsi');
-    src: url('../Fonts/Iconalpha/fonts/Iconalpha.eot?o3vrsi#iefix') format('embedded-opentype'),
-         url('../Fonts/Iconalpha/fonts/Iconalpha.woff?o3vrsi') format('woff'),
-         url('../Fonts/Iconalpha/fonts/Iconalpha.ttf?o3vrsi') format('truetype'),         
-         url('../Fonts/Iconalpha/fonts/Iconalpha.svg?o3vrsi#Iconalpha') format('svg');
+    src:    url('../Fonts/Iconalpha/fonts/Iconalpha.eot?#{$icon-version}');
+    src:    url('../Fonts/Iconalpha/fonts/Iconalpha.eot?#{$icon-version}#iefix') format('embedded-opentype'),
+        url('../Fonts/Iconalpha/fonts/Iconalpha.woff?#{$icon-version}') format('woff'),
+        url('../Fonts/Iconalpha/fonts/Iconalpha.ttf?#{$icon-version}') format('truetype'),        
+        url('../Fonts/Iconalpha/fonts/Iconalpha.svg?#{$icon-version}#Iconalpha') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -17,19 +34,19 @@ input, button {
 }
 
 input[type=submit], input[type=reset] {
-    @include border-radius(3px);
+    @include border-radius(1px);
 }
 
 input[type=text], input[type=password] {
     width: 120px;
-    height: 32px;
-    line-height: 32px;
+    height: 28px;
+    line-height: 28px;
     border: none;
     padding-left: 8px;
     padding-right: 8px;
     margin-left: 8px;
     -webkit-appearance: none;
-    @include border-radius(3px);
+    @include border-radius(1px);
     @include box-shadow(1px, 1px, 1px, rgba(0,0,0,.3));
 }
 
@@ -60,13 +77,13 @@ input[type=button], .btn {
     background-color: $btn-default-color;
     border: none;
     cursor: pointer;
-    height: 32px;
+    height: 28px;
     margin-right: 8px;
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 16px;
+    padding-right: 16px;
     -webkit-appearance: none;
     @include box-shadow(1px, 2px, 3px, rgba(0,0,0,.3));
-    @include border-radius(3px);
+    @include border-radius(1px);
     &:focus{
         @include box-shadow(1px, 2px, 3px, rgba(0,0,0,.3));
     }
@@ -89,14 +106,15 @@ input[type=submit]#dSubmit, input[type=submit].btnSubmit,
     color: #fff;
     border: none;
     cursor: pointer;
-    height: 32px;
+    height: 28px;
     width: auto !important;
-    padding: 0 18px;
+    padding: 0 16px;
     margin-right: 8px;
     -webkit-appearance: none;
 
-    &:hover {
+    &:hover, &:active, &:focus {
         background-color: darken($btn-submit-color, 5%);
+        color: #fff;
     }
 }
 
@@ -106,8 +124,8 @@ input[type=submit]#dSubmit, input[type=submit].btnSubmit,
     color: #fff;
     border: none;
     cursor: pointer;
-    height: 32px;
-    line-height: 32px;
+    height: 28px;
+    line-height: 28px;
     width: auto !important;
     padding: 0 10px 0 30px;
     margin-right: 8px;
@@ -130,12 +148,6 @@ input[type=submit]#dSubmit, input[type=submit].btnSubmit,
 }
 
 .btn {
-    color: #666;
-
-    &:hover {
-        color: #cc4800;
-    }
-
     &:focus, &:active, &:visited {
         outline: none;
     }

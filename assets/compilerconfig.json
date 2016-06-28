@@ -66,21 +66,41 @@
   {
     "outputFile": "styles/base/roboto-fonts.css",
     "inputFile": "styles/base/roboto-fonts.scss"
+    },
+    {
+    "outputFile": "styles/vendors-extensions/site-results/bootstrap-ex.css",
+    "inputFile": "styles/vendors-extensions/site-results/bootstrap-ex.scss"
   },
   {
     "outputFile": "styles/base/icon-fonts.css",
     "inputFile": "styles/base/icon-fonts.scss"
   },  
   {
+    "outputFile": "styles/components/tabs.css",
+    "inputFile": "styles/components/tabs.scss"
+  },
+  {
     "outputFile": "styles/themes/unsupport-browser/agent.css",
     "inputFile": "styles/themes/unsupport-browser/agent.scss"
+    },
+    {
+    "outputFile": "styles/themes/tab-agent.css",
+    "inputFile": "styles/themes/tab-agent.scss"
   },
   {
     "outputFile": "styles/themes/unsupport-browser/master.css",
     "inputFile": "styles/themes/unsupport-browser/master.scss"
+    },
+    {
+    "outputFile": "styles/themes/tab-master.css",
+    "inputFile": "styles/themes/tab-master.scss"
   },
   {
     "outputFile": "styles/themes/unsupport-browser/super.css",
     "inputFile": "styles/themes/unsupport-browser/super.scss"
+    },
+    {
+    "outputFile": "styles/themes/tab-super.css",
+    "inputFile": "styles/themes/tab-super.scss"
   }
 ]
