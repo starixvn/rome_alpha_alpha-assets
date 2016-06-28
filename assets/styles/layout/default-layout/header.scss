@@ -12,7 +12,7 @@ $text-color: #fff;
 /********************************** Header Navigation ************************************/
 .header-nav {
     @include border-radius(0);
-    background-image: url('../../images/headerbg.png');
+    background: url('../../images/headerbg.png') no-repeat;
     height: 48px;
     margin-bottom: 0;
 
