@@ -61,25 +61,16 @@
 }
 
 .icon-instruction {
-    background-color: #3261f9;
-    padding: 10px;
-    position: fixed;
-    top: 104px;
-    right: -5px;
-    z-index: 1000;
-    @include border-radius(2px);
-    @include box-shadow(0, 0, 8px, rgba(0, 0, 0, 0.4));
+    margin-right: 0;
+    opacity: 0.8;
+    @include ripple-effect-icon($margin-left: -8px, $margin-right: -4px, $height: 32px, $width: 32px, $top: -3px);
 
     &:before {
         color: #fff;
         font:{
-            size: 16px;
+            size: 17px;
             weight: 100;
         }
-    }
-
-    &:hover {
-        background-color: darken(#3261f9, 5%)
     }
 }
 

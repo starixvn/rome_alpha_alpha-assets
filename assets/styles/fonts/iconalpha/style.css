@@ -1,10 +1,10 @@
 @font-face {
     font-family: 'Iconalpha';
-    src:    url('fonts/Iconalpha.eot?yuaovy');
-    src:    url('fonts/Iconalpha.eot?yuaovy#iefix') format('embedded-opentype'),
-        url('fonts/Iconalpha.ttf?yuaovy') format('truetype'),
-        url('fonts/Iconalpha.woff?yuaovy') format('woff'),
-        url('fonts/Iconalpha.svg?yuaovy#Iconalpha') format('svg');
+    src:    url('fonts/Iconalpha.eot?23zt3w');
+    src:    url('fonts/Iconalpha.eot?23zt3w#iefix') format('embedded-opentype'),
+        url('fonts/Iconalpha.ttf?23zt3w') format('truetype'),
+        url('fonts/Iconalpha.woff?23zt3w') format('woff'),
+        url('fonts/Iconalpha.svg?23zt3w#Iconalpha') format('svg');
     font-weight: normal;
     font-style: normal;
 }
@@ -26,6 +26,15 @@
 
 .icon-instruction:before {
     content: "\e94d";
+}
+.icon-excel:before {
+    content: "\e950";
+}
+.icon-calendar:before {
+    content: "\e94f";
+}
+.icon-checked-copy:before {
+    content: "\e94e";
 }
 .icon-account-search:before {
     content: "\e94c";
