@@ -62,5 +62,13 @@
   {
     "outputFile": "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
     "inputFile": "styles/vendors-extensions/site-main/bootstrap-material-ex.scss"
+  },
+  {
+    "outputFile": "styles/base/roboto-fonts.css",
+    "inputFile": "styles/base/roboto-fonts.scss"
+  },
+  {
+    "outputFile": "styles/base/icon-fonts.css",
+    "inputFile": "styles/base/icon-fonts.scss"
   }
 ]

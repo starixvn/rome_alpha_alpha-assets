@@ -1,18 +1,4 @@
-﻿@font-face {
-    font-family: 'Roboto';
-    src:    url('../fonts/roboto/Roboto-Regular.woff2') format("woff2");
-    src:   url('../fonts/roboto/Roboto-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src:    url('../fonts/roboto/Roboto-Medium.woff2') format("woff2");
-    src:    url('../fonts/roboto/Roboto-Medium.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
+﻿@import 'roboto-fonts.scss';
 
 html, body {
     height: 100%;
