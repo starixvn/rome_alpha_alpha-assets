@@ -54,9 +54,24 @@
     ]
   },
     {
-    "outputFileName": "bundles/site-main/pageIElower10.css",
+    "outputFileName": "bundles/site-main/unsupport-browser/super.css",
     "inputFiles": [
-      "styles/fonts/iconalpha/style.css"
+      "styles/fonts/iconalpha/style.css",
+      "styles/themes/unsupport-browser/super.css"
+    ]
+  },
+    {
+    "outputFileName": "bundles/site-main/unsupport-browser/master.css",
+    "inputFiles": [
+      "styles/fonts/iconalpha/style.css",
+      "styles/themes/unsupport-browser/master.css"
+    ]
+  },
+    {
+    "outputFileName": "bundles/site-main/unsupport-browser/agent.css",
+    "inputFiles": [
+      "styles/fonts/iconalpha/style.css",
+      "styles/themes/unsupport-browser/agent.css"
     ]
   },
   {
