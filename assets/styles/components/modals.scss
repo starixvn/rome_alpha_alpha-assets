@@ -85,7 +85,8 @@
     .modal-body {
         padding: 2px 16px 8px;
         line-height: 22px;
-        overflow: hidden;
+        overflow-y: hidden;
+        overflow-x: auto;
     }
 
     .modal-footer {
