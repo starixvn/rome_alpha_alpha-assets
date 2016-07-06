@@ -53,7 +53,7 @@
       "styles/themes/super.css"
     ]
   },
-    {
+  {
     "outputFileName": "bundles/site-main/unsupport-browser/super.css",
     "inputFiles": [
       "styles/fonts/iconalpha/style.css",
@@ -116,6 +116,39 @@
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
       "js/components/select2/select2.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-totalbetsforecast/default.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.css",
+      "styles/vendors/bootstrap-multiselect.css",      
+      "styles/vendors/select2.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding.css",
+      "styles/components/icon.css",
+      "styles/components/tables.css",
+      "styles/components/tabs.css",
+      "styles/components/buttons.css",
+      "styles/components/dropdown.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-totalbetsforecast/default.js",
+    "inputFiles": [
+      "js/libs/jquery/jquery-1.11.3.js",
+      "js/libs/bootstrap/button.js",
+      "js/libs/bootstrap/dropdown.js",
+      "js/libs/bootstrap/modal.js",
+      "js/components/blockui/jquery.blockUI.js",
+      "js/libs/underscore/underscore-min.js",
+      "js/libs/numeral/numeral.js",
+      "js/components/coloranimation/jquery.animate-colors.js",
+      "js/components/highlight/jquery.pulse.js",
+      "js/components/countdown/jquery.countdown.js",
+      "js/components/multiselect/bootstrap-multiselect.js",
+      "js/libs/jquery/jquery.cookie.js"
     ]
   }
 ]

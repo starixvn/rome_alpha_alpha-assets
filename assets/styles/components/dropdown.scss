@@ -17,3 +17,38 @@ select {
         padding: 4px;
     }
 }
+
+/************************** Select2 ****************************/
+.dropdown {
+    .select2-container--default .select2-selection--single {
+        @include box-shadow(0, 2px, 2px, rgba(0, 0, 0, 0.2));
+        @include border-radius(2px);
+        border: none;
+    }
+
+    .form-control {
+        @include box-shadow(0, 2px, 2px, rgba(0, 0, 0, 0.2));
+        @include border-radius(2px);
+        border: none;
+        font-size: 12px;
+        height: 32px;
+        background: #fff;
+
+        option {
+            padding: 5px;
+        }
+    }
+}
+
+.select2-container {
+    line-height: 20px;
+    width: 300px;
+}
+
+.select2-container .select2-selection--single {
+    height: 32px;
+}
+
+.select2-container--default .select2-selection--single .select2-selection__rendered {
+    line-height: 32px;
+}

@@ -102,5 +102,13 @@
     {
     "outputFile": "styles/themes/tab-super.css",
     "inputFile": "styles/themes/tab-super.scss"
+  },
+  {
+    "outputFile": "styles/components/component.css",
+    "inputFile": "styles/components/component.scss"
+  },
+  {
+    "outputFile": "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.css",
+    "inputFile": "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.scss"
   }
 ]
