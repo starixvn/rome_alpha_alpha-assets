@@ -1,13 +1,17 @@
 ﻿@import "../abstracts/_variables.scss";
 @import "../abstracts/_mixins.scss";
 
+.nav-tabs > li  {
+    margin-right: 12px;
+}
+
 .nav-tabs > li > a:hover {
     background: none;
     border-color: transparent;
 }
 
 .nav.nav-tabs > li > a {
-    padding: 10px 20px;
+    padding: 10px 20px 8px;
     border: none;
 }
 
@@ -29,7 +33,8 @@
     background: transparent;
 }
 
-.nav.nav-tabs > li.active:after {
+.nav.nav-tabs > li.active:after, 
+.nav.nav-tabs > li:hover:after {
     width: 100%;
     background: $tab-color;
 }
