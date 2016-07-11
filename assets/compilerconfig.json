@@ -84,30 +84,14 @@
     "inputFile": "styles/themes/unsupport-browser/agent.scss"
     },
     {
-    "outputFile": "styles/themes/tab-agent.css",
-    "inputFile": "styles/themes/tab-agent.scss"
-  },
-  {
     "outputFile": "styles/themes/unsupport-browser/master.css",
     "inputFile": "styles/themes/unsupport-browser/master.scss"
     },
     {
-    "outputFile": "styles/themes/tab-master.css",
-    "inputFile": "styles/themes/tab-master.scss"
-  },
-  {
     "outputFile": "styles/themes/unsupport-browser/super.css",
     "inputFile": "styles/themes/unsupport-browser/super.scss"
     },
     {
-    "outputFile": "styles/themes/tab-super.css",
-    "inputFile": "styles/themes/tab-super.scss"
-  },
-  {
-    "outputFile": "styles/components/component.css",
-    "inputFile": "styles/components/component.scss"
-  },
-  {
     "outputFile": "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.css",
     "inputFile": "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.scss"
   }
