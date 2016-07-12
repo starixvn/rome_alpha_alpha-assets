@@ -1,8 +1,5 @@
 ﻿@import "../abstracts/_mixins.scss";
 
-select {
-    font-size: 12px;
-}
 
 select {
     border: none;
@@ -30,7 +27,6 @@ select {
         @include box-shadow(0, 2px, 2px, rgba(0, 0, 0, 0.2));
         @include border-radius(2px);
         border: none;
-        font-size: 12px;
         height: 32px;
         background: #fff;
 

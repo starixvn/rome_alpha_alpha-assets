@@ -1,14 +1,33 @@
 ﻿$icon-version: joh3s3;
-$font-size: 12px;
+$font-size: 13px;
 $text-color: #333;
 
-$btn-default-color: #e1e1e1;
-$btn-submit-color: #0b599c;
-$btn-refresh-color: #1bac69;
+$tab-color: #666;
+
+$height-normal: 28px;
+
+$btn-bg: #e1e1e1;
+$btn-color: #212121;
+$btn-bg-hover: #e1e1e1;
+$btn-color-hover: #212121;
+$btn-bg-hover: darken($btn-bg, 5%);
+
+$btn-submit-bg: #0b599c;
+$btn-submit-color: #fff;
+$btn-submit-bg-hover: darken($btn-submit-bg, 5%);
+$btn-submit-color-hover: #fff;
+
+$btn-reset-bg: #F6731B;
+$btn-reset-color: #fff;
+$btn-reset-bg-hover: darken($btn-reset-bg, 5%);
+$btn-reset-color-hover: #fff;
+
+$btn-refresh-bg: #1bac69;
+$btn-refresh-color: #fff;
+$btn-refresh-bg-hover: darken($btn-refresh-bg, 5%);
+$btn-refresh-color-hover: #fff;
 
 $btn-cancel-bg: #909090;
 $btn-cancel-color: #fff;
 $btn-cancel-bg-hover: darken($btn-cancel-bg, 5%);
 $btn-cancel-color-hover: #fff;
-
-$tab-color: #666;
