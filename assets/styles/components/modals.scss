@@ -2,20 +2,6 @@
 @import '../abstracts/_mixins.scss';
 @import '../components/buttons.scss';
 
-#helpModal {
-    .modal-header {
-        padding: 10px 15px;
-
-        #myModalLabel {
-            font-size: 14px;
-            font-weight: bold;
-        }
-    }
-
-    .note-content {
-        padding: 0;
-    }
-}
 
 .modal[id^="page-popup"] {
     position: absolute !important;
