@@ -128,6 +128,7 @@
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
       "styles/components/icon.css",
+      "styles/components/blockui.css",
       "styles/components/tables.css",
       "styles/components/tabs.css",
       "styles/components/buttons.css",
