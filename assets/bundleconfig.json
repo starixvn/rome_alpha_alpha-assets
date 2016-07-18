@@ -101,6 +101,7 @@
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
       "styles/components/icon.css",
+      "styles/components/modals.css",
       "styles/components/tabs.css",
       "styles/components/buttons.css"
     ]
