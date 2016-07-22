@@ -94,5 +94,9 @@
   {
     "outputFile": "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.css",
     "inputFile": "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.scss"
+  },
+  {
+    "outputFile": "styles/components/textboxes.css",
+    "inputFile": "styles/components/textboxes.scss"
   }
 ]

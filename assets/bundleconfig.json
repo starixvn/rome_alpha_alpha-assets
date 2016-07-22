@@ -103,7 +103,8 @@
       "styles/components/icon.css",
       "styles/components/modals.css",
       "styles/components/tabs.css",
-      "styles/components/buttons.css"
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css"
     ]
   },
   {
@@ -133,6 +134,7 @@
       "styles/components/tables.css",
       "styles/components/tabs.css",
       "styles/components/buttons.css",
+      "styles/components/textboxes.css",
       "styles/components/dropdown.css"
     ]
   },

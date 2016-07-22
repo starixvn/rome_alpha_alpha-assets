@@ -37,19 +37,6 @@ input[type=submit], input[type=reset] {
     @include border-radius(1px);
 }
 
-input[type=text], input[type=password] {
-    width: 120px;
-    height: 28px;
-    line-height: 28px;
-    border: none;
-    padding-left: 8px;
-    padding-right: 8px;
-    margin-left: 8px;
-    -webkit-appearance: none;
-    @include border-radius(1px);
-    @include box-shadow(1px, 1px, 1px, rgba(0,0,0,.3));
-}
-
 input[type=reset] {
     background-color: #F6731B;
     color: #fff;
