@@ -1,33 +1,5 @@
 ﻿@import "../abstracts/_variables.scss";
 @import "../abstracts/_mixins.scss";
-
-
-@font-face {
-    font-family: 'Roboto';
-    src:    url('../Fonts/Roboto/Roboto-Regular.woff2') format("woff2");
-    src:    url('../Fonts/Roboto/Roboto-Regular.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src:    url('../Fonts/Roboto/Roboto-Medium.woff2') format("woff2");
-    src:    url('../Fonts/Roboto/Roboto-Medium.woff') format('woff');
-    font-weight: bold;
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Iconalpha';
-    src:    url('../Fonts/Iconalpha/fonts/Iconalpha.eot?#{$icon-version}');
-    src:    url('../Fonts/Iconalpha/fonts/Iconalpha.eot?#{$icon-version}#iefix') format('embedded-opentype'),
-        url('../Fonts/Iconalpha/fonts/Iconalpha.woff?#{$icon-version}') format('woff'),
-        url('../Fonts/Iconalpha/fonts/Iconalpha.ttf?#{$icon-version}') format('truetype'),        
-        url('../Fonts/Iconalpha/fonts/Iconalpha.svg?#{$icon-version}#Iconalpha') format('svg');
-    font-weight: normal;
-    font-style: normal;
-}
  
 input, button {
     font-size: 12px;
