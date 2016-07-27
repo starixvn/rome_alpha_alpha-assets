@@ -156,5 +156,24 @@
       "js/components/multiselect/bootstrap-multiselect.js",
       "js/libs/jquery/jquery.cookie.js"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-totalbetsforecast/unsupport-browser/default.js",
+    "inputFiles": [
+      "js/libs/jquery/jquery-1.11.3.js",
+      "js/libs/bootstrap/button.js",
+      "js/libs/bootstrap/dropdown.js",
+      "js/libs/bootstrap/carousel.js",
+      "js/libs/bootstrap/modal.js",
+      "js/libs/bootstrap/tooltip.js",
+      "js/components/blockui/jquery.blockUI.js",
+      "js/libs/underscore/underscore-min.js",
+      "js/libs/numeral/numeral.js",
+      "js/components/coloranimation/jquery.animate-colors.js",
+      "js/components/highlight/jquery.pulse.js",
+      "js/components/countdown/jquery.countdown.ie8.js",
+      "js/components/multiselect/bootstrap-multiselect.ie8.js",
+      "js/libs/jquery/jquery.cookie.js"
+    ]
   }
 ]
