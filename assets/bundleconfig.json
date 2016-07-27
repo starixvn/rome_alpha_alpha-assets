@@ -146,6 +146,7 @@
       "js/libs/bootstrap/dropdown.js",
       "js/libs/bootstrap/carousel.js",
       "js/libs/bootstrap/modal.js",
+      "js/libs/bootstrap/tooltip.js",
       "js/components/blockui/jquery.blockUI.js",
       "js/libs/underscore/underscore-min.js",
       "js/libs/numeral/numeral.js",
