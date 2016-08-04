@@ -98,5 +98,21 @@
   {
     "outputFile": "styles/components/textboxes.css",
     "inputFile": "styles/components/textboxes.scss"
+  },
+  {
+    "outputFile": "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
+    "inputFile": "styles/vendors-extensions/site-viewlogs/bootstrap-ex.scss"
+  },
+  {
+    "outputFile": "styles/components/form.css",
+    "inputFile": "styles/components/form.scss"
+  },
+  {
+    "outputFile": "styles/vendors-extensions/site-viewlogs/monPickr-custom.css",
+    "inputFile": "styles/vendors-extensions/site-viewlogs/monPickr-custom.scss"
+  },
+  {
+    "outputFile": "styles/components/checkbox-radio.css",
+    "inputFile": "styles/components/checkbox-radio.scss"
   }
 ]
