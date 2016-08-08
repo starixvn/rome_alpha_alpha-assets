@@ -63,3 +63,21 @@
     color: #FFF;
     font-weight: 700;
 }
+
+.tbl-content {
+    border: 1px solid #dfdfdf;
+    border-collapse: collapse;
+    thead th {
+        color: #FFF;
+        font-weight: 400;
+        text-align: center;
+        background-color: #666;
+    }
+    thead th, tbody td {
+        border: 1px solid #dfdfdf;
+        height: 20px;
+        padding: 4px 8px;
+        white-space: nowrap;
+        line-height: 20px;
+    }
+}
