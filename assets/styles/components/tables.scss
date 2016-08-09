@@ -67,17 +67,23 @@
 .tbl-content {
     border: 1px solid #dfdfdf;
     border-collapse: collapse;
-    thead th {
+    > thead th {
         color: #FFF;
         font-weight: 400;
         text-align: center;
         background-color: #666;
     }
     thead th, tbody td {
+        height: 28px;
+        vertical-align: middle;
+    }
+    tr.odd td {
+        background: #eae9ee;
+    }
+     > thead > tr > th,  > tbody > tr > td {
         border: 1px solid #dfdfdf;
-        height: 20px;
         padding: 4px 8px;
         white-space: nowrap;
-        line-height: 20px;
+        box-sizing: border-box;
     }
 }
