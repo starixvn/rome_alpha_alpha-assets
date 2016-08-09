@@ -60,14 +60,14 @@
       "styles/themes/unsupport-browser/super.css"
     ]
   },
-    {
+  {
     "outputFileName": "bundles/site-main/unsupport-browser/master.css",
     "inputFiles": [
       "styles/fonts/iconalpha/style.css",
       "styles/themes/unsupport-browser/master.css"
     ]
   },
-    {
+  {
     "outputFileName": "bundles/site-main/unsupport-browser/agent.css",
     "inputFiles": [
       "styles/fonts/iconalpha/style.css",
@@ -125,7 +125,7 @@
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.css",
-      "styles/vendors/bootstrap-multiselect.css",      
+      "styles/vendors/bootstrap-multiselect.css",
       "styles/vendors/select2.css",
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
@@ -242,8 +242,11 @@
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
       "js/libs/bootstrap/dropdown.js",
-      "js/libs/bootstrap/tab.js", 
-      "js/components/monthpicker/monPickr-0.0.3.js"
+      "js/libs/bootstrap/tab.js",
+      "js/components/monthpicker/monPickr-0.0.3.js",
+      "js/components/pagination/jquery.parser.js",
+      "js/components/pagination/jquery.linkbutton.js",
+      "js/components/pagination/jquery.pagination.js"
     ]
   }
 ]
