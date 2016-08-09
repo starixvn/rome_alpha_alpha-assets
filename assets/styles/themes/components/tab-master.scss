@@ -1,0 +1,19 @@
+﻿@import "../../abstracts/_master-variables.scss";
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: none;
+    color: $primary-color;
+    background: transparent;
+}
+
+.nav.nav-tabs > li.active:after, 
+.nav.nav-tabs > li:hover:after {
+    width: 100%;
+    background: $primary-color;
+}
+
+.nav-tabs > li > a {
+    color: $primary-color;
+    font-weight: bold;
+    outline: none;
+}

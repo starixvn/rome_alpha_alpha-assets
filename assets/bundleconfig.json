@@ -177,7 +177,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-viewlogs/default.css",
+    "outputFileName": "bundles/site-viewlogs/viewlogs-super.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
@@ -187,6 +187,47 @@
       "styles/vendors/monthpicker/monPickr-0.0.3.css",
       "styles/vendors-extensions/site-viewlogs/monPickr-custom.css",
       "styles/components/tabs.css",
+      "styles/themes/components/tab-super.css",
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css",
+      "styles/components/dropdown.css",
+      "styles/components/form.css",
+      "styles/components/checkbox-radio.css",
+      "styles/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-viewlogs/viewlogs-master.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
+      "styles/base/scaffolding.css",
+      "styles/base/roboto-fonts.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/vendors/monthpicker/monPickr-0.0.3.css",
+      "styles/vendors-extensions/site-viewlogs/monPickr-custom.css",
+      "styles/components/tabs.css",
+      "styles/themes/components/tab-master.css",
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css",
+      "styles/components/dropdown.css",
+      "styles/components/form.css",
+      "styles/components/checkbox-radio.css",
+      "styles/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-viewlogs/viewlogs-agent.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
+      "styles/base/scaffolding.css",
+      "styles/base/roboto-fonts.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/vendors/monthpicker/monPickr-0.0.3.css",
+      "styles/vendors-extensions/site-viewlogs/monPickr-custom.css",
+      "styles/components/tabs.css",
+      "styles/themes/components/tab-agent.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
       "styles/components/dropdown.css",

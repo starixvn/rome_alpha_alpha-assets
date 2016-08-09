@@ -26,21 +26,3 @@
     -webkit-transition: width .5s ease, background-color .5s ease;
     transition: width .5s ease, background-color .5s ease;
 }
-
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
-    border: none;
-    color: $tab-color;
-    background: transparent;
-}
-
-.nav.nav-tabs > li.active:after, 
-.nav.nav-tabs > li:hover:after {
-    width: 100%;
-    background: $tab-color;
-}
-
-.nav-tabs > li > a {
-    color: $tab-color;
-    font-weight: bold;
-    outline: none;
-}
