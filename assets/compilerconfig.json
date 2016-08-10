@@ -126,5 +126,9 @@
   {
     "outputFile": "styles/themes/components/tab-super.css",
     "inputFile": "styles/themes/components/tab-super.scss"
+  },
+  {
+    "outputFile": "styles/components/pagination.css",
+    "inputFile": "styles/components/pagination.scss"
   }
 ]
