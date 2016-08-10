@@ -246,7 +246,8 @@
       "js/components/monthpicker/monPickr-0.0.3.js",
       "js/components/pagination/jquery.parser.js",
       "js/components/pagination/jquery.linkbutton.js",
-      "js/components/pagination/jquery.pagination.js"
+      "js/components/pagination/jquery.pagination.js",
+      "js/components/autocomplete/autocomplete.js"
     ]
   }
 ]
