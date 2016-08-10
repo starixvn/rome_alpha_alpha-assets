@@ -124,7 +124,7 @@ var oldIdx = -1;
 function getSuggestions() {
     if (txtObj.value.length < 2) {
         suggestions = [];
-        lookAt('');
+        lookAt({});
         return;
     }
 
@@ -140,7 +140,7 @@ function getSuggestions() {
 
     if (oldIdx != -1 && cacheQuery.length < maxCache) {
         suggestions = cacheSuggestion[oldIdx];
-        lookAt();
+        lookAt({});
     } else {
         if (cacheQuery.length >= maxCache) {
             cacheQuery.slice(1, maxCache - 1);
