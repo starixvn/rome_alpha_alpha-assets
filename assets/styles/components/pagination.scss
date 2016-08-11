@@ -1,5 +1,12 @@
 ﻿.pagination {
     padding: 5px 0;
+    span, .pagination-info {
+        font-size: 13px;
+    }
+    .l-btn-plain:hover {
+        background: transparent;
+        border: 1px solid transparent;
+    }
 }
 .pagination-page-list {
     height: 28px;
