@@ -237,7 +237,7 @@
       "styles/components/dropdown.css",
       "styles/components/form.css",
       "styles/components/checkbox-radio.css",
-      "styles/components/tables.css", 
+      "styles/components/tables.css",
       "styles/components/pagination.css"
     ]
   },

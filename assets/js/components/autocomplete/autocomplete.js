@@ -55,6 +55,8 @@ function setVisible(visi) {
     x.style.top = findPosY(txtObj) + "px";
     x.style.left = findPosX(txtObj) + "px";
     x.style.visibility = visi;
+
+    outp.style.visibility = visi;
 }
 
 function initAutoComplete(suggestionTextbox, queryUrl, completed) {
