@@ -130,5 +130,9 @@
   {
     "outputFile": "styles/components/pagination.css",
     "inputFile": "styles/components/pagination.scss"
+  },
+  {
+    "outputFile": "styles/components/month-picker.css",
+    "inputFile": "styles/components/month-picker.scss"
   }
 ]

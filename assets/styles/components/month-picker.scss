@@ -1,4 +1,4 @@
-﻿@import "../../abstracts/_mixins.scss";
+﻿@import "../abstracts/_mixins.scss";
 
 .monpickr-arrows input.monpickr-input {
 	text-align: center!important;
@@ -76,7 +76,7 @@
 			}
 			.prev {	
 				.ui-icon-circle-triangle-w {
-					background: url("../../vendors/monthpicker/images/sprites.png") 0 -127px !important;
+					background: url("../vendors/monthpicker/images/sprites.png") 0 -127px !important;
 					background-position: 0 -127px !important;
 					height: 18px;
 					width: 15px;
@@ -85,7 +85,7 @@
 			}
 			.next {
 				.ui-icon-circle-triangle-e {
-					background: url("../../vendors/monthpicker/images/sprites.png") -19px -127px !important;
+					background: url("../vendors/monthpicker/images/sprites.png") -19px -127px !important;
 					background-position:  -19px -127px !important;
 					height: 18px;
 					width: 15px;
@@ -135,7 +135,7 @@
 	}
 
 	.ui-widget-header .ui-icon {
-		background-image: url("../../vendors/monthpicker/images/dropdown-icon.png")!important;	
+		background-image: url("../vendors/monthpicker/images/dropdown-icon.png")!important;	
 		background-position: 39px 6px !important;
 		width: 47px !important;
 	}	
@@ -168,3 +168,4 @@
     margin: 3px 5px 3px 16px;
 	
 }
+
