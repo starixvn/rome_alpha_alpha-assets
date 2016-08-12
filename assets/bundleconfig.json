@@ -254,7 +254,8 @@
       "js/components/pagination/jquery.parser.js",
       "js/components/pagination/jquery.linkbutton.js",
       "js/components/pagination/jquery.pagination.js",
-      "js/components/autocomplete/autocomplete.js"
+      "js/components/autocomplete/autocomplete.js",
+      "js/libs/jquery/jquery.cookie.js"
     ]
   }
 ]
