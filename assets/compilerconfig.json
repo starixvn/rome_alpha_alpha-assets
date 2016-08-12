@@ -108,10 +108,6 @@
     "inputFile": "styles/components/form.scss"
   },
   {
-    "outputFile": "styles/vendors-extensions/site-viewlogs/monPickr-custom.css",
-    "inputFile": "styles/vendors-extensions/site-viewlogs/monPickr-custom.scss"
-  },
-  {
     "outputFile": "styles/components/checkbox-radio.css",
     "inputFile": "styles/components/checkbox-radio.scss"
   },
