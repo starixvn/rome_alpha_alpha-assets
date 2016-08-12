@@ -11,12 +11,10 @@
 */
 
 (function ($) {
-
+    var shortMonthsInYear = [],
+        longMonthsInYear = [];
     Date.prototype.toStringFormat = function (format) {
-
-        var shortMonthsInYear = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
-            longMonthsInYear = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
-            year = this.getFullYear(),
+        var year = this.getFullYear(),
             month = this.getMonth(),
             day = this.getDate(),
             result = format;
@@ -286,6 +284,8 @@
 
             // Create some defaults, extending them with any options that were provided
             var settings = $.extend({
+                shortMonthsInYear: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+                longMonthsInYear: ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
                 minDate: firstDayThisYear,
                 maxDate: today,
                 month: today,
@@ -318,6 +318,9 @@
                 beforeChangeDay: function () { },
                 afterChangeDay: function () { }
             }, options);
+
+            shortMonthsInYear = settings.shortMonthsInYear;
+            longMonthsInYear = settings.longMonthsInYear;
 
             //#region VALIDATES INPUT VALUES
 
@@ -810,7 +813,7 @@
                     _selectMonth(data, year, month);
                 } else {
                     logger.log('Oops! Can\'t set month because input (' + value.toString() +
-                        ') is out of range (' + data.minDate.toStringFormat('MMM yyyy') + ' ~ ' + data.maxDate.toStringFormat('MMM yyyy') + ')');
+                        ') is out of range (' + data.minDate.toStringFormat('MMM - yyyy') + ' ~ ' + data.maxDate.toStringFormat('MMM - yyyy') + ')');
                 }
             } else {
                 logger.log('Oops! Can\'t set month because of invalid input (' + value.toString() + ')');
@@ -888,7 +891,6 @@
     */
 
     $.fn.monPickr = function (method) {
-
         if (_methods[method]) { // call a method but init
             return _methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof method === 'object' || !method) { // call init method
