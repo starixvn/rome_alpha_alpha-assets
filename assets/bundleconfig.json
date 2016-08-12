@@ -185,6 +185,8 @@
       "styles/base/roboto-fonts.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/vendors/monthpicker/monPickr-0.0.3.css",
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/vendors/jquery-easyui-1.5/icon.css",
       "styles/components/month-picker.css",
       "styles/components/tabs.css",
       "styles/themes/components/tab-super.css",
@@ -194,7 +196,8 @@
       "styles/components/form.css",
       "styles/components/checkbox-radio.css",
       "styles/components/tables.css",
-      "styles/components/pagination.css"
+      "styles/components/pagination.css",
+      "styles/components/blockui.css"
     ]
   },
   {
@@ -206,6 +209,8 @@
       "styles/base/roboto-fonts.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/vendors/monthpicker/monPickr-0.0.3.css",
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/vendors/jquery-easyui-1.5/icon.css",
       "styles/components/month-picker.css",
       "styles/components/tabs.css",
       "styles/themes/components/tab-master.css",
@@ -215,7 +220,8 @@
       "styles/components/form.css",
       "styles/components/checkbox-radio.css",
       "styles/components/tables.css",
-      "styles/components/pagination.css"
+      "styles/components/pagination.css",
+      "styles/components/blockui.css"
     ]
   },
   {
@@ -225,7 +231,6 @@
       "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
       "styles/base/scaffolding.css",
       "styles/base/roboto-fonts.css",
-      "styles/base/icon-fonts.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/vendors/monthpicker/monPickr-0.0.3.css",
       "styles/vendors/jquery-easyui-1.5/easyui.css",
