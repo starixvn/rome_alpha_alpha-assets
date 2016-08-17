@@ -76,19 +76,17 @@
 			}
 			.prev {	
 				.ui-icon-circle-triangle-w {
-					background: url("../vendors/monthpicker/images/sprites.png") 0 -127px !important;
-					background-position: 0 -127px !important;
-					height: 18px;
-					width: 15px;
+					background: url("../vendors/monthpicker/images/icon-left.png") no-repeat;
+					height: 12px;
+					width: 12px;
 					float: left;
 				}
 			}
 			.next {
 				.ui-icon-circle-triangle-e {
-					background: url("../vendors/monthpicker/images/sprites.png") -19px -127px !important;
-					background-position:  -19px -127px !important;
-					height: 18px;
-					width: 15px;
+					background: url("../vendors/monthpicker/images/icon-right.png") no-repeat;
+					height: 12px;
+					width: 12px;
 				}
 			}
 		}	
@@ -155,6 +153,9 @@
             padding: 0;
         }
 	}
+    .monpickr-prev, .monpickr-next {
+        top: 8px;
+    }
 	.monpickr-next, .monpickr-down {		
 		right: 5px;
 	}
