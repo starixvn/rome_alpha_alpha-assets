@@ -252,7 +252,6 @@
     "outputFileName": "bundles/site-viewlogs/default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
-      "js/libs/css-parent-selector/jQuery.cssParentSelector.js",
       "js/libs/bootstrap/button.js",
       "js/libs/bootstrap/dropdown.js",
       "js/libs/bootstrap/tab.js",
