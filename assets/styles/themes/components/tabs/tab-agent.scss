@@ -1,8 +1,10 @@
 ﻿@import "../../abstracts/_agent-variables.scss";
 
+$tab-text-color: #2267b6;
+
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
     border: none;
-    color: $primary-color;
+    color: $tab-text-color;
     background: transparent;
 }
 
@@ -13,7 +15,7 @@
 }
 
 .nav-tabs > li > a {
-    color: $primary-color;
+    color: $tab-text-color;
     font-weight: bold;
     outline: none;
 }
