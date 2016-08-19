@@ -112,16 +112,16 @@
     "inputFile": "styles/components/checkbox-radio.scss"
   },
   {
-    "outputFile": "styles/themes/components/tab-agent.css",
-    "inputFile": "styles/themes/components/tab-agent.scss"
+    "outputFile": "styles/themes/components/tabs/tab-agent.css",
+    "inputFile": "styles/themes/components/tabs/tab-agent.scss"
   },
   {
-    "outputFile": "styles/themes/components/tab-master.css",
-    "inputFile": "styles/themes/components/tab-master.scss"
+    "outputFile": "styles/themes/components/tabs/tab-master.css",
+    "inputFile": "styles/themes/components/tabs/tab-master.scss"
   },
   {
-    "outputFile": "styles/themes/components/tab-super.css",
-    "inputFile": "styles/themes/components/tab-super.scss"
+    "outputFile": "styles/themes/components/tabs/tab-super.css",
+    "inputFile": "styles/themes/components/tabs/tab-super.scss"
   },
   {
     "outputFile": "styles/components/pagination.css",
