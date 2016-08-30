@@ -1,81 +1,56 @@
-﻿table {
-    border-collapse: collapse;
+﻿@import "../abstracts/_mixins.scss";
+
+$table-red-color: #B50000;
+$table-td-hover-color: #f8eb95;
+$table-border-color: #d1d1d1;
+$table-header-bg-color: #666;
+$table-header-color: #fff;
+$table-subheader-bg-color: #3f3f3f;
+$table-subheader-color: #fff;
+$table-odd-bg: #eae9ee;
+$table-even-bg: #fff;
+$table-footer-bg: #7f3d1d;
+$table-footer-color: #fff;
+$height-normal: 28px;
+
+.width100per {
+    width: 100%;
 }
 
 .tblRpt {
-    border: 1px solid #dfdfdf;
+    border: 1px solid $table-border-color;
     border-collapse: collapse;
     background-color: #fff;
-}
 
-.tblPop {
-    background-color: #cdcdcd;
-}
-
-.tblRpt td, .tblPop td {
-    line-height: 22px;
-}
-
-.RptSubTitle {
-    background-color: #ffefde;
-}
-
-.RptTitle {
-    text-align: center;
-}
-
-.RptHeader th{
-    color: #FFF;
-    font-weight: 400;
-    text-align: center;
-    background-color: #666;
-}
-
-.RptHeader02 {
-    background-color: #787878;
-    color: #FFF;
-    font-weight: 400;
-    text-align: center;
-
-    td, th {
-        background-color: #787878;
+    &.tblRpt-bordered {
+        thead th, tbody td, tfoot td {
+            border: 1px solid $table-border-color;
+        }
     }
-}
 
-.RptHeader01 {
-    background: url(../Images/bg_header04.jpg) repeat-x top;
-    background-color: #e8e8e8;
-    font-weight: 700;
-    height: 22px;
-    text-align: center;
-}
-
-.RptFooter {
-    background-color: #666;
-    color: #FFF;
-    font-weight: 700;
-}
-
-.tblRpt {
-    border: 1px solid #dfdfdf;
-    border-collapse: collapse;
-    > thead th {
-        color: #FFF;
-        font-weight: 400;
-        text-align: center;
-        background-color: #666;
-    }
-    thead th, tbody td {
-        height: 28px;
-        vertical-align: middle;
-    }
-    tr.odd td {
-        background: #eae9ee;
-    }
-     > thead > tr > th,  > tbody > tr > td {
-        border: 1px solid #dfdfdf;
+    thead th, tbody td, tfoot td  {
+        height: $height-normal;
         padding: 4px 8px;
         white-space: nowrap;
-        box-sizing: border-box;
+        vertical-align: middle;
+        @include box-sizing;
+    }
+
+    thead th {
+        background-color: $table-header-bg-color;
+        color: $table-header-color;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .RptHeader02 th {
+        background-color: $table-subheader-bg-color;
+        color: $table-subheader-color;
+    }
+
+    .noInfo {
+        background-color: #fff !important;
+        text-align: center;
     }
 }
+
