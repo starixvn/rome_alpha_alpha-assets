@@ -23,7 +23,7 @@ $height-normal: 28px;
     background-color: #fff;
 
     &.tblRpt-bordered {
-        thead th, tbody td, tfoot td {
+        > thead > tr > th, > tbody > tr > td, tfoot > tr > td {
             border: 1px solid $table-border-color;
         }
     }
