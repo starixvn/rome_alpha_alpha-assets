@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?c39mwc');
-  src:  url('fonts/Iconalpha.eot?c39mwc#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?c39mwc') format('truetype'),
-    url('fonts/Iconalpha.woff?c39mwc') format('woff'),
-    url('fonts/Iconalpha.svg?c39mwc#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?4l5hbw');
+  src:  url('fonts/Iconalpha.eot?4l5hbw#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?4l5hbw') format('truetype'),
+    url('fonts/Iconalpha.woff?4l5hbw') format('woff'),
+    url('fonts/Iconalpha.svg?4l5hbw#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,21 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-edit_done:before {
+  content: "\e958";
+}
+.icon-menu-left:before {
+  content: "\e957";
+}
+.icon-arrow-right-bold:before {
+  content: "\e956";
+}
+.icon-chevron-down:before {
+  content: "\e954";
+}
+.icon-chevron-up:before {
+  content: "\e955";
+}
 .icon-caret-left:before {
   content: "\e952";
 }
