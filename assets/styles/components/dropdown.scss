@@ -1,49 +1,111 @@
-﻿@import "../abstracts/_mixins.scss";
-
+﻿@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
 
 select {
     border: none;
-    height: 28px;
-    margin-right: 7px;
-    padding: 4px;
-    @include border-radius(1px);
-    @include box-shadow(0, 1px, 1px, rgba(0,0,0,.3));
+    color: $text-color;
+	height: $height-normal;
+	margin-right: 7px;
+    padding: 4px 8px;
+    @include effect-textbox;
+    @include box-sizing;
 
     option {
         padding: 4px;
     }
-}
 
-/************************** Select2 ****************************/
-.dropdown {
-    .select2-container--default .select2-selection--single {
-        @include box-shadow(0, 2px, 2px, rgba(0, 0, 0, 0.2));
-        @include border-radius(2px);
-        border: none;
+    &.hasBorder {
+        border: 1px solid $border-color;
     }
 
-    .form-control {
-        @include box-shadow(0, 2px, 2px, rgba(0, 0, 0, 0.2));
-        @include border-radius(2px);
-        border: none;
-        height: 32px;
-        background: #fff;
+    &[disabled], .disabled {
+       opacity: .4;
+       cursor: not-allowed;
+    }
+}
 
-        option {
-            padding: 5px;
+.dropdown, .dropup {
+    display: inline-block; 
+
+    .dropdown-menu {
+        border: 1px solid $dropdown-border;
+        padding: 0;
+        border-radius: 0;
+        min-width: 78px;    
+
+        > li {
+            > a {
+                padding: 8px 15px;
+                font-size: $font-size;
+            }
+
+            a:hover {
+                color: $dropdown-color;
+                background: $dropdown-bg-hover;
+            }
         }
     }
+
+    .dropdown-toggle {
+        padding-right: 30px;
+    }
+
+    .btn-default:active, .btn-default.active, &.open>.btn-default.dropdown-toggle {
+        color: $dropdown-color;
+    }
 }
 
-.select2-container {
-    line-height: 20px;
-    width: 300px;
+.dropdown {
+    .caret {
+        top: 13px;
+        right: 18px;
+        position: absolute;
+    }
+
+    .btn.btn-countdown {
+        background-color: #eee;
+        color: #212121;
+        padding: 6px 30px 6px 10px;
+        font-size: 13px;
+
+        &:hover {
+            background-color: #e1e1e1;
+        }
+
+        .icon-refresh:before {
+            content: '\e933';
+            font-family: 'Iconalpha';
+            font-size: 20px;
+            position: relative;
+            color: #212121;
+            left: -4px;
+            top: -2px;
+        }
+
+        #ddlRefresh {
+            position: relative;
+            top: -6px;
+        }
+    }
+
+    .dropdown-menu {
+        @include effect-normal;  
+    }
+
+    #refresh-value > li > a {
+        padding: 5px 32px;
+    }
 }
 
-.select2-container .select2-selection--single {
-    height: 32px;
-}
+.dropup {
+    .caret {
+        top: 13px;
+        right: 17px;
+        position: absolute;
+    }
 
-.select2-container--default .select2-selection--single .select2-selection__rendered {
-    line-height: 32px;
+    .dropdown-menu {
+        @include box-shadow-multiple('0px -3px 6px rgba(0,0,0,.16),0 -3px 6px rgba(0,0,0,.23)');    
+        @include border-radius(1px);
+    }
 }
