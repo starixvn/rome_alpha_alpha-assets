@@ -1,79 +1,113 @@
-﻿@import "../abstracts/_mixins.scss";
+﻿@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
 
-.monpickr-arrows input.monpickr-input {
-	text-align: center!important;
-	margin: 0!important;
-	padding: 1px 2px !important;
-	border-radius: 2px!important;
-	cursor: pointer;
-    height: 28px !important;
-    font-weight: normal;
-    &.daypickr-selected-day  {
-        width: 100%;
+
+$dropdown-color: $text-color;
+$dropdown-color-disable: #888;
+$dropdown-bg: #fff;
+$dropdown-bg-hover: #ddd;
+$dropdown-bg-active: #337AB7;
+$dropdown-color-active: #fff;
+$dropdown-border: $border-color;
+
+.monpickr-super-wrapper {
+    .monpickr-label {
+        font-size: 100%;
+        margin: 3px 12px 3px 16px;	
     }
-}
-.ui-widget  input, .ui-widget select, .ui-widget textarea, .ui-widget button, .ui-monpickr li a {
-	font-family: "Roboto",'Lucida Sans',Tahoma,Arial,Helvetica,sans-serif;
-    font-size: 13px;
+    .ui-widget  input, .ui-widget select, .ui-widget textarea, .ui-widget button, .ui-monpickr li a {
+	    font-family: $font-family;
+        font-size: $font-size;
+    }
+
+    .ui-widget-header {
+        border: none;
+        background: none;
+    }
+
+    .monpickr-wrap-parent .monpickr-wrap .monpickr-dropdown,
+    .daypickr-wrap-parent .daypickr-dropdown {
+        @include effect-normal;
+    }
+
+    .ui-corner-all, .ui-corner-bottom, .ui-corner-right, .ui-corner-br {
+        @include border-radius(0);
+    }
+
+    a { outline: none; }
 }
 
 .monpickr-wrap-parent {
 	cursor: pointer;
 	.monpickr-wrap {
-		z-index: 99!important;
+		z-index: 99;
         .monpickr-selected-month {
             width: 154px !important;
         }
+
+        ul li {
+            background: none;
+			border: none;
+            min-height: 28px;
+            line-height: 28px;
+            vertical-align: middle;
+            @include border-radius(0);
+            @include box-sizing;
+        }
 		.monpickr-dropdown {
-			@include border-radius(1px);  
-            @include box-shadow-multiple('0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)'); 
-			margin-left: 1px !important;
 			ul {
-				
-				li:not(.year) {
-					a {
-						font-size: 100%!important;
-					}
-				}
+                li {       
+                    padding: 0 2px;             
+                    width: 100%;
 
-				.ui-state-active {
-					border-radius: 2px!important;
-					background: none!important;
-					border: 1px solid #FFFFFF!important;
-					a {
-						color: #0062ad!important;
-						font-size: 100%!important;
-						font-weight: bold!important;
-					}
-				}
-				.ui-state-hover:not(.year) {
-					a {
-						font-size:  100%!important;
-					}
-				}
+                    &:not(.year) a {
+						font-size: 100%;
+				    }
 
-				.ui-state-hover {
-					border-radius: 2px!important;
-					background: none!important;
-					border: 1px solid #FFFFFF!important;
+                    &.year a {
+                        font-size: 14px;    
+                        font-weight: normal;                    
+                        &.selected {
+                            font-weight: bold;                            
+                        }
+
+                        &:hover, &:focus {
+                            color: $dropdown-color;
+                        }
+                    }
+
+                    &.month-wrap {
+                        padding: 0;
+                    }
+                }
+
+                li.year.ui-corner-all:hover, .month-wrap li:hover {
+                    background: $dropdown-bg-hover;
+                    a { color: $dropdown-color; }
+                }
+
+				.month-wrap .ui-state-active {
+					background: $dropdown-bg-active;
+					
 					a {
-						color: #0062ad!important;
-						font-weight: bold!important;
+						color: $dropdown-color-active;
+						font-size: 100%;
+						font-weight: normal;
 					}
+
+                    &:hover {
+                        background: $dropdown-bg-active;
+                        a { color: $dropdown-color-active; }
+                    }
 				}
 			}
+
+            .month-wrap ul {
+                padding-left: 8px;
+            }
 
 		}
 		.monpickr {
-			background: none!important;
-			border: none!important;
-			border-radius: 2px !important;
-			vertical-align: middle;
-
-			.ui-state-focus, & .ui-state-hover {
-				background: none!important;
-				border: none!important;
-			}
 			.prev {	
 				.ui-icon-circle-triangle-w {
 					background: url("../vendors/monthpicker/images/icon-left.png") no-repeat;
@@ -90,62 +124,63 @@
 				}
 			}
 		}	
-	
 	}	
 	
 }
 
-.daypickr-wrap-parent{
+.daypickr-wrap-parent {
 	.daypickr {
-		border-radius: 2px!important;
-		background: none!important;
-		border: 0px solid #CECCCD!important;
-		
+		background: none;
+		border: none;		
+        
 		.monpickr-down {
 			margin-right:-2px;
 		}		
 
 		.ui-state-hover {
-			background: none!important;
-			border:none!important;
+			background: none;
+			border:none;
 		}
 
 		.daypickr-selected-day {
-			text-align: left !important;
-			padding-left:6px!important;
-			
+			text-align: left;
+			padding-left: 6px !important;			
 		}
 	}
-
-	.daypickr-dropdown {
-		@include border-radius(1px);  
-        @include box-shadow-multiple('0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)'); 
-
-		.ui-state-hover {
-			background: none repeat scroll 0 0 #FFFFFF;
-			border: solid 1px transparent!important;
-			> a {
-				color: #0062AD !important;
-				font-weight:bold;
-			}
-			
-		}
-	}
-
+	
 	.ui-widget-header .ui-icon {
-		background-image: url("../vendors/monthpicker/images/dropdown-icon.png")!important;	
-		background-position: 39px 6px !important;
+		background-image: url("../vendors/monthpicker/images/dropdown-icon.png");	
+		background-position: 39px 6px;
 		width: 47px !important;
 	}	
 
 	.ui-state-hover .ui-icon {
-		background-position: 40px 5px !important;
+		background-position: 40px 5px;
+	}
+
+    .daypickr-dropdown {
+        li:hover {
+            background: $dropdown-bg-hover;
+            a { color: $dropdown-color; }
+        }
 	}
 }
 
-.monpickr-arrows 
-{
-	padding: 0!important;
+.monpickr-arrows {
+	padding: 0;
+
+    input.monpickr-input {
+	    text-align: center;
+	    margin: 0;
+	    padding: 1px 2px;
+	    cursor: pointer;
+        height: 28px !important;
+        font-weight: normal;
+        &.daypickr-selected-day  {
+            width: 100%;
+        }
+    }
+
 	.monpickr-prev, .monpickr-next, .monpickr-down {
 		top: 6px;
         display: inline-block;
@@ -162,11 +197,5 @@
     .monpickr-prev {
         left: 5px;
     }
-}
-
-.monpickr-super-wrapper .monpickr-label {
-    font-size: 100%!important;
-    margin: 3px 5px 3px 16px;
-	
 }
 
