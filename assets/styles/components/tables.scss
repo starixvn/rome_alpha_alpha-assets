@@ -1,17 +1,5 @@
-﻿@import "../abstracts/_mixins.scss";
-
-$table-red-color: #B50000;
-$table-td-hover-color: #f8eb95;
-$table-border-color: #d1d1d1;
-$table-header-bg-color: #666;
-$table-header-color: #fff;
-$table-subheader-bg-color: #3f3f3f;
-$table-subheader-color: #fff;
-$table-odd-bg: #eae9ee;
-$table-even-bg: #fff;
-$table-footer-bg: #7f3d1d;
-$table-footer-color: #fff;
-$height-normal: 28px;
+﻿@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
 
 .width100per {
     width: 100%;
@@ -28,6 +16,14 @@ $height-normal: 28px;
         }
     }
 
+    &.tblRpt-striped {
+        tbody {
+            > tr:nth-of-type(2n+1) {
+                background-color: $table-odd-bg;
+            }
+        }   
+    }
+
     thead th, tbody td, tfoot td  {
         height: $height-normal;
         padding: 4px 8px;
@@ -36,16 +32,74 @@ $height-normal: 28px;
         @include box-sizing;
     }
 
-    thead th {
-        background-color: $table-header-bg-color;
-        color: $table-header-color;
-        font-weight: 400;
-        text-align: center;
+    thead {
+        th {
+            background-color: $table-header-bg-color;
+            color: $table-header-color;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        tr.headerBottom-pt th {
+            background-color: #f0f1c7;
+            color: $text-color;
+
+            &.RptHeader {
+                background-color: $table-header-bg-color;
+                color: $table-header-color;
+            }
+        }
     }
 
     .RptHeader02 th {
         background-color: $table-subheader-bg-color;
         color: $table-subheader-color;
+    }
+
+    tbody {
+        tr:hover td {
+            background-color: $table-td-hover-color;
+        }
+
+        td {
+            &.text-center {
+                text-align: center;
+            }
+
+            &.cl-league {
+                background: #f4f5e0;
+                text-transform: uppercase;
+                color: $text-color;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        .RptSubTitle {
+            background-color: #ffefde;
+        }
+
+        .altercol {
+            background-color: #f6f2d7;
+            text-align: right;
+        }
+
+        .firstCol {
+            background-color: #f8d7a2;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }    
+
+    .RptFooter {
+        background-color: $table-footer-bg;
+        color: $table-footer-color;
+        font-weight: 700;
+
+        .altercol {
+            background-color: #432616;
+        }
     }
 
     .noInfo {

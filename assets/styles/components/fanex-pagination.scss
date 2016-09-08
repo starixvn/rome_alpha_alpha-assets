@@ -1,0 +1,140 @@
+﻿@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+/* Pagination */
+#pagination {
+    font-family: $font-family;
+
+    %icon {
+        font:{
+            family: Iconalpha;
+            size: 15px;
+            weight: normal;
+        }
+    }
+
+    .numberlist ul li {
+        margin: 0;
+    }
+
+    .gotopage_box {
+        width: 184px;
+
+        #txtpage {
+            border-color: $border-color-dark;
+            height: 22px;
+            line-height: 22px;
+            text-align: center;
+            @include box-shadow-multiple(none);
+        }
+
+        td {
+            height: 28px;
+            padding: 1px 8px !important;
+        }
+
+        #pagenav_ibtn {
+            background: url(../images/go-hover-icon.png) -3px -3px no-repeat;
+            width: 14px;
+            height: 14px;
+
+            &:hover {
+                background-position: -3px -25px !important;
+            }
+        }
+    }
+
+    div.itemperpage {        
+        color: $text-color;
+        font-size: $font-size;
+        font-weight: normal;
+    }
+
+    * {
+        display: inline-block;
+        vertical-align: middle;
+    }
+    #itemperpage {        
+        border: 1px solid $border-color-dark;
+        height: 24px;
+        font-size: $font-size;
+        margin-left: 4px;
+        margin-right: 0;
+        padding: 4px;
+        margin-top: 3px;
+        @include border-radius(1px);
+        @include box-shadow-multiple(none);
+        @include box-sizing;
+
+    }
+
+    .numberlist {
+        border: none;
+        font-size: 13px;
+
+        ul li {
+            padding: 0;
+            height: 20px;
+            margin-right: 5px;
+            width: 20px;
+            text-align: center;
+            &.sep {
+                background: transparent;
+            }
+        }
+    }
+
+    .prev:before {
+        @extend %icon;
+        content: "\e93f";
+    }
+
+    .next {
+        text-indent: 5px;
+
+         &:before {
+            @extend %icon;
+            content: "\e942";
+            position: relative;
+            left: -1px;
+        }
+    }
+
+    a:hover, .current {
+        @include border-radius(2px);
+        background: $paging-btn-bg;
+        color: #fff;
+        font-weight: normal;
+    }
+
+    .prev, .next {
+        background: $paging-btn-bg;
+        color: #fff;
+        &:hover {
+            background: $paging-btn-bg-hover;
+        }
+    }
+
+    .current.prev,  .current.next {
+        background: $paging-btn-bg;
+        opacity: 0.55;
+    }
+
+    a, span {
+        line-height: 20px;
+        padding: 0;
+        width: 20px;
+        height: 20px;
+    }
+}
+
+/* Custom for firefox */
+@media screen and (-moz-images-in-menus:0) {
+    #pagination .next, #pagination .prev {
+        text-indent: 5px;
+        &:before {
+            left: -2px;
+            position: relative;
+        } 
+    }
+}

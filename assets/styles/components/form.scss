@@ -1,4 +1,7 @@
-﻿.filter {
+﻿@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.filter {
   padding-top: 15px;
   position: relative; 
     .form-group {
@@ -9,7 +12,26 @@
             margin-right: 5px; 
         }
     }
+
+    [class^="col-"] {
+        margin-bottom: 15px;
+    }
+
+    .form-group {
+         .control {
+            display: inline-block;
+            width: 200px;
+            vertical-align: middle;
+            margin-left: 5px;
+
+            &.date {
+                width: 130px;
+            }
+        }    
+    }
+
+    .txt-red {
+        color: #f00;
+    }
 }
-
-
 

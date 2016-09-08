@@ -1,15 +1,6 @@
 ﻿@import "../abstracts/_variables.scss";
 @import "../abstracts/_mixins.scss";
 
-
-$dropdown-color: $text-color;
-$dropdown-color-disable: #888;
-$dropdown-bg: #fff;
-$dropdown-bg-hover: #ddd;
-$dropdown-bg-active: #337AB7;
-$dropdown-color-active: #fff;
-$dropdown-border: $border-color;
-
 .monpickr-super-wrapper {
     .monpickr-label {
         font-size: 100%;

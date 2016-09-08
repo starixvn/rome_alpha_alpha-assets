@@ -1,21 +1,14 @@
 ﻿@import "../../../abstracts/_super-variables.scss";
 
-$tab-text-color: #97141e;
-
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
-    border: none;
-    color: $tab-text-color;
-    background: transparent;
+    color: $tab-active-color;
 }
 
 .nav.nav-tabs > li.active:after, 
 .nav.nav-tabs > li:hover:after {
-    width: 100%;
-    background: $primary-color;
+    background: $tab-line;
 }
 
 .nav-tabs > li > a {
-    color: $tab-text-color;
-    font-weight: bold;
-    outline: none;
+    color: $tab-color;
 }

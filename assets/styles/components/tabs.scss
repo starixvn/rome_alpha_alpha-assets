@@ -8,7 +8,6 @@
 .nav-tabs > li > a:hover {
     background: none;
     border-color: transparent;
-    cursor: pointer;
 }
 
 .nav.nav-tabs > li > a {
@@ -22,8 +21,23 @@
     height: 3px;
     width: 0;
     background: transparent;
-    -moz-transition: width .5s ease, background-color .5s ease;
-    -o-transition: width .5s ease, background-color .5s ease;
-    -webkit-transition: width .5s ease, background-color .5s ease;
-    transition: width .5s ease, background-color .5s ease;
+    @include transition('width .5s ease, background-color .5s ease');
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: none;
+    color: $tab-active-color;
+    background: transparent;
+}
+
+.nav.nav-tabs > li.active:after, 
+.nav.nav-tabs > li:hover:after {
+    width: 100%;
+    background: $tab-line;
+}
+
+.nav-tabs > li > a {
+    color: $tab-color;
+    font-weight: bold;
+    outline: none;
 }

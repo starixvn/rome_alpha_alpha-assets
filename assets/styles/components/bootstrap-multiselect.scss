@@ -1,0 +1,101 @@
+﻿@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.btn-group {
+    button.multiselect {
+         @include box-shadow(0, 1px, 1px, rgba(0,0,0,.3));
+        background: #fff;
+        font-size: $font-size;
+        position: relative;
+        padding: 6px 10px;
+        
+        &:hover {
+            color: inherit;
+        }
+
+        &:focus, &:visited {
+            @include box-shadow(0, 1px, 1px, rgba(0,0,0,.3));
+        }
+
+        .caret {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+    }
+
+    &.open > .dropdown-toggle.btn-default {
+        background: #fff;
+        @include effect-textbox;
+    }
+}
+
+.multiselect {
+    &.btn-default.active, &.btn-default:active {
+        background: #fff;
+    }
+
+    .multiselect-selected-text {
+        width: 170px;
+        margin-right: 10px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: left;
+    }
+}
+
+.multiselect-container.dropdown-menu {
+    border: 1px solid $dropdown-border;
+    font-size: 13px;
+    @include effect-normal;
+
+    > li:not(.active):hover > a {
+        background-color: $dropdown-bg-hover;
+    }
+
+    > li > a > label {
+        line-height: 28px;
+        padding: 0 20px 0 35px;
+    }
+
+    label.checkbox, label.radio {
+        display: block;
+    }
+
+    .filter {
+        padding: 0;
+        &:hover {
+            background: #fff;
+        }
+        .input-group {
+            width: 91%;
+
+            .input-group-addon, .input-group-btn {
+                display: none;
+            }
+
+            .form-control.multiselect-search {
+                width: 100%;
+                margin-left: 8px;
+                border-radius: 2px;
+                box-shadow: none;
+                border: 1px solid #aaa;
+                line-height: 18px;
+
+                &:hover {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    .checkbox input[type="checkbox"],
+    .checkbox-inline input[type="checkbox"], 
+    .radio input[type="radio"], 
+    .radio-inline input[type="radio"] {
+        margin-left: -22px;
+        top: 1px;
+    }
+}
