@@ -24,6 +24,14 @@
         }   
     }
 
+    &.tblRpt-hover {
+        tbody {
+            tr:hover td {
+                background-color: $table-td-hover-color;
+            }
+        }
+    }
+
     thead th, tbody td, tfoot td  {
         height: $height-normal;
         padding: 4px 8px;
@@ -57,9 +65,6 @@
     }
 
     tbody {
-        tr:hover td {
-            background-color: $table-td-hover-color;
-        }
 
         td {
             &.text-center {
