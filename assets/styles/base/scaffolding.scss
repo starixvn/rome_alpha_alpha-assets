@@ -1,9 +1,20 @@
-﻿@import 'roboto-fonts.scss';
+﻿@import '../abstracts/_variables.scss';
+@import 'roboto-fonts.scss';
 
 html, body {
     height: 100%;
     width: 100%;
     font-family: Roboto;
+}
+
+.page-title {
+    border-bottom: 1px solid #cecece;
+    color: #9d1c1c;
+    font-size: $font-size;
+    font-weight: 700;
+    line-height: 39px;
+    margin: 0;
+    text-transform: uppercase; 
 }
 
 a, a:focus, a:active, a:target, a:hover {

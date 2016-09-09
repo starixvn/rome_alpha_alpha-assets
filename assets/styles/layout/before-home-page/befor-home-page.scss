@@ -176,9 +176,14 @@ input, button {
             color: #ccc;
             position: absolute;
             left: 0;
-        }        
+        }    
+        
+        .icon-account-key {
+            font-size: 20px;
+            top: 8px;
+        }    
     }
-
+     
     .help-rules {
         .error {
             position: relative;

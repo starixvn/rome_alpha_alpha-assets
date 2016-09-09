@@ -270,7 +270,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security-code/default.css",
+    "outputFileName": "bundles/site-main/security-code/before-home-page.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-main/security-code/bootstrap-ex.css",
@@ -278,11 +278,22 @@
       "styles/base/scaffolding.css",
       "styles/components/icon.css",
       "styles/components/modals.css",
-      "styles/layout/before-home-page/beforeHomePage.css"
+      "styles/layout/before-home-page/before-home-page.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security-code/default.js",
+    "outputFileName": "bundles/site-main/security-code/default.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-main/security-code/bootstrap-ex.css",
+      "styles/base/scaffolding.css",
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css",
+      "styles/components/form.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/security-code/before-home-page.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",

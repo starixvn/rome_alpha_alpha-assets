@@ -180,11 +180,11 @@
     "inputFile": "styles/components/breadcrumbs.scss"
   },
   {
-    "outputFile": "styles/layout/before-home-page/beforeHomePage.css",
-    "inputFile": "styles/layout/before-home-page/beforeHomePage.scss"
-  },
-  {
     "outputFile": "styles/vendors-extensions/site-main/security-code/bootstrap-ex.css",
     "inputFile": "styles/vendors-extensions/site-main/security-code/bootstrap-ex.scss"
+  },
+  {
+    "outputFile": "styles/layout/before-home-page/befor-home-page.css",
+    "inputFile": "styles/layout/before-home-page/befor-home-page.scss"
   }
 ]
