@@ -160,11 +160,21 @@
         }
     }      
 
-    
-    table td span.month, table td span.year, table td span.decade {
-        @extend %ripple-effect;
-    }
+    table td {
+        &.day:hover, &.hour:hover, &.minute:hover, &.second:hover {
+            background: none;
+        }
 
+        span {
+            &.month, &.year, &.decade {
+                @extend %ripple-effect;
+            }
+            &:hover {
+                background: none;
+            }
+        }        
+    }
+    
     @keyframes ripple {
         0% {
             transform: scale(0);
