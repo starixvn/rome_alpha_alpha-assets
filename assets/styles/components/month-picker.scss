@@ -4,7 +4,7 @@
 .monpickr-super-wrapper {
     .monpickr-label {
         font-size: 100%;
-        margin: 3px 12px 3px 16px;	
+        margin: 3px 8px 3px 16px;	
     }
     .ui-widget  input, .ui-widget select, .ui-widget textarea, .ui-widget button, .ui-monpickr li a {
 	    font-family: $font-family;
@@ -33,7 +33,7 @@
 	.monpickr-wrap {
 		z-index: 99;
         .monpickr-selected-month {
-            width: 154px !important;
+            width: 158px !important;
         }
 
         ul li {
@@ -52,7 +52,7 @@
                     width: 100%;
 
                     &:not(.year) a {
-						font-size: 100%;
+						//font-size: 100%;
 				    }
 
                     &.year a {
@@ -82,7 +82,7 @@
 					
 					a {
 						color: $dropdown-color-active;
-						font-size: 100%;
+						//font-size: 100%;
 						font-weight: normal;
 					}
 

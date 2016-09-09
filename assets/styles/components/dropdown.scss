@@ -5,7 +5,6 @@ select {
     border: none;
     color: $text-color;
 	height: $height-normal;
-	margin-right: 7px;
     padding: 4px 8px;
     @include effect-textbox;
     @include box-sizing;
