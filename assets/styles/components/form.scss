@@ -11,14 +11,8 @@
             font-weight: normal;
             margin-right: 5px; 
         }
-    }
 
-    [class^="col-"] {
-        margin-bottom: 15px;
-    }
-
-    .form-group {
-         .control {
+        .control {
             display: inline-block;
             width: 200px;
             vertical-align: middle;
@@ -27,7 +21,11 @@
             &.date {
                 width: 130px;
             }
-        }    
+        }  
+    }
+        
+    [class^="col-"] {
+        margin-bottom: 15px;
     }
 
     .txt-red {
@@ -35,3 +33,10 @@
     }
 }
 
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-control:focus {
+    @include box-shadow-multiple(none);
+}
