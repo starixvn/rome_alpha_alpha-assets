@@ -259,6 +259,8 @@
       "js/libs/bootstrap/dropdown.js",
       "js/libs/bootstrap/tab.js",
       "js/components/monthpicker/monPickr-0.0.3.js",
+      "js/components/pagination/jquery.draggable.js",
+      "js/components/pagination/jquery.resizable.js",
       "js/components/pagination/jquery.parser.js",
       "js/components/pagination/jquery.linkbutton.js",
       "js/components/pagination/jquery.pagination.js",
