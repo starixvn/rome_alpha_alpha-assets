@@ -276,9 +276,8 @@
       "styles/vendors-extensions/site-main/security-code/bootstrap-ex.css",
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
-      "styles/components/icon.css",
       "styles/components/modals.css",
-      "styles/layout/before-home-page/before-home-page.css"
+      "styles/layout/before-home-page/befor-home-page.css"
     ]
   },
   {
