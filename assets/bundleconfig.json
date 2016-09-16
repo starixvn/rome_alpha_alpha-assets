@@ -277,7 +277,8 @@
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
       "styles/components/modals.css",
-      "styles/layout/before-home-page/befor-home-page.css"
+      "styles/layout/before-home-page/befor-home-page.css",
+       "styles/components/alerts.css"   
     ]
   },
   {
@@ -286,9 +287,11 @@
       "styles/base/reset.css",
       "styles/vendors-extensions/site-main/security-code/bootstrap-ex.css",
       "styles/base/scaffolding.css",
+      "styles/base/icon-fonts.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
-      "styles/components/form.css"
+      "styles/components/form.css",
+      "styles/components/alerts.css"   
     ]
   },
   {
@@ -297,7 +300,9 @@
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
       "js/libs/bootstrap/dropdown.js",
-      "js/libs/bootstrap/modal.js"
+      "js/libs/bootstrap/modal.js",
+      "js/components/secure-hashing/sha1.js",
+      "js/components/secure-hashing/sha256.js"
     ]
   }
 ]
