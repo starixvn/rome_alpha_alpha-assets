@@ -271,6 +271,7 @@
   },
   {
     "outputFileName": "bundles/site-main/security/before-home-page.css",
+    "outputFileName": "bundles/site-main/home/home-super.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
@@ -319,6 +320,52 @@
     "outputFileName": "bundles/site-main/security/security-master.css",
     "inputFiles": [
       "styles/base/reset.css",
+      "styles/vendors-extensions/site-main/home/bootstrap-ex.css",
+      "styles/base/scaffolding.css",
+      "styles/base/roboto-fonts.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/components/tabs.css",
+      "styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/home/home-default.js",
+    "inputFiles": [
+      "js/libs/jquery/jquery-1.11.3.js",
+      "js/libs/bootstrap/button.js",
+      "js/libs/bootstrap/dropdown.js",
+      "js/libs/bootstrap/tab.js",
+      "js/libs/bootstrap/tooltip.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/messages/messages-super.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-main/messages/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/base/scaffolding.css",
+      "styles/base/roboto-fonts.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/components/tabs.css",
+      "styles/components/form.css",
+      "styles/components/buttons.css",
+      "styles/components/tables.css",
+      "styles/components/calendars.css",
+      "styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/messages/messages-default.js",
+    "inputFiles": [
+      "js/libs/jquery/jquery-1.11.3.js",
+      "js/libs/bootstrap/button.js",
+      "js/libs/bootstrap/dropdown.js",
+      "js/libs/bootstrap/tab.js",
+      "js/libs/moment/moment.js",
+      "js/components/datetimepicker/datepicker.js",
+      "js/components/datetimepicker/bootstrap-datetimepicker.js"
+    ]
       "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
       "styles/base/scaffolding.css",
       "styles/base/icon-fonts.css",

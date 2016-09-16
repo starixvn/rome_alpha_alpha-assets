@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?ws209s');
-  src:  url('fonts/Iconalpha.eot?ws209s#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?ws209s') format('truetype'),
-    url('fonts/Iconalpha.woff?ws209s') format('woff'),
-    url('fonts/Iconalpha.svg?ws209s#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?z3vwpt');
+  src:  url('fonts/Iconalpha.eot?z3vwpt#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?z3vwpt') format('truetype'),
+    url('fonts/Iconalpha.woff?z3vwpt') format('woff'),
+    url('fonts/Iconalpha.svg?z3vwpt#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,24 +24,6 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-otp:before {
-  content: "\e95f";
-}
-.icon-normal-column:before {
-  content: "\e95b";
-}
-.icon-stack-column:before {
-  content: "\e95e";
-}
-.icon-arrow-up-drop-circle:before {
-  content: "\e95c";
-}
-.icon-arrow-down-drop-circle:before {
-  content: "\e95d";
-}
-.icon-menu-up:before {
-  content: "\e95a";
-}
 .icon-bell:before {
   content: "\e959";
 }

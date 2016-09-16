@@ -35,3 +35,13 @@
 .announcement-modal .modal-content .modal-header {
     background: $primary-color;
 }
+
+@media only screen and (max-device-width : 767px) {
+    .header-nav .list-top>li.language:hover, 
+    .header-nav .list-top>li.view-type:hover, 
+    .header-nav .list-top>li.dropdown:active:focus,
+    .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+        background: none;
+    }
+
+}
