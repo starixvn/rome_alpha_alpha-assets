@@ -350,6 +350,7 @@
       "styles/components/tabs.css",
       "styles/components/form.css",
       "styles/components/buttons.css",
+      "styles/components/textboxes.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
       "styles/themes/components/tabs/tab-super.css"
