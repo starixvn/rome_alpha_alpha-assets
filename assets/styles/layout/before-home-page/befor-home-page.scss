@@ -56,6 +56,10 @@ input, button {
                 li a {
                     padding-bottom: 6px;
                     padding-top: 6px;
+                    cursor: pointer;
+                    &:hover {
+                        background-color: #ddd;
+                    }
                 }
             }
         }
@@ -68,26 +72,26 @@ input, button {
             position: relative;
             top: 4px;
             margin-right: 2px;
-
-            &.flag-en {
+           
+            &.flag-en-US {
                 background-position: 0 0px;
             }
-            &.flag-cn {
+            &.flag-zh-CN {
                 background-position: 0 -17px;
             }
-            &.flag-tw {
+            &.flag-zh-TW {
                 background-position: 0 -34px;
             }
-            &.flag-jp {
+            &.flag-ja-JP {
                 background-position: 0 -50px;
             }
-            &.flag-th {
+            &.flag-th-TH {
                 background-position: 0 -69px;
             }
-            &.flag-kr {
+            &.flag-ko-KR {
                 background-position: 0 -86px;
             }
-            &.flag-vn {
+            &.flag-vi-VN {
                 background-position: 0 -104px;
             }
         }
