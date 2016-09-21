@@ -77,3 +77,15 @@
 .icon-logout, .setting > a, .icon-collapse, .icon-home, .icon-add, .icon-message {
     @include ripple-effect-icon($margin-left: 0, $margin-right: -4px, $height: 32px, $width: 32px, $top: 4px);
 }
+
+@media only screen and (max-width:1024px) { 
+    .icon {
+        font-size: 20px;
+    }
+    .icon-instruction {
+        @include ripple-effect-icon($margin-left: 4px, $margin-right: -4px, $height: 40px, $width: 40px, $top: 4px);
+    }
+    .icon-logout, .icon-collapse, .icon-home, .icon-add, .icon-message {
+        @include ripple-effect-icon($margin-left: 0, $margin-right: -4px, $height: 40px, $width: 40px, $top: 4px);
+    }
+}
