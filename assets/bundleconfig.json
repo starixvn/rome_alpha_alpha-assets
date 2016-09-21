@@ -291,7 +291,22 @@
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
       "styles/components/form.css",
-      "styles/components/alerts.css"   
+      "styles/components/alerts.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/security-code/security-code-super.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-main/security-code/bootstrap-ex.css",
+      "styles/base/scaffolding.css",
+      "styles/base/icon-fonts.css",
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css",
+      "styles/components/form.css",
+      "styles/components/alerts.css",
+      "styles/components/tabs.css",
+      "styles/themes/components/tabs/tab-super.css"   
     ]
   },
   {
