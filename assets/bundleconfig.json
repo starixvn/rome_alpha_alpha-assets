@@ -317,7 +317,8 @@
       "js/libs/bootstrap/dropdown.js",
       "js/libs/bootstrap/modal.js",
       "js/components/secure-hashing/sha1.js",
-      "js/components/secure-hashing/sha256.js"
+      "js/components/secure-hashing/sha256.js",
+     "js/components/blockui/jquery.blockUI.js"
     ]
   }
 ]
