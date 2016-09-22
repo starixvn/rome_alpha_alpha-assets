@@ -270,22 +270,22 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security-code/before-home-page.css",
+    "outputFileName": "bundles/site-main/security/before-home-page.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/security-code/bootstrap-ex.css",
+      "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
       "styles/components/modals.css",
-      "styles/layout/before-home-page/befor-home-page.css",
+      "styles/layout/before-home-page/before-home-page.css",
        "styles/components/alerts.css"   
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security-code/default.css",
+    "outputFileName": "bundles/site-main/security/default.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/security-code/bootstrap-ex.css",
+      "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
       "styles/base/scaffolding.css",
       "styles/base/icon-fonts.css",
       "styles/components/buttons.css",
@@ -295,10 +295,10 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security-code/security-code-super.css",
+    "outputFileName": "bundles/site-main/security/security-super.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/security-code/bootstrap-ex.css",
+      "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
       "styles/base/scaffolding.css",
       "styles/base/icon-fonts.css",
       "styles/components/buttons.css",
@@ -310,7 +310,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security-code/before-home-page.js",
+    "outputFileName": "bundles/site-main/security/before-home-page.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
