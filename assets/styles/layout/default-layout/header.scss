@@ -232,3 +232,54 @@ $text-color: #fff;
         }
     }
 }
+
+@media only screen and (max-width: 1024px) {
+    .header-nav {
+        .icon-collapse {
+            font-size: 20px;
+        }
+        .list-top {
+            > li {
+                 &.dropdown.setting {
+                    float: left;
+                    line-height: 48px;
+                    padding: 0;
+
+                    > a {
+                        padding: 14px;
+                        @include border-radius(0);
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+
+                    .icon-squares {
+                        font-size: 18px;
+                    }
+                }
+                 &.logout {
+                     padding: 0;
+                     > a {
+                         padding: 12px;
+                         &.icon-logout {
+                             font-size: 22px;
+                         }
+                     }
+                 }
+                 &.intro-box {
+                        padding: 0;
+                      .icon-instruction {
+                        padding: 12px 14px;
+                        &:before {
+                            font-size: 20px;
+                        }
+                      }
+                 }
+            }
+        }
+    }
+    .header-msg .icon-home {
+        padding: 5px 8px;
+    }
+}
