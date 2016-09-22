@@ -1,14 +1,21 @@
 ﻿
-.blockMsg {
-    width: 100px;
-    height: 100px;
-    background: url(../images/ajax-loader.gif) no-repeat;
-}
-
 .block-icon-small {
     display: inline-block;
     height: 16px;
     width: 16px;
     background: url(../images/ajax-loader-8.gif) no-repeat;
     vertical-align: middle;
+}
+
+// Formatting for jquery.blockUI plugin
+.blockOverlay {
+    background: #fff;
+    opacity: 0.6;
+}
+
+.blockMsg {
+    width: 100px;
+    height: 100px;
+    background: url(../images/ajax-loader.gif) center center no-repeat;
+    left: 47% !important;
 }

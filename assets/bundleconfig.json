@@ -278,7 +278,8 @@
       "styles/base/scaffolding.css",
       "styles/components/modals.css",
       "styles/layout/before-home-page/before-home-page.css",
-       "styles/components/alerts.css"   
+      "styles/components/alerts.css",
+      "styles/components/blockui.css" 
     ]
   },
   {
@@ -291,7 +292,8 @@
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
       "styles/components/form.css",
-      "styles/components/alerts.css"
+      "styles/components/alerts.css",
+      "styles/components/blockui.css" 
     ]
   },
   {
