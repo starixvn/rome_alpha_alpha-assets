@@ -324,6 +324,8 @@
       "styles/base/scaffolding.css",
       "styles/base/roboto-fonts.css",
       "styles/fonts/iconalpha/style.css",
+      "styles/components/dropdown.css",
+      "styles/components/tables.css",
       "styles/components/tabs.css",
       "styles/themes/components/tabs/tab-super.css"
     ]
