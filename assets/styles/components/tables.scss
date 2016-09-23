@@ -19,7 +19,7 @@
     &.tblRpt-striped {
         tbody {
             > tr:nth-of-type(2n+1) {
-                background-color: $table-odd-bg;
+                background-color: $table-even-bg;
             }
         }   
     }
