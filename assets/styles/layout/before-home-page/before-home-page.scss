@@ -225,10 +225,13 @@ input, button {
         }
     }
 
+    label {
+        font-weight: normal;
+    }
+
     label.error {
         color: $msg-error-color;
         font-size: $font-size;
-        font-weight: normal;
         display: block;
         padding-top: 8px;
         text-align: left;
