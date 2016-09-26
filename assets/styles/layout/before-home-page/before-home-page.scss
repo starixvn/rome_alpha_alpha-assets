@@ -143,28 +143,9 @@ input, button {
             }
         }
 
-        &.error ~ .validation:before, &.valid ~ .validation:before {
-            @extend %alphaIcon;
-            font-size: 18px;
+        &.error ~ .validation, &.valid ~ .validation {
             right: 0;
             top: 6px;
-            position: absolute;
-        }
-
-        &.error {
-            border-bottom: 2px solid $msg-error-border;
-
-            ~ .validation:before {                
-                content: '\e92c';
-                color: $msg-error-color;
-            }
-        }
-
-        &.valid {
-            ~ .validation:before {
-                content: '\e91f';
-                color: $msg-success-color;
-            }
         }
     }
 
