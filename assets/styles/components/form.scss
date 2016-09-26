@@ -49,6 +49,10 @@
         }
     }
 
+    .form-group {
+        position: relative;
+    }
+
     .txt {
         &.error ~ .validation, &.valid ~ .validation {
             @extend %alphaIcon;
