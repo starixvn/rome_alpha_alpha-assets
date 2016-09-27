@@ -131,7 +131,7 @@ input, button {
         border-bottom: 1px solid #c4c4c4;
         height: 36px;
         line-height: 36px;
-        padding: 8px 0 4px 28px;
+        padding: 0 0 0 28px;
         color: #888;
         @include border-radius(0);
 
@@ -165,12 +165,12 @@ input, button {
         
         .icon-account-key {
             font-size: 20px;
-            top: 8px;
+            top: 7px;
         }    
 
         .icon-lock {
             font-size: 18px;
-            top: 8px;
+            top: 7px;
         }
     }
      
