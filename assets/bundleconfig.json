@@ -271,10 +271,11 @@
   },
   {
     "outputFileName": "bundles/site-main/security/before-home-page.css",
-    "outputFileName": "bundles/site-main/home/home-super.css",
+    "outputFileName": "bundles/site-main/dashboard/dashboard-super.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
+      "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.css",
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
       "styles/components/modals.css",
@@ -320,7 +321,6 @@
     "outputFileName": "bundles/site-main/security/security-master.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/home/bootstrap-ex.css",
       "styles/base/scaffolding.css",
       "styles/base/roboto-fonts.css",
       "styles/fonts/iconalpha/style.css",
@@ -331,7 +331,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/home/home-default.js",
+    "outputFileName": "bundles/site-main/dashboard/dashboard-default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",

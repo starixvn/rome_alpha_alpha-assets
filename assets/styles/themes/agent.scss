@@ -36,7 +36,7 @@
     background: $primary-color;
 }
 
-@media only screen and (max-device-width : 767px) {
+@media only screen and (max-device-width : $screen-device-lower768) {
     .header-nav .list-top>li.language:hover, 
     .header-nav .list-top>li.view-type:hover, 
     .header-nav .list-top>li.dropdown:active:focus,
@@ -44,4 +44,7 @@
         background: none;
     }
 
+    .list-action .prevButton:before, .list-action .nextButton:before {
+        color: $primary-color;
+    }
 }
