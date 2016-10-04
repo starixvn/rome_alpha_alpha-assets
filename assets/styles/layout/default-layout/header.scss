@@ -283,3 +283,11 @@ $text-color: #fff;
         padding: 5px 8px;
     }
 }
+
+@media \0screen\,screen\9 {
+    .header-nav .list-top > li.dropdown.language, .header-nav .list-top > li.dropdown.setting  {
+        .dropdown-toggle:hover {
+            background: transparent;
+        }
+    }
+}
