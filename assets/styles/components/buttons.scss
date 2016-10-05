@@ -153,6 +153,23 @@ input[type=reset], .btn-reset {
     }
 }
 
+.btn-remove {
+    @extend %btn;
+    background-color: $btn-remove-bg;
+    color: $btn-remove-color;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-remove-bg-hover;
+
+        &[disabled], .disabled {
+            background-color: $btn-remove-bg;    
+            color: $btn-remove-color;
+        }
+    }
+}
+
+
+
 .btn {
     &:focus, &:active, &:visited {
         outline: none;

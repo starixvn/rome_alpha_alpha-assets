@@ -477,6 +477,7 @@
       "styles/base/reset.css",
       "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
       "styles/base/icon-fonts.css",
+      "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
       "styles/components/alerts.css",
       "styles/components/form.css",
