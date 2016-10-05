@@ -88,7 +88,8 @@
       "js/libs/mobile/isMobile.js",
       "js/components/scrollbar/jquery.mCustomScrollbar.js",
       "js/components/bootbox/bootbox.js",
-      "js/components/draggable/tiny-draggable.js"
+      "js/components/draggable/tiny-draggable.js",
+      "js/components/typeahead/typeahead.js"
     ]
   },
   {
