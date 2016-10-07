@@ -366,7 +366,9 @@
       "js/libs/bootstrap/button.js",
       "js/libs/bootstrap/dropdown.js",
       "js/libs/bootstrap/tab.js",
-      "js/libs/bootstrap/tooltip.js"
+      "js/libs/bootstrap/tooltip.js",
+      "js/libs/mobile/isMobile.js",
+      "js/libs/hammer/hammer.js"
     ]
   },
   {
