@@ -372,10 +372,10 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/messages/messages-super.css",
+    "outputFileName": "bundles/site-main/message/message-super.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/messages/bootstrap-ex.css",
+      "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/scaffolding.css",
       "styles/base/roboto-fonts.css",
@@ -390,7 +390,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/messages/messages-default.js",
+    "outputFileName": "bundles/site-main/message/message-default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
@@ -398,7 +398,8 @@
       "js/libs/bootstrap/tab.js",
       "js/libs/moment/moment.js",
       "js/components/datetimepicker/datepicker.js",
-      "js/components/datetimepicker/bootstrap-datetimepicker.js"
+      "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/libs/mobile/isMobile.js"
     ]
       "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
       "styles/base/scaffolding.css",
