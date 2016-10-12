@@ -53,3 +53,12 @@
         width: 100%;
     }
 }
+@media only screen and (max-device-width: $screen-device-greater1024) {
+    .nav.nav-tabs > li:hover:after {
+        width: 0;
+    }
+
+    .nav.nav-tabs > li.active:after {
+        width: 100%;
+    }
+}
