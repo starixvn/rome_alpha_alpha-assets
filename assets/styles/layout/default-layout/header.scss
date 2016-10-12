@@ -252,48 +252,25 @@ $text-color: #fff;
         }        
 
         .list-top {
-            > li {
-                 &.dropdown.setting {
-                    float: left;
-                    line-height: 48px;
-                    padding: 0;
-
-                    > a {
-                        padding: 14px;
-                        @include border-radius(0);
-
-                        &:after {
-                            display: none;
-                        }
-                    }
-
-                    .icon-squares {
-                        font-size: 18px;
-                    }
+            > li {  
+                 .txt-top {
+                    position: relative;
+                    top: -2px;
                 }
-                 &.logout {
-                     padding: 0;
-                     > a {
-                         padding: 12px;
-                         &.icon-logout {
-                             font-size: 22px;
-                         }
-                     }
-                 }
-                 &.intro-box {
-                        padding: 0;
-                      .icon-instruction {
-                        padding: 12px 14px;
-                        &:before {
-                            font-size: 20px;
-                        }
-                      }
-                 }
             }
         }
     }
-    .header-msg .icon-home {
-        padding: 5px 8px;
+
+    .header-msg {
+        .icon-add, .icon-message {
+            top: -2px;
+        }
+
+        .icon-home {
+            margin: 0;
+            padding: 11px 13px;
+            top: -12px;
+        }
     }
 }
 
@@ -319,20 +296,43 @@ $text-color: #fff;
             margin: 0 4px;
 
             > li {
-               &.dropdown.setting {
-                    float: left;
-                    line-height: 48px;
-                    padding: 0;
+               &.dropdown {
+                   &.setting {
+                        float: left;
+                        line-height: 48px;
+                        padding: 0;
 
-                    > a {
-                        padding: 14px;
-                        @include border-radius(0);
+                        > a {
+                            padding: 14px;
+                            @include border-radius(0);
+                        }
 
-                        &:after {
-                            display: none;
+                        .icon-logout {
+                            color: #333;
+                            opacity: 1;
+
+                            &:after {
+                                display: none;
+                            }
+                        }
+
+                        .list-setting {
+                            .visible-mobile {
+                                display: block !important;
+                            }
                         }
                     }
-                }
+
+                    &.open .dropdown-menu.list-setting {
+                        right: 0;
+                    }
+
+                    .dropdown-menu.list-setting {
+                        right: -200px;
+                        display: block;
+                        @include transition(all 240ms ease-out);
+                    }
+               }
 
                 &.visible-mobile {
                     display: inline-block !important;
@@ -395,31 +395,13 @@ $text-color: #fff;
             .icon-bell .circle-red {
                 @extend %circle-red;
                 right: 13px;   
-            }
-
-            .list-setting {
-                .visible-mobile {
-                    display: block !important;
-                }
-            }
+            }            
         }
 
         .navbar-nav .open .dropdown-menu {
             position: absolute;
         }
-               
-
-        .list-top > li.dropdown {
-            &.open .dropdown-menu.list-setting {
-                right: 0;
-            }
-
-            .dropdown-menu.list-setting {
-                right: -200px;
-                display: block;
-                @include transition(all 240ms ease-out);
-            }
-        }
+           
     }
 
     .header-msg {

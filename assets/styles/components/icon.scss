@@ -4,8 +4,7 @@
 @include keyframes-ripple;
 
 .icon {
-    position: relative;
-    top: 3px;
+    position: relative;    
     cursor: pointer;
     font-size: 16px;
     margin-right: 5px;
@@ -59,6 +58,7 @@
 .icon-time {
     cursor: default;
     opacity: 0.8;
+    top: 2px;
 }
 
 .icon-instruction {
@@ -84,13 +84,18 @@
         font-size: 20px;
     }
     .icon-instruction {
-        @include ripple-effect-icon($margin-left: 4px, $margin-right: -4px, $height: 40px, $width: 40px, $top: 4px);
+        @include ripple-effect-icon($margin-left: -12px, $height: 40px, $width: 40px, $top: -4px);
+        top: 0;
     }
-    .icon-logout, .icon-collapse, .icon-home, .icon-add, .icon-message {
-        @include ripple-effect-icon($margin-left: 0, $margin-right: -4px, $height: 40px, $width: 40px, $top: 4px);
+
+    .icon-logout, .icon-collapse, .icon-add, .icon-message {
+        @include ripple-effect-icon($margin-left: -2px, $height: 40px, $width: 40px, $top: 3px);
+    }
+
+    .icon-home {
+        @include ripple-effect-icon($margin-left: 2px, $height: 40px, $width: 40px, $top: 6px);
     }
 }
-
 @media \0screen\,screen\9 {
     .icon-instruction, .icon-logout, .setting > a, .icon-collapse, .icon-home, .icon-add, .icon-message, .icon-squares {
         @include ripple-effect-icon($background: transparent);
