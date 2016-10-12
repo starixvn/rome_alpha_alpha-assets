@@ -1,4 +1,5 @@
-﻿@import "../../abstracts/_mixins.scss";
+﻿@import "../../abstracts/_variables.scss";
+@import "../../abstracts/_mixins.scss";
 
 $text-color: #fff;
 
@@ -178,6 +179,10 @@ $text-color: #fff;
             }
         }
     }
+
+    .visible-mobile {
+        display: none !important;
+    } 
 }
 
 /********************************** Header Notification *************************************/
@@ -240,11 +245,12 @@ $text-color: #fff;
     }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-device-width: $screen-device-greater1024) {
     .header-nav {
         .icon-collapse {
             font-size: 20px;
-        }
+        }        
+
         .list-top {
             > li {
                  &.dropdown.setting {
@@ -297,4 +303,126 @@ $text-color: #fff;
             background: transparent;
         }
     }
+}
+@media only screen and (max-device-width : $screen-device-lower768) {
+    .header-nav {
+        .icon-collapse {
+            float: left;
+        }        
+        
+        .hidden-mobile {
+            display: none !important;
+        }
+
+        .list-top {
+            float: right;
+            margin: 0 4px;
+
+            > li {
+               &.dropdown.setting {
+                    float: left;
+                    line-height: 48px;
+                    padding: 0;
+
+                    > a {
+                        padding: 14px;
+                        @include border-radius(0);
+
+                        &:after {
+                            display: none;
+                        }
+                    }
+                }
+
+                &.visible-mobile {
+                    display: inline-block !important;
+                    float: left;
+                    padding: 0;
+                    vertical-align: middle;
+
+                    .icon {
+                        height: 48px;
+                        width: 46px;
+                        text-align: center;
+                        line-height: 48px;
+                        margin-right: 0;
+                        float: left;
+                        top: 0;
+                    }
+
+                    [class^="icon"]:after {
+                        display: none;
+                    }
+                }
+            }
+            
+            .icon-account-search, .icon-home, .icon-message, .icon-bell {
+                opacity: 0.8;
+            }
+
+            .icon-home:before {
+                position: relative;
+                top: -2px;
+                font-size: 18px;
+            }
+
+            .icon-account-search:before {
+                font-size: 22px;
+            }
+
+            .icon-bell:before {
+                font-size: 19px;
+            }
+
+            .icon-message:before {
+                font-size: 18px;
+            }
+
+            %circle-red {
+                background-color: #fe2627;
+                position: absolute;                
+                top: 14px;
+                width: 8px;
+                height: 8px;
+                @include border-radius(50%);
+            }
+
+            .icon-message .circle-red {
+                @extend %circle-red;
+                right: 10px;           
+            }
+
+            .icon-bell .circle-red {
+                @extend %circle-red;
+                right: 13px;   
+            }
+
+            .list-setting {
+                .visible-mobile {
+                    display: block !important;
+                }
+            }
+        }
+
+        .navbar-nav .open .dropdown-menu {
+            position: absolute;
+        }
+               
+
+        .list-top > li.dropdown {
+            &.open .dropdown-menu.list-setting {
+                right: 0;
+            }
+
+            .dropdown-menu.list-setting {
+                right: -200px;
+                display: block;
+                @include transition(all 240ms ease-out);
+            }
+        }
+    }
+
+    .header-msg {
+        display: none;
+    } 
 }
