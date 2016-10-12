@@ -349,10 +349,6 @@ $text-color: #fff;
                         float: left;
                         top: 0;
                     }
-
-                    [class^="icon"]:after {
-                        display: none;
-                    }
                 }
             }
             
@@ -360,22 +356,24 @@ $text-color: #fff;
                 opacity: 0.8;
             }
 
-            .icon-home:before {
-                position: relative;
-                top: -2px;
-                font-size: 18px;
+            .icon-home {
+                &:before {
+                    position: relative;
+                    top: -2px;
+                    font-size: 18px;
+                }
+
+                &:hover:after {
+                    margin-top: 0;
+                }
             }
 
             .icon-account-search:before {
                 font-size: 22px;
             }
 
-            .icon-bell:before {
-                font-size: 19px;
-            }
-
-            .icon-message:before {
-                font-size: 18px;
+            .icon-account-search, .icon-bell {
+                 @include ripple-effect-icon($margin-left: 4px, $height: 40px, $width: 40px, $top: 8px);
             }
 
             %circle-red {
@@ -387,15 +385,41 @@ $text-color: #fff;
                 @include border-radius(50%);
             }
 
-            .icon-message .circle-red {
-                @extend %circle-red;
-                right: 10px;           
+            .icon-message {
+                &:before {
+                    font-size: 18px;
+                }
+
+                &:hover:after {
+                    margin-top: 2px;
+                    margin-left: 4px;
+                }
+
+                .circle-red {
+                    @extend %circle-red;
+                    right: 10px;           
+                }
+            } 
+
+            .icon-bell {
+                &:before {
+                    font-size: 19px;
+                }
+
+                .circle-red {
+                    @extend %circle-red;
+                    right: 13px;   
+                }
             }
 
-            .icon-bell .circle-red {
-                @extend %circle-red;
-                right: 13px;   
-            }            
+            .setting > a {
+                  &:hover:after {
+                      width: 40px;
+                      height: 40px;
+                      margin-left: 0;
+                      margin-top: 2px;
+                  }
+             }         
         }
 
         .navbar-nav .open .dropdown-menu {
