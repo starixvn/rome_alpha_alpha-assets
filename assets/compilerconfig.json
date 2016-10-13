@@ -98,5 +98,85 @@
   {
     "outputFile": "styles/components/textboxes.css",
     "inputFile": "styles/components/textboxes.scss"
+  },
+  {
+    "outputFile": "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
+    "inputFile": "styles/vendors-extensions/site-viewlogs/bootstrap-ex.scss"
+  },
+  {
+    "outputFile": "styles/components/form.css",
+    "inputFile": "styles/components/form.scss"
+  },
+  {
+    "outputFile": "styles/components/checkbox-radio.css",
+    "inputFile": "styles/components/checkbox-radio.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/tabs/tab-agent.css",
+    "inputFile": "styles/themes/components/tabs/tab-agent.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/tabs/tab-master.css",
+    "inputFile": "styles/themes/components/tabs/tab-master.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/tabs/tab-super.css",
+    "inputFile": "styles/themes/components/tabs/tab-super.scss"
+  },
+  {
+    "outputFile": "styles/components/pagination.css",
+    "inputFile": "styles/components/pagination.scss"
+  },
+  {
+    "outputFile": "styles/components/month-picker.css",
+    "inputFile": "styles/components/month-picker.scss"
+  },
+  {
+    "outputFile": "styles/components/bootstrap-multiselect.css",
+    "inputFile": "styles/components/bootstrap-multiselect.scss"
+  },
+  {
+    "outputFile": "styles/components/checkbox-radio-material.css",
+    "inputFile": "styles/components/checkbox-radio-material.scss"
+  },
+  {
+    "outputFile": "styles/components/select2.css",
+    "inputFile": "styles/components/select2.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-agent.css",
+    "inputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-agent.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-master.css",
+    "inputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-master.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-super.css",
+    "inputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-super.scss"
+  },
+  {
+    "outputFile": "styles/components/fanex-pagination.css",
+    "inputFile": "styles/components/fanex-pagination.scss"
+  },
+  {
+    "outputFile": "styles/components/fanex-grid.css",
+    "inputFile": "styles/components/fanex-grid.scss"
+  },
+  {
+    "outputFile": "styles/components/calendars.css",
+    "inputFile": "styles/components/calendars.scss"
+  },
+  {
+    "outputFile": "styles/components/alerts.css",
+    "inputFile": "styles/components/alerts.scss"
+  },
+  {
+    "outputFile": "styles/components/accordions.css",
+    "inputFile": "styles/components/accordions.scss"
+  },
+  {
+    "outputFile": "styles/components/breadcrumbs.css",
+    "inputFile": "styles/components/breadcrumbs.scss"
   }
 ]

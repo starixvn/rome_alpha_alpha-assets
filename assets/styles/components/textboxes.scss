@@ -1,15 +1,28 @@
 ﻿@import "../abstracts/_variables.scss";
 @import "../abstracts/_mixins.scss";
 
-input[type=text], input[type=password] {
-    width: 120px;
-    height: 28px;
-    line-height: 28px;
+input[type='text'], input[type='password'], input[type='email'] {    
+    height: $height-normal;
+    line-height: $height-normal;
     border: none;
+    outline: none;
     padding-left: 8px;
     padding-right: 8px;
-    margin-left: 8px;
+    width: 120px;
     -webkit-appearance: none;
-    @include border-radius(1px);
-    @include box-shadow(1px, 1px, 1px, rgba(0,0,0,.3));
+    @include effect-textbox;
+    @include box-sizing;
+
+    &.hasBorder {
+        border: 1px solid $border-color;
+    }
+
+    &::-ms-clear {
+      display: none;
+    }
+
+    &[disabled], .disabled {
+       opacity: .4;
+       cursor: not-allowed;
+    }
 }

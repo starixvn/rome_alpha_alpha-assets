@@ -1,0 +1,15 @@
+﻿@import "../../../abstracts/_agent-variables.scss";
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover, .nav-tabs > li > a:hover {
+    color: $tab-active-color;
+}
+
+.nav.nav-tabs > li.active:after, 
+.nav.nav-tabs > li:hover:after {
+    background: $tab-line;
+}
+
+.nav-tabs > li > a {
+    color: $tab-color;
+}

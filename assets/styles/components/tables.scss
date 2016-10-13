@@ -1,68 +1,115 @@
-﻿table {
-    border-collapse: collapse;
+﻿@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.width100per {
+    width: 100%;
 }
 
 .tblRpt {
-    border: 1px solid #dfdfdf;
+    border: 1px solid $table-border-color;
     border-collapse: collapse;
     background-color: #fff;
 
-    tr td, thead tr th, tr th {
-        border: 1px solid #dfdfdf;
-        height: 24px;
+    &.tblRpt-bordered {
+        > thead > tr > th, > tbody > tr > td, tfoot > tr > td {
+            border: 1px solid $table-border-color;
+        }
+    }
+
+    &.tblRpt-striped {
+        tbody {
+            > tr:nth-of-type(2n+1) {
+                background-color: $table-odd-bg;
+            }
+        }   
+    }
+
+    &.tblRpt-hover {
+        tbody {
+            tr:hover td {
+                background-color: $table-td-hover-color;
+            }
+        }
+    }
+
+    thead th, tbody td, tfoot td  {
+        height: $height-normal;
         padding: 4px 8px;
         white-space: nowrap;
-        line-height: 24px;
+        vertical-align: middle;
+        @include box-sizing;
+    }
+
+    thead {
+        th {
+            background-color: $table-header-bg-color;
+            color: $table-header-color;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        tr.headerBottom-pt th {
+            background-color: #f0f1c7;
+            color: $text-color;
+
+            &.RptHeader {
+                background-color: $table-header-bg-color;
+                color: $table-header-color;
+            }
+        }
+    }
+
+    .RptHeader02 th {
+        background-color: $table-subheader-bg-color;
+        color: $table-subheader-color;
+    }
+
+    tbody {
+
+        td {
+            &.text-center {
+                text-align: center;
+            }
+
+            &.cl-league {
+                background: #f4f5e0;
+                text-transform: uppercase;
+                color: $text-color;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        .RptSubTitle {
+            background-color: #ffefde;
+        }
+
+        .altercol {
+            background-color: #f6f2d7;
+            text-align: right;
+        }
+
+        .firstCol {
+            background-color: #f8d7a2;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }    
+
+    .RptFooter {
+        background-color: $table-footer-bg;
+        color: $table-footer-color;
+        font-weight: 700;
+
+        .altercol {
+            background-color: #432616;
+        }
+    }
+
+    .noInfo {
+        background-color: #fff !important;
+        text-align: center;
     }
 }
 
-.tblPop {
-    background-color: #cdcdcd;
-}
-
-.tblRpt td, .tblPop td {
-    line-height: 22px;
-}
-
-.RptSubTitle {
-    background-color: #ffefde;
-}
-
-.RptTitle {
-    text-align: center;
-}
-
-.RptHeader {
-    color: #FFF;
-    font-weight: 400;
-    text-align: center;
-
-    td, th {
-        background-color: #666;
-    }
-}
-
-.RptHeader02 {
-    background-color: #787878;
-    color: #FFF;
-    font-weight: 400;
-    text-align: center;
-
-    td, th {
-        background-color: #787878;
-    }
-}
-
-.RptHeader01 {
-    background: url(../Images/bg_header04.jpg) repeat-x top;
-    background-color: #e8e8e8;
-    font-weight: 700;
-    height: 22px;
-    text-align: center;
-}
-
-.RptFooter {
-    background-color: #666;
-    color: #FFF;
-    font-weight: 700;
-}

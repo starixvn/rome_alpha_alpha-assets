@@ -1,0 +1,96 @@
+﻿@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+
+.freegrid .grid-container.container {
+    padding: 0;
+}
+
+.freegrid {
+    * {
+        @include box-sizing(content-box);
+    }
+
+    .no-data-frozen, .no-data-not-frozen {
+        color: $text-color;
+        font-weight: normal;
+    }
+
+    .free-top-left table thead th, .col_header table thead th {
+        background: $table-header-bg-color;
+        color: $table-header-color;
+        font-size: $font-size;
+        font-weight: 400 !important;
+        border-color: #dfdfdf;
+        text-align: center;
+    }
+
+    .col_footer table thead th {
+        background: $table-footer-bg !important;
+        color: $table-footer-color;
+        font-weight: bold;
+        white-space: nowrap;
+    }
+
+    tr.highlight-row:hover td {
+        background-color: $table-td-hover-color;
+    }
+
+    .mousehoverbeyond td {
+        background-color: $table-td-hover-color !important;
+    }
+
+    td.group-odd, td.group-odd:hover {
+        background-color: $table-odd-bg !important;
+    }
+
+    td.group-even, td.group-even:hover {
+        background-color: $table-even-bg !important;
+    }
+
+    td, .grid-fixed-table td {
+        font-size: $font-size;
+    }
+
+    .freegrid-even td {
+        background-color: $table-even-bg;
+    }
+
+    .format-negative, .format-positive {
+        color: $table-red-color !important;
+    }
+
+    .free-top-left table thead th.RptHeader02, .col_header table thead th.RptHeader02 {
+        background: $table-subheader-bg-color !important;
+        color: $table-subheader-color;
+    }
+
+    .grid-pager {
+        background: #fff;
+        height: 32px;
+        line-height: 25px;
+    }
+
+    .grid-pager-content {
+        padding-top: 0;
+    }
+
+    .row-footer-background {
+        border-top: none;
+    }
+
+    .column-truncate {
+        display: block;
+    }
+}
+
+.grid-title {     
+    border: none;
+    height: 30px;
+    margin-bottom: 0;
+    
+    .grid-title-label {        
+        color: $text-red-color;
+        font-size: $font-size;
+        padding-left: 16px;
+    }
+} 

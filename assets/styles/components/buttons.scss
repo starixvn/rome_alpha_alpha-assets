@@ -5,16 +5,6 @@ input[type=submit], input[type=reset] {
     @include border-radius(1px);
 }
 
-input[type=reset] {
-    background-color: #F6731B;
-    color: #fff;
-
-    &:hover {
-        background-color: darken(#F6731B, 5%);
-        color: #fff;
-    }
-}
-
 button[disabled]:active, button[disabled],
 input[type="reset"][disabled]:active,
 input[type="reset"][disabled],
@@ -38,8 +28,9 @@ input[type="submit"][disabled] {
     padding-right: 16px;
     white-space: nowrap;
     -webkit-appearance: none;
-    @include box-shadow(1px, 2px, 3px, rgba(0,0,0,.3));
-    @include border-radius(1px);
+    @include effect-button;
+    @include box-sizing;
+
     &[disabled], .disabled {
        opacity: .4;
        cursor: not-allowed;
@@ -76,7 +67,7 @@ input[type="submit"][disabled] {
     }
 }
 
-.btn-reset {
+input[type=reset], .btn-reset {
     @extend %btn;
     background-color: $btn-reset-bg;
     color: $btn-reset-color;

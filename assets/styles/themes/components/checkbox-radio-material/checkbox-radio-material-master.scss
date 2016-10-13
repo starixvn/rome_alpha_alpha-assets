@@ -1,0 +1,25 @@
+﻿@import '../../../abstracts/_master-variables.scss';
+
+/* Customize checkbox */
+.checkbox .checkbox-material .check:before {
+    color: $primary-color;
+}
+
+.checkbox input[type=checkbox]:checked + .checkbox-material .check,
+label.checkbox-inline input[type=checkbox]:checked + .checkbox-material .check {
+    color: $primary-color;
+    border-color: $primary-color;
+    &:before {
+        color: $primary-color; 
+    }
+}
+
+/* Radio button */
+
+.radio input[type=radio]:checked ~ .circle, label.radio-inline input[type=radio]:checked ~ .circle {
+    border-color: $primary-color;    
+}
+
+.radio input[type=radio]:checked ~ .check, label.radio-inline input[type=radio]:checked ~ .check {
+    background-color: $primary-color;
+}

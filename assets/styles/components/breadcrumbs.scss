@@ -1,0 +1,21 @@
+﻿.breadcrumb {
+    background: none;
+    border-bottom: 1px solid #cecece;
+    border-radius: 0;
+    overflow: hidden;
+    padding: 10px 0 5px;
+    margin: 0;    
+
+    li {
+        color: #9d1c1c;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+
+        + li:before {
+            content: '\276F';
+            color: #333;
+            padding: 0 8px;
+        }
+    }
+}
