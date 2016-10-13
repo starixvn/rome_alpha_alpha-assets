@@ -190,5 +190,13 @@
   {
     "outputFile": "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
     "inputFile": "styles/vendors-extensions/site-main/otp/bootstrap-ex.scss"
+  },
+  {
+    "outputFile": "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.css",
+    "inputFile": "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.scss"
+  },
+  {
+    "outputFile": "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
+    "inputFile": "styles/vendors-extensions/site-main/message/bootstrap-ex.scss"
   }
 ]

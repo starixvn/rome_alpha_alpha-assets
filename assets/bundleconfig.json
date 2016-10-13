@@ -390,6 +390,42 @@
     ]
   },
   {
+    "outputFileName": "bundles/site-main/message/message-master.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/base/scaffolding.css",
+      "styles/base/roboto-fonts.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/components/tabs.css",
+      "styles/components/form.css",
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css",
+      "styles/components/tables.css",
+      "styles/components/calendars.css",
+      "styles/themes/components/tabs/tab-master.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/message/message-agent.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/base/scaffolding.css",
+      "styles/base/roboto-fonts.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/components/tabs.css",
+      "styles/components/form.css",
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css",
+      "styles/components/tables.css",
+      "styles/components/calendars.css",
+      "styles/themes/components/tabs/tab-agent.css"
+    ]
+  },
+  {
     "outputFileName": "bundles/site-main/message/message-default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
