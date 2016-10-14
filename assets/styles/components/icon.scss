@@ -64,6 +64,7 @@
 .icon-instruction {
     margin-right: 0;
     opacity: 0.8;
+    top: 2px;
     @include ripple-effect-icon($margin-left: -8px, $margin-right: -4px, $height: 32px, $width: 32px, $top: -3px);
 
     &:before {
@@ -85,7 +86,7 @@
     }
     .icon-instruction {
         @include ripple-effect-icon($margin-left: -12px, $height: 40px, $width: 40px, $top: -4px);
-        top: 0;
+        top: -1px;
     }
 
     .icon-logout, .icon-collapse, .icon-add, .icon-message {
