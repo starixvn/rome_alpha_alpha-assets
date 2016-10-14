@@ -386,6 +386,7 @@
       "styles/components/textboxes.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
+      "styles/components/blockui.css",
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
@@ -404,6 +405,7 @@
       "styles/components/textboxes.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
+      "styles/components/blockui.css",
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
@@ -422,6 +424,7 @@
       "styles/components/textboxes.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
+      "styles/components/blockui.css",
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
@@ -435,7 +438,8 @@
       "js/libs/moment/moment.js",
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
-      "js/libs/mobile/isMobile.js"
+      "js/libs/mobile/isMobile.js",
+      "js/components/blockui/jquery.blockUI.js"
     ]
       "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
       "styles/base/scaffolding.css",
