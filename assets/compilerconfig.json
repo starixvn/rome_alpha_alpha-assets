@@ -178,5 +178,13 @@
   {
     "outputFile": "styles/components/breadcrumbs.css",
     "inputFile": "styles/components/breadcrumbs.scss"
+  },
+  {
+    "outputFile": "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
+    "inputFile": "styles/vendors-extensions/site-main/security/bootstrap-ex.scss"
+  },
+  {
+    "outputFile": "styles/layout/before-home-page/before-home-page.css",
+    "inputFile": "styles/layout/before-home-page/before-home-page.scss"
   }
 ]
