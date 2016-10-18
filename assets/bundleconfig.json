@@ -358,5 +358,13 @@
       "js/components/secure-hashing/sha256.js",
      "js/components/blockui/jquery.blockUI.js"
     ]
+  },
+  {
+    "outputFileName": "bundles/dcs/customizeDCS.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/base/icon-fonts.css",
+      "styles/layout/dcs/customizeDCS.css"
+    ]
   }
 ]
