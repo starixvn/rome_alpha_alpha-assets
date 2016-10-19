@@ -97,8 +97,9 @@
                     }
                 }
 
-                &:hover {
+                &:hover, &:focus {
                     border-color: #b3b3b3;
+                    text-decoration: none;
                 }
             }        
         }

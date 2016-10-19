@@ -358,5 +358,33 @@
       "js/components/secure-hashing/sha256.js",
      "js/components/blockui/jquery.blockUI.js"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-main/otp/otp-super.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding.css",
+      "styles/components/alerts.css",
+      "styles/components/form.css",
+      "styles/components/textboxes.css",
+      "styles/components/buttons.css",
+      "styles/components/checkbox-radio.css",
+      "styles/components/accordions.css",
+      "styles/components/tabs.css",
+      "styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/otp/otp-default.js",
+    "inputFiles": [
+      "js/libs/jquery/jquery-1.11.3.js",
+      "js/libs/bootstrap/button.js",
+      "js/libs/bootstrap/dropdown.js",
+      "js/libs/bootstrap/tab.js",
+      "js/libs/bootstrap/transition.js",
+      "js/libs/bootstrap/collapse.js"
+    ]
   }
 ]
