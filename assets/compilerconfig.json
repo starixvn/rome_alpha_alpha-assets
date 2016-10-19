@@ -190,10 +190,6 @@
     "inputFile": "styles/layout/before-home-page/before-home-page.scss"
   },
   {
-    "outputFile": "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
-    "inputFile": "styles/vendors-extensions/site-main/otp/bootstrap-ex.scss"
-  },
-  {
     "outputFile": "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.css",
     "inputFile": "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.scss"
   },
