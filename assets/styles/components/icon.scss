@@ -89,3 +89,9 @@
         @include ripple-effect-icon($margin-left: 0, $margin-right: -4px, $height: 40px, $width: 40px, $top: 4px);
     }
 }
+
+@media \0screen\,screen\9 {
+    .icon-instruction, .icon-logout, .setting > a, .icon-collapse, .icon-home, .icon-add, .icon-message, .icon-squares {
+        @include ripple-effect-icon($background: transparent);
+    }
+}
