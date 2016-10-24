@@ -98,7 +98,8 @@
       "js/components/bootbox/bootbox.js",
       "js/components/draggable/tiny-draggable.js",
       "js/components/typeahead/typeahead.js",
-      "js/libs/toastr/toastr.js"
+      "js/libs/toastr/toastr.js",
+      "js/libs/storejs/store.js"
     ]
   },
   {
