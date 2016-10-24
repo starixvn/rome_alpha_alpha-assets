@@ -196,5 +196,9 @@
   {
     "outputFile": "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
     "inputFile": "styles/vendors-extensions/site-main/message/bootstrap-ex.scss"
+  },
+  {
+    "outputFile": "styles/vendors/toastr/toastr.css",
+    "inputFile": "styles/vendors/toastr/toastr.scss"
   }
 ]

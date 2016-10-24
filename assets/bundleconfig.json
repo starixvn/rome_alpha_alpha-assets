@@ -14,7 +14,8 @@
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
-      "styles/themes/agent.css"
+      "styles/themes/agent.css",
+      "styles/vendors/toastr/toastr.css"
     ]
   },
   {
@@ -32,7 +33,8 @@
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
-      "styles/themes/master.css"
+      "styles/themes/master.css",
+      "styles/vendors/toastr/toastr.css"
     ]
   },
   {
@@ -50,7 +52,8 @@
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
-      "styles/themes/super.css"
+      "styles/themes/super.css",
+      "styles/vendors/toastr/toastr.css"
     ]
   },
   {
@@ -89,7 +92,8 @@
       "js/components/scrollbar/jquery.mCustomScrollbar.js",
       "js/components/bootbox/bootbox.js",
       "js/components/draggable/tiny-draggable.js",
-      "js/components/typeahead/typeahead.js"
+      "js/components/typeahead/typeahead.js",
+      "js/libs/toastr/toastr.js"
     ]
   },
   {
@@ -396,7 +400,8 @@
       "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/tooltip.js",
       "js/libs/mobile/isMobile.js",
-      "js/libs/hammer/hammer.js"
+      "js/libs/hammer/hammer.js",
+      "js/libs/hammer/jquery.hammer.js"
     ]
   },
   {
