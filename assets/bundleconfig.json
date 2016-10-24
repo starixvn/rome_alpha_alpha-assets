@@ -1,59 +1,64 @@
 [
   {
-    "outputFileName": "bundles/site-main/agent.css",
+    "outputFileName": "bundles/common/common.css",
     "inputFiles": [
       "styles/base/reset.css",
+      "styles/vendors-extensions/common/bootstrap-ex.css",
+      "styles/base/scaffolding.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/agent.css",
+    "inputFiles": [
       "styles/vendors-extensions/site-main/bootstrap-ex.css",
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
       "styles/fonts/iconalpha/style.css",
-      "styles/base/scaffolding.css",
       "styles/components/icon.css",
       "styles/components/modals.css",
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/agent.css",
-      "styles/vendors/toastr/toastr.css"
+      "styles/vendors/toastr/toastr.css",
+      "styles/components/toastr.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/master.css",
     "inputFiles": [
-      "styles/base/reset.css",
       "styles/vendors-extensions/site-main/bootstrap-ex.css",
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
       "styles/fonts/iconalpha/style.css",
-      "styles/base/scaffolding.css",
       "styles/components/icon.css",
       "styles/components/modals.css",
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/master.css",
-      "styles/vendors/toastr/toastr.css"
+      "styles/vendors/toastr/toastr.css",
+      "styles/components/toastr.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/super.css",
     "inputFiles": [
-      "styles/base/reset.css",
       "styles/vendors-extensions/site-main/bootstrap-ex.css",
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
       "styles/fonts/iconalpha/style.css",
-      "styles/base/scaffolding.css",
       "styles/components/icon.css",
       "styles/components/modals.css",
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/super.css",
-      "styles/vendors/toastr/toastr.css"
+      "styles/vendors/toastr/toastr.css",
+      "styles/components/toastr.css"
     ]
   },
   {
@@ -352,9 +357,7 @@
   {
     "outputFileName": "bundles/site-main/dashboard/dashboard-super.css",
     "inputFiles": [
-      "styles/base/reset.css",
       "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.css",
-      "styles/base/scaffolding.css",
       "styles/base/roboto-fonts.css",
       "styles/fonts/iconalpha/style.css",
       "styles/components/dropdown.css",
@@ -366,9 +369,7 @@
   {
     "outputFileName": "bundles/site-main/dashboard/dashboard-master.css",
     "inputFiles": [
-      "styles/base/reset.css",
       "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.css",
-      "styles/base/scaffolding.css",
       "styles/base/roboto-fonts.css",
       "styles/fonts/iconalpha/style.css",
       "styles/components/dropdown.css",
@@ -380,9 +381,7 @@
   {
     "outputFileName": "bundles/site-main/dashboard/dashboard-agent.css",
     "inputFiles": [
-      "styles/base/reset.css",
       "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.css",
-      "styles/base/scaffolding.css",
       "styles/base/roboto-fonts.css",
       "styles/fonts/iconalpha/style.css",
       "styles/components/dropdown.css",
@@ -407,10 +406,8 @@
   {
     "outputFileName": "bundles/site-main/message/message-super.css",
     "inputFiles": [
-      "styles/base/reset.css",
       "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
       "styles/vendors/bootstrap-datetimepicker.css",
-      "styles/base/scaffolding.css",
       "styles/base/roboto-fonts.css",
       "styles/fonts/iconalpha/style.css",
       "styles/components/tabs.css",
@@ -426,10 +423,8 @@
   {
     "outputFileName": "bundles/site-main/message/message-master.css",
     "inputFiles": [
-      "styles/base/reset.css",
       "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
       "styles/vendors/bootstrap-datetimepicker.css",
-      "styles/base/scaffolding.css",
       "styles/base/roboto-fonts.css",
       "styles/fonts/iconalpha/style.css",
       "styles/components/tabs.css",
@@ -445,10 +440,8 @@
   {
     "outputFileName": "bundles/site-main/message/message-agent.css",
     "inputFiles": [
-      "styles/base/reset.css",
       "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
       "styles/vendors/bootstrap-datetimepicker.css",
-      "styles/base/scaffolding.css",
       "styles/base/roboto-fonts.css",
       "styles/fonts/iconalpha/style.css",
       "styles/components/tabs.css",

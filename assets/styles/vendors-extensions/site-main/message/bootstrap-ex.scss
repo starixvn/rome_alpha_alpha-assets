@@ -9,12 +9,8 @@
 @import "bootstrap-mixins";
 
 // Reset and dependencies
-@import "../../../vendors/bootstrap/normalize";
 
 // Core CSS
-@import "../../../vendors/bootstrap/scaffolding";
-@import "../../../vendors/bootstrap/type";
-@import "../../../vendors/bootstrap/grid";
 @import "../../../vendors/bootstrap/tables";
 @import "../../../vendors/bootstrap/forms";
 @import "../../../vendors/bootstrap/buttons";
@@ -24,8 +20,6 @@
 @import "../../../vendors/bootstrap/input-groups";
 @import "../../../vendors/bootstrap/navs";
 @import "../../../vendors/bootstrap/navbar";
-@import "../../../vendors/bootstrap/labels";
-@import "../../../vendors/bootstrap/close";
 
 // Components w/ JavaScript
 @import "../../../vendors/bootstrap/modals";
@@ -33,8 +27,6 @@
 
 
 // Utility classes
-@import "../../../vendors/bootstrap/utilities";
-@import "../../../vendors/bootstrap/responsive-utilities";
 
 
 
