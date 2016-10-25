@@ -61,6 +61,20 @@
             &:hover:after {
                 animation: none;
             }
+
+            &.today {
+                color: #fff;
+            }
+        }
+
+        &.disabled {
+            &:before {
+                display: none;
+            }
+
+            &:hover:after {
+                animation: none;
+            }
         }
 
         &:after {
