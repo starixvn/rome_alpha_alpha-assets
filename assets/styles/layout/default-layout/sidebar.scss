@@ -23,7 +23,17 @@
             display: inline-block;
             height: 30px;
             width: 32px;
-            margin: 8px 6px;
+            margin: 8px 4px;
+        }
+
+        .customer-profile {
+            #profile-content {
+                text-align: center;
+            }
+
+            .profile-avatar {
+                float: none;
+            }
         }
 
         .navigation {
@@ -68,6 +78,16 @@
                 cursor: pointer;
             }
 
+            .customer-profile {
+                #profile-content {
+                    text-align: initial;
+                }
+
+                .profile-avatar {
+                    float: left;
+                }
+            }
+
             .main-tab, .userinfo, .accinfo-content, .menu-item a .icon-arrow-right, .panel-collapse .sub-menu,
             .list-menu .menu-item .txt-item, list-menu .menu-item i {
                 display: block;
@@ -84,13 +104,15 @@
    .sidebar {
        &.collapsed {
            width: 56px;
+
            .navigation {
                width: 56px;
                .icon-user {
                    font-size: 20px;
                    left: 19px;
                }
-           }
+           }          
+           
        }
    }
 }
