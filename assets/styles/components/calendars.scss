@@ -208,3 +208,17 @@
     }
 
 }
+
+// For mobile
+@media only screen and (max-device-width : $conent-device-lower768) {
+    .input-group.date {
+        .form-control {
+            height: 36px;
+            @include box-shadow-multiple('0px 1px 3px rgba(0, 0, 0, 0.3)');                
+        }
+
+        .icon-calendar {
+            font-size: 26px;
+        }
+    }
+}
