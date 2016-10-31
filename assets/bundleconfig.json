@@ -330,13 +330,16 @@
     "outputFileName": "bundles/site-main/security/security-master.css",
     "inputFiles": [
       "styles/base/reset.css",
+      "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
       "styles/base/scaffolding.css",
-      "styles/base/roboto-fonts.css",
-      "styles/fonts/iconalpha/style.css",
-      "styles/components/dropdown.css",
-      "styles/components/tables.css",
+      "styles/base/icon-fonts.css",
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css",
+      "styles/components/checkbox-radio.css",
+      "styles/components/form.css",
+      "styles/components/alerts.css",
       "styles/components/tabs.css",
-      "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
