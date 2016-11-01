@@ -76,25 +76,29 @@
 }
 
 // For announcement
-#toast-container.toastr-announcement > .toast-warning {    
-    background: #faf9dd;
-    border: none;
-    border-radius: 0;
-    color: #85490d;
-    line-height: 17px;
-    padding: 16px 30px 16px 16px;
-    @include box-shadow('0 1px 4px 0 rgba(0, 0, 0, 0.3)');
+#toast-container.toastr-announcement {
+    z-index: 9999;
 
-    &:before {
-        display: none;
-    }
-
-    .toast-close-button {
+    > .toast-warning {    
+        background: #faf9dd;
+        border: none;
+        border-radius: 0;
         color: #85490d;
-        font-size: 26px;
-        position: absolute;
-        right: 13px;
-        left: initial;
-        top: 12px;
+        line-height: 17px;
+        padding: 16px 30px 16px 16px;
+        @include box-shadow('0 1px 4px 0 rgba(0, 0, 0, 0.3)');
+
+        &:before {
+            display: none;
+        }
+
+        .toast-close-button {
+            color: #85490d;
+            font-size: 26px;
+            position: absolute;
+            right: 13px;
+            left: initial;
+            top: 12px;
+        }
     }
 }
