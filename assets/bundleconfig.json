@@ -7,17 +7,6 @@
       "styles/base/scaffolding.css"
     ]
   },
-
-  {
-    "outputFileName": "bundles/common/common.js",
-    "inputFiles": [
-      "js/libs/jquery/jquery-1.11.3.js",
-      "js/libs/bootstrap/button.js",
-      "js/libs/bootstrap/dropdown.js",
-      "js/libs/bootstrap/tab.js",
-      "js/libs/mobile/isMobile.js"
-    ]
-  },
   {
     "outputFileName": "bundles/site-main/agent.css",
     "inputFiles": [
@@ -101,11 +90,11 @@
       "js/libs/bootstrap-material/material.js",
       "js/libs/bootstrap-material/ripples.js",
       "js/libs/jquery/jquery.cookie.js",
+      "js/libs/storejs/store.js",
       "js/components/scrollbar/jquery.mCustomScrollbar.js",
       "js/components/draggable/tiny-draggable.js",
       "js/components/typeahead/typeahead.js",
-      "js/libs/toastr/toastr.js",
-      "js/libs/storejs/store.js"
+      "js/components/toastr/toastr.js"
     ]
   },
   {
@@ -479,6 +468,16 @@
       "js/components/secure-hashing/sha1.js",
       "js/components/secure-hashing/sha256.js",
       "js/components/blockui/jquery.blockUI.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/common.js",
+    "inputFiles": [
+      "js/libs/jquery/jquery-1.11.3.js",
+      "js/libs/bootstrap/button.js",
+      "js/libs/bootstrap/dropdown.js",
+      "js/libs/bootstrap/tab.js",
+      "js/libs/mobile/isMobile.js"
     ]
   },
   {
