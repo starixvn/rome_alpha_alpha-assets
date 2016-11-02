@@ -86,7 +86,7 @@
         color: #85490d;
         line-height: 17px;
         padding: 16px 30px 16px 16px;
-        @include box-shadow('0 1px 4px 0 rgba(0, 0, 0, 0.3)');
+        @include box-shadow-multiple('0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23)');
 
         &:before {
             display: none;
@@ -94,12 +94,14 @@
 
         .toast-close-button {
             color: #85490d;
-            font-size: 29px;
-            font-weight: initial;
+            font:{
+                size: 20px;
+                weight: normal;
+            }
             position: absolute;
-            right: 13px;
+            right: 7px;
             left: initial;
-            top: 12px;
+            top: 7px;
         }
     }
 }
