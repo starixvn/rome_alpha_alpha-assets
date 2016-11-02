@@ -79,7 +79,7 @@
 #toast-container.toastr-announcement {
     z-index: 9999;
 
-    > .toast-warning {    
+    > .toast-warning {
         background: #faf9dd;
         border: none;
         border-radius: 0;
@@ -94,7 +94,8 @@
 
         .toast-close-button {
             color: #85490d;
-            font-size: 26px;
+            font-size: 29px;
+            font-weight: initial;
             position: absolute;
             right: 13px;
             left: initial;
