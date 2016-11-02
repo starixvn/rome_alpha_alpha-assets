@@ -4,19 +4,26 @@
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/common/bootstrap-ex.css",
-      "styles/base/scaffolding.css"
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding.css",
+      "styles/components/alerts.css",
+      "styles/components/blockui.css",
+      "styles/components/buttons.css",
+      "styles/components/checkbox-radio.css",
+      "styles/components/dropdown.css",
+      "styles/components/form.css",
+      "styles/components/textboxes.css",
+      "styles/components/modals.css", 
+      "styles/components/tabs.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/agent.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/bootstrap-ex.css",
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
-      "styles/fonts/iconalpha/style.css",
       "styles/components/icon.css",
-      "styles/components/modals.css",
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
@@ -28,13 +35,10 @@
   {
     "outputFileName": "bundles/site-main/master.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/bootstrap-ex.css",
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
-      "styles/fonts/iconalpha/style.css",
       "styles/components/icon.css",
-      "styles/components/modals.css",
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
@@ -46,13 +50,10 @@
   {
     "outputFileName": "bundles/site-main/super.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/bootstrap-ex.css",
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
-      "styles/fonts/iconalpha/style.css",
       "styles/components/icon.css",
-      "styles/components/modals.css",
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
@@ -278,114 +279,48 @@
   {
     "outputFileName": "bundles/site-main/security/before-home-page.css",
     "inputFiles": [
-      "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
-      "styles/fonts/iconalpha/style.css",
-      "styles/base/scaffolding.css",
-      "styles/components/modals.css",
-      "styles/components/checkbox-radio.css",
-      "styles/components/alerts.css",
-      "styles/components/form.css",
-      "styles/components/blockui.css",
       "styles/layout/before-home-page/before-home-page.css"
-    ]
-  },
-  {
-    "outputFileName": "bundles/site-main/security/default.css",
-    "inputFiles": [
-      "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
-      "styles/base/scaffolding.css",
-      "styles/base/icon-fonts.css",
-      "styles/components/buttons.css",
-      "styles/components/textboxes.css",
-      "styles/components/checkbox-radio.css",
-      "styles/components/form.css",
-      "styles/components/alerts.css",
-      "styles/components/blockui.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/security/security-super.css",
     "inputFiles": [
-      "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
-      "styles/base/scaffolding.css",
-      "styles/base/icon-fonts.css",
-      "styles/components/buttons.css",
-      "styles/components/textboxes.css",
-      "styles/components/checkbox-radio.css",
-      "styles/components/form.css",
-      "styles/components/alerts.css",
-      "styles/components/tabs.css",
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/security/security-master.css",
     "inputFiles": [
-      "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
-      "styles/base/scaffolding.css",
-      "styles/base/icon-fonts.css",
-      "styles/components/buttons.css",
-      "styles/components/textboxes.css",
-      "styles/components/checkbox-radio.css",
-      "styles/components/form.css",
-      "styles/components/alerts.css",
-      "styles/components/tabs.css",
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/security/security-agent.css",
     "inputFiles": [
-      "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/security/bootstrap-ex.css",
-      "styles/base/scaffolding.css",
-      "styles/base/icon-fonts.css",
-      "styles/components/buttons.css",
-      "styles/components/textboxes.css",
-      "styles/components/checkbox-radio.css",
-      "styles/components/form.css",
-      "styles/components/alerts.css",
-      "styles/components/tabs.css",
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/dashboard/dashboard-super.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.css",
       "styles/base/roboto-fonts.css",
-      "styles/fonts/iconalpha/style.css",
-      "styles/components/dropdown.css",
       "styles/components/tables.css",
-      "styles/components/tabs.css",
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/dashboard/dashboard-master.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.css",
       "styles/base/roboto-fonts.css",
-      "styles/fonts/iconalpha/style.css",
-      "styles/components/dropdown.css",
       "styles/components/tables.css",
-      "styles/components/tabs.css",
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/dashboard/dashboard-agent.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/dashboard/bootstrap-ex.css",
       "styles/base/roboto-fonts.css",
-      "styles/fonts/iconalpha/style.css",
-      "styles/components/dropdown.css",
       "styles/components/tables.css",
-      "styles/components/tabs.css",
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
@@ -400,51 +335,30 @@
   {
     "outputFileName": "bundles/site-main/message/message-super.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
-      "styles/fonts/iconalpha/style.css",
-      "styles/components/tabs.css",
-      "styles/components/form.css",
-      "styles/components/buttons.css",
-      "styles/components/textboxes.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
-      "styles/components/blockui.css",
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/message/message-master.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
-      "styles/fonts/iconalpha/style.css",
-      "styles/components/tabs.css",
-      "styles/components/form.css",
-      "styles/components/buttons.css",
-      "styles/components/textboxes.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
-      "styles/components/blockui.css",
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
     "outputFileName": "bundles/site-main/message/message-agent.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/message/bootstrap-ex.css",
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
-      "styles/fonts/iconalpha/style.css",
-      "styles/components/tabs.css",
-      "styles/components/form.css",
-      "styles/components/buttons.css",
-      "styles/components/textboxes.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
-      "styles/components/blockui.css",
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
@@ -483,19 +397,23 @@
   {
     "outputFileName": "bundles/site-main/otp/otp-super.css",
     "inputFiles": [
-      "styles/base/reset.css",
-      "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
-      "styles/fonts/iconalpha/style.css",
-      "styles/base/scaffolding.css",
-      "styles/components/alerts.css",
-      "styles/components/form.css",
-      "styles/components/textboxes.css",
-      "styles/components/buttons.css",
-      "styles/components/checkbox-radio.css",
       "styles/components/accordions.css",
-      "styles/components/tabs.css",
-      "styles/components/modals.css",
       "styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/otp/otp-master.css",
+    "inputFiles": [    
+      "styles/components/accordions.css",
+      "styles/themes/components/tabs/tab-master.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/otp/otp-agent.css",
+    "inputFiles": [
+      "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
+      "styles/components/accordions.css",      
+      "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
@@ -513,6 +431,5 @@
       "js/libs/clipboard/clipboard.js",
       "js/libs/bootstrap/tooltip.js"
     ]
-  }
-  
+  }  
 ]
