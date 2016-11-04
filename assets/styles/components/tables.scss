@@ -59,7 +59,7 @@
         }
     }
 
-    .RptHeader02 th {
+    .thead-row2 th {
         background-color: $table-subheader-bg-color;
         color: $table-subheader-color;
     }
@@ -97,7 +97,7 @@
         }
     }    
 
-    .RptFooter {
+    .tbl-footer {
         background-color: $table-footer-bg;
         color: $table-footer-color;
         font-weight: 700;
