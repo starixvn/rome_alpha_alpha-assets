@@ -20,6 +20,10 @@
 .ui_nexdatepicker_edit_field {
     float: left;
     margin: 0 16px 0 0;
+
+    &.todate {
+        margin-right: 0;
+    }
 }
 
 .ui_nexdatepicker_edit_field select {
