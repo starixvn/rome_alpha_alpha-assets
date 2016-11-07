@@ -13,7 +13,7 @@
       "styles/components/dropdown.css",
       "styles/components/form.css",
       "styles/components/textboxes.css",
-      "styles/components/modals.css", 
+      "styles/components/modals.css",
       "styles/components/tabs.css"
     ]
   },
@@ -87,6 +87,7 @@
     "outputFileName": "bundles/site-main/default.js",
     "inputFiles": [
       "js/libs/bootstrap/modal.js",
+      "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/tooltip.js",
       "js/libs/bootstrap-material/material.js",
       "js/libs/bootstrap-material/ripples.js",
@@ -328,6 +329,7 @@
     "outputFileName": "bundles/site-main/dashboard/dashboard-default.js",
     "inputFiles": [
       "js/libs/bootstrap/tooltip.js",
+      "js/libs/bootstrap/tab.js",
       "js/libs/hammer/hammer.js",
       "js/libs/hammer/jquery.hammer.js"
     ]
@@ -366,6 +368,7 @@
     "outputFileName": "bundles/site-main/message/message-default.js",
     "inputFiles": [
       "js/libs/moment/moment.js",
+      "js/libs/bootstrap/tab.js",
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
       "js/components/blockui/jquery.blockUI.js"
@@ -375,9 +378,6 @@
   {
     "outputFileName": "bundles/site-main/security/before-home-page.js",
     "inputFiles": [
-      "js/libs/jquery/jquery-1.11.3.js",
-      "js/libs/bootstrap/button.js",
-      "js/libs/bootstrap/dropdown.js",
       "js/libs/bootstrap/modal.js",
       "js/components/secure-hashing/sha1.js",
       "js/components/secure-hashing/sha256.js",
@@ -390,7 +390,6 @@
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
       "js/libs/bootstrap/dropdown.js",
-      "js/libs/bootstrap/tab.js",
       "js/libs/mobile/isMobile.js"
     ]
   },
@@ -403,7 +402,7 @@
   },
   {
     "outputFileName": "bundles/site-main/otp/otp-master.css",
-    "inputFiles": [    
+    "inputFiles": [
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-master.css"
     ]
@@ -412,7 +411,7 @@
     "outputFileName": "bundles/site-main/otp/otp-agent.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
-      "styles/components/accordions.css",      
+      "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
@@ -431,5 +430,5 @@
       "js/libs/clipboard/clipboard.js",
       "js/libs/bootstrap/tooltip.js"
     ]
-  }  
+  }
 ]
