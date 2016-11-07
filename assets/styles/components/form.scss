@@ -10,6 +10,7 @@
         label {
             font-weight: normal;
             margin-right: 5px; 
+            max-width: none;
         }
 
         .control {
@@ -21,6 +22,11 @@
             &.date {
                 width: 130px;
             }
+            
+            .form-control {
+                padding-top: 0;
+                padding-bottom: 0;
+            }            
         }  
     }
         
