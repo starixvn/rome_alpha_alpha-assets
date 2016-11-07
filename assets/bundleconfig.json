@@ -86,9 +86,8 @@
   {
     "outputFileName": "bundles/site-main/default.js",
     "inputFiles": [
-      "js/libs/bootstrap/modal.js",
       "js/libs/bootstrap/tab.js",
-      "js/libs/bootstrap/tooltip.js",
+      "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap-material/material.js",
       "js/libs/bootstrap-material/ripples.js",
       "js/libs/jquery/jquery.cookie.js",
@@ -328,7 +327,7 @@
   {
     "outputFileName": "bundles/site-main/dashboard/dashboard-default.js",
     "inputFiles": [
-      "js/libs/bootstrap/tooltip.js",
+      "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/tab.js",
       "js/libs/hammer/hammer.js",
       "js/libs/hammer/jquery.hammer.js"
@@ -370,18 +369,15 @@
       "js/libs/moment/moment.js",
       "js/libs/bootstrap/tab.js",
       "js/components/datetimepicker/datepicker.js",
-      "js/components/datetimepicker/bootstrap-datetimepicker.js",
-      "js/components/blockui/jquery.blockUI.js"
+      "js/components/datetimepicker/bootstrap-datetimepicker.js"
     ]
   },
 
   {
     "outputFileName": "bundles/site-main/security/before-home-page.js",
     "inputFiles": [
-      "js/libs/bootstrap/modal.js",
       "js/components/secure-hashing/sha1.js",
-      "js/components/secure-hashing/sha256.js",
-      "js/components/blockui/jquery.blockUI.js"
+      "js/components/secure-hashing/sha256.js"
     ]
   },
   {
@@ -390,7 +386,11 @@
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
       "js/libs/bootstrap/dropdown.js",
-      "js/libs/mobile/isMobile.js"
+      "js/libs/bootstrap/modal.js",
+      "js/libs/bootstrap/tooltip.js",
+      "js/libs/mobile/isMobile.js",
+      "js/components/blockui/jquery.blockUI.js",
+      "js/components/bootbox/bootbox.js"
     ]
   },
   {
@@ -418,17 +418,11 @@
   {
     "outputFileName": "bundles/site-main/otp/otp-default.js",
     "inputFiles": [
-      "js/libs/jquery/jquery-1.11.3.js",
-      "js/libs/bootstrap/button.js",
-      "js/libs/bootstrap/dropdown.js",
       "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
       "js/components/bootbox/bootbox.js",
-      "js/components/blockui/jquery.blockUI.js",
-      "js/libs/bootstrap/modal.js",
-      "js/libs/clipboard/clipboard.js",
-      "js/libs/bootstrap/tooltip.js"
+      "js/libs/clipboard/clipboard.js"
     ]
   }
 ]
