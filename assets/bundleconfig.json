@@ -394,6 +394,13 @@
     ]
   },
   {
+    "outputFileName": "bundles/common/es5-shim.js",
+    "inputFiles": [
+      "js/libs/shim/shim.js",
+      "js/libs/shim/sham.js"
+    ]
+  },
+  {
     "outputFileName": "bundles/site-main/otp/otp-super.css",
     "inputFiles": [
       "styles/components/accordions.css",
