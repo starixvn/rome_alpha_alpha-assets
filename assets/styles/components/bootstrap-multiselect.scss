@@ -101,13 +101,14 @@
     }
 }
 
-.multiselect-container.dropdown-menu label.checkbox, .multiselect-container.dropdown-menu label.radio {
-    padding-left: 36px;
-}
+.form-inline .multiselect-container {
+    label.checkbox, label.radio {
+        padding: 2px 20px 2px 36px;
+    }
 
-.form-inline .multiselect-container label.checkbox, .form-inline .multiselect-container label.radio {
-    padding-top: 2px;
-    padding-bottom: 2px;
+    .active > a label, .active > a:hover label, .active > a:focus label {
+        color: $text-color;
+    }
 }
 
 .dropdown-menu > .active > a,
