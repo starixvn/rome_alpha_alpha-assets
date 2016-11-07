@@ -48,11 +48,11 @@
             text-align: center;
         }
 
-        tr.headerBottom-pt th {
+        tr.thead-row2-pt th {
             background-color: #f0f1c7;
             color: $text-color;
 
-            &.RptHeader {
+            &.thead-row {
                 background-color: $table-header-bg-color;
                 color: $table-header-color;
             }
@@ -65,13 +65,12 @@
     }
 
     tbody {
-
         td {
             &.text-center {
                 text-align: center;
             }
 
-            &.cl-league {
+            &.group-league {
                 background: #f4f5e0;
                 text-transform: uppercase;
                 color: $text-color;
@@ -80,7 +79,7 @@
             }
         }
 
-        .RptSubTitle {
+        .col-first {
             background-color: #ffefde;
         }
 
@@ -89,7 +88,7 @@
             text-align: right;
         }
 
-        .firstCol {
+        .col-sma {
             background-color: #f8d7a2;
             font-weight: bold;
             text-transform: uppercase;
