@@ -119,7 +119,17 @@ $pt-bg: #f8f0e5;
 $pt-border-color: $border-color-dark;
 
 // hint tooltip 
+$hint-success-bg: #dfffe1;
+$hint-success-color: #333;
+$hint-success-border-color: #14b22a;
+$hint-success-border-radius: 2px;
+
 $hint-warning-bg: #FFFFCC;
 $hint-warning-color: #333;
 $hint-warning-border-color: #CC9933;
 $hint-warning-border-radius: 2px;
+
+$hint-error-bg: #ffe8e8;
+$hint-error-color: #333;
+$hint-error-border-color: #e9322d;
+$hint-error-border-radius: 2px;
