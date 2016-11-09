@@ -43,28 +43,7 @@
 
     $.fn.nexDatePicker.defaults = {
         //// nexDatePickerType can be single, daterange, quickchoose
-        nexDatePickerType: "single",
-        dropDownList:
-        {
-            Id: "dropDownListId",
-            Label: "Date ",
-            LabelCss: "lbl-field col_2",
-            OptionCss: "edit-field col_5"
-        },
-        firstDatePicker: {
-            Id: "firstDatePickerId",
-            Label: "From ",
-            InitDate: "",
-            LabelCss: "lbl-field col_2",
-            TextboxCss: "edit-field col_5"
-        },
-        secondDatePicker: {
-            Id: "secondDatePickerId",
-            Label: "To ",
-            InitDate: "",
-            LabelCss: "lbl-field col_1",
-            TextboxCss: "edit-field col_6"
-        },
+        nexDatePickerType: "quickchoose",
         datePickerFormat:
         {
             changeMonth: true,
@@ -73,17 +52,6 @@
             dateFormat: "M dd, yy"
         },
         subDatePickerStyle: "",
-        optionItems: [
-            { Name: "Today", Value: 0 },
-            { Name: "Yesterday", Value: 1 },
-            { Name: "Current Week", Value: 2 },
-            { Name: "Last Week", Value: 3 },
-            { Name: "Current Month", Value: 4 },
-            { Name: "Last Month", Value: 5 },
-            { Name: "Since Last Month", Value: 6 },
-            { Name: "Specific Date", Value: 7 }
-        ],
-        selectedItem: 5,
         onSelectDatePicker: function () {
         },
         minDate: null
@@ -105,7 +73,6 @@
         this.Initialize();
 
         //// Hide Container
-        this.$select.css("display", "none");
         return this.$select;
     };
 
@@ -114,10 +81,9 @@
             var me = this;
             var options = this.Options;
             //// Start render and Save Element Object
-            me.$select.after(me.RenderNexDatePicker());
-            me.$dropDownList = $("#" + options.dropDownList.Id);
-            me.$firstDatePicker = $("#" + options.firstDatePicker.Id + "-container");
-            me.$secondDatePicker = $("#" + options.secondDatePicker.Id + "-container");
+            me.$dropDownList = $("#dropdown-daterange");
+            me.$firstDatePicker = $("#from-date-container");
+            me.$secondDatePicker = $("#to-date-container");
 
             //// Format Date Picker
             me.FormatDatePicker();
@@ -128,80 +94,17 @@
             //// Trigger Dropdownlist Event
             me.$dropDownList.trigger("change");
 
-            $("#" + options.dropDownList.Id).val(options.selectedItem);
-        },
-        RenderNexDatePicker: function () {
-            var options = this.Options;
-            var html = [];
-            var firstDatePickerLabelCss = (typeof options.firstDatePicker.LabelCss != "undefined") ? options.firstDatePicker.LabelCss : "";
-            var firstDatePickerTextboxCss = (typeof options.firstDatePicker.TextboxCss != "undefined") ? options.firstDatePicker.TextboxCss : "";
-            var secondDatePickerLabelCss = (typeof options.secondDatePicker.LabelCss != "undefined") ? options.secondDatePicker.LabelCss : "";
-            var secondDatePickerTextboxCss = (typeof options.secondDatePicker.TextboxCss != "undefined") ? options.secondDatePicker.TextboxCss : "";
-
-            //// Render DropdownList time
-            if (options.nexDatePickerType == "quickchoose") {
-                var selectedItem = options.selectedItem;
-                html.push('<div class="'
-                    + options.dropDownList.LabelCss
-                    + '">'
-                    + options.dropDownList.Label
-                    + '</div>');
-                html.push('<div class="ui_nexdatepicker_edit_field '
-                    + options.dropDownList.OptionCss
-                    + '">');
-                html.push('<select id="' + options.dropDownList.Id +
-                                '" class="' + options.dropDownList.Id + '">');
-                for (var i = 0; i < options.optionItems.length; i++) {
-                    var optionItem = options.optionItems[i];
-                    if (selectedItem == optionItem.Value) {
-                        html.push('<option value="' + optionItem.Value + '" selected="selected">' + optionItem.Name + '</option>');
-                    }
-                    else {
-                        html.push('<option value="' + optionItem.Value + '">' + optionItem.Name + '</option>');
-                    }
-                }
-                html.push('</select>');
-                html.push('</div>');
-            }
-
-            //// Render First DatePiker Element
-            html.push(
-              '<div class="ui_nexdatepicker_lbl_field ' + firstDatePickerLabelCss + '">' + options.firstDatePicker.Label + '</div>'
-             + '<div id="' + options.firstDatePicker.Id + '-container" class="input-group date ui_nexdatepicker_edit_field ' + firstDatePickerTextboxCss + ' fromdate">'
-                 + '<input type="datetime" id="' + options.firstDatePicker.Id + '" name="' + options.firstDatePicker.Id + '" readonly="readonly" class="ui_nexdatepicker_datetextbox ui_nexdatepicker_fromdate form-control" />\
-                    <span class="input-group-addon">\
-                        <span class="icon-calendar"></span>\
-                    </span>'
-             + '</div>'
-             );
-
-
-            //// Render Second DatePicker Element
-            if (options.nexDatePickerType != "single") {
-                html.push(
-                  '<div class="ui_nexdatepicker_lbl_field ' + secondDatePickerLabelCss + '">' + options.secondDatePicker.Label + '</div>'
-                 + '<div id="' + options.secondDatePicker.Id + '-container" class="input-group date ui_nexdatepicker_edit_field ' + secondDatePickerTextboxCss + ' todate">'
-                         + '<input type="datetime" id="' + options.secondDatePicker.Id + '" name="' + options.secondDatePicker.Id + '" readonly="readonly" class="ui_nexdatepicker_datetextbox ui_nexdatepicker_todate form-control" />\
-                            <span class="input-group-addon">\
-                                <span class="icon-calendar"></span>\
-                            </span>'
-                 + '</div>'
-                );
-            }
-
-            //// Return Html Joined 
-            return html.join('');
+            //$("#" + options.dropDownList.Id).val(options.selectedItem);
         },
         FormatDatePicker: function () {
             var me = this;
             var options = this.Options;
             var ids = "";
             if (options.nexDatePickerType == "single") {
-                ids += "#" + options.firstDatePicker.Id + "-container";
+                ids += "#from-date-container";
             }
             else {
-                ids += "#" + options.firstDatePicker.Id + "-container" + ", "
-                + "#" + options.secondDatePicker.Id + "-container";
+                ids += "#from-date-container, #to-date-container";
             }
             this.$datePickers = $(ids);
             this.DatePickerOnSelect();
@@ -217,8 +120,8 @@
                 options.datePickerFormat.onSelect(date, this);
             });
 
-            var fd = new Date(options.firstDatePicker.InitDate);
-            var td = new Date(options.secondDatePicker.InitDate);
+            var fd = new Date(this.$firstDatePicker.find("input").val());
+            var td = new Date(this.$secondDatePicker.find("input").val());
 
             me.$firstDatePicker.data("DateTimePicker").date(fd);
             if (options.nexDatePickerType != "single") {
@@ -245,7 +148,7 @@
             var me = this;
             var options = this.Options;
             if (options.nexDatePickerType != "single") {
-                me.$select.parent().on("change", "#" + options.dropDownList.Id, function () {
+                me.$select.parent().on("change", "#dropdown-daterange", function () {
                     var selectValue = $(this).val();
                     var dt = new Date(me.CurrentDate);
                     var fDate = new Date(me.CurrentDate);
@@ -315,7 +218,7 @@
                     var $this = selectedDatePicker;
 
                     if (options.nexDatePickerType != "single") {
-                        var option = ($this.id == options.firstDatePicker.Id + "-container") ? "minDate" : "maxDate";
+                        var option = ($this.id == "from-date-container") ? "minDate" : "maxDate";
                         var instance = $($this).data("DateTimePicker");
                         var date = selectedDate;
                         var nothis = $datePickers.not($this);
