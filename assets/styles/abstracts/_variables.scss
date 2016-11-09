@@ -98,3 +98,38 @@ $status-live: #ffddcc;
 $msg-private: #18910b;
 $msg-special: #9d1c1c;
 $msg-public: #333;
+
+
+$popup-bg: #fff;
+$popup-border: $border-color;
+
+$pt-col-height: 30px;
+$pt-col-height-has-padding: 24px; // padding top/bottom: 2px
+$pt-col-height-large: 34px;
+$pt-col-height-has-padding-large: 28px;
+$pt-component-height: 22px;
+$pt-component-height-large: 24px;
+$pt-col-highlight-bg: #fae7d3;
+$pt-icon-edit-color: #fff;
+$pt-icon-edit-color-active: #67b4fb;
+$pt-icon-copy-color: #fff;
+$pt-icon-copy-color-active: #67b4fb;
+$pt-icon-copy-color-active-dark: #368ad8;
+$pt-bg: #f8f0e5;
+$pt-border-color: $border-color-dark;
+
+// hint tooltip 
+$hint-success-bg: #dfffe1;
+$hint-success-color: #333;
+$hint-success-border-color: #14b22a;
+$hint-success-border-radius: 2px;
+
+$hint-warning-bg: #FFFFCC;
+$hint-warning-color: #333;
+$hint-warning-border-color: #CC9933;
+$hint-warning-border-radius: 2px;
+
+$hint-error-bg: #ffe8e8;
+$hint-error-color: #333;
+$hint-error-border-color: #e9322d;
+$hint-error-border-radius: 2px;

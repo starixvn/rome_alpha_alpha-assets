@@ -186,5 +186,9 @@
   {
     "outputFile": "styles/layout/before-home-page/before-home-page.css",
     "inputFile": "styles/layout/before-home-page/before-home-page.scss"
+  },
+  {
+    "outputFile": "styles/layout/dcs/customizeDCS.css",
+    "inputFile": "styles/layout/dcs/customizeDCS.scss"
   }
 ]
