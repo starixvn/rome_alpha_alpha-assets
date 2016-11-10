@@ -52,7 +52,7 @@
     font-size: 13px;
     @include effect-normal;
 
-    > li:not(.active):hover > a {
+    > li:hover > a {
         background-color: $dropdown-bg-hover;
     }
 
@@ -98,6 +98,10 @@
     .radio-inline input[type="radio"] {
         margin-left: -22px;
         top: 2px;
+    }
+
+    .multiselect-all a {
+        border-bottom: 1px solid $border-color-dark;
     }
 }
 
