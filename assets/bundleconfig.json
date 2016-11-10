@@ -431,5 +431,13 @@
       "js/components/bootbox/bootbox.js",
       "js/libs/clipboard/clipboard.js"
     ]
+  },
+  {
+    "outputFileName": "bundles/dcs/customizeDCS.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/base/icon-fonts.css",
+      "styles/layout/dcs/customizeDCS.css"
+    ]
   }
 ]
