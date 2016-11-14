@@ -396,8 +396,15 @@
   {
     "outputFileName": "bundles/common/es5-shim.js",
     "inputFiles": [
-      "js/libs/shim/shim.js",
-      "js/libs/shim/sham.js"
+      "js/libs/support-IE8/shim.js",
+      "js/libs/support-IE8/sham.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/support-IE8.js",
+    "inputFiles": [
+      "js/libs/support-IE8/html5shiv.js",
+      "js/libs/support-IE8/respond.js"
     ]
   },
   {
