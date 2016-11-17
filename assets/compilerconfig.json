@@ -230,6 +230,11 @@
     "sourceMap": false
   },
   {
+    "outputFile": "styles/components/toastr.css",
+    "inputFile": "styles/components/toastr.scss",
+    "sourceMap": false
+  },
+  {
     "outputFile": "styles/vendors-extensions/common/bootstrap-ex.css",
     "inputFile": "styles/vendors-extensions/common/bootstrap-ex.scss",
     "sourceMap": false
