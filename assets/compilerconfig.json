@@ -203,5 +203,9 @@
   {
     "outputFile": "styles/components/bootstrap.nexDatePicker.css",
     "inputFile": "styles/components/bootstrap.nexDatePicker.scss"
+  },
+  {
+    "outputFile": "styles/components/tablesorter.css",
+    "inputFile": "styles/components/tablesorter.scss"
   }
 ]

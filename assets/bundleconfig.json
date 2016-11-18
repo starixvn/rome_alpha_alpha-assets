@@ -461,7 +461,8 @@
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect.css",
-      "styles/components/pagination.css"
+      "styles/components/pagination.css",
+      "styles/components/tablesorter.css"
     ]
   },
   {
@@ -488,8 +489,9 @@
       "js/components/multiselect/bootstrap-multiselect.js",
       "js/components/sticky-table-headers/jquery.stickytableheaders.js",
       "js/libs/bootstrap/modal.js",
+      "js/components/tablesorter/jquery.metadata.js",
+      "js/components/tablesorter/tablesorter.js",
       "js/components/storejs/store.js"
     ]
   }
-
 ]
