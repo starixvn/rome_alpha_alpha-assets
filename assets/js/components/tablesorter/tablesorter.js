@@ -725,7 +725,7 @@
                     fixColumnWidth(this);
                     // apply event handling to headers
                     // this is to big, perhaps break it out?
-                    $headers.off("click").on("click",
+                    $headers.off("click.tablesorter").on("click.tablesorter",
 
                     function (e) {
                         var totalRows = ($this[0].tBodies[0] && $this[0].tBodies[0].rows.length) || 0;
