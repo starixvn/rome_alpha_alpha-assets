@@ -165,8 +165,9 @@
                 if (rows[0]) {
 
                     var list = [],
-                        cells = rows[0].cells,
+                        cells = getVisibleBodyColumn(rows[0]),
                         l = cells.length;
+
 
                     for (var i = 0; i < l; i++) {
 
@@ -227,7 +228,7 @@
             }
 
             function getNodeFromRowAndCellIndex(rows, rowIndex, cellIndex) {
-                return rows[rowIndex].cells[cellIndex];
+                return getVisibleBodyColumn(rows[rowIndex])[cellIndex];
             }
 
             function trimAndGetNodeText(config, node) {
@@ -253,7 +254,7 @@
                 }
 
                 var totalRows = (table.tBodies[0] && table.tBodies[0].rows.length) || 0,
-                    totalCells = (table.tBodies[0].rows[0] && table.tBodies[0].rows[0].cells.length) || 0,
+                    totalCells = (table.tBodies[0].rows[0] && getVisibleBodyColumn(table.tBodies[0].rows[0]).length) || 0,
                     parsers = table.config.parsers,
                     cache = {
                         row: [],
@@ -276,8 +277,10 @@
 
                     cache.row.push(c);
 
+                    var visibleColumns = getVisibleBodyColumn(c[0]);
+
                     for (var j = 0; j < totalCells; ++j) {
-                        cols.push(parsers[j].format(getElementText(table.config, c[0].cells[j]), table, c[0].cells[j]));
+                        cols.push(parsers[j].format(getElementText(table.config, visibleColumns[j]), table, visibleColumns[j]));
                     }
 
                     cols.push(cache.normalized.length); // add position for rowCache
@@ -351,8 +354,6 @@
                         // 
                     }
                 }
-
-
 
                 if (table.config.appender) {
 
@@ -882,6 +883,10 @@
                     table.tBodies[0].innerHTML = "";
                 }
             };
+
+            function getVisibleBodyColumn(row) {
+                return $(row).find("td:visible");
+            }
         }
     });
 
