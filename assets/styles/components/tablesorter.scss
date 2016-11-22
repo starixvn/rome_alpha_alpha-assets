@@ -15,7 +15,9 @@
     }
 
     .sorting {
+        cursor: pointer;
         position: relative;
+        background-clip: padding-box;
 
         &:after {
             @extend %alphaIcon;
