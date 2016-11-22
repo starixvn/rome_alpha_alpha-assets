@@ -15,9 +15,10 @@
     }
 
     .sorting {
-        cursor: pointer;
-        position: relative;
         background-clip: padding-box;
+        cursor: pointer;
+        position: relative;        
+        padding-right: 14px;
 
         &:after {
             @extend %alphaIcon;
@@ -28,6 +29,7 @@
             &:after, &.col-combine .prior-sortedcolumn:after {
                 @extend %alphaIcon;
                 content: '\e961';
+                color: #ff1500;
             }
         }
 
@@ -35,6 +37,7 @@
             &:after, &.col-combine .prior-sortedcolumn:after {
                 @extend %alphaIcon;
                 content: '\e962';  
+                color: #ff1500;
             }     
         }
 
