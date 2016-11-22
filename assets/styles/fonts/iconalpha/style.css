@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?ws209s');
-  src:  url('fonts/Iconalpha.eot?ws209s#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?ws209s') format('truetype'),
-    url('fonts/Iconalpha.woff?ws209s') format('woff'),
-    url('fonts/Iconalpha.svg?ws209s#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?qp2b2j');
+  src:  url('fonts/Iconalpha.eot?qp2b2j#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?qp2b2j') format('truetype'),
+    url('fonts/Iconalpha.woff?qp2b2j') format('woff'),
+    url('fonts/Iconalpha.svg?qp2b2j#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,15 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-table-sort-asc:before {
+  content: "\e961";
+}
+.icon-table-sort-desc:before {
+  content: "\e962";
+}
+.icon-table-sort:before {
+  content: "\e960";
+}
 .icon-otp:before {
   content: "\e95f";
 }

@@ -43,11 +43,11 @@
  * 
  * @option String cssAsc (optional) A string of the class name to be appended to
  *         sortable tr elements in the thead on a ascending sort. Default value:
- *         "headerSortUp"
+ *         "sorting-desc"
  * 
  * @option String cssDesc (optional) A string of the class name to be appended
  *         to sortable tr elements in the thead on a descending sort. Default
- *         value: "headerSortDown"
+ *         value: "sorting-asc"
  * 
  * @option String sortInitialOrder (optional) A string of the inital sorting
  *         order can be asc or desc. Default value: "asc"
@@ -111,8 +111,8 @@
 
             this.defaults = {
                 cssHeader: "header",
-                cssAsc: "headerSortUp",
-                cssDesc: "headerSortDown",
+                cssAsc: "sorting-asc",
+                cssDesc: "sorting-desc",
                 cssChildRow: "expand-child",
                 sortInitialOrder: "asc",
                 sortMultiSortKey: "shiftKey",
@@ -720,7 +720,7 @@
                     // build the cache for the tbody cells
                     cache = buildCache(this);
                     // get the css class names, could be done else where.
-                    var sortCSS = [config.cssDesc, config.cssAsc];
+                    var sortCSS = [config.cssAsc, config.cssDesc];
                     // fixate columns if the users supplies the fixedWidth option
                     fixColumnWidth(this);
                     // apply event handling to headers

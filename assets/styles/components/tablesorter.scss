@@ -1,42 +1,56 @@
-table.tablesorter {
+.tablesorter {
     text-align: left;
 
-    .header {
-        background-image: url(../images/tablesorter_bg.gif);
-        background-repeat: no-repeat;
-        background-position: center right;
+    th {
+        padding: 0 14px;
+    }
+
+    %alphaIcon {
         cursor: pointer;
+        font-family: 'Iconalpha';
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        padding: 0 2px;
     }
 
-    .headerSortUp {
-        background-image: url(../images/tablesorter_asc.gif);
-    }
+    .sorting {
+        position: relative;
 
-    .headerSortDown {
-        background-image: url(../images/tablesorter_desc.gif);
-    }
-
-    .col-combine {
-        &.header {
-            background-image: none;
+        &:after {
+            @extend %alphaIcon;
+            content: '\e960';
         }
 
-        &.header .prior-sortedcolumn {
-            background-image: url(../images/tablesorter_bg.gif);
-            background-repeat: no-repeat;
-            background-position: center right;
-            cursor: pointer;
-            padding-right: 16px;
+        &.sorting-asc {
+            &:after, &.col-combine .prior-sortedcolumn:after {
+                @extend %alphaIcon;
+                content: '\e961';
+            }
         }
 
-        &.headerSortUp .prior-sortedcolumn {
-            background-image: url(../images/tablesorter_asc.gif);
-            padding-right: 16px;
+        &.sorting-desc {
+            &:after, &.col-combine .prior-sortedcolumn:after {
+                @extend %alphaIcon;
+                content: '\e962';  
+            }     
         }
 
-        &.headerSortDown .prior-sortedcolumn {
-            background-image: url(../images/tablesorter_desc.gif);
-            padding-right: 16px;
+        &.col-combine {
+            &:after {
+                display: none;
+            }
+
+            .prior-sortedcolumn {
+                position: relative;
+                padding-right: 16px;
+
+                &:after {
+                    @extend %alphaIcon;
+                    content: '\e960';
+                }
+            }
+            
         }
     }
 }
