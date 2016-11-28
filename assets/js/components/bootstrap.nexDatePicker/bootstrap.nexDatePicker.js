@@ -46,9 +46,6 @@
         nexDatePickerType: "quickchoose",
         datePickerFormat:
         {
-            changeMonth: true,
-            changeYear: true,
-            showOtherMonths: true,
             dateFormat: "M dd, yy"
         },
         subDatePickerStyle: "",
@@ -107,7 +104,6 @@
                 ids += "#from-date-container, #to-date-container";
             }
             this.$datePickers = $(ids);
-            this.DatePickerOnSelect();
             this.$datePickers.datepicker({
                 allowInputToggle: true,
                 format: options.datePickerFormat.dateFormat,
@@ -117,7 +113,12 @@
                         moment(inputDate.toISOString());
                 }
             }).on('dp.change', function (date) {
-                options.datePickerFormat.onSelect(date, this);
+                if (date.date.format('YYYY MM DD') != date.oldDate.format('YYYY MM DD')) {
+                    me.$dropDownList.find("option").prop("selected", false);
+                    me.$dropDownList.find("option[value='7']").prop("selected", true);
+                    me.$dropDownList.multiselect('refresh');
+                }
+                options.onSelectDatePicker(date);
             });
 
             var fd = new Date(this.$firstDatePicker.find("input").val());
@@ -207,34 +208,6 @@
                     $(this).val(selectValue);
                 });
             }
-        },
-        DatePickerOnSelect: function () {
-            var me = this;
-            var options = this.Options;
-            var $datePickers = this.$datePickers;
-            var optionSelect =
-            {
-                onSelect: function (selectedDate, selectedDatePicker) {
-                    var $this = selectedDatePicker;
-
-                    if (options.nexDatePickerType != "single") {
-                        var option = ($this.id == "from-date-container") ? "minDate" : "maxDate";
-                        var instance = $($this).data("DateTimePicker");
-                        var date = selectedDate;
-                        var nothis = $datePickers.not($this);
-                        //.datepicker("disable")
-
-                        setTimeout(function () {
-                            nothis.datepicker("option", option, date);
-                        }, 200);
-                        //.datepicker("close");
-                        //$(this).datepicker("option", option == "minDate" ? "maxDate" : "minDate", date)
-                    }
-                    options.onSelectDatePicker(selectedDate);
-                    me.$dropDownList.val(7);
-                }
-            }
-            this.Options.datePickerFormat = $.extend({}, this.Options.datePickerFormat, optionSelect);
         }
     }
 
