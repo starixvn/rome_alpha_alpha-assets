@@ -107,7 +107,8 @@
         function () {
 
             var parsers = [],
-                widgets = [];
+                widgets = [],
+                headerIndex = [];
 
             this.defaults = {
                 cssHeader: "header",
@@ -384,14 +385,12 @@
 
                 var meta = ($.metadata) ? true : false;
 
-                var header_index = computeTableHeaderCellIndexes(table);
+                headerIndex = computeTableHeaderCellIndexes(table);
 
                 $tableHeaders = $(table.config.selectorHeaders, table).each(function (index) {
-
-                    this.column = header_index[this.parentNode.rowIndex + "-" + this.cellIndex];
+                    this.column = headerIndex[this.parentNode.rowIndex + "-" + this.cellIndex];
                     // this.column = index;
                     this.order = formatSortingOrder(table.config.sortInitialOrder);
-
 
                     this.count = this.order;
 
@@ -413,7 +412,6 @@
                 }
 
                 return $tableHeaders;
-
             };
 
             // from:
@@ -583,9 +581,33 @@
                     l = sortList.length;
                 for (var i = 0; i < l; i++) {
                     var s = sortList[i],
-                        o = c.headerList[s[0]];
-                    o.count = s[1];
-                    o.count++;
+                        index = s[0],
+                        sortDirection = s[1];
+
+                    for (var j = 0, headerLength = c.headerList.length; j < headerLength; j++) {
+                        if (c.headerList[j].column === index) {
+                            var o = c.headerList[j];
+                            o.count = sortDirection;
+                        }
+                    }
+                }
+            }
+
+            function resetHeaderSortCount(table, sortList, headerIndex) {
+                var c = table.config,
+                    l = sortList.length;
+                for (var i = 0; i < l; i++) {
+                    var s = sortList[i],
+                        index = s[0];
+
+                    if (index !== headerIndex) {
+                        for (var j = 0, headerLength = c.headerList.length; j < headerLength; j++) {
+                            if (c.headerList[j].column === index) {
+                                var o = c.headerList[j];
+                                o.count = 0;
+                            }
+                        }
+                    }
                 }
             }
 
@@ -733,12 +755,15 @@
                             // Only call sortStart if sorting is
                             // enabled.
                             $this.trigger("sortStart");
+                            resetHeaderSortCount($this[0], config.sortList, this.column);
+
                             // store exp, for speed
                             var $cell = $(this);
                             // get current column index
                             var i = this.column;
                             // get current column sort order
-                            this.order = this.count++ % 2;
+                            this.order = ++this.count % 2;
+
                             // always sort on the locked order.
                             if (this.lockedOrder) this.order = this.lockedOrder;
 
@@ -815,7 +840,7 @@
                         // update cache
                         cache.normalized[pos[0]][pos[1]] = config.parsers[pos[1]].format(
                         getElementText(config, cell), cell);
-                    }).bind("sorton", function (e, list) {
+                    }).off("sorton").bind("sorton", function (e, list) {
                         $(this).trigger("sortStart");
                         config.sortList = list;
                         // update and store the sortlist
@@ -826,6 +851,7 @@
                         setHeadersCss(this, $headers, sortList, sortCSS);
                         // sort the table and append it to the dom
                         appendToTable(this, multisort(this, sortList, cache));
+
                     }).bind("appendCache", function () {
                         appendToTable(this, cache);
                     }).bind("applyWidgetId", function (e, id) {
