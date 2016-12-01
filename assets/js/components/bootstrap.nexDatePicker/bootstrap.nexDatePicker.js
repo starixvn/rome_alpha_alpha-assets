@@ -238,9 +238,9 @@
             var diff = date.getDate() - day; // adjust when day is sunday
             var startDate = new Date(date.setDate(diff));
 
-            startDate = date.getMonth() < lastDate.getMonth() ?
-                new Date(lastDate.getFullYear(), lastDate.getMonth(), 1) :
-                startDate;
+            ////startDate = date.getMonth() < lastDate.getMonth() ?
+            ////    new Date(lastDate.getFullYear(), lastDate.getMonth(), 1) :
+            ////    startDate;
 
             return [startDate, lastDate];
         },
