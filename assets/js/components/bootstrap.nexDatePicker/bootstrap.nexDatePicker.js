@@ -206,6 +206,7 @@
                     me.CheckSetMaxDate();
 
                     $(this).val(selectValue);
+                    me.$dropDownList.multiselect('refresh');
                 });
             }
         }
