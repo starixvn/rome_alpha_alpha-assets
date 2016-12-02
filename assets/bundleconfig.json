@@ -9,6 +9,7 @@
       "styles/components/alerts.css",
       "styles/components/blockui.css",
       "styles/components/buttons.css",
+      "styles/components/breadcrumbs.css",
       "styles/components/checkbox-radio.css",
       "styles/components/dropdown.css",
       "styles/components/form.css",
