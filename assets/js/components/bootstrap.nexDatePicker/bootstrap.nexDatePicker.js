@@ -78,9 +78,9 @@
             var me = this;
             var options = this.Options;
             //// Start render and Save Element Object
-            me.$dropDownList = $("#dropdown-daterange");
-            me.$firstDatePicker = $("#from-date-container");
-            me.$secondDatePicker = $("#to-date-container");
+            me.$dropDownList = this.$select.find("#dropdown-daterange");
+            me.$firstDatePicker = this.$select.find("#from-date-container");
+            me.$secondDatePicker = this.$select.find("#to-date-container");
 
             //// Format Date Picker
             me.FormatDatePicker();
@@ -103,7 +103,7 @@
             else {
                 ids += "#from-date-container, #to-date-container";
             }
-            this.$datePickers = $(ids);
+            this.$datePickers = this.$select.find(ids);
             this.$datePickers.datepicker({
                 allowInputToggle: true,
                 format: options.datePickerFormat.dateFormat,
