@@ -469,18 +469,13 @@
   {
     "outputFileName": "bundles/site-reports/default.js",
     "inputFiles": [
-      "js/libs/jquery/jquery-1.11.3.js",
-      "js/libs/bootstrap/button.js",
-      "js/libs/bootstrap/dropdown.js",
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
-      "js/libs/bootstrap/tooltip.js",
       "js/libs/mobile/isMobile.js",
       "js/libs/moment/moment.js",
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js",
-      "js/components/blockui/jquery.blockUI.js",
       "js/components/monthpicker/monPickr-0.0.3.js",
       "js/components/pagination/jquery.draggable.js",
       "js/components/pagination/jquery.resizable.js",
@@ -491,7 +486,6 @@
       "js/libs/jquery/jquery.cookie.js",
       "js/components/multiselect/bootstrap-multiselect.js",
       "js/components/sticky-table-headers/jquery.stickytableheaders.js",
-      "js/libs/bootstrap/modal.js",
       "js/components/tablesorter/tablesorter.js",
       "js/components/storejs/store.js"
     ]
