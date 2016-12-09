@@ -475,6 +475,7 @@
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
       "js/libs/bootstrap/tooltip.js",
+      "js/libs/mobile/isMobile.js",
       "js/libs/moment/moment.js",
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
