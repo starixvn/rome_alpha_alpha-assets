@@ -21,7 +21,15 @@
             > tr:nth-of-type(2n) {
                 background-color: $table-even-bg;
             }
-        }   
+        }
+    }
+
+    &.alternative-row-table {
+        tbody {
+            .even-row {
+                background-color: $table-even-bg;
+            }
+        }
     }
 
     &.tblRpt-hover {
@@ -32,7 +40,7 @@
         }
     }
 
-    thead th, tbody td, tfoot td  {
+    thead th, tbody td, tfoot td {
         height: $height-normal;
         padding: 4px 8px;
         white-space: nowrap;
@@ -94,7 +102,7 @@
             text-transform: uppercase;
             text-align: center;
         }
-    }    
+    }
 
     .tbl-footer {
         background-color: $table-footer-bg;
@@ -111,4 +119,3 @@
         text-align: center;
     }
 }
-
