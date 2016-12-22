@@ -695,7 +695,7 @@
 
                         data.target.parents('.monpickr-wrap-parent').css({ float: 'left' }).wrap('<div class="monpickr-super-wrapper" />')
                             .after('<div id="' + data.toDayId + '" />')
-                            .after('<div class="monpickr-label">' + data.toDayLabel + '</div>')
+                            .after('<div class="monpickr-label separator">' + data.toDayLabel + '</div>')
                             .after('<div id="' + data.fromDayId + '" />')
                             .after('<div class="monpickr-label">' + data.fromDayLabel + '</div>');
                     }

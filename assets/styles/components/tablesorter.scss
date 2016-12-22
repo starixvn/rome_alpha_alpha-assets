@@ -1,0 +1,62 @@
+.tablesorter {
+    text-align: left;
+
+    th {
+        padding: 0 14px;
+    }
+
+    %alphaIcon {
+        cursor: pointer;
+        font-family: 'Iconalpha';
+        font-size: 12px;
+        position: absolute;
+        right: 0;
+        padding: 0 2px;
+    }
+
+    .sorting {
+        background-clip: padding-box;
+        cursor: pointer;
+        position: relative;        
+        padding-right: 14px;
+
+        &:after {
+            @extend %alphaIcon;
+            content: '\e960';
+        }
+
+        &.sorting-asc {
+            &:after, &.col-combine .prior-sortedcolumn:after {
+                @extend %alphaIcon;
+                content: '\e961';
+                color: #ff1500;
+            }
+        }
+
+        &.sorting-desc {
+            &:after, &.col-combine .prior-sortedcolumn:after {
+                @extend %alphaIcon;
+                content: '\e962';  
+                color: #ff1500;
+            }     
+        }
+
+        &.col-combine {
+            &:after {
+                display: none;
+            }
+
+            .prior-sortedcolumn {
+                display: inline-block;
+                position: relative;
+                padding-right: 16px;                
+
+                &:after {
+                    @extend %alphaIcon;
+                    content: '\e960';
+                }
+            }
+            
+        }
+    }
+}

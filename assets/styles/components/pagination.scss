@@ -8,6 +8,7 @@
     span, .pagination-info {
         font-size: 13px;
     }
+
     .l-btn-plain:hover {
         background: transparent;
         border: 1px solid transparent;
@@ -20,26 +21,26 @@
         @include box-sizing;
     }
 
-    .pagination-page-list {        
-        width: 60px;
+    .pagination-page-list {
+        width: 70px;
         padding: 0;
-    } 
+    }
 
     .pagination-num {
         width: 40px;
         padding-left: 5px;
-        margin: 0 5px;    
+        margin: 0 5px;
     }
 
     .pagination-btn-separator {
         height: auto;
     }
 
-    .pagination-first, .pagination-prev, .pagination-last, .pagination-next {    
+    .pagination-first, .pagination-prev, .pagination-last, .pagination-next {
         height: 20px;
         line-height: 20px;
         background: $paging-btn-bg;
-        cursor: pointer;    
+        cursor: pointer;
         outline: none;
         padding: 0 3px;
         top: 10px;
@@ -83,9 +84,7 @@
             }
         }
     }
-
     // Pagination is aligned center.
-
     &.pagination-center {
         table {
             margin: auto;
@@ -96,7 +95,6 @@
             display: none;
         }
     }
-
     // Pagination is aligned center, but the page size component is aligned right.
     &.pagination-special {
         position: relative;

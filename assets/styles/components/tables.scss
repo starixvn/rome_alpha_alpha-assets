@@ -21,7 +21,15 @@
             > tr:nth-of-type(2n) {
                 background-color: $table-even-bg;
             }
-        }   
+        }
+    }
+
+    &.alternative-row-table {
+        tbody {
+            .even-row {
+                background-color: $table-even-bg;
+            }
+        }
     }
 
     &.tblRpt-hover {
@@ -32,7 +40,7 @@
         }
     }
 
-    thead th, tbody td, tfoot td  {
+    thead th, tbody td, tfoot td {
         height: $height-normal;
         padding: 4px 8px;
         white-space: nowrap;
@@ -48,30 +56,29 @@
             text-align: center;
         }
 
-        tr.headerBottom-pt th {
+        tr.thead-row2-pt th {
             background-color: #f0f1c7;
             color: $text-color;
 
-            &.RptHeader {
+            &.thead-row {
                 background-color: $table-header-bg-color;
                 color: $table-header-color;
             }
         }
     }
 
-    .RptHeader02 th {
+    .thead-row2 th {
         background-color: $table-subheader-bg-color;
         color: $table-subheader-color;
     }
 
     tbody {
-
         td {
             &.text-center {
                 text-align: center;
             }
 
-            &.cl-league {
+            &.group-league {
                 background: #f4f5e0;
                 text-transform: uppercase;
                 color: $text-color;
@@ -80,7 +87,7 @@
             }
         }
 
-        .RptSubTitle {
+        .col-first {
             background-color: #ffefde;
         }
 
@@ -89,15 +96,15 @@
             text-align: right;
         }
 
-        .firstCol {
+        .col-sma {
             background-color: #f8d7a2;
             font-weight: bold;
             text-transform: uppercase;
             text-align: center;
         }
-    }    
+    }
 
-    .RptFooter {
+    .tbl-footer {
         background-color: $table-footer-bg;
         color: $table-footer-color;
         font-weight: 700;
@@ -112,4 +119,3 @@
         text-align: center;
     }
 }
-

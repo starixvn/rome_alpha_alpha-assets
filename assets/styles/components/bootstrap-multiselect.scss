@@ -6,6 +6,7 @@
          @include box-shadow(0, 1px, 1px, rgba(0,0,0,.3));
         background: #fff;
         font-size: $font-size;
+        margin-right: 0;
         position: relative;
         padding: 6px 10px;
         
@@ -51,7 +52,7 @@
     font-size: 13px;
     @include effect-normal;
 
-    > li:not(.active):hover > a {
+    > li:hover > a {
         background-color: $dropdown-bg-hover;
     }
 
@@ -96,6 +97,27 @@
     .radio input[type="radio"], 
     .radio-inline input[type="radio"] {
         margin-left: -22px;
-        top: 1px;
+        top: 2px;
     }
+
+    .multiselect-all a {
+        border-bottom: 1px solid $border-color-dark;
+    }
+}
+
+.form-inline .multiselect-container {
+    label.checkbox, label.radio {
+        padding: 2px 20px 2px 36px;
+    }
+
+    .active > a label, .active > a:hover label, .active > a:focus label {
+        color: $text-color;
+    }
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background: none;
+    color: $text-color;
 }
