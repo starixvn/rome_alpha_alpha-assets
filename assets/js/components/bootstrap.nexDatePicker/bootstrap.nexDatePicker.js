@@ -235,21 +235,17 @@
             var date = new Date(today);
             var lastDate = new Date(today);
             var day = date.getDay();
-            var diff = date.getDate() - day; // adjust when day is sunday
+            var diff = date.getDate() - day + 1; // adjust when day is monday
             var startDate = new Date(date.setDate(diff));
-
-            ////startDate = date.getMonth() < lastDate.getMonth() ?
-            ////    new Date(lastDate.getFullYear(), lastDate.getMonth(), 1) :
-            ////    startDate;
 
             return [startDate, lastDate];
         },
         getDateRangeOfLastWeek: function (today) {
             var lastWeek = new Date(today);
-            // set the date to last week's Sunday
-            lastWeek.setDate(lastWeek.getDate() - lastWeek.getDay() - 7);
+            // set the date to last week's Monday
+            lastWeek.setDate(lastWeek.getDate() - lastWeek.getDay() - 6);
             var startDate = NexDatePickerHelper.getShortDateString(lastWeek);
-            // set the date to last week's Saturday
+            // set the date to last week's Sunday
             lastWeek.setDate(lastWeek.getDate() + 6);
             var endDate = NexDatePickerHelper.getShortDateString(lastWeek);
 
