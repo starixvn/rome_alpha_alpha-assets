@@ -97,23 +97,28 @@
             var me = this;
             var options = this.Options;
             var ids = "";
-            if (options.nexDatePickerType == "single") {
+            if (options.nexDatePickerType === "single") {
                 ids += "#from-date-container";
             }
             else {
                 ids += "#from-date-container, #to-date-container";
             }
             this.$datePickers = this.$select.find(ids);
+
+            moment.locale('en', {
+                week: { dow: 1 } // Monday is the first day of the week
+            });
+
             this.$datePickers.datepicker({
                 allowInputToggle: true,
                 format: options.datePickerFormat.dateFormat,
                 parseInputDate: function (inputDate) {
-                    return typeof (inputDate) === "string" ?
+                    return typeof inputDate === "string" ?
                         moment((new Date(inputDate)).toISOString()) :
                         moment(inputDate.toISOString());
                 }
             }).on('dp.change', function (date) {
-                if (date.date.format('YYYY MM DD') != date.oldDate.format('YYYY MM DD')) {
+                if (date.date.format('YYYY MM DD') !== date.oldDate.format('YYYY MM DD')) {
                     me.$dropDownList.find("option").prop("selected", false);
                     me.$dropDownList.find("option[value='7']").prop("selected", true);
                     me.$dropDownList.multiselect('refresh');
@@ -125,7 +130,7 @@
             var td = new Date(this.$secondDatePicker.find("input").val());
 
             me.$firstDatePicker.data("DateTimePicker").date(fd);
-            if (options.nexDatePickerType != "single") {
+            if (options.nexDatePickerType !== "single") {
                 me.$secondDatePicker.data("DateTimePicker").date(td);
                 me.CheckSetMinDate();
                 me.CheckSetMaxDate();
@@ -133,14 +138,14 @@
         },
         CheckSetMinDate: function () {
             var me = this;
-            if (me.Options.minDate != null) {
+            if (me.Options.minDate !== null) {
                 me.$firstDatePicker.data("DateTimePicker").minDate((new Date(me.Options.minDate)).toISOString());
                 me.$secondDatePicker.data("DateTimePicker").minDate((new Date(me.Options.minDate)).toISOString());
             }
         },
         CheckSetMaxDate: function () {
             var me = this;
-            if (me.Options.maxDate != null) {
+            if (me.Options.maxDate !== null) {
                 me.$firstDatePicker.data("DateTimePicker").maxDate((new Date(me.Options.maxDate)).toISOString());
                 me.$secondDatePicker.data("DateTimePicker").maxDate((new Date(me.Options.maxDate)).toISOString());
             }
@@ -148,7 +153,7 @@
         AddEvent: function () {
             var me = this;
             var options = this.Options;
-            if (options.nexDatePickerType != "single") {
+            if (options.nexDatePickerType !== "single") {
                 me.$select.parent().on("change", "#dropdown-daterange", function () {
                     var selectValue = $(this).val();
                     var dt = new Date(me.CurrentDate);
@@ -210,7 +215,7 @@
                 });
             }
         }
-    }
+    };
 
     //// Helper for Calculation Date
     var NexDatePickerHelper =
@@ -252,7 +257,7 @@
             return [new Date(startDate), new Date(endDate)];
         },
         getDateRangeOfCurrentMonth: function (today) {
-            var today = new Date(today);
+            today = new Date(today);
             var startDate = new Date(today);
             startDate.setDate(1);
             startDate.setMonth(today.getMonth());
@@ -288,8 +293,8 @@
             //// Note Month fomr 1 > 12
             var m = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
             if (month != 2) return m[month - 1];
-            if (year % 4 != 0) return m[1];
-            if (year % 100 == 0 && year % 400 != 0) return m[1];
+            if (year % 4 !== 0) return m[1];
+            if (year % 100 === 0 && year % 400 !== 0) return m[1];
             return m[1] + 1;
         },
         correctDateInRange: function (inputDate, minDate, maxDate) {
