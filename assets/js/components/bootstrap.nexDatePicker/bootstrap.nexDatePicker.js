@@ -240,6 +240,10 @@
             var date = new Date(today);
             var lastDate = new Date(today);
             var day = date.getDay();
+            if (day === 0) {
+                day = 7;
+            }
+
             var diff = date.getDate() - day + 1; // adjust when day is monday
             var startDate = new Date(date.setDate(diff));
 
@@ -247,8 +251,13 @@
         },
         getDateRangeOfLastWeek: function (today) {
             var lastWeek = new Date(today);
+            var day = lastWeek.getDay();
+            if (day === 0) {
+                day = 7;
+            }
+
             // set the date to last week's Monday
-            lastWeek.setDate(lastWeek.getDate() - lastWeek.getDay() - 6);
+            lastWeek.setDate(lastWeek.getDate() - day - 6);
             var startDate = NexDatePickerHelper.getShortDateString(lastWeek);
             // set the date to last week's Sunday
             lastWeek.setDate(lastWeek.getDate() + 6);
