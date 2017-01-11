@@ -1,0 +1,23 @@
+﻿{
+  "Framework": "jasmine",
+  "EnableCodeCoverage": "true",
+  "CodeCoverageExcludes": [
+    "*\\libs\\*"
+  ],
+  "CodeCoverageIgnores": [
+    "*\\tests\\*"
+  ],
+
+  "CodeCoverageExecutionMode": "Manual",
+  "References": [
+    { "Path": "libs/jquery/jquery-1.11.3.js" },
+    { "Path": "tests/libs/jasmine.js" },
+    { "Path": "tests/jasmine-jquery.js" },
+
+    { "Path": "components/bootstrap.nexDatePicker.js" },
+    { "Path": "tests/components/bootstrap.nexDatePicker-tests.js" }
+  ],
+  "Tests": [
+
+  ]
+}
