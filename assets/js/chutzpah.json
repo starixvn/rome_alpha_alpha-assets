@@ -14,10 +14,15 @@
     { "Path": "tests/libs/jasmine.js" },
     { "Path": "tests/jasmine-jquery.js" },
 
+    { "Path": "../components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js" },
+
     { "Path": "components/bootstrap.nexDatePicker.js" },
     { "Path": "tests/components/bootstrap.nexDatePicker-tests.js" }
   ],
   "Tests": [
-
+    {
+      "Path": "apps/components",
+      "Excludes": [ "**.js.map", "**.js", "**-template.ts" ]
+    }
   ]
 }
