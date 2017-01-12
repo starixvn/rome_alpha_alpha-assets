@@ -561,7 +561,9 @@
 
                 var l = list.length;
                 for (var i = 0; i < l; i++) {
-                    h[list[i][0]].addClass(css[list[i][1]]);
+                    var sortIndex = list[i][0];
+                    var sortDirection = list[i][1];
+                    h[sortIndex].addClass(css[sortDirection]);
                 }
             }
 
@@ -587,7 +589,7 @@
                     for (var j = 0, headerLength = c.headerList.length; j < headerLength; j++) {
                         if (c.headerList[j].column === index) {
                             var o = c.headerList[j];
-                            o.count = sortDirection;
+                            o.count = ++sortDirection;
                         }
                     }
                 }
@@ -604,7 +606,7 @@
                         for (var j = 0, headerLength = c.headerList.length; j < headerLength; j++) {
                             if (c.headerList[j].column === index) {
                                 var o = c.headerList[j];
-                                o.count = 0;
+                                o.count = formatSortingOrder(table.config.sortInitialOrder);
                             }
                         }
                     }
@@ -762,7 +764,7 @@
                             // get current column index
                             var i = this.column;
                             // get current column sort order
-                            this.order = ++this.count % 2;
+                            this.order = this.count++ % 2;
 
                             // always sort on the locked order.
                             if (this.lockedOrder) this.order = this.lockedOrder;
