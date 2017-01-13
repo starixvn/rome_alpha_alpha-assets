@@ -170,4 +170,199 @@
             testGetDateRangeOfCurrentMonth(new Date(2017, 0, 12), [new Date(2017, 0, 1), new Date(2017, 0, 12)]);
         });
     });
+    describe("getDateRangeOfLastMonth", function () {
+        function testGetDateRangeOfLastMonth(today, expectedDateRangeOfLastMonth) {
+            // act
+            var actualDateRangeOfLastMonth = NexDatePickerHelper.getDateRangeOfLastMonth(today);
+
+            // assert
+            compareDate(actualDateRangeOfLastMonth[0], expectedDateRangeOfLastMonth[0]);
+            compareDate(actualDateRangeOfLastMonth[1], expectedDateRangeOfLastMonth[1]);
+        }
+
+        it("Januray -> Returns [Dec of Last Year]", function () {
+            testGetDateRangeOfLastMonth(new Date(2017, 0, 1), [new Date(2016, 11, 1), new Date(2016, 11, 31)]);
+        });
+        it("Feb to Dec -> Returns [Last Month]", function () {
+            testGetDateRangeOfLastMonth(new Date(2017, 1, 1), [new Date(2017, 0, 1), new Date(2017, 0, 31)]);
+            testGetDateRangeOfLastMonth(new Date(2017, 2, 1), [new Date(2017, 1, 1), new Date(2017, 1, 28)]);
+            testGetDateRangeOfLastMonth(new Date(2017, 10, 1), [new Date(2017, 9, 1), new Date(2017, 9, 31)]);
+            testGetDateRangeOfLastMonth(new Date(2017, 11, 1), [new Date(2017, 10, 1), new Date(2017, 10, 30)]);
+        });
+    });
+    describe("getTotalDayOfMonth", function () {
+        function testGetTotalDayOfMonth(month, year, expectedTotalDayOfMonth) {
+            // act
+            var actualTotalDayOfMonth = NexDatePickerHelper.getTotalDayOfMonth(month, year);
+
+            // assert
+            expect(actualTotalDayOfMonth).toBe(expectedTotalDayOfMonth);
+        }
+
+        it("Not Feb -> Returns correct Total Day Of Month (30/31)", function () {
+            testGetTotalDayOfMonth(1, 2017, 31);
+            testGetTotalDayOfMonth(3, 2017, 31);
+            testGetTotalDayOfMonth(5, 2017, 31);
+            testGetTotalDayOfMonth(7, 2017, 31);
+            testGetTotalDayOfMonth(8, 2017, 31);
+            testGetTotalDayOfMonth(10, 2017, 31);
+            testGetTotalDayOfMonth(12, 2017, 31);
+
+            testGetTotalDayOfMonth(4, 2017, 30);
+            testGetTotalDayOfMonth(6, 2017, 30);
+            testGetTotalDayOfMonth(9, 2017, 30);
+            testGetTotalDayOfMonth(11, 2017, 30);
+        });
+        it("Feb of Non-Leap Year -> Returns 28", function () {
+            testGetTotalDayOfMonth(2, 2017, 28);
+            testGetTotalDayOfMonth(2, 2100, 28);
+        });
+        it("Feb of Leap Year -> Returns 29", function () {
+            testGetTotalDayOfMonth(2, 2016, 29);
+            testGetTotalDayOfMonth(2, 2400, 29);
+        });
+    });
+    describe("correctDateInRange", function () {
+        it("Not set min Date/Not set Max Date -> Returns input date", function () {
+            // arrange
+            var inputDate = new Date(2017, 0, 13);
+            var minDate = undefined;
+            var maxDate = undefined;
+
+            // act
+            var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
+
+            // assert
+            compareDate(actualDate, inputDate);
+        });
+
+        it("Not set min Date/Input Date less than Max Date -> Returns input date", function () {
+            // arrange
+            var inputDate = new Date(2017, 0, 13);
+            var minDate = undefined;
+            var maxDate = new Date(2017, 0, 14);
+
+            // act
+            var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
+
+            // assert
+            compareDate(actualDate, inputDate);
+        });
+        it("Not set min Date/Input Date greater than Max Date -> Returns max date", function () {
+            // arrange
+            var inputDate = new Date(2017, 0, 13);
+            var minDate = undefined;
+            var maxDate = new Date(2017, 0, 12);
+
+            // act
+            var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
+
+            // assert
+            compareDate(actualDate, maxDate);
+        });
+
+        it("Not set max Date/Input Date less than Min Date -> Returns min date", function () {
+            // arrange
+            var inputDate = new Date(2017, 0, 13);
+            var minDate = new Date(2017, 0, 14);
+            var maxDate = undefined;
+
+            // act
+            var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
+
+            // assert
+            compareDate(actualDate, minDate);
+        });
+        it("Not set max Date/Input Date greater than Min Date -> Returns input date", function () {
+            // arrange
+            var inputDate = new Date(2017, 0, 13);
+            var minDate = new Date(2017, 0, 12);
+            var maxDate = undefined;
+
+            // act
+            var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
+
+            // assert
+            compareDate(actualDate, inputDate);
+        });
+
+        it("Set min/max Date; input Date less than min date -> Returns min date", function () {
+            // arrange
+            var inputDate = new Date(2017, 0, 13);
+            var minDate = new Date(2017, 0, 14);
+            var maxDate = new Date(2017, 0, 14);
+
+            // act
+            var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
+
+            // assert
+            compareDate(actualDate, minDate);
+        });
+        it("Set min/max Date; min date <= input date <= max date -> Returns input date", function () {
+            // arrange
+            var inputDate = new Date(2017, 0, 13);
+            var minDate = new Date(2017, 0, 12);
+            var maxDate = new Date(2017, 0, 14);
+
+            // act
+            var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
+
+            // assert
+            compareDate(actualDate, inputDate);
+        });
+        it("Set min/max Date; max date < input date -> Returns max date", function () {
+            // arrange
+            var inputDate = new Date(2017, 0, 15);
+            var minDate = new Date(2017, 0, 12);
+            var maxDate = new Date(2017, 0, 14);
+
+            // act
+            var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
+
+            // assert
+            compareDate(actualDate, maxDate);
+        });
+    });
+    describe("isLeapYear", function () {
+        it("year%400=0 -> Returns true", function () {
+            // arrange
+            var year = 2000;
+
+            // act
+            var isLeapYear = NexDatePickerHelper.isLeapYear(year);
+
+            // assert
+            expect(isLeapYear).toBeTruthy();
+        });
+        it("year%400!=0 && year%100==0 -> Returns false", function () {
+            // arrange
+            var year = 2100;
+
+            // act
+            var isLeapYear = NexDatePickerHelper.isLeapYear(year);
+
+            // assert
+            expect(isLeapYear).toBeFalsy();
+        });
+        it("year%100!=0 && year%4==0 -> Returns true", function () {
+            // arrange
+            var year = 2016;
+
+            // act
+            var isLeapYear = NexDatePickerHelper.isLeapYear(year);
+
+            // assert
+            expect(isLeapYear).toBeTruthy();
+        });
+        it("year%4!=0 -> Returns false", function () {
+            // arrange
+            var year = 2017;
+
+            // act
+            var isLeapYear = NexDatePickerHelper.isLeapYear(year);
+
+            // assert
+            expect(isLeapYear).toBeFalsy();
+        });
+    });
 });
