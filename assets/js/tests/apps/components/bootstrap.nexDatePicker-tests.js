@@ -1,8 +1,4 @@
 ﻿describe("NexDatePickerHelper_", function () {
-    function compareDate(actualDate, expectedDate) {
-        expect(NexDatePickerHelper.getShortDateString(actualDate)).toBe(NexDatePickerHelper.getShortDateString(expectedDate));
-    }
-
     describe("getShortDateString", function () {
         it("Day Less Than 10 -> Returns Correct String", function () {
             // arrange
@@ -92,8 +88,8 @@
             var actualDateRangeOfCurrentWeek = NexDatePickerHelper.getDateRangeOfCurrentWeek(today);
 
             // assert
-            compareDate(actualDateRangeOfCurrentWeek[0], expectedDateRangeOfCurrentWeek[0]);
-            compareDate(actualDateRangeOfCurrentWeek[1], expectedDateRangeOfCurrentWeek[1]);
+            expect(actualDateRangeOfCurrentWeek[0]).toEqual(expectedDateRangeOfCurrentWeek[0]);
+            expect(actualDateRangeOfCurrentWeek[1]).toEqual(expectedDateRangeOfCurrentWeek[1]);
         }
 
         it("Sunday -> Returns [Last Monday -> Current Date]", function () {
@@ -124,8 +120,8 @@
             var actualDateRangeOfLastWeek = NexDatePickerHelper.getDateRangeOfLastWeek(today);
 
             // assert
-            compareDate(actualDateRangeOfLastWeek[0], expectedDateRangeOfLastWeek[0]);
-            compareDate(actualDateRangeOfLastWeek[1], expectedDateRangeOfLastWeek[1]);
+            expect(actualDateRangeOfLastWeek[0]).toEqual(expectedDateRangeOfLastWeek[0]);
+            expect(actualDateRangeOfLastWeek[1]).toEqual(expectedDateRangeOfLastWeek[1]);
         }
 
         it("Sunday -> Returns [Monday of two weeks ago -> Last Sunday]", function () {
@@ -156,8 +152,8 @@
             var actualDateRangeOfCurrentMonth = NexDatePickerHelper.getDateRangeOfCurrentMonth(today);
 
             // assert
-            compareDate(actualDateRangeOfCurrentMonth[0], expectedDateRangeOfCurrentMonth[0]);
-            compareDate(actualDateRangeOfCurrentMonth[1], expectedDateRangeOfCurrentMonth[1]);
+            expect(actualDateRangeOfCurrentMonth[0]).toEqual(expectedDateRangeOfCurrentMonth[0]);
+            expect(actualDateRangeOfCurrentMonth[1]).toEqual(expectedDateRangeOfCurrentMonth[1]);
         }
 
         it("Start Month -> Returns [Start Month -> Today]", function () {
@@ -176,8 +172,8 @@
             var actualDateRangeOfLastMonth = NexDatePickerHelper.getDateRangeOfLastMonth(today);
 
             // assert
-            compareDate(actualDateRangeOfLastMonth[0], expectedDateRangeOfLastMonth[0]);
-            compareDate(actualDateRangeOfLastMonth[1], expectedDateRangeOfLastMonth[1]);
+            expect(actualDateRangeOfLastMonth[0]).toEqual(expectedDateRangeOfLastMonth[0]);
+            expect(actualDateRangeOfLastMonth[1]).toEqual(expectedDateRangeOfLastMonth[1]);
         }
 
         it("Januray -> Returns [Dec of Last Year]", function () {
@@ -233,7 +229,7 @@
             var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
 
             // assert
-            compareDate(actualDate, inputDate);
+            expect(actualDate).toEqual(inputDate);
         });
 
         it("Not set min Date/Input Date less than Max Date -> Returns input date", function () {
@@ -246,7 +242,7 @@
             var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
 
             // assert
-            compareDate(actualDate, inputDate);
+            expect(actualDate).toEqual(inputDate);
         });
         it("Not set min Date/Input Date greater than Max Date -> Returns max date", function () {
             // arrange
@@ -258,7 +254,7 @@
             var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
 
             // assert
-            compareDate(actualDate, maxDate);
+            expect(actualDate).toEqual(maxDate);
         });
 
         it("Not set max Date/Input Date less than Min Date -> Returns min date", function () {
@@ -271,7 +267,7 @@
             var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
 
             // assert
-            compareDate(actualDate, minDate);
+            expect(actualDate).toEqual(minDate);
         });
         it("Not set max Date/Input Date greater than Min Date -> Returns input date", function () {
             // arrange
@@ -283,7 +279,7 @@
             var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
 
             // assert
-            compareDate(actualDate, inputDate);
+            expect(actualDate).toEqual(inputDate);
         });
 
         it("Set min/max Date; input Date less than min date -> Returns min date", function () {
@@ -296,7 +292,7 @@
             var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
 
             // assert
-            compareDate(actualDate, minDate);
+            expect(actualDate).toEqual(minDate);
         });
         it("Set min/max Date; min date <= input date <= max date -> Returns input date", function () {
             // arrange
@@ -308,7 +304,7 @@
             var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
 
             // assert
-            compareDate(actualDate, inputDate);
+            expect(actualDate).toEqual(inputDate);
         });
         it("Set min/max Date; max date < input date -> Returns max date", function () {
             // arrange
@@ -320,7 +316,7 @@
             var actualDate = NexDatePickerHelper.correctDateInRange(inputDate, minDate, maxDate);
 
             // assert
-            compareDate(actualDate, maxDate);
+            expect(actualDate).toEqual(maxDate);
         });
     });
     describe("isLeapYear", function () {
