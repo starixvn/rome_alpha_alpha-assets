@@ -156,6 +156,8 @@ var NexDatePickerHelper = NexDatePickerHelper ||
         subDatePickerStyle: "",
         onSelectDatePicker: function () {
         },
+        onQuickChooseChange: function () {
+        },
         minDate: null
     };
 
@@ -260,12 +262,12 @@ var NexDatePickerHelper = NexDatePickerHelper ||
             var options = this.Options;
             if (options.nexDatePickerType !== "single") {
                 me.$select.parent().on("change", "#dropdown-daterange", function () {
-                    var selectValue = $(this).val();
+                    var selectValue = parseInt($(this).val());
                     var dt = new Date(me.CurrentDate);
                     var fDate = new Date(me.CurrentDate);
                     var tDate = new Date(me.CurrentDate);
                     var dateRange = [fDate, tDate];
-                    switch (parseInt(selectValue)) {
+                    switch (selectValue) {
                         case 0:
                             dateRange = [dt, dt];
                             break;
@@ -317,6 +319,8 @@ var NexDatePickerHelper = NexDatePickerHelper ||
 
                     $(this).val(selectValue);
                     me.$dropDownList.multiselect('refresh');
+
+                    me.Options.onQuickChooseChange(selectValue);
                 });
             }
         }
