@@ -1,4 +1,6 @@
-﻿/* File Created: November 14, 2012 */
+﻿@import "../abstracts/variables";
+
+/* File Created: November 14, 2012 */
 .ui_nexdatepicker {
     float: left;
     width: 100%;
@@ -17,16 +19,21 @@
     padding: 5px 6px 5px 0px;
 
     &.separator {
-        margin-right: 12px;
+        margin-right: 6px;
     }
 }
 
 .ui_nexdatepicker_edit_field {
     float: left;
     margin: 0 16px 0 0;
+}
 
-    &.todate {
-        margin-right: 0;
+.daterange-container {
+    margin-right: 0px;
+
+    .btn-submit, .dropdown-menu {
+        width: 140px;
+        text-align: left;
     }
 }
 
@@ -36,4 +43,10 @@
 
 .input-group.date .input-group-addon {
     padding-right: 0;
+}
+
+.daterange-picker {
+    .btn-submit[type=submit] {
+        margin-right: 16px;
+    }
 }

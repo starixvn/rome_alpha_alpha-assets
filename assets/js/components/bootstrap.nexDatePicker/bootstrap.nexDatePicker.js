@@ -188,6 +188,8 @@ var NexDatePickerHelper = NexDatePickerHelper ||
             me.$dropDownList = this.$select.find("#dropdown-daterange");
             me.$firstDatePicker = this.$select.find("#from-date-container");
             me.$secondDatePicker = this.$select.find("#to-date-container");
+            me.$userRangeLavel = me.$dropDownList.find("#range-label");
+            me.$userRangeOptionHidden = me.$dropDownList.find("#hidden-range-option");
 
             //// Format Date Picker
             me.FormatDatePicker();
@@ -196,7 +198,7 @@ var NexDatePickerHelper = NexDatePickerHelper ||
             me.AddEvent();
 
             //// Trigger Dropdownlist Event
-            me.$dropDownList.trigger("change");
+            //me.$dropDownList.trigger("change");
 
             //$("#" + options.dropDownList.Id).val(options.selectedItem);
         },
@@ -226,10 +228,11 @@ var NexDatePickerHelper = NexDatePickerHelper ||
                 }
             }).on('dp.change', function (date) {
                 if (date.date.format('YYYY MM DD') !== date.oldDate.format('YYYY MM DD')) {
-                    me.$dropDownList.find("option").prop("selected", false);
-                    me.$dropDownList.find("option[value='7']").prop("selected", true);
-                    me.$dropDownList.multiselect('refresh');
+                    var specificDateOption = me.$dropDownList.find("a.range-option[data-value='7']");
+                    me.$userRangeLavel.html(specificDateOption.html());
+                    me.$userRangeOptionHidden.val(specificDateOption.attr("data-value"));
                 }
+
                 options.onSelectDatePicker(date);
             });
 
@@ -261,8 +264,10 @@ var NexDatePickerHelper = NexDatePickerHelper ||
             var me = this;
             var options = this.Options;
             if (options.nexDatePickerType !== "single") {
-                me.$select.parent().on("change", "#dropdown-daterange", function () {
-                    var selectValue = parseInt($(this).val());
+                me.$dropDownList.find(".dropdown-menu").on("click", "a.range-option", function (e) {
+                    e.preventDefault();
+                    var $this = $(this);
+                    var selectValue = parseInt($this.attr("data-value"));
                     var dt = new Date(me.CurrentDate);
                     var fDate = new Date(me.CurrentDate);
                     var tDate = new Date(me.CurrentDate);
@@ -317,8 +322,8 @@ var NexDatePickerHelper = NexDatePickerHelper ||
                     me.CheckSetMinDate();
                     me.CheckSetMaxDate();
 
-                    $(this).val(selectValue);
-                    me.$dropDownList.multiselect('refresh');
+                    me.$userRangeOptionHidden.val(selectValue);
+                    me.$userRangeLavel.html($this.html());
 
                     me.Options.onQuickChooseChange(selectValue);
                 });
