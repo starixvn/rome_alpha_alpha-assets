@@ -185,9 +185,10 @@ var NexDatePickerHelper = NexDatePickerHelper ||
             var me = this;
             var options = this.Options;
             //// Start render and Save Element Object
-            me.$dropDownList = this.$select.find("#dropdown-daterange");
-            me.$firstDatePicker = this.$select.find("#from-date-container");
-            me.$secondDatePicker = this.$select.find("#to-date-container");
+            me.$parent = me.$select.parent();
+            me.$dropDownList = me.$parent.find("#dropdown-daterange");
+            me.$firstDatePicker = me.$parent.find("#from-date-container");
+            me.$secondDatePicker = me.$parent.find("#to-date-container");
             me.$userRangeLavel = me.$dropDownList.find("#range-label");
             me.$userRangeOptionHidden = me.$dropDownList.find("#hidden-range-option");
 
@@ -212,7 +213,7 @@ var NexDatePickerHelper = NexDatePickerHelper ||
             else {
                 ids += "#from-date-container, #to-date-container";
             }
-            this.$datePickers = this.$select.find(ids);
+            this.$datePickers = me.$parent.find(ids);
 
             moment.locale('en', {
                 week: { dow: 1 } // Monday is the first day of the week

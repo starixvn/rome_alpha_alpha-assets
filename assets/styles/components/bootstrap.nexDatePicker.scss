@@ -1,52 +1,9 @@
 ﻿@import "../abstracts/variables";
 
-/* File Created: November 14, 2012 */
-.ui_nexdatepicker {
-    float: left;
-    width: 100%;
-}
-
-.ui_nexdatepicker_datetextbox {
-    cursor: pointer;
-    padding: 2px 6px;
-    width: 90px !important;
-}
-
-.ui_nexdatepicker_lbl_field {
-    float: left;
-    text-align: right;
-    margin: 0;
-    padding: 5px 6px 5px 0px;
-
-    &.separator {
-        margin-right: 6px;
-    }
-}
-
-.ui_nexdatepicker_edit_field {
-    float: left;
-    margin: 0 16px 0 0;
-}
-
-.daterange-container {
-    margin-right: 0px;
-
-    .btn-submit, .dropdown-menu {
-        width: 140px;
-        text-align: left;
-    }
-}
-
-.ui_nexdatepicker_edit_field select {
-    cursor: pointer;
-}
-
 .input-group.date .input-group-addon {
     padding-right: 0;
 }
 
 .daterange-picker {
-    .btn-submit[type=submit] {
-        margin-right: 16px;
-    }
+    display: none;
 }
