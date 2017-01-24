@@ -889,7 +889,7 @@
                 widgets.push(widget);
             };
             this.formatFloat = function (s) {
-                var i = parseFloat(s.replace(",", ""));
+                var i = parseFloat(s.replace(/,/g, ""));
                 return (isNaN(i)) ? 0 : i;
             };
             this.formatInt = function (s) {
