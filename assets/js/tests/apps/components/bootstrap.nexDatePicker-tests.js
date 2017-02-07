@@ -1,4 +1,6 @@
-﻿describe("NexDatePickerHelper_", function () {
+﻿/// <reference path="../../../components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js" />
+
+describe("NexDatePickerHelper_", function () {
     describe("getShortDateString", function () {
         it("Day Less Than 10 -> Returns Correct String", function () {
             // arrange
@@ -218,6 +220,7 @@
             testGetTotalDayOfMonth(2, 2400, 29);
         });
     });
+
     describe("correctDateInRange", function () {
         it("Not set min Date/Not set Max Date -> Returns input date", function () {
             // arrange
@@ -319,6 +322,7 @@
             expect(actualDate).toEqual(maxDate);
         });
     });
+
     describe("isLeapYear", function () {
         it("year%400=0 -> Returns true", function () {
             // arrange
@@ -359,6 +363,294 @@
 
             // assert
             expect(isLeapYear).toBeFalsy();
+        });
+    });
+
+    describe("isAfterFromDateOfDateRange", function () {
+        it("date is after today, range option is today => return true", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 13);
+            var date = new Date(2017, 1, 14);
+            var optionValue = NexDatePickerHelper.rangeOption.today;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeTruthy();
+        });
+
+        it("date is today, range option is today => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 13);
+            var date = new Date(2017, 1, 13);
+            var optionValue = NexDatePickerHelper.rangeOption.today;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is before today, range option is today => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 13);
+            var date = new Date(2017, 1, 11);
+            var optionValue = NexDatePickerHelper.rangeOption.yesterday;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is before yesterday, range option is yesterday => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 13);
+            var date = new Date(2017, 1, 5);
+            var optionValue = NexDatePickerHelper.rangeOption.yesterday;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is yesterday, range option is yesterday => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 13);
+            var date = new Date(2017, 1, 12);
+            var optionValue = NexDatePickerHelper.rangeOption.yesterday;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is after yesterday, range option is yesterday => return true", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 13);
+            var date = new Date(2017, 1, 13);
+            var optionValue = NexDatePickerHelper.rangeOption.yesterday;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeTruthy();
+        });
+
+        it("date is before this week, range option is this week => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 12);
+            var optionValue = NexDatePickerHelper.rangeOption.thisWeek;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is this week, range option is this week => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 13);
+            var optionValue = NexDatePickerHelper.rangeOption.thisWeek;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is after this week, range option is this week => return true", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 14);
+            var optionValue = NexDatePickerHelper.rangeOption.thisWeek;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeTruthy();
+        });
+
+        it("date is before last week, range option is last week => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 1);
+            var optionValue = NexDatePickerHelper.rangeOption.lastWeek;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is last week, range option is last week => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 6);
+            var optionValue = NexDatePickerHelper.rangeOption.lastWeek;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is after last week, range option is last week => return true", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 14);
+            var optionValue = NexDatePickerHelper.rangeOption.lastWeek;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeTruthy();
+        });
+
+        it("date is before this month, range option is this month => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 0, 1);
+            var optionValue = NexDatePickerHelper.rangeOption.thisMonth;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is start of this month, range option is this month => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 1);
+            var optionValue = NexDatePickerHelper.rangeOption.thisMonth;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is after this month, range option is this month => return true", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 15);
+            var optionValue = NexDatePickerHelper.rangeOption.thisMonth;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeTruthy();
+        });
+
+        it("date is before last month, range option is last month => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2016, 11, 1);
+            var optionValue = NexDatePickerHelper.rangeOption.lastMonth;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is start of last month, range option is last month => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 0, 1);
+            var optionValue = NexDatePickerHelper.rangeOption.lastMonth;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is after last month, range option is last month => return true", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 2);
+            var optionValue = NexDatePickerHelper.rangeOption.lastMonth;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeTruthy();
+        });
+
+        it("date is before since last month, range option is since last month => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2016, 11, 1);
+            var optionValue = NexDatePickerHelper.rangeOption.lastMonth;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is start of since last month, range option is since last month => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 0, 1);
+            var optionValue = NexDatePickerHelper.rangeOption.lastMonth;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
+        });
+
+        it("date is after since last month, range option is since last month => return true", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 2);
+            var optionValue = NexDatePickerHelper.rangeOption.lastMonth;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeTruthy();
+        });
+
+        it("date is before today, range option is specific date => return false", function () {
+            // arrange
+            var currentDate = new Date(2017, 1, 15);
+            var date = new Date(2017, 1, 10);
+            var optionValue = NexDatePickerHelper.rangeOption.specificDate;
+
+            // act
+            var isAfter = NexDatePickerHelper.isAfterFromDateOfDateRange(date, currentDate, optionValue);
+
+            // assert
+            expect(isAfter).toBeFalsy();
         });
     });
 });

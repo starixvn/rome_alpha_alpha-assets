@@ -96,7 +96,6 @@ var NexDatePickerHelper = NexDatePickerHelper ||
 
         return inputDate;
     },
-
     isLeapYear: function (year) {
         return (year % 4 === 0 && year % 100 !== 0) || year % 400 === 0;
     },
@@ -107,6 +106,58 @@ var NexDatePickerHelper = NexDatePickerHelper ||
         return day === 0                    // Sun:0: default of system
             ? date.getDate() - 6            // Sunday<-Mon: 6
             : date.getDate() - day + 1;     // other days<-Mon: date.getDay() - 1
+    },
+    isAfterFromDateOfDateRange: function (date, currentDate, dateRangeOption) {
+        var currentDate = new Date(currentDate);
+        var dateRange = [currentDate, currentDate];
+        switch (dateRangeOption) {
+            case NexDatePickerHelper.rangeOption.today:
+                dateRange = [currentDate, currentDate];
+                break;
+
+            case NexDatePickerHelper.rangeOption.yesterday:
+                var yesterday = new Date(currentDate);
+                yesterday.setDate(currentDate.getDate() - 1);
+                dateRange = [yesterday, yesterday];
+                break;
+
+            case NexDatePickerHelper.rangeOption.thisWeek:
+                dateRange = NexDatePickerHelper.getDateRangeOfCurrentWeek(currentDate);
+                break;
+
+            case NexDatePickerHelper.rangeOption.lastWeek:
+                dateRange = NexDatePickerHelper.getDateRangeOfLastWeek(currentDate);
+                break;
+
+            case NexDatePickerHelper.rangeOption.thisMonth:
+                dateRange = NexDatePickerHelper.getDateRangeOfCurrentMonth(currentDate);
+                break;
+
+            case NexDatePickerHelper.rangeOption.lastMonth:
+                dateRange = NexDatePickerHelper.getDateRangeOfLastMonth(currentDate);
+                break;
+
+            case NexDatePickerHelper.rangeOption.sinceLastMonth:
+                var firstDayOfLastMonth = new Date(currentDate.getFullYear(), currentDate.getMonth() - 1, 1);
+                dateRange = [firstDayOfLastMonth, currentDate];
+                break;
+
+            default:
+                return false;
+        }
+
+        return date > dateRange[0];
+    },
+    rangeOption:
+    {
+        today: 0,
+        yesterday: 1,
+        thisWeek: 2,
+        lastWeek: 3,
+        thisMonth: 4,
+        lastMonth: 5,
+        sinceLastMonth: 6,
+        specificDate: 7
     }
 };
 
@@ -198,10 +249,7 @@ var NexDatePickerHelper = NexDatePickerHelper ||
             //// Add Event
             me.AddEvent();
 
-            //// Trigger Dropdownlist Event
-            //me.$dropDownList.trigger("change");
-
-            //$("#" + options.dropDownList.Id).val(options.selectedItem);
+            me.CorrectOptionWithMinDate();
         },
         FormatDatePicker: function () {
             var me = this;
@@ -274,29 +322,29 @@ var NexDatePickerHelper = NexDatePickerHelper ||
                     var tDate = new Date(me.CurrentDate);
                     var dateRange = [fDate, tDate];
                     switch (selectValue) {
-                        case 0:
+                        case NexDatePickerHelper.rangeOption.today:
                             dateRange = [dt, dt];
                             break;
-                        case 1:
+                        case NexDatePickerHelper.rangeOption.yesterday:
                             dateRange = [me.Yesterday, me.Yesterday];
                             break;
-                        case 2:
+                        case NexDatePickerHelper.rangeOption.thisWeek:
                             dateRange = NexDatePickerHelper.getDateRangeOfCurrentWeek(fDate);
                             break;
-                        case 3:
+                        case NexDatePickerHelper.rangeOption.lastWeek:
                             dateRange = NexDatePickerHelper.getDateRangeOfLastWeek(fDate);
                             break;
-                        case 4:
+                        case NexDatePickerHelper.rangeOption.thisMonth:
                             dateRange = NexDatePickerHelper.getDateRangeOfCurrentMonth(fDate);
                             break;
-                        case 5:
+                        case NexDatePickerHelper.rangeOption.lastMonth:
                             dateRange = NexDatePickerHelper.getDateRangeOfLastMonth(fDate);
                             break;
-                        case 6:
+                        case NexDatePickerHelper.rangeOption.sinceLastMonth:
                             fDate = new Date(dt.getFullYear(), dt.getMonth() - 1, 1);
                             dateRange = [fDate, dt];
                             break;
-                        case 7:
+                        case NexDatePickerHelper.rangeOption.specificDate:
                             fDate = me.$firstDatePicker.data("DateTimePicker").date();
                             tDate = me.$secondDatePicker.data("DateTimePicker").date();
                             dateRange = [fDate, tDate];
@@ -328,6 +376,21 @@ var NexDatePickerHelper = NexDatePickerHelper ||
 
                     me.Options.onQuickChooseChange(selectValue);
                 });
+            }
+        },
+        CorrectOptionWithMinDate: function () {
+            var me = this;
+            if (me.Options.minDate) {
+                me.$dropDownList.find(".dropdown-menu a.range-option").each(
+                    function (index, rangeOption) {
+                        var $rangeOption = $(rangeOption);
+
+                        var rangeOptionValue = parseInt($rangeOption.attr("data-value"));
+
+                        if (NexDatePickerHelper.isAfterFromDateOfDateRange(me.Options.minDate, me.Options.currentDate, rangeOptionValue)) {
+                            $rangeOption.remove();
+                        }
+                    });
             }
         }
     };
