@@ -252,6 +252,10 @@
                     }
                 }
                 else if (options.length > this.numberDisplayed) {
+                    if (this.language && this.language.toLowerCase() === "vi-vn") {
+                        return this.nSelectedText + " " + options.length;
+                    }
+
                     return options.length + ' ' + this.nSelectedText;
                 }
                 else {
@@ -400,6 +404,7 @@
             disableIfEmpty: false,
             disabledText: '',
             delimiterText: ', ',
+            language: "en-US",
             templates: {
                 button: '<button type="button" class="multiselect dropdown-toggle" data-toggle="dropdown"><span class="multiselect-selected-text"></span> <b class="caret"></b></button>',
                 ul: '<ul class="multiselect-container dropdown-menu"></ul>',

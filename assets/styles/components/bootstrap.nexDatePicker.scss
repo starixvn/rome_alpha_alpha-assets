@@ -1,39 +1,9 @@
-﻿/* File Created: November 14, 2012 */
-.ui_nexdatepicker {
-    float: left;
-    width: 100%;
-}
-
-.ui_nexdatepicker_datetextbox {
-    cursor: pointer;
-    padding: 2px 6px;
-    width: 90px !important;
-}
-
-.ui_nexdatepicker_lbl_field {
-    float: left;
-    text-align: right;
-    margin: 0;
-    padding: 5px 6px 5px 0px;
-
-    &.separator {
-        margin-right: 12px;
-    }
-}
-
-.ui_nexdatepicker_edit_field {
-    float: left;
-    margin: 0 16px 0 0;
-
-    &.todate {
-        margin-right: 0;
-    }
-}
-
-.ui_nexdatepicker_edit_field select {
-    cursor: pointer;
-}
+﻿@import "../abstracts/variables";
 
 .input-group.date .input-group-addon {
     padding-right: 0;
+}
+
+.daterange-picker {
+    display: none;
 }
