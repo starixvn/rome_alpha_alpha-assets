@@ -587,8 +587,8 @@
                                 $($checkboxesNotThis).closest('li').removeClass(this.options.selectedClass);
                             }
 
-                            $($checkboxesNotThis).prop('checked', false);
-                            $optionsNotThis.prop('selected', false);
+                            $($checkboxesNotThis).removeProp('selected');
+                            $optionsNotThis.removeProp('selected');
 
                             // It's a single selection, so close.
                             this.$button.click();
@@ -600,7 +600,7 @@
                     }
                     else {
                         // Unselect option.
-                        $option.prop('selected', false);
+                        $option.removeProp('selected');
                     }
 
                     // To prevent select all from firing onChange: #575
@@ -665,7 +665,11 @@
 
                             var $option = this.getOptionByValue($checkbox.val());
 
-                            $option.prop('selected', checked);
+                            if (checked) {
+                                $option.prop('selected', checked);
+                            } else {
+                                $option.removeProp('selected');
+                            }
                         }
                     }
 
@@ -1276,7 +1280,7 @@
                 }
 
                 $checkbox.prop('checked', false);
-                $option.prop('selected', false);
+                $option.removeProp('selected');
 
                 if (triggerOnChange) {
                     this.options.onChange($option, false);
@@ -1352,14 +1356,14 @@
 
                 $("option:enabled", this.$select).filter(function (index) {
                     return $.inArray($(this).val(), values) !== -1;
-                }).prop('selected', false);
+                }).removeProp('selected');
 
                 if (this.options.selectedClass) {
                     $("li:not(.divider):not(.disabled)", this.$ul).filter(":visible").removeClass(this.options.selectedClass);
                 }
             }
             else {
-                $("li input[type='checkbox']:enabled", this.$ul).prop('checked', false);
+                $("li input[type='checkbox']:enabled", this.$ul).removeProp('selected');
                 $("option:enabled", this.$select).prop('selected', false);
 
                 if (this.options.selectedClass) {
