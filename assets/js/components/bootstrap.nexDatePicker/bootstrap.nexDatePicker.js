@@ -282,6 +282,12 @@ var NexDatePickerHelper = NexDatePickerHelper ||
                     me.$userRangeOptionHidden.val(specificDateOption.attr("data-value"));
                 }
 
+                if (this.id === "from-date-container") {
+                    me.$secondDatePicker.data("DateTimePicker").minDate((new Date(me.$firstDatePicker.find("input").val())).toISOString());
+                } else {
+                    me.$firstDatePicker.data("DateTimePicker").maxDate((new Date(me.$secondDatePicker.find("input").val())).toISOString());
+                }
+
                 options.onSelectDatePicker(date);
             });
 
