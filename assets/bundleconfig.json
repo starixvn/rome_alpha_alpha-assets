@@ -463,7 +463,8 @@
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect.css",
       "styles/components/pagination.css",
-      "styles/components/tablesorter.css"
+      "styles/components/tablesorter.css",
+      "styles/components/icon.css"
     ]
   },
   {

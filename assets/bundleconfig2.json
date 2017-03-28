@@ -86,7 +86,7 @@
   },
   {
     "outputFileName": "bundles/site-main/default.js",
-   "inputFiles": [
+    "inputFiles": [
       "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap-material/material.js",
@@ -453,7 +453,7 @@
     "outputFileName": "bundles/site-ng2/default.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors-extensions/site-ng2/bootstrap-ex.css",      
+      "styles/vendors-extensions/site-ng2/bootstrap-ex.css",
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
       "styles/components/breadcrumbs.css",
@@ -501,7 +501,8 @@
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect.css",
       "styles/components/pagination.css",
-      "styles/components/tablesorter.css"
+      "styles/components/tablesorter.css",
+      "styles/components/icon.css"
     ]
   },
   {

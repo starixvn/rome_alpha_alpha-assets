@@ -76,6 +76,15 @@
     }
 }
 
+.icon-information-outline {
+    @include ripple-effect-icon($margin-left: -6px, $margin-right: -4px, $height: 30px, $width: 30px, $top: -2px);    
+    display: inline-block;    
+    font-size: 18px;
+    vertical-align: middle;
+    color: #0b599c; 
+    cursor: pointer; 
+}
+
 .icon-logout, .setting > a, .icon-collapse, .icon-home, .icon-add, .icon-message {
     @include ripple-effect-icon($margin-left: 0, $margin-right: -4px, $height: 32px, $width: 32px, $top: 4px);
 }
