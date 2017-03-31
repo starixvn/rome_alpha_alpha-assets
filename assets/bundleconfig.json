@@ -487,6 +487,7 @@
       "js/components/multiselect/bootstrap-multiselect.js",
       "js/components/sticky-table-headers/jquery.stickytableheaders.js",
       "js/components/tablesorter/tablesorter.js",
+      "js/components/draggable/tiny-draggable.js",
       "js/components/storejs/store.js"
     ]
   },
@@ -498,7 +499,9 @@
       "styles/components/tables.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/vendors/jquery-easyui-1.5/easyui.css",
-      "styles/components/tablesorter.css"
+      "styles/components/tablesorter.css",
+      "styles/vendors/bootstrap-multiselect.css",
+      "styles/components/bootstrap-multiselect.css"
     ]
   },
   {
@@ -512,6 +515,7 @@
       "js/libs/jquery/jquery.cookie.js",
       "js/components/sticky-table-headers/jquery.stickytableheaders.js",
       "js/components/tablesorter/tablesorter.js",
+      "js/components/multiselect/bootstrap-multiselect.js",
       "js/components/storejs/store.js"
     ]
   }

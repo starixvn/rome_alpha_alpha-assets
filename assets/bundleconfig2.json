@@ -525,6 +525,35 @@
       "js/components/multiselect/bootstrap-multiselect.js",
       "js/components/sticky-table-headers/jquery.stickytableheaders.js",
       "js/components/tablesorter/tablesorter.js",
+      "js/components/draggable/tiny-draggable.js",
+      "js/components/storejs/store.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/default.css",
+    "inputFiles": [
+      "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/components/tablesorter.css",
+      "styles/vendors/bootstrap-multiselect.css",
+      "styles/components/bootstrap-multiselect.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/default.js",
+    "inputFiles": [
+      "js/libs/bootstrap/transition.js",
+      "js/libs/bootstrap/collapse.js",
+      "js/components/pagination/jquery.draggable.js",
+      "js/components/pagination/jquery.resizable.js",
+      "js/components/bootbox/bootbox.js",
+      "js/libs/jquery/jquery.cookie.js",
+      "js/components/sticky-table-headers/jquery.stickytableheaders.js",
+      "js/components/tablesorter/tablesorter.js",
+      "js/components/multiselect/bootstrap-multiselect.js",
       "js/components/storejs/store.js"
     ]
   }
