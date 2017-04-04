@@ -539,7 +539,8 @@
       "styles/vendors/jquery-easyui-1.5/easyui.css",
       "styles/components/tablesorter.css",
       "styles/vendors/bootstrap-multiselect.css",
-      "styles/components/bootstrap-multiselect.css"
+      "styles/components/bootstrap-multiselect.css",
+      "styles/components/icon.css"
     ]
   },
   {
