@@ -889,7 +889,7 @@
                 widgets.push(widget);
             };
             this.formatFloat = function (s) {
-                var i = parseFloat(s.replace(/,/g, ""));
+                var i = typeof s === 'number' ? s : parseFloat(s.replace(/,/g, ""));
                 return (isNaN(i)) ? 0 : i;
             };
             this.formatInt = function (s) {
@@ -1013,6 +1013,17 @@
     });
 
     ts.addParser({
+        id: "shortMonth",
+        is: function (s) {
+            return /\d{1,2}[\/\-]\d{2,4}/.test(s);
+        }, format: function (s, table) {
+            var c = table.config;
+            s = s.replace(/\-/g, "/").replace(/(\d{1,2})[\/\-](\d{2})/, "$1/01/$2");
+            return $.tablesorter.formatFloat(new Date(s).getTime());
+        }, type: "numeric"
+    });
+
+    ts.addParser({
         id: "shortDate",
         is: function (s) {
             return /\d{1,2}[\/\-]\d{1,2}[\/\-]\d{2,4}/.test(s);
@@ -1027,10 +1038,13 @@
                 s = s.replace(/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{4})/, "$3/$2/$1");
             } else if (c.dateFormat === "dd/mm/yy" || c.dateFormat === "dd-mm-yy") {
                 s = s.replace(/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2})/, "$1/$2/$3");
+            } else if (c.dateFormat === "mm/yy") {
+                s = s.replace(/(\d{1,2})[\/\-](\d{1,2})[\/\-](\d{2})/, "$1/01/$3");
             }
             return $.tablesorter.formatFloat(new Date(s).getTime());
         }, type: "numeric"
     });
+
     ts.addParser({
         id: "time",
         is: function (s) {
