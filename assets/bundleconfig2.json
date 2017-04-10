@@ -15,7 +15,8 @@
       "styles/components/form.css",
       "styles/components/textboxes.css",
       "styles/components/modals.css",
-      "styles/components/tabs.css"
+      "styles/components/tabs.css",
+      "styles/components/icon.css"
     ]
   },
   {
@@ -24,7 +25,6 @@
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
-      "styles/components/icon.css",
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
@@ -39,7 +39,6 @@
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
-      "styles/components/icon.css",
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
@@ -54,7 +53,6 @@
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
       "styles/vendors/jquery.mCustomScrollbar.css",
-      "styles/components/icon.css",
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
@@ -109,7 +107,6 @@
       "styles/vendors/select2.css",
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
-      "styles/components/icon.css",
       "styles/components/modals.css",
       "styles/components/tabs.css",
       "styles/components/buttons.css",
@@ -138,7 +135,6 @@
       "styles/vendors/select2.css",
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
-      "styles/components/icon.css",
       "styles/components/blockui.css",
       "styles/components/tables.css",
       "styles/components/tabs.css",
@@ -457,7 +453,6 @@
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
       "styles/components/breadcrumbs.css",
-      "styles/components/icon.css",
       "styles/components/blockui.css",
       "styles/components/tables.css",
       "styles/components/tabs.css",
@@ -501,8 +496,7 @@
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect.css",
       "styles/components/pagination.css",
-      "styles/components/tablesorter.css",
-      "styles/components/icon.css"
+      "styles/components/tablesorter.css"
     ]
   },
   {
@@ -539,8 +533,7 @@
       "styles/vendors/jquery-easyui-1.5/easyui.css",
       "styles/components/tablesorter.css",
       "styles/vendors/bootstrap-multiselect.css",
-      "styles/components/bootstrap-multiselect.css",
-      "styles/components/icon.css"
+      "styles/components/bootstrap-multiselect.css"
     ]
   },
   {
