@@ -7,9 +7,9 @@
     position: absolute !important;
 }
 
-#page-popup, .modal {    
+#page-popup, .modal {
     height: auto;
-    @include effect-special;    
+    @include effect-special;
 }
 
 #modal-draggable-mask {
@@ -29,8 +29,8 @@
     }
 }
 
-.modal-content {    
-    border-color: $border-color;    
+.modal-content {
+    border-color: $border-color;
     margin: auto;
     height: 100%;
     @include border-radius(1px);
@@ -48,6 +48,7 @@
             width: 60px;
             height: 30px;
             left: 10px;
+
             &:before {
                 position: relative;
                 left: 13px;
@@ -60,7 +61,7 @@
             font-weight: 700;
             padding: 10px 0;
             font-size: 13px;
-            cursor:move;
+            cursor: move;
             font-size: 13px;
 
             .popup-title:empty {
@@ -92,6 +93,12 @@
         button:last-child {
             margin-right: 0;
         }
+    }
+}
+
+@media only screen and (max-device-width : $screen-device-lower768) {
+    .popup-guidelines {
+        width: 95% !important;
     }
 }
 
