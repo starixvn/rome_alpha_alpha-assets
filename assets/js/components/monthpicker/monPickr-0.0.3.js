@@ -4,7 +4,7 @@
 *
 * Examples and documentation at: http://update.later
 *
-* Copyright (c) 2012 
+* Copyright (c) 2012
 *
 * Version: 0.0.3 (2 Mar 2012)
 * Requires: jQuery v1.7+
@@ -51,7 +51,7 @@
         logger = { log: function () { } },
 
     /*
-    * Private methods 
+    * Private methods
     */
 
         isInteger = function (value, writeLogToConsole) {
@@ -160,6 +160,11 @@
 
                 data.ddlFromDate.dropDown.find('li').each(limitDayRange);
                 data.ddlToDate.dropDown.find('li').each(limitDayRange);
+            }
+
+            if (!data.showDateRange) {
+                data.fromDate = new Date(data.year, data.month, 1);
+                data.toDate = new Date(data.year, data.month, 1);
             }
 
             _checkReachBound(data, year, month);
@@ -366,7 +371,6 @@
             //#endregion VALIDATES INPUT VALUES
 
             return this.each(function () {
-
                 var $this = $(this),
                     data = $this.data('monPickr');
 
@@ -448,7 +452,6 @@
                 dropDownInner = '<ul class="ui-widget-content">';
 
                 if (data.sortDesc) {
-
                     currentYear = data.maxDate.getFullYear();
                     currentMonth = data.maxDate.getMonth();
 
@@ -488,9 +491,7 @@
                         currentYear--;
                         currentMonth = 11;
                     }
-
                 } else {
-
                     while (currentYear < maxYear || (currentYear == maxYear && currentMonth <= maxMonth)) {
                         temp = currentYear == data.year ? 'selected' : '';
                         temp += data.expandYearOnhover ? ' hover' : '';
@@ -527,7 +528,6 @@
                         currentYear++;
                         currentMonth = 0;
                     }
-
                 }
 
                 dropDownInner += '</ul>';
@@ -648,7 +648,6 @@
 
                 if (data.showDateRange) { // Renders date range component (fromDate & toDate)
                     var renderDayPicker = function (data, dayPickr, dayPickrId, selectedDay) {
-
                         dayPickr = $('#' + dayPickrId);
 
                         if (dayPickr.length > 0) {
@@ -701,7 +700,6 @@
                     }
 
                     if (data.fromDayId && data.toDayId) {
-
                         data.ddlFromDate = renderDayPicker(data, data.ddlFromDate, data.fromDayId, data.fromDay);
                         data.ddlToDate = renderDayPicker(data, data.ddlToDate, data.toDayId, data.toDay);
 
@@ -882,12 +880,11 @@
             if (!data) return;
 
             _selectMonth(data, data.originalYear, data.originalMonth);
-
         }
     };
 
     /*
-    * Public methods 
+    * Public methods
     */
 
     $.fn.monPickr = function (method) {
@@ -895,9 +892,8 @@
             return _methods[method].apply(this, Array.prototype.slice.call(arguments, 1));
         } else if (typeof method === 'object' || !method) { // call init method
             return _methods.init.apply(this, arguments);
-        } else { // 
+        } else { //
             logger.log('Oops! Method "' + method + '" does not exist on jQuery.monPickr');
         }
     };
-
 })(jQuery);
