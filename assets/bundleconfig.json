@@ -484,6 +484,7 @@
       "js/components/sticky-table-headers/jquery.stickytableheaders.js",
       "js/components/tablesorter/tablesorter.js",
       "js/components/draggable/tiny-draggable.js",
+      "js/components/chartjs/chart.js",
       "js/components/storejs/store.js"
     ]
   },
