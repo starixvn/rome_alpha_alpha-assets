@@ -524,6 +524,12 @@
     ]
   },
   {
+    "outputFileName": "bundles/site-reports/winloss-analysis-chart.js",
+    "inputFiles": [
+      "js/components/chartjs/chart.js"
+    ]
+  },
+  {
     "outputFileName": "bundles/site-memberinfo/default.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
