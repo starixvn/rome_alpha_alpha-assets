@@ -2,14 +2,17 @@
 @import "../abstracts/_mixins.scss";
 
 .filter {
-  padding-top: 15px;
-  position: relative; 
+    padding-top: 15px;
+    position: relative;
+
     .form-group {
         display: inline-block;
         margin: 0 16px 15px 0;
+        vertical-align: middle;
+
         label {
             font-weight: normal;
-            margin-right: 5px; 
+            margin-right: 5px;
             max-width: none;
         }
 
@@ -22,14 +25,14 @@
             &.date {
                 width: 130px;
             }
-            
+
             .form-control {
                 padding-top: 0;
                 padding-bottom: 0;
-            }            
-        }  
+            }
+        }
     }
-        
+
     [class^="col-"] {
         margin-bottom: 15px;
     }
@@ -49,7 +52,7 @@
 
 .form-validation {
     %alphaIcon {
-        font:{
+        font: {
             family: 'Iconalpha';
             style: normal;
         }
@@ -69,7 +72,7 @@
         }
 
         &.error {
-            ~ .validation:before {     
+            ~ .validation:before {
                 content: '\e92c';
                 color: $msg-error-color;
             }

@@ -16,7 +16,7 @@
       "styles/components/textboxes.css",
       "styles/components/modals.css",
       "styles/components/tabs.css",
-      "styles/components/icon.css" 
+      "styles/components/icon.css"
     ]
   },
   {
@@ -520,6 +520,40 @@
       "js/components/tablesorter/tablesorter.js",
       "js/components/multiselect/bootstrap-multiselect.js",
       "js/components/storejs/store.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/default.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/default.js",
+    "inputFiles": [
+      "js/libs/bootstrap/transition.js",
+      "js/libs/bootstrap/collapse.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/filter.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-multiselect.css",
+      "styles/components/bootstrap-multiselect.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars.css",
+      "styles/components/bootstrap.nexDatePicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/filter.js",
+    "inputFiles": [
+      "js/components/multiselect/bootstrap-multiselect.js",
+      "js/libs/moment/moment.js",
+      "js/components/datetimepicker/datepicker.js",
+      "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
     ]
   }
 ]
