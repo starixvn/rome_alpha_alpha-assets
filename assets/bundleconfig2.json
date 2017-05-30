@@ -592,5 +592,13 @@
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/last-bets.js",
+    "inputFiles": [
+      "js/libs/jquery/jquery.cookie.js",
+      "js/components/shortcut/shortcut.js",
+      "js/libs/storejs/store.js"
+    ]
   }
 ]
