@@ -114,6 +114,40 @@
         }
     }
 
+    .product-row {
+        background-color: #f3f5e0;
+        color:#333;
+        text-transform: uppercase;
+
+        .altercol {
+            background-color:#f3f5e0;
+        }
+
+        &:hover{
+            cursor: pointer;
+        }
+
+        td:first-child{
+            width: 20%;
+        }
+        > td {
+         .icon-arrow-right {
+                @include transform(rotate(0));
+                font-size: 16px;
+                position: relative;
+                top: 2px;
+                @include transition(transform 0.3s ease-out);
+            }
+
+            &.active {
+                .icon-arrow-right {
+                    @include transform(rotate(90deg));
+                }
+            }
+         }
+
+    }
+
     .noInfo {
         background-color: #fff !important;
         text-align: center;
