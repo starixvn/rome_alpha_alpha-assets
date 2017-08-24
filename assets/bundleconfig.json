@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "outputFileName": "bundles/common/common.css",
     "inputFiles": [
@@ -17,6 +17,24 @@
       "styles/components/modals.css",
       "styles/components/tabs.css",
       "styles/components/icon.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/common-super.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/common-master.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/common-agent.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
