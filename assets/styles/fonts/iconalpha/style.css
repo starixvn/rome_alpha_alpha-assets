@@ -1,4 +1,4 @@
-@font-face {
+﻿@font-face {
   font-family: 'Iconalpha';
   src:  url('fonts/Iconalpha.eot?h5h810');
   src:  url('fonts/Iconalpha.eot?h5h810#iefix') format('embedded-opentype'),
@@ -121,6 +121,9 @@
   content: "\e947";
 }
 .icon-betsandforecast:before {
+  content: "\e946";
+}
+.icon-betlists:before {
   content: "\e946";
 }
 .icon-arrow-down-bold-circle-outline:before {
