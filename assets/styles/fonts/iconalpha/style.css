@@ -1,10 +1,10 @@
-﻿@font-face {
+@font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?h5h810');
-  src:  url('fonts/Iconalpha.eot?h5h810#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?h5h810') format('truetype'),
-    url('fonts/Iconalpha.woff?h5h810') format('woff'),
-    url('fonts/Iconalpha.svg?h5h810#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?cizyry');
+  src:  url('fonts/Iconalpha.eot?cizyry#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?cizyry') format('truetype'),
+    url('fonts/Iconalpha.woff?cizyry') format('woff'),
+    url('fonts/Iconalpha.svg?cizyry#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-betlists:before {
+  content: "\e965";
+}
 .icon-dropbox:before {
   content: "\e964";
 }
@@ -89,6 +92,7 @@
 }
 .icon-excel:before {
   content: "\e950";
+  color: #6b6b6b;
 }
 .icon-calendar:before {
   content: "\e94f";
@@ -121,9 +125,6 @@
   content: "\e947";
 }
 .icon-betsandforecast:before {
-  content: "\e946";
-}
-.icon-betlists:before {
   content: "\e946";
 }
 .icon-arrow-down-bold-circle-outline:before {
@@ -330,4 +331,3 @@
 .icon-uncheck:before {
   content: "\e924";
 }
-
