@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?cizyry');
-  src:  url('fonts/Iconalpha.eot?cizyry#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?cizyry') format('truetype'),
-    url('fonts/Iconalpha.woff?cizyry') format('woff'),
-    url('fonts/Iconalpha.svg?cizyry#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?eagi61');
+  src:  url('fonts/Iconalpha.eot?eagi61#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?eagi61') format('truetype'),
+    url('fonts/Iconalpha.woff?eagi61') format('woff'),
+    url('fonts/Iconalpha.svg?eagi61#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -92,7 +92,6 @@
 }
 .icon-excel:before {
   content: "\e950";
-  color: #6b6b6b;
 }
 .icon-calendar:before {
   content: "\e94f";
