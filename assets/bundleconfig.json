@@ -581,5 +581,22 @@
       "js/components/shortcut/shortcut.js",
       "js/libs/storejs/store.js"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/pagination.css",
+    "inputFiles": [
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/components/pagination.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/pagination.js",
+    "inputFiles": [
+      "js/components/pagination/jquery.draggable.js",
+      "js/components/pagination/jquery.resizable.js",
+      "js/components/pagination/jquery.parser.js",
+      "js/components/pagination/jquery.linkbutton.js",
+      "js/components/pagination/jquery.pagination.js"
+    ]
   }
 ]
