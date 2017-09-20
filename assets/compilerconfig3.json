@@ -211,5 +211,9 @@
   {
     "outputFile": "styles/components/tablesorter.css",
     "inputFile": "styles/components/tablesorter.scss"
+  },
+  {
+    "outputFile": "styles/layout/before-home-page/before-home-page3.css",
+    "inputFile": "styles/layout/before-home-page/before-home-page3.scss"
   }
 ]
