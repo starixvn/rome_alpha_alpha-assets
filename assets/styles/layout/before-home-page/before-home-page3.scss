@@ -131,40 +131,22 @@ input, button {
         } 
     }
 
-    ::-webkit-input-placeholder { /* Chrome/Opera/Safari */
-      color: #b1d1d1;
-    }
-    ::-moz-placeholder { /* Firefox 19+ */
-      color: #b1d1d1;
-    }
-    :-ms-input-placeholder { /* IE 10+ */
-      color: #b1d1d1;
-    }
-    :-moz-placeholder { /* Firefox 18- */
-      color: #b1d1d1;
-    }
-
-
     .txt {
         border: none;
         outline: none;
         width: 100%;        
-        border: 1px solid #b6cccc;
+        border: 1px solid #c4c4c4;
         height: 40px;
-        padding: 10px 10px 10px 40px;
-        color: #53bab3;
+        padding: 10px;
+        color: #15314C;
         font-size: $font-size + 1;
          -webkit-appearance: none;
         @include border-radius(0); 
         @include box-shadow-multiple(none);
 
         &:focus {
-            border-color: #53bab3;
-            color: #53bab3;
-
-           + label + [class^="icon"] {
-                 color: #53bab3;
-            }
+            border-color: #15314C;
+            color: #15314C;
         }
 
         &.error ~ .validation, &.valid ~ .validation {
@@ -181,21 +163,15 @@ input, button {
     .rowlg {
         margin-bottom: 8px;
         position: relative;
-        [class^="icon"] {
-            color: #b1d1d1;
-            position: absolute;
-            left: 10px;
-        }    
-        
-        .icon-account-key {
-            font-size: 20px;
-            top: 8px;
-        }    
 
-        .icon-lock {
-            font-size: 18px;
-            top: 8px;
+         [class^="icon"] {
+            display: none;
         }
+
+        .icon-rules {
+            display: inline-block;
+        }
+
 
         input[type='checkbox'] {
           height: 18px;
@@ -214,7 +190,7 @@ input, button {
           padding: 0 1px;
           height: 18px;
           width: 18px;
-          border: 1px solid $border-color;
+          border: 1px solid #8d9faf;
           display: block;            
           pointer-events: none;
           font-size: $font-size + 1;
@@ -226,7 +202,7 @@ input, button {
         }
 
         input[type='checkbox']:checked:after {
-             color: #53bab3;
+             color: #1b3f5f;
              transition: .25s all ease-in-out;
         }  
     }
@@ -235,7 +211,7 @@ input, button {
         .error {
             position: relative;
            .icon-rules {
-                color: #2e6dfb;
+                color: #2ca7ef;
                 cursor: pointer;
                 font-size: 16px;
                 position: relative;
@@ -244,7 +220,7 @@ input, button {
                  @include ripple-effect-icon($margin-left: 4px, $margin-right: 0, $height: 24px, $width: 24px, $top: 4px);
                 
                 &:hover {
-                    color: darken(#2e6dfb, 15%);
+                    color: darken(#2ca7ef, 15%);
                 } 
                 
             }
@@ -265,11 +241,11 @@ input, button {
     }
 
     .btn-submit, .btn-submit:active {
-        background-color: #53bab3;
+        background-color: #1b3f5f;
     }
 
     .btn-submit:hover, .btn-submit:focus {
-        background-color: darken(#53bab3, 5%);
+        background-color: darken(#1b3f5f, 5%);
     }
 
     label {
@@ -291,7 +267,7 @@ input, button {
 }
 
 .rules-title {
-    color: #2e6dfb;
+    color: #2ca7ef;
     cursor: pointer;
     padding-bottom: 8px;
     padding-top: 20px;
@@ -300,12 +276,12 @@ input, button {
         position: relative;
         top: -1px;
         font-size: 20px;
-        color: #2e6dfb;
+        color: #2ca7ef;
         margin-right: 6px;        
     }
 
     &:hover {
-        color: darken(#2e6dfb, 15%);
+        color: darken(#2ca7ef, 15%);
     }
 }
 
@@ -319,7 +295,7 @@ input, button {
         width: 400px;
 
         .modal-header {
-            background-color: #53bab3;
+            background-color: #1b3f5f;
             color: #fff;
             height: 60px;
             padding: 6px 0 6px 20px;
