@@ -130,6 +130,7 @@ input, button {
             .username {
                 color: $text-color;
                 font-weight: bold;
+                word-break: break-word;
             }    
             
             .nickname {
