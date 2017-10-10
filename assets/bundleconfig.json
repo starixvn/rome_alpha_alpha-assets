@@ -1,4 +1,4 @@
-[
+﻿[
   {
     "outputFileName": "bundles/common/common.css",
     "inputFiles": [
@@ -17,6 +17,24 @@
       "styles/components/modals.css",
       "styles/components/tabs.css",
       "styles/components/icon.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/common-super.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/common-master.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/common-agent.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
@@ -562,6 +580,23 @@
       "js/libs/jquery/jquery.cookie.js",
       "js/components/shortcut/shortcut.js",
       "js/libs/storejs/store.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/pagination.css",
+    "inputFiles": [
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/components/pagination.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/pagination.js",
+    "inputFiles": [
+      "js/components/pagination/jquery.draggable.js",
+      "js/components/pagination/jquery.resizable.js",
+      "js/components/pagination/jquery.parser.js",
+      "js/components/pagination/jquery.linkbutton.js",
+      "js/components/pagination/jquery.pagination.js"
     ]
   }
 ]
