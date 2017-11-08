@@ -115,4 +115,15 @@
             display: none;
         }
     }
+
+    &.fixed-pagination-bottom {
+        position: fixed;
+        bottom: -2px;
+        background: #fff;
+        width: 100%;
+        padding: 10px 0;
+        border-top: 1px solid $table-border-color;
+    }
 }
+
+

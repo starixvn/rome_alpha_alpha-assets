@@ -116,22 +116,23 @@
 
     .product-row {
         background-color: #f3f5e0;
-        color:#333;
+        color: #333;
         text-transform: uppercase;
 
         .altercol {
-            background-color:#f3f5e0;
+            background-color: #f3f5e0;
         }
 
-        &:hover{
+        &:hover {
             cursor: pointer;
         }
 
-        td:first-child{
+        td:first-child {
             width: 20%;
         }
+
         > td {
-         .icon-arrow-right {
+            .icon-arrow-right {
                 @include transform(rotate(0));
                 font-size: 16px;
                 position: relative;
@@ -144,12 +145,15 @@
                     @include transform(rotate(90deg));
                 }
             }
-         }
-
+        }
     }
 
     .noInfo {
         background-color: #fff !important;
         text-align: center;
     }
+}
+
+.combined-fixed-pagination-bottom {
+    margin-bottom: 48px;
 }
