@@ -600,5 +600,11 @@
       "js/components/shortcut/shortcut.js",
       "js/libs/storejs/store.js"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-accountinfo/default.css",
+    "inputFiles": [
+      "styles/components/tables.css"
+    ]
   }
 ]

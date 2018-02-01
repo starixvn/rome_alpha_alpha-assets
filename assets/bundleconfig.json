@@ -598,5 +598,11 @@
       "js/components/pagination/jquery.linkbutton.js",
       "js/components/pagination/jquery.pagination.js"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-accountinfo/default.css",
+    "inputFiles": [
+      "styles/components/tables.css"
+    ]
   }
 ]
