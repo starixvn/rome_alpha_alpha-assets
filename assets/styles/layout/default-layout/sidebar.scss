@@ -40,20 +40,7 @@
             width: 40px;
             .main-tab {
                 display: none;
-            }
-
-            .extra-box {
-                display: block;
-                background: #fff;
-                height: 40px;
-                width: 40px;
-            }
-
-            .icon-user {
-                display: block;
-                left: 14px;
-                position: relative;
-            }
+            }            
 
             .accinfo-content, .menu-item a .icon-arrow-right, .panel-collapse .sub-menu {
                 display: none;
@@ -92,12 +79,9 @@
             .list-menu .menu-item .txt-item, list-menu .menu-item i {
                 display: block;
             }
-
-            .extra-box, .icon-user {
-                display: none;
-            }
         }
     }
+    
 }
 
 @media only screen and (max-device-width:1024px) {
@@ -107,10 +91,6 @@
 
            .navigation {
                width: 56px;
-               .icon-user {
-                   font-size: 20px;
-                   left: 19px;
-               }
            }          
            
        }
