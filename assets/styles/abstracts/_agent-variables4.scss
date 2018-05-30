@@ -1,0 +1,21 @@
+﻿$text-hover-active-color: #3b7fb4;
+$menu-active-bg-color: #e3f2fd;
+$profile-bg-color: #4c6375;
+$primary-color: #314453;
+$header-nav-icon-hover: lighten($primary-color, 5%);
+
+$tab-color: #333;
+$tab-active-color: #2267b6;
+$tab-line: $primary-color;
+
+/*******************************************/
+/* Devices */
+/*******************************************/
+$screen-device-lower768: 767px;
+$screen-device-greater768: 768px;
+$screen-device-greater1024: 1024px;
+
+$content-gutter-width: 24px; // padding-left: 12px; padding-right: 12px;
+$conent-device-lower768: (767px - $content-gutter-width);
+$conent-device-greater768: (768px - $content-gutter-width);
+$conent-device-greater1024: (1024px - $content-gutter-width);
