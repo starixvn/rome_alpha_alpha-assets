@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?f71kcv');
-  src:  url('fonts/Iconalpha.eot?f71kcv#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?f71kcv') format('truetype'),
-    url('fonts/Iconalpha.woff?f71kcv') format('woff'),
-    url('fonts/Iconalpha.svg?f71kcv#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?ccwlxe');
+  src:  url('fonts/Iconalpha.eot?ccwlxe#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?ccwlxe') format('truetype'),
+    url('fonts/Iconalpha.woff?ccwlxe') format('woff'),
+    url('fonts/Iconalpha.svg?ccwlxe#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-letstalk:before {
+  content: "\e966";
+  color: #0ec02c;
+}
 .icon-betlists:before {
   content: "\e965";
 }
