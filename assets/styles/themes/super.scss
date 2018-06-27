@@ -20,9 +20,10 @@
     color: $text-hover-active-color;
 }
 
-.header-nav .list-top>li.language:hover, 
-.header-nav .list-top>li.view-type:hover, 
-.header-nav .list-top>li.dropdown:active:focus,
+.header-nav .list-top>.language:hover, 
+.header-nav .list-top>.view-type:hover, 
+.header-nav .list-top>.dropdown:active:focus,
+.header-nav .list-top>.notification:hover,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background: $header-nav-icon-hover;
 }

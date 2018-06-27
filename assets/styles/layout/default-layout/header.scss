@@ -137,6 +137,30 @@ $text-color: #fff;
                 }
             }
 
+            &.notification {
+                padding: 0;
+                position: relative;
+                float: left;
+                > .icon-bell {
+                    color: $text-color;
+                    opacity: 0.6;
+                    position: relative;
+                    top: -1px;
+                    &:hover {
+                        background: transparent;
+                    }
+                }
+                .number-msg {
+                    position: absolute;
+                    top: 8px;
+                    right: 10px;
+                    padding: 0 4px;
+                    font-size: 12px;
+                    background: #da1526;
+
+                }
+            }
+
             .list-setting, .list-language {
                 @include border-radius(0);
                 @include box-shadow-multiple((0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)));
@@ -351,7 +375,16 @@ $text-color: #fff;
                         top: 0;
                     }
                 }
+
+                &.notification {
+                    top: 3px;
+                    .number-msg {
+                        top: 4px;
+                    }
+                }
             }
+
+
             
             .icon-account-search, .icon-home, .icon-message, .icon-bell {
                 opacity: 0.8;
