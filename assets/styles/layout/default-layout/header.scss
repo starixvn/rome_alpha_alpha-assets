@@ -151,13 +151,13 @@ $text-color: #fff;
                     }
                 }
                 .number-msg {
+                    @include border-radius(2px);
                     position: absolute;
                     top: 8px;
-                    right: 10px;
+                    left: 25px;
                     padding: 0 4px;
                     font-size: 12px;
                     background: #da1526;
-
                 }
             }
 
