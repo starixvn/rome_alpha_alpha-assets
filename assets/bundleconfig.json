@@ -616,5 +616,18 @@
     "inputFiles": [
       "styles/components/tables.css"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-main/chatbot/chatbot.css",
+    "inputFiles": [
+      "styles/components/accordions.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/chatbot/chatbot-default.js",
+    "inputFiles": [
+      "js/libs/bootstrap/transition.js",
+      "js/libs/bootstrap/collapse.js"
+    ]
   }
 ]
