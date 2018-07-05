@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?syyee5');
-  src:  url('fonts/Iconalpha.eot?syyee5#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?syyee5') format('truetype'),
-    url('fonts/Iconalpha.woff?syyee5') format('woff'),
-    url('fonts/Iconalpha.svg?syyee5#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?dnhcd2');
+  src:  url('fonts/Iconalpha.eot?dnhcd2#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?dnhcd2') format('truetype'),
+    url('fonts/Iconalpha.woff?dnhcd2') format('woff'),
+    url('fonts/Iconalpha.svg?dnhcd2#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,6 +24,42 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-more:before {
+  content: "\e973";
+}
+.icon-expnadall:before {
+  content: "\e96e";
+}
+.icon-collapseall:before {
+  content: "\e96f";
+}
+.icon-chatbot:before {
+  content: "\e970";
+}
+.icon-key-2:before {
+  content: "\e971";
+}
+.icon-user-2:before {
+  content: "\e972";
+}
+.icon-balance:before {
+  content: "\e968";
+}
+.icon-downline:before {
+  content: "\e969";
+}
+.icon-login:before {
+  content: "\e96a";
+}
+.icon-onlinelist:before {
+  content: "\e96b";
+}
+.icon-settings:before {
+  content: "\e96c";
+}
+.icon-status:before {
+  content: "\e96d";
+}
 .icon-download:before {
   content: "\e967";
 }
