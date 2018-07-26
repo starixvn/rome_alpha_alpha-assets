@@ -25,10 +25,17 @@
         }
     }
 
-    &.open > .dropdown-toggle.btn-default {
-        background: #fff;
-        @include effect-textbox;
+    &.open > .dropdown-toggle {
+        &.btn.btn-default {
+            background: #fff;
+            @include effect-textbox;
+        }
     }
+        
+}
+
+.btn:not(.btn-raised):not(.btn-link):hover, .btn:not(.btn-raised):not(.btn-link):focus, .input-group-btn .btn:not(.btn-raised):not(.btn-link):hover, .input-group-btn .btn:not(.btn-raised):not(.btn-link):focus {
+    background: #fff;
 }
 
 .multiselect {
@@ -61,8 +68,15 @@
         padding: 0 20px 0 35px;
     }
 
-    label.checkbox, label.radio {
+    label.checkbox {
         display: block;
+    }
+
+    label.radio {
+        padding-left: 8px;
+        input[type=radio] {
+            display: none;
+        }
     }
 
     .filter {
@@ -93,12 +107,12 @@
     }
 
     .checkbox input[type="checkbox"],
-    .checkbox-inline input[type="checkbox"], 
-    .radio input[type="radio"], 
-    .radio-inline input[type="radio"] {
+    .checkbox-inline input[type="checkbox"] 
+     {
         margin-left: -22px;
         top: 2px;
     }
+
 
     .multiselect-all a {
         border-bottom: 1px solid $border-color-dark;
@@ -106,7 +120,7 @@
 }
 
 .form-inline .multiselect-container {
-    label.checkbox, label.radio {
+    label.checkbox{
         padding: 2px 20px 2px 36px;
     }
 
