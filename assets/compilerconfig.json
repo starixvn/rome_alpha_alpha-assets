@@ -226,5 +226,17 @@
   {
     "outputFile": "styles/vendors-extensions/site-accountinfo/drop-theme-arrows-ex.css",
     "inputFile": "styles/vendors-extensions/site-accountinfo/drop-theme-arrows-ex.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-super.css",
+    "inputFile": "styles/themes/components/buttons/button-super.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-master.css",
+    "inputFile": "styles/themes/components/buttons/button-master.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-agent.css",
+    "inputFile": "styles/themes/components/buttons/button-agent.scss"
   }
 ]
