@@ -349,42 +349,50 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/message/message-super.css",
+    "outputFileName": "bundles/site-messages/message-super.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
-      "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-super.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/month-picker.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/message/message-master.css",
+    "outputFileName": "bundles/site-messages/message-master.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
-      "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/month-picker.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/message/message-agent.css",
+    "outputFileName": "bundles/site-messages/message-agent.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
-      "styles/themes/components/tabs/tab-agent.css"
+      "styles/themes/components/tabs/tab-agent.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/month-picker.css"
     ]
   },
+
   {
-    "outputFileName": "bundles/site-main/message/message-default.js",
+    "outputFileName": "bundles/site-messages/message-default.js",
     "inputFiles": [
       "js/libs/moment/moment.js",
       "js/libs/bootstrap/tab.js",
       "js/components/datetimepicker/datepicker.js",
-      "js/components/datetimepicker/bootstrap-datetimepicker.js"
+      "js/components/datetimepicker/bootstrap-datetimepicker.js",      
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js",
     ]
   },
 
