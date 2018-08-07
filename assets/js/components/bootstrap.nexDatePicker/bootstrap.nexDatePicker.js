@@ -209,7 +209,8 @@ var NexDatePickerHelper = NexDatePickerHelper ||
         },
         onQuickChooseChange: function () {
         },
-        minDate: null
+        minDate: null,
+        ConstraintFromTo: 0
     };
 
     var NexDatePicker = function (select, options) {
@@ -289,6 +290,25 @@ var NexDatePickerHelper = NexDatePickerHelper ||
                 }
 
                 options.onSelectDatePicker(date);
+
+                if (options.ConstraintFromTo != 0) {
+                    var currentDate = new Date(date.date);
+                    if (this.id === "from-date-container") {
+                        var minToDate = moment(currentDate).add(parseInt(options.ConstraintFromTo), 'months');
+                        var toDate = new Date(me.$secondDatePicker.find("input").val());
+                        if (minToDate < toDate) {
+                            me.$secondDatePicker.data("DateTimePicker").date(minToDate);
+                        }
+                    }
+                    else {
+                        var maxFromDate = moment(currentDate).add(parseInt(-options.ConstraintFromTo), 'months');
+                        var fromDate = new Date(me.$firstDatePicker.find("input").val());
+                        if (maxFromDate > fromDate) {
+                            me.$firstDatePicker.data("DateTimePicker").date(maxFromDate);
+                        }
+                    }
+
+                }
             });
 
             var fd = new Date(this.$firstDatePicker.find("input").val());

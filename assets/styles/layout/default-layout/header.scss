@@ -137,6 +137,35 @@ $text-color: #fff;
                 }
             }
 
+            &.notification {
+                padding: 0;
+                position: relative;
+                float: left;
+                padding: 9px 6px;
+                > .icon-bell {
+                    @include border-radius(50%);
+                    color: $text-color;
+                    opacity: 0.6;
+                    position: relative;
+                    top: -1px;
+                    margin-right: 0;
+                    padding: 5px 6px;
+                    &:hover {
+                        background: transparent;
+                    }
+                }
+                .number-msg {
+                    @include border-radius(2px);
+                    position: absolute;
+                    top: 8px;
+                    left: 25px;
+                    padding: 0 4px;
+                    font-size: 12px;
+                    background: #da1526;
+                    line-height: 16px;
+                }
+            }
+
             .list-setting, .list-language {
                 @include border-radius(0);
                 @include box-shadow-multiple((0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)));
@@ -351,7 +380,16 @@ $text-color: #fff;
                         top: 0;
                     }
                 }
+
+                &.notification {
+                    top: 3px;
+                    .number-msg {
+                        top: 4px;
+                    }
+                }
             }
+
+
             
             .icon-account-search, .icon-home, .icon-message, .icon-bell {
                 opacity: 0.8;
