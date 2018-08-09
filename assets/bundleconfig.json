@@ -392,7 +392,7 @@
       "js/libs/bootstrap/tab.js",
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",      
-      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
     ]
   },
 
@@ -613,6 +613,12 @@
   },
   {
     "outputFileName": "bundles/site-accountinfo/default.css",
+    "inputFiles": [
+      "styles/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/chatbot/chatbot-default.css",
     "inputFiles": [
       "styles/components/tables.css"
     ]
