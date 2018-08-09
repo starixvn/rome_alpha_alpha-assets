@@ -211,5 +211,9 @@
   {
     "outputFile": "styles/components/tablesorter.css",
     "inputFile": "styles/components/tablesorter.scss"
+  },
+  {
+    "outputFile": "styles/themes/customer-status.css",
+    "inputFile": "styles/themes/customer-status.scss"
   }
 ]

@@ -33,7 +33,7 @@
     }
 
     &.tblRpt-hover {
-        > tbody {
+       > tbody {
             > tr:hover > td {
                 background-color: $table-td-hover-color;
             }

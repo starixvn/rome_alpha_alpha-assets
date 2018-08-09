@@ -531,7 +531,8 @@
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect.css",
       "styles/components/pagination.css",
-      "styles/components/icon.css"
+      "styles/components/icon.css",
+      "styles/themes/customer-status.css"
     ]
   },
   {
@@ -550,6 +551,12 @@
       "js/components/tablesorter/tablesorter.js",
       "js/components/multiselect/bootstrap-multiselect.js",
       "js/components/storejs/store.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/credit-balance.js",
+    "inputFiles": [
+      "js/components/typeahead/typeahead.js"
     ]
   },
   {
