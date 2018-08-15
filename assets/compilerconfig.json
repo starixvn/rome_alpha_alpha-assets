@@ -220,14 +220,6 @@
     "inputFile": "styles/components/popover.scss"
   },
   {
-    "outputFile": "styles/vendors-extensions/site-accountinfo/bootstrap-material-ex.css",
-    "inputFile": "styles/vendors-extensions/site-accountinfo/bootstrap-material-ex.scss"
-  },
-  {
-    "outputFile": "styles/vendors-extensions/site-accountinfo/drop-theme-arrows-ex.css",
-    "inputFile": "styles/vendors-extensions/site-accountinfo/drop-theme-arrows-ex.scss"
-  },
-  {
     "outputFile": "styles/themes/components/buttons/button-super.css",
     "inputFile": "styles/themes/components/buttons/button-super.scss"
   },

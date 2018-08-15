@@ -621,6 +621,7 @@
   {
     "outputFileName": "bundles/site-accountinfo/index.css",
     "inputFiles": [
+      "styles/vendors-extensions/site-accountinfo/bootstrap-ex.css",
       "styles/components/tables.css"
     ]
   },
