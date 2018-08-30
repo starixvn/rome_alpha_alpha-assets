@@ -530,6 +530,7 @@
       "styles/components/tablesorter.css",
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect.css",
+      "styles/components/pagination.css",
       "styles/components/icon.css"
     ]
   },
@@ -540,6 +541,9 @@
       "js/libs/bootstrap/collapse.js",
       "js/components/pagination/jquery.draggable.js",
       "js/components/pagination/jquery.resizable.js",
+      "js/components/pagination/jquery.parser.js",
+      "js/components/pagination/jquery.linkbutton.js",
+      "js/components/pagination/jquery.pagination.js",
       "js/components/bootbox/bootbox.js",
       "js/libs/jquery/jquery.cookie.js",
       "js/components/sticky-table-headers/jquery.stickytableheaders.js",
