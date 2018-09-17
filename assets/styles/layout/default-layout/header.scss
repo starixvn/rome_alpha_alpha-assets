@@ -79,7 +79,6 @@ $text-color: #fff;
             }
 
             &.dropdown.setting{
-                line-height: 49px;
                 padding: 9px 5px;
                 > a {
                     @include border-radius(50%);
