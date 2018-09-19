@@ -1,11 +1,12 @@
-﻿@import "../../abstracts/_mixins.scss";
+﻿@import "../../abstracts/_variables.scss";
+@import "../../abstracts/_mixins.scss";
 
 .sidebar {
     @include box-shadow(1px, 0, 3px, rgba(0, 0, 0, 0.3));
     @include transition(width 0.7s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s);
     background: #fff;
     position: fixed;
-    width: 256px;
+    width: $sidebar-width;
     top: 0;
     bottom: 0;
     left: 0;
@@ -52,11 +53,11 @@
 
         // hover over collapsed sidebar
         &.hovered {
-            width: 256px;
+            width: $sidebar-width;
             z-index: 1003;
 
             .navigation {
-                width: 256px;
+                width: $sidebar-width;
             }
             .profile-avatar {
                 @include border-radius(50%);

@@ -1,9 +1,11 @@
 ﻿
+@import '../../abstracts/_variables.scss';
+
 .navigation {
     position: absolute;
     top: 88px;
     bottom: 0;
-    width: 256px;
+    width: $sidebar-width;
 
 
     .main-tab {
