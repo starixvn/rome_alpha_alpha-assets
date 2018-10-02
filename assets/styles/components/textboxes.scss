@@ -1,7 +1,7 @@
 ﻿@import "../abstracts/_variables.scss";
 @import "../abstracts/_mixins.scss";
 
-input[type='text'], input[type='password'], input[type='email'], input[type='tel'] {    
+input[type='text'], input[type='password'], input[type='email'], input[type='tel'], input[type="number"] {    
     height: $height-normal;
     line-height: $height-normal;
     border: none;
@@ -12,6 +12,7 @@ input[type='text'], input[type='password'], input[type='email'], input[type='tel
     -webkit-appearance: none;
     @include effect-textbox;
     @include box-sizing;
+    font-size: $font-size;
 
     &.hasBorder {
         border: 1px solid $border-color;
@@ -25,4 +26,22 @@ input[type='text'], input[type='password'], input[type='email'], input[type='tel
        opacity: .4;
        cursor: not-allowed;
     }
+}
+
+input[type="number"] {
+   -moz-appearance: textfield;
+}
+input[type="number"]::-webkit-inner-spin-button, 
+input[type="number"]::-webkit-outer-spin-button { 
+  -webkit-appearance: none; 
+  margin: 0; 
+}
+
+input[type="number"] {
+   font-family: 'password';
+   font-size: 10px;
+   &.show-hint {
+       font-family: inherit;
+       font-size: inherit;
+   }
 }

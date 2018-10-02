@@ -20,6 +20,12 @@
     ]
   },
   {
+    "outputFileName": "bundles/common/pass-font.css",
+    "inputFiles": [
+      "styles/base/pass-font.css"
+    ]
+  },
+  {
     "outputFileName": "bundles/common/common-super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super.css",
@@ -400,7 +406,8 @@
     "outputFileName": "bundles/site-main/security/before-home-page.js",
     "inputFiles": [
       "js/components/secure-hashing/sha1.js",
-      "js/components/secure-hashing/sha256.js"
+      "js/components/secure-hashing/sha256.js", 
+      "js/components/inputconstraint/constraint-input.js"
     ]
   },
   {
@@ -458,7 +465,8 @@
       "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
-      "js/components/bootbox/bootbox.js",
+      "js/components/bootbox/bootbox.js",      
+      "js/components/inputconstraint/constraint-input.js",
       "js/libs/clipboard/clipboard.js"
     ]
   },

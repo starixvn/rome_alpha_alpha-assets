@@ -230,5 +230,9 @@
   {
     "outputFile": "styles/themes/components/buttons/button-agent.css",
     "inputFile": "styles/themes/components/buttons/button-agent.scss"
+  },
+  {
+    "outputFile": "styles/base/pass-font.css",
+    "inputFile": "styles/base/pass-font.scss"
   }
 ]
