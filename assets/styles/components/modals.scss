@@ -181,9 +181,14 @@
 
 @media only screen and (max-device-width: $screen-device-lower768) {
 
-    .modal.in {
+    .modal-backdrop {
         z-index: 9999;
+    }
+
+    .modal.in.only-account-info {
+        z-index: 10000;
         left: 0 !important;
+        width: 100% !important;
 
         .modal-content .modal-header .modal-title {
             padding: calculateScale(10px) 0;
@@ -199,8 +204,8 @@
         }
     }
 
-    .bootbox-confirm.in {
-        z-index: 9999;
+    .bootbox-confirm.in.only-account-info {
+        z-index: 10000;
 
         .modal-dialog {
             position: absolute;
