@@ -185,10 +185,17 @@
         z-index: 9999;
     }
 
-    .modal.in.only-account-info {
+    .modal.in.modal-account-info,
+    .bootbox-confirm.in.bootbox-account-info .modal-dialog {
+        left: 5% !important;
+        right: 5% !important;
+        width: 90% !important;
+    }
+
+    .modal.in.modal-account-info {
         z-index: 10000;
-        left: 0 !important;
-        width: 100% !important;
+        box-shadow: 0 calculateScale(10px) calculateScale(20px) rgba(0,0,0,.19), 0 calculateScale(6px) calculateScale(6px) rgba(0,0,0,.23);
+        
 
         .modal-content .modal-header .modal-title {
             padding: calculateScale(10px) 0;
@@ -204,14 +211,11 @@
         }
     }
 
-    .bootbox-confirm.in.only-account-info {
+    .bootbox-confirm.in.bootbox-account-info {
         z-index: 10000;
 
         .modal-dialog {
-            position: absolute;
-            left: 5% !important;
-            right: 5% !important;
-            width: 90%;
+            position: absolute;            
             font-size: calculateScale($font-size);
         }
 
