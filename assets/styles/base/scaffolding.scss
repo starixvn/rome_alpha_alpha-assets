@@ -80,11 +80,16 @@
 html, body {
     height: 100%;
     width: 100%;
-    font-family: Roboto;
-    font-size: 13px;
+}
+
+body {
+    font-family: $font-family;
+    font-size: $font-size;
 }
 
 .page-title {
+    display: table;
+    width: 100%;
     border-bottom: 1px solid #cecece;
     color: #9d1c1c;
     font-size: $font-size;

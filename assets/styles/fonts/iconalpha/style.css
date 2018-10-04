@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?dnhcd2');
-  src:  url('fonts/Iconalpha.eot?dnhcd2#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?dnhcd2') format('truetype'),
-    url('fonts/Iconalpha.woff?dnhcd2') format('woff'),
-    url('fonts/Iconalpha.svg?dnhcd2#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?d0gi3g');
+  src:  url('fonts/Iconalpha.eot?d0gi3g#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?d0gi3g') format('truetype'),
+    url('fonts/Iconalpha.woff?d0gi3g') format('woff'),
+    url('fonts/Iconalpha.svg?d0gi3g#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -24,17 +24,35 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-more:before {
-  content: "\e973";
-}
-.icon-expnadall:before {
+.icon-chatbot:before {
   content: "\e96e";
 }
-.icon-collapseall:before {
-  content: "\e96f";
+.icon-pause-button:before {
+  content: "\e97b";
 }
-.icon-chatbot:before {
-  content: "\e970";
+.icon-play-button:before {
+  content: "\e97c";
+}
+.icon-chatbot-back:before {
+  content: "\e974";
+}
+.icon-chatbot-call:before {
+  content: "\e975";
+}
+.icon-chatbot-down:before {
+  content: "\e976";
+}
+.icon-chatbot-gif:before {
+  content: "\e977";
+}
+.icon-chatbot-plus:before {
+  content: "\e978";
+}
+.icon-chatbot-voice:before {
+  content: "\e979";
+}
+.icon-more:before {
+  content: "\e973";
 }
 .icon-key-2:before {
   content: "\e971";
