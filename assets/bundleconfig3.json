@@ -30,7 +30,8 @@
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/agent.css",
       "styles/vendors/toastr/toastr.css",
-      "styles/components/toastr.css"
+      "styles/components/toastr.css",
+      "styles/components/resizable.css"
     ]
   },
   {
@@ -44,7 +45,8 @@
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/master.css",
       "styles/vendors/toastr/toastr.css",
-      "styles/components/toastr.css"
+      "styles/components/toastr.css",
+      "styles/components/resizable.css"
     ]
   },
   {
@@ -58,7 +60,8 @@
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/super.css",
       "styles/vendors/toastr/toastr.css",
-      "styles/components/toastr.css"
+      "styles/components/toastr.css",
+      "styles/components/resizable.css"
     ]
   },
   {
@@ -95,6 +98,7 @@
       "js/components/draggable/tiny-draggable.js",
       "js/components/typeahead/typeahead.js",
       "js/components/toastr/toastr.js",
+      "js/components/resizable/resizable.js",
       "js/libs/bootstrap/carousel.js"
     ]
   },

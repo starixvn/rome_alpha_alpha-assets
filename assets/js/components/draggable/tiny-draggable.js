@@ -2,6 +2,7 @@
     $.fn.tinyDraggable = function (options) {
         var settings = $.extend({ handle: 0, exclude: 'button.icon.icon-close.close' }, options);
         var maxMobileLeft = 1000;
+        var canMove = true;
 
         return this.each(function () {
             var dx, dy, el = $(this), handle = settings.handle ? $(settings.handle, el) : el,
@@ -22,20 +23,41 @@
                     $(iframeContent.document).off('mousemove.drag touchmove.drag');
                 });
 
-                if (!$mask.is(":visible"))
-                {
+                if (!$mask.is(":visible")) {
                     return;
                 }
 
                 $('body').off('mousemove.drag touchmove.drag');
 
                 var markOffset = $mask.offset();
-                $('#' + $mask.data('current-popup')).offset(markOffset);
+
+                if (canMove) {
+                    $('#' + $mask.data('current-popup')).offset(markOffset);
+                }
+
                 $mask.hide();
+            };
+            var getResizableCursor = function (el) {
+                if (el.hasClass("resizable-r")) {
+                    return "e-resize";
+                }
+
+                if (el.hasClass("resizable-b")) {
+                    return "s-resize";
+                }
+
+                return "none";
             };
 
             handle.on({
                 mousedown: function (e) {
+                    canMove = !settings.resizeElement || !~$.inArray(e.target, $(settings.resizeElement, el));
+                    if (canMove) {
+                        $mask.css("cursor", "move");
+                    } else {
+                        $mask.css("cursor", getResizableCursor($(e.target)));
+                    }
+
                     if (settings.exclude && ~$.inArray(e.target, $(settings.exclude, el))) {
                         return;
                     }
@@ -70,13 +92,18 @@
                             .on('mousemove.drag', function (e) {
                                 var iframeOffset = currentIframe.offset();
                                 $mask.offset({ top: e.pageY - dy - currentIframe.contents().scrollTop() + iframeOffset.top, left: e.pageX - dx + iframeOffset.left });
-                        });
+                            });
                     });
-                   
                 },
                 mouseup: movePopup,
-                touchstart: function(e)
-                {
+                touchstart: function (e) {
+                    canMove = !settings.resizeElement || !~$.inArray(e.target, $(settings.resizeElement, el));
+                    if (canMove) {
+                        $mask.css("cursor", "move");
+                    } else {
+                        $mask.css("cursor", getResizableCursor($(e.target)));
+                    }
+
                     if (settings.exclude && ~$.inArray(e.target, $(settings.exclude, el))) {
                         return;
                     }
@@ -107,18 +134,18 @@
 
                     $('body').off('touchmove.drag')
                         .on('touchmove.drag', function (e) {
-                        var newLeft = e.originalEvent.touches[0].pageX - dx;
+                            var newLeft = e.originalEvent.touches[0].pageX - dx;
 
-                        if (newLeft > maxMobileLeft) {
-                            return;
-                        }
+                            if (newLeft > maxMobileLeft) {
+                                return;
+                            }
 
-                        $mask.offset(
-                            {
-                                top: e.originalEvent.touches[0].pageY - dy,
-                                left: newLeft
-                            });
-                    });
+                            $mask.offset(
+                                {
+                                    top: e.originalEvent.touches[0].pageY - dy,
+                                    left: newLeft
+                                });
+                        });
 
                     $.each($('iframe'), function (index, iframeObject) {
                         var iframeContent = iframeObject.contentWindow || iframeObject.contentDocument;
