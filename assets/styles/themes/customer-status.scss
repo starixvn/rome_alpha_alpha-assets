@@ -1,0 +1,25 @@
+﻿@import "../abstracts/_variables.scss";
+
+.suspended-bg {
+  background-color: $status-suspended;
+}
+
+.disabled-bg {
+  background-color: $status-disabled;
+}
+
+.closed-wrongpwd-others {
+  background-color: $status-closedby-pwd-others-bg;
+}
+
+.closed-byadmin {
+  background-color: $status-closedby-admin-bg;
+}
+
+.closed-byupline {
+  background-color: $status-closedby-upline-bg;
+}
+
+.closed-wrongotp-sc {
+  background-color: $status-closedby-otp-sc-bg;
+}

@@ -123,6 +123,15 @@
     }
 }
 
+.icon-printer {
+    @include ripple-effect-icon($top: -7px, $margin-left: -7px, $margin-right: 0, $width: 32px, $height: 32px);
+    color: #888;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 18px;
+    vertical-align: middle;
+}
+
 @media only screen and (max-device-width: $screen-device-greater1024) {
     .icon {
         font-size: 20px;

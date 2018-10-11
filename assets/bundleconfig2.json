@@ -48,7 +48,8 @@
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/agent.css",
       "styles/vendors/toastr/toastr.css",
-      "styles/components/toastr.css"
+      "styles/components/toastr.css",
+      "styles/components/resizable.css"
     ]
   },
   {
@@ -62,7 +63,8 @@
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/master.css",
       "styles/vendors/toastr/toastr.css",
-      "styles/components/toastr.css"
+      "styles/components/toastr.css",
+      "styles/components/resizable.css"
     ]
   },
   {
@@ -76,7 +78,8 @@
       "styles/layout/default-layout/sidebar.css",
       "styles/themes/super.css",
       "styles/vendors/toastr/toastr.css",
-      "styles/components/toastr.css"
+      "styles/components/toastr.css",
+      "styles/components/resizable.css"
     ]
   },
   {
@@ -113,6 +116,7 @@
       "js/components/draggable/tiny-draggable.js",
       "js/components/typeahead/typeahead.js",
       "js/components/toastr/toastr.js",
+      "js/components/resizable/resizable.js",
       "js/libs/bootstrap/carousel.js"
     ]
   },
@@ -567,7 +571,8 @@
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect.css",
       "styles/components/pagination.css",
-      "styles/components/icon.css"
+      "styles/components/icon.css",
+      "styles/themes/customer-status.css"
     ]
   },
   {
@@ -586,6 +591,12 @@
       "js/components/tablesorter/tablesorter.js",
       "js/components/multiselect/bootstrap-multiselect.js",
       "js/components/storejs/store.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/credit-balance.js",
+    "inputFiles": [
+      "js/components/typeahead/typeahead.js"
     ]
   },
   {
@@ -665,6 +676,35 @@
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
       "js/libs/jquery/jquery-ui.min.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-transfer/default.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/components/tablesorter.css",
+      "styles/vendors/bootstrap-multiselect.css",
+      "styles/components/bootstrap-multiselect.css",
+      "styles/components/icon.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-transfer/default.js",
+    "inputFiles": [
+      "js/libs/bootstrap/transition.js",
+      "js/libs/bootstrap/collapse.js",
+      "js/components/pagination/jquery.draggable.js",
+      "js/components/pagination/jquery.resizable.js",
+      "js/components/bootbox/bootbox.js",
+      "js/libs/jquery/jquery.cookie.js",
+      "js/components/sticky-table-headers/jquery.stickytableheaders.js",
+      "js/components/tablesorter/tablesorter.js",
+      "js/components/multiselect/bootstrap-multiselect.js",
+      "js/components/storejs/store.js",
+      "js/components/autocomplete/autocomplete.js"
     ]
   }
 ]
