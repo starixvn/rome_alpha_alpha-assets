@@ -208,10 +208,6 @@
     "inputFile": "styles/components/tablesorter.scss"
   },
   {
-    "outputFile": "styles/vendors-extensions/site-accountinfo/bootstrap-ex.css",
-    "inputFile": "styles/vendors-extensions/site-accountinfo/bootstrap-ex.scss"
-  },
-  {
     "outputFile": "styles/themes/customer-status.css",
     "inputFile": "styles/themes/customer-status.scss"
   },
