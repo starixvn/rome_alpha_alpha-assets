@@ -4,10 +4,12 @@
 
 body {
     background: none;
-    font:{
+
+    font: {
         family: $font-family;
         size: $font-size;
     }
+
     color: $text-color;
     padding-top: 14px;
 }
@@ -67,7 +69,7 @@ a {
 
 .block__lbl {
     background-color: $pt-bg;
-    height: $pt-col-height;
+    height: auto;
     line-height: $pt-col-height;
     padding: 0 8px;
 }
@@ -172,7 +174,7 @@ select.setting-field {
     vertical-align: middle;
 }
 
-.block__cell, .block__lbl, .block__value {
+.block__cell, .block__value {
     height: $pt-col-height;
     line-height: $pt-col-height - 2;
 }
@@ -194,10 +196,11 @@ select.setting-field {
 /* Icons */
 /*******************************/
 %icon {
-    font:{
+    font: {
         family: 'Iconalpha';
         size: 16px;
     }
+
     display: inline-block;
 }
 
@@ -208,7 +211,7 @@ select.setting-field {
     width: initial;
     position: absolute;
     left: 9px;
-    top: 0px;    
+    top: 0px;
 
     &:before {
         @extend %icon;
@@ -239,7 +242,7 @@ select.setting-field {
     padding: 4px 16px 4px 40px;
     line-height: 20px;
     position: relative;
-    
+
     &-container {
         background-color: #fdfbec;
         border: 1px solid #d9d9d9;
@@ -249,8 +252,8 @@ select.setting-field {
     &__customer-name {
         color: $text-color;
         font-weight: bold;
-	    height: 28px;
-        line-height: 28px;	    
+        height: 28px;
+        line-height: 28px;
         margin: 0;
         padding: 0 20px;
     }
@@ -273,7 +276,7 @@ select.setting-field {
         color: $msg-success-color;
 
         .msg__icon:before {
-            content: '\e93b'; 
+            content: '\e93b';
         }
     }
 
@@ -281,7 +284,7 @@ select.setting-field {
         color: $msg-warning-color;
 
         .msg__icon:before {
-            content: '\e93d'; 
+            content: '\e93d';
         }
     }
 
@@ -289,7 +292,7 @@ select.setting-field {
         color: $msg-error-color;
 
         .msg__icon:before {
-            content: '\e93e'; 
+            content: '\e93e';
         }
     }
 
@@ -304,7 +307,7 @@ select.setting-field {
 .modal {
     background: $popup-bg;
     border: $popup-border;
-    color: $text-color; 
+    color: $text-color;
     padding: 0 16px 16px;
     @include effect-special;
 }
@@ -317,7 +320,7 @@ select.setting-field {
     height: 39px;
     line-height: 39px;
     padding: 0;
-    margin-bottom: 8px; 
+    margin-bottom: 8px;
 }
 
 .modal__content {
@@ -341,7 +344,7 @@ select.setting-field {
     outline: none;
     margin-right: 8px;
     padding-left: 16px;
-	padding-right: 16px;
+    padding-right: 16px;
     -webkit-appearance: none;
     @include effect-button;
     @include box-sizing;
@@ -350,7 +353,7 @@ select.setting-field {
 .btn {
     @extend %btn;
     background: $btn-submit-bg;
-    color: $btn-submit-color;    
+    color: $btn-submit-color;
 
     &:hover, &:focus {
         background: $btn-submit-bg-hover;
@@ -389,9 +392,10 @@ select.setting-field {
 /*******************************/
 /* Tooltip */
 /*******************************/
-.tooltip {  
+.tooltip {
     overflow: hidden;
-    &:after{
+
+    &:after {
         display: none;
     }
 }
@@ -401,30 +405,30 @@ select.setting-field {
     opacity: 1;
     padding: 4px 8px;
     position: relative;
-    top: 0;  
+    top: 0;
     margin-bottom: 12px;
 
     &:after, &:before {
-	    top: 100%;
-	    left: 50%;
-	    border: solid transparent;
-	    content: " ";
-	    height: 0;
-	    width: 0;
-	    position: absolute;
-	    pointer-events: none;
+        top: 100%;
+        left: 50%;
+        border: solid transparent;
+        content: " ";
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
     }
 
     &:after {
-	    border-color: rgba(255, 255, 204, 0);
-	    border-width: 8px;
-	    margin-left: -8px;
+        border-color: rgba(255, 255, 204, 0);
+        border-width: 8px;
+        margin-left: -8px;
     }
 
     &:before {
-	    border-color: rgba(204, 153, 51, 0);
-	    border-width: 9px;
-	    margin-left: -9px;
+        border-color: rgba(204, 153, 51, 0);
+        border-width: 9px;
+        margin-left: -9px;
     }
 }
 
@@ -436,11 +440,11 @@ select.setting-field {
     @include border-radius($hint-success-border-radius);
 
     &:after {
-	    border-top-color: $hint-success-bg;
+        border-top-color: $hint-success-bg;
     }
 
     &:before {
-	    border-top-color: $hint-success-border-color;
+        border-top-color: $hint-success-border-color;
     }
 }
 
@@ -452,11 +456,11 @@ select.setting-field {
     @include border-radius($hint-warning-border-radius);
 
     &:after {
-	    border-top-color: $hint-warning-bg;
+        border-top-color: $hint-warning-bg;
     }
 
     &:before {
-	    border-top-color: $hint-warning-border-color;
+        border-top-color: $hint-warning-border-color;
     }
 }
 
@@ -468,11 +472,11 @@ select.setting-field {
     @include border-radius($hint-error-border-radius);
 
     &:after {
-	    border-top-color: $hint-error-bg;
+        border-top-color: $hint-error-bg;
     }
 
     &:before {
-	    border-top-color: $hint-error-border-color;
+        border-top-color: $hint-error-border-color;
     }
 }
 
