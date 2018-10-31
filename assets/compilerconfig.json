@@ -185,8 +185,7 @@
   },
   {
     "outputFile": "styles/components/toastr.css",
-    "inputFile": "styles/components/toastr.scss",
-    "sourceMap": false
+    "inputFile": "styles/components/toastr.scss"
   },
   {
     "outputFile": "styles/vendors-extensions/common/bootstrap-ex.css",
@@ -211,5 +210,9 @@
   {
     "outputFile": "styles/themes/customer-status.css",
     "inputFile": "styles/themes/customer-status.scss"
+  },
+  {
+    "outputFile": "styles/components/popover.css",
+    "inputFile": "styles/components/popover.scss"
   }
 ]
