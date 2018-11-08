@@ -6,6 +6,10 @@
     border-color: $primary-color;
 }
 
+.radio input[type="radio"]:checked + label:before {
+    border-color: $primary-color;
+}
+
 .radio input[type="radio"]:checked + label:after {
     background-color: $primary-color;
 }
