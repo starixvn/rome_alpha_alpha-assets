@@ -29,21 +29,28 @@
     "outputFileName": "bundles/common/common-super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super.css",
-      "styles/themes/components/buttons/button-super.css"
+      "styles/themes/components/buttons/button-super.css",
+      "styles/components/customize-checkbox-radio.css",
+      "styles/themes/components/checkbox-radio/checkbox-radio-super.css"
+
     ]
   },
   {
     "outputFileName": "bundles/common/common-master.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master.css",
-      "styles/themes/components/buttons/button-master.css"
+      "styles/themes/components/buttons/button-master.css",
+      "styles/components/customize-checkbox-radio.css",
+      "styles/themes/components/checkbox-radio/checkbox-radio-master.css"
     ]
   },
   {
     "outputFileName": "bundles/common/common-agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent.css",
-      "styles/themes/components/buttons/button-agent.css"
+      "styles/themes/components/buttons/button-agent.css",
+      "styles/components/customize-checkbox-radio.css",
+      "styles/themes/components/checkbox-radio/checkbox-radio-agent.css"
     ]
   },
   {

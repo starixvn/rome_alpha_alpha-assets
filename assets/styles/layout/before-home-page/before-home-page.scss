@@ -238,8 +238,6 @@ input, button {
     .icon-rules {
         font-size: 20px;
         margin-right: 6px;
-        position: relative;
-        top: 3px;
     }
 
     &:hover {
@@ -265,9 +263,12 @@ input, button {
             .icon-rules {
                 margin-right: 4px;
                 font-size: 22px;
-                position: relative;
-                top: 4px;
                 margin-right: 8px;
+                color: #fff;
+            }
+
+            .icon-rules:after {
+                display: none;
             }
 
             .modal-title {
