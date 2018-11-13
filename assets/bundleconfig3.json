@@ -632,6 +632,7 @@
   {
     "outputFileName": "bundles/site-main/chatbot/chatbot-default.css",
     "inputFiles": [
+      "styles/components/popover.css",
       "styles/components/tables.css"
     ]
   },
