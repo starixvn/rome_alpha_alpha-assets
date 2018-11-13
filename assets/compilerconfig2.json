@@ -215,5 +215,9 @@
   {
     "outputFile": "styles/themes/customer-status.css",
     "inputFile": "styles/themes/customer-status.scss"
+  },
+  {
+    "outputFile": "styles/components/popover.css",
+    "inputFile": "styles/components/popover.scss"
   }
 ]

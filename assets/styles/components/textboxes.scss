@@ -1,7 +1,7 @@
 ﻿@import "../abstracts/_variables.scss";
 @import "../abstracts/_mixins.scss";
 
-input[type='text'], input[type='password'], input[type='email'] {    
+input[type='text'], input[type='password'], input[type='email'], input[type='tel'] {    
     height: $height-normal;
     line-height: $height-normal;
     border: none;
