@@ -123,7 +123,6 @@
     "outputFileName": "bundles/site-main/default.js",
     "inputFiles": [
       "js/libs/bootstrap/tab.js",
-      "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap-material/material.js",
       "js/libs/bootstrap-material/ripples.js",
       "js/libs/jquery/jquery.cookie.js",
@@ -362,7 +361,6 @@
   {
     "outputFileName": "bundles/site-main/dashboard/dashboard-default.js",
     "inputFiles": [
-      "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/tab.js",
       "js/libs/hammer/hammer.js",
       "js/libs/hammer/jquery.hammer.js"
