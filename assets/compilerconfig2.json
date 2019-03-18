@@ -140,6 +140,10 @@
     "inputFile": "styles/components/fanex-pagination.scss"
   },
   {
+    "outputFile": "styles/base/pass-font.css",
+    "inputFile": "styles/base/pass-font.scss"
+  },
+  {
     "outputFile": "styles/components/fanex-grid.css",
     "inputFile": "styles/components/fanex-grid.scss"
   },
@@ -203,5 +207,37 @@
   {
     "outputFile": "styles/components/popover.css",
     "inputFile": "styles/components/popover.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-super.css",
+    "inputFile": "styles/themes/components/buttons/button-super.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-master.css",
+    "inputFile": "styles/themes/components/buttons/button-master.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-agent.css",
+    "inputFile": "styles/themes/components/buttons/button-agent.scss"
+  },
+  {
+    "outputFile": "styles/base/pass-font.css",
+    "inputFile": "styles/base/pass-font.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super.css",
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master.css",
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent.css",
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent.scss"
+  },
+  {
+    "outputFile": "styles/components/customize-checkbox-radio.css",
+    "inputFile": "styles/components/customize-checkbox-radio.scss"
   }
 ]

@@ -417,7 +417,8 @@
     "outputFileName": "bundles/site-main/security/before-home-page.js",
     "inputFiles": [
       "js/components/secure-hashing/sha1.js",
-      "js/components/secure-hashing/sha256.js"
+      "js/components/secure-hashing/sha256.js",
+      "js/components/inputconstraint/constraint-input.js"
     ]
   },
   {
@@ -669,6 +670,12 @@
       "js/components/pagination/jquery.parser.js",
       "js/components/pagination/jquery.linkbutton.js",
       "js/components/pagination/jquery.pagination.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-accountinfo/index.css",
+    "inputFiles": [
+      "styles/components/tables.css"
     ]
   },
   {
