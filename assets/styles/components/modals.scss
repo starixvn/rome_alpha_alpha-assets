@@ -181,9 +181,9 @@
 
 @media only screen and (max-device-width: $screen-device-lower768) {
 
-    .modal-backdrop {
+    /*.modal-backdrop {
         z-index: 9999;
-    }
+    }*/
 
     .bootbox-confirm.in,
     .modal.in.modal-account-info {
