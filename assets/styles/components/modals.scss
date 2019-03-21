@@ -185,10 +185,11 @@
         z-index: 9999;
     }*/
 
-    .bootbox-confirm.in,
-    .modal.in.modal-account-info {
-        z-index: 10000;
-    }
+	.bootbox-confirm.in, 
+	.bootbox-alert.in,
+	.modal.in.modal-account-info {
+		z-index: 10000;
+	}
 
     .modal.in.modal-account-info,
     .bootbox-confirm.in.bootbox-account-info .modal-dialog {
