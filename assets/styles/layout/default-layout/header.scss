@@ -6,7 +6,7 @@ $text-color: #fff;
 .header {
     position: fixed;
     z-index: 90;
-    left: 256px;
+    left: $sidebar-width;
     top: 0;
     right: 0;
 }
@@ -27,7 +27,6 @@ $text-color: #fff;
         cursor: pointer;
         font-size: 16px;
         color: $text-color;
-        opacity: 0.8;
     }
 
     .old-view-text {
@@ -46,8 +45,8 @@ $text-color: #fff;
         color: $text-color;
         font-size: 13px;
 
-        .icon-squares, .icon-logout {
-            opacity: 0.8;
+        .icon-squares,
+        .icon-logout {
             margin-right: 0;
             color: #fff;
         }
@@ -58,7 +57,6 @@ $text-color: #fff;
         }
 
         .icon-swap-horizontal {
-            opacity: 0.8;
             top: 3px;
         }
 
@@ -74,7 +72,6 @@ $text-color: #fff;
 
             .txt-top {
                 padding: 0;
-                opacity: 0.8;
             }
 
             .tooltip {
@@ -82,7 +79,6 @@ $text-color: #fff;
             }
 
             &.dropdown.setting{
-                line-height: 49px;
                 padding: 9px 5px;
                 > a {
                     @include border-radius(50%);
@@ -108,7 +104,6 @@ $text-color: #fff;
 
                 > a {
                     padding: 15px 15px 14px;
-                    opacity: 0.8;
                     color: $text-color;
 
                     &:hover, &:focus, &:visited, &:target {
@@ -132,7 +127,7 @@ $text-color: #fff;
                     }
 
                     li > a {
-                        font-size: 13px;
+                        font-size: $font-size;
                     }
                 }
             }
@@ -145,7 +140,6 @@ $text-color: #fff;
                 > .icon-bell {
                     @include border-radius(50%);
                     color: $text-color;
-                    opacity: 0.6;
                     position: relative;
                     top: -1px;
                     margin-right: 0;
@@ -155,7 +149,7 @@ $text-color: #fff;
                     }
                 }
                 .number-msg {
-                    @include border-radius(2px);
+                    @include border-radius(3px);
                     position: absolute;
                     top: 8px;
                     left: 25px;
@@ -166,7 +160,8 @@ $text-color: #fff;
                 }
             }
 
-            .list-setting, .list-language {
+            .list-setting,
+            .list-language {
                 @include border-radius(0);
                 @include box-shadow-multiple((0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23)));
                 background: #fff;
@@ -174,7 +169,8 @@ $text-color: #fff;
                 > li {
                     a {
                         display: block;
-                        padding: 8px 15px;
+                        padding: 0 15px;
+                        line-height: 36px;
                         color: #333;
                         cursor: pointer;
 
@@ -249,30 +245,6 @@ $text-color: #fff;
     .live-message, .private-message {
         cursor: pointer;
     }
-
-
-    .email-box {
-        display: inline-block;
-        position: relative;
-        margin-top: 2px;
-
-        .icon-message {
-            display: inline-block;
-            padding: 8px;
-            margin-right: 0;
-        }
-
-        .value {
-            @include border-radius(2px);
-            background: #da1625;
-            color: $text-color;
-            font-size: 11px;
-            padding: 0 2px;
-            position: absolute;
-            top: 1px;
-            right: -5px;
-        }
-    }
 }
 
 @media only screen and (max-device-width: $screen-device-greater1024) {
@@ -281,26 +253,16 @@ $text-color: #fff;
             font-size: 20px;
         }        
 
-        .list-top {
-            > li {  
-                 .txt-top {
-                    position: relative;
-                    top: -3px;
-                }
-            }
+        .list-top > li .txt-top {
+            position: relative;
+            top: -3px;
         }
     }
 
-    .header-msg {
-        .icon-add, .icon-message {
-            top: -2px;
-        }
-
-        .icon-home {
-            margin: 0;
-            padding: 11px 13px;
-            top: -12px;
-        }
+    .header-msg .icon-home {
+        margin: 0;
+        padding: 11px 13px;
+        top: -12px;
     }
 }
 
@@ -329,7 +291,6 @@ $text-color: #fff;
                &.dropdown {
                    &.setting {
                         float: left;
-                        line-height: 48px;
                         padding: 0;
 
                         > a {
@@ -389,12 +350,6 @@ $text-color: #fff;
                 }
             }
 
-
-            
-            .icon-account-search, .icon-home, .icon-message, .icon-bell {
-                opacity: 0.8;
-            }
-
             .icon-home {
                 &:before {
                     position: relative;
@@ -411,44 +366,13 @@ $text-color: #fff;
                 font-size: 22px;
             }
 
-            .icon-account-search, .icon-bell {
+            .icon-account-search,
+            .icon-bell {
                  @include ripple-effect-icon($margin-left: 4px, $height: 40px, $width: 40px, $top: 8px);
             }
 
-            %circle-red {
-                background-color: #fe2627;
-                position: absolute;                
-                top: 14px;
-                width: 8px;
-                height: 8px;
-                @include border-radius(50%);
-            }
-
-            .icon-message {
-                &:before {
-                    font-size: 18px;
-                }
-
-                &:hover:after {
-                    margin-top: 2px;
-                    margin-left: 4px;
-                }
-
-                .circle-red {
-                    @extend %circle-red;
-                    right: 10px;           
-                }
-            } 
-
-            .icon-bell {
-                &:before {
-                    font-size: 19px;
-                }
-
-                .circle-red {
-                    @extend %circle-red;
-                    right: 13px;   
-                }
+            .icon-bell:before {
+                font-size: 19px;
             }
 
             .setting > a {

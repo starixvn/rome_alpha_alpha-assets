@@ -132,24 +132,8 @@
     "inputFile": "styles/components/bootstrap-multiselect.scss"
   },
   {
-    "outputFile": "styles/components/checkbox-radio-material.css",
-    "inputFile": "styles/components/checkbox-radio-material.scss"
-  },
-  {
     "outputFile": "styles/components/select2.css",
     "inputFile": "styles/components/select2.scss"
-  },
-  {
-    "outputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-agent.css",
-    "inputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-agent.scss"
-  },
-  {
-    "outputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-master.css",
-    "inputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-master.scss"
-  },
-  {
-    "outputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-super.css",
-    "inputFile": "styles/themes/components/checkbox-radio-material/checkbox-radio-material-super.scss"
   },
   {
     "outputFile": "styles/components/fanex-pagination.css",
@@ -166,6 +150,10 @@
   {
     "outputFile": "styles/components/alerts.css",
     "inputFile": "styles/components/alerts.scss"
+  },
+  {
+    "outputFile": "styles/base/pass-font.css",
+    "inputFile": "styles/base/pass-font.scss"
   },
   {
     "outputFile": "styles/components/accordions.css",
@@ -223,5 +211,37 @@
   {
     "outputFile": "styles/components/popover.css",
     "inputFile": "styles/components/popover.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-super.css",
+    "inputFile": "styles/themes/components/buttons/button-super.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-master.css",
+    "inputFile": "styles/themes/components/buttons/button-master.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-agent.css",
+    "inputFile": "styles/themes/components/buttons/button-agent.scss"
+  },
+  {
+    "outputFile": "styles/base/pass-font.css",
+    "inputFile": "styles/base/pass-font.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super.css",
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master.css",
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent.css",
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent.scss"
+  },
+  {
+    "outputFile": "styles/components/customize-checkbox-radio.css",
+    "inputFile": "styles/components/customize-checkbox-radio.scss"
   }
 ]

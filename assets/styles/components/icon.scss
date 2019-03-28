@@ -19,7 +19,8 @@
 }
 
 .icon-flag:before {
-    background: url("../images/flag.png");
+    background-image: url("../images/flag.png");
+    background-image: url("../images/flag.svg");
     content: '';
     display: inline-block;
     background-size: 32px 36px;
@@ -57,24 +58,7 @@
 
 .icon-time {
     cursor: default;
-    opacity: 0.8;
     top: 2px;
-}
-
-.icon-instruction {
-    margin-right: 0;
-    opacity: 0.8;
-    top: 2px;
-    @include ripple-effect-icon($margin-left: -8px, $margin-right: -4px, $height: 32px, $width: 32px, $top: -3px);
-
-    &:before {
-        color: #fff;
-
-        font: {
-            size: 17px;
-            weight: 100;
-        }
-    }
 }
 
 .icon-edit {
@@ -104,7 +88,11 @@
      @include ripple-effect-icon($margin-left: 0px, $margin-right: -4px, $height: 32px, $width: 32px, $top: 5px);
 }
 
-.icon-logout, .setting > a, .icon-collapse, .icon-home, .icon-add, .icon-message {
+.icon-logout,
+.setting > a,
+.icon-collapse,
+.icon-home,
+.icon-add {
     @include ripple-effect-icon($margin-left: 0, $margin-right: -4px, $height: 32px, $width: 32px, $top: 4px);
 }
 
@@ -137,12 +125,7 @@
         font-size: 20px;
     }
 
-    .icon-instruction {
-        @include ripple-effect-icon($margin-left: -12px, $height: 40px, $width: 40px, $top: -4px);
-        top: -1px;
-    }
-
-    .icon-logout, .icon-collapse, .icon-add, .icon-message {
+    .icon-logout, .icon-collapse, .icon-add {
         @include ripple-effect-icon($margin-left: -2px, $height: 40px, $width: 40px, $top: 3px);
     }
 
@@ -152,7 +135,7 @@
 }
 
 @media \0screen\,screen\9 {
-    .icon-instruction, .icon-logout, .setting > a, .icon-collapse, .icon-home, .icon-add, .icon-message, .icon-squares {
+    .icon-logout, .setting > a, .icon-collapse, .icon-home, .icon-add, .icon-squares {
         @include ripple-effect-icon($background: transparent);
     }
 }

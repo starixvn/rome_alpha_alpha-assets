@@ -20,21 +20,36 @@
     ]
   },
   {
+    "outputFileName": "bundles/common/pass-font.css",
+    "inputFiles": [
+      "styles/base/pass-font.css"
+    ]
+  },
+  {
     "outputFileName": "bundles/common/common-super.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-super.css",
+      "styles/themes/components/buttons/button-super.css",
+      "styles/components/customize-checkbox-radio.css",
+      "styles/themes/components/checkbox-radio/checkbox-radio-super.css"
     ]
   },
   {
     "outputFileName": "bundles/common/common-master.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master.css",
+      "styles/themes/components/buttons/button-master.css",
+      "styles/components/customize-checkbox-radio.css",
+      "styles/themes/components/checkbox-radio/checkbox-radio-master.css"
     ]
   },
   {
     "outputFileName": "bundles/common/common-agent.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent.css"
+      "styles/themes/components/tabs/tab-agent.css",
+      "styles/themes/components/buttons/button-agent.css",
+      "styles/components/customize-checkbox-radio.css",
+      "styles/themes/components/checkbox-radio/checkbox-radio-agent.css"
     ]
   },
   {
@@ -107,7 +122,6 @@
     "outputFileName": "bundles/site-main/default.js",
     "inputFiles": [
       "js/libs/bootstrap/tab.js",
-      "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap-material/material.js",
       "js/libs/bootstrap-material/ripples.js",
       "js/libs/jquery/jquery.cookie.js",
@@ -116,8 +130,7 @@
       "js/components/draggable/tiny-draggable.js",
       "js/components/typeahead/typeahead.js",
       "js/components/toastr/toastr.js",
-      "js/components/resizable/resizable.js",
-      "js/libs/bootstrap/carousel.js"
+      "js/components/resizable/resizable.js"
     ]
   },
   {
@@ -404,7 +417,8 @@
     "outputFileName": "bundles/site-main/security/before-home-page.js",
     "inputFiles": [
       "js/components/secure-hashing/sha1.js",
-      "js/components/secure-hashing/sha256.js"
+      "js/components/secure-hashing/sha256.js",
+      "js/components/inputconstraint/constraint-input.js"
     ]
   },
   {
@@ -659,9 +673,22 @@
     ]
   },
   {
+    "outputFileName": "bundles/site-accountinfo/index.css",
+    "inputFiles": [
+      "styles/components/tables.css"
+    ]
+  },
+  {
     "outputFileName": "bundles/site-accountinfo/default.css",
     "inputFiles": [
       "styles/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/account-info/index.js",
+    "inputFiles": [
+      "js/libs/bootstrap/tooltip.js",
+      "js/libs/bootstrap-material/ripples.js"
     ]
   },
   {

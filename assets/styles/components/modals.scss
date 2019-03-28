@@ -142,19 +142,24 @@
         border-top: none;
         padding-bottom: 4px;
 
+        .btn.btn-primary:not(.btn-raised) {
+            color: #045ace;
+        }
+
         .btn {
+            @include border-radius(1px);
+            @include box-shadow(0, 0, 0, transparent);
             border: none;
             background: none;
             color: #045ace;
             font-weight: bold;
+            height: 32px;
             line-height: 32px;
             padding: 0 16px;
             margin: 8px;
             min-width: 86px;
             text-transform: capitalize;
-            text-transform: uppercase;
-            @include border-radius(1px);
-            @include box-shadow(0, 0, 0, transparent);
+            text-transform: uppercase;            
 
             &:hover, &:focus {
                 background-color: #ececec;
@@ -171,5 +176,78 @@
 @media \0screen\,screen\9 {
     .modal-dialog {
         margin: 0 auto !important;
+    }
+}
+
+@media only screen and (max-device-width: $screen-device-lower768) {
+
+    /*.modal-backdrop {
+        z-index: 9999;
+    }*/
+
+	.bootbox-confirm.in, 
+	.bootbox-alert.in,
+	.modal.in.modal-account-info {
+		z-index: 10000;
+	}
+
+    .modal.in.modal-account-info,
+    .bootbox-confirm.in.bootbox-account-info .modal-dialog {
+        left: 5% !important;
+        right: 5% !important;
+        width: 90% !important;
+    }
+
+    .modal.in.modal-account-info {
+        box-shadow: 0 calculateScale(10px) calculateScale(20px) rgba(0,0,0,.19), 0 calculateScale(6px) calculateScale(6px) rgba(0,0,0,.23);
+        
+
+        .modal-content .modal-header .modal-title {
+            padding: calculateScale(10px) 0;
+            font-size: calculateScale(13px);
+        }
+
+        .modal-content .modal-header .icon-close {
+            font-size: calculateScale(18px);
+            top: calculateScale(6px);
+            width: calculateScale(60px);
+            height: calculateScale(30px);
+            left: calculateScale(10px);
+        }
+    }
+
+    .bootbox-confirm.in.bootbox-account-info {
+        
+
+        .modal-dialog {
+            position: absolute;            
+            font-size: calculateScale($font-size);
+        }
+
+        .modal-body {
+            padding: calculateScale(40px) calculateScale(16px) calculateScale(16px);
+            font-size: calculateScale(14px);
+            line-height: calculateScale(22px);
+            box-sizing: border-box;
+        }
+
+        .modal-footer .btn {
+            height: calculateScale(32px);
+            line-height: calculateScale(32px);
+            padding: 0 calculateScale(16px);
+            margin: calculateScale(8px);
+            min-width: calculateScale(86px);
+            font-size: calculateScale(14px);
+        }
+
+        .modal-footer {
+            padding: calculateScale(12px) calculateScale(16px) calculateScale(4px) calculateScale(20px);
+        }
+
+        button.close {
+            top: calculateScale(-18px);
+            right: calculateScale(-4px);
+            font-size: calculateScale(21px);
+        }
     }
 }

@@ -1,0 +1,15 @@
+﻿
+@import "../../../abstracts/_super-variables.scss";
+
+.checkbox input[type="checkbox"]:checked + label:before {
+    background-color: $primary-color;
+    border-color: $primary-color;
+}
+
+.radio input[type="radio"]:checked + label:before {
+    border-color: $primary-color;
+}
+
+.radio input[type="radio"]:checked + label:after {
+    background-color: $primary-color;
+}
