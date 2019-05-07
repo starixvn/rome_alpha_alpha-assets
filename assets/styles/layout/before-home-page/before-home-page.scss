@@ -43,6 +43,10 @@ input, button {
             right: 0;
         }
 
+        .dropdown .btn {
+            padding: 6px 8px;
+        }
+
         .btn:active, .btn.active {
             @include box-shadow-multiple(none);
         }
@@ -177,6 +181,11 @@ input, button {
             font-size: 18px;
             top: 7px;
         }
+
+        .icon-user {
+            font-size: 16px;
+            top: 8px;
+        }
     }
      
     .help-rules {
@@ -236,6 +245,8 @@ input, button {
     padding-top: 20px;
 
     .icon-rules {
+        position: relative;
+        top: -1px;
         font-size: 20px;
         margin-right: 6px;
     }
@@ -261,6 +272,8 @@ input, button {
             padding: 6px 0 6px 20px;
 
             .icon-rules {
+                position: relative;
+                top: -1px;
                 margin-right: 4px;
                 font-size: 22px;
                 margin-right: 8px;

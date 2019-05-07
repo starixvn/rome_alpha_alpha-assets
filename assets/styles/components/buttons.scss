@@ -5,7 +5,7 @@ input[type=submit], input[type=reset] {
     @include border-radius(1px);
 }
 
-button[disabled]:active, button[disabled],
+/*button[disabled]:active, button[disabled],
 input[type="reset"][disabled]:active,
 input[type="reset"][disabled],
 input[type="button"][disabled]:active,
@@ -13,10 +13,10 @@ input[type="button"][disabled],
 input[type="submit"][disabled]:active,
 input[type="submit"][disabled] {
     opacity: 0.6;
-    filter: alpha(opacity=60); /* For IE8 and earlier */
+    filter: alpha(opacity=60); /* For IE8 and earlier 
     color: #000;
     cursor: pointer;
-}
+}*/
 
 %btn {
     border: none;
@@ -152,22 +152,6 @@ input[type=reset], .btn-reset {
         color: $btn-remove-color;
     }
 }
-
-.btn-remove {
-    @extend %btn;
-    background-color: $btn-remove-bg;
-    color: $btn-remove-color;
-
-    &:hover, &:active, &:focus {
-        background-color: $btn-remove-bg-hover;
-
-        &[disabled], .disabled {
-            background-color: $btn-remove-bg;    
-            color: $btn-remove-color;
-        }
-    }
-}
-
 
 
 .btn {
