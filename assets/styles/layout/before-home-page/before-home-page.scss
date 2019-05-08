@@ -332,6 +332,31 @@ input, button {
     }
 }
 
+@media screen and (min-width:800px) and (max-width:1280px) and (orientation:landscape) {
+   body {
+      padding-top: 5%;
+   }
+
+    .modal.information {  
+       .modal-dialog {
+            margin-top: 10%;
+        }
+    }
+}
+
+@media screen and (min-width:600px) and (max-width:800px) and (orientation:landscape) {
+   body {
+      padding-top: 0%;
+      font-size: 12px;
+   }
+
+    .modal.information {  
+       .modal-dialog {
+            margin-top: 10%;
+        }
+    }
+}
+
 @media only screen and (max-device-width: 767px)
 {  
    body {
