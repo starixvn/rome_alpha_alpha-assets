@@ -33,6 +33,20 @@ input, button {
     @include box-sizing;
     @include effect-button();
 
+    &.nickname {
+        padding: 20px 30px;
+
+        .title {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .lblUsername {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+    }
+
     
     .box-lang {
         display: table;
@@ -329,6 +343,25 @@ input, button {
        .modal-dialog {
             margin-top: 10%;
         }
+    }
+}
+
+@media  screen and  (min-device-height: 600px) and  (max-device-height: 720px) {
+    body {
+        padding-top: 0;
+        font-size: 12px;
+    }
+
+    .modal.information {  
+        .modal-dialog {
+            margin-top: 10%;
+        }
+    }
+}
+
+@media  screen and  (device-height: 720px) {
+    body {
+        padding-top: 5%;
     }
 }
 
