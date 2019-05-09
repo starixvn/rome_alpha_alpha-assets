@@ -346,28 +346,22 @@ input, button {
     }
 }
 
-@media screen and (min-device-width:800px) and (max-device-width:1280px) and (orientation:landscape) {
-   body {
-      padding-top: 5%;
-   }
+@media  screen and  (min-device-height: 600px) and  (max-device-height: 720px) {
+    body {
+        padding-top: 0;
+        font-size: 12px;
+    }
 
     .modal.information {  
-       .modal-dialog {
+        .modal-dialog {
             margin-top: 10%;
         }
     }
 }
 
-@media screen and (min-device-width:600px) and (max-device-width:800px) and (orientation:landscape) {
-   body {
-      padding-top: 0%;
-      font-size: 12px;
-   }
-
-    .modal.information {  
-       .modal-dialog {
-            margin-top: 10%;
-        }
+@media  screen and  (device-height: 720px) {
+    body {
+        padding-top: 5%;
     }
 }
 
