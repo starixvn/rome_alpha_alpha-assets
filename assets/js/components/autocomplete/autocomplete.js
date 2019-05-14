@@ -221,7 +221,7 @@ function getWord(beginning) {
 
     if (suggestions) {
         for (var i = 0; i < suggestions.length; ++i) {
-            words[words.length] = suggestions[i][0] + "<div class='opSpan'>" + suggestions[i][1] + ' ' + suggestions[i][2] + '</div>';
+            words[words.length] = suggestions[i][0] + (suggestions[i][3] != null && suggestions[i][3] != "" ? " (" + suggestions[i][3] + ")" : "") + "<div class='opSpan'>" + suggestions[i][1] + ' ' + suggestions[i][2] + '</div>';
         }
     }
 
@@ -255,7 +255,7 @@ function keyHandler(event) {
 
                 outp.childNodes[++posi].className = 'opOver';
                 outp.childNodes[posi].lastChild.className = 'opSpanOver';
-                txtObj.value = outp.childNodes[posi].firstChild.nodeValue;
+                txtObj.value = outp.childNodes[posi].firstChild.nodeValue.replace(/\(\S+?\)/g, "").trim();
             }
         }
         else if (key == 38) { //Key up
@@ -265,7 +265,7 @@ function keyHandler(event) {
                     outp.childNodes[posi].lastChild.className = 'opSpan'
                     outp.childNodes[--posi].className = 'opOver';
                     outp.childNodes[posi].lastChild.className = 'opSpanOver'
-                    txtObj.value = outp.childNodes[posi].firstChild.nodeValue;
+                    txtObj.value = outp.childNodes[posi].firstChild.nodeValue.replace(/\(\S+?\)/g, "").trim();
                 }
                 else {
                     outp.childNodes[posi].className = 'opOut';
@@ -308,10 +308,10 @@ var mouseHandlerOut = function () {
 }
 
 var mouseClick = function () {
-    txtObj.value = this.firstChild.nodeValue;
+    txtObj.value = this.firstChild.nodeValue.replace(/\(\S+?\)/g, "").trim();
     setVisible("hidden");
     posi = -1;
-    oldins = this.firstChild.nodeValue;
+    oldins = this.firstChild.nodeValue.replace(/\(\S+?\)/g, "").trim();
     txtObj.focus();
 
     if (completedCallback) {
