@@ -1,12 +1,13 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?tobf2c');
-  src:  url('fonts/Iconalpha.eot?tobf2c#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?tobf2c') format('truetype'),
-    url('fonts/Iconalpha.woff?tobf2c') format('woff'),
-    url('fonts/Iconalpha.svg?tobf2c#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?cgewle');
+  src:  url('fonts/Iconalpha.eot?cgewle#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?cgewle') format('truetype'),
+    url('fonts/Iconalpha.woff?cgewle') format('woff'),
+    url('fonts/Iconalpha.svg?cgewle#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
+  font-display: block;
 }
 
 [class^="icon-"], [class*=" icon-"] {
@@ -24,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-progress:before {
+  content: "\e970";
+}
 .icon-contact-info:before {
   content: "\e96f";
 }

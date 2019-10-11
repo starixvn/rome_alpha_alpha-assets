@@ -126,6 +126,8 @@
       "js/libs/bootstrap-material/material.js",
       "js/libs/bootstrap-material/ripples.js",
       "js/libs/jquery/jquery.cookie.js",
+      "js/libs/jquery/jquery-ui.min.js",
+      "js/libs/jquery/jquery.ui.touch-punch.min.js",
       "js/libs/storejs/store.js",
       "js/components/scrollbar/jquery.mCustomScrollbar.js",
       "js/components/draggable/tiny-draggable.js",
@@ -420,7 +422,7 @@
     "outputFileName": "bundles/site-main/security/before-home-page.js",
     "inputFiles": [
       "js/components/secure-hashing/sha1.js",
-      "js/components/secure-hashing/sha256.js", 
+      "js/components/secure-hashing/sha256.js",
       "js/components/inputconstraint/constraint-input.js"
     ]
   },
@@ -479,7 +481,7 @@
       "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
-      "js/components/bootbox/bootbox.js",      
+      "js/components/bootbox/bootbox.js",
       "js/components/inputconstraint/constraint-input.js",
       "js/libs/clipboard/clipboard.js"
     ]
@@ -646,7 +648,7 @@
       "styles/components/tables.css"
     ]
   },
-   {
+  {
     "outputFileName": "bundles/site-main/account-info/index.js",
     "inputFiles": [
       "js/libs/bootstrap/tooltip.js",
