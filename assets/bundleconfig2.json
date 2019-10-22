@@ -125,6 +125,8 @@
       "js/libs/bootstrap-material/material.js",
       "js/libs/bootstrap-material/ripples.js",
       "js/libs/jquery/jquery.cookie.js",
+      "js/libs/jquery/jquery-ui.min.js",
+      "js/libs/jquery/jquery.ui.touch-punch.min.js",
       "js/libs/storejs/store.js",
       "js/components/scrollbar/jquery.mCustomScrollbar.js",
       "js/components/draggable/tiny-draggable.js",
