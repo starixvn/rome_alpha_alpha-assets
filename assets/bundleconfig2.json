@@ -689,6 +689,24 @@
     ]
   },
   {
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-agent.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-master.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-super.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
     "outputFileName": "bundles/site-main/account-info/index.js",
     "inputFiles": [
       "js/libs/bootstrap/tooltip.js",
