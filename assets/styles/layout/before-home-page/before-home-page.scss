@@ -275,7 +275,7 @@ input, button {
     padding-top: 20px;
     display: inline-block;
 
-    .icon-rules, .icon-ic_sharp-skip-next {
+    .icon-rules, .icon-skip-next {
         position: relative;
         top: -1px;
         font-size: 20px;
@@ -285,7 +285,8 @@ input, button {
         margin-right: 6px;
     }
 
-    .icon-ic_sharp-skip-next {
+    .icon-skip-next {
+        color: #045ACE;
         margin-left: 6px;
         vertical-align: middle;
     }
