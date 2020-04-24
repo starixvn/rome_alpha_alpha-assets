@@ -25,11 +25,11 @@ input, button {
 }
 
 .block {
-    width: 360px;
+    width: 370px;
     max-width: 400px;
     background: #fff;
-    padding: 30px;    
-    margin: auto;    
+    padding: 30px;
+    margin: auto;
     @include box-sizing;
     @include effect-button();
 
@@ -47,7 +47,10 @@ input, button {
         }
     }
 
-    
+    .skip-force-change {
+        float: right;
+    }
+
     .box-lang {
         display: table;
         width: 100%;
@@ -66,7 +69,8 @@ input, button {
         }
 
         .dropdown {
-            float: right;        
+            float: right;
+
             .dropdown-menu {
                 @include border-radius(1px);
                 @include effect-button;
@@ -75,6 +79,7 @@ input, button {
                     padding-bottom: 6px;
                     padding-top: 6px;
                     cursor: pointer;
+
                     &:hover {
                         background-color: #ddd;
                     }
@@ -94,31 +99,37 @@ input, button {
             position: relative;
             top: 4px;
             margin-right: 2px;
-           
+
             &.flag-en-US {
                 background-position: 0 0px;
             }
+
             &.flag-zh-CN {
                 background-position: 0 -17px;
             }
+
             &.flag-zh-TW {
                 background-position: 0 -34px;
             }
+
             &.flag-ja-JP {
                 background-position: 0 -50px;
             }
+
             &.flag-th-TH {
                 background-position: 0 -69px;
             }
+
             &.flag-ko-KR {
                 background-position: 0 -86px;
             }
+
             &.flag-vi-VN {
                 background-position: 0 -104px;
             }
         }
     }
-    
+
     .title {
         font-size: $font-size + 11;
         color: $text-color;
@@ -129,27 +140,29 @@ input, button {
     .avatar {
         padding-top: 10px;
         padding-bottom: 12px;
-        text-align: center;        
+        text-align: center;
+
         img {
             height: 72px;
             width: 72px;
             border: 3px solid #aeaeae;
             @include border-radius(50%);
         }
-        
+
         figcaption {
             padding: 12px 0;
+
             .username {
                 color: $text-color;
                 font-weight: bold;
             }
-        }    
+        }
     }
 
     .txt {
         border: none;
         outline: none;
-        width: 100%;        
+        width: 100%;
         border-bottom: 1px solid #c4c4c4;
         height: 36px;
         line-height: 36px;
@@ -161,8 +174,9 @@ input, button {
         &:focus {
             border-bottom: 2px solid #666;
             color: #666;
+
             + [class^="icon"] {
-                 color: #666;
+                color: #666;
             }
         }
 
@@ -180,16 +194,17 @@ input, button {
     .rowlg {
         margin-bottom: 15px;
         position: relative;
+
         [class^="icon"] {
             color: #ccc;
             position: absolute;
             left: 0;
-        }    
-        
+        }
+
         .icon-account-key {
             font-size: 20px;
             top: 7px;
-        }    
+        }
 
         .icon-lock {
             font-size: 18px;
@@ -201,22 +216,23 @@ input, button {
             top: 8px;
         }
     }
-     
+
     .help-rules {
         .error {
             position: relative;
-           .icon-rules {
+
+            .icon-rules {
                 color: $link-color;
                 cursor: pointer;
                 font-size: 16px;
                 position: relative;
                 top: 4px;
-                left: auto;                
+                left: auto;
                 padding: 8px 12px 8px 8px;
-                
+
                 &:hover {
                     color: darken($link-color, 15%);
-                }           
+                }
             }
         }
     }
@@ -244,12 +260,12 @@ input, button {
         display: block;
         padding-top: 8px;
         text-align: left;
-    }   
-    
+    }
+
     .note {
         color: #666;
         margin-top: 20px;
-    } 
+    }
 }
 
 .rules-title {
@@ -257,16 +273,21 @@ input, button {
     cursor: pointer;
     padding-bottom: 8px;
     padding-top: 20px;
+    display: inline-block;
 
-    .icon-rules {
+    .icon-rules, .icon-ic_sharp-skip-next {
         position: relative;
         top: -1px;
         font-size: 20px;
+    }
+
+    .icon-rules {
         margin-right: 6px;
     }
 
-    &:hover {
-        color: darken($link-color, 15%);
+    .icon-ic_sharp-skip-next {
+        margin-left: 6px;
+        vertical-align: middle;
     }
 }
 
