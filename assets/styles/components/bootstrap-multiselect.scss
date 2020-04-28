@@ -122,12 +122,17 @@
 
     .multiselect-item.multiselect-group a {
         padding-left: 36px !important;
+        padding-right: 0 !important;
+
         .caret {
             margin-left: 24px;
-        } 
+            float: right;
+            position: relative;
+            top: 11px;
+        }
     }
 
-    .multiselect-nested-item a{
+    .multiselect-nested-item a {
         padding-left: 16px;
     }
 }
