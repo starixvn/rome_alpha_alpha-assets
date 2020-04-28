@@ -72,7 +72,7 @@
         display: block;
     }
 
-    label.radio {
+    label.radio, label:not(.checkbox) {
         padding-left: 8px;
 
         input[type=radio] {
@@ -123,12 +123,17 @@
     .multiselect-item.multiselect-group a {
         padding-left: 36px !important;
         padding-right: 0 !important;
-
+        b:not(.caret) {
+            width: 100%;
+            display: inline-block;
+        }
         .caret {
             float: right;
             position: relative;
-            top: 11px;
-            right: 8px;
+            top: 7px;
+        }
+        input[type="checkbox"] {
+            margin-right: 3px !important;
         }
     }
 
