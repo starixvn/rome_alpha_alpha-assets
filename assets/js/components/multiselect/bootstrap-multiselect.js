@@ -763,7 +763,7 @@
                 }, this));
             }
 
-            if (this.options.enableCollapsibleOptGroups && this.options.multiple) {
+            if (this.options.enableCollapsibleOptGroups) {
                 $("li.multiselect-group input", this.$ul).off();
                 $("li.multiselect-group", this.$ul).siblings().not("li.multiselect-group, li.multiselect-all", this.$ul).each(function () {
                     $(this).toggleClass('hidden', true);
@@ -923,10 +923,12 @@
          * @param {jQuery} group
          */
         createOptgroup: function (group) {
-            if (this.options.enableCollapsibleOptGroups && this.options.multiple) {
+            if (this.options.enableCollapsibleOptGroups) {
                 var label = $(group).attr("label");
                 var value = $(group).attr("value");
-                var r = $('<li class="multiselect-item multiselect-group"><a href="javascript:void(0);"><input type="checkbox" value="' + value + '"/><b> ' + label + '<b class="caret"></b></b></a></li>');
+                var r = this.options.multiple
+                    ? $('<li class="multiselect-item multiselect-group"><a href="javascript:void(0);"><input type="checkbox" value="' + value + '"/><b> ' + label + '<b class="caret"></b></b></a></li>')
+                    : $('<li class="multiselect-item multiselect-group"><a href="javascript:void(0);"><b> ' + label + '<b class="caret"></b></b></a></li>');
 
                 if (this.options.enableClickableOptGroups) {
                     r.addClass("multiselect-group-clickable")
