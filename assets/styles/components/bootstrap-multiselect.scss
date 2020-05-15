@@ -122,18 +122,25 @@
 
     .multiselect-item.multiselect-group a {
         padding: 6px 0 6px 36px !important;
+        display: flex;
+        align-items: center;
+
+        input[type="checkbox"]{
+            top: 0;
+        }
 
         b:not(.caret) {
             width: 100%;
-            display: inline-block;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
         }
 
-        .caret {
+        /*.caret {
             float: right;
             position: relative;
             top: 7px;
-            right: 8px;
-        }
+        }*/
 
         input[type="checkbox"] {
             margin-right: 3px !important;
