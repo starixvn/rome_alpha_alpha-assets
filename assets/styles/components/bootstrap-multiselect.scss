@@ -74,6 +74,7 @@
 
     label.radio {
         padding-left: 8px;
+
         input[type=radio] {
             display: none;
         }
@@ -81,9 +82,11 @@
 
     .filter {
         padding: 0;
+
         &:hover {
             background: #fff;
         }
+
         .input-group {
             width: 91%;
 
@@ -107,8 +110,7 @@
     }
 
     .checkbox input[type="checkbox"],
-    .checkbox-inline input[type="checkbox"] 
-     {
+    .checkbox-inline input[type="checkbox"] {
         margin-left: -22px;
         top: 2px;
     }
@@ -116,6 +118,45 @@
 
     .multiselect-all a {
         border-bottom: 1px solid $border-color-dark;
+    }
+
+    .multiselect-item.multiselect-group a {
+        padding: 6px 0 6px 36px !important;
+        display: flex;
+        align-items: center;
+
+        input[type="checkbox"]{
+            top: 0;
+        }
+
+        b:not(.caret) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        /*.caret {
+            float: right;
+            position: relative;
+            top: 7px;
+        }*/
+
+        input[type="checkbox"] {
+            margin-right: 3px !important;
+        }
+    }
+
+    .multiselect-item.multiselect-group-clickable a {
+        padding: 8px 0 8px 8px !important;
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    .multiselect-nested-item a {
+        padding-left: 16px;
+
     }
 }
 
@@ -135,3 +176,4 @@
     background: none;
     color: $text-color;
 }
+
