@@ -572,13 +572,13 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
-	  "styles/components/tables.css",
+      "styles/components/tables.css",
       "styles/components/calendars.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon.css",
-	  "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
@@ -630,7 +630,7 @@
     "inputFiles": [
       "js/libs/bootstrap/collapse.js",
       "js/libs/moment/moment.js",
-	  "js/libs/bootstrap/tab.js",
+      "js/libs/bootstrap/tab.js",
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js",
@@ -642,6 +642,7 @@
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
+      "js/libs/cleave/cleave.min.js",
       "js/components/pagination/jquery.draggable.js",
       "js/components/pagination/jquery.resizable.js",
       "js/components/pagination/jquery.parser.js",
@@ -793,6 +794,12 @@
       "js/components/multiselect/bootstrap-multiselect.js",
       "js/components/storejs/store.js",
       "js/components/autocomplete/autocomplete.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-asset/numeral.js",
+    "inputFiles": [
+      "js/libs/numeral/numeral.js"
     ]
   }
 ]
