@@ -813,7 +813,8 @@
 	{
 		"outputFileName": "bundles/site-asset/data-table.css",
 		"inputFiles": [
-			"js/libs/data-table/styles/jquery.dataTables.css"
+			"js/libs/data-table/styles/jquery.dataTables.css",
+			"js/libs/data-table/styles/jquery.dataTables.override.css"
 		]
 	}
 ]
