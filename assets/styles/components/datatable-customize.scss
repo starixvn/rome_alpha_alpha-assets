@@ -1,0 +1,13 @@
+﻿table.dataTable {
+    tr {
+        td.details-control, th.details-control {
+            background-image: url("../images/components/Plus.svg");
+        }
+
+        &.shown {
+            td.details-control, th.details-control {
+                background-image: url("../images/components/Minus.svg");
+            }
+        }
+    }
+}
