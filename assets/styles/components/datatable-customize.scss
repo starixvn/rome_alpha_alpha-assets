@@ -1,13 +1,80 @@
 ﻿table.dataTable {
-    tr {
-        td.details-control, th.details-control {
-            background-image: url("../images/components/Plus.svg");
-        }
+    text-align: left;
+    margin-left: 0px !important;
 
-        &.shown {
-            td.details-control, th.details-control {
-                background-image: url("../images/components/Minus.svg");
+    thead th, tbody td, tfoot td {
+        box-sizing: border-box;
+        padding: 4px 8px;
+        border-right: none !important;
+        border-bottom: none !important;
+    }
+
+    thead {
+        tr:first-of-type th {
+            height: 0px !important;
+            padding: 0px !important;
+            border: 0px !important;
+
+            &:last-of-type {
+                background-color: #666;
             }
         }
+
+        tr:nth-of-type(2) th:last-of-type {
+            background-color: #666 !important;
+        }
+
+        .sorting, .sorting_asc, .sorting_desc {
+            background-clip: padding-box;
+            cursor: pointer;
+            position: relative;
+            padding-right: 14px;
+            background-image: none !important;
+
+            &:after {
+                cursor: pointer;
+                font-family: 'Iconalpha';
+                font-size: 12px;
+                position: absolute;
+                right: 0;
+                padding: 0 2px;
+            }
+
+            &.col-combine {
+                &:after {
+                    display: none;
+                }
+            }
+        }
+
+        .sorting:after {
+            content: '\e960';
+        }
+
+        .sorting_asc:after {
+            content: '\e961';
+            color: #ff1500;
+        }
+
+        .sorting_desc:after {
+            content: '\e962';
+            color: #ff1500;
+        }
     }
+    /*td.details-control,
+    th.details-control {
+        background: url('../images/details_open.png') no-repeat center center;
+        cursor: pointer;
+    }
+
+    tr.shown td.details-control,
+    tr.shown th.details-control {
+        background: url('../images/details_close.png') no-repeat center center;
+    }*/
 }
+
+table.fixedHeader-floating {
+    position: fixed !important;
+}
+
+
