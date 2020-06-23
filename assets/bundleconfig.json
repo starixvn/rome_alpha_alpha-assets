@@ -807,14 +807,18 @@
 		"outputFileName": "bundles/site-asset/data-table.js",
     "inputFiles": [
       "js/components/data-table/jquery.dataTables.js",
-      "js/components/data-table/dataTables.fixedHeader.js"
+      "js/components/data-table/dataTables.fixedHeader.js",
+			"js/libs/data-table/js/dataTables.responsive.js"
+
     ]
 	},
 	{
 		"outputFileName": "bundles/site-asset/data-table.css",
-    "inputFiles": [
-      "styles/vendors/data-table/styles/jquery.dataTables.css",
-      "styles/components/datatable-customize.css"
-    ]
+		"inputFiles": [
+			"js/libs/data-table/styles/jquery.dataTables.css",
+			"js/libs/data-table/styles/responsive.dataTables.css",
+			"js/libs/data-table/styles/jquery.dataTables.override.css",
+			"styles/components/datatable-customize.css"
+		]
 	}
 ]
