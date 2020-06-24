@@ -232,10 +232,6 @@
     "inputFile": "styles/components/customize-checkbox-radio.scss"
   },
   {
-    "outputFile": "js/libs/data-table/styles/jquery.dataTables.override.css",
-    "inputFile": "js/libs/data-table/styles/jquery.dataTables.override.scss"
-  },
-  {
     "outputFile": "styles/components/datatable-customize.css",
     "inputFile": "styles/components/datatable-customize.scss"
   }
