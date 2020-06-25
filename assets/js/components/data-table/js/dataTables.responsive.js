@@ -552,6 +552,7 @@
 			 * @private
 			 */
 			_resize: function () {
+				//$.blockUI();
 				var dt = this.s.dt;
 				var width = $(window).width();
 				var breakpoints = this.c.breakpoints;
@@ -586,6 +587,8 @@
 				dt.columns().eq(0).each(function (colIdx, i) {
 					dt.column(colIdx).visible(columnsVis[i]);
 				});
+				
+				$.unblockUI();
 			},
 
 
