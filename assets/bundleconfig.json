@@ -813,11 +813,12 @@
 	},
 	{
 		"outputFileName": "bundles/site-asset/data-table01.css",
-		"inputFiles": [
-			"js/components/data-table/styles/jquery.dataTables.css",
-			"js/components/data-table/styles/responsive.dataTables.css",
-			"js/components/data-table/styles/fixedHeader.dataTables.css"
-		]
+    "inputFiles": [
+      "js/components/data-table/styles/jquery.dataTables.css",
+      "js/components/data-table/styles/responsive.dataTables.css",
+      "js/components/data-table/styles/fixedHeader.dataTables.css",
+      "styles/components/datatable-customize-01.css"
+    ]
 	},
 	{
 		"outputFileName": "bundles/site-asset/data-table.js",

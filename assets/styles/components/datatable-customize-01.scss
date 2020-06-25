@@ -1,0 +1,110 @@
+﻿table.dataTable {
+    margin-left: 0px !important;
+    text-align: right;
+
+    thead th, tbody td {
+        box-sizing: border-box;
+        border-bottom: none !important;
+        border-right: none !important;
+        padding: 4px 8px;
+    }
+
+    thead {
+        tr:first-of-type th {
+            height: 0px !important;
+            padding-bottom: 0px !important;
+            padding-top: 0px !important;
+            border: 0px !important;
+        }
+    }
+
+    tbody {
+        tr:not(.tbl-footer):hover [class*='sorting_'] {
+            background-color: #f8eb95 !important;
+        }
+
+        [class*='sorting_'] {
+            background: none !important;
+        }
+
+        .odd {
+            background-color: #f9f9f9 !important;
+        }
+
+        .even {
+            background-color: #eae9ee !important;
+        }
+
+        tr, tr.child {
+            &:last-of-type:hover {
+                background: #7f3d1d !important;
+            }
+
+            td.child {
+                padding: 0;
+
+                ul {
+                    width: 100% !important;
+
+                    li {
+                        border-bottom: 1px solid #d1d1d1 !important;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 14px 8px;
+
+                        .dtr-title {
+                            text-align: left;
+                        }
+
+                        &:last-of-type {
+                            border-bottom: none !important;
+                        }
+                    }
+                }
+            }
+        }
+
+        tr:last-of-type:hover {
+            background: #7f3d1d !important;
+        }
+    }
+
+    .control {
+        display: table-cell;
+        width: 30px;
+        vertical-align: middle;
+        margin: 0 8px 0 5px;
+    }
+}
+
+
+table.dataTable.dtr-column > thead > tr.parent th.control,
+table.dataTable.dtr-column > tbody > tr.parent td.control {
+    &:before {
+        content: url("../images/components/Minus.svg");
+        background-color: #31b131;
+    }
+}
+
+table.dataTable.dtr-column > thead > tr > th.control,
+table.dataTable.dtr-column > tbody > tr > td.control {
+    &:before {
+        content: url("../images/components/Plus.svg");
+        box-shadow: none;
+        border: none;
+        height: unset;
+        width: unset;
+    }
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid #d1d1d1;
+}
+table.fixedHeader-floating {
+    position: fixed !important;
+}
+
+table.dataTable .tbl-footer td {
+    background-color: #7f3d1d !important;
+}
