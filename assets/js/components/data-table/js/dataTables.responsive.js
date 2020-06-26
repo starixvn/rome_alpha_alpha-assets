@@ -115,7 +115,8 @@
 				dt.settings()[0]._responsive = this;
 
 				// Use DataTables' private throttle function to avoid processor thrashing
-				$(window).on('resize.dtr orientationchange.dtr', dt.settings()[0].oApi._fnThrottle(function () {
+				$(window).on('orientationchange.dtr', dt.settings()[0].oApi._fnThrottle(function () {
+					that._collapseDetails();
 					that._resize();
 				}));
 
@@ -169,6 +170,13 @@
 				this._resize();
 			},
 
+			_collapseDetails: function () {
+				$('thead tr.parent').removeClass('parent');
+
+				$('tbody tr.parent').each((index, element) => {
+					$(element).find('.control').click();
+				});
+			},
 
 			/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 			 * Private methods
