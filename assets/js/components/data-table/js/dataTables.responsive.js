@@ -115,7 +115,7 @@
 				dt.settings()[0]._responsive = this;
 
 				// Use DataTables' private throttle function to avoid processor thrashing
-				$(window).on('orientationchange.dtr', dt.settings()[0].oApi._fnThrottle(function () {
+				$(window).on('resize.dtr orientationchange.dtr', dt.settings()[0].oApi._fnThrottle(function () {
 					that._collapseDetails();
 					that._resize();
 				}));
@@ -171,6 +171,7 @@
 			},
 
 			_collapseDetails: function () {
+				$(window).scrollTop(0);
 				$('thead tr.parent').removeClass('parent');
 
 				$('tbody tr.parent').each((index, element) => {
@@ -226,8 +227,8 @@
 				// pixels
 				var scrolling = dt.settings()[0].oScroll;
 				var bar = scrolling.sY || scrolling.sX ? scrolling.iBarWidth : 0;
-				var widthAvailable = dt.table().container().offsetWidth - bar;
-				var usedWidth = widthAvailable - requiredWidth;
+				var widthAvailable = screen.width < dt.table().container().offsetWidth ? screen.width: dt.table().container().offsetWidth;
+				var usedWidth = widthAvailable - bar - requiredWidth;
 
 				// Control column needs to always be included. This makes it sub-
 				// optimal in terms of using the available with, but to stop layout
@@ -562,7 +563,8 @@
 			_resize: function () {
 				//$.blockUI();
 				var dt = this.s.dt;
-				var width = $(window).width();
+				var width = screen.width;
+				//alert(width);
 				var breakpoints = this.c.breakpoints;
 				var breakpoint = breakpoints[0].name;
 				var columns = this.s.columns;
@@ -691,8 +693,8 @@
 		 */
 		Responsive.breakpoints = [
 			{ name: 'desktop', width: Infinity },
-			{ name: 'tablet-l', width: 1024 },
-			{ name: 'tablet-p', width: 768 },
+			{ name: 'tablet-l', width: 1024 - 60 },
+			{ name: 'tablet-p', width: 768 - 60},
 			{ name: 'mobile-l', width: 480 },
 			{ name: 'mobile-p', width: 320 }
 		];
