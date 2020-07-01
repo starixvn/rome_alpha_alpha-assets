@@ -222,10 +222,10 @@
 				// pixels
 				var scrolling = dt.settings()[0].oScroll;
 				var bar = scrolling.sY || scrolling.sX ? scrolling.iBarWidth : 0;
-				var screenWidth = this._getDeviceWidth(); 
-				var widthAvailable = screenWidth < dt.table().container().offsetWidth ? screenWidth : dt.table().container().offsetWidth;
+				//var screenWidth = this._getDeviceWidth(); 
+				//var widthAvailable = screenWidth < dt.table().container().offsetWidth? screenWidth : dt.table().container().offsetWidth;
 				//alert(`offsetWidth:${dt.table().container().offsetWidth}; screen width: ${screenWidth}`);
-				var usedWidth = widthAvailable - bar - requiredWidth;
+				var usedWidth = dt.table().container().offsetWidth - bar - requiredWidth;
 
 				// Control column needs to always be included. This makes it sub-
 				// optimal in terms of using the available with, but to stop layout
