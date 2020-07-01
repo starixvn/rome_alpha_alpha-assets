@@ -1,80 +1,110 @@
 ﻿table.dataTable {
-    text-align: left;
     margin-left: 0px !important;
+    text-align: right;
 
-    thead th, tbody td, tfoot td {
+    thead th, tbody td {
         box-sizing: border-box;
-        padding: 4px 8px;
-        border-right: none !important;
         border-bottom: none !important;
+        border-right: none !important;
+        padding: 4px 8px;
     }
 
     thead {
         tr:first-of-type th {
             height: 0px !important;
-            padding: 0px !important;
+            padding-bottom: 0px !important;
+            padding-top: 0px !important;
             border: 0px !important;
+        }
+    }
 
-            &:last-of-type {
-                background-color: #666;
-            }
+    tbody {
+        tr:not(.tbl-footer):hover [class*='sorting_'] {
+            background-color: #f8eb95 !important;
         }
 
-        tr:nth-of-type(2) th:last-of-type {
-            background-color: #666 !important;
+        [class*='sorting_'] {
+            background: none !important;
         }
 
-        .sorting, .sorting_asc, .sorting_desc {
-            background-clip: padding-box;
-            cursor: pointer;
-            position: relative;
-            padding-right: 14px;
-            background-image: none !important;
+        .odd {
+            background-color: #f9f9f9 !important;
+        }
 
-            &:after {
-                cursor: pointer;
-                font-family: 'Iconalpha';
-                font-size: 12px;
-                position: absolute;
-                right: 0;
-                padding: 0 2px;
+        .even {
+            background-color: #eae9ee !important;
+        }
+
+        tr, tr.child {
+            &:last-of-type:hover {
+                background: #7f3d1d !important;
             }
 
-            &.col-combine {
-                &:after {
-                    display: none;
+            td.child {
+                padding: 0;
+
+                ul {
+                    width: 100% !important;
+
+                    li {
+                        border-bottom: 1px solid #d1d1d1 !important;
+                        display: flex;
+                        justify-content: space-between;
+                        align-items: center;
+                        padding: 14px 8px;
+
+                        .dtr-title {
+                            text-align: left;
+                        }
+
+                        &:last-of-type {
+                            border-bottom: none !important;
+                        }
+                    }
                 }
             }
         }
 
-        .sorting:after {
-            content: '\e960';
-        }
-
-        .sorting_asc:after {
-            content: '\e961';
-            color: #ff1500;
-        }
-
-        .sorting_desc:after {
-            content: '\e962';
-            color: #ff1500;
+        tr:last-of-type:hover {
+            background: #7f3d1d !important;
         }
     }
-    /*td.details-control,
-    th.details-control {
-        background: url('../images/details_open.png') no-repeat center center;
-        cursor: pointer;
-    }
 
-    tr.shown td.details-control,
-    tr.shown th.details-control {
-        background: url('../images/details_close.png') no-repeat center center;
-    }*/
+    .control {
+        display: table-cell;
+        width: 30px;
+        vertical-align: middle;
+        margin: 0 8px 0 5px;
+    }
 }
 
+
+table.dataTable.dtr-column > thead > tr.parent th.control,
+table.dataTable.dtr-column > tbody > tr.parent td.control {
+    &:before {
+        content: url("../images/components/Minus.svg");
+        background-color: #31b131;
+    }
+}
+
+table.dataTable.dtr-column > thead > tr > th.control,
+table.dataTable.dtr-column > tbody > tr > td.control {
+    &:before {
+        content: url("../images/components/Plus.svg");
+        box-shadow: none;
+        border: none;
+        height: unset;
+        width: unset;
+    }
+}
+
+table.dataTable.no-footer {
+    border-bottom: 1px solid #d1d1d1;
+}
 table.fixedHeader-floating {
     position: fixed !important;
 }
 
-
+table.dataTable .tbl-footer td {
+    background-color: #7f3d1d !important;
+}

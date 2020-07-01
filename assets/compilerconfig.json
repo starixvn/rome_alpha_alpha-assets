@@ -234,9 +234,5 @@
   {
     "outputFile": "styles/components/datatable-customize.css",
     "inputFile": "styles/components/datatable-customize.scss"
-  },
-  {
-    "outputFile": "styles/components/datatable-customize-01.css",
-    "inputFile": "styles/components/datatable-customize-01.scss"
   }
 ]
