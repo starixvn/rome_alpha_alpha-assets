@@ -115,8 +115,12 @@
 				dt.settings()[0]._responsive = this;
 
 				// Use DataTables' private throttle function to avoid processor thrashing
-				$(window).on('resize.dtr orientationchange.dtr', dt.settings()[0].oApi._fnThrottle(function () {
+				$(window).on('orientationchange.dtr', dt.settings()[0].oApi._fnThrottle(function () {
 					that._collapseDetails();
+					that._resize();
+				}));
+
+				$(window).on('resize.dtr', dt.settings()[0].oApi._fnThrottle(function () {
 					that._resize();
 				}));
 
@@ -170,15 +174,6 @@
 				this._resize();
 			},
 
-			_collapseDetails: function () {
-				$(window).scrollTop(0);
-				$('thead tr.parent').removeClass('parent');
-
-				$('tbody tr.parent').each((index, element) => {
-					$(element).find('.control').click();
-				});
-			},
-
 			/* * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * *
 			 * Private methods
 			 */
@@ -227,7 +222,9 @@
 				// pixels
 				var scrolling = dt.settings()[0].oScroll;
 				var bar = scrolling.sY || scrolling.sX ? scrolling.iBarWidth : 0;
-				var widthAvailable = screen.width < dt.table().container().offsetWidth ? screen.width: dt.table().container().offsetWidth;
+				var screenWidth = this._getDeviceWidth(); 
+				var widthAvailable = screenWidth < dt.table().container().offsetWidth ? screenWidth : dt.table().container().offsetWidth;
+				//alert(`offsetWidth:${dt.table().container().offsetWidth}; screen width: ${screenWidth}`);
 				var usedWidth = widthAvailable - bar - requiredWidth;
 
 				// Control column needs to always be included. This makes it sub-
@@ -290,6 +287,22 @@
 				return display;
 			},
 
+			_collapseDetails: function () {
+				$(window).scrollTop(0);
+				$('thead tr.parent').removeClass('parent');
+
+				$('tbody tr.parent').each((index, element) => {
+					$(element).find('.control').click();
+				});
+			},
+
+			_isLandscape: function () {
+				return window.orientation === 90 || window.orientation === -90;
+			},
+
+			_getDeviceWidth: function () {
+				return this._isLandscape() ? screen.height : screen.width;
+			},
 
 			/**
 			 * Create the internal `columns` array with information about the columns
@@ -561,9 +574,9 @@
 			 * @private
 			 */
 			_resize: function () {
-				//$.blockUI();
+				$.blockUI();
 				var dt = this.s.dt;
-				var width = screen.width;
+				var width = $(window).width();
 				//alert(width);
 				var breakpoints = this.c.breakpoints;
 				var breakpoint = breakpoints[0].name;
