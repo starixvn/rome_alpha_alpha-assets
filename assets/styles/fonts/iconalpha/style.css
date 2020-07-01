@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?xdzl6x');
-  src:  url('fonts/Iconalpha.eot?xdzl6x#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?xdzl6x') format('truetype'),
-    url('fonts/Iconalpha.woff?xdzl6x') format('woff'),
-    url('fonts/Iconalpha.svg?xdzl6x#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?bpz21l');
+  src:  url('fonts/Iconalpha.eot?bpz21l#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?bpz21l') format('truetype'),
+    url('fonts/Iconalpha.woff?bpz21l') format('woff'),
+    url('fonts/Iconalpha.svg?bpz21l#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -13,7 +13,7 @@
 [class^="icon-"], [class*=" icon-"] {
   /* use !important to prevent issues with browser extensions that change fonts */
   font-family: 'Iconalpha' !important;
-  speak: none;
+  speak: never;
   font-style: normal;
   font-weight: normal;
   font-variant: normal;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-under-maintenance:before {
+  content: "\e984";
+}
 .icon-clone-account:before {
   content: "\e980";
   color: #055ace;
