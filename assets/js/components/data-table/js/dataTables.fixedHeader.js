@@ -353,11 +353,11 @@ $.extend( FixedHeader.prototype, {
 			} );
 		};
 
-		var thWidths = get( 'th' );
-		var tdWidths = get( 'td' );
+		var thWidths = get( 'tr:first th' );
+		var tdWidths = get( 'tr:first td' );
 
-		set( 'th', thWidths );
-		set( 'td', tdWidths );
+		set( 'tr:first th', thWidths );
+		set( 'tr:first td', tdWidths );
 	},
 
 	/**
