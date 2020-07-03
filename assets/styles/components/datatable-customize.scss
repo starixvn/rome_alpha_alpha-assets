@@ -10,9 +10,10 @@
     }
 
     thead {
-        th {
+        th:not(.sorting_disabled) {
             padding-right: 16px;
         }
+
         [class*="sorting"] {
             position: relative;
 
