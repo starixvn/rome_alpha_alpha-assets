@@ -340,14 +340,14 @@ $.extend( FixedHeader.prototype, {
 		var get = function ( name ) {
 			return $(name, from)
 				.map( function () {
-					return $(this).width();
+					return $(this).innerWidth();
 				} ).toArray();
 		};
 
 		var set = function ( name, toWidths ) {
 			$(name, to).each( function ( i ) {
 				$(this).css( {
-					width: toWidths[i],
+					innerWidth: toWidths[i],
 					minWidth: toWidths[i]
 				} );
 			} );
@@ -356,7 +356,16 @@ $.extend( FixedHeader.prototype, {
 		var thWidths = get( 'tr:first th' );
 		var tdWidths = get( 'tr:first td' );
 
-		set( 'tr:first th', thWidths );
+		$('table.dataTable').each(function (table) {
+			$(this).find('tr:first th').each(function (i) {
+				$(this).css({
+					width: thWidths[i],
+					minWidth: thWidths[i]
+				});
+			});
+		});
+
+		//set('tr:first th', thWidths);
 		set( 'tr:first td', tdWidths );
 	},
 
@@ -734,23 +743,3 @@ $.each( ['header', 'footer'], function ( i, el ) {
 
 return FixedHeader;
 }));
-
-
-$.fn.isOnScreen = function () {
-
-	var win = $(window);
-
-	var viewport = {
-		top: win.scrollTop(),
-		left: win.scrollLeft()
-	};
-	viewport.right = viewport.left + win.width();
-	viewport.bottom = viewport.top + win.height();
-
-	var bounds = this.offset();
-	bounds.right = bounds.left + this.outerWidth();
-	bounds.bottom = bounds.top + this.outerHeight();
-
-	return (!(viewport.right < bounds.left || viewport.left > bounds.right || viewport.bottom < bounds.top || viewport.top > bounds.bottom));
-
-};
