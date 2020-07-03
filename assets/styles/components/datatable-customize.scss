@@ -10,6 +10,33 @@
     }
 
     thead {
+        [class*="sorting"] {
+            position: relative;
+
+            &:after {
+                font-family: 'IconAlpha';
+                font-size: 10px;
+                position: absolute;
+                right: 0;
+                padding: 0 2px;
+                cursor: pointer;
+            }
+        }
+
+        .sorting:after {
+            content: '\e960';
+        }
+
+        .sorting_asc:after {
+            content: '\e961';
+            color: #ff1500;
+        }
+
+        .sorting_desc:after {
+            content: '\e962';
+            color: #ff1500;
+        }
+
         tr:first-of-type th {
             height: 0px !important;
             padding-bottom: 0px !important;
@@ -83,7 +110,7 @@ table.dataTable.dtr-column > thead > tr.parent th.control,
 table.dataTable.dtr-column > tbody > tr.parent td.control {
     &:before {
         content: url("../images/components/Minus.svg");
-        background-color: #31b131;
+        background-color: unset;
     }
 }
 
@@ -95,6 +122,7 @@ table.dataTable.dtr-column > tbody > tr > td.control {
         border: none;
         height: unset;
         width: unset;
+        background-color: unset;
     }
 }
 

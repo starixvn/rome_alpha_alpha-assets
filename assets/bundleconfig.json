@@ -806,17 +806,17 @@
 	{
 		"outputFileName": "bundles/site-asset/data-table.js",
 		"inputFiles": [
-			"js/components/data-table/js/jquery.dataTables.js",
-			"js/components/data-table/js/dataTables.fixedHeader.js",
-			"js/components/data-table/js/dataTables.responsive.js"
+			"js/components/data-table/jquery.dataTables.js",
+			"js/components/data-table/dataTables.fixedHeader.js",
+			"js/components/data-table/dataTables.responsive.js"
 		]
 	},
 	{
 		"outputFileName": "bundles/site-asset/data-table.css",
     "inputFiles": [
-      "js/components/data-table/styles/jquery.dataTables.css",
-      "js/components/data-table/styles/responsive.dataTables.css",
-      "js/components/data-table/styles/fixedHeader.dataTables.css",
+      "styles/vendors/data-table/jquery.dataTables.css",
+      "styles/vendors/data-table/responsive.dataTables.css",
+      "styles/vendors/data-table/fixedHeader.dataTables.css",
       "styles/components/datatable-customize.css"
     ]
 	}
