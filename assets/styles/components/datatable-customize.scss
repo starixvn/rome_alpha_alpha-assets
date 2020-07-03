@@ -10,6 +10,9 @@
     }
 
     thead {
+        th {
+            padding-right: 16px;
+        }
         [class*="sorting"] {
             position: relative;
 
@@ -17,8 +20,7 @@
                 font-family: 'IconAlpha';
                 font-size: 10px;
                 position: absolute;
-                right: 0;
-                padding: 0 2px;
+                right: 2px;
                 cursor: pointer;
             }
         }
