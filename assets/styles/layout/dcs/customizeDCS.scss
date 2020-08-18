@@ -235,6 +235,19 @@ select.setting-field {
     }
 }
 
+.icon--copy--active {
+    background: none;
+    @include ripple-effect-icon($top: 0px, $margin-left: -6px);
+
+    &:before {
+        @extend %icon;
+        color: $text-color;
+        content: '\e94e';
+        position: relative;
+        top: -6px;
+        font-weight: 100;
+    }
+}
 /*******************************/
 /* Messages */
 /*******************************/
@@ -494,4 +507,8 @@ select.setting-field {
 
 .setting-field--error {
     border-color: $hint-error-border-color !important;
+}
+
+.block__cell-group .align-center {
+    align-items: center;
 }
