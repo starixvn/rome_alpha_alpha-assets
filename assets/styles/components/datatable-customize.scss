@@ -7,7 +7,7 @@
 		margin-left: 0px !important;
 		text-align: right;
 
-		&.dtr-column > thead > tr.parent th.control,
+		/*&.dtr-column > thead > tr.parent th.control,*/
 		&.dtr-column > tbody > tr.parent td.control {
 			&:before {
 				content: url("../images/components/Minus.svg");
@@ -15,7 +15,7 @@
 			}
 		}
 
-		&.dtr-column > thead > tr > th.control,
+		/*&.dtr-column > thead > tr > th.control,*/
 		&.dtr-column > tbody > tr > td.control {
 			&:before {
 				content: url("../images/components/Plus.svg");

@@ -706,8 +706,8 @@
 		 */
 		Responsive.breakpoints = [
 			{ name: 'desktop', width: Infinity },
-			{ name: 'tablet-l', width: 1024 - 60 },
-			{ name: 'tablet-p', width: 768 - 60},
+			{ name: 'tablet-l', width: 1024 },
+			{ name: 'tablet-p', width: 768 },
 			{ name: 'mobile-l', width: 480 },
 			{ name: 'mobile-p', width: 320 }
 		];
