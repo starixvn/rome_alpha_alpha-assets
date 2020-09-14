@@ -6,7 +6,6 @@
 	&.dataTable {
 		margin-left: 0px !important;
 		text-align: right;
-
 		/*&.dtr-column > thead > tr.parent th.control,*/
 		&.dtr-column > tbody > tr.parent td.control {
 			&:before {
@@ -14,7 +13,6 @@
 				background-color: unset;
 			}
 		}
-
 		/*&.dtr-column > thead > tr > th.control,*/
 		&.dtr-column > tbody > tr > td.control {
 			&:before {
@@ -138,6 +136,10 @@
 
 		.tbl-footer td {
 			background-color: #7f3d1d !important;
+		}
+
+		.dataTables_empty {
+			text-align: center;	
 		}
 	}
 }
