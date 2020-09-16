@@ -493,6 +493,8 @@
 						row.child(info, 'child').show();
 						$(row.node()).addClass('parent');
 					}
+
+					details.bindingCallback();
 				});
 			},
 
@@ -547,6 +549,8 @@
 						dt.row(idx).child.hide();
 					});
 				}
+
+
 			},
 
 
@@ -796,7 +800,9 @@
 
 				target: 0,
 
-				type: 'inline'
+				type: 'inline',
+
+				bindingCallback: function () { }
 			}
 		};
 
