@@ -825,17 +825,17 @@
     "inputFiles": [
       "js/components/data-table/jquery.dataTables.js",
       "js/components/data-table/dataTables.fixedHeader.js",
-			"js/components/data-table/dataTables.responsive.js",
-			"js/libs/bootstrap/modal.js"
+      "js/components/data-table/dataTables.responsive.js",
+      "js/libs/bootstrap/modal.js"
     ]
   },
   {
     "outputFileName": "bundles/site-asset/data-table.css",
-		"inputFiles": [
-			"styles/vendors/data-table/jquery.dataTables.css",
-			"styles/vendors/data-table/responsive.dataTables.css",
-			"styles/vendors/data-table/fixedHeader.dataTables.css",
-			"styles/components/datatable-customize.css"
+    "inputFiles": [
+      "styles/vendors/data-table/jquery.dataTables.css",
+      "styles/vendors/data-table/responsive.dataTables.css",
+      "styles/vendors/data-table/fixedHeader.dataTables.css",
+      "styles/components/datatable-customize.css"
     ]
   },
   {
@@ -859,16 +859,16 @@
     "inputFiles": [
       "styles/vendors/daterangepicker/daterangepicker.css",
       "styles/components/daterangepicker-customize.css"
-		]
-	},
-	{
-		"outputFileName": "bundles/site-memberinfo/data-table.js",
-		"inputFiles": [
-			"js/components/data-table/jquery.dataTables.js",
-			"js/components/data-table/dataTables.fixedHeader.js",
-			"js/components/data-table/dataTables.responsive.js",
-			"js/components/data-table/dataTables.pagination.input.js",
-			"js/libs/bootstrap/modal.js"
-		]
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/data-table.js",
+    "inputFiles": [
+      "js/components/data-table/jquery.dataTables.js",
+      "js/components/data-table/dataTables.fixedHeader.js",
+      "js/components/data-table/dataTables.responsive.js",
+      "js/components/data-table/dataTables.pagination.input.js",
+      "js/libs/bootstrap/modal.js"
+    ]
   }
 ]
