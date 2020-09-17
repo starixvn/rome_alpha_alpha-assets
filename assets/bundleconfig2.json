@@ -840,10 +840,27 @@
       "js/components/autocomplete/autocomplete.js"
     ]
   },
-  {
-    "outputFileName": "bundles/site-asset/numeral.js",
-    "inputFiles": [
-      "js/libs/numeral/numeral.js"
-    ]
-  }
+	{
+		"outputFileName": "bundles/site-asset/numeral.js",
+		"inputFiles": [
+			"js/libs/numeral/numeral.js"
+		]
+	},
+	{
+		"outputFileName": "bundles/site-asset/data-table.js",
+		"inputFiles": [
+			"js/components/data-table/jquery.dataTables.js",
+			"js/components/data-table/dataTables.fixedHeader.js",
+			"js/components/data-table/dataTables.responsive.js"
+		]
+	},
+	{
+		"outputFileName": "bundles/site-asset/data-table.css",
+		"inputFiles": [
+			"styles/vendors/data-table/jquery.dataTables.css",
+			"styles/vendors/data-table/responsive.dataTables.css",
+			"styles/vendors/data-table/fixedHeader.dataTables.css",
+			"styles/components/datatable-customize.css"
+		]
+	}
 ]
