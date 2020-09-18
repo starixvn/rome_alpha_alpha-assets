@@ -418,7 +418,9 @@
         this.container.find('.drp-calendar')
             .on('click.daterangepicker', '.prev', $.proxy(this.clickPrev, this))
             .on('click.daterangepicker', '.next', $.proxy(this.clickNext, this))
-            .on('mousedown.daterangepicker', 'td.available', $.proxy(this.clickDate, this))
+            // change mousedown event into click event to support easier select date range on mobile just with click
+            //.on('mousedown.daterangepicker', 'td.available', $.proxy(this.clickDate, this))
+            .on('click.daterangepicker', 'td.available', $.proxy(this.clickDate, this))
             .on('mouseenter.daterangepicker', 'td.available', $.proxy(this.hoverDate, this))
             .on('change.daterangepicker', 'select.yearselect', $.proxy(this.monthOrYearChanged, this))
             .on('change.daterangepicker', 'select.monthselect', $.proxy(this.monthOrYearChanged, this))

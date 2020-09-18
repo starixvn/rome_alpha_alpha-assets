@@ -335,7 +335,8 @@
 }
 
 /*  Larger Screen Styling */
-@media (min-width: 564px) {
+/*@media (min-width: 564px) {*/
+@media only screen and (min-device-width: 768px) {
     .daterangepicker {
         width: auto;
     }
@@ -389,9 +390,7 @@
     .daterangepicker .ranges, .daterangepicker .drp-calendar {
         float: left;
     }
-}
 
-@media (min-width: 730px) {
     .daterangepicker .ranges {
         width: auto;
     }
@@ -408,3 +407,21 @@
         clear: none !important;
     }
 }
+
+/*@media (min-width: 730px) {
+    .daterangepicker .ranges {
+        width: auto;
+    }
+
+    .daterangepicker .ranges {
+        float: left;
+    }
+
+    .daterangepicker.rtl .ranges {
+        float: right;
+    }
+
+    .daterangepicker .drp-calendar.left {
+        clear: none !important;
+    }
+}*/
