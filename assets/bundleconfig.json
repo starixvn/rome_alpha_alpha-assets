@@ -595,13 +595,13 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
-	  "styles/components/tables.css",
+    "styles/components/tables.css",
       "styles/components/calendars.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon.css",
-	  "styles/themes/components/tabs/tab-master.css"
+    "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
@@ -617,13 +617,13 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
-	  "styles/components/tables.css",
+    "styles/components/tables.css",
       "styles/components/calendars.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon.css",
-	  "styles/themes/components/tabs/tab-agent.css"
+    "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
@@ -801,6 +801,23 @@
     "outputFileName": "bundles/site-asset/numeral.js",
     "inputFiles": [
       "js/libs/numeral/numeral.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-asset/data-table.js",
+    "inputFiles": [
+      "js/components/data-table/jquery.dataTables.js",
+      "js/components/data-table/dataTables.fixedHeader.js",
+      "js/components/data-table/dataTables.responsive.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-asset/data-table.css",
+    "inputFiles": [
+      "styles/vendors/data-table/jquery.dataTables.css",
+      "styles/vendors/data-table/responsive.dataTables.css",
+      "styles/vendors/data-table/fixedHeader.dataTables.css",
+      "styles/components/datatable-customize.css"
     ]
   }
 ]
