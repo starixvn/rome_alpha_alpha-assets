@@ -1,0 +1,32 @@
+﻿.daterangepicker {
+    font-size: inherit;
+}
+
+@media screen and (max-width: 767px) {
+    .daterangepicker {
+        width: calc(100% - 3px) !important;
+
+        .drp-calendar {
+            @media (orientation: portrait) {
+                max-width: 100%;
+                width: 100%;
+
+                &.left {
+                    padding: 8px;
+                }
+            }
+
+            @media (orientation: landscape) {
+                display: inline-block !important;
+                max-width: 50%;
+                width: 50%;
+            }
+        }
+
+        .calendar-table {
+            th, td {
+                font-size: 100%;
+            }
+        }
+    }
+}

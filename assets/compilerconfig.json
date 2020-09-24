@@ -231,8 +231,16 @@
     "outputFile": "styles/components/customize-checkbox-radio.css",
     "inputFile": "styles/components/customize-checkbox-radio.scss"
   },
-	{
-		"outputFile": "styles/components/datatable-customize.css",
-		"inputFile": "styles/components/datatable-customize.scss"
-	}
+  {
+    "outputFile": "styles/components/datatable-customize.css",
+    "inputFile": "styles/components/datatable-customize.scss"
+  },
+  {
+    "outputFile": "styles/components/daterangepicker.css",
+    "inputFile": "styles/components/daterangepicker.scss"
+  },
+  {
+    "outputFile": "styles/components/nexDateRangePicker.css",
+    "inputFile": "styles/components/nexDateRangePicker.scss"
+  }
 ]
