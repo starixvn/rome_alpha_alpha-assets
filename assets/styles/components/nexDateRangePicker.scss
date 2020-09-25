@@ -4,7 +4,7 @@
 
 @media only screen and (max-device-width: 767px) {
     .daterangepicker {
-        width: calc(100% - 3px) !important;
+        width: 99.999% !important;
 
         .drp-calendar {
             @media (orientation: portrait) {
