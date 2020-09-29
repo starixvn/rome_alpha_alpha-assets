@@ -291,7 +291,7 @@
 				$(window).scrollTop(0);
 				$('thead tr.parent').removeClass('parent');
 
-				$('tbody tr.parent').each((index, element) => {
+                $('tbody tr.parent').each(function (index, element) {
 					$(element).find('.control').click();
 				});
 			},
