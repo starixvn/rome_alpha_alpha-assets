@@ -52,7 +52,7 @@
         },
 
         render: function () {
-            const self = this;
+            var self = this;
 
             self.$dateRangePickerEl.daterangepicker(self.options, function (start, end, label) {
                 var specificDateOption = self.$prefinedRangeEl.find("a.range-option[data-value='7']");
@@ -68,7 +68,7 @@
         },
 
         registerEvents: function () {
-            const self = this;
+            var self = this;
 
             self.$prefinedRangeEl.find(".dropdown-menu").on("click", "a.range-option", function (event) {
                 event.preventDefault();
