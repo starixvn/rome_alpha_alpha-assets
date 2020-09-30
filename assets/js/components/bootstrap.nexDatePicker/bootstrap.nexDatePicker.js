@@ -11,13 +11,14 @@
                 return new NexDatePicker(this, opts);
             });
         },
+
         getSingleDate: function () {
             return $(this).parent().find(".ui_nexdatepicker_fromdate").val();
         },
+
         getDateRange: function () {
             var $this = $(this).parent();
-            var dateRange =
-            {
+            var dateRange = {
                 FromDate: $this.find(".ui_nexdatepicker_fromdate").val(),
                 ToDate: $this.find(".ui_nexdatepicker_todate").val()
             };
@@ -30,26 +31,21 @@
         if (methods[options]) {
             return methods[options].apply(this, Array.prototype.slice.call(arguments, 1));
         }
-        else if (typeof options === 'object' || !options) {
+
+        if (typeof options === 'object' || !options) {
             return methods.createNexDatePicker.apply(this, arguments);
-        }
-        else {
-            //throw error
         }
     };
 
     $.fn.nexDatePicker.defaults = {
         //// nexDatePickerType can be single, daterange, quickchoose
         nexDatePickerType: "quickchoose",
-        datePickerFormat:
-        {
+        datePickerFormat: {
             dateFormat: "M dd, yy"
         },
         subDatePickerStyle: "",
-        onSelectDatePicker: function () {
-        },
-        onQuickChooseChange: function () {
-        },
+        onSelectDatePicker: function () { },
+        onQuickChooseChange: function () { },
         minDate: null,
         ConstraintFromTo: 0
     };
@@ -68,7 +64,6 @@
         this.Yesterday.setDate(this.CurrentDate.getDate() - 1);
         //// Start Render
         this.Initialize();
-
         //// Hide Container
         return this.$select;
     };
@@ -76,7 +71,7 @@
     NexDatePicker.prototype = {
         Initialize: function () {
             var me = this;
-            var options = this.Options;
+
             //// Start render and Save Element Object
             me.$parent = me.$select.parent();
             me.$dropDownList = me.$parent.find("#dropdown-daterange");
@@ -84,34 +79,26 @@
             me.$secondDatePicker = me.$parent.find("#to-date-container");
             me.$userRangeLavel = me.$dropDownList.find("#range-label");
             me.$userRangeOptionHidden = me.$dropDownList.find("#hidden-range-option");
-
             //// Format Date Picker
             me.FormatDatePicker();
-
             //// Add Event
             me.AddEvent();
-
             me.CorrectOptionWithMinDate();
         },
-        FormatDatePicker: function () {
-            var me = this;
-            var options = this.Options;
-            var ids = "";
-            if (options.nexDatePickerType === "single") {
-                ids += "#from-date-container";
-            }
-            else {
-                ids += "#from-date-container, #to-date-container";
-            }
-            this.$datePickers = me.$parent.find(ids);
 
-            moment.locale('en', {
-                week: { dow: 1 } // Monday is the first day of the week
-            });
+        FormatDatePicker: function () {
+            var me = this,
+                options = this.Options,
+                ids = options.nexDatePickerType === "single" ?
+                    "#from-date-container" :
+                    "#from-date-container, #to-date-container";
+
+            this.$datePickers = me.$parent.find(ids);
 
             this.$datePickers.datepicker({
                 allowInputToggle: true,
                 format: options.datePickerFormat.dateFormat,
+                locale: moment.locale(),
                 parseInputDate: function (inputDate) {
                     return typeof inputDate === "string" ?
                         moment((new Date(inputDate)).toISOString()) :
@@ -148,7 +135,6 @@
                             me.$firstDatePicker.data("DateTimePicker").date(maxFromDate);
                         }
                     }
-
                 }
             });
 
@@ -162,6 +148,7 @@
                 me.CheckSetMaxDate();
             }
         },
+
         CheckSetMinDate: function () {
             var me = this;
             if (me.Options.minDate !== null) {
@@ -169,6 +156,7 @@
                 me.$secondDatePicker.data("DateTimePicker").minDate((new Date(me.Options.minDate)).toISOString());
             }
         },
+
         CheckSetMaxDate: function () {
             var me = this;
             if (me.Options.maxDate !== null) {
@@ -176,6 +164,7 @@
                 me.$secondDatePicker.data("DateTimePicker").maxDate((new Date(me.Options.maxDate)).toISOString());
             }
         },
+
         AddEvent: function () {
             var me = this;
             var options = this.Options;
@@ -245,6 +234,7 @@
                 });
             }
         },
+
         CorrectOptionWithMinDate: function () {
             var me = this;
             if (me.Options.minDate) {
