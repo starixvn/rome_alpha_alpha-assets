@@ -5,13 +5,17 @@
             autoApply: true,
             linkedCalendars: false,
             locale: {
-                format: 'MM/DD/YYYY'
+                format: 'MM/DD/YYYY',
+                applyLabel: this.data('applylabel'),
+                cancelLabel: this.data('cancellabel')
             },
             maxDate: this.data('maxdate'),
             minDate: this.data('mindate'),
             startDate: this.data('startdate'),
             endDate: this.data('enddate'),
-
+            buttonClasses: '',
+            applyButtonClasses: 'btn-submit',
+            cancelButtonClasses: 'btn-default',
             // custom options:
             onChange: function () { },
             onQuickChooseChange: function () { },

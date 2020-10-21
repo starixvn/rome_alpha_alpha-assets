@@ -1,5 +1,9 @@
 ﻿.daterangepicker {
     font-size: inherit;
+    
+    .drp-selected {
+        display: none;
+    }
 }
 
 @media only screen and (max-device-width: 767px) {
@@ -27,6 +31,10 @@
             th, td {
                 font-size: 100%;
             }
+        }
+
+        .applyBtn, .cancelBtn {
+            height: 36px;
         }
     }
 }
