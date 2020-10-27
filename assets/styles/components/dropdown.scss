@@ -108,3 +108,7 @@ select {
         @include border-radius(1px);
     }
 }
+
+.dropdown-menu {
+    background-clip: border-box;
+}
