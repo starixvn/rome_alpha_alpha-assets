@@ -1,0 +1,75 @@
+﻿.daterangepicker {
+    font-size: inherit;
+    font-family: inherit;
+
+    .drp-selected {
+        display: none;
+    }
+
+    .calendar-table {
+        tr {
+            display: grid;
+            grid-template-columns: repeat(7, 1fr);
+        }
+
+        td.available, th {
+            line-height: 23px;
+            height: 32px;
+            border-radius: 20px;
+            justify-self: center;
+            margin-bottom: 4px;
+
+            @media screen and (max-device-width: 767px) {
+                width: 50px;
+                height: 50px;
+                line-height: 37px;
+                border-radius: 36px;
+            }
+        }
+
+        thead tr:first-child {
+            grid-template-columns: 1fr 1fr 1fr;
+
+            th:first-child {
+                justify-self: start;
+            }
+
+            th:last-child {
+                justify-self: end;
+            }
+        }
+    }
+}
+
+@media only screen and (max-device-width: 767px) {
+    .daterangepicker {
+        width: 99.999% !important;
+
+        .drp-calendar {
+            @media (orientation: portrait) {
+                max-width: 100%;
+                width: 100%;
+
+                &.left {
+                    padding: 8px;
+                }
+            }
+
+            @media (orientation: landscape) {
+                display: inline-block !important;
+                max-width: 50%;
+                width: 50%;
+            }
+        }
+
+        .calendar-table {
+            th, td {
+                font-size: 100%;
+            }
+        }
+
+        .applyBtn, .cancelBtn {
+            height: 36px;
+        }
+    }
+}

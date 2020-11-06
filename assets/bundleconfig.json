@@ -843,8 +843,8 @@
   {
     "outputFileName": "bundles/site-asset/daterangepicker.css",
     "inputFiles": [
-      "styles/components/daterangepicker.css",
-      "styles/components/nexDateRangePicker.css"
+      "styles/vendors/daterangepicker/daterangepicker.css",
+      "styles/components/daterangepicker-customize.css"
     ]
   }
 ]

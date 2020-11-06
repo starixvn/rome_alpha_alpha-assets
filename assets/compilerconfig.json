@@ -236,11 +236,7 @@
     "inputFile": "styles/components/datatable-customize.scss"
   },
   {
-    "outputFile": "styles/components/daterangepicker.css",
-    "inputFile": "styles/components/daterangepicker.scss"
-  },
-  {
-    "outputFile": "styles/components/nexDateRangePicker.css",
-    "inputFile": "styles/components/nexDateRangePicker.scss"
+    "outputFile": "styles/components/daterangepicker-customize.css",
+    "inputFile": "styles/components/daterangepicker-customize.scss"
   }
 ]
