@@ -1,4 +1,9 @@
 ﻿(function () {
+    var timezone = 'Etc/GMT+4';
+    if (moment.tz.zone(timezone)) {
+        moment.tz.setDefault(timezone);
+    }
+
     var languageElId = '#language',
         dataKey = 'currentlanguage',
         language = window.$(languageElId).data(dataKey)
