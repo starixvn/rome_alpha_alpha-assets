@@ -12,7 +12,7 @@
             grid-template-columns: repeat(7, 1fr);
         }
 
-        td.available, th {
+        td.available, td.disabled, th {
             line-height: 23px;
             height: 32px;
             border-radius: 20px;
