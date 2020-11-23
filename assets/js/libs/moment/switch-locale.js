@@ -8,32 +8,17 @@
         dataKey = 'currentlanguage',
         language = window.$(languageElId).data(dataKey)
             || window.parent.$(languageElId).data(dataKey)
-            || window.top.$(languageElId).data(dataKey);
+            || window.top.$(languageElId).data(dataKey),
+        locale = {
+            'en-US': 'en',
+            'ja-JP': 'ja',
+            'ko-KR': 'ko',
+            'th-TH': 'th',
+            'vi-VN': 'vi',
+            'zh-CN': 'zh-cn',
+            'zh-TW': 'zh-tw',
+            'default': 'en'
+        };
 
-    switch (language) {
-        case 'en-US':
-            moment.locale('en');
-            break;
-        case 'ja-JP':
-            moment.locale('ja');
-            break;
-        case 'ko-KR':
-            moment.locale('ko');
-            break;
-        case 'th-TH':
-            moment.locale('th');
-            break;
-        case 'vi-VN':
-            moment.locale('vi');
-            break;
-        case 'zh-CN':
-            moment.locale('zh-cn');
-            break;
-        case 'zh-TW':
-            moment.locale('zh-tw');
-            break;
-        default:
-            moment.locale('en');
-            break;
-    }
+    moment.locale(locale[language] || locale.default);
 })();
