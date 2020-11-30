@@ -407,8 +407,8 @@
     ]
   },
 
-	{
-		"outputFileName": "bundles/site-messages/message-default.js",
+  {
+    "outputFileName": "bundles/site-messages/message-default.js",
     "inputFiles": [
       "js/libs/moment/moment.js",
       "js/libs/bootstrap/tab.js",
@@ -417,7 +417,7 @@
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
     ]
-	},
+  },
 
   {
     "outputFileName": "bundles/site-main/security/before-home-page.js",
@@ -606,13 +606,13 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
-    "styles/components/tables.css",
+      "styles/components/tables.css",
       "styles/components/calendars.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon.css",
-    "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
@@ -628,13 +628,13 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
-    "styles/components/tables.css",
+      "styles/components/tables.css",
       "styles/components/calendars.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon.css",
-    "styles/themes/components/tabs/tab-agent.css"
+      "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
