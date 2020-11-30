@@ -95,10 +95,13 @@
 
             this.$datePickers = me.$parent.find(ids);
 
+            moment.locale('en', {
+                week: { dow: 1 } // Monday is the first day of the week
+            });
+
             this.$datePickers.datepicker({
                 allowInputToggle: true,
                 format: options.datePickerFormat.dateFormat,
-                locale: moment.locale(),
                 parseInputDate: function (inputDate) {
                     return typeof inputDate === "string" ?
                         moment((new Date(inputDate)).toISOString()) :
