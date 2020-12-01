@@ -17,6 +17,7 @@
             applyButtonClasses: 'btn-submit',
             cancelButtonClasses: 'btn-default',
             // custom options:
+            currentDate: this.val(),
             onChange: function () { },
             onQuickChooseChange: function () { },
             fromDateElId: 'from-date',
@@ -79,15 +80,16 @@
 
                 var $this = $(this);
                 var selectedValue = parseInt($this.attr("data-value"));
+                var currentDate = new Date(self.options.currentDate);
 
-                var today = moment();
-                var yesterday = moment().subtract(1, 'days');
-                var thisWeekStartDate = moment().startOf('isoWeek');
-                var lastWeekStartDate = moment().subtract(1, 'weeks').startOf('isoWeek');
-                var lastWeekEndDate = moment().subtract(1, 'weeks').endOf('isoWeek');
-                var thisMonthStartDate = moment().startOf('month');
-                var lastMonthStartDate = moment().subtract(1, 'month').startOf('month');
-                var lastMonthEndDate = moment().subtract(1, 'month').endOf('month');
+                var today = moment(currentDate);
+                var yesterday = moment(currentDate).subtract(1, 'days');
+                var thisWeekStartDate = moment(currentDate).startOf('isoWeek');
+                var lastWeekStartDate = moment(currentDate).subtract(1, 'weeks').startOf('isoWeek');
+                var lastWeekEndDate = moment(currentDate).subtract(1, 'weeks').endOf('isoWeek');
+                var thisMonthStartDate = moment(currentDate).startOf('month');
+                var lastMonthStartDate = moment(currentDate).subtract(1, 'month').startOf('month');
+                var lastMonthEndDate = moment(currentDate).subtract(1, 'month').endOf('month');
 
                 switch (selectedValue) {
                     case NexDatePickerHelper.rangeOption.today:

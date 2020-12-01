@@ -870,7 +870,6 @@
   {
     "outputFileName": "bundles/site-asset/daterangepicker.js",
     "inputFiles": [
-      "js/libs/moment/moment-timezone-with-data.js",
       "js/libs/moment/locale/en-gb.js",
       "js/libs/moment/locale/ja.js",
       "js/libs/moment/locale/ko.js",
