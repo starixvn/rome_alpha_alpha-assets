@@ -429,7 +429,7 @@ $.extend( FixedHeader.prototype, {
 	 * @private
 	 */
 	_modeChange: function ( mode, item, forceChange )
-	{
+    {
 		var dt = this.s.dt;
 		var itemDom = this.dom[ item ];
 		var position = this.s.position;
@@ -596,7 +596,8 @@ $.extend( FixedHeader.prototype, {
 			}
 
 			if ( forceChange || headerMode !== this.s.headerMode ) {
-				this._modeChange( headerMode, 'header', forceChange );
+                this._positions();
+                this._modeChange( headerMode, 'header', forceChange );
 			}
 
 			this._horizontal( 'header', windowLeft );

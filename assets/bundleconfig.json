@@ -414,6 +414,7 @@
       "js/libs/bootstrap/tab.js",
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
     ]
   },
@@ -522,6 +523,7 @@
       "js/libs/moment/moment.js",
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js",
       "js/components/monthpicker/monPickr-0.0.3.js",
       "js/components/pagination/jquery.draggable.js",
@@ -595,13 +597,13 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
-    "styles/components/tables.css",
+      "styles/components/tables.css",
       "styles/components/calendars.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon.css",
-    "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
@@ -617,13 +619,13 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
-    "styles/components/tables.css",
+      "styles/components/tables.css",
       "styles/components/calendars.css",
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon.css",
-    "styles/themes/components/tabs/tab-agent.css"
+      "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
@@ -634,6 +636,7 @@
       "js/libs/bootstrap/tab.js",
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js",
       "js/components/multiselect/bootstrap-multiselect.js"
     ]
@@ -694,6 +697,7 @@
       "js/libs/moment/moment.js",
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
     ]
   },
@@ -818,6 +822,29 @@
       "styles/vendors/data-table/responsive.dataTables.css",
       "styles/vendors/data-table/fixedHeader.dataTables.css",
       "styles/components/datatable-customize.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-asset/daterangepicker.js",
+    "inputFiles": [
+      "js/libs/moment/locale/en-gb.js",
+      "js/libs/moment/locale/ja.js",
+      "js/libs/moment/locale/ko.js",
+      "js/libs/moment/locale/th.js",
+      "js/libs/moment/locale/vi.js",
+      "js/libs/moment/locale/zh-cn.js",
+      "js/libs/moment/locale/zh-tw.js",
+      "js/libs/moment/switch-locale.js",
+      "js/components/daterangepicker/daterangepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
+      "js/components/daterangepicker/nexDateRangePicker.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-asset/daterangepicker.css",
+    "inputFiles": [
+      "styles/vendors/daterangepicker/daterangepicker.css",
+      "styles/components/daterangepicker-customize.css"
     ]
   }
 ]
