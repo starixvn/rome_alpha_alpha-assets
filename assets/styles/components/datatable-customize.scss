@@ -20,21 +20,20 @@ table {
     &.dataTable {
         margin-left: 0px !important;
         text-align: right;
-        /*&.dtr-column > thead > tr.parent th.control,*/
         &.dtr-column > tbody > tr.parent td.control {
             &:before {
                 content: url("../images/components/Minus.svg");
                 background-color: unset;
             }
         }
-		 /*&.dtr-column > thead > tr > th.control,*/
+
         &.dtr-column > tbody > tr > td.control {
             &:before {
                 content: url("../images/components/Plus.svg");
                 box-shadow: none;
                 border: none;
-                height: unset;
-                width: unset;
+				height: 24px;
+				width: 24px;
                 background-color: unset;
             }
         }
@@ -148,4 +147,12 @@ table {
             text-align: center;
         }
     }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.625), only screen and ( min--moz-device-pixel-ratio: 2.625), only screen and ( -o-min-device-pixel-ratio: 2.625/1), only screen and ( min-device-pixel-ratio: 2.625), only screen and ( min-resolution: 393dpi), only screen and ( min-resolution: 2.625dppx)  {
+    table.dataTable.dtr-column > tbody > tr > td.control:before {
+        width: 36px;
+        height: 36px;
+    }
+
 }
