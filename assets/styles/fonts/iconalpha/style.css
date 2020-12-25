@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?bpz21l');
-  src:  url('fonts/Iconalpha.eot?bpz21l#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?bpz21l') format('truetype'),
-    url('fonts/Iconalpha.woff?bpz21l') format('woff'),
-    url('fonts/Iconalpha.svg?bpz21l#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?8fq2rv');
+  src:  url('fonts/Iconalpha.eot?8fq2rv#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?8fq2rv') format('truetype'),
+    url('fonts/Iconalpha.woff?8fq2rv') format('woff'),
+    url('fonts/Iconalpha.svg?8fq2rv#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,10 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-statement:before {
+  content: "\e985";
+  color: #3d5ad8;
+}
 .icon-under-maintenance:before {
   content: "\e984";
 }
