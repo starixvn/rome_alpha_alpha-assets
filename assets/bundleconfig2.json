@@ -859,6 +859,41 @@
     ]
   },
   {
+    "outputFileName": "bundles/site-transfer/filter.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars.css",
+      "styles/components/bootstrap.nexDatePicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-transfer/filter.js",
+    "inputFiles": [
+      "js/libs/moment/moment.js",
+      "js/components/datetimepicker/datepicker.js",
+      "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-transfer/pagination.css",
+    "inputFiles": [
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/components/pagination.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-transfer/pagination.js",
+    "inputFiles": [
+      "js/components/pagination/jquery.draggable.js",
+      "js/components/pagination/jquery.resizable.js",
+      "js/components/pagination/jquery.parser.js",
+      "js/components/pagination/jquery.linkbutton.js",
+      "js/components/pagination/jquery.pagination.js"
+    ]
+  },
+  {
     "outputFileName": "bundles/site-asset/numeral.js",
     "inputFiles": [
       "js/libs/numeral/numeral.js"
