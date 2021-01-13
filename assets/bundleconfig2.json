@@ -901,6 +901,7 @@
     "inputFiles": [
       "styles/vendors/daterangepicker/daterangepicker.css",
       "styles/components/daterangepicker-customize.css"
+    ]
   },
   {
     "outputFileName": "bundles/site-memberinfo/data-table.js",

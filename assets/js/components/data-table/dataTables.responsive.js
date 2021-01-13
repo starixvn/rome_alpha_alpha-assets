@@ -115,12 +115,8 @@
 				dt.settings()[0]._responsive = this;
 
 				// Use DataTables' private throttle function to avoid processor thrashing
-				$(window).on('orientationchange.dtr', dt.settings()[0].oApi._fnThrottle(function () {
+                $(window).on('orientationchange.dtr resize.dtr', dt.settings()[0].oApi._fnThrottle(function () {
 					that._collapseDetails();
-					that._resize();
-				}));
-
-				$(window).on('resize.dtr', dt.settings()[0].oApi._fnThrottle(function () {
 					that._resize();
 				}));
 
