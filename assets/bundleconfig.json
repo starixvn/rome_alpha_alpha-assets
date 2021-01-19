@@ -841,16 +841,6 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-transfer/pagination.js",
-    "inputFiles": [
-      "js/components/pagination/jquery.draggable.js",
-      "js/components/pagination/jquery.resizable.js",
-      "js/components/pagination/jquery.parser.js",
-      "js/components/pagination/jquery.linkbutton.js",
-      "js/components/pagination/jquery.pagination.js"
-    ]
-  },
-  {
     "outputFileName": "bundles/site-asset/numeral.js",
     "inputFiles": [
       "js/libs/numeral/numeral.js"
