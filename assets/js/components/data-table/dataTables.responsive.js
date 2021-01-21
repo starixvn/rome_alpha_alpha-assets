@@ -574,7 +574,7 @@
 			 * @private
 			 */
 			_resize: function () {
-				$.blockUI();
+				//$.blockUI();
 				var dt = this.s.dt;
 				var width = $(window).width();
 				//alert(width);
@@ -611,7 +611,7 @@
 					dt.column(colIdx).visible(columnsVis[i]);
 				});
 				
-				$.unblockUI();
+				//$.unblockUI();
 			},
 
 
