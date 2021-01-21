@@ -852,6 +852,7 @@
       "js/components/data-table/jquery.dataTables.js",
       "js/components/data-table/dataTables.fixedHeader.js",
       "js/components/data-table/dataTables.responsive.js",
+      "js/components/data-table/dataTables.pagination.input.js",
       "js/libs/bootstrap/modal.js"
     ]
   },
