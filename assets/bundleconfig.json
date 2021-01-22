@@ -834,13 +834,6 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-transfer/pagination.css",
-    "inputFiles": [
-      "styles/vendors/jquery-easyui-1.5/easyui.css",
-      "styles/components/pagination.css"
-    ]
-  },
-  {
     "outputFileName": "bundles/site-asset/numeral.js",
     "inputFiles": [
       "js/libs/numeral/numeral.js"
