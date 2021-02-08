@@ -686,8 +686,14 @@
 
 				// The cloned header now contains the smallest that each column can be
 				dt.columns().eq(0).each(function (idx) {
-					columns[idx].minWidth = cells[idx].offsetWidth || 0;
-				});
+                    //columns[idx].minWidth = cells[idx].offsetWidth || 0;
+                    if (columns[idx].className.indexOf("control") !== -1) {
+                        columns[idx].minWidth = 60;
+                    }
+                    else {
+                        columns[idx].minWidth = cells[idx].offsetWidth || 0;
+                    }
+                });
 
 				inserted.remove();
 			}
