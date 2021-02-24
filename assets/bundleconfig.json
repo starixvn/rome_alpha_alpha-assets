@@ -456,6 +456,19 @@
     ]
   },
   {
+    "outputFileName": "bundles/common/cleave-jquery.js",
+    "inputFiles": [
+      "js/libs/cleave/cleave-1.5.8.js",
+      "js/libs/cleave/jquery.cleave.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/ajaxSetup.js",
+    "inputFiles": [
+      "js/components/ajaxSetup/jquery.ajaxSetup.js"
+    ]
+  },
+  {
     "outputFileName": "bundles/site-main/otp/otp-super.css",
     "inputFiles": [
       "styles/components/accordions.css",
