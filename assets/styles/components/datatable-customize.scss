@@ -28,10 +28,10 @@ table {
                 &:before {
                     content: url("../images/components/Minus.svg");
                     background-color: unset;
-                    top: 40% !important;
-                    left: 40% !important;
-                    display: table-cell;
-                    position: relative;
+                    //top: 40% !important;
+                    //left: 40% !important;
+                    display: inline-block;
+                    //position: relative;
                 }
             }
         }
@@ -46,10 +46,7 @@ table {
                     height: 24px;
                     width: 24px;
                     background-color: unset;
-                    display: table-cell;
-                    position: relative;
-                    top: 40% !important;
-                    left: 40% !important;
+                    display: inline-block;
                 }
             }
         }
