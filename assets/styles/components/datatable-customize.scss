@@ -48,6 +48,15 @@ table {
             }
         }
 
+        &.dtr-column > tbody > tr > td {
+            &.control {
+                &:before {
+                    margin-top: -12px;
+                    margin-left: -12px;
+                }
+            }
+        }
+
         thead th, tbody td {
             box-sizing: border-box;
             border-bottom: none !important;
@@ -163,6 +172,10 @@ table {
     table.dataTable.dtr-column > thead > tr > th.control:before,
     table.dataTable.dtr-column > tbody > tr > td.control:before {
         width: 36px;
-        height: 36px;
+        height: 36px;        
+    }
+    table.dataTable.dtr-column > tbody > tr > td.control:before {
+        margin-top: -18px;
+        margin-left: -18px;
     }
 }
