@@ -29,6 +29,7 @@ table {
                     content: url("../images/components/Minus.svg");
                     background-color: unset;
                     display: inline-block;
+                    cursor: pointer;
                 }
             }
         }
@@ -44,6 +45,7 @@ table {
                     width: 24px;
                     background-color: unset;
                     display: inline-block;
+                    cursor: pointer;
                 }
             }
         }
@@ -172,8 +174,9 @@ table {
     table.dataTable.dtr-column > thead > tr > th.control:before,
     table.dataTable.dtr-column > tbody > tr > td.control:before {
         width: 36px;
-        height: 36px;        
+        height: 36px;
     }
+
     table.dataTable.dtr-column > tbody > tr > td.control:before {
         margin-top: -18px;
         margin-left: -18px;
