@@ -659,7 +659,8 @@
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
-      "js/libs/cleave/cleave.min.js",
+      "js/libs/cleave/cleave-1.5.8.js",
+      "js/libs/cleave/jquery.cleave.js",
       "js/components/pagination/jquery.draggable.js",
       "js/components/pagination/jquery.resizable.js",
       "js/components/pagination/jquery.parser.js",
