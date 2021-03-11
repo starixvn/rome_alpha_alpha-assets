@@ -321,7 +321,7 @@ $.extend( FixedHeader.prototype, {
 			itemDom.host.prepend( itemDom.placeholder );
 
 			// Clone widths
-			this._matchWidths( itemDom.placeholder, itemDom.floating );
+			this._matchWidths();
 		}
 	},
 
@@ -331,42 +331,22 @@ $.extend( FixedHeader.prototype, {
 	 * header columns. That isn't present in the footer so to have it still
 	 * align correctly, the sizes need to be copied over. It is also required
 	 * for the header when auto width is not enabled
-	 *
-	 * @param  {jQuery} from Copy widths from
-	 * @param  {jQuery} to   Copy widths to
-	 * @private
 	 */
-	_matchWidths: function ( from, to ) {
-		var get = function ( name ) {
-			return $(name, from)
-				.map( function () {
-					return $(this).innerWidth();
-				} ).toArray();
-		};
+	_matchWidths: function (  ) {
+		var tdWidths = $('tr:first td', 'tbody')
+			.map(function () {
+				return $(this).outerWidth();
+			}).toArray();
 
-		var set = function ( name, toWidths ) {
-			$(name, to).each( function ( i ) {
-				$(this).css( {
-					innerWidth: toWidths[i],
-					minWidth: toWidths[i]
-				} );
-			} );
-		};
-
-		var thWidths = get( 'tr:first th' );
-		var tdWidths = get( 'tr:first td' );
-
-		$('table.dataTable').each(function (table) {
-			$(this).find('tr:first th').each(function (i) {
+		$('table.dataTable').each(function (index, table) {
+			const rowIndex = $(table).find('th.control').length > 0 ? 1 : 0;
+			$(this).find('tr:eq(' + rowIndex + ') th').each(function (i) {
 				$(this).css({
-					width: thWidths[i],
-					minWidth: thWidths[i]
+					width: tdWidths[i],
+					minWidth: tdWidths[i]
 				});
 			});
 		});
-
-		//set('tr:first th', thWidths);
-		set( 'tr:first td', tdWidths );
 	},
 
 	/**

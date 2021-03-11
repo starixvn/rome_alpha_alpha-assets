@@ -696,7 +696,8 @@
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
-      "js/libs/cleave/cleave.min.js",
+      "js/libs/cleave/cleave-1.5.8.js",
+      "js/libs/cleave/jquery.cleave.js",
       "js/components/pagination/jquery.draggable.js",
       "js/components/pagination/jquery.resizable.js",
       "js/components/pagination/jquery.parser.js",
@@ -901,6 +902,17 @@
     "inputFiles": [
       "styles/vendors/daterangepicker/daterangepicker.css",
       "styles/components/daterangepicker-customize.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/data-table.js",
+    "inputFiles": [
+      "js/components/data-table/jquery.dataTables.js",
+      "js/components/data-table/dataTables.fixedHeader.js",
+      "js/components/data-table/dataTables.responsive.js",
+      "js/components/data-table/dataTables.pagination.input.js",
+      "js/libs/bootstrap/modal.js",
+      "js/libs/jquery/jquery-ui.min.js"
     ]
   }
 ]

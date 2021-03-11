@@ -115,12 +115,8 @@
 				dt.settings()[0]._responsive = this;
 
 				// Use DataTables' private throttle function to avoid processor thrashing
-				$(window).on('orientationchange.dtr', dt.settings()[0].oApi._fnThrottle(function () {
+                $(window).on('orientationchange.dtr resize.dtr', dt.settings()[0].oApi._fnThrottle(function () {
 					that._collapseDetails();
-					that._resize();
-				}));
-
-				$(window).on('resize.dtr', dt.settings()[0].oApi._fnThrottle(function () {
 					that._resize();
 				}));
 
@@ -493,6 +489,8 @@
 						row.child(info, 'child').show();
 						$(row.node()).addClass('parent');
 					}
+
+					details.bindingCallback();
 				});
 			},
 
@@ -547,6 +545,8 @@
 						dt.row(idx).child.hide();
 					});
 				}
+
+
 			},
 
 
@@ -686,8 +686,14 @@
 
 				// The cloned header now contains the smallest that each column can be
 				dt.columns().eq(0).each(function (idx) {
-					columns[idx].minWidth = cells[idx].offsetWidth || 0;
-				});
+                    //columns[idx].minWidth = cells[idx].offsetWidth || 0;
+                    if (columns[idx].className.indexOf("control") !== -1) {
+                        columns[idx].minWidth = 60;
+                    }
+                    else {
+                        columns[idx].minWidth = cells[idx].offsetWidth || 0;
+                    }
+                });
 
 				inserted.remove();
 			}
@@ -796,7 +802,9 @@
 
 				target: 0,
 
-				type: 'inline'
+				type: 'inline',
+
+				bindingCallback: function () { }
 			}
 		};
 
