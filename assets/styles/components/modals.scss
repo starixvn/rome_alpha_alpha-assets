@@ -62,7 +62,6 @@
             padding: 10px 0;
             font-size: 13px;
             cursor: move;
-            font-size: 13px;
 
             .popup-title:empty {
                 height: 20px;
@@ -99,6 +98,20 @@
 @media only screen and (max-device-width : $screen-device-lower768) {
     .popup-guidelines {
         width: 95% !important;
+    }
+
+    .modal-content .modal-header {
+        .modal-title {
+            font-size: calculateScale(13px);
+        }
+
+        .icon-close {
+            top: 8px;
+
+            &:before {
+                font-size: calculateScale(18px);
+            }
+        }
     }
 }
 
