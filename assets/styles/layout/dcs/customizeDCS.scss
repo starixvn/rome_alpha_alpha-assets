@@ -536,3 +536,9 @@ select.setting-field {
         }
     }
 }
+@media screen and (max-device-width: 1024px) and (orientation:portrait) {
+    .block__item .block__lbl {
+        padding: 0 4px;
+    }
+}
+
