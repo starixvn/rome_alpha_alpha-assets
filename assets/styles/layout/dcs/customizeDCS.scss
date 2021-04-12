@@ -512,3 +512,33 @@ select.setting-field {
 .block__cell-group .align-center {
     align-items: center;
 }
+
+@media screen and (max-device-width: $conent-device-lower768) and (orientation:portrait) {
+    .block__item .block__lbl {
+        padding: 0 3px;
+
+        .right-btn-area {
+            padding: 0;
+            float: left;
+
+            .icon--copy {
+                width: 16px;
+                height: 16px;
+            }
+        }
+
+        .w15-percent {
+            width: 20% !important;
+        }
+
+        .w70-percent {
+            width: 60% !important;
+        }
+    }
+}
+@media screen and (max-device-width: 1024px) and (orientation:portrait) {
+    .block__item .block__lbl {
+        padding: 0 4px;
+    }
+}
+
