@@ -121,6 +121,15 @@
     vertical-align: middle;
 }
 
+.icon-locked {
+    background: url("../images/components/unlock.svg") center center no-repeat;
+    cursor: pointer;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+}
+
 @media only screen and (max-device-width: $screen-device-greater1024) {
     .icon {
         font-size: 20px;
