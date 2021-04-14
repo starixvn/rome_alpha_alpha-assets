@@ -228,11 +228,15 @@ input, button {
                 position: relative;
                 top: 4px;
                 left: auto;
-                padding: 8px 12px 8px 8px;
+                padding: 4px 12px 4px 8px;
 
                 &:hover {
                     color: darken($link-color, 15%);
                 }
+            }
+
+            .icon-information-outline {
+                float: unset;
             }
         }
     }
