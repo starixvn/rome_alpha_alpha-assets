@@ -228,6 +228,7 @@ input, button {
                 position: relative;
                 top: -2px;
                 left: auto;
+                margin-left: 4px;
 
                 &:hover {
                     color: darken($link-color, 15%);
