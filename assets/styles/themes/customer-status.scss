@@ -8,8 +8,8 @@
   background-color: $status-disabled;
 }
 
-.closed-wrongpwd-others {
-  background-color: $status-closedby-pwd-others-bg;
+.locked-falsePassword {
+    background-color: $status-closedby-pwd-others-bg;
 }
 
 .closed-byadmin {
@@ -20,8 +20,8 @@
   background-color: $status-closedby-upline-bg;
 }
 
-.closed-wrongotp-sc {
-  background-color: $status-closedby-otp-sc-bg;
+.locked-falseOTPSC {
+    background-color: $status-closedby-otp-sc-bg;
 }
 
 .closed-byArchive {
