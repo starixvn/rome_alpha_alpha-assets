@@ -226,13 +226,17 @@ input, button {
                 cursor: pointer;
                 font-size: 16px;
                 position: relative;
-                top: 4px;
+                top: -2px;
                 left: auto;
-                padding: 8px 12px 8px 8px;
+                margin-left: 4px;
 
                 &:hover {
                     color: darken($link-color, 15%);
                 }
+            }
+
+            .icon-information-outline {
+                float: unset;
             }
         }
     }
@@ -309,7 +313,7 @@ input, button {
 
             .icon-rules {
                 position: relative;
-                top: -1px;
+                top: 12px;
                 margin-right: 4px;
                 font-size: 22px;
                 margin-right: 8px;
