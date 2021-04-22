@@ -170,25 +170,6 @@ input, button {
         color: #888;
         @include border-radius(0);
         @include box-shadow-multiple('none');
-        font-family: 'password';
-
-        &::-webkit-input-placeholder {
-            font-family: $font-family;
-        }
-
-        &:-ms-input-placeholder {
-            font-family: $font-family;
-        }
-
-        &:-moz-placeholder {
-            font-family: $font-family;
-        }
-
-        &.show-hint {
-            font-family: unset;
-        }
-
-
 
         &:focus {
             border-bottom: 2px solid #666;
@@ -288,6 +269,25 @@ input, button {
     .note {
         color: #666;
         margin-top: 20px;
+    }
+}
+.block .form-SC-before .txt {
+    font-family: 'password';
+
+    &::-webkit-input-placeholder {
+        font-family: $font-family;
+    }
+
+    &:-ms-input-placeholder {
+        font-family: $font-family;
+    }
+
+    &:-moz-placeholder {
+        font-family: $font-family;
+    }
+
+    &.show-hint {
+        font-family: unset;
     }
 }
 
