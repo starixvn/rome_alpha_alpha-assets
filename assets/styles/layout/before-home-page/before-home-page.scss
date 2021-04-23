@@ -271,6 +271,25 @@ input, button {
         margin-top: 20px;
     }
 }
+.block .form-SC-before .txt {
+    font-family: 'password';
+
+    &::-webkit-input-placeholder {
+        font-family: $font-family;
+    }
+
+    &:-ms-input-placeholder {
+        font-family: $font-family;
+    }
+
+    &:-moz-placeholder {
+        font-family: $font-family;
+    }
+
+    &.show-hint {
+        font-family: unset;
+    }
+}
 
 .rules-title {
     color: $link-color;
