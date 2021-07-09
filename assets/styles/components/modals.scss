@@ -260,7 +260,7 @@
 }
 
 .modal.parlay-max-payout-popup {
-    max-width: 1032px;
+    max-width: 1048px;
 
     @media only screen and (max-device-width: $screen-device-lower768) {
         width: calc(100% - #{calculateScale(10px)}) !important;
