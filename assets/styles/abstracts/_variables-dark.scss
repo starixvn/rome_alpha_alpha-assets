@@ -1,0 +1,172 @@
+﻿$icon-version: joh3s3;
+$font-family: Roboto, Arial, Tahoma, sans-serif;
+$font-size: 13px;
+
+$panel-bg: #212223;
+$section-bg: #212223; // lightmode #fff;
+$text-color: #CBCBCB;
+$text-red-color: #9d1c1c;
+
+$link-color: #56D6FF;
+$link-hover-color: #F60;
+
+$border-color: #dfdfdf;
+$border-color-dark: #cecece;
+
+$tab-color: #999;
+$tab-active-color: #666;
+$tab-line: #666;
+
+$height-normal: 28px;
+$height-mobile: 36px;
+
+$component-bg: #2B2B2B;
+$component-color: #E7E7E7;
+$component-border-color: #474747;
+
+$btn-bg: #989898;
+$btn-color: #242424;
+$btn-bg-hover: $component-border-color;
+$btn-color-hover: $component-color;
+$btn-bg-hover: darken($btn-bg, 5%);
+
+$btn-submit-bg: #41A4FF;
+$btn-submit-color: #003256;
+$btn-submit-bg-hover: darken($btn-submit-bg, 5%);
+$btn-submit-color-hover: #003256;
+
+$btn-reset-bg: #F6731B;
+$btn-reset-color: #fff;
+$btn-reset-bg-hover: darken($btn-reset-bg, 5%);
+$btn-reset-color-hover: #fff;
+
+$btn-refresh-bg: #1bac69;
+$btn-refresh-color: #fff;
+$btn-refresh-bg-hover: darken($btn-refresh-bg, 5%);
+$btn-refresh-color-hover: #fff;
+
+$btn-cancel-bg: #989898;
+$btn-cancel-color: #242424;
+$btn-cancel-bg-hover: darken($btn-cancel-bg, 5%);
+$btn-cancel-color-hover: #242424;
+
+$btn-remove-bg: #930a14;
+$btn-remove-color: #fff;
+$btn-remove-bg-hover: darken($btn-remove-bg, 5%);
+$btn-remove-color-hover: #fff;
+
+$dropdown-color-disable: #888;
+$dropdown-bg-hover: #3C3C3C;
+$dropdown-bg-active: #59B9FF;
+$dropdown-color-active: #003256;
+$dropdown-border: $component-border-color;
+$dropdown-bg-color: $component-bg;
+$dropdown-color: $component-color;
+
+$table-red-color: #B50000;
+$table-td-hover-color: #36362E;
+$table-border-color: #3E3F41;
+$table-header-border-color: #767A85;
+$table-header-bg-color: #4D4D4D;
+$table-header-color: #fff;
+$table-subheader-bg-color: #3f3f3f;
+$table-subheader-color: #fff;
+$table-compopent-height: 22px;
+$table-compopent-height-large: 28px;
+$table-even-bg: #262829;
+$table-odd-bg: #212223;
+$table-footer-bg: #7F3D1D;
+$table-footer-color: #fff;
+$table-league-bg: #f3f5e0;
+$table-live-bg: #f9ceae;
+
+$paging-bg: $component-bg;
+$paging-btn-bg: #979797;
+$paging-btn-color: $component-color;
+$paging-btn-bg-hover: #676767;
+$paging-border: $component-border-color;
+
+$msg-success-bg: #eefbe9;
+$msg-success-color: #52a220;
+$msg-success-border: #1db51a;
+
+$msg-info-bg: #e3f5fa;
+$msg-info-color: #326cb4;
+$msg-info-border: #3475c7;
+
+$msg-warning-bg: #312F26;
+$msg-warning-color: #F6F2D7;
+$msg-warning-border: #78776D;
+$msg-warning-icon-color: #f08708;
+
+$msg-error-bg: #FADDDD;
+$msg-error-color: #FE0000;
+$msg-error-border: #FF130A;
+
+$status-closed: #948869;
+$status-closedby-pwd-others-bg: #948869;
+$status-closedby-admin-bg: #584572;
+$status-closedby-upline-bg: #AE6426;
+$status-closedby-otp-sc-bg: #114E6F;
+$status-closedby-archive: #3E657D;
+$status-suspended: #9A6969;
+$status-disabled: #636F31;
+$status-live: #ffddcc;
+
+$msg-private: #18910b;
+$msg-special: #9d1c1c;
+$msg-public: #333;
+
+$icon-color: #888;
+$icon-color-dark: #333;
+$icon-hover-color: #e38514;
+$icon-disable-color: lighten($icon-color, 20%);
+
+$filter-error-border-color: #e9322d;
+
+// Devices 
+$screen-device-lower768: 767px;
+$screen-device-greater768: 768px;
+$screen-device-greater1024: 1024px;
+
+$content-gutter-width: 24px; // padding-left: 12px; padding-right: 12px;
+$conent-device-lower768: (767px - $content-gutter-width);
+$conent-device-greater768: (768px - $content-gutter-width);
+$conent-device-greater1024: (1024px - $content-gutter-width);
+
+$popup-bg: #212223;
+$popup-border: $border-color;
+
+$pt-col-height: 30px;
+$pt-col-height-has-padding: 24px; // padding top/bottom: 2px
+$pt-col-height-large: 34px;
+$pt-col-height-has-padding-large: 28px;
+$pt-component-height: 22px;
+$pt-component-height-large: 24px;
+$pt-col-highlight-bg: #56533C;
+$pt-icon-edit-color: #fff;
+$pt-icon-edit-color-active: #67b4fb;
+$pt-icon-copy-color: #fff;
+$pt-icon-copy-color-active: #67b4fb;
+$pt-icon-copy-color-active-dark: #368ad8;
+$pt-bg: #212223;
+$pt-border-color: $table-border-color;
+
+// hint tooltip 
+$hint-success-bg: #dfffe1;
+$hint-success-color: #333;
+$hint-success-border-color: #14b22a;
+$hint-success-border-radius: 2px;
+
+$hint-warning-bg: #FFFFCC;
+$hint-warning-color: #333;
+$hint-warning-border-color: #CC9933;
+$hint-warning-border-radius: 2px;
+
+$hint-error-bg: #ffe8e8;
+$hint-error-color: #333;
+$hint-error-border-color: #e9322d;
+$hint-error-border-radius: 2px;
+
+// width of sidebar
+$sidebar-width: 300px;

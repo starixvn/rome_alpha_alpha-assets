@@ -1,0 +1,63 @@
+﻿@import "../abstracts/_variables-dark.scss";
+@import "../abstracts/_mixins.scss";
+
+.msg {
+    border-width: 1px;
+    border-style: solid;
+    padding: 8px 8px 8px 36px;
+    position: relative;
+    margin: 12px 0;
+    @include border-radius(2px);
+    @include box-sizing;
+
+    &:before {
+        font-family: Iconalpha;
+        font-size: 24px;
+        line-height: 20px;
+        position: absolute;
+        left: 8px;
+        top: 8px;
+    }
+}
+
+.msg-success {
+    background-color: $msg-success-bg;
+    border-color: $msg-success-border;
+    color: $msg-success-color;
+
+    &:before {
+        content: '\e93b';
+    }
+}
+
+.msg-info {
+    background-color: $msg-info-bg;
+    border-color: $msg-info-border;
+    color: $msg-info-color;
+
+    &:before {
+        content: '\e93c';
+    }
+}
+
+.msg-warning {
+    background-color: $msg-warning-bg;
+    border-color: $msg-warning-border;
+    color: $msg-warning-color;
+
+    &:before {
+        content: '\e93d';
+        color: $msg-warning-icon-color;
+    }
+}
+
+.msg-error {
+    background-color: $msg-error-bg;
+    border-color: $msg-error-border;
+    color: $msg-error-color;
+
+    &:before {
+        content: '\e93e';
+    }
+}
+

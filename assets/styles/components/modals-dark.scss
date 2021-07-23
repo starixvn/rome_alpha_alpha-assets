@@ -1,0 +1,280 @@
+﻿@import '../abstracts/_variables-dark.scss';
+@import '../abstracts/_mixins.scss';
+@import '../components/buttons-dark.scss';
+
+
+.modal[id^="page-popup"] {
+    position: absolute !important;
+}
+
+#page-popup, .modal {
+    height: auto;
+    @include effect-special;
+}
+
+#modal-draggable-mask {
+    border: dashed 2px #dfdfdf;
+    background-color: transparent;
+    z-index: 2000;
+    border-style: dotted;
+    cursor: move;
+}
+
+.modal-dialog {
+    margin: 0 auto;
+
+    &.ex-modal {
+        width: 100%;
+        height: auto;
+    }
+}
+
+.modal-content {
+    border-color: #515151;
+    margin: auto;
+    height: 100%;
+    @include border-radius(1px);
+    background-color: #171717;
+
+    .modal-header {
+        padding: 0 16px;
+        border-bottom: none;
+
+        .close {
+            color: unset;
+        }
+        .icon-close {
+            margin-right: 0;
+            opacity: 1;
+            font-size: 18px;
+            top: 6px;
+            width: 60px;
+            height: 30px;
+            left: 10px;
+
+            &:before {
+                position: relative;
+                left: 13px;
+            }
+        }
+
+        .modal-title {
+            border-bottom: 1px solid #212223;
+            color: #63A2E5;
+            font-weight: 700;
+            padding: 10px 0;
+            font-size: 13px;
+            cursor: move;
+
+            .popup-title:empty {
+                height: 20px;
+                display: block;
+            }
+
+            .icon-info {
+                color: #0f82c4;
+                font-size: 18px;
+                margin-left: 8px;
+                position: absolute;
+                text-decoration: none;
+            }
+        }
+    }
+
+    .modal-body {
+        padding: 2px 16px 8px;
+        line-height: 22px;
+        overflow-y: hidden;
+        overflow-x: auto;
+    }
+
+    .modal-footer {
+        border-top: none;
+        padding: 12px 16px 20px;
+
+        button:last-child {
+            margin-right: 0;
+        }
+    }
+}
+
+@media only screen and (max-device-width : $screen-device-lower768) {
+    .popup-guidelines {
+        width: 95% !important;
+    }
+
+    .modal-content .modal-header {
+        .modal-title {
+            font-size: calculateScale(13px);
+        }
+
+        .icon-close {
+            top: 8px;
+
+            &:before {
+                font-size: calculateScale(18px);
+            }
+        }
+    }
+}
+
+/*********************************/
+/* Bootboxjs*/
+/*********************************/
+.bootbox {
+
+    .close {
+        color: $text-color;
+        opacity: 1;
+        position: relative;
+    }
+
+    .modal-header .close {
+        top: 9px;
+        right: 0;
+    }
+
+    .modal-header + .modal-body {
+        padding-top: 16px;
+    }
+
+    .modal-body {
+        padding: 40px 16px 16px;
+        font-size: 14px;
+
+        .close {
+            top: -18px;
+            right: -4px;
+        }
+    }
+
+    .modal-dialog {
+        margin: 0;
+        width: 500px;
+        display: table;
+    }
+
+    .modal-footer {
+        border-top: none;
+        padding-bottom: 4px;
+
+        .btn.btn-primary:not(.btn-raised) {
+            color: #045ace;
+        }
+
+        .btn {
+            @include border-radius(1px);
+            @include box-shadow(0, 0, 0, transparent);
+            border: none;
+            color: #045ace;
+            font-weight: bold;
+            height: 32px;
+            line-height: 32px;
+            padding: 0 16px;
+            margin: 8px;
+            min-width: 86px;
+            text-transform: capitalize;
+            text-transform: uppercase;
+
+
+
+            &.btn-default {
+                color: #242424;
+                float: right;
+                background-color: #989898;
+
+                &:hover, &:focus {
+                    background-color: #cecece;
+                }
+            }
+
+            &.btn-primary {
+                background-color: #41A4FF;
+                color: #003256;
+
+                &:hover, &:focus {
+                    background-color: lighten(#41A4FF, 10%);
+                }
+            }
+        }
+    }
+}
+
+@media \0screen\,screen\9 {
+    .modal-dialog {
+        margin: 0 auto !important;
+    }
+}
+
+@media only screen and (max-device-width: $screen-device-lower768) {
+
+    /*.modal-backdrop {
+        z-index: 9999;
+    }*/
+
+	.bootbox-confirm.in, 
+	.bootbox-alert.in,
+	.modal.in.modal-account-info {
+		z-index: 10000;
+	}
+
+    .modal.in.modal-account-info,
+    .bootbox-confirm.in.bootbox-account-info .modal-dialog {
+        left: 5% !important;
+        right: 5% !important;
+        width: 90% !important;
+    }
+
+    .modal.in.modal-account-info {
+        box-shadow: 0 calculateScale(10px) calculateScale(20px) rgba(0,0,0,.19), 0 calculateScale(6px) calculateScale(6px) rgba(0,0,0,.23);
+        
+
+        .modal-content .modal-header .modal-title {
+            padding: calculateScale(10px) 0;
+            font-size: calculateScale(13px);
+        }
+
+        .modal-content .modal-header .icon-close {
+            font-size: calculateScale(18px);
+            top: calculateScale(6px);
+            width: calculateScale(60px);
+            height: calculateScale(30px);
+            left: calculateScale(10px);
+        }
+    }
+
+    .bootbox-confirm.in.bootbox-account-info {
+        
+
+        .modal-dialog {
+            position: absolute;            
+            font-size: calculateScale($font-size);
+        }
+
+        .modal-body {
+            padding: calculateScale(40px) calculateScale(16px) calculateScale(16px);
+            font-size: calculateScale(14px);
+            line-height: calculateScale(22px);
+            box-sizing: border-box;
+        }
+
+        .modal-footer .btn {
+            height: calculateScale(32px);
+            line-height: calculateScale(32px);
+            padding: 0 calculateScale(16px);
+            margin: calculateScale(8px);
+            min-width: calculateScale(86px);
+            font-size: calculateScale(14px);
+        }
+
+        .modal-footer {
+            padding: calculateScale(12px) calculateScale(16px) calculateScale(4px) calculateScale(20px);
+        }
+
+        button.close {
+            top: calculateScale(-18px);
+            right: calculateScale(-4px);
+            font-size: calculateScale(21px);
+        }
+    }
+}

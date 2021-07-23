@@ -1,0 +1,88 @@
+﻿@import "../abstracts/_variables-dark.scss";
+@import "../abstracts/_mixins.scss";
+
+.filter {
+    padding-top: 15px;
+    position: relative;
+
+    .form-group {
+        display: inline-block;
+        margin: 0 16px 15px 0;
+        vertical-align: middle;
+
+        label {
+            font-weight: normal;
+            margin-right: 5px;
+            max-width: none;
+        }
+
+        .control {
+            display: inline-block;
+            width: 200px;
+            vertical-align: middle;
+            margin-left: 5px;
+
+            &.date {
+                width: 130px;
+            }
+
+            .form-control {
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+        }
+    }
+
+    [class^="col-"] {
+        margin-bottom: 15px;
+    }
+
+    .txt-red {
+        color: #f00;
+    }
+}
+
+.form-group {
+    margin-bottom: 16px;
+}
+
+.form-control:focus {
+    @include effect-textbox;
+}
+
+.form-validation {
+    %alphaIcon {
+        font: {
+            family: 'Iconalpha';
+            style: normal;
+        }
+    }
+
+    .form-group {
+        position: relative;
+    }
+
+    .txt {
+        &.error ~ .validation, &.valid ~ .validation {
+            @extend %alphaIcon;
+            font-size: 18px;
+            right: 8px;
+            top: 25px;
+            position: absolute;
+        }
+
+        &.error {
+            ~ .validation:before {
+                content: '\e92c';
+                color: $msg-error-color;
+            }
+        }
+
+        &.valid {
+            ~ .validation:before {
+                content: '\e91f';
+                color: $msg-success-color;
+            }
+        }
+    }
+}

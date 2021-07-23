@@ -1,0 +1,15 @@
+﻿@import "../../../abstracts/_master-variables-dark.scss";
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover, .nav-tabs > li > a:hover {
+    color: $primary-color;
+}
+
+.nav.nav-tabs > li.active:after,
+.nav.nav-tabs > li:hover:after {
+    background: $primary-color;
+}
+
+.nav-tabs > li > a {
+    color: $tab-color;
+}

@@ -238,5 +238,189 @@
   {
     "outputFile": "styles/components/daterangepicker-customize.css",
     "inputFile": "styles/components/daterangepicker-customize.scss"
+  },
+  {
+    "outputFile": "styles/base/scaffolding-dark.css",
+    "inputFile": "styles/base/scaffolding-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/accordions-dark.css",
+    "inputFile": "styles/components/accordions-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/alerts-dark.css",
+    "inputFile": "styles/components/alerts-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/blockui-dark.css",
+    "inputFile": "styles/components/blockui-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/bootstrap-multiselect-dark.css",
+    "inputFile": "styles/components/bootstrap-multiselect-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/breadcrumbs-dark.css",
+    "inputFile": "styles/components/breadcrumbs-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/buttons-dark.css",
+    "inputFile": "styles/components/buttons-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/calendars-dark.css",
+    "inputFile": "styles/components/calendars-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/datatable-customize-dark.css",
+    "inputFile": "styles/components/datatable-customize-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/dropdown-dark.css",
+    "inputFile": "styles/components/dropdown-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/fanex-grid-dark.css",
+    "inputFile": "styles/components/fanex-grid-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/fanex-pagination-dark.css",
+    "inputFile": "styles/components/fanex-pagination-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/form-dark.css",
+    "inputFile": "styles/components/form-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/icon-dark.css",
+    "inputFile": "styles/components/icon-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/modals-dark.css",
+    "inputFile": "styles/components/modals-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/month-picker-dark.css",
+    "inputFile": "styles/components/month-picker-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/pagination-dark.css",
+    "inputFile": "styles/components/pagination-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/popover-dark.css",
+    "inputFile": "styles/components/popover-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/select2-dark.css",
+    "inputFile": "styles/components/select2-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/tables-dark.css",
+    "inputFile": "styles/components/tables-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/tabs-dark.css",
+    "inputFile": "styles/components/tabs-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/textboxes-dark.css",
+    "inputFile": "styles/components/textboxes-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/toastr-dark.css",
+    "inputFile": "styles/components/toastr-dark.scss"
+  },
+  {
+    "outputFile": "styles/layout/before-home-page/before-home-page-dark.css",
+    "inputFile": "styles/layout/before-home-page/before-home-page-dark.scss"
+  },
+  {
+    "outputFile": "styles/layout/dcs/customizeDCS-dark.css",
+    "inputFile": "styles/layout/dcs/customizeDCS-dark.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/header-dark.css",
+    "inputFile": "styles/layout/default-layout/header-dark.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/sidebar-dark.css",
+    "inputFile": "styles/layout/default-layout/sidebar-dark.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/title-agent-dark.css",
+    "inputFile": "styles/layout/default-layout/title-agent-dark.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/title-agent.css",
+    "inputFile": "styles/layout/default-layout/title-agent.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/title-master-dark.css",
+    "inputFile": "styles/layout/default-layout/title-master-dark.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/title-master.css",
+    "inputFile": "styles/layout/default-layout/title-master.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/title-super-dark.css",
+    "inputFile": "styles/layout/default-layout/title-super-dark.scss"
+  },
+  {
+    "outputFile": "styles/layout/default-layout/title-super.css",
+    "inputFile": "styles/layout/default-layout/title-super.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-agent-dark.css",
+    "inputFile": "styles/themes/components/buttons/button-agent-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-master-dark.css",
+    "inputFile": "styles/themes/components/buttons/button-master-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/buttons/button-super-dark.css",
+    "inputFile": "styles/themes/components/buttons/button-super-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent-dark.css",
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master-dark.css",
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.css",
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/tabs/tab-agent-dark.css",
+    "inputFile": "styles/themes/components/tabs/tab-agent-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/tabs/tab-master-dark.css",
+    "inputFile": "styles/themes/components/tabs/tab-master-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/components/tabs/tab-super-dark.css",
+    "inputFile": "styles/themes/components/tabs/tab-super-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/agent-dark.css",
+    "inputFile": "styles/themes/agent-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/customer-status-dark.css",
+    "inputFile": "styles/themes/customer-status-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/master-dark.css",
+    "inputFile": "styles/themes/master-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/super-dark.css",
+    "inputFile": "styles/themes/super-dark.scss"
   }
 ]

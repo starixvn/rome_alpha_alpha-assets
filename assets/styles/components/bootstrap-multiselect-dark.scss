@@ -1,0 +1,188 @@
+﻿@import "../abstracts/_variables-dark.scss";
+@import "../abstracts/_mixins.scss";
+
+.btn-group {
+    button.multiselect {
+        border: 1px solid #474747;
+        background: $dropdown-bg-color;
+        font-size: $font-size;
+        margin-right: 0;
+        position: relative;
+        padding: 6px 10px;
+        color: $dropdown-color;
+
+        &:hover {
+            color: inherit;
+        }
+
+        &:focus, &:visited {
+            @include box-shadow(0, 1px, 1px, rgba(0,0,0,.3));
+        }
+
+        .caret {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+    }
+
+    &.open > .dropdown-toggle {
+        &.btn.btn-default {
+            background: $dropdown-bg-color;
+            color: $dropdown-color;
+            @include effect-textbox;
+        }
+    }
+}
+
+.btn:not(.btn-raised):not(.btn-link):hover, .btn:not(.btn-raised):not(.btn-link):focus, .input-group-btn .btn:not(.btn-raised):not(.btn-link):hover, .input-group-btn .btn:not(.btn-raised):not(.btn-link):focus {
+    background-color: $dropdown-bg-color;
+    color: $dropdown-color;
+}
+
+.multiselect {
+    &.btn-default.active, &.btn-default:active {
+        background: #fff;
+    }
+
+    .multiselect-selected-text {
+        width: 170px;
+        margin-right: 10px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: left;
+    }
+}
+
+.multiselect-container.dropdown-menu {
+    border: 1px solid $dropdown-border;
+    font-size: 13px;
+    @include effect-normal;
+    background-color: $dropdown-bg-color;
+    color: $dropdown-color;
+
+    > li > a {
+        color: $dropdown-color;
+    }
+
+    > li:hover > a {
+        background-color: $dropdown-bg-hover;
+    }
+
+    > li > a > label {
+        line-height: 28px;
+        padding: 0 20px 0 35px;
+    }
+
+    label.checkbox {
+        display: block;
+    }
+
+    label.radio {
+        padding-left: 8px;
+
+        input[type=radio] {
+            display: none;
+        }
+    }
+
+    .filter {
+        padding: 0;
+
+        &:hover {
+            background: #fff;
+        }
+
+        .input-group {
+            width: 91%;
+
+            .input-group-addon, .input-group-btn {
+                display: none;
+            }
+
+            .form-control.multiselect-search {
+                width: 100%;
+                margin-left: 8px;
+                border-radius: 2px;
+                box-shadow: none;
+                border: 1px solid #aaa;
+                line-height: 18px;
+
+                &:hover {
+                    background: #fff;
+                }
+            }
+        }
+    }
+
+    .checkbox input[type="checkbox"],
+    .checkbox-inline input[type="checkbox"] {
+        margin-left: -22px;
+        top: 2px;
+    }
+
+
+    .multiselect-all {
+        border-bottom: none !important;
+        background-color: #474747 !important;
+    }
+
+    .multiselect-item.multiselect-group a {
+        padding: 6px 0 6px 36px !important;
+        display: flex;
+        align-items: center;
+
+        input[type="checkbox"] {
+            top: 0;
+        }
+
+        b:not(.caret) {
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        input[type="checkbox"] {
+            margin-right: 3px !important;
+        }
+    }
+
+    .multiselect-item.multiselect-group-clickable a {
+        padding: 8px 0 8px 8px !important;
+
+        &:hover {
+            color: inherit;
+        }
+    }
+
+    .multiselect-nested-item a {
+        padding-left: 16px;
+    }
+}
+
+.form-inline .multiselect-container {
+    label.checkbox{
+        padding: 2px 20px 2px 36px;
+    }
+
+    .active > a label, .active > a:hover label, .active > a:focus label {
+        color: $text-color;
+    }
+}
+
+.dropdown-menu > .active > a,
+.dropdown-menu > .active > a:hover,
+.dropdown-menu > .active > a:focus {
+    background: none;
+    color: $text-color;
+}
+
+.btn:not(.btn-raised), .btn:not(.btn-raised).btn-default, .input-group-btn .btn:not(.btn-raised), .input-group-btn .btn:not(.btn-raised).btn-default {
+    color: inherit;
+}
+
+
+
