@@ -962,7 +962,7 @@
     "outputFileName": "bundles/common/common-master-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master-dark.css",
-      "styles/themes/components/buttons/button-maste-darkr.css",
+      "styles/themes/components/buttons/button-master-dark.css",
       "styles/components/customize-checkbox-radio.css",
       "styles/themes/components/checkbox-radio/checkbox-radio-master-dark.css"
     ]
