@@ -316,6 +316,7 @@ $text-color: #fff;
     .maquee {
         color: $link-color;
         font-size: 13px;
+
         &:hover {
             color: $link-hover-color;
         }
@@ -323,6 +324,12 @@ $text-color: #fff;
 
     .live-message, .private-message {
         cursor: pointer;
+    }
+
+    .live-message {
+        #private-message-content {
+            color: #41CA41;
+        }
     }
 }
 
