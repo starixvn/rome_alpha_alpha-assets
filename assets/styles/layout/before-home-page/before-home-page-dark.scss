@@ -385,7 +385,7 @@ input, button {
     }
 }
 
-.modal.information {   
+.modal.information {
     .modal-dialog {
         margin-top: 13%;
     }
@@ -416,11 +416,13 @@ input, button {
             .modal-title {
                 border-bottom: none;
                 color: #fff;
+
                 font: {
                     weight: normal;
                     size: $font-size + 2;
                 }
-                line-height: 50px; 
+
+                line-height: 50px;
                 cursor: move;
                 padding: 0;
             }
@@ -429,14 +431,15 @@ input, button {
                 color: #fff;
                 top: 16px;
                 position: relative;
-            }         
+            }
         }
 
-        .modal-body{
+        .modal-body {
             color: $text-color;
             padding: 12px 20px;
-            font-size: $font-size + 2;
-
+            font-size: $font-size;
+            border: 1px solid #515151;
+            border-top: none;
             p {
                 margin-bottom: 4px;
             }
