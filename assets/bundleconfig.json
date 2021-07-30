@@ -1474,5 +1474,26 @@
       "styles/vendors/daterangepicker/daterangepicker.css",
       "styles/components/daterangepicker-customize.css"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-main/unsupport-browser/super-dark.css",
+    "inputFiles": [
+      "styles/fonts/iconalpha/style.css",
+      "styles/themes/unsupport-browser/super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/unsupport-browser/master-dark.css",
+    "inputFiles": [
+      "styles/fonts/iconalpha/style.css",
+      "styles/themes/unsupport-browser/master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/unsupport-browser/agent-dark.css",
+    "inputFiles": [
+      "styles/fonts/iconalpha/style.css",
+      "styles/themes/unsupport-browser/agent-dark.css"
+    ]
   }
 ]

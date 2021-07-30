@@ -422,5 +422,17 @@
   {
     "outputFile": "styles/themes/super-dark.css",
     "inputFile": "styles/themes/super-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/unsupport-browser/agent-dark.css",
+    "inputFile": "styles/themes/unsupport-browser/agent-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/unsupport-browser/master-dark.css",
+    "inputFile": "styles/themes/unsupport-browser/master-dark.scss"
+  },
+  {
+    "outputFile": "styles/themes/unsupport-browser/super-dark.css",
+    "inputFile": "styles/themes/unsupport-browser/super-dark.scss"
   }
 ]
