@@ -35,6 +35,9 @@
     color: $primary-color;
 }
 
+.announcement-modal .modal-content .modal-header {
+    background-color: #276443;
+}
 
 @media only screen and (max-device-width : $screen-device-lower768) {
     .header-nav .list-top>li.language:hover, 
