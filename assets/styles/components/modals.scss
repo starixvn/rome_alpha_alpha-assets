@@ -2,7 +2,6 @@
 @import '../abstracts/_mixins.scss';
 @import '../components/buttons.scss';
 
-
 .modal[id^="page-popup"] {
     position: absolute !important;
 }
@@ -119,14 +118,13 @@
 /* Bootboxjs*/
 /*********************************/
 .bootbox {
-
     .close {
         color: $text-color;
         opacity: 1;
         position: relative;
     }
 
-    .modal-header .close {        
+    .modal-header .close {
         top: 9px;
         right: 0;
     }
@@ -172,7 +170,7 @@
             margin: 8px;
             min-width: 86px;
             text-transform: capitalize;
-            text-transform: uppercase;            
+            text-transform: uppercase;
 
             &:hover, &:focus {
                 background-color: #ececec;
@@ -193,16 +191,15 @@
 }
 
 @media only screen and (max-device-width: $screen-device-lower768) {
-
     /*.modal-backdrop {
         z-index: 9999;
     }*/
 
-	.bootbox-confirm.in, 
-	.bootbox-alert.in,
-	.modal.in.modal-account-info {
-		z-index: 10000;
-	}
+    .bootbox-confirm.in,
+    .bootbox-alert.in,
+    .modal.in.modal-account-info {
+        z-index: 10000;
+    }
 
     .modal.in.modal-account-info,
     .bootbox-confirm.in.bootbox-account-info .modal-dialog {
@@ -213,7 +210,6 @@
 
     .modal.in.modal-account-info {
         box-shadow: 0 calculateScale(10px) calculateScale(20px) rgba(0,0,0,.19), 0 calculateScale(6px) calculateScale(6px) rgba(0,0,0,.23);
-        
 
         .modal-content .modal-header .modal-title {
             padding: calculateScale(10px) 0;
@@ -230,10 +226,8 @@
     }
 
     .bootbox-confirm.in.bootbox-account-info {
-        
-
         .modal-dialog {
-            position: absolute;            
+            position: absolute;
             font-size: calculateScale($font-size);
         }
 
@@ -261,6 +255,28 @@
             top: calculateScale(-18px);
             right: calculateScale(-4px);
             font-size: calculateScale(21px);
+        }
+    }
+}
+
+.modal.parlay-max-payout-popup {
+    max-width: 1048px;
+
+    @media only screen and (max-device-width: $screen-device-lower768) {
+        width: calc(100% - #{calculateScale(10px)}) !important;
+    }
+}
+
+@media only screen and (min-device-width: $screen-device-greater768) {
+    .sidebar ~ .modal.parlay-max-payout-popup {
+        width: calc(100% - #{$sidebar-width}) !important;
+    }
+
+    .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
+        width: calc(100% - 40px) !important;
+
+        @media only screen and (max-device-width: $screen-device-greater1024) {
+            width: calc(100% - 56px) !important;
         }
     }
 }
