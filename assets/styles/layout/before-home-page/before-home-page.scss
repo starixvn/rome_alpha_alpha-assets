@@ -286,6 +286,10 @@ input, button {
         font-family: $font-family;
     }
 
+    &::placeholder {
+        font-family: $font-family;
+    }
+
     &.show-hint {
         font-family: unset;
     }
