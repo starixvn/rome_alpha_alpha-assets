@@ -2,12 +2,12 @@
 @import "../../../abstracts/_master-variables-dark.scss";
 
 .checkbox input[type="checkbox"]:checked + label:before {
-    background-color: $primary-color;
-    border-color: $primary-color;
+    background-color: $account-info-tabs;
+    border-color: $account-info-tabs;
 }
 
 .checkbox input[type="checkbox"]:checked + label:after {
-    border-color: #212223;
+    border-color: #fff;
 }
 
 .radio input[type="radio"]:checked + label:before {
