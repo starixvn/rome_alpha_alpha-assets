@@ -21,7 +21,7 @@
 }
 
 .nav.nav-tabs > li > a {
-    padding: 10px 20px 8px;
+    padding: 10px 20px 12px;
     border: none;
     font-size: $font-size;
 }
@@ -30,21 +30,21 @@
     @include transition('width .5s ease, background-color .5s ease');
     content: '';
     display: block;
-    height: 3px;
+    height: 2px;
     width: 0;
     background: transparent;    
 }
 
 .nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
     border: none;
-    color: $tab-active-color;
+    color: #EDEDED;
     background: transparent;
 }
 
-.nav.nav-tabs > li.active:after, 
+.nav.nav-tabs > li.active:after,
 .nav.nav-tabs > li:hover:after {
     width: 100%;
-    background: $tab-line;
+    background: #EDEDED;
 }
 
 .nav-tabs > li > a {
