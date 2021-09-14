@@ -9,7 +9,7 @@
     border: 1px solid $table-border-color;
     border-collapse: collapse;
     background-color: $section-bg;
-    color: #E7E7E7;
+    color: #EDEDED;
 
     &.tblRpt-bordered {
         > tbody > tr > td, tfoot > tr > td {
@@ -25,12 +25,13 @@
 
             > tr {
                 > th {
-                    border-left: 1px solid #767A85;
+                    border-right: 1px solid #5F626B;
+                   
                 }
 
                 &:not(:first-child) {
                     th {
-                        border-top: 1px solid #767A85;
+                        border-top: 1px solid #5F626B;
                     }
                 }
             }
