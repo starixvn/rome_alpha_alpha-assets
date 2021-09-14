@@ -58,6 +58,7 @@ input[type="submit"][disabled] {
 
 .btn-submit {
     @extend %btn;
+    border-radius: 0;
     background: $btn-submit-bg;
     color: $btn-submit-color;
     font-weight: bold;

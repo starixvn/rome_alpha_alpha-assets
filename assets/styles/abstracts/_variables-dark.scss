@@ -4,10 +4,10 @@ $font-size: 13px;
 $body-bg-dark: #0A0A0A; 
 $panel-bg: #212223;
 $section-bg: #212223; // lightmode #fff;
-$text-color: #CBCBCB;
+$text-color: #EDEDED;
 $text-red-color: #9d1c1c;
 
-$link-color: #56D6FF;
+$link-color: #56D6F1;
 $link-hover-color: #F60;
 
 $border-color: #dfdfdf;
@@ -30,10 +30,10 @@ $btn-bg-hover: $component-border-color;
 $btn-color-hover: $component-color;
 $btn-bg-hover: darken($btn-bg, 5%);
 
-$btn-submit-bg: #41A4FF;
-$btn-submit-color: #003256;
+$btn-submit-bg: #36587D;
+$btn-submit-color: #EDEDED;
 $btn-submit-bg-hover: darken($btn-submit-bg, 5%);
-$btn-submit-color-hover: #003256;
+$btn-submit-color-hover: #EDEDED;
 
 $btn-reset-bg: #F6731B;
 $btn-reset-color: #fff;
@@ -67,8 +67,8 @@ $table-red-color: #B50000;
 $table-td-hover-color: #36362E;
 $table-border-color: #3E3F41;
 $table-header-border-color: #767A85;
-$table-header-bg-color: #4D4D4D;
-$table-header-color: #fff;
+$table-header-bg-color: #383838;
+$table-header-color: #EDEDED;
 $table-subheader-bg-color: #3f3f3f;
 $table-subheader-color: #fff;
 $table-compopent-height: 22px;

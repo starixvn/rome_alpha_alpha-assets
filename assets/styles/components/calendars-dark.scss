@@ -17,7 +17,7 @@
 
     .icon-calendar {
         font-size: 24px;
-        color: #7f7f7f;
+        color: #EDEDED;
         display: inline-block;
         @include ripple-effect-icon($margin-left: -6px, $height: 36px, $width: 36px, $top: -2px);
     }
@@ -30,7 +30,7 @@
         top: 3px;
     }
 
-    .form-control {        
+    .form-control {
         border: 1px solid $component-border-color;
         font-size: 12px;
         height: 28px;
