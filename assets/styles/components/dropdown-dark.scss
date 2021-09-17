@@ -40,11 +40,11 @@ select {
                 padding: 8px 15px;
                 font-size: $font-size;
                 color: $component-color;
-            }
 
-            a:hover {
-                color: $dropdown-color;
-                background: $dropdown-bg-hover;
+                &:hover {
+                    color: #e7e7e7 !important;
+                    background: $dropdown-bg-hover;
+                }
             }
         }
     }
