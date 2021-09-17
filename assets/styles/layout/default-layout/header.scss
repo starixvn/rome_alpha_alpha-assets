@@ -231,11 +231,11 @@ $text-color: #fff;
     .switch-mode {
         cursor: pointer;
         //text-indent: -9999px;
-        width: 50px;
-        height: 22px;
-        background: rgba(255, 255, 255, 0.5);
-        border: 1px solid rgba(255, 255, 255, 0.5);
-        border-radius: 100px;
+        //width: 50px;
+        //height: 22px;
+        //background: rgba(255, 255, 255, 0.5);
+        //border: 1px solid rgba(255, 255, 255, 0.5);
+        //border-radius: 100px;
         position: relative;
         margin-bottom: 0;
         display: inline-block;
@@ -248,13 +248,13 @@ $text-color: #fff;
 
     .switch-mode:after {
         content: url("../../images/mode/light.svg");
-        position: absolute;
-        top: 2px;
-        left: 2px;
+        //position: absolute;
+        //top: 2px;
+        //left: 2px;
         transition: 0.3s;
-        width: 16px;
-        height: 16px;
-        border-radius: 10px;
+        width: 24px;
+        height: 24px;
+        //border-radius: 10px;
 
         @media screen and (max-device-width: 768px) {
             width: calculateScale(16px);
@@ -263,8 +263,8 @@ $text-color: #fff;
     }
 
     .switch-mode.dark-mode {
-        background-color: rgba(0, 0, 0, 0.5);
-        border: 1px solid rgba(0, 0, 0, 0.5);
+        //background-color: rgba(0, 0, 0, 0.5);
+        //border: 1px solid rgba(0, 0, 0, 0.5);
     }
 
     .switch-mode.dark-mode:after {
