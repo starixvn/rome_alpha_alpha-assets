@@ -18,9 +18,13 @@
                 if (keyEvent.which === 3) { //// If mouse right
                     return;
                 }
-                $.each($('iframe'), function (index, iframeObject) {
-                    var iframeContent = iframeObject.contentWindow || iframeObject.contentDocument;
-                    $(iframeContent.document).off('mousemove.drag touchmove.drag');
+
+                $.each($("iframe"), function (index, iframeObject) {
+                    try {
+                        var iframeContent = iframeObject.contentWindow || iframeObject.contentDocument;
+                        $(iframeContent.document).off('mousemove.drag touchmove.drag');
+                    } catch (e) {
+                    }
                 });
 
                 if (!$mask.is(":visible")) {
@@ -84,15 +88,18 @@
                         $mask.offset({ top: e.pageY - dy, left: e.pageX - dx });
                     });
 
-                    $.each($('iframe'), function (index, iframeObject) {
-                        var iframeContent = iframeObject.contentWindow || iframeObject.contentDocument;
-                        var currentIframe = $(iframeObject);
-                        $(iframeContent.document)
-                            .off('mousemove.drag')
-                            .on('mousemove.drag', function (e) {
-                                var iframeOffset = currentIframe.offset();
-                                $mask.offset({ top: e.pageY - dy - currentIframe.contents().scrollTop() + iframeOffset.top, left: e.pageX - dx + iframeOffset.left });
-                            });
+                    $.each($("iframe"), function (index, iframeObject) {
+                        try {
+                            var iframeContent = iframeObject.contentWindow || iframeObject.contentDocument;
+                            var currentIframe = $(iframeObject);
+                            $(iframeContent.document)
+                                .off('mousemove.drag')
+                                .on('mousemove.drag', function (e) {
+                                    var iframeOffset = currentIframe.offset();
+                                    $mask.offset({ top: e.pageY - dy - currentIframe.contents().scrollTop() + iframeOffset.top, left: e.pageX - dx + iframeOffset.left });
+                                });
+                        } catch (e) {
+                        }
                     });
                 },
                 mouseup: movePopup,
@@ -147,24 +154,27 @@
                                 });
                         });
 
-                    $.each($('iframe'), function (index, iframeObject) {
-                        var iframeContent = iframeObject.contentWindow || iframeObject.contentDocument;
-                        var currentIframe = $(iframeObject);
-                        $(iframeContent.document).off('touchmove.drag')
-                            .on('touchmove.drag', function (e) {
-                                var iframeOffset = currentIframe.offset();
-                                var newLeft = e.originalEvent.touches[0].pageX - dx + iframeOffset.left;
+                    $.each($("iframe"), function (index, iframeObject) {
+                        try {
+                            var iframeContent = iframeObject.contentWindow || iframeObject.contentDocument;
+                            var currentIframe = $(iframeObject);
+                            $(iframeContent.document).off('touchmove.drag')
+                                .on('touchmove.drag', function (e) {
+                                    var iframeOffset = currentIframe.offset();
+                                    var newLeft = e.originalEvent.touches[0].pageX - dx + iframeOffset.left;
 
-                                if (newLeft > maxMobileLeft) {
-                                    return;
-                                }
+                                    if (newLeft > maxMobileLeft) {
+                                        return;
+                                    }
 
-                                $mask.offset(
-                                    {
-                                        top: e.originalEvent.touches[0].pageY - dy - currentIframe.contents().scrollTop() + iframeOffset.top,
-                                        left: e.originalEvent.touches[0].pageX - dx + iframeOffset.left
-                                    });
-                            });
+                                    $mask.offset(
+                                        {
+                                            top: e.originalEvent.touches[0].pageY - dy - currentIframe.contents().scrollTop() + iframeOffset.top,
+                                            left: e.originalEvent.touches[0].pageX - dx + iframeOffset.left
+                                        });
+                                });
+                        } catch (e) {
+                        }
                     });
                 },
                 touchend: movePopup
