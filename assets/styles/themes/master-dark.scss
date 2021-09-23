@@ -22,7 +22,7 @@
 .header-nav .list-top>li.view-type:hover, 
 .header-nav .list-top>li.dropdown:active:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background: $header-nav-icon-hover;
+    background: rgba(255,255,255,0.1);
 }
 
 .withripple menu-opener parent-menu:focus {

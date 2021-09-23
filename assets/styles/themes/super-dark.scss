@@ -18,11 +18,11 @@
     color: $primary-color;
 }
 
-.header-nav .list-top>.language:hover, 
-.header-nav .list-top>.view-type:hover, 
-.header-nav .list-top>.dropdown:active:focus,
+.header-nav .list-top > .language:hover,
+.header-nav .list-top > .view-type:hover,
+.header-nav .list-top > .dropdown:active:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background: $header-nav-icon-hover;
+    background: rgba(255,255,255,0.1);
 }
 
 .mainmenu-container .sub-menu .sub-menu-item:hover a,

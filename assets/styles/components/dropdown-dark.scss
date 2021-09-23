@@ -36,6 +36,17 @@ select {
         color: $dropdown-color;
 
         > li {
+            ul {
+                li {
+                    a {
+                        &:hover {
+                            color: #e7e7e7 !important;
+                            background: $dropdown-bg-hover;
+                        }
+                    }
+                }
+            }
+
             > a {
                 padding: 8px 15px;
                 font-size: $font-size;
