@@ -477,6 +477,25 @@ select.setting-field {
     }
 }
 
+.tooltip--left .tooltip__content {
+    margin-left: 10px;
+
+    &:after, &:before {
+        top: 29%;
+        left: -8px;
+        border-top-color: transparent;
+    }
+
+    &:after {
+        border-right-color: $hint-warning-bg;
+    }
+
+    &:before {
+        border-right-color: $hint-warning-border-color;
+        margin-left: -10px;
+    }
+}
+
 .tooltip--error .tooltip__content {
     @extend %tooltip;
     background-color: $hint-error-bg;
@@ -536,9 +555,9 @@ select.setting-field {
         }
     }
 }
+
 @media screen and (max-device-width: 1024px) and (orientation:portrait) {
     .block__item .block__lbl {
         padding: 0 4px;
     }
 }
-
