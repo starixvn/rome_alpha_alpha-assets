@@ -54,7 +54,7 @@
         @include border-radius(50%);
 
         &.active {
-            background-color: #337AB7;
+            background-color: #36587D;
             color: #fff;
             text-shadow: none;
             padding: 3px 1px;
@@ -120,7 +120,7 @@
         }
     }
 
-    .datepicker-days {
+    .datepicker-days, .datepicker-months, .datepicker-years, .datepicker-decades {
         table thead tr:first-child th:hover {
             background: none;
         }
@@ -181,6 +181,10 @@
             font-size: 13px;
             @extend %ripple-effect;
 
+            &.active {
+                background-color: #36587D;
+            }
+
             &.disabled {
                 color: #696969;
 
@@ -234,13 +238,15 @@
         }
     }
 }
-
+.bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
+    background: none;
+}
 // For mobile
 @media only screen and (max-device-width : $conent-device-lower768) {
     .input-group.date {
         .form-control {
             height: 36px;
-            @include box-shadow-multiple('0px 1px 3px rgba(0, 0, 0, 0.3)');                
+            @include box-shadow-multiple('0px 1px 3px rgba(0, 0, 0, 0.3)');
         }
 
         .icon-calendar {
