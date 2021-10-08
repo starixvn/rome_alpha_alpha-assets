@@ -953,7 +953,7 @@
     "inputFiles": [
       "styles/themes/components/tabs/tab-super-dark.css",
       "styles/themes/components/buttons/button-super-dark.css",
-      "styles/components/customize-checkbox-radio.css",
+      "styles/components/customize-checkbox-radio-dark.css",
       "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.css"
 
     ]

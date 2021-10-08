@@ -434,5 +434,9 @@
   {
     "outputFile": "styles/themes/unsupport-browser/super-dark.css",
     "inputFile": "styles/themes/unsupport-browser/super-dark.scss"
+  },
+  {
+    "outputFile": "styles/components/customize-checkbox-radio-dark.css",
+    "inputFile": "styles/components/customize-checkbox-radio-dark.scss"
   }
 ]
