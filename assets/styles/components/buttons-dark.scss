@@ -74,7 +74,8 @@ input[type="submit"][disabled] {
     }
 
     &[disabled] {
-        color: $btn-submit-color;
+        color: #003256;
+        background: #3C5D7B;
     }
 }
 
@@ -83,18 +84,20 @@ input[type=reset], .btn-reset {
     background-color: $btn-reset-bg;
     color: $btn-reset-color;
     outline: none;
+
     &:hover, &:active {
         color: $btn-reset-color-hover;
         background-color: $btn-reset-bg-hover;
 
         &[disabled], .disabled {
-            background-color: $btn-reset-bg;    
+            background-color: $btn-reset-bg;
             color: $btn-reset-color;
         }
     }
 
     &[disabled] {
-        color: $btn-reset-color;
+        color: #332821;
+        background: #735A4A;
     }
 }
 
