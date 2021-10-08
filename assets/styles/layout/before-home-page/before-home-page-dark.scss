@@ -36,6 +36,10 @@ input, button {
     @include effect-button();
     border: 1px solid $component-border-color;
 
+    p {
+        color: #CBCBCB;
+    }
+
     &.nickname {
         padding: 20px 30px;
 
@@ -47,6 +51,11 @@ input, button {
         .lblUsername {
             margin-top: 8px;
             margin-bottom: 8px;
+        }
+
+        .btn-cancel {
+            background: #696969;
+            color: #EDEDED;
         }
     }
 
@@ -174,7 +183,7 @@ input, button {
         height: 36px;
         line-height: 36px;
         padding: 0 0 0 28px;
-        color: #fff;
+        color: #727272;
         background-color: transparent;
         @include border-radius(0);
         @include box-shadow-multiple('none');
@@ -183,8 +192,9 @@ input, button {
             border-bottom: 2px solid #666;
             color: #fff;
 
-            + [class^="icon"] {
-                color: #666;
+
+            ~ [class^="icon"] {
+                color: #EDEDED;
             }
         }
 
@@ -207,7 +217,7 @@ input, button {
         position: relative;
 
         [class^="icon"] {
-            color: #ccc;
+            color: #727272;
             position: absolute;
             left: 0;
         }

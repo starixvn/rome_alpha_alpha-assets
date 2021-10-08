@@ -10,10 +10,18 @@
     border-color: #fff;
 }
 
+.radio label {
+    color: #cbcbcb;
+}
+
+.radio label:before {
+    background-color: #171717;
+}
+
 .radio input[type="radio"]:checked + label:before {
-    border-color: $primary-color;
+    border-color: #CBCBCB;
 }
 
 .radio input[type="radio"]:checked + label:after {
-    background-color: $primary-color;
+    background-color: #CBCBCB;
 }
