@@ -10,8 +10,12 @@ $unsupport-browser-bg: "../../images/oldbrowser-master-dark.jpg";
     border: 1px solid $msg-warning-border;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5) !important;
 
-    .icon-close::before, .icon-alert::before, .title, a {
+    .icon-close::before, .icon-alert::before, .title {
         color: #FFE954 !important;
+    }
+
+    a:not(.icon-close) {
+        color: #41A4FF !important;
     }
 
     .content-msg {
