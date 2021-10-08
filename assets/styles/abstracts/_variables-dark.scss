@@ -45,10 +45,10 @@ $btn-refresh-color: #fff;
 $btn-refresh-bg-hover: darken($btn-refresh-bg, 5%);
 $btn-refresh-color-hover: #fff;
 
-$btn-cancel-bg: #989898;
-$btn-cancel-color: #242424;
+$btn-cancel-bg: #696969;
+$btn-cancel-color: #fff;
 $btn-cancel-bg-hover: darken($btn-cancel-bg, 5%);
-$btn-cancel-color-hover: #242424;
+$btn-cancel-color-hover: darken($btn-cancel-bg, 5%);
 
 $btn-remove-bg: #930a14;
 $btn-remove-color: #fff;

@@ -122,12 +122,12 @@ input[type=reset], .btn-reset {
     @extend %btn;
     background-color: $btn-cancel-bg;
     color: $btn-cancel-color;
-
+    font-weight: bold;
     &:hover, &:active, &:focus {
         background-color: $btn-cancel-bg-hover;
 
         &[disabled], .disabled {
-            background-color: $btn-cancel-bg;    
+            background-color: $btn-cancel-bg;
             color: $btn-cancel-color;
         }
     }
