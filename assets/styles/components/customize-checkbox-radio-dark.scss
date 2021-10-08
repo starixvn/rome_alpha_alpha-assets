@@ -76,8 +76,8 @@
             top: 0;
             height: 14px;
             width: 14px;
-            border: 1px solid rgba(0,0,0, .54);
-            background-color: #fff;
+            border: 1px solid !important;
+            background-color: transparent !important;
         }
 
         &:after {
@@ -88,7 +88,7 @@
             left: 3px;
             height: 8px;
             width: 8px;
-            background-color: #fff;
+            background-color: transparent !important;
         }
     }
 }
@@ -100,4 +100,9 @@
 
 .radio input[type="radio"]:checked + label:after {
     opacity: 1;
+    background-color: #EDEDED !important;
+}
+.radio input[type="radio"]:checked + label:before {
+    border-color: #EDEDED !important;
+    background-color: transparent !important;
 }
