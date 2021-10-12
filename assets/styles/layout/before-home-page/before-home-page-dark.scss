@@ -365,6 +365,10 @@ input, button {
         color: #727272;
     }
 
+    &::placeholder {
+        font-family: $font-family;
+    }
+
     &.show-hint {
         font-family: unset;
     }
@@ -569,9 +573,6 @@ input, button {
         }
     }
 }
-
-
-
 
 @media only screen and (max-device-width: 374px)
 {  

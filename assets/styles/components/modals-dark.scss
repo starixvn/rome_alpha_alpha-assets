@@ -2,7 +2,6 @@
 @import '../abstracts/_mixins.scss';
 @import '../components/buttons-dark.scss';
 
-
 .modal[id^="page-popup"] {
     position: absolute !important;
 }
@@ -274,6 +273,28 @@
             top: calculateScale(-18px);
             right: calculateScale(-4px);
             font-size: calculateScale(21px);
+        }
+    }
+}
+
+.modal.parlay-max-payout-popup {
+    max-width: 1048px;
+
+    @media only screen and (max-device-width: $screen-device-lower768) {
+        width: calc(100% - #{calculateScale(10px)}) !important;
+    }
+}
+
+@media only screen and (min-device-width: $screen-device-greater768) {
+    .sidebar ~ .modal.parlay-max-payout-popup {
+        width: calc(100% - #{$sidebar-width}) !important;
+    }
+
+    .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
+        width: calc(100% - 40px) !important;
+
+        @media only screen and (max-device-width: $screen-device-greater1024) {
+            width: calc(100% - 56px) !important;
         }
     }
 }
