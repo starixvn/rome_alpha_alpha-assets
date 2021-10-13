@@ -157,7 +157,7 @@
         padding-bottom: 4px;
 
         .btn.btn-primary:not(.btn-raised) {
-            color: #045ace;
+            color: #ededed;
         }
 
         .btn {
@@ -177,21 +177,23 @@
 
 
             &.btn-default {
-                color: #242424;
+                color: #EDEDED;
                 float: right;
-                background-color: #989898;
+                background-color: #696969;
 
                 &:hover, &:focus {
-                    background-color: #cecece;
+                    background-color: #696969;
+                    outline : none;
                 }
             }
 
             &.btn-primary {
-                background-color: #41A4FF;
-                color: #003256;
+                background-color: #36587D;
+                color: #ededed;
 
                 &:hover, &:focus {
-                    background-color: lighten(#41A4FF, 10%);
+                    background-color: lighten(#36587D, 10%);
+                    outline: none;
                 }
             }
         }
