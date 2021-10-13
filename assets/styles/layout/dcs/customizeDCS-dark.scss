@@ -176,6 +176,12 @@ a {
     padding: 0 4px;
     vertical-align: middle;
     @include box-sizing;
+
+    &:disabled {
+        background: #2B2B2B;
+        border: 1px solid #474747;
+        color: #464646;
+    }
 }
 
 select.setting-field {
@@ -578,4 +584,8 @@ select.setting-field {
 
 .block-ui-overlay {
     background-color: rgba(0, 0, 0, 0.5);
+}
+
+.disabled {
+    background-color: transparent !important;
 }
