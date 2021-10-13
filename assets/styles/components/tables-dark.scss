@@ -8,7 +8,7 @@
 .tblRpt {
     border: 1px solid $table-border-color;
     border-collapse: collapse;
-    background-color: $section-bg;
+    background-color: #181919;
     color: #EDEDED;
     border-right: 0;
 
@@ -159,9 +159,7 @@
         }
     }
 
-    .product-row, .pt-row {
-        background-color: #f3f5e0;
-        color: #333;
+    .product-row, .pt-row 
         text-transform: uppercase;
 
         .altercol {
