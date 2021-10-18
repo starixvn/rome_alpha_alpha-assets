@@ -598,3 +598,11 @@ select.setting-field {
 .settingtype12 .block__row--border-top {
     border-top: 1px solid #3e3f41 !important;
 }
+.msg-container {
+    background-color: transparent !important;
+    margin-bottom: 0 !important;
+
+    .msg--warning {
+        margin-bottom: 10px !important;
+    }
+}
