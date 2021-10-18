@@ -7,14 +7,14 @@
     margin: 0;
 
     li {
-        color: #fff;
+        color: #ededed;
         font-weight: 700;
         text-transform: uppercase;
         position: relative;
 
         + li:before {
             content: '\276F';
-            color: #a9a9a9;
+            color: #ededed;
             padding: 0 8px;
         }
     }
