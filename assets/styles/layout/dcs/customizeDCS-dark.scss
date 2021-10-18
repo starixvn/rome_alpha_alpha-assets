@@ -598,11 +598,20 @@ select.setting-field {
 .settingtype12 .block__row--border-top {
     border-top: 1px solid #3e3f41 !important;
 }
-.msg-container {
+.msg--warning, .msg--error {
     background-color: transparent !important;
-    margin-bottom: 0 !important;
+    border: none !important;
+}
 
-    .msg--warning {
-        margin-bottom: 10px !important;
-    }
+.msg--error {
+    color: #DD6161 !important;
+}
+
+.msg--warning {
+    margin-bottom: 0 !important;
+}
+
+.msg-container {
+    background: #312F26 !important;
+    border: 1px solid #78776D !important;
 }
