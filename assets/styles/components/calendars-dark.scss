@@ -238,6 +238,11 @@
         }
     }
 }
+.bootstrap-datetimepicker-widget .datepicker-months .table-condensed > tbody > tr > td:after,
+.bootstrap-datetimepicker-widget .datepicker-years .table-condensed > tbody > tr > td:after,
+.bootstrap-datetimepicker-widget .datepicker-decades .table-condensed > tbody > tr > td:after {
+    display: none;
+}
 .bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
     background: none;
 }
