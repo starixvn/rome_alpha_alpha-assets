@@ -91,10 +91,7 @@
     .filter {
         padding: 0;
 
-        &:hover {
-            background: #fff;
-        }
-
+       
         .input-group {
             width: 91%;
 
@@ -110,9 +107,7 @@
                 border: 1px solid #474747;
                 line-height: 18px;
 
-                &:hover {
-                    background: #fff;
-                }
+               
             }
         }
     }
