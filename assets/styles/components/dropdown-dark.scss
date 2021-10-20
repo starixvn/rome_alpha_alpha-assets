@@ -125,7 +125,15 @@ select {
 }
 
 .dropdown-menu {
-    background-clip: border-box;
+    border: 1px solid $dropdown-border !important;
+    background-color: $dropdown-bg-color !important;
+
+    .active {
+        background-color: #3c3c3c !important;
+    }
+    .dropdown-item{
+        color : #ededed;
+    }
 }
 
 .multiselect-container.dropdown-menu {
