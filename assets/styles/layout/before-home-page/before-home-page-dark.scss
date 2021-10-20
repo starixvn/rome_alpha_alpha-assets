@@ -6,9 +6,7 @@ body {
     font-size: $font-size + 2;
     background-color: $body-bg-dark;
     margin: 0;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    padding-top: 8%;
     color: $text-color;
     @include box-sizing;
 }
