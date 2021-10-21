@@ -8,6 +8,11 @@
 
     &.disabled {
         opacity: .4;
+        label{
+            &:after{
+                display : none;
+            }
+        }
     }
 
     label {
