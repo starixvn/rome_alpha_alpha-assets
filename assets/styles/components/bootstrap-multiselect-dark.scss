@@ -62,6 +62,8 @@
     @include effect-normal;
     background-color: $dropdown-bg-color;
     color: $dropdown-color;
+    z-index: 10000;
+
 
     > li > a {
         color: $dropdown-color;
@@ -91,7 +93,7 @@
     .filter {
         padding: 0;
 
-       
+
         .input-group {
             width: 91%;
 
@@ -106,8 +108,6 @@
                 box-shadow: none;
                 border: 1px solid #474747;
                 line-height: 18px;
-
-               
             }
         }
     }
@@ -116,6 +116,10 @@
     .checkbox-inline input[type="checkbox"] {
         margin-left: -22px;
         top: 2px;
+
+        @media only screen and (max-device-width : $screen-device-lower768) and (orientation: portrait) {
+            top: 8px;
+        }
     }
 
 
