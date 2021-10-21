@@ -51,7 +51,7 @@ a {
 .block__sub-header {
     background-color: $pt-col-highlight-bg;
     border-bottom-color: $pt-border-color;
-    height: $pt-col-height;
+   // height: $pt-col-height;
     line-height: $pt-col-height;
 }
 
@@ -615,3 +615,19 @@ select.setting-field {
     background: #312F26 !important;
     border: 1px solid #78776D !important;
 }
+
+.icon--warning {
+    height: auto;
+    width: auto;
+    background-image: none;
+    margin-top: 0px !important;
+    color: #f6f2d7;
+    &:before {
+        content: '\e93d';
+        font-size: 20px;
+        font-family: 'Iconalpha';
+        display: inline-block;
+        font-weight : normal;
+    }
+}
+

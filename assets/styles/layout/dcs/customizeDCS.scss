@@ -50,7 +50,7 @@ a {
 .block__sub-header {
     background-color: $pt-col-highlight-bg;
     border-bottom-color: $pt-border-color;
-    height: $pt-col-height;
+   // height: $pt-col-height;
     line-height: $pt-col-height;
 }
 
@@ -559,5 +559,21 @@ select.setting-field {
 @media screen and (max-device-width: 1024px) and (orientation:portrait) {
     .block__item .block__lbl {
         padding: 0 4px;
+    }
+}
+
+.icon--warning {
+    height: auto;
+    width: auto;
+    background-image: none;
+    margin-top: 0px !important;
+    color: #7e3d00;
+
+    &:before {
+        content: '\e93d';
+        font-size: 20px;
+        font-family: 'Iconalpha';
+        display: inline-block;
+        font-weight: normal;
     }
 }
