@@ -204,6 +204,16 @@ select.setting-field {
     display: inline-block;
 }
 
+
+.icon {
+    &:hover {
+        &:after {
+            display: none;
+        }
+    }
+}
+
+
 .icon--update {
     @include ripple-effect-icon($top: 5px, $margin-left: -6px);
     background: none;
@@ -445,37 +455,6 @@ select.setting-field {
     }
 }
 
-.tooltip--success .tooltip__content {
-    @extend %tooltip;
-    background-color: $hint-success-bg;
-    border: 1px solid $hint-success-border-color;
-    color: $hint-success-color;
-    @include border-radius($hint-success-border-radius);
-
-    &:after {
-        border-top-color: $hint-success-bg;
-    }
-
-    &:before {
-        border-top-color: $hint-success-border-color;
-    }
-}
-
-.tooltip--warning .tooltip__content {
-    @extend %tooltip;
-    background-color: $hint-warning-bg;
-    border: 1px solid $hint-warning-border-color;
-    color: $hint-warning-color;
-    @include border-radius($hint-warning-border-radius);
-
-    &:after {
-        border-top-color: $hint-warning-bg;
-    }
-
-    &:before {
-        border-top-color: $hint-warning-border-color;
-    }
-}
 
 .tooltip--left .tooltip__content {
     margin-left: 10px;
@@ -496,6 +475,41 @@ select.setting-field {
     }
 }
 
+
+.tooltip--success .tooltip__content {
+    @extend %tooltip;
+    background-color: $hint-success-bg;
+    border: 1px solid $hint-success-border-color;
+    color: $hint-success-color;
+    @include border-radius($hint-success-border-radius);
+
+    &:after {
+        border-right-color: $hint-success-bg;
+    }
+
+    &:before {
+        border-right-color: $hint-success-border-color;
+    }
+}
+
+.tooltip--warning .tooltip__content {
+    @extend %tooltip;
+    background-color: $hint-warning-bg;
+    border: 1px solid $hint-warning-border-color;
+    color: $hint-warning-color;
+    @include border-radius($hint-warning-border-radius);
+
+    &:after {
+        border-right-color: $hint-warning-bg;
+    }
+
+    &:before {
+        border-right-color: $hint-warning-border-color;
+    }
+}
+
+
+
 .tooltip--error .tooltip__content {
     @extend %tooltip;
     background-color: $hint-error-bg;
@@ -504,11 +518,11 @@ select.setting-field {
     @include border-radius($hint-error-border-radius);
 
     &:after {
-        border-top-color: $hint-error-bg;
+        border-right-color: $hint-error-bg;
     }
 
     &:before {
-        border-top-color: $hint-error-border-color;
+        border-right-color: $hint-error-border-color;
     }
 }
 
