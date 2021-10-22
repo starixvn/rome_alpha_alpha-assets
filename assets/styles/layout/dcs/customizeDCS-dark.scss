@@ -220,6 +220,14 @@ select.setting-field {
     display: inline-block;
 }
 
+.icon {
+    &:hover {
+        &:after {
+            display: none;
+        }
+    }
+}
+
 .icon--update {
     @include ripple-effect-icon($top: 5px, $margin-left: -6px);
     background: none;
