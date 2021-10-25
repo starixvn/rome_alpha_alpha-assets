@@ -416,7 +416,7 @@ select.setting-field {
 /* Tooltip */
 /*******************************/
 .tooltip {
-    overflow: hidden;
+    //overflow: hidden;
 
     &:after {
         display: none;
@@ -428,7 +428,7 @@ select.setting-field {
     opacity: 1;
     padding: 4px 8px;
     position: relative;
-    top: 0;
+    top: 0 !important;
     margin-bottom: 12px;
 
     &:after, &:before {
@@ -474,6 +474,9 @@ select.setting-field {
         margin-left: -10px;
     }
 }
+
+
+
 
 
 .tooltip--success .tooltip__content {
@@ -525,6 +528,83 @@ select.setting-field {
         border-right-color: $hint-error-border-color;
     }
 }
+
+
+
+
+.tooltip--right .tooltip__content {
+    margin-left: 10px;
+
+    &:after, &:before {
+        left: auto !important;
+        top: 29% !important;
+        right: -18px !important;
+        border-top-color: transparent;
+    }
+
+    &:after {
+        border-left-color: $hint-success-bg;
+        margin-left: -5px !important;
+        right: -16px !important;
+    }
+
+    &:before {
+        border-left-color: $hint-success-border-color;
+    }
+}
+
+.tooltip--right {
+    &.tooltip--success .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-success-bg;
+        border: 1px solid $hint-success-border-color;
+        color: $hint-success-color;
+        @include border-radius($hint-success-border-radius);
+
+        &:after {
+            border-left-color: $hint-success-bg;
+        }
+
+        &:before {
+            border-left-color: $hint-success-border-color;
+        }
+    }
+
+    &.tooltip--warning .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-warning-bg;
+        border: 1px solid $hint-warning-border-color;
+        color: $hint-warning-color;
+        @include border-radius($hint-warning-border-radius);
+
+        &:after {
+            border-left-color: $hint-warning-bg;
+        }
+
+        &:before {
+            border-left-color: $hint-warning-border-color;
+        }
+    }
+
+
+
+    &.tooltip--error .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-error-bg;
+        border: 1px solid $hint-error-border-color;
+        color: $hint-error-color;
+        @include border-radius($hint-error-border-radius);
+
+        &:after {
+            border-left-color: $hint-error-bg;
+        }
+
+        &:before {
+            border-left-color: $hint-error-border-color;
+        }
+    }
+}
+
 
 .setting-field--success, .setting-field--warning, .setting-field--error {
     border-width: 2px;

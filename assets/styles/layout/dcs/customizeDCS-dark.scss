@@ -516,23 +516,7 @@ select.setting-field {
 }
 
 
-.tooltip--right {
-    &.tooltip--success .tooltip__content {
-        @extend %tooltip;
-        background-color: $hint-success-bg;
-        border: 1px solid $hint-success-border-color;
-        color: $hint-success-color;
-        @include border-radius($hint-success-border-radius);
 
-        &:after {
-            border-left-color: $hint-success-bg;
-        }
-
-        &:before {
-            border-left-color: $hint-success-border-color;
-        }
-    }
-}
 
 
 
@@ -586,6 +570,60 @@ select.setting-field {
         border-right-color: $hint-error-border-color;
     }
 }
+
+
+
+.tooltip--right {
+    &.tooltip--success .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-success-bg;
+        border: 1px solid $hint-success-border-color;
+        color: $hint-success-color;
+        @include border-radius($hint-success-border-radius);
+
+        &:after {
+            border-left-color: $hint-success-bg;
+        }
+
+        &:before {
+            border-left-color: $hint-success-border-color;
+        }
+    }
+
+    &.tooltip--error .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-error-bg;
+        border: 1px solid $hint-error-border-color;
+        color: $hint-error-color;
+        @include border-radius($hint-error-border-radius);
+
+        &:after {
+            border-left-color: $hint-error-bg;
+        }
+
+        &:before {
+            border-left-color: $hint-error-border-color;
+        }
+    }
+
+    &.tooltip--warning .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-warning-bg;
+        border: 1px solid $hint-warning-border-color;
+        color: $hint-warning-color;
+        @include border-radius($hint-warning-border-radius);
+
+        &:after {
+            border-left-color: $hint-warning-bg;
+        }
+
+        &:before {
+            border-left-color: $hint-warning-border-color;
+        }
+    }
+}
+
+
 
 .setting-field--success, .setting-field--warning, .setting-field--error {
     border-width: 2px;
