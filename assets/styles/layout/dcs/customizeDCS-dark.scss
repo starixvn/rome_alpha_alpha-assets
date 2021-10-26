@@ -476,22 +476,41 @@ select.setting-field {
 
 
 
+.tooltip .tooltip__content {
+    margin-left: 10px;
+
+    &:after, &:before {
+        top: 100% !important;
+        border-bottom-color: transparent;
+    }
+
+    &:after {
+        border-top-color: $hint-warning-bg;
+    }
+
+    &:before {
+        border-top-color: $hint-warning-border-color;
+    }
+}
+
+
 .tooltip--left .tooltip__content {
     margin-left: 10px;
 
     &:after, &:before {
-        top: 29%;
-        left: -8px;
+        top: 29% !important;
+        left: -9px !important;
         border-top-color: transparent;
     }
 
     &:after {
         border-right-color: $hint-warning-bg;
+        left: -8px !important;
     }
 
     &:before {
         border-right-color: $hint-warning-border-color;
-        margin-left: -10px;
+        margin-left: -10px !important;
     }
 }
 .tooltip--right .tooltip__content {
@@ -507,7 +526,7 @@ select.setting-field {
     &:after {
         border-left-color: $hint-warning-bg;
         margin-left: -5px !important;
-        right : -16px !important;
+        right: -16px !important;
     }
 
     &:before {
@@ -532,11 +551,11 @@ select.setting-field {
     @include border-radius($hint-warning-border-radius);
 
     &:after {
-        border-right-color: $hint-warning-bg;
+        border-top-color: $hint-warning-bg;
     }
 
     &:before {
-        border-right-color: $hint-warning-border-color;
+        border-top-color: $hint-warning-border-color;
     }
 }
 .tooltip--success .tooltip__content {
@@ -547,11 +566,11 @@ select.setting-field {
     @include border-radius($hint-success-border-radius);
 
     &:after {
-        border-right-color: $hint-success-bg;
+        border-top-color: $hint-success-bg;
     }
 
     &:before {
-        border-right-color: $hint-success-border-color;
+        border-top-color: $hint-success-border-color;
     }
 }
 
@@ -563,13 +582,67 @@ select.setting-field {
     @include border-radius($hint-error-border-radius);
 
     &:after {
-        border-right-color: $hint-error-bg;
+        border-top-color: $hint-error-bg;
     }
 
     &:before {
-        border-right-color: $hint-error-border-color;
+        border-top-color: $hint-error-border-color;
     }
 }
+
+
+
+
+.tooltip--left {
+    &.tooltip--warning .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-warning-bg;
+        border: 1px solid $hint-warning-border-color;
+        color: $hint-warning-color;
+        @include border-radius($hint-warning-border-radius);
+
+        &:after {
+            border-right-color: $hint-warning-bg;
+        }
+
+        &:before {
+            border-right-color: $hint-warning-border-color;
+        }
+    }
+
+    &.tooltip--success .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-success-bg;
+        border: 1px solid $hint-success-border-color;
+        color: $hint-success-color;
+        @include border-radius($hint-success-border-radius);
+
+        &:after {
+            border-right-color: $hint-success-bg;
+        }
+
+        &:before {
+            border-right-color: $hint-success-border-color;
+        }
+    }
+
+    &.tooltip--error .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-error-bg;
+        border: 1px solid $hint-error-border-color;
+        color: $hint-error-color;
+        @include border-radius($hint-error-border-radius);
+
+        &:after {
+            border-right-color: $hint-error-bg;
+        }
+
+        &:before {
+            border-right-color: $hint-error-border-color;
+        }
+    }
+}
+
 
 
 
