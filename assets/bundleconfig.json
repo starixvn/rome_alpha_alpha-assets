@@ -963,7 +963,7 @@
     "inputFiles": [
       "styles/themes/components/tabs/tab-master-dark.css",
       "styles/themes/components/buttons/button-master-dark.css",
-      "styles/components/customize-checkbox-radio.css",
+      "styles/components/customize-checkbox-radio-dark.css",
       "styles/themes/components/checkbox-radio/checkbox-radio-master-dark.css"
     ]
   },
@@ -972,7 +972,7 @@
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css",
       "styles/themes/components/buttons/button-agent-dark.css",
-      "styles/components/customize-checkbox-radio.css",
+      "styles/components/customize-checkbox-radio-dark.css",
       "styles/themes/components/checkbox-radio/checkbox-radio-agent-dark.css"
     ]
   },
@@ -1171,7 +1171,7 @@
     "outputFileName": "bundles/site-main/security/before-home-page-dark.css",
     "inputFiles": [
       "styles/layout/before-home-page/before-home-page-dark.css",
-      "styles/components/customize-checkbox-radio.css",
+      "styles/components/customize-checkbox-radio-dark.css",
       "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.css"
     ]
   },

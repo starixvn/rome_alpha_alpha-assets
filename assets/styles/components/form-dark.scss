@@ -9,6 +9,9 @@
         display: inline-block;
         margin: 0 16px 15px 0;
         vertical-align: middle;
+        &.product-detail-multiselect-container{
+            z-index: 10000;
+        }
 
         label {
             font-weight: normal;
