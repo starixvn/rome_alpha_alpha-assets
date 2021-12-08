@@ -16,7 +16,7 @@
     &.tblRpt-bordered {
         tbody tr {
             td, th {
-                border-right: 1px solid $table-border-color !important;
+                border-right: 1px solid $table-border-color;
                 border-bottom: 1px solid $table-border-color;
             }
 
