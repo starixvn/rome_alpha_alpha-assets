@@ -15,7 +15,7 @@
 
 table {
     &.fixedHeader-floating {
-        position: fixed !important;
+        position: inherit !important;
     }
 
     &.dataTable {
