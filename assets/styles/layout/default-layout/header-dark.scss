@@ -313,11 +313,16 @@ $text-color: #fff;
         cursor: pointer;
     }
 
+    #movebets-message {
+        color: #e54748;
+    }
+
     .live-message {
         #private-message-content {
             color: #38b038;
         }
-        font[color="red"]{
+
+        font[color="red"] {
             color: #e54748;
         }
     }
