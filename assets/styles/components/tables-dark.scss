@@ -14,6 +14,23 @@
 
 
     &.tblRpt-bordered {
+
+
+        &#tbl-report {
+            > thead > tr > th, > tbody > tr > td, tfoot > tr > td {
+                border: 1px solid #5F626B;
+            }
+
+            border-top: 0;
+            border-left: 0;
+            border-right: 1px solid #5F626B;
+            border-bottom: 1px solid #5F626B;
+
+            tr.tbl-footer td {
+                border-right: 0 !important;
+            }
+        }
+
         tbody tr {
             td, th {
                 border-right: 1px solid $table-border-color;
