@@ -242,22 +242,24 @@ $text-color: #fff;
         }
     }
 
-    .switch-mode:after {
-        content: url("../../images/mode/light.svg");
-        transition: 0.3s;
-        width: 24px;
-        height: 24px;
+    .switch-mode {
+        &:after {
+            content: url("../../images/mode/dark.svg");
+            transition: 0.3s;
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover {
+            &:after {
+                content: url("../../images/mode/dark-hover.svg");
+            }
+        }
 
         @media screen and (max-device-width: 768px) {
             width: calculateScale(16px);
             height: calculateScale(16px);
         }
-    }
-
-    .switch-mode.dark-mode:after {
-        left: calc(100% - 2px);
-        transform: translateX(-100%);
-        content: url("../../images/mode/dark.svg");
     }
 }
 
