@@ -1,6 +1,17 @@
 ﻿@import "../abstracts/_variables-dark.scss";
 @import "../abstracts/_mixins.scss";
-
+.tblRpt{
+    .pagination {
+        table {
+            tr {
+                td {
+                    border-right: 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
 .pagination {
     display: block;
     padding: 5px 0;
