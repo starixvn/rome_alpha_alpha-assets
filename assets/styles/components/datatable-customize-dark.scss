@@ -42,8 +42,20 @@ table {
                 background-color: #3c3c3c;
             }
 
+            &:first-child {
+                td {
+                    &.dtr-title, &.dtr-data {
+                        border-top: 0 !important;
+                    }
+                }
+            }
+
             td {
-                border-top: 1px solid $table-border-color;
+                border-top: 1px solid $table-border-color !important;
+
+                &.dtr-title, &.dtr-data {
+                    border-top: 1px solid $table-border-color !important;
+                }
             }
         }
 
