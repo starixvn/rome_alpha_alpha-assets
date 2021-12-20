@@ -137,7 +137,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-results/default.css",
+    "outputFileName": "bundles/site-results/super.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -149,6 +149,39 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css"
+      //"styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-results/master.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/vendors/select2.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding.css",
+      "styles/components/modals.css",
+      "styles/components/tabs.css",
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css"
+      //"styles/themes/components/tabs/tab-master.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-results/agent.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/vendors/select2.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding.css",
+      "styles/components/modals.css",
+      "styles/components/tabs.css",
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css"
+      //"styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
@@ -365,7 +398,6 @@
   {
     "outputFileName": "bundles/site-main/dashboard/dashboard-default.js",
     "inputFiles": [
-      "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/tab.js",
       "js/libs/hammer/hammer.js",
       "js/libs/hammer/jquery.hammer.js"
