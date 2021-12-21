@@ -160,6 +160,10 @@
     .multiselect-nested-item a {
         padding-left: 16px;
     }
+
+    &::-webkit-scrollbar {
+        background-color: $dropdown-bg-color;
+    }
 }
 
 .form-inline .multiselect-container {
