@@ -790,10 +790,9 @@ select.setting-field {
     color: #f6f2d7;
     &:before {
         content: '\e93d';
-        font-size: 20px;
         font-family: 'Iconalpha';
         display: inline-block;
         font-weight : normal;
+        line-height : 1;
     }
 }
-
