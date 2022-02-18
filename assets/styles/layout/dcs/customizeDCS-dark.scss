@@ -155,12 +155,13 @@ a {
 .settingtype8 .block__lbl,
 .settingtype8 .block__value {
     border-bottom-color: $table-border-color;
+    background-color: #282828;
 }
 
 .settingtype8 .scrollable-area .block__cell,
 .settingtype8 .scrollable-area .block__lbl,
-.settingtype8 .scrollable-area .block__value {    
-    background-color: #2E2F30;
+.settingtype8 .scrollable-area .block__value {
+    background-color: #212223;
 }
 
 .settingtype8 .block__cell--no-border-bottom {
@@ -795,4 +796,8 @@ select.setting-field {
         font-weight : normal;
         line-height : 1;
     }
+}
+
+.settingtype8 .block__cell--buy-bonus {
+    background: #49492A;
 }
