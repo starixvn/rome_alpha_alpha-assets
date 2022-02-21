@@ -169,8 +169,10 @@ a {
 }
 
 .setting-field {
-    border: 1px solid $component-border-color;
-    background-color: $component-bg;
+    /*border: 1px solid $component-border-color;
+    background-color: $component-bg;*/
+    background: #2B2B2B;
+    border: 1px solid #474747;
     color: $component-color;
     height: $pt-component-height;
     line-height: $pt-component-height;
