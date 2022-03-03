@@ -50,7 +50,7 @@ a {
 .block__sub-header {
     background-color: $pt-col-highlight-bg;
     border-bottom-color: $pt-border-color;
-    height: $pt-col-height;
+   // height: $pt-col-height;
     line-height: $pt-col-height;
 }
 
@@ -203,6 +203,16 @@ select.setting-field {
 
     display: inline-block;
 }
+
+
+.icon {
+    &:hover {
+        &:after {
+            display: none;
+        }
+    }
+}
+
 
 .icon--update {
     @include ripple-effect-icon($top: 5px, $margin-left: -6px);
@@ -406,7 +416,7 @@ select.setting-field {
 /* Tooltip */
 /*******************************/
 .tooltip {
-    overflow: hidden;
+    //overflow: hidden;
 
     &:after {
         display: none;
@@ -418,7 +428,7 @@ select.setting-field {
     opacity: 1;
     padding: 4px 8px;
     position: relative;
-    top: 0;
+    top: 0 !important;
     margin-bottom: 12px;
 
     &:after, &:before {
@@ -445,21 +455,68 @@ select.setting-field {
     }
 }
 
-.tooltip--success .tooltip__content {
-    @extend %tooltip;
-    background-color: $hint-success-bg;
-    border: 1px solid $hint-success-border-color;
-    color: $hint-success-color;
-    @include border-radius($hint-success-border-radius);
+.tooltip .tooltip__content {
+    margin-left: 10px;
+
+    &:after, &:before {
+        top: 100% !important;
+        border-bottom-color: transparent;
+    }
 
     &:after {
-        border-top-color: $hint-success-bg;
+        border-top-color: $hint-warning-bg;
     }
 
     &:before {
-        border-top-color: $hint-success-border-color;
+        border-top-color: $hint-warning-border-color;
     }
 }
+
+
+.tooltip--left .tooltip__content {
+    margin-left: 10px;
+
+    &:after, &:before {
+        top: 29% !important;
+        left: -9px !important;
+        border-top-color: transparent;
+    }
+
+    &:after {
+        border-right-color: $hint-warning-bg;
+        left: -8px !important;
+    }
+
+    &:before {
+        border-right-color: $hint-warning-border-color;
+        margin-left: -10px !important;
+    }
+}
+
+.tooltip--right .tooltip__content {
+    margin-left: 10px;
+
+    &:after, &:before {
+        left: auto !important;
+        top: 29% !important;
+        right: -18px !important;
+        border-top-color: transparent;
+    }
+
+    &:after {
+        border-left-color: $hint-warning-bg;
+        margin-left: -5px !important;
+        right: -16px !important;
+    }
+
+    &:before {
+        border-left-color: $hint-warning-border-color;
+    }
+}
+
+
+
+
 
 .tooltip--warning .tooltip__content {
     @extend %tooltip;
@@ -477,22 +534,19 @@ select.setting-field {
     }
 }
 
-.tooltip--left .tooltip__content {
-    margin-left: 10px;
-
-    &:after, &:before {
-        top: 29%;
-        left: -8px;
-        border-top-color: transparent;
-    }
+.tooltip--success .tooltip__content {
+    @extend %tooltip;
+    background-color: $hint-success-bg;
+    border: 1px solid $hint-success-border-color;
+    color: $hint-success-color;
+    @include border-radius($hint-success-border-radius);
 
     &:after {
-        border-right-color: $hint-warning-bg;
+        border-top-color: $hint-success-bg;
     }
 
     &:before {
-        border-right-color: $hint-warning-border-color;
-        margin-left: -10px;
+        border-top-color: $hint-success-border-color;
     }
 }
 
@@ -511,6 +565,116 @@ select.setting-field {
         border-top-color: $hint-error-border-color;
     }
 }
+
+
+
+
+
+.tooltip--left {
+    &.tooltip--warning .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-warning-bg;
+        border: 1px solid $hint-warning-border-color;
+        color: $hint-warning-color;
+        @include border-radius($hint-warning-border-radius);
+
+        &:after {
+            border-right-color: $hint-warning-bg;
+        }
+
+        &:before {
+            border-right-color: $hint-warning-border-color;
+        }
+    }
+
+    &.tooltip--success .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-success-bg;
+        border: 1px solid $hint-success-border-color;
+        color: $hint-success-color;
+        @include border-radius($hint-success-border-radius);
+
+        &:after {
+            border-right-color: $hint-success-bg;
+        }
+
+        &:before {
+            border-right-color: $hint-success-border-color;
+        }
+    }
+
+    &.tooltip--error .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-error-bg;
+        border: 1px solid $hint-error-border-color;
+        color: $hint-error-color;
+        @include border-radius($hint-error-border-radius);
+
+        &:after {
+            border-right-color: $hint-error-bg;
+        }
+
+        &:before {
+            border-right-color: $hint-error-border-color;
+        }
+    }
+}
+
+
+
+
+.tooltip--right {
+    &.tooltip--success .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-success-bg;
+        border: 1px solid $hint-success-border-color;
+        color: $hint-success-color;
+        @include border-radius($hint-success-border-radius);
+
+        &:after {
+            border-left-color: $hint-success-bg;
+        }
+
+        &:before {
+            border-left-color: $hint-success-border-color;
+        }
+    }
+
+    &.tooltip--warning .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-warning-bg;
+        border: 1px solid $hint-warning-border-color;
+        color: $hint-warning-color;
+        @include border-radius($hint-warning-border-radius);
+
+        &:after {
+            border-left-color: $hint-warning-bg;
+        }
+
+        &:before {
+            border-left-color: $hint-warning-border-color;
+        }
+    }
+
+
+
+    &.tooltip--error .tooltip__content {
+        @extend %tooltip;
+        background-color: $hint-error-bg;
+        border: 1px solid $hint-error-border-color;
+        color: $hint-error-color;
+        @include border-radius($hint-error-border-radius);
+
+        &:after {
+            border-left-color: $hint-error-bg;
+        }
+
+        &:before {
+            border-left-color: $hint-error-border-color;
+        }
+    }
+}
+
 
 .setting-field--success, .setting-field--warning, .setting-field--error {
     border-width: 2px;
@@ -559,5 +723,21 @@ select.setting-field {
 @media screen and (max-device-width: 1024px) and (orientation:portrait) {
     .block__item .block__lbl {
         padding: 0 4px;
+    }
+}
+
+.icon--warning {
+    height: auto;
+    width: auto;
+    background-image: none;
+    margin-top: 0px !important;
+    color: #7e3d00;
+
+    &:before {
+        content: '\e93d';
+        line-height: 1;
+        font-family: 'Iconalpha';
+        display: inline-block;
+        font-weight: normal;
     }
 }

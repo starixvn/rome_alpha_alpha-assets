@@ -93,7 +93,7 @@
         &:hover {
             &:after {
                 animation: 1s ease-out 0s normal 1 ripple;
-                background: #337AB7; 
+                background: #337AB7;
                 left: 0;
                 opacity: 1;
                 position: absolute;
@@ -106,19 +106,19 @@
         }
     }
 
-    .datepicker-days {
+    .datepicker-days, .datepicker-months, .datepicker-years, .datepicker-decades {
         table thead tr:first-child th:hover {
-          background: none;
+            background: none;
         }
 
-        table th {        
+        table th {
             &.picker-switch {
                 height: 36px;
                 line-height: 36px;
                 color: #3e3e3e;
             }
 
-            &.dow {            
+            &.dow {
                 color: #9e9e9e;
                 font-weight: normal;
             }
@@ -148,13 +148,13 @@
             line-height: 30px;
             color: #000;
             width: 30px;
-            transition: all 0.3s ease;  
+            transition: all 0.3s ease;
             @include border-radius(50%);
         }
 
-        .table-condensed>thead>tr>th, .table-condensed>tbody>tr>th, 
-        .table-condensed>tfoot>tr>th, .table-condensed>thead>tr>td,
-        .table-condensed>tbody>tr>td, .table-condensed>tfoot>tr>td {
+        .table-condensed > thead > tr > th, .table-condensed > tbody > tr > th,
+        .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td,
+        .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {
             padding: 3px 1px;
         }
 
@@ -177,6 +177,7 @@
 
             &.today {
                 color: #2491ef;
+
                 &:before {
                     display: none;
                 }
@@ -186,7 +187,7 @@
                 }
             }
         }
-    }      
+    }
 
     table td {
         &.day:hover, &.hour:hover, &.minute:hover, &.second:hover {
@@ -197,12 +198,13 @@
             &.month, &.year, &.decade {
                 @extend %ripple-effect;
             }
+
             &:hover {
                 background: none;
             }
-        }        
+        }
     }
-    
+
     @keyframes ripple {
         0% {
             transform: scale(0);
@@ -217,9 +219,12 @@
             transform: scale(1);
         }
     }
-
 }
-
+.bootstrap-datetimepicker-widget .datepicker-months .table-condensed > tbody > tr > td:after,
+.bootstrap-datetimepicker-widget .datepicker-years .table-condensed > tbody > tr > td:after,
+.bootstrap-datetimepicker-widget .datepicker-decades .table-condensed > tbody > tr > td:after {
+    display: none;
+}
 // For mobile
 @media only screen and (max-device-width : $conent-device-lower768) {
     .input-group.date {

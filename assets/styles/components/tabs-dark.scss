@@ -1,0 +1,64 @@
+﻿@import "../abstracts/_variables-dark.scss";
+@import "../abstracts/_mixins.scss";
+
+
+.nav > li > a:hover, .nav > li > a:focus {
+    background: transparent;
+}
+
+.nav-tabs {
+    border-bottom-color: #313334;
+}
+
+.nav-tabs > li {
+    margin-right: 12px;
+}
+
+.nav-tabs > li > a:hover {
+    background: none;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.nav.nav-tabs > li > a {
+    padding: 10px 20px 12px;
+    border: none;
+    font-size: $font-size;
+}
+
+.nav.nav-tabs > li:after {
+    @include transition('width .5s ease, background-color .5s ease');
+    content: '';
+    display: block;
+    height: 2px;
+    width: 0;
+    background: transparent;    
+}
+
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus, .nav-tabs > li.active > a:hover {
+    border: none;
+    color: #EDEDED;
+    background: transparent;
+}
+
+.nav.nav-tabs > li.active:after,
+.nav.nav-tabs > li:hover:after {
+    width: 100%;
+    background: #EDEDED;
+}
+
+.nav-tabs > li > a {
+    color: $tab-color;
+    font-weight: bold;
+    outline: none;
+}
+
+@media only screen and (max-device-width: $screen-device-greater1024) {
+    .nav.nav-tabs > li:hover:after {
+        width: 0;
+    }
+
+    .nav.nav-tabs > li.active:after {
+        width: 100%;
+    }
+}

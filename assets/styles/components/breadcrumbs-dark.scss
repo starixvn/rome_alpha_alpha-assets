@@ -1,0 +1,21 @@
+﻿.breadcrumb {
+    background: none;
+    border-bottom: 1px solid #313334;
+    border-radius: 0;
+    overflow: hidden;
+    padding: 10px 0 5px;
+    margin: 0;
+
+    li {
+        color: #ededed;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
+
+        + li:before {
+            content: '\276F';
+            color: #ededed;
+            padding: 0 8px;
+        }
+    }
+}

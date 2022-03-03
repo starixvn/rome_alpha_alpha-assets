@@ -1,0 +1,193 @@
+﻿@import "../abstracts/_mixins.scss";
+@import "../abstracts/_variables-dark.scss";
+
+.monpickr-arrows input.monpickr-input {
+	text-align: center!important;
+	margin: 0!important;
+	padding: 1px 2px !important;
+	border-radius: 2px!important;
+	cursor: pointer;
+    height: 28px !important;
+    font-weight: normal;
+    background: $component-bg;
+    border: 1px solid $component-border-color;
+    color: $component-color;
+    &.daypickr-selected-day  {
+        width: 100%;
+    }
+}
+.ui-widget  input, .ui-widget select, .ui-widget textarea, .ui-widget button, .ui-monpickr li a {
+	font-family: "Roboto",'Lucida Sans',Tahoma,Arial,Helvetica,sans-serif;
+    font-size: 13px;
+}
+
+.ui-widget-content a {
+    color: $component-color;
+
+    &:hover {
+        color: #F60;
+    }
+}
+
+.monpickr-wrap-parent {
+    cursor: pointer;
+
+    .monpickr-wrap {
+        z-index: 99 !important;
+
+        .monpickr-selected-month {
+            width: 154px !important;
+        }
+
+        .monpickr-dropdown {
+            @include border-radius(1px);
+            @include box-shadow-multiple('0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)');
+            margin-left: 1px !important;
+            background: $component-bg;
+            border-color: $component-border-color;
+
+            ul {
+
+                li:not(.year) {
+                    a {
+                        font-size: 100% !important;
+                    }
+                }
+
+                .ui-state-active {
+                    border-radius: 2px !important;
+                    background: none !important;
+                    border: none;
+
+                    a {
+                        color: #0062ad !important;
+                        font-size: 100% !important;
+                        font-weight: bold !important;
+                    }
+                }
+
+                .ui-state-hover:not(.year) {
+                    a {
+                        font-size: 100% !important;
+                    }
+                }
+
+                .ui-state-hover {
+                    border-radius: 2px !important;
+                    background: none !important;
+                    border: 1px solid #FFFFFF !important;
+
+                    a {
+                        color: #0062ad !important;
+                        font-weight: bold !important;
+                    }
+                }
+            }
+        }
+
+        .monpickr {
+            border: none;
+            border-radius: 2px !important;
+            vertical-align: middle;
+
+            .ui-state-focus, & .ui-state-hover {
+                background: none !important;
+                border: none !important;
+            }
+
+            .prev {
+                .ui-icon-circle-triangle-w {
+                    background: url("../vendors/monthpicker/images/sprites.png") 0 -127px !important;
+                    background-position: 0 -127px !important;
+                    height: 18px;
+                    width: 15px;
+                    float: left;
+                }
+            }
+
+            .next {
+                .ui-icon-circle-triangle-e {
+                    background: url("../vendors/monthpicker/images/sprites.png") -19px -127px !important;
+                    background-position: -19px -127px !important;
+                    height: 18px;
+                    width: 15px;
+                }
+            }
+        }
+    }
+}
+
+.daypickr-wrap-parent{
+	.daypickr {
+		border-radius: 2px!important;
+		background: none!important;
+		border: 0px solid #CECCCD!important;
+		
+		.monpickr-down {
+			margin-right:-2px;
+		}		
+
+		.ui-state-hover {
+			background: none!important;
+			border:none!important;
+		}
+
+		.daypickr-selected-day {
+			text-align: left !important;
+			padding-left:6px!important;
+			
+		}
+	}
+
+	.daypickr-dropdown {
+		@include border-radius(1px);  
+        @include box-shadow-multiple('0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)'); 
+        border-color: $component-border-color;
+        background: $component-bg;
+
+		.ui-state-hover {
+			background: none repeat scroll 0 0 #FFFFFF;
+			border: solid 1px transparent!important;
+			> a {
+				color: #0062AD !important;
+				font-weight:bold;
+			}
+			
+		}
+	}
+
+	.ui-widget-header .ui-icon {
+		background-image: url("../vendors/monthpicker/images/dropdown-icon-dark.png")!important;	
+		background-position: 37px 6px !important;
+		width: 47px !important;
+	}	
+
+	.ui-state-hover .ui-icon {
+		background-position: 40px 5px !important;
+	}
+}
+
+.monpickr-arrows 
+{
+	padding: 0!important;
+	.monpickr-prev, .monpickr-next, .monpickr-down {
+		top: 6px;
+        display: inline-block;
+        &:hover {
+            padding: 0;
+        }
+	}
+	.monpickr-next, .monpickr-down {		
+		right: 5px;
+	}
+    .monpickr-prev {
+        left: 5px;
+    }
+}
+
+.monpickr-super-wrapper .monpickr-label {
+    font-size: 100%!important;
+    margin: 3px 5px 3px 16px;
+	
+}
+

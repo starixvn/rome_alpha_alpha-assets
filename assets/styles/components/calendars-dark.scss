@@ -1,0 +1,263 @@
+﻿@import "../abstracts/_variables-dark.scss";
+@import "../abstracts/_mixins.scss";
+
+.control {
+    display: inline-block;
+    width: 200px;
+    vertical-align: middle;
+    margin: 0 8px 0 5px;
+
+    &.date {
+        width: 130px;
+    }
+}
+
+.input-group.date {
+    position: initial;
+
+    .icon-calendar {
+        font-size: 24px;
+        color: #EDEDED;
+        display: inline-block;
+        @include ripple-effect-icon($margin-left: -6px, $height: 36px, $width: 36px, $top: -2px);
+    }
+
+    .input-group-addon {
+        background: transparent;
+        border: none;
+        padding: 0px 8px;
+        position: relative;
+        top: 3px;
+    }
+
+    .form-control {
+        border: 1px solid $component-border-color;
+        font-size: 12px;
+        height: 28px;
+        background: $component-bg;
+        color: $component-color;
+        margin-left: 0;
+        @include effect-textbox;
+    }
+}
+
+.bootstrap-datetimepicker-widget {
+    border: 1px solid $component-border-color;
+    font-family: $font-family;
+    @include effect-normal;
+    background: $component-bg;
+    color: $component-color;
+
+
+    %ripple-effect {
+        position: relative;
+        @include border-radius(50%);
+
+        &.active {
+            background-color: #36587D;
+            color: #fff;
+            text-shadow: none;
+            padding: 3px 1px;
+            @include border-radius(50%);
+
+            &:before {
+                display: none;
+            }
+
+            &:hover:after {
+                animation: none;
+            }
+
+            &.today {
+                color: #fff;
+
+                &:hover {
+                    background-color: #337AB7;
+                    @include border-radius(50%);
+                }
+            }
+        }
+
+        &.disabled {
+            &:before {
+                display: none;
+            }
+
+            &:hover:after {
+                animation: none;
+            }
+        }
+
+        &:after {
+            content: "";
+            display: block;
+            position: relative;
+        }
+
+        &:hover {
+            &:after {
+                animation: 1s ease-out 0s normal 1 ripple;
+                background: #337AB7;
+                left: 0;
+                opacity: 1;
+                position: absolute;
+                transform: scale(0);
+                top: 0;
+                right: 0;
+                bottom: 0;
+                @include border-radius(50%);
+            }
+        }
+    }
+
+    &.dropdown-menu.bottom {
+        &:before {
+            border-bottom-color: $component-border-color;
+        }
+
+        &:after {
+            border-bottom-color: $component-bg;
+        }
+    }
+
+    .datepicker-days, .datepicker-months, .datepicker-years, .datepicker-decades {
+        table thead tr:first-child th:hover {
+            background: none;
+        }
+
+        table th {
+            &.picker-switch {
+                height: 36px;
+                line-height: 36px;
+                color: #E7E7E7;
+            }
+
+            &.dow {
+                color: #ABABAB;
+                font-weight: normal;
+            }
+
+            .glyphicon {
+                font-family: 'Iconalpha' !important;
+                font-size: 24px;
+                color: #ededed;
+
+                &.glyphicon-chevron-left:before {
+                    content: '\e93f';
+                    line-height: 36px;
+                }
+
+                &.glyphicon-chevron-right:before {
+                    content: '\e942';
+                    line-height: 36px;
+                }
+            }
+
+            &.prev {
+                color: #757575;
+            }
+        }
+
+        table td.day {
+            height: 30px;
+            line-height: 30px;
+            color: #000;
+            width: 30px;
+            transition: all 0.3s ease;
+            @include border-radius(50%);
+        }
+
+        .table-condensed > thead > tr > th, .table-condensed > tbody > tr > th,
+        .table-condensed > tfoot > tr > th, .table-condensed > thead > tr > td,
+        .table-condensed > tbody > tr > td, .table-condensed > tfoot > tr > td {
+            padding: 3px 1px;
+        }
+
+        .table-condensed {
+            border-collapse: separate;
+        }
+
+        .table-condensed > tbody > tr > td {
+            color: $component-color;
+            font-size: 13px;
+            @extend %ripple-effect;
+
+            &.active {
+                background-color: #36587D;
+            }
+
+            &.disabled {
+                color: #696969;
+
+                &:before {
+                    display: none;
+                }
+            }
+
+            &.today {
+                color: #2491ef;
+
+                &:before {
+                    display: none;
+                }
+
+                &:hover {
+                    background: none;
+                }
+            }
+        }
+    }
+
+    table td {
+        &.day:hover, &.hour:hover, &.minute:hover, &.second:hover {
+            background: none;
+        }
+
+        span {
+            &.month, &.year, &.decade {
+                @extend %ripple-effect;
+            }
+
+            &:hover {
+                background: none;
+            }
+        }
+    }
+
+    @keyframes ripple {
+        0% {
+            transform: scale(0);
+        }
+
+        20% {
+            transform: scale(1);
+        }
+
+        100% {
+            opacity: 0;
+            transform: scale(1);
+        }
+    }
+}
+.bootstrap-datetimepicker-widget .datepicker-months .table-condensed > tbody > tr > td:after,
+.bootstrap-datetimepicker-widget .datepicker-years .table-condensed > tbody > tr > td:after,
+.bootstrap-datetimepicker-widget .datepicker-decades .table-condensed > tbody > tr > td:after {
+    display: none;
+}
+.bootstrap-datetimepicker-widget table thead tr:first-child th:hover {
+    background: none;
+}
+// For mobile
+@media only screen and (max-device-width : $conent-device-lower768) {
+    .input-group.date {
+        .form-control {
+            height: 36px;
+            @include box-shadow-multiple('0px 1px 3px rgba(0, 0, 0, 0.3)');
+        }
+
+        .icon-calendar {
+            font-size: 26px;
+            @include ripple-effect-icon($margin-left: -7px, $height: 40px, $width: 40px, $top: -4px);
+        }
+    }
+}

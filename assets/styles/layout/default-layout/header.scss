@@ -211,6 +211,58 @@ $text-color: #fff;
     } 
 }
 
+.switch-mode-box {
+    display: inline-block;
+    vertical-align: middle;
+    top: -2px;
+
+    @media screen and (max-device-width: 768px) {
+        float: left;
+        top: 3px;
+    }
+
+
+    input[type=checkbox] {
+        height: 0;
+        width: 0;
+        visibility: hidden;
+    }
+
+    .switch-mode {
+        cursor: pointer;
+        position: relative;
+        margin-bottom: 0;
+        display: inline-block;
+
+        @media screen and (max-device-width: 768px) {
+            top: 3px;
+            display: block;
+            margin: 0 10px;
+            height: calculateScale(22px);
+        }
+    }
+
+    .switch-mode {
+        &:after {
+            content: url("../../images/mode/dark.svg");
+            transition: 0.3s;
+            width: 24px;
+            height: 24px;
+        }
+
+        &:hover {
+            &:after {
+                content: url("../../images/mode/dark-hover.svg");
+            }
+        }
+
+        @media screen and (max-device-width: 768px) {
+            width: calculateScale(16px);
+            height: calculateScale(16px);
+        }
+    }
+}
+
 .header-nav[class*="banner"] .list-top>.language:hover, 
 .header-nav[class*="banner"] .list-top>.view-type:hover, 
 .header-nav[class*="banner"] .list-top>.dropdown:active:focus,
@@ -245,7 +297,7 @@ $text-color: #fff;
 
     .maquee {
         color: #045ace;
-        font-size: 13px;
+        font-size: 13px; 
     }
 
     .live-message, .private-message {

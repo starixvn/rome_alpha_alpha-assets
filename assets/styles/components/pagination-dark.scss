@@ -1,0 +1,141 @@
+﻿@import "../abstracts/_variables-dark.scss";
+@import "../abstracts/_mixins.scss";
+.tblRpt{
+    .pagination {
+        table {
+            tr {
+                td {
+                    border-right: 0;
+                    border-bottom: 0;
+                }
+            }
+        }
+    }
+}
+.pagination {
+    display: block;
+    padding: 5px 0;
+
+    span, .pagination-info {
+        font-size: 13px;
+    }
+
+    .l-btn-plain:hover {
+        background: transparent;
+        border: 1px solid transparent;
+    }
+
+    .pagination-page-list, .pagination-num {
+        border: 1px solid $paging-border;
+        background-color: $paging-bg;
+        height: 24px;
+        @include box-shadow-multiple(none);
+        @include box-sizing;
+    }
+
+    .pagination-page-list {
+        width: 70px;
+        padding: 0;
+    }
+
+    .pagination-num {
+        width: 40px;
+        padding-left: 5px;
+        margin: 0 5px;
+    }
+
+    .pagination-btn-separator {
+        height: auto;
+    }
+
+    .pagination-first, .pagination-prev, .pagination-last, .pagination-next {
+        height: 20px;
+        line-height: 20px;
+        background: $paging-btn-bg;
+        cursor: pointer;
+        outline: none;
+        padding: 0 3px;
+        top: 10px;
+        width: 20px;
+        @include border-radius(2px);
+        @include box-sizing;
+
+        &:before {
+            font-family: Iconalpha;
+            font-size: 15px;
+            color: $paging-btn-color;
+        }
+
+        &:hover {
+            background-color: $paging-btn-bg-hover;
+        }
+    }
+
+    .pagination-first:before {
+        content: '\e940';
+    }
+
+    .pagination-prev:before {
+        content: '\e93f';
+    }
+
+    .pagination-last:before {
+        content: '\e941';
+    }
+
+    .pagination-next:before {
+        content: '\e942';
+    }
+
+    .l-btn-disabled {
+        .pagination-first, .pagination-prev, .pagination-last, .pagination-next {
+            cursor: default;
+
+            &:hover {
+                background-color: $paging-btn-bg;
+            }
+        }
+    }
+    // Pagination is aligned center.
+    &.pagination-center {
+        table {
+            margin: auto;
+            float: none;
+        }
+
+        .pagination-info {
+            display: none;
+        }
+    }
+    // Pagination is aligned center, but the page size component is aligned right.
+    &.pagination-special {
+        position: relative;
+        padding-right: 90px;
+
+        .pagination-page-list {
+            position: absolute;
+            right: 0;
+            top: 8px;
+        }
+
+        table {
+            margin: auto;
+            float: none;
+        }
+
+        .pagination-info {
+            display: none;
+        }
+    }
+
+    &.fixed-pagination-bottom {
+        position: fixed;
+        bottom: -2px;
+        background: #fff;
+        width: 100%;
+        padding: 10px 0;
+        border-top: 1px solid $table-border-color;
+    }
+}
+
+

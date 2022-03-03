@@ -99,6 +99,19 @@ body {
     text-transform: uppercase;
 }
 
+
+.title-super {
+    color: #67151b;
+}
+
+.title-master {
+    color: #276443;
+}
+
+.title-agent {
+    color: #516e8f;
+}
+
 a, a:focus, a:active, a:target, a:hover {
     outline: none;
 }
@@ -111,8 +124,11 @@ a, a:focus, a:active, a:target, a:hover {
     text-align: center;
 }
 
-.link, .link:hover {
-    color: #045ace;
+.link {
+    color: $link-color;
+    &:hover {
+        color: $link-hover-color;
+    }
 }
 
 

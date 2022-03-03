@@ -217,6 +217,61 @@ input, button {
         }
     }
 
+    .custom-checkbox {
+        display: block;
+
+        input {
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            position: absolute;
+            z-index: 9999999999;
+
+            &:checked + label {
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    width: 6px;
+                    height: 9px;
+                    border: solid $popup-bg;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+            }
+
+            &:checked + label {
+                &::before {
+                    background: #248CE3;
+                    border: 2px solid #248CE3;
+                }
+            }
+        }
+
+        label {
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                -webkit-appearance: none;
+                background-color: transparent;
+                border: 2px solid #DADADA;
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                cursor: pointer;
+                margin-right: 14px;
+                margin-top: -3px;
+                border-radius: 3px;
+            }
+        }
+    }
+
     .help-rules {
         .error {
             position: relative;

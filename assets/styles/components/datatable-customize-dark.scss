@@ -1,0 +1,237 @@
+﻿@import "../abstracts/_variables-dark.scss";
+
+@mixin icon-plus($visible: true) {
+    &:before {
+        content: url("../images/components/Plus.svg");
+        box-shadow: none;
+        border: none;
+        height: unset;
+        width: unset;
+        background-color: unset;
+
+        @if not $visible {
+            visibility: hidden;
+        }
+    }
+}
+
+table {
+    &.fixedHeader-floating {
+        position: inherit !important;
+    }
+
+    &.dataTable {
+        margin-left: 0px !important;
+        text-align: right;
+
+        &.dtr-column > thead > tr.parent th,
+        &.dtr-column > tbody > tr.parent td {
+            &.control {
+                &:before {
+                    content: url("../images/components/Minus.svg");
+                    background-color: unset;
+                    display: inline-block;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &.display tbody tr {
+
+            &:hover {
+                background-color: #3c3c3c;
+            }
+
+            &:first-child {
+                td {
+                    &.dtr-title, &.dtr-data {
+                        border-top: 0 !important;
+                    }
+                }
+            }
+
+            td {
+                border-top: 1px solid $table-border-color !important;
+
+                &.dtr-title, &.dtr-data {
+                    border-top: 1px solid $table-border-color !important;
+                }
+            }
+        }
+
+        &.dtr-column > thead > tr > th,
+        &.dtr-column > tbody > tr > td {
+            &.control {
+                &:before {
+                    content: url("../images/components/Plus.svg");
+                    box-shadow: none;
+                    border: none;
+                    height: 24px;
+                    width: 24px;
+                    background-color: unset;
+                    display: inline-block;
+                    cursor: pointer;
+                }
+            }
+        }
+
+        &.dtr-column > tbody > tr > td {
+            &.control {
+                &:before {
+                    margin-top: -12px;
+                    margin-left: -12px;
+                }
+            }
+        }
+
+        thead th, tbody td {
+            box-sizing: border-box;
+            border-bottom: none !important;
+            border-right: none !important;
+            padding: 4px 8px;
+        }
+
+        thead {
+            th:not(.sorting_disabled) {
+                padding-right: 16px;
+            }
+
+            [class*="sorting"] {
+                position: relative;
+
+                &:after {
+                    font-family: 'IconAlpha';
+                    font-size: 10px;
+                    position: absolute;
+                    right: 2px;
+                    cursor: pointer;
+                }
+            }
+
+            .sorting:after {
+                content: '\e960';
+            }
+
+            .sorting_asc:after {
+                content: '\e961';
+                color: #ff1500;
+            }
+
+            .sorting_desc:after {
+                content: '\e962';
+                color: #ff1500;
+            }
+
+            tr:first-of-type th {
+                height: 0px !important;
+                padding-bottom: 0px !important;
+                padding-top: 0px !important;
+                border: 0px !important;
+            }
+        }
+
+        tbody {
+            tr:not(.tbl-footer):hover [class*='sorting_'] {
+                background-color: $table-td-hover-color !important;
+            }
+
+            [class*='sorting_'] {
+                background: none !important;
+            }
+
+            .odd {
+                background-color: $table-odd-bg !important;
+            }
+
+            .even {
+                background-color: $table-even-bg !important;
+            }
+
+            tr, tr.child {
+                td.child {
+                    padding: 0;
+
+                    ul {
+                        width: 100% !important;
+
+                        li {
+                            border-bottom: 1px solid #d1d1d1 !important;
+                            display: flex;
+                            justify-content: space-between;
+                            align-items: center;
+                            padding: 14px 8px;
+
+                            .dtr-title {
+                                text-align: left;
+                            }
+
+                            &:last-of-type {
+                                border-bottom: none !important;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .control {
+            display: table-cell;
+            width: 30px;
+            vertical-align: middle;
+            margin: 0 8px 0 5px;
+        }
+
+        &.no-footer {
+            border-bottom-color: $table-border-color;
+        }
+
+        .tbl-footer td {
+            background-color: $table-footer-bg !important;
+        }
+
+        .dataTables_empty {
+            text-align: center;
+        }
+    }
+}
+table.dataTable tbody > tr {
+    &.odd.parent + tr.child > td.child {
+        background-color: #2E2C1F !important;
+    }
+
+    &.even.parent + tr.child > td.child {
+        background-color: #2E2C1F !important;
+    }
+
+    &.tbl-footer.parent + tr.child > td.child {
+        background-color: #7f3d1d !important;
+        color: #fff;
+        font-weight: 700;
+    }
+
+    &:not(.tbl-footer):hover + tr.child > td.child {
+        background-color: #2E2C1F !important;
+    }
+}
+
+@media only screen and (-webkit-min-device-pixel-ratio: 2.625), only screen and ( min--moz-device-pixel-ratio: 2.625), only screen and ( -o-min-device-pixel-ratio: 2.625/1), only screen and ( min-device-pixel-ratio: 2.625), only screen and ( min-resolution: 393dpi), only screen and ( min-resolution: 2.625dppx) {
+    table.dataTable.dtr-column > thead > tr > th.control:before,
+    table.dataTable.dtr-column > tbody > tr > td.control:before {
+        width: 36px;
+        height: 36px;
+    }
+
+    table.dataTable.dtr-column > tbody > tr > td.control:before {
+        margin-top: -18px;
+        margin-left: -18px;
+    }
+}
+
+.dataTables_wrapper .dataTables_processing {
+    background-color: transparent;
+    background: transparent;
+}
+
+.dataTables_wrapper .dataTables_length {
+    color: #cbcbcb;
+}

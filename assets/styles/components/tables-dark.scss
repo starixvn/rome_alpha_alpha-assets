@@ -1,0 +1,223 @@
+﻿@import "../abstracts/_variables-dark.scss";
+@import "../abstracts/_mixins.scss";
+
+.width-100per {
+    width: 100%;
+}
+
+.tblRpt {
+    border: 1px solid $table-border-color;
+    border-collapse: collapse;
+    background-color: #181919;
+    color: #EDEDED;
+    border-right: 0;
+
+
+    &.tblRpt-bordered {
+
+
+        &#tbl-report {
+            > thead > tr > th, > tbody > tr > td, tfoot > tr > td {
+                border: 1px solid #5F626B;
+            }
+
+            border-right: 1px solid #5F626B;
+            border-bottom: 1px solid #5F626B;
+            border-top: 0;
+            border-left: 0;
+
+            tr.tbl-footer td {
+                border-right: 0 !important;
+            }
+        }
+
+        tbody tr {
+            td, th {
+                border-right: 1px solid $table-border-color;
+                border-bottom: 1px solid $table-border-color;
+            }
+
+
+            &.tbl-footer {
+
+
+                td {
+                    border-right: 1px solid #875A44 !important;
+
+                    &:last-child {
+                        border-right: 0 !important;
+                    }
+                }
+            }
+        }
+
+        thead {
+            tr {
+                th, td {
+                    border-bottom: 1px solid #5F626B;
+                    border-right: 1px solid #5F626B;
+                }
+            }
+        }
+
+        > tfoot > tr > td {
+            background-color: transparent;
+        }
+    }
+
+    &.tblRpt-striped {
+        tbody {
+            > tr:nth-of-type(2n) {
+                background-color: $table-even-bg;
+            }
+        }
+    }
+
+    &.alternative-row-table {
+        tbody {
+            .even-row {
+                background-color: $table-even-bg;
+            }
+        }
+    }
+
+    &.tblRpt-hover {
+        > tbody {
+            > tr:hover > td {
+                background-color: $table-td-hover-color;
+            }
+        }
+    }
+
+    thead th, tbody td, tfoot td {
+        height: $height-normal;
+        padding: 4px 8px;
+        white-space: nowrap;
+        vertical-align: middle;
+        @include box-sizing;
+    }
+
+    thead {
+        th {
+            background-color: $table-header-bg-color;
+            color: $table-header-color;
+            font-weight: 400;
+            text-align: center;
+        }
+
+        tr.thead-row2-pt th {
+            background-color: #f0f1c7;
+            color: $text-color;
+
+            &.thead-row {
+                background-color: $table-header-bg-color;
+                color: $table-header-color;
+            }
+        }
+    }
+
+    .thead-row2 th {
+        background-color: $table-subheader-bg-color;
+        color: $table-subheader-color;
+    }
+
+    tbody {
+        td {
+            &.text-center {
+                text-align: center;
+            }
+
+            &.group-league {
+                background: #f4f5e0;
+                text-transform: uppercase;
+                color: $text-color;
+                font-weight: bold;
+                text-align: left;
+            }
+
+            &.col-username {
+                .match-title {
+                    color: #B29446;
+                }
+            }
+        }
+
+        .col-first {
+            background-color: #262829;
+        }
+
+        .altercol {
+            background-color: #333124;
+            text-align: right;
+        }
+
+        .col-sma {
+            background-color: #f8d7a2;
+            font-weight: bold;
+            text-transform: uppercase;
+            text-align: center;
+        }
+    }
+
+    .tbl-footer {
+        background-color: #4C2511;
+        font-weight: 700;
+
+        td {
+            border-right: 1px solid #875A44 !important;
+
+            &:last-child {
+                border-right: 0;
+            }
+        }
+
+        .altercol {
+            background-color: #29170D;
+        }
+    }
+
+    .pt-row {
+        background-color: #2E2C1F
+    }
+
+    .product-row, .pt-row {
+        text-transform: uppercase;
+
+        .altercol {
+            background-color: #333124;
+        }
+
+        &:hover {
+            cursor: pointer;
+        }
+
+        td:first-child {
+            width: 20%;
+        }
+
+        > td {
+            .icon-arrow-right {
+                @include transform(rotate(0));
+                font-size: 16px;
+                position: relative;
+                top: 2px;
+                @include transition(transform 0.3s ease-out);
+            }
+
+            &.active {
+                .icon-arrow-right {
+                    @include transform(rotate(90deg));
+                }
+            }
+        }
+    }
+
+    .noInfo {
+        background-color: #fff !important;
+        text-align: center;
+    }
+}
+
+.combined-fixed-pagination-bottom {
+    margin-bottom: 48px;
+}

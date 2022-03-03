@@ -1,0 +1,33 @@
+﻿@import "../abstracts/_variables-dark.scss";
+
+.suspended-bg, .RowBgSuspended {
+    background-color: $status-suspended !important;
+}
+
+.disabled-bg, .RowBgDisabled {
+    background-color: $status-disabled !important;
+}
+
+.locked-falsePassword {
+    background-color: $status-closedby-pwd-others-bg !important;
+}
+
+.closed-byadmin {
+    background-color: $status-closedby-admin-bg !important;
+}
+
+.closed-byupline {
+    background-color: $status-closedby-upline-bg !important;
+}
+
+.locked-falseOTPSC {
+    background-color: $status-closedby-otp-sc-bg !important;
+}
+
+.closed-byArchive {
+    background-color: $status-closedby-archive !important;
+}
+
+.icon-information-outline {
+    float: none;
+}

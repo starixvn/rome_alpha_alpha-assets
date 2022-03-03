@@ -1,0 +1,641 @@
+﻿@import '../../abstracts/_variables-dark.scss';
+@import '../../abstracts/_mixins.scss';
+
+body {
+    font-family: $font-family;
+    font-size: $font-size + 2;
+    background-color: $body-bg-dark;
+    margin: 0;
+    padding-top: 8%;
+    color: $text-color;
+    @include box-sizing;
+}
+
+input, button {
+    outline: none;
+    font-family: inherit;
+    font-size: inherit;
+}
+
+%alphaIcon {
+    font:{
+        family: 'Iconalpha';
+        style: normal;
+    }
+}
+
+.block {
+    width: 370px;
+    max-width: 400px;
+    padding: 30px;
+    margin: auto;
+    background: #171717;
+    @include box-sizing;
+    @include effect-button();
+    border: 1px solid $component-border-color;
+
+    p {
+        color: #CBCBCB;
+    }
+
+    &.nickname {
+        padding: 20px 30px;
+
+        .title {
+            margin-top: 0;
+            margin-bottom: 8px;
+        }
+
+        .lblUsername {
+            margin-top: 8px;
+            margin-bottom: 8px;
+        }
+
+        .btn-cancel {
+            background: #696969;
+            color: #EDEDED;
+        }
+    }
+
+    .skip-force-change {
+        float: right;
+    }
+
+    .box-lang {
+        display: table;
+        width: 100%;
+
+        .dropdown-menu {
+            left: auto;
+            right: 0;
+        }
+
+        .dropdown .btn {
+            padding: 6px 8px;
+
+            &:hover {
+                color: unset;
+            }
+        }
+
+        .btn:active, .btn.active {
+            @include box-shadow-multiple(none);
+        }
+
+        .dropdown {
+            float: right;
+
+            .dropdown-menu {
+                @include border-radius(1px);
+                @include effect-button;
+
+                li a {
+                    padding-bottom: 6px;
+                    padding-top: 6px;
+                    cursor: pointer;
+
+                    &:hover {
+                        background-color: #3C3C3C;
+                    }
+                }
+            }
+
+            .caret {
+                position: static;
+            }
+        }
+
+        .flag {
+            background: url(../../images/flag_sprite.png) no-repeat;
+            display: inline-block;
+            width: 23px;
+            height: 16px;
+            position: relative;
+            top: 4px;
+            margin-right: 2px;
+
+            &.flag-en-US {
+                background-position: 0 0px;
+            }
+
+            &.flag-zh-CN {
+                background-position: 0 -17px;
+            }
+
+            &.flag-zh-TW {
+                background-position: 0 -34px;
+            }
+
+            &.flag-ja-JP {
+                background-position: 0 -50px;
+            }
+
+            &.flag-th-TH {
+                background-position: 0 -69px;
+            }
+
+            &.flag-ko-KR {
+                background-position: 0 -86px;
+            }
+
+            &.flag-vi-VN {
+                background-position: 0 -104px;
+            }
+        }
+    }
+
+    .title {
+        font-size: $font-size + 11;
+        color: #ECECEC;
+        margin-top: 16px;
+        margin-bottom: 16px;
+    }
+
+    .avatar {
+        padding-top: 10px;
+        padding-bottom: 12px;
+        text-align: center;
+
+        img {
+            height: 72px;
+            width: 72px;
+            border: 3px solid #aeaeae;
+            @include border-radius(50%);
+        }
+
+        figcaption {
+            padding: 12px 0;
+
+            .username {
+                color: $text-color;
+                font-weight: bold;
+            }
+        }
+    }
+
+    .txt {
+        border: none;
+        outline: none;
+        width: 100%;
+        border-bottom: 2px solid #9B9B9B;
+        height: 36px;
+        line-height: 36px;
+        padding: 0 0 0 28px;
+        color: #727272;
+        background-color: transparent;
+        @include border-radius(0);
+        @include box-shadow-multiple('none');
+
+        &:focus {
+            border-bottom: 2px solid #666;
+            color: #fff;
+
+
+            ~ [class^="icon"] {
+                color: #EDEDED;
+            }
+        }
+
+        &.error ~ .validation, &.valid ~ .validation {
+            right: 0;
+            top: 6px;
+        }
+    }
+
+    .list-button {
+        padding-top: 8px;
+        text-align: center;
+    }
+
+
+
+
+    .rowlg {
+        margin-bottom: 15px;
+        position: relative;
+
+        [class^="icon"] {
+            color: #727272;
+            position: absolute;
+            left: 0;
+        }
+
+        .icon-account-key {
+            font-size: 20px;
+            top: 7px;
+        }
+
+        .icon-lock {
+            font-size: 18px;
+            top: 7px;
+        }
+
+        .icon-user {
+            font-size: 16px;
+            top: 8px;
+        }
+    }
+
+    .custom-checkbox {
+        display: block;
+
+        input {
+            opacity: 0;
+            cursor: pointer;
+            width: 100%;
+            position: absolute;
+            z-index: 9999999999;
+
+            &:checked + label {
+                &::after {
+                    content: '';
+                    display: block;
+                    position: absolute;
+                    top: 5px;
+                    left: 5px;
+                    width: 6px;
+                    height: 9px;
+                    border: solid $dropdown-color-active;
+                    border-width: 0 2px 2px 0;
+                    transform: rotate(45deg);
+                }
+            }
+
+            &:checked + label {
+                &::before {
+                    background: $btn-submit-bg;
+                    border: 2px solid $btn-submit-bg;
+                }
+            }
+        }
+
+        label {
+            position: relative;
+            cursor: pointer;
+
+            &::before {
+                content: '';
+                -webkit-appearance: none;
+                background-color: transparent;
+                border: 2px solid #DADADA;
+                width: 16px;
+                height: 16px;
+                display: inline-block;
+                position: relative;
+                vertical-align: middle;
+                cursor: pointer;
+                margin-right: 14px;
+                border-radius: 3px;
+                margin-top: -3px;
+            }
+        }
+    }
+
+    .help-rules {
+        .error {
+            position: relative;
+
+            .icon-rules {
+                color: $link-color;
+                cursor: pointer;
+                font-size: 16px;
+                position: relative;
+                top: -2px;
+                left: auto;
+                margin-left: 4px;
+
+                &:hover {
+                    color: darken($link-color, 15%);
+                }
+            }
+
+            .icon-information-outline {
+                float: unset;
+            }
+        }
+    }
+
+    [class^="btn-"] {
+        font-size: $font-size + 2;
+        height: 40px;
+        line-height: 40px;
+        margin-right: 0;
+        width: 46%;
+        text-transform: uppercase;
+
+        &:first-child {
+            margin-right: 6%;
+        }
+    }
+
+    label {
+        font-weight: normal;
+    }
+
+    label.error {
+        color: $msg-error-color;
+        font-size: $font-size;
+        display: block;
+        padding-top: 8px;
+        text-align: left;
+    }
+
+    .note {
+        color: #ECECEC;
+        margin-top: 20px;
+    }
+}
+.block .form-SC-before .txt {
+    font-family: 'password';
+
+    &::-webkit-input-placeholder {
+        font-family: $font-family;
+        color: #727272;
+    }
+
+    &:-ms-input-placeholder {
+        font-family: $font-family;
+        color: #727272;
+    }
+
+    &:-moz-placeholder {
+        font-family: $font-family;
+        color: #727272;
+    }
+
+    &::placeholder {
+        font-family: $font-family;
+    }
+
+    &.show-hint {
+        font-family: unset;
+    }
+}
+
+.rules-title {
+    color: $link-color;
+    cursor: pointer;
+    padding-bottom: 8px;
+    padding-top: 20px;
+    display: inline-block;
+
+    .icon-rules, .icon-skip-next {
+        position: relative;
+        top: -1px;
+        font-size: 20px;
+    }
+
+    .icon-rules {
+        margin-right: 6px;
+    }
+
+    .icon-skip-next {
+        color: #045ACE;
+        margin-left: 6px;
+        vertical-align: middle;
+    }
+}
+
+.modal.information {
+    .modal-dialog {
+        margin-top: 13%;
+    }
+
+    .modal-content {
+        border: none;
+        width: 400px;
+
+        .modal-header {
+            background-color: #36587D;
+            color: #EDEDED;
+            height: 60px;
+            padding: 6px 0 6px 20px;
+
+            .icon-rules {
+                position: relative;
+                top: 12px;
+                margin-right: 4px;
+                font-size: 22px;
+                margin-right: 8px;
+                color: #fff;
+            }
+
+            .icon-rules:after {
+                display: none;
+            }
+
+            .modal-title {
+                border-bottom: none;
+                color: #fff;
+
+                font: {
+                    weight: normal;
+                    size: $font-size + 2;
+                }
+
+                line-height: 50px;
+                cursor: move;
+                padding: 0;
+            }
+
+            .icon-close {
+                color: #fff;
+                top: 16px;
+                position: relative;
+            }
+        }
+
+        .modal-body {
+            color: $text-color;
+            padding: 12px 20px;
+            font-size: $font-size;
+            border: 1px solid #515151;
+            border-top: none;
+
+            p {
+                margin-bottom: 4px;
+            }
+
+            ul {
+                list-style-type: disc;
+                padding-left: 30px;
+            }
+        }
+    }
+}
+
+@media screen and (min-width:768px) and (max-width:1024px) and (orientation:landscape) {
+   body {
+      padding-top: 5%;
+   }
+
+    .modal.information {  
+       .modal-dialog {
+            margin-top: 10%;
+        }
+    }
+}
+
+@media  screen and  (min-device-height: 600px) and  (max-device-height: 720px) {
+    body {
+        padding-top: 0;
+        font-size: 12px;
+    }
+
+    .modal.information {  
+        .modal-dialog {
+            margin-top: 10%;
+        }
+    }
+}
+
+@media  screen and  (device-height: 720px) {
+    body {
+        padding-top: 5%;
+    }
+}
+
+@media only screen and (max-device-width: 767px)
+{  
+   body {
+      font-size: $font-size + 3;
+      padding-top: 0;
+   }
+
+    .block {
+        padding: 0 30px;
+        width: 100%;
+        @include box-shadow-multiple(none);
+
+        .box-lang {
+            padding-top: 4px;
+
+            .dropdown .btn {
+                padding: 6px 8px;
+            }
+        }
+
+        .rowlg {
+            margin-bottom: 20px;
+        }
+
+        .title {
+            margin: 4px 0 12px;
+        }
+
+        .list-button {
+            padding-top: 0;
+        }
+
+        label.error {
+            padding-top: 4px;
+            margin-bottom: 0;
+            font-size: $font-size + 1;
+        }
+
+        .help-rules .error .icon-rules {
+            font-size: $font-size + 5;
+            top: -3px;
+        }
+
+        .avatar {
+            padding-top: 0;
+            padding-bottom: 8px;
+
+            figcaption {
+                padding-bottom: 0;
+            }
+
+            img {
+                height: 94px;
+                width: 94px;
+            }
+        }
+    }
+
+   .modal.information {  
+       .modal-dialog {
+            margin-top: 0;
+        } 
+
+        .modal-content .modal-header .modal-title {
+            font-size: $font-size + 4;       
+        }
+
+        .modal-content .modal-body {
+            font-size: $font-size + 3;       
+        }
+
+        .modal-content {
+            width: 100%;
+        }
+    }
+}
+
+@media only screen and (max-device-width: 374px)
+{  
+   body {
+      font-size: $font-size;
+      padding-top: 0;
+   }
+
+   .block {
+        padding: 0 30px;
+        width: 100%;
+        @include box-shadow-multiple(none);
+
+        .box-lang {
+            padding-top: 8px;
+        }
+
+        .rowlg {
+            margin-bottom: 16px;
+        }
+
+        .title {
+            margin: 0 0 4px;
+            font-size: $font-size + 7;
+        }
+
+        .list-button {
+            padding-top: 0;
+        }
+        
+        .avatar {     
+            padding-bottom: 4px;
+
+            figcaption {
+                padding-top: 4px;
+            }
+              
+            img {
+                height: 84px;
+                width: 84px;
+            }  
+        }
+
+        [class^="btn"] {
+            font-size: $font-size;
+        }
+
+        label.error {
+            font-size: $font-size - 1;
+        }
+
+        .help-rules .error .icon-rules {
+                font-size: $font-size + 5;
+                top: -3px;
+        }
+    }
+
+   .modal.information {  
+       .modal-content {
+            .modal-header .modal-title {
+               font-size: $font-size + 1;  
+            }
+            .modal-body {
+                font-size: $font-size;       
+            }
+       }
+    }
+}

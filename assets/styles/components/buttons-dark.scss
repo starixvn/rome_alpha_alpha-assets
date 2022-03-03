@@ -1,0 +1,169 @@
+﻿@import "../abstracts/_variables-dark.scss";
+@import "../abstracts/_mixins.scss";
+
+input[type=submit], input[type=reset] {
+    @include border-radius(1px);
+}
+
+/*button[disabled]:active, button[disabled],
+input[type="reset"][disabled]:active,
+input[type="reset"][disabled],
+input[type="button"][disabled]:active,
+input[type="button"][disabled],
+input[type="submit"][disabled]:active,
+input[type="submit"][disabled] {
+    opacity: 0.6;
+    filter: alpha(opacity=60); /* For IE8 and earlier 
+    color: #000;
+    cursor: pointer;
+}*/
+
+%btn {
+    border: none;
+    cursor: pointer;
+    height: $height-normal;
+    outline: none;
+    margin-right: 8px;
+    padding-left: 16px;
+    padding-right: 16px;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    @include effect-button;
+    @include box-sizing;
+
+    &[disabled], .disabled {
+       opacity: .4;
+       cursor: not-allowed;
+    }
+}
+
+.btn-default {
+    @extend %btn;
+    background-color: $btn-bg;    
+    color: $btn-color;    
+     &:hover, &:active {
+	    color: $btn-color-hover;
+        background-color: $btn-bg-hover;
+
+        &[disabled], .disabled {
+            background-color: $btn-bg;    
+            color: $btn-color;
+        }
+    }
+
+    &[disabled] {
+        color: $btn-color;
+    }
+}
+
+.btn-submit {
+    @extend %btn;
+    border-radius: 0;
+    background: $btn-submit-bg;
+    color: $btn-submit-color;
+    font-weight: bold;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-submit-bg-hover;
+        color: $btn-submit-color-hover;
+
+        &[disabled], .disabled {
+            background-color: $btn-submit-bg;
+            color: $btn-submit-color;
+        }
+    }
+
+    &[disabled] {
+       background: #3C5D7B !important;
+    }
+}
+
+input[type=reset], .btn-reset {
+    @extend %btn;
+    background-color: $btn-reset-bg;
+    color: $btn-reset-color;
+    outline: none;
+
+    &:hover, &:active {
+        color: $btn-reset-color-hover;
+        background-color: $btn-reset-bg-hover;
+
+        &[disabled], .disabled {
+            background-color: $btn-reset-bg;
+            color: $btn-reset-color;
+        }
+    }
+
+    &[disabled] {
+        color: #332821;
+        background: #735A4A;
+    }
+}
+
+.btn-refresh {
+    @extend %btn;
+    background-color: $btn-refresh-bg;
+    color: $btn-refresh-color;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-refresh-bg-hover;
+        color: $btn-refresh-color-hover;
+
+        &[disabled], .disabled {
+            background-color: $btn-refresh-bg;    
+            color: $btn-refresh-color;
+        }
+    }
+
+    &[disabled] {
+        color: $btn-refresh-color;
+    }
+}
+
+.btn-cancel {
+    @extend %btn;
+    background-color: $btn-cancel-bg;
+    color: $btn-cancel-color;
+    font-weight: bold;
+    &:hover, &:active, &:focus {
+        background-color: $btn-cancel-bg-hover;
+
+        &[disabled], .disabled {
+            background-color: $btn-cancel-bg;
+            color: $btn-cancel-color;
+        }
+    }
+
+    &[disabled] {
+        color: $btn-cancel-color;
+    }
+}
+
+.btn-remove {
+    @extend %btn;
+    background-color: $btn-remove-bg;
+    color: $btn-remove-color;
+
+    &:hover, &:active, &:focus {
+        background-color: $btn-remove-bg-hover;
+
+        &[disabled], .disabled {
+            background-color: $btn-remove-bg;    
+            color: $btn-remove-color;
+        }
+    }
+
+    &[disabled] {
+        color: $btn-remove-color;
+    }
+}
+
+
+.btn {
+    &:focus, &:active, &:visited {
+        outline: none;
+    }
+}
+
+
+

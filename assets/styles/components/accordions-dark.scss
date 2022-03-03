@@ -1,0 +1,112 @@
+﻿@import "../abstracts/_variables-dark.scss";
+@import "../abstracts/_mixins.scss";
+
+.panel-group {
+    .panel {
+        background: none;
+    }
+
+    .panel-heading {
+        padding: 0; 
+        @include border-radius(0);
+
+        .panel-title a {
+            font-size: 13px;         
+            cursor: pointer;
+            display: block;
+            padding: 0 6px;
+            @include box-sizing;
+
+            &:focus {
+                outline: none;
+            }
+        }        
+    }
+
+    &.panel-text {
+        .panel-heading {
+            padding: 0; 
+            @include border-radius(0);
+
+            .panel-title a {
+                color: #333;
+                height: 28px;
+                line-height: 28px;  
+
+                &:before {
+                    font-family: 'Iconalpha';
+                    font-weight: 100;
+                    top: 1px;
+                    position: relative;
+                    margin-right: 4px;
+                }
+
+                &.collapsed:before {
+                    content: '\e91d';
+                }
+
+                &:not(.collapsed) {
+                    &:before {
+                        content: '\e91c';
+                    }
+                }
+
+                &:focus {
+                    outline: none;
+                }
+            }        
+        }
+
+        .panel-heading + .panel-collapse > .panel-body {
+            border-top: none;
+            padding: 4px 24px;
+        }
+    }
+
+    &.panel-table {
+
+        .panel-heading {
+            padding: 0; 
+            @include border-radius(0);
+
+            .panel-title a {
+                border: 1px solid $component-border-color;
+                background-color: $component-bg;
+                color: $component-color;
+                height: 36px;
+                line-height: 30px;    
+                font-weight: bold;
+
+                &:before {
+                    font-family: 'Iconalpha';
+                    font-size: 16px;
+                    margin-right: 2px;
+                    position: relative;
+                    top: 2px;
+                }
+
+                &.collapsed:before {
+                    content: '\e929';
+                }
+
+                &:not(.collapsed) {
+                    border-color: #b3b3b3;
+
+                    &:before {
+                        content: '\e928';
+                    }
+                }
+
+                &:hover, &:focus {
+                    border-color: #b3b3b3;
+                    text-decoration: none;
+                }
+            }        
+        }
+
+        .panel-heading + .panel-collapse > .panel-body {
+            border-top: none;
+            padding: 4px 0;
+        }
+    }
+}
