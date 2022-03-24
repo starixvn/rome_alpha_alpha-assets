@@ -966,5 +966,592 @@
       "js/libs/bootstrap/modal.js",
       "js/libs/jquery/jquery-ui.min.js"
     ]
+  },
+  /************************** Dark Mode ************************/
+  {
+    "outputFileName": "bundles/common/common-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/common/bootstrap-ex.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/components/alerts-dark.css",
+      "styles/components/blockui-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/breadcrumbs-dark.css",
+      "styles/components/checkbox-radio.css",
+      "styles/components/dropdown-dark.css",
+      "styles/components/form-dark.css",
+      "styles/components/textboxes-dark.css",
+      "styles/components/modals-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/components/icon-dark.css",
+      "styles/base/pass-font.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/common-super-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super-dark.css",
+      "styles/themes/components/buttons/button-super-dark.css",
+      "styles/components/customize-checkbox-radio-dark.css",
+      "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.css"
+
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/common-master-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master-dark.css",
+      "styles/themes/components/buttons/button-master-dark.css",
+      "styles/components/customize-checkbox-radio-dark.css",
+      "styles/themes/components/checkbox-radio/checkbox-radio-master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/common/common-agent-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent-dark.css",
+      "styles/themes/components/buttons/button-agent-dark.css",
+      "styles/components/customize-checkbox-radio-dark.css",
+      "styles/themes/components/checkbox-radio/checkbox-radio-agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/agent-dark.css",
+    "inputFiles": [
+      "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
+      "styles/vendors/ripples.css",
+      "styles/vendors/jquery.mCustomScrollbar.css",
+      "styles/layout/default-layout/header-dark.css",
+      "styles/layout/default-layout/navigation.css",
+      "styles/layout/default-layout/sidebar-dark.css",
+      "styles/themes/agent-dark.css",
+      "styles/vendors/toastr/toastr.css",
+      "styles/components/toastr-dark.css",
+      "styles/components/resizable.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/master-dark.css",
+    "inputFiles": [
+      "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
+      "styles/vendors/ripples.css",
+      "styles/vendors/jquery.mCustomScrollbar.css",
+      "styles/layout/default-layout/header-dark.css",
+      "styles/layout/default-layout/navigation.css",
+      "styles/layout/default-layout/sidebar-dark.css",
+      "styles/themes/master-dark.css",
+      "styles/vendors/toastr/toastr.css",
+      "styles/components/toastr-dark.css",
+      "styles/components/resizable.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/super-dark.css",
+    "inputFiles": [
+      "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
+      "styles/vendors/ripples.css",
+      "styles/vendors/jquery.mCustomScrollbar.css",
+      "styles/layout/default-layout/header-dark.css",
+      "styles/layout/default-layout/navigation.css",
+      "styles/layout/default-layout/sidebar-dark.css",
+      "styles/themes/super-dark.css",
+      "styles/vendors/toastr/toastr.css",
+      "styles/components/toastr-dark.css",
+      "styles/components/resizable.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-results/super-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars-dark.css",
+      "styles/vendors/select2.css",
+      "styles/components/select2-dark.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/components/modals-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css"
+      //"styles/themes/components/tabs/tab-super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-results/master-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars-dark.css",
+      "styles/vendors/select2.css",
+      "styles/components/select2-dark.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/components/modals-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css"
+      //"styles/themes/components/tabs/tab-master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-results/agent-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars-dark.css",
+      "styles/vendors/select2.css",
+      "styles/components/select2-dark.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/components/modals-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css"
+      //"styles/themes/components/tabs/tab-agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-totalbetsforecast/default-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.css",
+      "styles/vendors/bootstrap-multiselect.css",
+      "styles/vendors/select2.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/components/blockui-dark.css",
+      "styles/components/tables-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css",
+      "styles/components/dropdown-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-viewlogs/viewlogs-super-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/base/roboto-fonts.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/vendors/monthpicker/monPickr-0.0.3.css",
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/vendors/jquery-easyui-1.5/icon.css",
+      "styles/components/month-picker-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/themes/components/tabs/tab-super-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css",
+      "styles/components/dropdown-dark.css",
+      "styles/components/form-dark.css",
+      "styles/components/checkbox-radio.css",
+      "styles/components/tables-dark.css",
+      "styles/components/pagination-dark.css",
+      "styles/components/blockui-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-viewlogs/viewlogs-master-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/base/roboto-fonts.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/vendors/monthpicker/monPickr-0.0.3.css",
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/vendors/jquery-easyui-1.5/icon.css",
+      "styles/components/month-picker-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/themes/components/tabs/tab-master-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css",
+      "styles/components/dropdown-dark.css",
+      "styles/components/form-dark.css",
+      "styles/components/checkbox-radio.css",
+      "styles/components/tables-dark.css",
+      "styles/components/pagination-dark.css",
+      "styles/components/blockui-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-viewlogs/viewlogs-agent-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/base/roboto-fonts.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/vendors/monthpicker/monPickr-0.0.3.css",
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/vendors/jquery-easyui-1.5/icon.css",
+      "styles/components/month-picker-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/themes/components/tabs/tab-agent-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css",
+      "styles/components/dropdown-dark.css",
+      "styles/components/form-dark.css",
+      "styles/components/checkbox-radio.css",
+      "styles/components/tables-dark.css",
+      "styles/components/pagination-dark.css",
+      "styles/components/blockui-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/security/before-home-page-dark.css",
+    "inputFiles": [
+      "styles/layout/before-home-page/before-home-page-dark.css",
+      "styles/components/customize-checkbox-radio-dark.css",
+      "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/security/security-super-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/security/security-master-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/security/security-agent-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/dashboard/dashboard-super-dark.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css",
+      "styles/themes/components/tabs/tab-super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/dashboard/dashboard-master-dark.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css",
+      "styles/themes/components/tabs/tab-master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/dashboard/dashboard-agent-dark.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css",
+      "styles/themes/components/tabs/tab-agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-messages/message-super-dark.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css",
+      "styles/components/calendars-dark.css",
+      "styles/themes/components/tabs/tab-super-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/month-picker-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-messages/message-master-dark.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css",
+      "styles/components/calendars-dark.css",
+      "styles/themes/components/tabs/tab-master-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/month-picker-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-messages/message-agent-dark.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css",
+      "styles/components/calendars-dark.css",
+      "styles/themes/components/tabs/tab-agent-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/month-picker-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/otp/otp-super-dark.css",
+    "inputFiles": [
+      "styles/components/accordions-dark.css",
+      "styles/themes/components/tabs/tab-super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/otp/otp-master-dark.css",
+    "inputFiles": [
+      "styles/components/accordions-dark.css",
+      "styles/themes/components/tabs/tab-master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/otp/otp-agent-dark.css",
+    "inputFiles": [
+      "styles/components/accordions-dark.css",
+      "styles/themes/components/tabs/tab-agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/dcs/customizeDCS-dark.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/base/icon-fonts.css",
+      "styles/layout/dcs/customizeDCS-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-reports/default-dark.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars-dark.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/vendors/monthpicker/monPickr-0.0.3.css",
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/components/month-picker-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/vendors/bootstrap-multiselect.css",
+      "styles/components/bootstrap-multiselect-dark.css",
+      "styles/components/pagination-dark.css",
+      "styles/components/tablesorter.css",
+      "styles/components/icon-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/default-dark.css",
+    "inputFiles": [
+      "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/components/tablesorter.css",
+      "styles/vendors/bootstrap-multiselect.css",
+      "styles/components/bootstrap-multiselect-dark.css",
+      "styles/components/pagination-dark.css",
+      "styles/components/icon-dark.css",
+      "styles/themes/customer-status-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/problem-account-Super-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/vendors/select2.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/components/modals-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css",
+      "styles/components/tables-dark.css",
+      "styles/components/calendars-dark.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/components/month-picker-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/icon-dark.css",
+      "styles/themes/components/tabs/tab-super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/problem-account-Master-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/vendors/select2.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/components/modals-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css",
+      "styles/components/tables-dark.css",
+      "styles/components/calendars-dark.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/components/month-picker-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/icon-dark.css",
+      "styles/themes/components/tabs/tab-master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/problem-account-Agent-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/vendors/select2.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/components/modals-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css",
+      "styles/components/tables-dark.css",
+      "styles/components/calendars-dark.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/components/month-picker-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/icon-dark.css",
+      "styles/themes/components/tabs/tab-agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/default-dark.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/filter-dark.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-multiselect.css",
+      "styles/components/bootstrap-multiselect-dark.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-betlists/pagination-dark.css",
+    "inputFiles": [
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/components/pagination-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-accountinfo/index-dark.css",
+    "inputFiles": [
+      "styles/components/tables-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-agent-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-master-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-super-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/chatbot/chatbot-default-dark.css",
+    "inputFiles": [
+      "styles/components/popover-dark.css",
+      "styles/components/tables-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-transfer/default-dark.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/vendors/jquery-easyui-1.5/easyui.css",
+      "styles/components/tablesorter.css",
+      "styles/vendors/bootstrap-multiselect.css",
+      "styles/components/bootstrap-multiselect-dark.css",
+      "styles/components/icon-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-transfer/filter-dark.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-asset/data-table-dark.css",
+    "inputFiles": [
+      "styles/vendors/data-table/jquery.dataTables.css",
+      "styles/vendors/data-table/responsive.dataTables.css",
+      "styles/vendors/data-table/fixedHeader.dataTables.css",
+      "styles/components/datatable-customize-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-asset/daterangepicker-dark.css",
+    "inputFiles": [
+      "styles/vendors/daterangepicker/daterangepicker.css",
+      "styles/components/daterangepicker-customize.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/unsupport-browser/super-dark.css",
+    "inputFiles": [
+      "styles/fonts/iconalpha/style.css",
+      "styles/themes/unsupport-browser/super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/unsupport-browser/master-dark.css",
+    "inputFiles": [
+      "styles/fonts/iconalpha/style.css",
+      "styles/themes/unsupport-browser/master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/unsupport-browser/agent-dark.css",
+    "inputFiles": [
+      "styles/fonts/iconalpha/style.css",
+      "styles/themes/unsupport-browser/agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-ng2/default-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-ng2/bootstrap-ex.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/components/breadcrumbs-dark.css",
+      "styles/components/blockui-dark.css",
+      "styles/components/tables-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css",
+      "styles/components/dropdown-dark.css",
+      "styles/components/alerts-dark.css"
+    ]
   }
 ]
