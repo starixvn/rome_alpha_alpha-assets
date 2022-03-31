@@ -9,6 +9,8 @@ copy ..\assets\styles\abstracts\_master-variables2-dark.scss ..\assets\styles\ab
 copy ..\assets\styles\abstracts\_super-variables2.scss ..\assets\styles\abstracts\_super-variables.scss /y
 copy ..\assets\styles\abstracts\_super-variables2-dark.scss ..\assets\styles\abstracts\_super-variables-dark.scss /y
 
+copy ..\assets\styles\abstracts\_variables2-dark.scss ..\assets\styles\abstracts\_variables-dark.scss /y
+
 copy ..\assets\styles\images\oldbrowser-agent2.jpg ..\assets\styles\images\oldbrowser-agent.jpg /y
 copy ..\assets\styles\images\oldbrowser-master2.jpg ..\assets\styles\images\oldbrowser-master.jpg /y
 copy ..\assets\styles\images\oldbrowser-super2.jpg ..\assets\styles\images\oldbrowser-super.jpg /y
