@@ -14,9 +14,14 @@
 
 
     &.tblRpt-bordered {
-
-
         &#tbl-report {
+            thead {
+                position: -webkit-sticky;
+                position: sticky;
+                top: -1px;
+                z-index: 9;
+            }
+
             > thead > tr > th, > tbody > tr > td, tfoot > tr > td {
                 border: 1px solid #5F626B;
 

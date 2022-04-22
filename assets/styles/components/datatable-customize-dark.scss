@@ -17,11 +17,22 @@
 
 table {
     &.fixedHeader-floating {
+        background-color:transparent;
+        top: -1px!important;
+        display: none!important;
         thead {
-            position: -webkit-sticky;
-            position: sticky;
-            top: 0;
-            z-index: 9;
+            
+            tr{
+                &:nth-child(2){
+                    th{
+                        border-top: 0!important;
+                    }
+                }
+            }
+            tr th {
+                border-right: 1px solid #5F626B !important;
+                border-top: 1px solid #5F626B !important;
+            }
         }
     }
 
