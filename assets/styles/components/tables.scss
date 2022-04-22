@@ -11,6 +11,15 @@
     background-color: #fff;
 
     &.tblRpt-bordered {
+        &#tbl-report {
+            thead {
+                position: -webkit-sticky;
+                position: sticky;
+                top: -1px;
+                z-index: 9;
+            }
+        }
+
         > thead > tr > th, > tbody > tr > td, tfoot > tr > td {
             border: 1px solid $table-border-color;
         }
@@ -33,7 +42,7 @@
     }
 
     &.tblRpt-hover {
-       > tbody {
+        > tbody {
             > tr:hover > td {
                 background-color: $table-td-hover-color;
             }
