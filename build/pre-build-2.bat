@@ -14,6 +14,9 @@ copy ..\assets\styles\abstracts\_variables2-dark.scss ..\assets\styles\abstracts
 copy ..\assets\styles\images\oldbrowser-agent2.jpg ..\assets\styles\images\oldbrowser-agent.jpg /y
 copy ..\assets\styles\images\oldbrowser-master2.jpg ..\assets\styles\images\oldbrowser-master.jpg /y
 copy ..\assets\styles\images\oldbrowser-super2.jpg ..\assets\styles\images\oldbrowser-super.jpg /y
+copy ..\assets\styles\images\oldbrowser-agent2-dark.jpg ..\assets\styles\images\oldbrowser-agent-dark.jpg /y
+copy ..\assets\styles\images\oldbrowser-master2-dark.jpg ..\assets\styles\images\oldbrowser-master-dark.jpg /y
+copy ..\assets\styles\images\oldbrowser-super2-dark.jpg ..\assets\styles\images\oldbrowser-super-dark.jpg /y
 copy ..\assets\styles\vendors-extensions\common\_bootstrap-mixins2.scss ..\assets\styles\vendors-extensions\common\_bootstrap-mixins.scss /y
 copy ..\assets\styles\vendors-extensions\common\bootstrap-ex2.scss ..\assets\styles\vendors-extensions\common\bootstrap-ex.scss /y
 
