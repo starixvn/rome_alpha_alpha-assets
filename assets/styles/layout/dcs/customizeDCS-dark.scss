@@ -36,6 +36,60 @@ a {
     padding-left: 8px;
     text-align: left;
     border: none;
+
+    .icon-expand-all, .icon-collapse-all {
+        font-family: 'Iconalpha';
+        font-size: 20px;
+        display: inline-block;
+        background: none;
+        position: relative;
+        margin: 0 5px 0 0;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+
+        &:before {
+            color: #ffffff;
+            top: -6px;
+            content: '\e987';
+            position: relative;
+            display: block;
+            font-weight: 400;
+        }
+    }
+
+    .icon-expand-all {
+        &:before {
+            transform: rotate(180deg);
+        }
+    }
+
+    .icon-collapse, .icon-expand {
+        font-family: 'Iconalpha';
+        font-size: 20px;
+        display: inline-block;
+        background: none;
+        position: relative;
+        margin: 0 5px 0 0;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+
+        &:before {
+            color: #ffffff;
+            top: -6px;
+            content: '\e954';
+            position: relative;
+            display: block;
+            font-weight: 400;
+        }
+    }
+
+    .icon-collapse {
+        &:before {
+            transform: rotate(-90deg);
+        }
+    }
 }
 
 .customer-info {
