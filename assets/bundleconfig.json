@@ -926,6 +926,24 @@
       "js/libs/jquery/jquery-ui.min.js"
     ]
   },
+  {
+    "outputFileName": "bundles/site-reports/tab-super.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-reports/tab-master.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-reports/tab-agent.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent.css"
+    ]
+  },
   /************************** Dark Mode ************************/
   {
     "outputFileName": "bundles/common/common-dark.css",
@@ -1494,6 +1512,24 @@
     "inputFiles": [
       "styles/fonts/iconalpha/style.css",
       "styles/themes/unsupport-browser/agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-reports/tab-super-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-reports/tab-master-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-reports/tab-agent-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent-dark.css"
     ]
   }
 ]
