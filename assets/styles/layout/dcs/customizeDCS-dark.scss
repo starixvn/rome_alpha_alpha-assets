@@ -105,8 +105,36 @@ a {
 .block__sub-header {
     background-color: $pt-col-highlight-bg;
     border-bottom-color: $pt-border-color;
-   // height: $pt-col-height;
+    // height: $pt-col-height;
     line-height: $pt-col-height;
+
+    .icon-collapse, .icon-expand {
+        font-family: 'Iconalpha';
+        font-size: 20px;
+        display: inline-block;
+        background: none;
+        position: relative;
+        margin: 0 5px 0 0;
+        vertical-align: middle;
+        width: 20px;
+        height: 20px;
+        text-indent: 0;
+
+        &:before {
+            color: #ffffff;
+            top: -7px;
+            content: '\e954';
+            position: relative;
+            display: block;
+            font-weight: 400;
+        }
+    }
+
+    .icon-collapse {
+        &:before {
+            transform: rotate(-90deg);
+        }
+    }
 }
 
 .right-btn-area--seperate {
