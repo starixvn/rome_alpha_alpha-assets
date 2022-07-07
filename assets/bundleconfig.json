@@ -714,6 +714,43 @@
       "js/components/typeahead/typeahead.js"
     ]
   },
+  //{
+  //  "outputFileName": "bundles/site-memberinfo/my-watchlist-accounts.js",
+  //  "inputFiles": [
+  //    "js/libs/moment/moment.js"
+  //  ]
+  //},
+  {
+    "outputFileName": "bundles/site-memberinfo/reached-threshold.js",
+    "inputFiles": [
+      "js/libs/moment/moment.js",
+      "js/components/datetimepicker/datepicker.js",
+      "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/reached-threshold.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/vendors/select2.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding.css",
+      "styles/components/modals.css",
+      "styles/components/tabs.css",
+      "styles/components/buttons.css",
+      "styles/components/textboxes.css",
+      "styles/components/tables.css",
+      "styles/components/calendars.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/components/month-picker.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/icon.css"
+    ]
+  },
   {
     "outputFileName": "bundles/site-betlists/default.css",
     "inputFiles": [
@@ -1401,6 +1438,27 @@
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon-dark.css",
       "styles/themes/components/tabs/tab-agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/reached-threshold-dark.css",
+    "inputFiles": [
+      "styles/base/reset.css",
+      "styles/vendors-extensions/site-results/bootstrap-ex.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/vendors/select2.css",
+      "styles/fonts/iconalpha/style.css",
+      "styles/base/scaffolding-dark.css",
+      "styles/components/modals-dark.css",
+      "styles/components/tabs-dark.css",
+      "styles/components/buttons-dark.css",
+      "styles/components/textboxes-dark.css",
+      "styles/components/tables-dark.css",
+      "styles/components/calendars-dark.css",
+      "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
+      "styles/components/month-picker-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/icon-dark.css"
     ]
   },
   {

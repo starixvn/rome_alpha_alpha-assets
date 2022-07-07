@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('fonts/Iconalpha.eot?6g5qgr');
-  src:  url('fonts/Iconalpha.eot?6g5qgr#iefix') format('embedded-opentype'),
-    url('fonts/Iconalpha.ttf?6g5qgr') format('truetype'),
-    url('fonts/Iconalpha.woff?6g5qgr') format('woff'),
-    url('fonts/Iconalpha.svg?6g5qgr#Iconalpha') format('svg');
+  src:  url('fonts/Iconalpha.eot?owfgwp');
+  src:  url('fonts/Iconalpha.eot?owfgwp#iefix') format('embedded-opentype'),
+    url('fonts/Iconalpha.ttf?owfgwp') format('truetype'),
+    url('fonts/Iconalpha.woff?owfgwp') format('woff'),
+    url('fonts/Iconalpha.svg?owfgwp#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -443,4 +443,7 @@
 }
 .icon-toggle-on:before {
   content: "\e988";
+}
+.icon-bin:before {
+  content: "\e9ac";
 }
