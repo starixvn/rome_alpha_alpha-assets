@@ -1,6 +1,16 @@
 ﻿@import "../../abstracts/_variables.scss";
 @import "../../abstracts/_mixins.scss";
+.navigation {
+    .main-tab {
+        border: 1px solid #303030;
 
+        li.active {
+            a{
+                background: #ffffff;
+            }
+        }
+    }
+}
 .sidebar {
     @include box-shadow(1px, 0, 3px, rgba(0, 0, 0, 0.3));
     @include transition(width 0.7s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s);
