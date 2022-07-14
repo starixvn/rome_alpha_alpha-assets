@@ -714,12 +714,6 @@
       "js/components/typeahead/typeahead.js"
     ]
   },
-  //{
-  //  "outputFileName": "bundles/site-memberinfo/my-watchlist-accounts.js",
-  //  "inputFiles": [
-  //    "js/libs/moment/moment.js"
-  //  ]
-  //},
   {
     "outputFileName": "bundles/site-memberinfo/reached-threshold.js",
     "inputFiles": [
