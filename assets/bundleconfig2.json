@@ -1054,6 +1054,24 @@
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-super.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-master.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-agent.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent.css"
+    ]
+  },
   /************************** Dark Mode ************************/
   {
     "outputFileName": "bundles2/common/common-dark.css",
@@ -1536,7 +1554,7 @@
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/components/month-picker-dark.css",
       "styles/components/bootstrap.nexDatePicker.css",
-      "styles/components/icon-dark.css",
+      "styles/components/icon-dark.css"
     ]
   },
   {
@@ -1676,6 +1694,24 @@
   },
   {
     "outputFileName": "bundles2/site-reports/tab-agent-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-super-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-master-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-agent-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css"
     ]
