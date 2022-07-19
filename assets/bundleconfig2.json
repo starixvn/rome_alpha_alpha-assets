@@ -859,7 +859,9 @@
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
-      "js/libs/jquery/jquery-ui.min.js"
+      "js/libs/jquery/jquery-ui.min.js",
+      "js/libs/bootstrap/tooltip.js",
+      "js/libs/clipboard/clipboard.js"
     ]
   },
   {
@@ -965,6 +967,42 @@
       "js/components/data-table/dataTables.pagination.input.js",
       "js/libs/bootstrap/modal.js",
       "js/libs/jquery/jquery-ui.min.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/chatbot/tab-super.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/chatbot/tab-master.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/chatbot/tab-agent.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/chatbot/tab-super-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/chatbot/tab-master-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/chatbot/tab-agent-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent-dark.css"
     ]
   },
   {
