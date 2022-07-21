@@ -2,10 +2,9 @@
 @import "../../abstracts/_mixins.scss";
 .navigation {
     .main-tab {
-        border: 1px solid #303030;
-
+        padding: 4px;
         li.active {
-            a{
+            a {
                 background: #ffffff;
             }
         }
