@@ -18,10 +18,20 @@
 .header-nav {
     background-color: $primary-color;
 }
+.mainmenu-container {
+    .menu-item#menu-MYMONITORACCOUNTS {
+        a {
+            color: $text-hover-active-color !important;
 
-.header-nav .list-top>li.language:hover, 
-.header-nav .list-top>li.view-type:hover, 
-.header-nav .list-top>li.dropdown:active:focus,
+            .icon:before {
+                color: $text-hover-active-color !important;
+            }
+        }
+    }
+}
+.header-nav .list-top > li.language:hover,
+.header-nav .list-top > li.view-type:hover,
+.header-nav .list-top > li.dropdown:active:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background: $header-nav-icon-hover;
 }
