@@ -19,7 +19,7 @@
     background-color: $primary-color;
 }
 .mainmenu-container {
-    .menu-item#menu-MYMONITORACCOUNTS {
+    .menu-item.active#menu-MYMONITORACCOUNTS {
         a {
             color: $text-hover-active-color !important;
 
