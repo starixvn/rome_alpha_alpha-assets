@@ -1681,5 +1681,13 @@
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/reached-threshold-dark.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css"
+    ]
   }
 ]
