@@ -1,6 +1,6 @@
 ﻿[
   {
-    "outputFileName": "bundles/common/common.css",
+    "outputFileName": "bundles2/common/common.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/common/bootstrap-ex.css",
@@ -21,13 +21,13 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/pass-font.css",
+    "outputFileName": "bundles2/common/pass-font.css",
     "inputFiles": [
       "styles/base/pass-font.css"
     ]
   },
   {
-    "outputFileName": "bundles/common/common-super.css",
+    "outputFileName": "bundles2/common/common-super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super.css",
       "styles/themes/components/buttons/button-super.css",
@@ -36,7 +36,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-master.css",
+    "outputFileName": "bundles2/common/common-master.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master.css",
       "styles/themes/components/buttons/button-master.css",
@@ -45,7 +45,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-agent.css",
+    "outputFileName": "bundles2/common/common-agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent.css",
       "styles/themes/components/buttons/button-agent.css",
@@ -54,7 +54,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/agent.css",
+    "outputFileName": "bundles2/site-main/agent.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
@@ -69,7 +69,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/master.css",
+    "outputFileName": "bundles2/site-main/master.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
@@ -84,7 +84,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/super.css",
+    "outputFileName": "bundles2/site-main/super.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
@@ -99,28 +99,28 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/unsupport-browser/super.css",
+    "outputFileName": "bundles2/site-main/unsupport-browser/super.css",
     "inputFiles": [
       "styles/fonts/iconalpha/style.css",
-      "styles/themes/unsupport-browser/super.css"
+      "styles/themes/unsupport-browser/super2.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/unsupport-browser/master.css",
+    "outputFileName": "bundles2/site-main/unsupport-browser/master.css",
     "inputFiles": [
       "styles/fonts/iconalpha/style.css",
-      "styles/themes/unsupport-browser/master.css"
+      "styles/themes/unsupport-browser/master2.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/unsupport-browser/agent.css",
+    "outputFileName": "bundles2/site-main/unsupport-browser/agent.css",
     "inputFiles": [
       "styles/fonts/iconalpha/style.css",
-      "styles/themes/unsupport-browser/agent.css"
+      "styles/themes/unsupport-browser/agent2.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/default.js",
+    "outputFileName": "bundles2/site-main/default.js",
     "inputFiles": [
       "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap-material/material.js",
@@ -137,7 +137,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-results/super.css",
+    "outputFileName": "bundles2/site-results/super.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -153,7 +153,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-results/master.css",
+    "outputFileName": "bundles2/site-results/master.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -169,7 +169,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-results/agent.css",
+    "outputFileName": "bundles2/site-results/agent.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -185,7 +185,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-results/default.js",
+    "outputFileName": "bundles2/site-results/default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
@@ -198,7 +198,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-totalbetsforecast/default.css",
+    "outputFileName": "bundles2/site-totalbetsforecast/default.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.css",
@@ -215,7 +215,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-totalbetsforecast/default.js",
+    "outputFileName": "bundles2/site-totalbetsforecast/default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
@@ -234,7 +234,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-totalbetsforecast/unsupport-browser/default.js",
+    "outputFileName": "bundles2/site-totalbetsforecast/unsupport-browser/default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
@@ -253,7 +253,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-viewlogs/viewlogs-super.css",
+    "outputFileName": "bundles2/site-viewlogs/viewlogs-super.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
@@ -278,7 +278,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-viewlogs/viewlogs-master.css",
+    "outputFileName": "bundles2/site-viewlogs/viewlogs-master.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
@@ -303,7 +303,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-viewlogs/viewlogs-agent.css",
+    "outputFileName": "bundles2/site-viewlogs/viewlogs-agent.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
@@ -328,7 +328,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-viewlogs/default.js",
+    "outputFileName": "bundles2/site-viewlogs/default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
@@ -346,7 +346,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security/before-home-page.css",
+    "outputFileName": "bundles2/site-main/security/before-home-page.css",
     "inputFiles": [
       "styles/layout/before-home-page/before-home-page.css",
       "styles/components/customize-checkbox-radio.css",
@@ -354,25 +354,25 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security/security-super.css",
+    "outputFileName": "bundles2/site-main/security/security-super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security/security-master.css",
+    "outputFileName": "bundles2/site-main/security/security-master.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security/security-agent.css",
+    "outputFileName": "bundles2/site-main/security/security-agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/dashboard/dashboard-super.css",
+    "outputFileName": "bundles2/site-main/dashboard/dashboard-super.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
@@ -380,7 +380,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/dashboard/dashboard-master.css",
+    "outputFileName": "bundles2/site-main/dashboard/dashboard-master.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
@@ -388,7 +388,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/dashboard/dashboard-agent.css",
+    "outputFileName": "bundles2/site-main/dashboard/dashboard-agent.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
@@ -396,7 +396,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/dashboard/dashboard-default.js",
+    "outputFileName": "bundles2/site-main/dashboard/dashboard-default.js",
     "inputFiles": [
       "js/libs/bootstrap/tab.js",
       "js/libs/hammer/hammer.js",
@@ -404,7 +404,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-super.css",
+    "outputFileName": "bundles2/site-messages/message-super.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -416,7 +416,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-master.css",
+    "outputFileName": "bundles2/site-messages/message-master.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -428,7 +428,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-agent.css",
+    "outputFileName": "bundles2/site-messages/message-agent.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -440,7 +440,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-default.js",
+    "outputFileName": "bundles2/site-messages/message-default.js",
     "inputFiles": [
       "js/libs/moment/moment.js",
       "js/libs/bootstrap/tab.js",
@@ -452,7 +452,7 @@
   },
 
   {
-    "outputFileName": "bundles/site-main/security/before-home-page.js",
+    "outputFileName": "bundles2/site-main/security/before-home-page.js",
     "inputFiles": [
       "js/components/secure-hashing/sha1.js",
       "js/components/secure-hashing/sha256.js",
@@ -460,7 +460,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common.js",
+    "outputFileName": "bundles2/common/common.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
@@ -474,48 +474,48 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/es5-shim.js",
+    "outputFileName": "bundles2/common/es5-shim.js",
     "inputFiles": [
       "js/libs/support-IE8/shim.js",
       "js/libs/support-IE8/sham.js"
     ]
   },
   {
-    "outputFileName": "bundles/common/support-IE8.js",
+    "outputFileName": "bundles2/common/support-IE8.js",
     "inputFiles": [
       "js/libs/support-IE8/html5shiv.js",
       "js/libs/support-IE8/respond.js"
     ]
   },
   {
-    "outputFileName": "bundles/common/cleave-jquery.js",
+    "outputFileName": "bundles2/common/cleave-jquery.js",
     "inputFiles": [
       "js/libs/cleave/cleave-1.5.8.js",
       "js/libs/cleave/jquery.cleave.js"
     ]
   },
   {
-    "outputFileName": "bundles/common/ajaxSetup.js",
+    "outputFileName": "bundles2/common/ajaxSetup.js",
     "inputFiles": [
       "js/components/ajaxSetup/jquery.ajaxSetup.js"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/otp/otp-super.css",
+    "outputFileName": "bundles2/site-main/otp/otp-super.css",
     "inputFiles": [
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/otp/otp-master.css",
+    "outputFileName": "bundles2/site-main/otp/otp-master.css",
     "inputFiles": [
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/otp/otp-agent.css",
+    "outputFileName": "bundles2/site-main/otp/otp-agent.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
       "styles/components/accordions.css",
@@ -523,7 +523,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/otp/otp-default.js",
+    "outputFileName": "bundles2/site-main/otp/otp-default.js",
     "inputFiles": [
       "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/transition.js",
@@ -533,7 +533,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/dcs/customizeDCS.css",
+    "outputFileName": "bundles2/dcs/customizeDCS.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/base/icon-fonts.css",
@@ -541,7 +541,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-ng2/default.css",
+    "outputFileName": "bundles2/site-ng2/default.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-ng2/bootstrap-ex.css",
@@ -558,7 +558,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-ng2/default.js",
+    "outputFileName": "bundles2/site-ng2/default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
       "js/libs/bootstrap/button.js",
@@ -577,7 +577,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/default.css",
+    "outputFileName": "bundles2/site-reports/default.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
@@ -596,7 +596,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/default.js",
+    "outputFileName": "bundles2/site-reports/default.js",
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
@@ -621,13 +621,13 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/winloss-analysis-chart.js",
+    "outputFileName": "bundles2/site-reports/winloss-analysis-chart.js",
     "inputFiles": [
       "js/components/chartjs/chart.js"
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/default.css",
+    "outputFileName": "bundles2/site-memberinfo/default.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/base/roboto-fonts.css",
@@ -643,7 +643,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/problem-account-Super.css",
+    "outputFileName": "bundles2/site-memberinfo/problem-account-Super.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -666,7 +666,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/problem-account-Master.css",
+    "outputFileName": "bundles2/site-memberinfo/problem-account-Master.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -689,7 +689,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/problem-account-Agent.css",
+    "outputFileName": "bundles2/site-memberinfo/problem-account-Agent.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -712,7 +712,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/problem-account.js",
+    "outputFileName": "bundles2/site-memberinfo/problem-account.js",
     "inputFiles": [
       "js/libs/bootstrap/collapse.js",
       "js/libs/moment/moment.js",
@@ -725,7 +725,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/default.js",
+    "outputFileName": "bundles2/site-memberinfo/default.js",
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
@@ -745,27 +745,27 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/credit-balance.js",
+    "outputFileName": "bundles2/site-memberinfo/credit-balance.js",
     "inputFiles": [
       "js/components/typeahead/typeahead.js"
     ]
   },
   {
-    "outputFileName": "bundles/site-betlists/default.css",
+    "outputFileName": "bundles2/site-betlists/default.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-betlists/default.js",
+    "outputFileName": "bundles2/site-betlists/default.js",
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js"
     ]
   },
   {
-    "outputFileName": "bundles/site-betlists/filter.css",
+    "outputFileName": "bundles2/site-betlists/filter.css",
     "inputFiles": [
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect.css",
@@ -775,7 +775,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-betlists/filter.js",
+    "outputFileName": "bundles2/site-betlists/filter.js",
     "inputFiles": [
       "js/components/multiselect/bootstrap-multiselect.js",
       "js/libs/moment/moment.js",
@@ -786,7 +786,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-betlists/last-bets.js",
+    "outputFileName": "bundles2/site-betlists/last-bets.js",
     "inputFiles": [
       "js/libs/jquery/jquery.cookie.js",
       "js/components/shortcut/shortcut.js",
@@ -794,14 +794,14 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-betlists/pagination.css",
+    "outputFileName": "bundles2/site-betlists/pagination.css",
     "inputFiles": [
       "styles/vendors/jquery-easyui-1.5/easyui.css",
       "styles/components/pagination.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-betlists/pagination.js",
+    "outputFileName": "bundles2/site-betlists/pagination.js",
     "inputFiles": [
       "js/components/pagination/jquery.draggable.js",
       "js/components/pagination/jquery.resizable.js",
@@ -811,51 +811,51 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/index.css",
+    "outputFileName": "bundles2/site-accountinfo/index.css",
     "inputFiles": [
       "styles/components/tables.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/default.css",
+    "outputFileName": "bundles2/site-accountinfo/default.css",
     "inputFiles": [
       "styles/components/tables.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-agent.css",
+    "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-master.css",
+    "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-master.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-super.css",
+    "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/account-info/index.js",
+    "outputFileName": "bundles2/site-main/account-info/index.js",
     "inputFiles": [
       "js/libs/bootstrap/tooltip.js",
       "js/libs/bootstrap-material/ripples.js"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/chatbot-default.css",
+    "outputFileName": "bundles2/site-main/chatbot/chatbot-default.css",
     "inputFiles": [
       "styles/components/popover.css",
       "styles/components/tables.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/chatbot-default.js",
+    "outputFileName": "bundles2/site-main/chatbot/chatbot-default.js",
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
@@ -865,7 +865,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-transfer/default.css",
+    "outputFileName": "bundles2/site-transfer/default.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
@@ -878,7 +878,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-transfer/default.js",
+    "outputFileName": "bundles2/site-transfer/default.js",
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
@@ -894,7 +894,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-transfer/filter.css",
+    "outputFileName": "bundles2/site-transfer/filter.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars.css",
@@ -902,7 +902,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-transfer/filter.js",
+    "outputFileName": "bundles2/site-transfer/filter.js",
     "inputFiles": [
       "js/libs/moment/moment.js",
       "js/components/datetimepicker/datepicker.js",
@@ -912,13 +912,13 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-asset/numeral.js",
+    "outputFileName": "bundles2/site-asset/numeral.js",
     "inputFiles": [
       "js/libs/numeral/numeral.js"
     ]
   },
   {
-    "outputFileName": "bundles/site-asset/data-table.js",
+    "outputFileName": "bundles2/site-asset/data-table.js",
     "inputFiles": [
       "js/components/data-table/jquery.dataTables.js",
       "js/components/data-table/dataTables.fixedHeader.js",
@@ -927,7 +927,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-asset/data-table.css",
+    "outputFileName": "bundles2/site-asset/data-table.css",
     "inputFiles": [
       "styles/vendors/data-table/jquery.dataTables.css",
       "styles/vendors/data-table/responsive.dataTables.css",
@@ -936,7 +936,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-asset/daterangepicker.js",
+    "outputFileName": "bundles2/site-asset/daterangepicker.js",
     "inputFiles": [
       "js/libs/moment/locale/en-gb.js",
       "js/libs/moment/locale/ja.js",
@@ -952,14 +952,14 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-asset/daterangepicker.css",
+    "outputFileName": "bundles2/site-asset/daterangepicker.css",
     "inputFiles": [
       "styles/vendors/daterangepicker/daterangepicker.css",
       "styles/components/daterangepicker-customize.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/data-table.js",
+    "outputFileName": "bundles2/site-memberinfo/data-table.js",
     "inputFiles": [
       "js/components/data-table/jquery.dataTables.js",
       "js/components/data-table/dataTables.fixedHeader.js",
@@ -970,62 +970,62 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-super.css",
+    "outputFileName": "bundles2/site-main/chatbot/tab-super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-master.css",
+    "outputFileName": "bundles2/site-main/chatbot/tab-master.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-agent.css",
+    "outputFileName": "bundles2/site-main/chatbot/tab-agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-super-dark.css",
+    "outputFileName": "bundles2/site-main/chatbot/tab-super-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-master-dark.css",
+    "outputFileName": "bundles2/site-main/chatbot/tab-master-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-agent-dark.css",
+    "outputFileName": "bundles2/site-main/chatbot/tab-agent-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/tab-super.css",
+    "outputFileName": "bundles2/site-reports/tab-super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/tab-master.css",
+    "outputFileName": "bundles2/site-reports/tab-master.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/tab-agent.css",
+    "outputFileName": "bundles2/site-reports/tab-agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   /************************** Dark Mode ************************/
   {
-    "outputFileName": "bundles/common/common-dark.css",
+    "outputFileName": "bundles2/common/common-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/common/bootstrap-ex.css",
@@ -1046,7 +1046,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-super-dark.css",
+    "outputFileName": "bundles2/common/common-super-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super-dark.css",
       "styles/themes/components/buttons/button-super-dark.css",
@@ -1056,7 +1056,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-master-dark.css",
+    "outputFileName": "bundles2/common/common-master-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master-dark.css",
       "styles/themes/components/buttons/button-master-dark.css",
@@ -1065,7 +1065,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-agent-dark.css",
+    "outputFileName": "bundles2/common/common-agent-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css",
       "styles/themes/components/buttons/button-agent-dark.css",
@@ -1074,7 +1074,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/agent-dark.css",
+    "outputFileName": "bundles2/site-main/agent-dark.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
@@ -1089,7 +1089,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/master-dark.css",
+    "outputFileName": "bundles2/site-main/master-dark.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
@@ -1104,7 +1104,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/super-dark.css",
+    "outputFileName": "bundles2/site-main/super-dark.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/vendors/ripples.css",
@@ -1119,7 +1119,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-results/super-dark.css",
+    "outputFileName": "bundles2/site-results/super-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -1137,7 +1137,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-results/master-dark.css",
+    "outputFileName": "bundles2/site-results/master-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -1155,7 +1155,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-results/agent-dark.css",
+    "outputFileName": "bundles2/site-results/agent-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -1173,7 +1173,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-totalbetsforecast/default-dark.css",
+    "outputFileName": "bundles2/site-totalbetsforecast/default-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-totalbetsforecast/bootstrap-ex.css",
@@ -1190,7 +1190,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-viewlogs/viewlogs-super-dark.css",
+    "outputFileName": "bundles2/site-viewlogs/viewlogs-super-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
@@ -1215,7 +1215,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-viewlogs/viewlogs-master-dark.css",
+    "outputFileName": "bundles2/site-viewlogs/viewlogs-master-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
@@ -1240,7 +1240,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-viewlogs/viewlogs-agent-dark.css",
+    "outputFileName": "bundles2/site-viewlogs/viewlogs-agent-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-viewlogs/bootstrap-ex.css",
@@ -1265,7 +1265,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security/before-home-page-dark.css",
+    "outputFileName": "bundles2/site-main/security/before-home-page-dark.css",
     "inputFiles": [
       "styles/layout/before-home-page/before-home-page-dark.css",
       "styles/components/customize-checkbox-radio-dark.css",
@@ -1273,25 +1273,25 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security/security-super-dark.css",
+    "outputFileName": "bundles2/site-main/security/security-super-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security/security-master-dark.css",
+    "outputFileName": "bundles2/site-main/security/security-master-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/security/security-agent-dark.css",
+    "outputFileName": "bundles2/site-main/security/security-agent-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/dashboard/dashboard-super-dark.css",
+    "outputFileName": "bundles2/site-main/dashboard/dashboard-super-dark.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
@@ -1299,7 +1299,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/dashboard/dashboard-master-dark.css",
+    "outputFileName": "bundles2/site-main/dashboard/dashboard-master-dark.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
@@ -1307,7 +1307,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/dashboard/dashboard-agent-dark.css",
+    "outputFileName": "bundles2/site-main/dashboard/dashboard-agent-dark.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
@@ -1315,7 +1315,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-super-dark.css",
+    "outputFileName": "bundles2/site-messages/message-super-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -1327,7 +1327,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-master-dark.css",
+    "outputFileName": "bundles2/site-messages/message-master-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -1339,7 +1339,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-agent-dark.css",
+    "outputFileName": "bundles2/site-messages/message-agent-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -1351,28 +1351,28 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/otp/otp-super-dark.css",
+    "outputFileName": "bundles2/site-main/otp/otp-super-dark.css",
     "inputFiles": [
       "styles/components/accordions-dark.css",
       "styles/themes/components/tabs/tab-super-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/otp/otp-master-dark.css",
+    "outputFileName": "bundles2/site-main/otp/otp-master-dark.css",
     "inputFiles": [
       "styles/components/accordions-dark.css",
       "styles/themes/components/tabs/tab-master-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/otp/otp-agent-dark.css",
+    "outputFileName": "bundles2/site-main/otp/otp-agent-dark.css",
     "inputFiles": [
       "styles/components/accordions-dark.css",
       "styles/themes/components/tabs/tab-agent-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/dcs/customizeDCS-dark.css",
+    "outputFileName": "bundles2/dcs/customizeDCS-dark.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/base/icon-fonts.css",
@@ -1380,7 +1380,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/default-dark.css",
+    "outputFileName": "bundles2/site-reports/default-dark.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
@@ -1399,7 +1399,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/default-dark.css",
+    "outputFileName": "bundles2/site-memberinfo/default-dark.css",
     "inputFiles": [
       "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
       "styles/base/roboto-fonts.css",
@@ -1415,7 +1415,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/problem-account-Super-dark.css",
+    "outputFileName": "bundles2/site-memberinfo/problem-account-Super-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -1437,7 +1437,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/problem-account-Master-dark.css",
+    "outputFileName": "bundles2/site-memberinfo/problem-account-Master-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -1459,7 +1459,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/problem-account-Agent-dark.css",
+    "outputFileName": "bundles2/site-memberinfo/problem-account-Agent-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-results/bootstrap-ex.css",
@@ -1481,14 +1481,14 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-betlists/default-dark.css",
+    "outputFileName": "bundles2/site-betlists/default-dark.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-betlists/filter-dark.css",
+    "outputFileName": "bundles2/site-betlists/filter-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect-dark.css",
@@ -1498,45 +1498,45 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-betlists/pagination-dark.css",
+    "outputFileName": "bundles2/site-betlists/pagination-dark.css",
     "inputFiles": [
       "styles/vendors/jquery-easyui-1.5/easyui.css",
       "styles/components/pagination-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/index-dark.css",
+    "outputFileName": "bundles2/site-accountinfo/index-dark.css",
     "inputFiles": [
       "styles/components/tables-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-agent-dark.css",
+    "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-agent-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-master-dark.css",
+    "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-master-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-super-dark.css",
+    "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-super-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/chatbot-default-dark.css",
+    "outputFileName": "bundles2/site-main/chatbot/chatbot-default-dark.css",
     "inputFiles": [
       "styles/components/popover-dark.css",
       "styles/components/tables-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-transfer/default-dark.css",
+    "outputFileName": "bundles2/site-transfer/default-dark.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
@@ -1549,7 +1549,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-transfer/filter-dark.css",
+    "outputFileName": "bundles2/site-transfer/filter-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars-dark.css",
@@ -1557,7 +1557,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-asset/data-table-dark.css",
+    "outputFileName": "bundles2/site-asset/data-table-dark.css",
     "inputFiles": [
       "styles/vendors/data-table/jquery.dataTables.css",
       "styles/vendors/data-table/responsive.dataTables.css",
@@ -1566,35 +1566,35 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-asset/daterangepicker-dark.css",
+    "outputFileName": "bundles2/site-asset/daterangepicker-dark.css",
     "inputFiles": [
       "styles/vendors/daterangepicker/daterangepicker.css",
       "styles/components/daterangepicker-customize.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/unsupport-browser/super-dark.css",
+    "outputFileName": "bundles2/site-main/unsupport-browser/super-dark.css",
     "inputFiles": [
       "styles/fonts/iconalpha/style.css",
-      "styles/themes/unsupport-browser/super-dark.css"
+      "styles/themes/unsupport-browser/super-dark2.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/unsupport-browser/master-dark.css",
+    "outputFileName": "bundles2/site-main/unsupport-browser/master-dark.css",
     "inputFiles": [
       "styles/fonts/iconalpha/style.css",
-      "styles/themes/unsupport-browser/master-dark.css"
+      "styles/themes/unsupport-browser/master-dark2.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/unsupport-browser/agent-dark.css",
+    "outputFileName": "bundles2/site-main/unsupport-browser/agent-dark.css",
     "inputFiles": [
       "styles/fonts/iconalpha/style.css",
-      "styles/themes/unsupport-browser/agent-dark.css"
+      "styles/themes/unsupport-browser/agent-dark2.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-ng2/default-dark.css",
+    "outputFileName": "bundles2/site-ng2/default-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
       "styles/vendors-extensions/site-ng2/bootstrap-ex.css",
@@ -1611,19 +1611,19 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/tab-super-dark.css",
+    "outputFileName": "bundles2/site-reports/tab-super-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/tab-master-dark.css",
+    "outputFileName": "bundles2/site-reports/tab-master-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/tab-agent-dark.css",
+    "outputFileName": "bundles2/site-reports/tab-agent-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css"
     ]
