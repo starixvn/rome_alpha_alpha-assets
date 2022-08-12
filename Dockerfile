@@ -14,6 +14,8 @@ COPY assets assets
 USER root
 
 # Copy needed files/folders
+RUN cp -r assets/styles/ /usr/share/nginx/html/styles
+
 RUN if [ "$TRANSFORM_CONFIG" = "LOCAL2" ] \
 		|| [ "$TRANSFORM_CONFIG" = "SIT2" ] \
 		|| [ "$TRANSFORM_CONFIG" = "UAT2" ] \
