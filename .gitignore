@@ -40,7 +40,6 @@ assets/vwd.webinfo
 /.vs/Alpha.Assets/v15/Server/sqlite3/storage.ide-shm
 /.vs/Alpha.Assets/v15/Server/sqlite3/storage.ide-wal
 /assets/styles/abstracts/**
-/assets/styles/base/**
 /assets/styles/components/**
 /assets/styles/layout/**
 /assets/styles/themes/**
