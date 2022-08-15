@@ -1,0 +1,13 @@
+/*******************************************/
+/* Devices */
+/*******************************************/
+.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus,
+.nav-tabs > li.active > a:hover, .nav-tabs > li > a:hover {
+  color: #97141e; }
+
+.nav.nav-tabs > li.active:after,
+.nav.nav-tabs > li:hover:after {
+  background: #5d4038; }
+
+.nav-tabs > li > a {
+  color: #333; }

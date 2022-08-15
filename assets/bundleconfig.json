@@ -27,7 +27,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-super.css",
+    "outputFileName": "bundles/common/common-Super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super.css",
       "styles/themes/components/buttons/button-super.css",
@@ -37,7 +37,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-master.css",
+    "outputFileName": "bundles/common/common-Master.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master.css",
       "styles/themes/components/buttons/button-master.css",
@@ -46,7 +46,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-agent.css",
+    "outputFileName": "bundles/common/common-Agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent.css",
       "styles/themes/components/buttons/button-agent.css",
@@ -781,19 +781,19 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-agent.css",
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-Agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-master.css",
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-Master.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-super.css",
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-Super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super.css"
     ]
@@ -969,7 +969,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-super-dark.css",
+    "outputFileName": "bundles/common/common-Super-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super-dark.css",
       "styles/themes/components/buttons/button-super-dark.css",
@@ -979,7 +979,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-master-dark.css",
+    "outputFileName": "bundles/common/common-Master-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master-dark.css",
       "styles/themes/components/buttons/button-master-dark.css",
@@ -988,7 +988,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/common/common-agent-dark.css",
+    "outputFileName": "bundles/common/common-Agent-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css",
       "styles/themes/components/buttons/button-agent-dark.css",
@@ -1434,19 +1434,19 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-agent-dark.css",
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-Agent-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-master-dark.css",
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-Master-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-super-dark.css",
+    "outputFileName": "bundles/site-accountinfo/profilepicture/profilepicture-Super-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super-dark.css"
     ]
@@ -1517,37 +1517,37 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-super.css",
+    "outputFileName": "bundles/site-main/chatbot/tab-Super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-master.css",
+    "outputFileName": "bundles/site-main/chatbot/tab-Master.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-agent.css",
+    "outputFileName": "bundles/site-main/chatbot/tab-Agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-super-dark.css",
+    "outputFileName": "bundles/site-main/chatbot/tab-Super-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-master-dark.css",
+    "outputFileName": "bundles/site-main/chatbot/tab-Master-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-agent-dark.css",
+    "outputFileName": "bundles/site-main/chatbot/tab-Agent-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent-dark.css"
     ]
