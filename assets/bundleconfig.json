@@ -405,7 +405,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-super.css",
+    "outputFileName": "bundles/site-messages/message-Super.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -417,7 +417,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-master.css",
+    "outputFileName": "bundles/site-messages/message-Master.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -429,7 +429,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-agent.css",
+    "outputFileName": "bundles/site-messages/message-Agent.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -1238,7 +1238,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-super-dark.css",
+    "outputFileName": "bundles/site-messages/message-Super-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -1250,7 +1250,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-master-dark.css",
+    "outputFileName": "bundles/site-messages/message-Master-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
@@ -1262,7 +1262,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-messages/message-agent-dark.css",
+    "outputFileName": "bundles/site-messages/message-Agent-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/base/roboto-fonts.css",
