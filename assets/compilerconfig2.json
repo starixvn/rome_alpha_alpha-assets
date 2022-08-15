@@ -45,15 +45,15 @@
   },
   {
     "outputFile": "styles/themes/super.css",
-    "inputFile": "styles/themes/super.scss"
+    "inputFile": "styles/themes/super2.scss"
   },
   {
     "outputFile": "styles/themes/master.css",
-    "inputFile": "styles/themes/master.scss"
+    "inputFile": "styles/themes/master2.scss"
   },
   {
     "outputFile": "styles/themes/agent.css",
-    "inputFile": "styles/themes/agent.scss"
+    "inputFile": "styles/themes/agent2.scss"
   },
   {
     "outputFile": "styles/vendors-extensions/site-main/bootstrap-material-ex.css",
@@ -109,15 +109,15 @@
   },
   {
     "outputFile": "styles/themes/components/tabs/tab-agent.css",
-    "inputFile": "styles/themes/components/tabs/tab-agent.scss"
+    "inputFile": "styles/themes/components/tabs/tab-agent2.scss"
   },
   {
     "outputFile": "styles/themes/components/tabs/tab-master.css",
-    "inputFile": "styles/themes/components/tabs/tab-master.scss"
+    "inputFile": "styles/themes/components/tabs/tab-master2.scss"
   },
   {
     "outputFile": "styles/themes/components/tabs/tab-super.css",
-    "inputFile": "styles/themes/components/tabs/tab-super.scss"
+    "inputFile": "styles/themes/components/tabs/tab-super2.scss"
   },
   {
     "outputFile": "styles/components/pagination.css",
@@ -210,15 +210,15 @@
   },
   {
     "outputFile": "styles/themes/components/buttons/button-super.css",
-    "inputFile": "styles/themes/components/buttons/button-super.scss"
+    "inputFile": "styles/themes/components/buttons/button-super2.scss"
   },
   {
     "outputFile": "styles/themes/components/buttons/button-master.css",
-    "inputFile": "styles/themes/components/buttons/button-master.scss"
+    "inputFile": "styles/themes/components/buttons/button-master2.scss"
   },
   {
     "outputFile": "styles/themes/components/buttons/button-agent.css",
-    "inputFile": "styles/themes/components/buttons/button-agent.scss"
+    "inputFile": "styles/themes/components/buttons/button-agent2.scss"
   },
   {
     "outputFile": "styles/base/pass-font.css",
@@ -226,15 +226,15 @@
   },
   {
     "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super.css",
-    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super.scss"
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super2.scss"
   },
   {
     "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master.css",
-    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master.scss"
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master2.scss"
   },
   {
     "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent.css",
-    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent.scss"
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent2.scss"
   },
   {
     "outputFile": "styles/components/customize-checkbox-radio.css",
@@ -358,67 +358,67 @@
   },
   {
     "outputFile": "styles/layout/default-layout/title-agent-dark.css",
-    "inputFile": "styles/layout/default-layout/title-agent-dark.scss"
+    "inputFile": "styles/layout/default-layout/title-agent2-dark.scss"
   },
   {
     "outputFile": "styles/layout/default-layout/title-agent.css",
-    "inputFile": "styles/layout/default-layout/title-agent.scss"
+    "inputFile": "styles/layout/default-layout/title-agent2.scss"
   },
   {
     "outputFile": "styles/layout/default-layout/title-master-dark.css",
-    "inputFile": "styles/layout/default-layout/title-master-dark.scss"
+    "inputFile": "styles/layout/default-layout/title-master2-dark.scss"
   },
   {
     "outputFile": "styles/layout/default-layout/title-master.css",
-    "inputFile": "styles/layout/default-layout/title-master.scss"
+    "inputFile": "styles/layout/default-layout/title-master2.scss"
   },
   {
     "outputFile": "styles/layout/default-layout/title-super-dark.css",
-    "inputFile": "styles/layout/default-layout/title-super-dark.scss"
+    "inputFile": "styles/layout/default-layout/title-super2-dark.scss"
   },
   {
     "outputFile": "styles/layout/default-layout/title-super.css",
-    "inputFile": "styles/layout/default-layout/title-super.scss"
+    "inputFile": "styles/layout/default-layout/title-super2.scss"
   },
   {
     "outputFile": "styles/themes/components/buttons/button-agent-dark.css",
-    "inputFile": "styles/themes/components/buttons/button-agent-dark.scss"
+    "inputFile": "styles/themes/components/buttons/button-agent2-dark.scss"
   },
   {
     "outputFile": "styles/themes/components/buttons/button-master-dark.css",
-    "inputFile": "styles/themes/components/buttons/button-master-dark.scss"
+    "inputFile": "styles/themes/components/buttons/button-master2-dark.scss"
   },
   {
     "outputFile": "styles/themes/components/buttons/button-super-dark.css",
-    "inputFile": "styles/themes/components/buttons/button-super-dark.scss"
+    "inputFile": "styles/themes/components/buttons/button-super2-dark.scss"
   },
   {
     "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent-dark.css",
-    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent-dark.scss"
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent2-dark.scss"
   },
   {
     "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master-dark.css",
-    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master-dark.scss"
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master2-dark.scss"
   },
   {
     "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.css",
-    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.scss"
+    "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super2-dark.scss"
   },
   {
     "outputFile": "styles/themes/components/tabs/tab-agent-dark.css",
-    "inputFile": "styles/themes/components/tabs/tab-agent-dark.scss"
+    "inputFile": "styles/themes/components/tabs/tab-agent2-dark.scss"
   },
   {
     "outputFile": "styles/themes/components/tabs/tab-master-dark.css",
-    "inputFile": "styles/themes/components/tabs/tab-master-dark.scss"
+    "inputFile": "styles/themes/components/tabs/tab-master2-dark.scss"
   },
   {
     "outputFile": "styles/themes/components/tabs/tab-super-dark.css",
-    "inputFile": "styles/themes/components/tabs/tab-super-dark.scss"
+    "inputFile": "styles/themes/components/tabs/tab-super2-dark.scss"
   },
   {
     "outputFile": "styles/themes/agent-dark.css",
-    "inputFile": "styles/themes/agent-dark.scss"
+    "inputFile": "styles/themes/agent2-dark.scss"
   },
   {
     "outputFile": "styles/themes/customer-status-dark.css",
@@ -426,11 +426,11 @@
   },
   {
     "outputFile": "styles/themes/master-dark.css",
-    "inputFile": "styles/themes/master-dark.scss"
+    "inputFile": "styles/themes/master2-dark.scss"
   },
   {
     "outputFile": "styles/themes/super-dark.css",
-    "inputFile": "styles/themes/super-dark.scss"
+    "inputFile": "styles/themes/super2-dark.scss"
   },
   {
     "outputFile": "styles/themes/unsupport-browser/agent-dark2.css",

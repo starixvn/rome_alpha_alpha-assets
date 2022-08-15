@@ -7,7 +7,7 @@
 
 .nav.nav-tabs > li.active:after,
 .nav.nav-tabs > li:hover:after {
-  background: #276443; }
+  background: #474b65; }
 
 .nav-tabs > li > a {
   color: #333; }
@@ -17,10 +17,10 @@
 /* Devices */
 /*******************************************/
 .btn-default.with-level {
-  background-color: #276443 !important;
+  background-color: #474b65 !important;
   color: #fff !important; }
   .btn-default.with-level:hover, .btn-default.with-level:active {
-    background-color: #205237;
+    background-color: #3c4056;
     color: #fff; }
 
 
@@ -117,11 +117,11 @@
 /* Devices */
 /*******************************************/
 .checkbox input[type="checkbox"]:checked + label:before {
-  background-color: #276443;
-  border-color: #276443; }
+  background-color: #474b65;
+  border-color: #474b65; }
 
 .radio input[type="radio"]:checked + label:before {
-  border-color: #276443; }
+  border-color: #474b65; }
 
 .radio input[type="radio"]:checked + label:after {
-  background-color: #276443; }
+  background-color: #474b65; }

@@ -3255,29 +3255,29 @@ yx-axis
 /* Devices */
 /*******************************************/
 .customer-profile {
-  background-color: #37587d; }
+  background-color: #4c6375; }
 
 .sidebar .main-tab li {
-  background-color: #516e8f; }
+  background-color: #314453; }
 
 .header-nav {
-  background-color: #516e8f; }
+  background-color: #314453; }
 
 .sidebar .main-tab li.active a {
-  color: #2267b6; }
+  color: #3b7fb4; }
 
 .header-nav .list-top > li.language:hover,
 .header-nav .list-top > li.view-type:hover,
 .header-nav .list-top > li.dropdown:active:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background: #637d9a; }
+  background: #3a5163; }
 
 .mainmenu-container .sub-menu .sub-menu-item:hover a,
 .mainmenu-container .sub-menu .sub-menu-item.active a {
-  color: #2267b6; }
+  color: #3b7fb4; }
 
 .announcement-modal .modal-content .modal-header {
-  background: #516e8f; }
+  background: #314453; }
 
 @media only screen and (max-device-width: 767px) {
   .header-nav .list-top > li.language:hover,
@@ -3286,7 +3286,7 @@ yx-axis
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background: none; }
   .list-action .prevButton:before, .list-action .nextButton:before {
-    color: #516e8f; } }
+    color: #314453; } }
 
 
 .toast-title {

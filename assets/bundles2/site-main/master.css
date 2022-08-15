@@ -3255,32 +3255,32 @@ yx-axis
 /* Devices */
 /*******************************************/
 .customer-profile {
-  background-color: #1c5334; }
+  background-color: #363b59; }
 
 .sidebar .main-tab li {
-  background-color: #276443; }
+  background-color: #474b65; }
 
 .header-nav {
-  background-color: #276443; }
+  background-color: #474b65; }
 
 .sidebar .main-tab li.active a {
-  color: #209656; }
+  color: #4253bb; }
 
 .header-nav .list-top > li.language:hover,
 .header-nav .list-top > li.view-type:hover,
 .header-nav .list-top > li.dropdown:active:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background: #3d7456; }
+  background: #525674; }
 
 .mainmenu-container .sub-menu .sub-menu-item:hover a,
 .mainmenu-container .sub-menu .sub-menu-item.active a {
-  color: #209656; }
+  color: #4253bb; }
 
 .withripple menu-opener parent-menu:focus {
   background: #67151b; }
 
 .announcement-modal .modal-content .modal-header {
-  background: #276443; }
+  background: #474b65; }
 
 @media only screen and (max-device-width: 767px) {
   .header-nav .list-top > li.language:hover,
@@ -3289,7 +3289,7 @@ yx-axis
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background: none; }
   .list-action .prevButton:before, .list-action .nextButton:before {
-    color: #276443; } }
+    color: #474b65; } }
 
 
 .toast-title {

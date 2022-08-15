@@ -3268,18 +3268,18 @@ yx-axis
 /* Devices */
 /*******************************************/
 .customer-profile {
-  background-color: #5D1219; }
+  background-color: #795547; }
 
 .sidebar .main-tab li {
   background-color: #141414;
   color: #fff; }
 
 .header-nav {
-  background-color: #65151C; }
+  background-color: #5D4038; }
 
 .sidebar .main-tab li.active a {
   background-color: #212223;
-  color: #36587D; }
+  color: #795547; }
 
 .header-nav .list-top > .language:hover,
 .header-nav .list-top > .view-type:hover,
@@ -3290,7 +3290,7 @@ yx-axis
 .mainmenu-container .sub-menu .sub-menu-item:hover a,
 .mainmenu-container .sub-menu .sub-menu-item.active a,
 .announcement-modal .modal-content .modal-header, .page-title {
-  color: #36587D; }
+  color: #795547; }
 
 .announcement-modal .modal-content .modal-header {
   background-color: #26080B; }
@@ -3302,7 +3302,7 @@ yx-axis
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background: none; }
   .list-action .prevButton:before, .list-action .nextButton:before {
-    color: #36587D; } }
+    color: #795547; } }
 
 
 .toast-title {
