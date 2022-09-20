@@ -28,5 +28,8 @@ RUN if [ "$TRANSFORM_CONFIG" = "LOCAL2" ] \
 	then cp -r assets/bundles2/ /usr/share/nginx/html/bundles; \
 	else cp -r assets/bundles/ /usr/share/nginx/html/bundles; fi
 
+# Remove default page of nginx
+RUN rm /usr/share/nginx/html/index.html
+
 # Set non root user nginx
 USER nginx
