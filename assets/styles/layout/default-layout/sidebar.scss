@@ -20,11 +20,10 @@
     bottom: 0;
     left: 0;
     z-index: 99;
-
     //sidebar when collapsed
     &.collapsed {
         @include transition(width 0.5s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s);
-        width: 40px;
+        width: 56px;
 
         .userinfo {
             display: none;
@@ -36,7 +35,6 @@
             width: 32px;
             margin: 8px 4px;
         }
-
         .customer-profile {
             #profile-content {
                 text-align: center;
@@ -45,21 +43,28 @@
             .profile-avatar {
                 float: none;
             }
-        }
+        }    
+        &:not(.hovered) {
+            .mainmenu-container {
+                .list-menu {
+                    margin-top: 10px;                  
+                }
+            }
+        }     
 
         .navigation {
-            width: 40px;
+            width: 56px;
+
             .main-tab {
                 display: none;
-            }            
+            }
 
-            .accinfo-content, 
+            .accinfo-content,
             .menu-item a .icon-arrow-right,
-             .panel-collapse .sub-menu {
+            .panel-collapse .sub-menu {
                 display: none;
             }
         }
-
         // hover over collapsed sidebar
         &.hovered {
             width: $sidebar-width;
@@ -68,6 +73,7 @@
             .navigation {
                 width: $sidebar-width;
             }
+
             .profile-avatar {
                 @include border-radius(50%);
                 display: inline-block;
@@ -95,18 +101,4 @@
             }
         }
     }
-    
-}
-
-@media only screen and (max-device-width:1024px) {
-   .sidebar {
-       &.collapsed {
-           width: 56px;
-
-           .navigation {
-               width: 56px;
-           }          
-           
-       }
-   }
 }
