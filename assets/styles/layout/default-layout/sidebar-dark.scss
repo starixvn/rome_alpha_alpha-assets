@@ -35,6 +35,7 @@
             width: 32px;
             margin: 8px 4px;
         }
+
         .customer-profile {
             #profile-content {
                 text-align: center;
@@ -44,11 +45,16 @@
                 float: none;
             }
         }
+
         &:not(.hovered) {
             .mainmenu-container {
                 .list-menu {
                     margin-top: 10px;
                 }
+            }
+
+            .carousel-banner {
+                display: none;
             }
         }
 
