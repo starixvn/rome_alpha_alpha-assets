@@ -1,0 +1,12 @@
+﻿@import "../../../abstracts/_super-variables2.scss";
+
+.btn-default.with-level {
+    background-color: $primary-color !important;
+    color: #fff !important;
+
+    &:hover,
+    &:active {
+        background-color: darken($primary-color, 5%);
+        color: #fff;
+    }
+}

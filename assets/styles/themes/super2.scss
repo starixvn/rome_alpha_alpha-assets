@@ -1,0 +1,51 @@
+﻿@import "../abstracts/_super-variables2.scss";
+
+.customer-profile {
+    background-color: $profile-bg-color;
+}
+
+.sidebar .main-tab li {
+    background-color: $primary-color;
+}
+
+.header-nav {
+    background-color: $primary-color;
+}
+
+.icon-home, .icon-add, .icon-message  {
+    //color: $text-color;
+}
+
+.sidebar .main-tab li.active a {
+    color: $text-hover-active-color;
+}
+
+.header-nav .list-top>.language:hover, 
+.header-nav .list-top>.view-type:hover, 
+.header-nav .list-top>.dropdown:active:focus,
+.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+    background: $header-nav-icon-hover;
+}
+
+.mainmenu-container .sub-menu .sub-menu-item:hover a,
+.mainmenu-container .sub-menu .sub-menu-item.active a{
+    color: $text-hover-active-color;
+}
+
+.announcement-modal .modal-content .modal-header {
+    background: $primary-color;
+}
+
+@media only screen and (max-device-width : $screen-device-lower768) {
+    .header-nav .list-top>li.language:hover, 
+    .header-nav .list-top>li.view-type:hover, 
+    .header-nav .list-top>li.dropdown:active:focus,
+    .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
+        background: none;
+    }
+
+    .list-action .prevButton:before, .list-action .nextButton:before {
+        color: $primary-color;
+    }
+
+}

@@ -1,0 +1,12 @@
+﻿@import "../../../abstracts/_agent-variables2-dark.scss";
+
+.btn-default.with-level {
+    background-color: $primary-color;
+    color: #fff !important;
+    font-weight: bold;
+
+    &:hover,
+    &:active {
+        background-color: darken($primary-color, 5%);
+    }
+}

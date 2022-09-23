@@ -1,0 +1,27 @@
+﻿
+@import "../../../abstracts/_agent-variables2-dark.scss";
+
+.checkbox input[type="checkbox"]:checked + label:before {
+    background-color: $account-info-tabs;
+    border-color: $account-info-tabs;
+}
+
+.checkbox input[type="checkbox"]:checked + label:after {
+    border-color: #fff;
+}
+
+.radio label {
+    color: #cbcbcb;
+}
+
+.radio label:before {
+    background-color: #171717;
+}
+
+.radio input[type="radio"]:checked + label:before {
+    border-color: #CBCBCB;
+}
+
+.radio input[type="radio"]:checked + label:after {
+    background-color: #CBCBCB;
+}
