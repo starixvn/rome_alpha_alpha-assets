@@ -801,6 +801,11 @@
       animation: ripple 1s ease-out; } }
 
 
+/*******************************************/
+/* Devices */
+/*******************************************/
+
+
 .input-group.date .input-group-addon {
   padding-right: 0; }
 

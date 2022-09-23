@@ -3260,33 +3260,33 @@ yx-axis
 /* Devices */
 /*******************************************/
 .customer-profile {
-  background-color: #4c6375; }
+  background-color: #37587d; }
 
 .sidebar .main-tab {
-  background: #314453; }
+  background: #516e8f; }
   .sidebar .main-tab li.active a {
-    color: #3b7fb4; }
+    color: #2267b6; }
 
 .header-nav {
-  background-color: #314453; }
+  background-color: #516e8f; }
 
 .mainmenu-container .menu-item.active#menu-MYWATCHLIST a {
-  color: #3b7fb4 !important; }
+  color: #2267b6 !important; }
   .mainmenu-container .menu-item.active#menu-MYWATCHLIST a .icon:before {
-    color: #3b7fb4 !important; }
+    color: #2267b6 !important; }
 
 .header-nav .list-top > li.language:hover,
 .header-nav .list-top > li.view-type:hover,
 .header-nav .list-top > li.dropdown:active:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background: #3a5163; }
+  background: #637d9a; }
 
 .mainmenu-container .sub-menu .sub-menu-item:hover a,
 .mainmenu-container .sub-menu .sub-menu-item.active a {
-  color: #3b7fb4; }
+  color: #2267b6; }
 
 .announcement-modal .modal-content .modal-header {
-  background: #314453; }
+  background: #516e8f; }
 
 @media only screen and (max-device-width: 767px) {
   .header-nav .list-top > li.language:hover,
@@ -3295,7 +3295,7 @@ yx-axis
   .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background: none; }
   .list-action .prevButton:before, .list-action .nextButton:before {
-    color: #314453; } }
+    color: #516e8f; } }
 
 
 .toast-title {
