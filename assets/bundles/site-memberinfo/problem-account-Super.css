@@ -3114,8 +3114,7 @@ input[type="button"].btn-block {
 .dropdown-menu > .active > a, .dropdown-menu > .active > a:hover, .dropdown-menu > .active > a:focus {
   color: #fff;
   text-decoration: none;
-  outline: 0;
-  background-color: #337ab7; }
+  outline: 0; }
 
 .dropdown-menu > .disabled > a, .dropdown-menu > .disabled > a:hover, .dropdown-menu > .disabled > a:focus {
   color: #777777; }
@@ -5073,11 +5072,11 @@ button.close {
 
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?6g5qgr');
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?6g5qgr#iefix') format('embedded-opentype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?6g5qgr') format('truetype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?6g5qgr') format('woff'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?6g5qgr#Iconalpha') format('svg');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?ih9br0');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?ih9br0#iefix') format('embedded-opentype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?ih9br0') format('truetype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?ih9br0') format('woff'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?ih9br0#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -5098,6 +5097,10 @@ button.close {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mywatchlist:before {
+  content: "\e989";
+  color: #919191;
+}
 .icon-Live-chat:before {
   content: "\e986";
 }
@@ -5516,6 +5519,12 @@ button.close {
 }
 .icon-toggle-on:before {
   content: "\e988";
+}
+.icon-bin:before {
+  content: "\e9ac";
+}
+.icon-book:before {
+  content: "\e98a";
 }
 
 @font-face {
@@ -7705,7 +7714,7 @@ body .ui-tooltip { border-width: 2px; }
 
 .nav.nav-tabs > li.active:after,
 .nav.nav-tabs > li:hover:after {
-  background: #67151b; }
+  background: #5d4038; }
 
 .nav-tabs > li > a {
   color: #333; }

@@ -539,11 +539,11 @@ input, button {
 /* Devices */
 /*******************************************/
 .checkbox input[type="checkbox"]:checked + label:before {
-  background-color: #67151b;
-  border-color: #67151b; }
+  background-color: #5d4038;
+  border-color: #5d4038; }
 
 .radio input[type="radio"]:checked + label:before {
-  border-color: #67151b; }
+  border-color: #5d4038; }
 
 .radio input[type="radio"]:checked + label:after {
-  background-color: #67151b; }
+  background-color: #5d4038; }
