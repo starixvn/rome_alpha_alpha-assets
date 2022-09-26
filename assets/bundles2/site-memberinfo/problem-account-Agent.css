@@ -7718,18 +7718,3 @@ body .ui-tooltip { border-width: 2px; }
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
-
-
-/*******************************************/
-/* Devices */
-/*******************************************/
-.nav-tabs > li.active > a, .nav-tabs > li.active > a:focus,
-.nav-tabs > li.active > a:hover, .nav-tabs > li > a:hover {
-  color: #2267b6; }
-
-.nav.nav-tabs > li.active:after,
-.nav.nav-tabs > li:hover:after {
-  background: #314453; }
-
-.nav-tabs > li > a {
-  color: #333; }
