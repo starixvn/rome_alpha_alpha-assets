@@ -44,15 +44,15 @@
     "inputFile": "styles/vendors/bootstrap.scss"
   },
   {
-    "outputFile": "styles/themes/super.css",
+    "outputFile": "styles/themes/super2.css",
     "inputFile": "styles/themes/super2.scss"
   },
   {
-    "outputFile": "styles/themes/master.css",
+    "outputFile": "styles/themes/master2.css",
     "inputFile": "styles/themes/master2.scss"
   },
   {
-    "outputFile": "styles/themes/agent.css",
+    "outputFile": "styles/themes/agent2.css",
     "inputFile": "styles/themes/agent2.scss"
   },
   {
@@ -108,15 +108,15 @@
     "inputFile": "styles/components/checkbox-radio.scss"
   },
   {
-    "outputFile": "styles/themes/components/tabs/tab-agent.css",
+    "outputFile": "styles/themes/components/tabs/tab-agent2.css",
     "inputFile": "styles/themes/components/tabs/tab-agent2.scss"
   },
   {
-    "outputFile": "styles/themes/components/tabs/tab-master.css",
+    "outputFile": "styles/themes/components/tabs/tab-master2.css",
     "inputFile": "styles/themes/components/tabs/tab-master2.scss"
   },
   {
-    "outputFile": "styles/themes/components/tabs/tab-super.css",
+    "outputFile": "styles/themes/components/tabs/tab-super2.css",
     "inputFile": "styles/themes/components/tabs/tab-super2.scss"
   },
   {
@@ -177,7 +177,7 @@
     "sourceMap": false
   },
   {
-    "outputFile": "styles/vendors-extensions/common/bootstrap-ex.css",
+    "outputFile": "styles/vendors-extensions/common/bootstrap-ex2.css",
     "inputFile": "styles/vendors-extensions/common/bootstrap-ex2.scss"
   },
   {
@@ -209,15 +209,15 @@
     "inputFile": "styles/components/popover.scss"
   },
   {
-    "outputFile": "styles/themes/components/buttons/button-super.css",
+    "outputFile": "styles/themes/components/buttons/button-super2.css",
     "inputFile": "styles/themes/components/buttons/button-super2.scss"
   },
   {
-    "outputFile": "styles/themes/components/buttons/button-master.css",
+    "outputFile": "styles/themes/components/buttons/button-master2.css",
     "inputFile": "styles/themes/components/buttons/button-master2.scss"
   },
   {
-    "outputFile": "styles/themes/components/buttons/button-agent.css",
+    "outputFile": "styles/themes/components/buttons/button-agent2.css",
     "inputFile": "styles/themes/components/buttons/button-agent2.scss"
   },
   {
@@ -225,15 +225,15 @@
     "inputFile": "styles/base/pass-font.scss"
   },
   {
-    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super.css",
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super2.css",
     "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super2.scss"
   },
   {
-    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master.css",
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master2.css",
     "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master2.scss"
   },
   {
-    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent.css",
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent2.css",
     "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent2.scss"
   },
   {
@@ -381,43 +381,43 @@
     "inputFile": "styles/layout/default-layout/title-super2.scss"
   },
   {
-    "outputFile": "styles/themes/components/buttons/button-agent-dark.css",
+    "outputFile": "styles/themes/components/buttons/button-agent2-dark.css",
     "inputFile": "styles/themes/components/buttons/button-agent2-dark.scss"
   },
   {
-    "outputFile": "styles/themes/components/buttons/button-master-dark.css",
+    "outputFile": "styles/themes/components/buttons/button-master2-dark.css",
     "inputFile": "styles/themes/components/buttons/button-master2-dark.scss"
   },
   {
-    "outputFile": "styles/themes/components/buttons/button-super-dark.css",
+    "outputFile": "styles/themes/components/buttons/button-super2-dark.css",
     "inputFile": "styles/themes/components/buttons/button-super2-dark.scss"
   },
   {
-    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent-dark.css",
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent2-dark.css",
     "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-agent2-dark.scss"
   },
   {
-    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master-dark.css",
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master2-dark.css",
     "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-master2-dark.scss"
   },
   {
-    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.css",
+    "outputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super2-dark.css",
     "inputFile": "styles/themes/components/checkbox-radio/checkbox-radio-super2-dark.scss"
   },
   {
-    "outputFile": "styles/themes/components/tabs/tab-agent-dark.css",
+    "outputFile": "styles/themes/components/tabs/tab-agent2-dark.css",
     "inputFile": "styles/themes/components/tabs/tab-agent2-dark.scss"
   },
   {
-    "outputFile": "styles/themes/components/tabs/tab-master-dark.css",
+    "outputFile": "styles/themes/components/tabs/tab-master2-dark.css",
     "inputFile": "styles/themes/components/tabs/tab-master2-dark.scss"
   },
   {
-    "outputFile": "styles/themes/components/tabs/tab-super-dark.css",
+    "outputFile": "styles/themes/components/tabs/tab-super2-dark.css",
     "inputFile": "styles/themes/components/tabs/tab-super2-dark.scss"
   },
   {
-    "outputFile": "styles/themes/agent-dark.css",
+    "outputFile": "styles/themes/agent2-dark.css",
     "inputFile": "styles/themes/agent2-dark.scss"
   },
   {
@@ -425,11 +425,11 @@
     "inputFile": "styles/themes/customer-status-dark.scss"
   },
   {
-    "outputFile": "styles/themes/master-dark.css",
+    "outputFile": "styles/themes/master2-dark.css",
     "inputFile": "styles/themes/master2-dark.scss"
   },
   {
-    "outputFile": "styles/themes/super-dark.css",
+    "outputFile": "styles/themes/super2-dark.css",
     "inputFile": "styles/themes/super2-dark.scss"
   },
   {

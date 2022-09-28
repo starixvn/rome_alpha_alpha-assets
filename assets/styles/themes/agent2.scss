@@ -4,25 +4,37 @@
     background-color: $profile-bg-color;
 }
 
-.sidebar .main-tab li {
-    background-color: $primary-color;
+.sidebar .main-tab {
+    background: $primary-color;
+
+    li {
+        &.active {
+            a {
+                color: $text-hover-active-color;
+            }
+        }
+    }
 }
 
 .header-nav {
     background-color: $primary-color;
 }
 
-.icon-home, .icon-add, .icon-message  {
-    //color: $text-color;
+.mainmenu-container {
+    .menu-item.active#menu-MYWATCHLIST {
+        a {
+            color: $text-hover-active-color !important;
+
+            .icon:before {
+                color: $text-hover-active-color !important;
+            }
+        }
+    }
 }
 
-.sidebar .main-tab li.active a {
-    color: $text-hover-active-color;
-}
-
-.header-nav .list-top>li.language:hover, 
-.header-nav .list-top>li.view-type:hover, 
-.header-nav .list-top>li.dropdown:active:focus,
+.header-nav .list-top > li.language:hover,
+.header-nav .list-top > li.view-type:hover,
+.header-nav .list-top > li.dropdown:active:focus,
 .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
     background: $header-nav-icon-hover;
 }

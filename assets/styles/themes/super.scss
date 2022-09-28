@@ -4,21 +4,21 @@
     background-color: $profile-bg-color;
 }
 
-.sidebar .main-tab li {
-    background-color: $primary-color;
-}
+.sidebar .main-tab {
+    background: $primary-color;
 
+    li {
+        &.active {
+            a {
+                color: $text-hover-active-color;
+            }
+        }
+    }
+}
 .header-nav {
     background-color: $primary-color;
 }
 
-.icon-home, .icon-add, .icon-message  {
-    //color: $text-color;
-}
-
-.sidebar .main-tab li.active a {
-    color: $text-hover-active-color;
-}
 
 .header-nav .list-top>.language:hover, 
 .header-nav .list-top>.view-type:hover, 

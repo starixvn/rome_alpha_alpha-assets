@@ -1,5 +1,14 @@
 ﻿@import "../../abstracts/_variables-dark.scss";
 @import "../../abstracts/_mixins.scss";
+.navigation {
+    .main-tab {
+        background: #141414;
+        border: 1px solid #303030;
+    }
+}
+
+
+
 
 .sidebar {
     @include box-shadow(1px, 0, 3px, rgba(0, 0, 0, 0.3));
@@ -14,7 +23,7 @@
     //sidebar when collapsed
     &.collapsed {
         @include transition(width 0.5s cubic-bezier(0.15, 0.99, 0.18, 1.01) 0s);
-        width: 40px;
+        width: 56px;
 
         .userinfo {
             display: none;
@@ -37,8 +46,20 @@
             }
         }
 
+        &:not(.hovered) {
+            .mainmenu-container {
+                .list-menu {
+                    margin-top: 10px;
+                }
+            }
+
+            .carousel-banner {
+                display: none;
+            }
+        }
+
         .navigation {
-            width: 40px;
+            width: 56px;
 
             .main-tab {
                 display: none;
@@ -86,17 +107,4 @@
             }
         }
     }
-}
-
-@media only screen and (max-device-width:1024px) {
-   .sidebar {
-       &.collapsed {
-           width: 56px;
-
-           .navigation {
-               width: 56px;
-           }          
-           
-       }
-   }
 }

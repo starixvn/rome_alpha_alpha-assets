@@ -3,7 +3,7 @@
     "outputFileName": "bundles2/common/common.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors-extensions/common/bootstrap-ex.css",
+      "styles/vendors-extensions/common/bootstrap-ex2.css",
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding.css",
       "styles/components/alerts.css",
@@ -29,28 +29,28 @@
   {
     "outputFileName": "bundles2/common/common-Super.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super.css",
-      "styles/themes/components/buttons/button-super.css",
+      "styles/themes/components/tabs/tab-super2.css",
+      "styles/themes/components/buttons/button-super2.css",
       "styles/components/customize-checkbox-radio.css",
-      "styles/themes/components/checkbox-radio/checkbox-radio-super.css"
+      "styles/themes/components/checkbox-radio/checkbox-radio-super2.css"
     ]
   },
   {
     "outputFileName": "bundles2/common/common-Master.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master.css",
-      "styles/themes/components/buttons/button-master.css",
+      "styles/themes/components/tabs/tab-master2.css",
+      "styles/themes/components/buttons/button-master2.css",
       "styles/components/customize-checkbox-radio.css",
-      "styles/themes/components/checkbox-radio/checkbox-radio-master.css"
+      "styles/themes/components/checkbox-radio/checkbox-radio-master2.css"
     ]
   },
   {
     "outputFileName": "bundles2/common/common-Agent.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent.css",
-      "styles/themes/components/buttons/button-agent.css",
+      "styles/themes/components/tabs/tab-agent2.css",
+      "styles/themes/components/buttons/button-agent2.css",
       "styles/components/customize-checkbox-radio.css",
-      "styles/themes/components/checkbox-radio/checkbox-radio-agent.css"
+      "styles/themes/components/checkbox-radio/checkbox-radio-agent2.css"
     ]
   },
   {
@@ -62,7 +62,7 @@
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
-      "styles/themes/agent.css",
+      "styles/themes/agent2.css",
       "styles/vendors/toastr/toastr.css",
       "styles/components/toastr.css",
       "styles/components/resizable.css"
@@ -77,7 +77,7 @@
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
-      "styles/themes/master.css",
+      "styles/themes/master2.css",
       "styles/vendors/toastr/toastr.css",
       "styles/components/toastr.css",
       "styles/components/resizable.css"
@@ -92,7 +92,7 @@
       "styles/layout/default-layout/header.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar.css",
-      "styles/themes/super.css",
+      "styles/themes/super2.css",
       "styles/vendors/toastr/toastr.css",
       "styles/components/toastr.css",
       "styles/components/resizable.css"
@@ -149,7 +149,6 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css"
-      //"styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
@@ -165,7 +164,6 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css"
-      //"styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
@@ -181,7 +179,6 @@
       "styles/components/tabs.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css"
-      //"styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
@@ -266,7 +263,7 @@
       "styles/vendors/jquery-easyui-1.5/icon.css",
       "styles/components/month-picker.css",
       "styles/components/tabs.css",
-      "styles/themes/components/tabs/tab-super.css",
+      "styles/themes/components/tabs/tab-super2.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
       "styles/components/dropdown.css",
@@ -291,7 +288,7 @@
       "styles/vendors/jquery-easyui-1.5/icon.css",
       "styles/components/month-picker.css",
       "styles/components/tabs.css",
-      "styles/themes/components/tabs/tab-master.css",
+      "styles/themes/components/tabs/tab-master2.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
       "styles/components/dropdown.css",
@@ -316,7 +313,7 @@
       "styles/vendors/jquery-easyui-1.5/icon.css",
       "styles/components/month-picker.css",
       "styles/components/tabs.css",
-      "styles/themes/components/tabs/tab-agent.css",
+      "styles/themes/components/tabs/tab-agent2.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
       "styles/components/dropdown.css",
@@ -350,25 +347,25 @@
     "inputFiles": [
       "styles/layout/before-home-page/before-home-page.css",
       "styles/components/customize-checkbox-radio.css",
-      "styles/themes/components/checkbox-radio/checkbox-radio-super.css"
+      "styles/themes/components/checkbox-radio/checkbox-radio-super2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/security/security-super.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-super2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/security/security-master.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/security/security-agent.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent.css"
+      "styles/themes/components/tabs/tab-agent2.css"
     ]
   },
   {
@@ -376,7 +373,7 @@
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
-      "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-super2.css"
     ]
   },
   {
@@ -384,7 +381,7 @@
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
-      "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master2.css"
     ]
   },
   {
@@ -392,7 +389,7 @@
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
-      "styles/themes/components/tabs/tab-agent.css"
+      "styles/themes/components/tabs/tab-agent2.css"
     ]
   },
   {
@@ -410,7 +407,7 @@
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
-      "styles/themes/components/tabs/tab-super.css",
+      "styles/themes/components/tabs/tab-super2.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/month-picker.css"
     ]
@@ -422,7 +419,7 @@
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
-      "styles/themes/components/tabs/tab-master.css",
+      "styles/themes/components/tabs/tab-master2.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/month-picker.css"
     ]
@@ -434,7 +431,7 @@
       "styles/base/roboto-fonts.css",
       "styles/components/tables.css",
       "styles/components/calendars.css",
-      "styles/themes/components/tabs/tab-agent.css",
+      "styles/themes/components/tabs/tab-agent2.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/month-picker.css"
     ]
@@ -504,14 +501,14 @@
     "outputFileName": "bundles2/site-main/otp/otp-super.css",
     "inputFiles": [
       "styles/components/accordions.css",
-      "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-super2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/otp/otp-master.css",
     "inputFiles": [
       "styles/components/accordions.css",
-      "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master2.css"
     ]
   },
   {
@@ -519,7 +516,7 @@
     "inputFiles": [
       "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
       "styles/components/accordions.css",
-      "styles/themes/components/tabs/tab-agent.css"
+      "styles/themes/components/tabs/tab-agent2.css"
     ]
   },
   {
@@ -653,7 +650,7 @@
       "styles/base/scaffolding.css",
       "styles/components/modals.css",
       "styles/components/tabs.css",
-      "styles/themes/components/tabs/tab-super.css",
+      "styles/themes/components/tabs/tab-super2.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
       "styles/components/tables.css",
@@ -662,7 +659,7 @@
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon.css",
-      "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-super2.css"
     ]
   },
   {
@@ -676,7 +673,7 @@
       "styles/base/scaffolding.css",
       "styles/components/modals.css",
       "styles/components/tabs.css",
-      "styles/themes/components/tabs/tab-master.css",
+      "styles/themes/components/tabs/tab-master2.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
       "styles/components/tables.css",
@@ -685,7 +682,7 @@
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon.css",
-      "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master2.css"
     ]
   },
   {
@@ -699,7 +696,7 @@
       "styles/base/scaffolding.css",
       "styles/components/modals.css",
       "styles/components/tabs.css",
-      "styles/themes/components/tabs/tab-agent.css",
+      "styles/themes/components/tabs/tab-agent2.css",
       "styles/components/buttons.css",
       "styles/components/textboxes.css",
       "styles/components/tables.css",
@@ -707,8 +704,7 @@
       "styles/vendors/jqueryui/jquery-ui-1.9.1.custom.css",
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
-      "styles/components/icon.css",
-      "styles/themes/components/tabs/tab-agent.css"
+      "styles/components/icon.css"
     ]
   },
   {
@@ -748,6 +744,24 @@
     "outputFileName": "bundles2/site-memberinfo/credit-balance.js",
     "inputFiles": [
       "js/components/typeahead/typeahead.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/reached-threshold.js",
+    "inputFiles": [
+      "js/libs/moment/moment.js",
+      "js/components/datetimepicker/datepicker.js",
+      "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/reached-threshold.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars.css",
+      "styles/components/bootstrap.nexDatePicker.css"
     ]
   },
   {
@@ -825,19 +839,19 @@
   {
     "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-Agent.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent.css"
+      "styles/themes/components/tabs/tab-agent2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-Master.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-Super.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-super2.css"
     ]
   },
   {
@@ -972,55 +986,73 @@
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Super.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-super2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Master.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Agent.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent.css"
+      "styles/themes/components/tabs/tab-agent2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Super-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super-dark.css"
+      "styles/themes/components/tabs/tab-super2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Master-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master-dark.css"
+      "styles/themes/components/tabs/tab-master2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Agent-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent-dark.css"
+      "styles/themes/components/tabs/tab-agent2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-reports/tab-super.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super.css"
+      "styles/themes/components/tabs/tab-super2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-reports/tab-master.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master.css"
+      "styles/themes/components/tabs/tab-master2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-reports/tab-agent.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent.css"
+      "styles/themes/components/tabs/tab-agent2.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-super.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super2.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-master.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master2.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-agent.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent2.css"
     ]
   },
   /************************** Dark Mode ************************/
@@ -1028,7 +1060,7 @@
     "outputFileName": "bundles2/common/common-dark.css",
     "inputFiles": [
       "styles/base/reset.css",
-      "styles/vendors-extensions/common/bootstrap-ex.css",
+      "styles/vendors-extensions/common/bootstrap-ex2.css",
       "styles/fonts/iconalpha/style.css",
       "styles/base/scaffolding-dark.css",
       "styles/components/alerts-dark.css",
@@ -1048,29 +1080,29 @@
   {
     "outputFileName": "bundles2/common/common-Super-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super-dark.css",
-      "styles/themes/components/buttons/button-super-dark.css",
+      "styles/themes/components/tabs/tab-super2-dark.css",
+      "styles/themes/components/buttons/button-super2-dark.css",
       "styles/components/customize-checkbox-radio-dark.css",
-      "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.css"
+      "styles/themes/components/checkbox-radio/checkbox-radio-super2-dark.css"
 
     ]
   },
   {
     "outputFileName": "bundles2/common/common-Master-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master-dark.css",
-      "styles/themes/components/buttons/button-master-dark.css",
+      "styles/themes/components/tabs/tab-master2-dark.css",
+      "styles/themes/components/buttons/button-master2-dark.css",
       "styles/components/customize-checkbox-radio-dark.css",
-      "styles/themes/components/checkbox-radio/checkbox-radio-master-dark.css"
+      "styles/themes/components/checkbox-radio/checkbox-radio-master2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/common/common-Agent-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent-dark.css",
-      "styles/themes/components/buttons/button-agent-dark.css",
+      "styles/themes/components/tabs/tab-agent2-dark.css",
+      "styles/themes/components/buttons/button-agent2-dark.css",
       "styles/components/customize-checkbox-radio-dark.css",
-      "styles/themes/components/checkbox-radio/checkbox-radio-agent-dark.css"
+      "styles/themes/components/checkbox-radio/checkbox-radio-agent2-dark.css"
     ]
   },
   {
@@ -1082,7 +1114,7 @@
       "styles/layout/default-layout/header-dark.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar-dark.css",
-      "styles/themes/agent-dark.css",
+      "styles/themes/agent2-dark.css",
       "styles/vendors/toastr/toastr.css",
       "styles/components/toastr-dark.css",
       "styles/components/resizable.css"
@@ -1097,7 +1129,7 @@
       "styles/layout/default-layout/header-dark.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar-dark.css",
-      "styles/themes/master-dark.css",
+      "styles/themes/master2-dark.css",
       "styles/vendors/toastr/toastr.css",
       "styles/components/toastr-dark.css",
       "styles/components/resizable.css"
@@ -1112,7 +1144,7 @@
       "styles/layout/default-layout/header-dark.css",
       "styles/layout/default-layout/navigation.css",
       "styles/layout/default-layout/sidebar-dark.css",
-      "styles/themes/super-dark.css",
+      "styles/themes/super2-dark.css",
       "styles/vendors/toastr/toastr.css",
       "styles/components/toastr-dark.css",
       "styles/components/resizable.css"
@@ -1133,7 +1165,6 @@
       "styles/components/tabs-dark.css",
       "styles/components/buttons-dark.css",
       "styles/components/textboxes-dark.css"
-      //"styles/themes/components/tabs/tab-super-dark.css"
     ]
   },
   {
@@ -1151,7 +1182,6 @@
       "styles/components/tabs-dark.css",
       "styles/components/buttons-dark.css",
       "styles/components/textboxes-dark.css"
-      //"styles/themes/components/tabs/tab-master-dark.css"
     ]
   },
   {
@@ -1169,7 +1199,6 @@
       "styles/components/tabs-dark.css",
       "styles/components/buttons-dark.css",
       "styles/components/textboxes-dark.css"
-      //"styles/themes/components/tabs/tab-agent-dark.css"
     ]
   },
   {
@@ -1203,7 +1232,7 @@
       "styles/vendors/jquery-easyui-1.5/icon.css",
       "styles/components/month-picker-dark.css",
       "styles/components/tabs-dark.css",
-      "styles/themes/components/tabs/tab-super-dark.css",
+      "styles/themes/components/tabs/tab-super2-dark.css",
       "styles/components/buttons-dark.css",
       "styles/components/textboxes-dark.css",
       "styles/components/dropdown-dark.css",
@@ -1228,7 +1257,7 @@
       "styles/vendors/jquery-easyui-1.5/icon.css",
       "styles/components/month-picker-dark.css",
       "styles/components/tabs-dark.css",
-      "styles/themes/components/tabs/tab-master-dark.css",
+      "styles/themes/components/tabs/tab-master2-dark.css",
       "styles/components/buttons-dark.css",
       "styles/components/textboxes-dark.css",
       "styles/components/dropdown-dark.css",
@@ -1253,7 +1282,7 @@
       "styles/vendors/jquery-easyui-1.5/icon.css",
       "styles/components/month-picker-dark.css",
       "styles/components/tabs-dark.css",
-      "styles/themes/components/tabs/tab-agent-dark.css",
+      "styles/themes/components/tabs/tab-agent2-dark.css",
       "styles/components/buttons-dark.css",
       "styles/components/textboxes-dark.css",
       "styles/components/dropdown-dark.css",
@@ -1269,25 +1298,25 @@
     "inputFiles": [
       "styles/layout/before-home-page/before-home-page-dark.css",
       "styles/components/customize-checkbox-radio-dark.css",
-      "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.css"
+      "styles/themes/components/checkbox-radio/checkbox-radio-super2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/security/security-super-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super-dark.css"
+      "styles/themes/components/tabs/tab-super2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/security/security-master-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master-dark.css"
+      "styles/themes/components/tabs/tab-master2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/security/security-agent-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent-dark.css"
+      "styles/themes/components/tabs/tab-agent2-dark.css"
     ]
   },
   {
@@ -1295,7 +1324,7 @@
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
-      "styles/themes/components/tabs/tab-super-dark.css"
+      "styles/themes/components/tabs/tab-super2-dark.css"
     ]
   },
   {
@@ -1303,7 +1332,7 @@
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
-      "styles/themes/components/tabs/tab-master-dark.css"
+      "styles/themes/components/tabs/tab-master2-dark.css"
     ]
   },
   {
@@ -1311,7 +1340,7 @@
     "inputFiles": [
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
-      "styles/themes/components/tabs/tab-agent-dark.css"
+      "styles/themes/components/tabs/tab-agent2-dark.css"
     ]
   },
   {
@@ -1321,7 +1350,7 @@
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
       "styles/components/calendars-dark.css",
-      "styles/themes/components/tabs/tab-super-dark.css",
+      "styles/themes/components/tabs/tab-super2-dark.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/month-picker-dark.css"
     ]
@@ -1333,7 +1362,7 @@
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
       "styles/components/calendars-dark.css",
-      "styles/themes/components/tabs/tab-master-dark.css",
+      "styles/themes/components/tabs/tab-master2-dark.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/month-picker-dark.css"
     ]
@@ -1345,7 +1374,7 @@
       "styles/base/roboto-fonts.css",
       "styles/components/tables-dark.css",
       "styles/components/calendars-dark.css",
-      "styles/themes/components/tabs/tab-agent-dark.css",
+      "styles/themes/components/tabs/tab-agent2-dark.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/month-picker-dark.css"
     ]
@@ -1354,21 +1383,21 @@
     "outputFileName": "bundles2/site-main/otp/otp-super-dark.css",
     "inputFiles": [
       "styles/components/accordions-dark.css",
-      "styles/themes/components/tabs/tab-super-dark.css"
+      "styles/themes/components/tabs/tab-super2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/otp/otp-master-dark.css",
     "inputFiles": [
       "styles/components/accordions-dark.css",
-      "styles/themes/components/tabs/tab-master-dark.css"
+      "styles/themes/components/tabs/tab-master2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/otp/otp-agent-dark.css",
     "inputFiles": [
       "styles/components/accordions-dark.css",
-      "styles/themes/components/tabs/tab-agent-dark.css"
+      "styles/themes/components/tabs/tab-agent2-dark.css"
     ]
   },
   {
@@ -1433,7 +1462,7 @@
       "styles/components/month-picker-dark.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon-dark.css",
-      "styles/themes/components/tabs/tab-super-dark.css"
+      "styles/themes/components/tabs/tab-super2-dark.css"
     ]
   },
   {
@@ -1455,7 +1484,7 @@
       "styles/components/month-picker-dark.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon-dark.css",
-      "styles/themes/components/tabs/tab-master-dark.css"
+      "styles/themes/components/tabs/tab-master2-dark.css"
     ]
   },
   {
@@ -1477,7 +1506,7 @@
       "styles/components/month-picker-dark.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon-dark.css",
-      "styles/themes/components/tabs/tab-agent-dark.css"
+      "styles/themes/components/tabs/tab-agent2-dark.css"
     ]
   },
   {
@@ -1513,19 +1542,19 @@
   {
     "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-Agent-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent-dark.css"
+      "styles/themes/components/tabs/tab-agent2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-Master-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master-dark.css"
+      "styles/themes/components/tabs/tab-master2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-accountinfo/profilepicture/profilepicture-Super-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super-dark.css"
+      "styles/themes/components/tabs/tab-super2-dark.css"
     ]
   },
   {
@@ -1613,19 +1642,45 @@
   {
     "outputFileName": "bundles2/site-reports/tab-super-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-super-dark.css"
+      "styles/themes/components/tabs/tab-super2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-reports/tab-master-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-master-dark.css"
+      "styles/themes/components/tabs/tab-master2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-reports/tab-agent-dark.css",
     "inputFiles": [
-      "styles/themes/components/tabs/tab-agent-dark.css"
+      "styles/themes/components/tabs/tab-agent2-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-super-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-super2-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-master-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-master2-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/tab-agent-dark.css",
+    "inputFiles": [
+      "styles/themes/components/tabs/tab-agent2-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/reached-threshold-dark.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css"
     ]
   }
 ]
