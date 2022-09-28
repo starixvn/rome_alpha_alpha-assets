@@ -747,7 +747,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/reached-threshold.js",
+    "outputFileName": "bundles2/site-memberinfo/reached-threshold.js",
     "inputFiles": [
       "js/libs/moment/moment.js",
       "js/components/datetimepicker/datepicker.js",
@@ -757,7 +757,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/reached-threshold.css",
+    "outputFileName": "bundles2/site-memberinfo/reached-threshold.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars.css",
@@ -1038,19 +1038,19 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/tab-super.css",
+    "outputFileName": "bundles2/site-memberinfo/tab-super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super2.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/tab-master.css",
+    "outputFileName": "bundles2/site-memberinfo/tab-master.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master2.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/tab-agent.css",
+    "outputFileName": "bundles2/site-memberinfo/tab-agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent2.css"
     ]
@@ -1658,25 +1658,25 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/tab-super-dark.css",
+    "outputFileName": "bundles2/site-memberinfo/tab-super-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super2-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/tab-master-dark.css",
+    "outputFileName": "bundles2/site-memberinfo/tab-master-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-master2-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/tab-agent-dark.css",
+    "outputFileName": "bundles2/site-memberinfo/tab-agent-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent2-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-memberinfo/reached-threshold-dark.css",
+    "outputFileName": "bundles2/site-memberinfo/reached-threshold-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars-dark.css",
