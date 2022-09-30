@@ -231,7 +231,18 @@
     $('[data-ride="carousel"]').each(function () {
       var $carousel = $(this)
       Plugin.call($carousel, $carousel.data())
-    })
+    });
+
+    $('[data-ride="carousel"]').swipe({
+      swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        if (direction == 'left') { $(this).carousel('next'); }
+        if (direction == 'right') { $(this).carousel('prev'); }
+      },
+      tap: function (event, target) {
+        var url = target.getAttribute('data-href');
+        if (url) { window.open(url, '_blank'); }
+      },
+    });
   })
 
 }(jQuery);
