@@ -233,10 +233,12 @@
       Plugin.call($carousel, $carousel.data())
     });
 
-    $('[data-ride="carousel"]').swipe({
+    $('.carousel-banner .carousel-inner').swipe({
       swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
-        if (direction == 'left') { $(this).carousel('next'); }
-        if (direction == 'right') { $(this).carousel('prev'); }
+        if (direction == 'left') {
+          $('.carousel-banner').carousel('next'); }
+        if (direction == 'right') {
+          $('.carousel-banner').carousel('prev'); }
       },
       tap: function (event, target) {
         var url = target.getAttribute('data-href');
