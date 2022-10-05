@@ -467,6 +467,7 @@
       "js/libs/mobile/isMobile.js",
       "js/components/blockui/jquery.blockUI.js",
       "js/libs/bootstrap/carousel.js",
+      "js/libs/jquery/jquery.touchSwipe.js",
       "js/components/bootbox/bootbox.js"
     ]
   },

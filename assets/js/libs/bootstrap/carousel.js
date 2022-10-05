@@ -231,7 +231,20 @@
     $('[data-ride="carousel"]').each(function () {
       var $carousel = $(this)
       Plugin.call($carousel, $carousel.data())
-    })
+    });
+
+    $('.carousel-banner .carousel-inner').swipe({
+      swipe: function (event, direction, distance, duration, fingerCount, fingerData) {
+        if (direction == 'left') {
+          $('.carousel-banner').carousel('next'); }
+        if (direction == 'right') {
+          $('.carousel-banner').carousel('prev'); }
+      },
+      tap: function (event, target) {
+        var url = target.getAttribute('data-href');
+        if (url) { window.open(url, '_blank'); }
+      },
+    });
   })
 
 }(jQuery);
