@@ -5800,11 +5800,6 @@ a, a:focus, a:active, a:target, a:hover {
     border-bottom: 1px solid #5F626B;
     border-top: 0;
     border-left: 0; }
-    .tblRpt.tblRpt-bordered#tbl-report thead {
-      position: -webkit-sticky;
-      position: sticky;
-      top: -1px;
-      z-index: 9; }
     .tblRpt.tblRpt-bordered#tbl-report > thead > tr > th, .tblRpt.tblRpt-bordered#tbl-report > tbody > tr > td, .tblRpt.tblRpt-bordered#tbl-report tfoot > tr > td {
       border: 1px solid #5F626B; }
       .tblRpt.tblRpt-bordered#tbl-report > thead > tr > th:last-child, .tblRpt.tblRpt-bordered#tbl-report > tbody > tr > td:last-child, .tblRpt.tblRpt-bordered#tbl-report tfoot > tr > td:last-child {

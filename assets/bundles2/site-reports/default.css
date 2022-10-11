@@ -35,11 +35,6 @@
   border: 1px solid #d1d1d1;
   border-collapse: collapse;
   background-color: #fff; }
-  .tblRpt.tblRpt-bordered#tbl-report thead {
-    position: -webkit-sticky;
-    position: sticky;
-    top: -1px;
-    z-index: 9; }
   .tblRpt.tblRpt-bordered > thead > tr > th, .tblRpt.tblRpt-bordered > tbody > tr > td, .tblRpt.tblRpt-bordered tfoot > tr > td {
     border: 1px solid #d1d1d1; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
