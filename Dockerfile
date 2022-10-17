@@ -1,5 +1,5 @@
 # Use nginx-unprivileged image
-FROM hub.nexdev.net/base/nginxinc/nginx-unprivileged
+FROM hub.nexdev.net/base/nginxinc/nginx-unprivileged:1.22-alpine-slim
 
 # Register TRANSFORM_CONFIG argument for transforming by environment
 ARG TRANSFORM_CONFIG
