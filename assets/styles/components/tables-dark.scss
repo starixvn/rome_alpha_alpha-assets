@@ -14,14 +14,17 @@
 
 
     &.tblRpt-bordered {
-
-
         &#tbl-report {
+         
+
             > thead > tr > th, > tbody > tr > td, tfoot > tr > td {
                 border: 1px solid #5F626B;
+
+                &:last-child {
+                    border-right: 1px solid #5F626B !important;
+                }
             }
 
-            border-right: 1px solid #5F626B;
             border-bottom: 1px solid #5F626B;
             border-top: 0;
             border-left: 0;

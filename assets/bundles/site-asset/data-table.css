@@ -591,7 +591,7 @@ table.fixedHeader-locked {
 }
 
 table.fixedHeader-floating {
-  position: inherit !important; }
+  z-index: 99; }
 
 table.dataTable {
   margin-left: 0px !important;
@@ -685,3 +685,9 @@ table.dataTable {
   table.dataTable.dtr-column > tbody > tr > td.control:before {
     margin-top: -18px;
     margin-left: -18px; } }
+
+table.dataTable.row-border tbody tr:first-child th td:last-child, table.dataTable.row-border tbody tr:first-child td td:last-child, table.dataTable.display tbody tr:first-child th td:last-child, table.dataTable.display tbody tr td:last-child {
+  border-right: 1px solid #ddd !important; }
+
+.tblRpt {
+  border: none; }
