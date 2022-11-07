@@ -265,7 +265,8 @@ input, button {
       height: 22px;
       line-height: 22px;
       padding: 0 9px;
-      width: auto; }
+      width: auto;
+      z-index: 2; }
       .block [class^="btn-"]#btnGenerateOTP:hover {
         opacity: 0.9; }
   .block label {

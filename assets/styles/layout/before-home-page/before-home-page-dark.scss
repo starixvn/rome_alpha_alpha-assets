@@ -339,6 +339,7 @@ input, button {
             line-height: 22px;
             padding: 0 9px;
             width: auto;
+            z-index: 2;
 
             &:hover {
                 opacity: 0.9;
