@@ -173,7 +173,9 @@ input, button {
     -moz-box-shadow: none;
     -ms-box-shadow: none;
     -o-box-shadow: none;
-    box-shadow: none; }
+    box-shadow: none;
+    -webkit-box-shadow: 0 0 0 30px #171717 inset !important;
+    -webkit-text-fill-color: #727272 !important; }
     .block .txt:focus {
       border-bottom: 2px solid #666;
       color: #fff; }
@@ -263,6 +265,18 @@ input, button {
     text-transform: uppercase; }
     .block [class^="btn-"]:first-child {
       margin-right: 6%; }
+    .block [class^="btn-"]#btnGenerateOTP {
+      background: #147D4C;
+      position: absolute;
+      right: 0;
+      top: 8px;
+      font-size: 12px;
+      height: 22px;
+      line-height: 22px;
+      padding: 0 9px;
+      width: auto; }
+      .block [class^="btn-"]#btnGenerateOTP:hover {
+        opacity: 0.9; }
   .block label {
     font-weight: normal; }
   .block label.error {
@@ -456,7 +470,6 @@ input, button {
     font-size: 14px; }
   .modal.information .modal-content .modal-body {
     font-size: 13px; } }
-
 
 /*******************************************/
 /* Ripple Effect */

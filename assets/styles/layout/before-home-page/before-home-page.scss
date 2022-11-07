@@ -170,6 +170,8 @@ input, button {
         color: #888;
         @include border-radius(0);
         @include box-shadow-multiple('none');
+        -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+        -webkit-text-fill-color: #888 !important;
 
         &:focus {
             border-bottom: 2px solid #666;
@@ -306,6 +308,22 @@ input, button {
 
         &:first-child {
             margin-right: 6%;
+        }
+
+        &#btnGenerateOTP {
+            background: #147D4C;
+            position: absolute;
+            right: 0;
+            top: 8px;
+            font-size: 12px;
+            height: 22px;
+            line-height: 22px;
+            padding: 0 9px;
+            width: auto;
+
+            &:hover {
+                opacity: 0.9;
+            }
         }
     }
 
