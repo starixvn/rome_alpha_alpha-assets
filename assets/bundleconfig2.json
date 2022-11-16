@@ -750,24 +750,6 @@
     ]
   },
   {
-    "outputFileName": "bundles2/site-memberinfo/reached-threshold.js",
-    "inputFiles": [
-      "js/libs/moment/moment.js",
-      "js/components/datetimepicker/datepicker.js",
-      "js/components/datetimepicker/bootstrap-datetimepicker.js",
-      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
-      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
-    ]
-  },
-  {
-    "outputFileName": "bundles2/site-memberinfo/reached-threshold.css",
-    "inputFiles": [
-      "styles/vendors/bootstrap-datetimepicker.css",
-      "styles/components/calendars.css",
-      "styles/components/bootstrap.nexDatePicker.css"
-    ]
-  },
-  {
     "outputFileName": "bundles2/site-betlists/default.css",
     "inputFiles": [
       "styles/base/roboto-fonts.css",
@@ -1063,6 +1045,24 @@
     "outputFileName": "bundles2/site-memberinfo/tab-agent.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-agent2.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2/site-memberinfo/daterangepicker.css",
+    "inputFiles": [
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars.css",
+      "styles/components/bootstrap.nexDatePicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2/site-memberinfo/daterangepicker.js",
+    "inputFiles": [
+      "js/libs/moment/moment.js",
+      "js/components/datetimepicker/datepicker.js",
+      "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
     ]
   },
   /************************** Dark Mode ************************/
@@ -1688,10 +1688,10 @@
     ]
   },
   {
-    "outputFileName": "bundles2/site-memberinfo/reached-threshold-dark.css",
+    "outputFileName": "bundles2/site-memberinfo/daterangepicker-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
-      "styles/components/calendars-dark.css",
+      "styles/components/calendars-dark",
       "styles/components/bootstrap.nexDatePicker.css"
     ]
   }

@@ -4116,67 +4116,38 @@ body .ui-tooltip { border-width: 2px; }
   height: 24px;
   vertical-align: middle; }
 
-.entered-non-entered {
-  line-height: 1em;
-  padding-top: 5px;
-  float: left; }
-  .entered-non-entered div.icon-entered {
-    background: #2B2B2B;
-    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
-    margin-right: 5px;
-    font-weight: bold;
-    float: left;
-    height: 24px; }
-    .entered-non-entered div.icon-entered div.text {
-      color: #EDEDED;
-      font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
-      float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 3px;
-      text-indent: 5px; }
-    .entered-non-entered div.icon-entered div.icon-check-circle {
-      color: #23A858;
-      background: transparent;
-      float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 3px; }
-  .entered-non-entered div.icon-non-entered {
-    background: #2B2B2B;
-    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
-    border-radius: 3px;
-    margin-right: 5px;
-    font-weight: bold;
-    float: left;
-    height: 24px; }
-    .entered-non-entered div.icon-non-entered div.text {
-      color: #EDEDED;
-      font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
-      float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 3px;
-      text-indent: 5px; }
-    .entered-non-entered div.icon-non-entered div.number {
-      color: #EB7100;
-      background: #434343;
-      border: 1px solid #434343;
-      border-radius: 3px;
-      padding: 0 5px;
-      font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
-      float: left;
-      height: 16px;
-      margin-right: 3px;
-      margin-top: 4px; }
-    .entered-non-entered div.icon-non-entered div.icon-clock {
-      color: #EB7100;
-      background: transparent;
-      float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 3px; }
+.icon-book {
+  position: relative;
+  color: #41A4FF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: middle; }
+  .icon-book:after {
+    position: relative;
+    content: '';
+    display: block; }
+  .icon-book:hover:after {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 30px;
+    height: 30px;
+    margin-left: -8px;
+    margin-top: -4px;
+    background: #b1aea3;
+    border-radius: 100%;
+    opacity: 1;
+    -webkit-transform: scale(0);
+    -khtml-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -moz-animation: ripple 1s ease-out;
+    -o-animation: ripple 1s ease-out;
+    -webkit-animation: ripple 1s ease-out;
+    animation: ripple 1s ease-out; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {
