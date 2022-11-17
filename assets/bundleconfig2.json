@@ -527,7 +527,8 @@
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
       "js/components/bootbox/bootbox.js",
-      "js/libs/clipboard/clipboard.js"
+      "js/libs/clipboard/clipboard.js",
+      "js/components/storejs/store.js"
     ]
   },
   {
@@ -876,7 +877,8 @@
       "js/libs/bootstrap/collapse.js",
       "js/libs/jquery/jquery-ui.min.js",
       "js/libs/bootstrap/tooltip.js",
-      "js/libs/clipboard/clipboard.js"
+      "js/libs/clipboard/clipboard.js",
+      "js/components/storejs/store.js"
     ]
   },
   {
