@@ -4391,11 +4391,11 @@ button.close {
 
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?7s07l1');
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?7s07l1#iefix') format('embedded-opentype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?7s07l1') format('truetype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?7s07l1') format('woff'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?7s07l1#Iconalpha') format('svg');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?u8f385');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?u8f385#iefix') format('embedded-opentype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?u8f385') format('truetype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?u8f385') format('woff'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?u8f385#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -4418,6 +4418,13 @@ button.close {
 
 .icon-backupdomains:before {
   content: "\e98c";
+}
+
+.icon-settingapi:before {
+  content: "\e98c";
+}
+.icon-eye-close:before {
+  content: "\e98e";
 }
 .icon-riskmanagement:before {
   content: "\e98d";
