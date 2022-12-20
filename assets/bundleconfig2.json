@@ -523,11 +523,11 @@
   {
     "outputFileName": "bundles2/site-main/otp/otp-default.js",
     "inputFiles": [
-      "js/libs/bootstrap/tab.js",
       "js/libs/bootstrap/transition.js",
       "js/libs/bootstrap/collapse.js",
       "js/components/bootbox/bootbox.js",
-      "js/libs/clipboard/clipboard.js"
+      "js/libs/clipboard/clipboard.js",
+      "js/components/storejs/store.js"
     ]
   },
   {
@@ -876,7 +876,8 @@
       "js/libs/bootstrap/collapse.js",
       "js/libs/jquery/jquery-ui.min.js",
       "js/libs/bootstrap/tooltip.js",
-      "js/libs/clipboard/clipboard.js"
+      "js/libs/clipboard/clipboard.js",
+      "js/components/storejs/store.js"
     ]
   },
   {
@@ -987,36 +988,42 @@
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Super.css",
     "inputFiles": [
+      "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-super2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Master.css",
     "inputFiles": [
+      "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-master2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Agent.css",
     "inputFiles": [
+      "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-agent2.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Super-dark.css",
     "inputFiles": [
+      "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-super2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Master-dark.css",
     "inputFiles": [
+      "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-master2-dark.css"
     ]
   },
   {
     "outputFileName": "bundles2/site-main/chatbot/tab-Agent-dark.css",
     "inputFiles": [
+      "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-agent2-dark.css"
     ]
   },
