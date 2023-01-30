@@ -6203,6 +6203,10 @@ var NexDatePickerHelper = NexDatePickerHelper ||
                 dateRange = [firstDayOfLastMonth, currentDate];
                 break;
 
+            case NexDatePickerHelper.rangeOption.olderThan3Months:
+                dateRange = NexDatePickerHelper.getDateRangeOfCurrentMonth(currentDate);
+                break;
+
             default:
                 return false;
         }
@@ -6218,7 +6222,8 @@ var NexDatePickerHelper = NexDatePickerHelper ||
         thisMonth: 4,
         lastMonth: 5,
         sinceLastMonth: 6,
-        specificDate: 7
+        specificDate: 7,
+        olderThan3Months: 8
     }
 };
 /* File Created: November 14, 2012 */
@@ -6430,6 +6435,9 @@ var NexDatePickerHelper = NexDatePickerHelper ||
                             fDate = me.$firstDatePicker.data("DateTimePicker").date();
                             tDate = me.$secondDatePicker.data("DateTimePicker").date();
                             dateRange = [fDate, tDate];
+                            break;
+                        case NexDatePickerHelper.rangeOption.olderThan3Months:
+                            dateRange = NexDatePickerHelper.getDateRangeOfCurrentMonth(fDate);
                             break;
                         default:
                             var options = $(this).find("option[value=" + selectValue + "]");

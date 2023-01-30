@@ -115,6 +115,9 @@
                         break;
                     case NexDatePickerHelper.rangeOption.specificDate:
                         break;
+                    case NexDatePickerHelper.rangeOption.olderThan3Months:
+                        self.updateDateRange(thisMonthStartDate, today);
+                        break;
                     default:
                         break;
                 }

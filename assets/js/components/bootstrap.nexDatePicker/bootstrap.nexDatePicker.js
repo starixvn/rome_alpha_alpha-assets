@@ -208,6 +208,9 @@
                             tDate = me.$secondDatePicker.data("DateTimePicker").date();
                             dateRange = [fDate, tDate];
                             break;
+                        case NexDatePickerHelper.rangeOption.olderThan3Months:
+                            dateRange = NexDatePickerHelper.getDateRangeOfCurrentMonth(fDate);
+                            break;
                         default:
                             var options = $(this).find("option[value=" + selectValue + "]");
                             fDate = new Date(options.attr("data-fDate"));

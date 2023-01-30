@@ -142,6 +142,10 @@ var NexDatePickerHelper = NexDatePickerHelper ||
                 dateRange = [firstDayOfLastMonth, currentDate];
                 break;
 
+            case NexDatePickerHelper.rangeOption.olderThan3Months:
+                dateRange = NexDatePickerHelper.getDateRangeOfCurrentMonth(currentDate);
+                break;
+
             default:
                 return false;
         }
@@ -157,6 +161,7 @@ var NexDatePickerHelper = NexDatePickerHelper ||
         thisMonth: 4,
         lastMonth: 5,
         sinceLastMonth: 6,
-        specificDate: 7
+        specificDate: 7,
+        olderThan3Months: 8
     }
 };
