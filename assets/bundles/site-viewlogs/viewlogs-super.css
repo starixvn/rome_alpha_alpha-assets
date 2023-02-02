@@ -9167,6 +9167,9 @@ select {
 .form-group {
   margin-bottom: 16px; }
 
+.note {
+  margin-bottom: 10px; }
+
 .form-control:focus {
   -webkit-border-radius: 1px;
   -khtml-border-radius: 1px;
