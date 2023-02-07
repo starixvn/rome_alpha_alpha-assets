@@ -4391,11 +4391,11 @@ button.close {
 
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?ih9br0');
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?ih9br0#iefix') format('embedded-opentype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?ih9br0') format('truetype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?ih9br0') format('woff'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?ih9br0#Iconalpha') format('svg');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?4o4z1e');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?4o4z1e#iefix') format('embedded-opentype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?4o4z1e') format('truetype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?4o4z1e') format('woff'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?4o4z1e#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -4416,8 +4416,15 @@ button.close {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-riskmanagement:before {
+  content: "\e98d";
+}
 .icon-mywatchlist:before {
   content: "\e989";
+  color: #919191;
+}
+.icon-mythresholds:before {
+  content: "\e98b";
   color: #919191;
 }
 .icon-Live-chat:before {
@@ -5384,6 +5391,9 @@ select {
 .form-group {
   margin-bottom: 16px; }
 
+.note {
+  margin-bottom: 10px; }
+
 .form-control:focus {
   -webkit-border-radius: 1px;
   -khtml-border-radius: 1px;
@@ -6300,6 +6310,39 @@ input[type=reset], .btn-reset {
   width: 24px;
   height: 24px;
   vertical-align: middle; }
+
+.icon-book {
+  position: relative;
+  color: #41A4FF;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 15px;
+  vertical-align: middle; }
+  .icon-book:after {
+    position: relative;
+    content: '';
+    display: block; }
+  .icon-book:hover:after {
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 30px;
+    height: 30px;
+    margin-left: -8px;
+    margin-top: -4px;
+    background: #b1aea3;
+    border-radius: 100%;
+    opacity: 1;
+    -webkit-transform: scale(0);
+    -khtml-transform: scale(0);
+    -moz-transform: scale(0);
+    -ms-transform: scale(0);
+    -o-transform: scale(0);
+    transform: scale(0);
+    -moz-animation: ripple 1s ease-out;
+    -o-animation: ripple 1s ease-out;
+    -webkit-animation: ripple 1s ease-out;
+    animation: ripple 1s ease-out; }
 
 .entered-non-entered {
   line-height: 1em;

@@ -133,6 +133,15 @@
     vertical-align: middle;
 }
 
+.icon-book {
+    @include ripple-effect-icon($margin-left: -8px, $margin-right: -4px, $height: 30px, $width: 30px, $top: -2px);
+    color: #0b599c;
+    cursor: pointer;
+    display: inline-block;
+    font-size: 15px;
+    vertical-align: middle;
+}
+
 .entered-non-entered {
     line-height: 1em;
     padding-top: 5px;
