@@ -5007,6 +5007,9 @@ a, a:focus, a:active, a:target, a:hover {
 .icon-book:before {
   content: "\e98a";
 }
+.icon-backupdomains:before {
+    content: "\e918";
+}
 
 /*! jQuery UI - v1.9.1 - 2012-11-21
 * http://jqueryui.com

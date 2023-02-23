@@ -5192,6 +5192,9 @@ body .ui-tooltip { border-width: 2px; }
 .icon-book:before {
   content: "\e98a";
 }
+.icon-backupdomains:before {
+    content: "\e918";
+}
 
 /*******************************************/
 /* Ripple Effect */

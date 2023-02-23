@@ -4852,6 +4852,9 @@ button.close {
 .icon-book:before {
   content: "\e98a";
 }
+.icon-backupdomains:before {
+    content: "\e918";
+}
 
 @font-face {
   font-family: 'Roboto';

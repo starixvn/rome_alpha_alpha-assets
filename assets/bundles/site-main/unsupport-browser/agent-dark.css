@@ -461,6 +461,9 @@
 .icon-book:before {
   content: "\e98a";
 }
+.icon-backupdomains:before {
+    content: "\e918";
+}
 
 .unsupport-browser {
   background: url("../../../styles/images/oldbrowser-agent-dark.jpg") center top no-repeat; }

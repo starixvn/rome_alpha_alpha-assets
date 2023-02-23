@@ -461,3 +461,6 @@
 .icon-book:before {
   content: "\e98a";
 }
+.icon-backupdomains:before {
+    content: "\e918";
+}
