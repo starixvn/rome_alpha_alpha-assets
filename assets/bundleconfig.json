@@ -560,8 +560,8 @@
       "styles/components/bootstrap-multiselect.css",
       "styles/components/pagination.css",
       "styles/components/tablesorter.css",
-	  "styles/base/roboto-fonts.css",
-	  "styles/fonts/iconalpha/style.css",
+      "styles/base/roboto-fonts.css",
+      "styles/fonts/iconalpha/style.css",
       "styles/components/icon.css"
     ]
   },
@@ -1358,8 +1358,8 @@
       "styles/components/bootstrap-multiselect-dark.css",
       "styles/components/pagination-dark.css",
       "styles/components/tablesorter.css",
-	  "styles/base/roboto-fonts.css",
-	  "styles/fonts/iconalpha/style.css",
+      "styles/base/roboto-fonts.css",
+      "styles/fonts/iconalpha/style.css",
       "styles/components/icon-dark.css"
     ]
   },
@@ -1642,6 +1642,12 @@
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars-dark.css",
       "styles/components/bootstrap.nexDatePicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-messages/backup-domains.js",
+    "inputFiles": [
+      "js/libs/clipboard/clipboard.js"
     ]
   }
 ]

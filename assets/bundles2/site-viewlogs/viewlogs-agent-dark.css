@@ -4539,11 +4539,11 @@ a, a:focus, a:active, a:target, a:hover {
 
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?4o4z1e');
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?4o4z1e#iefix') format('embedded-opentype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?4o4z1e') format('truetype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?4o4z1e') format('woff'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?4o4z1e#Iconalpha') format('svg');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?7s07l1');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?7s07l1#iefix') format('embedded-opentype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?7s07l1') format('truetype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?7s07l1') format('woff'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?7s07l1#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -4564,6 +4564,9 @@ a, a:focus, a:active, a:target, a:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-backupdomains:before {
+  content: "\e98c";
+}
 .icon-riskmanagement:before {
   content: "\e98d";
 }
