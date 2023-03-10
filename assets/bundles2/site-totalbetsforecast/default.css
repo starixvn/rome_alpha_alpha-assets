@@ -5185,11 +5185,11 @@ button.close {
 
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?u8f385');
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?u8f385#iefix') format('embedded-opentype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?u8f385') format('truetype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?u8f385') format('woff'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?u8f385#Iconalpha') format('svg');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?kyr3md');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?kyr3md#iefix') format('embedded-opentype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?kyr3md') format('truetype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?kyr3md') format('woff'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?kyr3md#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -5210,15 +5210,14 @@ button.close {
   -moz-osx-font-smoothing: grayscale;
 }
 
-.icon-backupdomains:before {
-  content: "\e98c";
-}
-
 .icon-settingapi:before {
-  content: "\e98c";
+  content: "\e98f";
 }
 .icon-eye-close:before {
   content: "\e98e";
+}
+.icon-backupdomains:before {
+  content: "\e98c";
 }
 .icon-riskmanagement:before {
   content: "\e98d";
