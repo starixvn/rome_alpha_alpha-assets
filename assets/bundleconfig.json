@@ -33,7 +33,6 @@
       "styles/themes/components/buttons/button-super.css",
       "styles/components/customize-checkbox-radio.css",
       "styles/themes/components/checkbox-radio/checkbox-radio-super.css"
-
     ]
   },
   {
@@ -440,7 +439,6 @@
       "styles/components/month-picker.css"
     ]
   },
-
   {
     "outputFileName": "bundles/site-messages/message-default.js",
     "inputFiles": [
@@ -452,7 +450,6 @@
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
     ]
   },
-
   {
     "outputFileName": "bundles/site-main/security/before-home-page.js",
     "inputFiles": [
@@ -1044,7 +1041,6 @@
       "styles/themes/components/buttons/button-super-dark.css",
       "styles/components/customize-checkbox-radio-dark.css",
       "styles/themes/components/checkbox-radio/checkbox-radio-super-dark.css"
-
     ]
   },
   {
@@ -1686,6 +1682,12 @@
   },
   {
     "outputFileName": "bundles/site-messages/backup-domains.js",
+    "inputFiles": [
+      "js/libs/clipboard/clipboard.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-memberinfo/copy-account.js",
     "inputFiles": [
       "js/libs/clipboard/clipboard.js"
     ]
