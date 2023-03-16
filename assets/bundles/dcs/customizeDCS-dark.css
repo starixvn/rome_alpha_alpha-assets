@@ -524,9 +524,9 @@ select.setting-field {
     .msg--warning .msg__icon:before {
       content: '\e93d'; }
   .msg--error {
-    color: #E54748;
+    color: #CC7070;
     background-color: #361212;
-    border: 1px solid #E54748; }
+    border: 1px solid #CC7070; }
     .msg--error .msg__icon:before {
       content: '\e93e'; }
   .msg__content {

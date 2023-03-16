@@ -5914,7 +5914,7 @@ select {
 
 .msg-error {
   background-color: #361212;
-  border-color: #E54748;
-  color: #E54748; }
+  border-color: #CC7070;
+  color: #CC7070; }
   .msg-error:before {
     content: '\e93e'; }

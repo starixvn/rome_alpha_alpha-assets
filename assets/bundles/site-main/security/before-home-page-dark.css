@@ -281,7 +281,7 @@ input, button {
   .block label {
     font-weight: normal; }
   .block label.error {
-    color: #E54748;
+    color: #CC7070;
     font-size: 13px;
     display: block;
     padding-top: 8px;

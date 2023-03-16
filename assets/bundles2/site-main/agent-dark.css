@@ -3547,11 +3547,11 @@ button.toast-close-button {
 
 #toast-container > .toast-error {
   background: #361212 !important;
-  border-color: #E54748;
-  color: #E54748; }
+  border-color: #CC7070;
+  color: #CC7070; }
   #toast-container > .toast-error:before {
     content: '\e93e';
-    color: #E54748; }
+    color: #CC7070; }
 
 #toast-container > .toast-success {
   background: #3A5031 !important;

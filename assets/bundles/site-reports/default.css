@@ -4668,40 +4668,6 @@ body .ui-tooltip { border-width: 2px; }
     border-top: 1px solid #d1d1d1; }
 
 
-.tablesorter {
-  text-align: left; }
-  .tablesorter th {
-    padding: 0 14px; }
-  .tablesorter .sorting:after, .tablesorter .sorting.sorting-asc:after, .tablesorter .sorting.sorting-asc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting.sorting-desc:after, .tablesorter .sorting.sorting-desc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting.col-combine .prior-sortedcolumn:after {
-    cursor: pointer;
-    font-family: 'Iconalpha';
-    font-size: 12px;
-    position: absolute;
-    right: 0;
-    padding: 0 2px; }
-  .tablesorter .sorting {
-    background-clip: padding-box;
-    cursor: pointer;
-    position: relative;
-    padding-right: 14px; }
-    .tablesorter .sorting:after {
-      content: '\e960'; }
-    .tablesorter .sorting.sorting-asc:after, .tablesorter .sorting.sorting-asc.col-combine .prior-sortedcolumn:after {
-      content: '\e961';
-      color: #ff1500; }
-    .tablesorter .sorting.sorting-desc:after, .tablesorter .sorting.sorting-desc.col-combine .prior-sortedcolumn:after {
-      content: '\e962';
-      color: #ff1500; }
-    .tablesorter .sorting.col-combine:after {
-      display: none; }
-    .tablesorter .sorting.col-combine .prior-sortedcolumn {
-      display: inline-block;
-      position: relative;
-      padding-right: 16px; }
-      .tablesorter .sorting.col-combine .prior-sortedcolumn:after {
-        content: '\e960'; }
-
-
 @font-face {
   font-family: 'Roboto';
   src: url("../../styles/fonts/roboto/Roboto-Regular.woff2") format("woff2");

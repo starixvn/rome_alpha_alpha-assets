@@ -9233,7 +9233,7 @@ select {
 
 .form-validation .txt.error ~ .validation:before {
   content: '\e92c';
-  color: #E54748; }
+  color: #CC7070; }
 
 .form-validation .txt.valid ~ .validation:before {
   content: '\e91f';
