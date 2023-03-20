@@ -4,6 +4,10 @@
     border-color: #D1D1D1;
     border-radius: 0;
 
+    &:after {
+        top: -5px;
+    }
+
     &.show-calendar {
         .ranges {
             margin-top: 16px;
@@ -131,10 +135,30 @@
 }
 
 @media only screen and (max-device-width: 767px) {
+    .filter .date{
+        width: 215px!important;
+    }
     .daterangepicker {
         width: 99.999% !important;
+        max-width: 400px;
+
+        @media (orientation: landscape) {
+            max-width: 650px;
+        }
+
+        .ranges {
+            float: left;
+            height: 550px;
+
+            @media (orientation: landscape) {
+                height: 250px;
+            }
+        }
 
         .drp-calendar {
+            width: 260px !important;
+            float: left;
+
             @media (orientation: portrait) {
                 max-width: 100%;
                 width: 100%;
@@ -154,6 +178,9 @@
         .calendar-table {
             th, td {
                 font-size: 100%;
+                line-height: 23px !important;
+                height: 32px !important;
+                width: 32px !important;
             }
         }
 

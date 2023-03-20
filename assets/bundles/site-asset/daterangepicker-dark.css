@@ -437,6 +437,7 @@
   .daterangepicker:before {
     border-bottom: 7px solid #474747; }
   .daterangepicker:after {
+    top: -5px;
     border-bottom: 7px solid #2b2b2b; }
   .daterangepicker.show-calendar .ranges {
     margin-top: 16px; }
@@ -513,22 +514,44 @@
         justify-self: end; }
 
 @media only screen and (max-device-width: 767px) {
+  .filter .date {
+    width: 215px !important; }
   .daterangepicker {
-    width: 99.999% !important; } }
-  @media only screen and (max-device-width: 767px) and (orientation: portrait) {
-    .daterangepicker .drp-calendar {
-      max-width: 100%;
-      width: 100%; }
-      .daterangepicker .drp-calendar.left {
-        padding: 8px; } }
+    width: 99.999% !important;
+    max-width: 400px; } }
   @media only screen and (max-device-width: 767px) and (orientation: landscape) {
+    .daterangepicker {
+      max-width: 650px; } }
+
+@media only screen and (max-device-width: 767px) {
+    .daterangepicker .ranges {
+      float: left;
+      height: 550px; } }
+    @media only screen and (max-device-width: 767px) and (orientation: landscape) {
+      .daterangepicker .ranges {
+        height: 250px; } }
+
+@media only screen and (max-device-width: 767px) {
     .daterangepicker .drp-calendar {
-      display: inline-block !important;
-      max-width: 50%;
-      width: 50%; } }
+      width: 260px !important;
+      float: left; } }
+    @media only screen and (max-device-width: 767px) and (orientation: portrait) {
+      .daterangepicker .drp-calendar {
+        max-width: 100%;
+        width: 100%; }
+        .daterangepicker .drp-calendar.left {
+          padding: 8px; } }
+    @media only screen and (max-device-width: 767px) and (orientation: landscape) {
+      .daterangepicker .drp-calendar {
+        display: inline-block !important;
+        max-width: 50%;
+        width: 50%; } }
 
 @media only screen and (max-device-width: 767px) {
     .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
-      font-size: 100%; }
+      font-size: 100%;
+      line-height: 23px !important;
+      height: 32px !important;
+      width: 32px !important; }
     .daterangepicker .applyBtn, .daterangepicker .cancelBtn {
       height: 36px; } }
