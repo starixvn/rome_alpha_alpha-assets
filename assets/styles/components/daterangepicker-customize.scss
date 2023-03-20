@@ -1,15 +1,104 @@
-﻿.daterangepicker {
-    font-size: inherit;
-    font-family: inherit;
+﻿@import "../abstracts/_variables.scss";
+@import "../abstracts/_mixins.scss";
+.daterangepicker {
+    border-color: #D1D1D1;
+    border-radius: 0;
+
+    &.show-calendar {
+        .ranges {
+            margin-top: 16px;
+        }
+    }
+
+    &.show-ranges {
+        &.ltr {
+            .drp-calendar {
+                &.right {
+                    border-left: 1px solid #D1D1D1;
+                }
+
+                &.left {
+                    border-color: #D1D1D1;
+                }
+            }
+        }
+    }
+
+    .ranges {
+        margin-top: 16px;
+        color: #444444;
+
+        li {
+            font-size: 13px;
+            line-height: 20px;
+            padding: 4px 12px;
+
+            &:hover {
+                background: #E6E6E6;
+            }
+
+            &.active {
+                background: #0B599C;
+                color: #ededed;
+            }
+        }
+    }
 
     .drp-selected {
         display: none;
     }
 
     .calendar-table {
+        th {
+            &.month {
+                font-size: 14px;
+            }
+
+            border-radius: 0 !important;
+        }
+
         tr {
+            font-size: 13px;
             display: grid;
             grid-template-columns: repeat(7, 1fr);
+
+            td {
+                border-radius: 0 !important;
+
+                &.available {
+                    &:hover {
+                        background: #E6E6E6;
+                    }
+                }
+
+                &.off {
+                    color: #9C9C9C;
+
+                    &.in-range, &.start-date, &.end-date {
+                        color: #9C9C9C;
+                    }
+                }
+
+                &.in-range {
+                    border-radius: 0;
+                    background: #E8F4FD;
+
+                    &:hover {
+                        background: #E8F4FD;
+                    }
+                }
+
+                &.active {
+                    color: #EDEDED;
+                    border-radius: 0;
+                    background-color: #0B599C;
+
+                    &:hover {
+                        color: #EDEDED;
+                        background-color: #0B599C;
+                    }
+                }
+            }
         }
 
         td.available, td.disabled, th {

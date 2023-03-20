@@ -240,6 +240,10 @@
     "inputFile": "styles/components/daterangepicker-customize.scss"
   },
   {
+    "outputFile": "styles/components/daterangepicker-customize-dark.css",
+    "inputFile": "styles/components/daterangepicker-customize-dark.scss"
+  },
+  {
     "outputFile": "styles/base/scaffolding-dark.css",
     "inputFile": "styles/base/scaffolding-dark.scss"
   },

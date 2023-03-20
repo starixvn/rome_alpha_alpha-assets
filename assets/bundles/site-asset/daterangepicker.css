@@ -425,14 +425,60 @@
         clear: none !important;
     }
 }*/
+/*******************************************/
+/* Ripple Effect */
+/*******************************************/
 .daterangepicker {
-  font-size: inherit;
-  font-family: inherit; }
+  border-color: #D1D1D1;
+  border-radius: 0; }
+  .daterangepicker.show-calendar .ranges {
+    margin-top: 16px; }
+  .daterangepicker.show-ranges.ltr .drp-calendar.right {
+    border-left: 1px solid #D1D1D1; }
+  .daterangepicker.show-ranges.ltr .drp-calendar.left {
+    border-color: #D1D1D1; }
+  .daterangepicker .ranges {
+    margin-top: 16px;
+    color: #444444; }
+    .daterangepicker .ranges li {
+      font-size: 13px;
+      line-height: 20px;
+      padding: 4px 12px; }
+      .daterangepicker .ranges li:hover {
+        background: #E6E6E6; }
+      .daterangepicker .ranges li.active {
+        background: #0B599C;
+        color: #ededed; }
   .daterangepicker .drp-selected {
     display: none; }
+  .daterangepicker .calendar-table th {
+    border-radius: 0 !important; }
+    .daterangepicker .calendar-table th.month {
+      font-size: 14px; }
   .daterangepicker .calendar-table tr {
+    font-size: 13px;
     display: grid;
     grid-template-columns: repeat(7, 1fr); }
+    .daterangepicker .calendar-table tr td {
+      border-radius: 0 !important; }
+      .daterangepicker .calendar-table tr td.available:hover {
+        background: #E6E6E6; }
+      .daterangepicker .calendar-table tr td.off {
+        color: #9C9C9C; }
+        .daterangepicker .calendar-table tr td.off.in-range, .daterangepicker .calendar-table tr td.off.start-date, .daterangepicker .calendar-table tr td.off.end-date {
+          color: #9C9C9C; }
+      .daterangepicker .calendar-table tr td.in-range {
+        border-radius: 0;
+        background: #E8F4FD; }
+        .daterangepicker .calendar-table tr td.in-range:hover {
+          background: #E8F4FD; }
+      .daterangepicker .calendar-table tr td.active {
+        color: #EDEDED;
+        border-radius: 0;
+        background-color: #0B599C; }
+        .daterangepicker .calendar-table tr td.active:hover {
+          color: #EDEDED;
+          background-color: #0B599C; }
   .daterangepicker .calendar-table td.available, .daterangepicker .calendar-table td.disabled, .daterangepicker .calendar-table th {
     line-height: 23px;
     height: 32px;

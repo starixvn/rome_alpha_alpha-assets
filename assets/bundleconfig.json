@@ -1559,7 +1559,7 @@
     "outputFileName": "bundles/site-asset/daterangepicker-dark.css",
     "inputFiles": [
       "styles/vendors/daterangepicker/daterangepicker.css",
-      "styles/components/daterangepicker-customize.css"
+      "styles/components/daterangepicker-customize-dark.css"
     ]
   },
   {
