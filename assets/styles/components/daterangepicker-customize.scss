@@ -140,7 +140,7 @@
     }
     .daterangepicker {
         width: 99.999% !important;
-        max-width: 400px;
+        max-width: 380px;
 
         @media (orientation: landscape) {
             max-width: 650px;
@@ -176,6 +176,9 @@
         }
 
         .calendar-table {
+            table{
+                width: auto;
+            }
             th, td {
                 font-size: 100%;
                 line-height: 23px !important;
