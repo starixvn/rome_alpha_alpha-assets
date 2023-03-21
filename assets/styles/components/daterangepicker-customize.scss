@@ -4,6 +4,7 @@
     border-color: #D1D1D1;
     border-radius: 0;
     font-family: $font-family;
+
     &:after {
         top: -5px;
     }
@@ -31,6 +32,11 @@
     .ranges {
         margin-top: 16px;
         color: #444444;
+        width: 130px;
+
+        ul {
+            width: 100%;
+        }
 
         li {
             font-size: 13px;
@@ -77,6 +83,7 @@
 
                 &.off {
                     color: #9C9C9C;
+                    background-color: transparent !important;
 
                     &.in-range, &.start-date, &.end-date {
                         color: #9C9C9C;
@@ -140,7 +147,7 @@
     }
     .daterangepicker {
         width: 99.999% !important;
-        max-width: 400px;
+        max-width: 375px;
 
         @media (orientation: landscape) {
             max-width: 650px;
@@ -156,7 +163,7 @@
         }
 
         .drp-calendar {
-            width: 260px !important;
+            width: 240px !important;
             float: left;
 
             @media (orientation: portrait) {
@@ -176,9 +183,6 @@
         }
 
         .calendar-table {
-            table{
-                width: auto;
-            }
             th, td {
                 font-size: 100%;
                 line-height: 23px !important;

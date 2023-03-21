@@ -447,8 +447,12 @@
   .daterangepicker.show-ranges.ltr .drp-calendar.left {
     border-color: #474747; }
   .daterangepicker .ranges {
-    margin-top: 16px; }
+    margin-top: 16px;
+    width: 130px; }
+    .daterangepicker .ranges ul {
+      width: 100%; }
     .daterangepicker .ranges li {
+      font-size: 13px;
       line-height: 20px;
       padding: 4px 12px; }
       .daterangepicker .ranges li.active {
@@ -519,7 +523,7 @@
     width: 215px !important; }
   .daterangepicker {
     width: 99.999% !important;
-    max-width: 400px; } }
+    max-width: 375px; } }
   @media only screen and (max-device-width: 767px) and (orientation: landscape) {
     .daterangepicker {
       max-width: 650px; } }
@@ -534,7 +538,7 @@
 
 @media only screen and (max-device-width: 767px) {
     .daterangepicker .drp-calendar {
-      width: 260px !important;
+      width: 240px !important;
       float: left; } }
     @media only screen and (max-device-width: 767px) and (orientation: portrait) {
       .daterangepicker .drp-calendar {
@@ -549,8 +553,6 @@
         width: 50%; } }
 
 @media only screen and (max-device-width: 767px) {
-    .daterangepicker .calendar-table table {
-      width: auto; }
     .daterangepicker .calendar-table th, .daterangepicker .calendar-table td {
       font-size: 100%;
       line-height: 23px !important;
