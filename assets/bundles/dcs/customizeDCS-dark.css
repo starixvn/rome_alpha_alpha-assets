@@ -24,7 +24,6 @@
   font-weight: bold;
   font-style: normal; }
 
-
 @font-face {
   font-family: 'Iconalpha';
   src: url("../../styles/fonts/iconalpha/fonts/Iconalpha.eot?6g5qgr");
@@ -326,6 +325,9 @@ a {
 
 .settingtype8 .block__cell--no-border-bottom {
   border-bottom: none; }
+
+.settingtype23 .block__subType-header {
+  border-top: 1px solid #5F626B; }
 
 .setting-field {
   /*border: 1px solid $component-border-color;
