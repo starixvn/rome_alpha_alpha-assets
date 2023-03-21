@@ -9235,6 +9235,25 @@ select {
   content: '\e91f';
   color: #52a220; }
 
+.label-week-box {
+  margin-bottom: 10px; }
+  .label-week-box .label-week {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #727272;
+    border: 1px solid #727272;
+    padding: 3px 10px;
+    margin: 0 12px 5px 0;
+    text-decoration: none; }
+    .label-week-box .label-week.active, .label-week-box .label-week:hover {
+      background: #E8F4FD;
+      border: 1px solid #0B599C;
+      color: #0B599C; }
+    .label-week-box .label-week.active {
+      font-weight: bold; }
+
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
   position: relative;

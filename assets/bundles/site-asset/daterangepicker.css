@@ -430,7 +430,8 @@
 /*******************************************/
 .daterangepicker {
   border-color: #D1D1D1;
-  border-radius: 0; }
+  border-radius: 0;
+  font-family: Roboto, Arial, Tahoma, sans-serif; }
   .daterangepicker:after {
     top: -5px; }
   .daterangepicker.show-calendar .ranges {
@@ -505,7 +506,7 @@
     width: 215px !important; }
   .daterangepicker {
     width: 99.999% !important;
-    max-width: 380px; } }
+    max-width: 400px; } }
   @media only screen and (max-device-width: 767px) and (orientation: landscape) {
     .daterangepicker {
       max-width: 650px; } }

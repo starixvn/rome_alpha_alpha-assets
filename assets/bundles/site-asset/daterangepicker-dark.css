@@ -433,7 +433,8 @@
   background: #2b2b2b;
   border-color: #474747;
   color: #ededed;
-  border-radius: 0; }
+  border-radius: 0;
+  font-family: Roboto, Arial, Tahoma, sans-serif; }
   .daterangepicker:before {
     border-bottom: 7px solid #474747; }
   .daterangepicker:after {
@@ -518,7 +519,7 @@
     width: 215px !important; }
   .daterangepicker {
     width: 99.999% !important;
-    max-width: 380px; } }
+    max-width: 400px; } }
   @media only screen and (max-device-width: 767px) and (orientation: landscape) {
     .daterangepicker {
       max-width: 650px; } }
