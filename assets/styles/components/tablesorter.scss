@@ -14,10 +14,36 @@
         padding: 0 2px;
     }
 
+    .sorting_asc {
+        background-clip: padding-box;
+        cursor: pointer;
+        position: relative;
+        padding-right: 14px;
+
+        &:after, &.col-combine .prior-sortedcolumn:after {
+            @extend %alphaIcon;
+            content: '\e961';
+            color: #ff1500;
+        }
+    }
+
+    .sorting_desc {
+        background-clip: padding-box;
+        cursor: pointer;
+        position: relative;
+        padding-right: 14px;
+
+        &:after, &.col-combine .prior-sortedcolumn:after {
+            @extend %alphaIcon;
+            content: '\e962';
+            color: #ff1500;
+        }
+    }
+
     .sorting {
         background-clip: padding-box;
         cursor: pointer;
-        position: relative;        
+        position: relative;
         padding-right: 14px;
 
         &:after {
@@ -36,9 +62,9 @@
         &.sorting-desc {
             &:after, &.col-combine .prior-sortedcolumn:after {
                 @extend %alphaIcon;
-                content: '\e962';  
+                content: '\e962';
                 color: #ff1500;
-            }     
+            }
         }
 
         &.col-combine {
@@ -49,14 +75,13 @@
             .prior-sortedcolumn {
                 display: inline-block;
                 position: relative;
-                padding-right: 16px;                
+                padding-right: 16px;
 
                 &:after {
                     @extend %alphaIcon;
                     content: '\e960';
                 }
             }
-            
         }
     }
 }

@@ -5369,6 +5369,36 @@ select {
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
+.switch-version {
+  position: relative; }
+  .switch-version .btn-switch-version {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: #3B4652;
+    color: #ededed;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: bold;
+    padding: 6px 12px 2px 12px;
+    display: inline-flex; }
+    .switch-version .btn-switch-version .icon-refresh2 {
+      font-size: 20px;
+      position: relative;
+      margin-right: 5px;
+      top: -2px; }
+    .switch-version .btn-switch-version .hidden-pc {
+      display: none; }
+    @media only screen and (max-device-width: 767px) {
+      .switch-version .btn-switch-version {
+        position: relative;
+        margin-bottom: 5px;
+        padding: 6px 6px 2px 6px; }
+        .switch-version .btn-switch-version .hidden-pc {
+          display: block; }
+        .switch-version .btn-switch-version .hidden-mobile {
+          display: none; } }
+
 .filter {
   padding-top: 15px;
   position: relative; }
@@ -5437,6 +5467,24 @@ select {
 .form-validation .txt.valid ~ .validation:before {
   content: '\e91f';
   color: #7ECC4D; }
+
+.label-week-box {
+  margin-bottom: 10px; }
+  .label-week-box .label-week {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #696969;
+    border: 1px solid #696969;
+    padding: 3px 10px;
+    margin: 0 12px 5px 0;
+    text-decoration: none; }
+    .label-week-box .label-week.active, .label-week-box .label-week:hover {
+      border: 1px solid #ededed;
+      color: #ededed; }
+    .label-week-box .label-week.active {
+      font-weight: bold; }
 
 
 /*******************************************/
