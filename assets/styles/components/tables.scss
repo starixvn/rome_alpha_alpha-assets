@@ -9,7 +9,9 @@
     border: 1px solid $table-border-color;
     border-collapse: collapse;
     background-color: #fff;
-
+    .dataTables_empty{
+        text-align: center;
+    }
     &.tblRpt-bordered {
         > thead > tr > th, > tbody > tr > td, tfoot > tr > td {
             border: 1px solid $table-border-color;

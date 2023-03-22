@@ -12,6 +12,9 @@
     color: #EDEDED;
     border-right: 0;
 
+    .dataTables_empty {
+        text-align: center;
+    }
 
     &.tblRpt-bordered {
         &#tbl-report {

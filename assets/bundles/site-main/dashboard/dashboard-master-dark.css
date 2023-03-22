@@ -37,6 +37,8 @@
   background-color: #181919;
   color: #EDEDED;
   border-right: 0; }
+  .tblRpt .dataTables_empty {
+    text-align: center; }
   .tblRpt.tblRpt-bordered#tbl-report {
     border-bottom: 1px solid #5F626B;
     border-top: 0;
@@ -158,7 +160,6 @@
 
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
-
 
 /*******************************************/
 /* Devices */

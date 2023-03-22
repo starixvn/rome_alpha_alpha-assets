@@ -1477,6 +1477,8 @@ legend {
   border: 1px solid #d1d1d1;
   border-collapse: collapse;
   background-color: #fff; }
+  .tblRpt .dataTables_empty {
+    text-align: center; }
   .tblRpt.tblRpt-bordered > thead > tr > th, .tblRpt.tblRpt-bordered > tbody > tr > td, .tblRpt.tblRpt-bordered tfoot > tr > td {
     border: 1px solid #d1d1d1; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
@@ -1573,7 +1575,6 @@ legend {
 
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
-
 
 /*! jQuery UI - v1.9.1 - 2012-11-21
 * http://jqueryui.com
