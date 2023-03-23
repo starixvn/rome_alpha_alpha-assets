@@ -81,7 +81,7 @@
 
     &.alternative-row-table {
         tbody {
-            .even-row {
+            .even-row, .even {
                 background-color: $table-even-bg;
             }
         }

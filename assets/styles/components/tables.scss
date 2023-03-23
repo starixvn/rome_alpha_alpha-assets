@@ -9,9 +9,11 @@
     border: 1px solid $table-border-color;
     border-collapse: collapse;
     background-color: #fff;
-    .dataTables_empty{
+
+    .dataTables_empty {
         text-align: center;
     }
+
     &.tblRpt-bordered {
         > thead > tr > th, > tbody > tr > td, tfoot > tr > td {
             border: 1px solid $table-border-color;
@@ -28,7 +30,7 @@
 
     &.alternative-row-table {
         tbody {
-            .even-row {
+            .even-row, .even {
                 background-color: $table-even-bg;
             }
         }
