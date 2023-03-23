@@ -4904,6 +4904,221 @@ $.fn.resizable.isResizing=false;
 
 }(window.jQuery);
 
+!function(e){if("object"==typeof exports&&"undefined"!=typeof module)module.exports=e();else if("function"==typeof define&&define.amd)define([],e);else{var n;"undefined"!=typeof window?n=window:"undefined"!=typeof global?n=global:"undefined"!=typeof self&&(n=self),n.Countdown=e()}}(function(){var define,module,exports;return (function e(t,n,r){function s(o,u){if(!n[o]){if(!t[o]){var a=typeof require=="function"&&require;if(!u&&a)return a(o,!0);if(i)return i(o,!0);var f=new Error("Cannot find module '"+o+"'");throw f.code="MODULE_NOT_FOUND",f}var l=n[o]={exports:{}};t[o][0].call(l.exports,function(e){var n=t[o][1][e];return s(n?n:e)},l,l.exports,e,t,n,r)}return n[o].exports}var i=typeof require=="function"&&require;for(var o=0;o<r.length;o++)s(r[o]);return s})({1:[function(require,module,exports){
+var defaultOptions = {
+  date: "June 7, 2087 15:03:25",
+  refresh: 1000,
+  offset: 0,
+  onEnd: function() {
+    return;
+  },
+  render: function (date) {
+    this.el.innerHTML = date.years + " years, " +
+                        date.days  + " days, " +
+                        this.leadingZeros(date.hours) + " hours, " +
+                        this.leadingZeros(date.min) + " min and " +
+                        this.leadingZeros(date.sec) + " sec";
+  }
+};
+
+/**
+ * Countdown constructor
+ * @param {HTMLElement} el      DOM node of the countdown
+ * @param {Object}      options (optional) Options for the plugin
+ */
+var Countdown = function(el, options) {
+
+  /**
+   * Reference to the DOM element
+   * @type {HTMLElement}
+   */
+  this.el = el;
+
+  /**
+   * Options of the countdown plugin
+   * @type {Object}
+   */
+  this.options = {};
+
+  /**
+   * Interval reference or false if counter is stopped
+   * @type {Mixed}
+   */
+  this.interval = false;
+
+  // merge default options and options into this.options
+  for (var i in defaultOptions) {
+    if (defaultOptions.hasOwnProperty(i)) {
+      this.options[i] = typeof options[i] !== 'undefined' ? options[i] : defaultOptions[i];
+
+      if (i === 'date' && typeof this.options.date !== 'object') {
+        this.options.date = new Date(this.options.date);
+      }
+
+      // bind context for functions
+      if (typeof this.options[i] === 'function') {
+        this.options[i] = this.options[i].bind(this);
+      }
+    }
+  }
+
+  /**
+   * Get the difference between now and the end date
+   * @return {Object} Object with the diff information (years, days, hours, min, sec, millisec)
+   */
+  this.getDiffDate = function() {
+    var diff = (this.options.date.getTime() - Date.now() + this.options.offset) / 1000;
+
+    var dateData = {
+      years:    0,
+      days:     0,
+      hours:    0,
+      min:      0,
+      sec:      0,
+      millisec: 0
+    };
+
+    if (diff <= 0) {
+      if (this.interval) {
+        this.stop();
+        this.options.onEnd();
+      }
+      return dateData;
+    }
+
+    if (diff >= (365.25 * 86400)) {
+      dateData.years = Math.floor(diff / (365.25 * 86400));
+      diff -= dateData.years * 365.25 * 86400;
+    }
+
+    if (diff >= 86400) {
+      dateData.days = Math.floor(diff / 86400);
+      diff -= dateData.days * 86400;
+    }
+
+    if (diff >= 3600) {
+      dateData.hours = Math.floor(diff / 3600);
+      diff -= dateData.hours * 3600;
+    }
+
+    if (diff >= 60) {
+      dateData.min = Math.floor(diff / 60);
+      diff -= dateData.min * 60;
+    }
+
+    dateData.sec = Math.round(diff);
+
+    dateData.millisec = diff % 1 * 1000;
+
+    return dateData;
+  }.bind(this);
+
+  /**
+   * Add leading zeros to a number
+   * @param  {Number} num    Input number
+   * @param  {Number} length Length of the desired output
+   * @return {String}        String of the desired length with leading zeros
+   */
+  this.leadingZeros = function(num, length) {
+    length = length || 2;
+    num = String(num);
+    if (num.length > length) {
+      return num;
+    }
+    return (Array(length + 1).join('0') + num).substr(-length);
+  };
+
+  /**
+   * Update the end date of the countdown
+   * @param  {Mixed}     newDate Date object or a String/Number that can be passed to the Date constructor
+   * @return {Countdown}         Countdown instance
+   */
+  this.update = function(newDate) {
+    if (typeof newDate !== 'object') {
+      newDate = new Date(newDate);
+    }
+    this.options.date = newDate;
+    this.render();
+    return this;
+  }.bind(this);
+
+  /**
+   * Stop the countdown refresh / rerender
+   * @return {Countdown} Countdown instance
+   */
+  this.stop = function() {
+    if (this.interval) {
+      clearInterval(this.interval);
+      this.interval = false;
+    }
+    return this;
+  }.bind(this);
+
+  /**
+   * Render the countdown
+   * @return {Countdown} Countdown instance
+   */
+  this.render = function() {
+    this.options.render(this.getDiffDate());
+    return this;
+  }.bind(this);
+
+  /**
+   * Start the countdown
+   * @return {Countdown} Countdown instance
+   */
+  this.start = function() {
+    // don't start if the countdown is already started
+    if (this.interval) { return; }
+
+    this.render();
+
+    if (this.options.refresh) {
+      this.interval = setInterval(this.render, this.options.refresh);
+    }
+
+    return this;
+  }.bind(this);
+
+  /**
+   * Update the offset
+   * @param  {Number}    offset New offset in ms
+   * @return {Countdown}        Countdown instance
+   */
+  this.updateOffset = function(offset) {
+    this.options.offset = offset;
+    return this;
+  }.bind(this);
+
+
+  // initial start of the countdown or initial render
+  this.start();
+};
+
+module.exports = Countdown;
+
+},{}],2:[function(require,module,exports){
+var Countdown = require('./countdown.js');
+var NAME = 'countdown';
+var DATA_ATTR = 'date';
+
+jQuery.fn.countdown = function(options) {
+  return $.each(this, function(i, el) {
+    var $el = $(el);
+    if (!$el.data(NAME)) {
+      // allow setting the date via the data-date attribute
+      if ($el.data(DATA_ATTR)) {
+        options.date = $el.data(DATA_ATTR);
+      }
+      $el.data(NAME, new Countdown(el, options));
+    }
+  });
+};
+
+module.exports = Countdown;
+
+},{"./countdown.js":1}]},{},[2])(2)
+});
 "use strict";
 
 // Store.js
@@ -5429,3 +5644,269 @@ function requestData(url, successFunction, methodType) {
         }
     });
 }
+var g_o = [];
+var g_o_i = 0;
+(function($){
+    $.fn.setTheSwitch = function(options) {
+        defaults = {
+            steps: 3,
+            bgOn: '#4da154',
+            bgNoSet: '#f1f1f1',
+            bgOff: '#d82c2c',
+            width: 60,
+            porcent: false,
+            height: 14, 
+            action: 'noset',
+            onLabel: '●',
+            offLabel: '●',
+            hsize: 11,
+            disabled: false,
+            onSet: function(e) {},
+            onClickOn: function(e) {},
+            onClickNoSet: function(e) {},
+            onClickOff: function(e) {}
+        };
+        var dataValue = $(this).attr("data-value");
+        if(typeof dataValue === 'undefined') {
+            var options = $.extend({}, defaults, options);
+            $(this).attr('data-option', g_o_i++ );
+            g_o.push(options);
+            createSwitchComponent(this, options);
+        }
+    }
+
+    function createSwitchComponent(_root, options) {
+        $(_root).html('');
+
+        var sizeType = "px";
+        if(options.height < 4 ) options.height = 4;
+        if(options.porcent==true) sizeType = "%"; 
+        var width = (options.width+6).toString() + sizeType;
+        if(options.steps!=2&&options.steps!=3) {
+            options.steps = 3;
+        }
+        if(options.steps==2 && options.action=="noset") {
+            options.action = "off";
+        }
+        var widthPart = (options.width / options.steps);
+        var height = options.height.toString() + sizeType;
+        var marginHeigh = options.height * 0.1;
+        var marginHe = marginHeigh.toString() + "px";
+        var borderColor = "#bdbdbd";
+        var radius = (options.height/2).toString() + "px"
+        
+        var elementName = $(_root).attr("id"); 
+        var elementRailOn = elementName + "_railon";
+        var elementRailNoSet = elementName + "_railnoset";
+        var elementRailOff = elementName + "_railoff";
+
+        var railOffCss = {
+            "cursor": "pointer",
+            "color": "#ff0000",
+            "font-size": "0.7em",
+            "text-align": "center",
+            "display": "inline-block", 
+            "width": widthPart.toString() + sizeType, 
+            "vertical-align": "top",
+            "border-left": "1px solid " + borderColor, 
+            "border-top": "1px solid " + borderColor, 
+            "border-bottom": "1px solid " + borderColor, 
+            "border-top-left-radius": radius, 
+            "border-bottom-left-radius": radius, 
+            "height": "100%",
+            "margin-top": marginHe,
+            "margin-bottom": marginHe
+        };
+        var railNoSetCss = {
+            "cursor": "pointer",
+            "display": "inline-block", 
+            "text-align": "center",
+            "width": widthPart.toString() + sizeType, 
+            "vertical-align": "top",
+            "border-top": "1px solid " + borderColor, 
+            "border-bottom": "1px solid " + borderColor, 
+            "height": "100%",
+            "margin-top": marginHe,
+            "margin-bottom": marginHe
+        };
+        var railOnCss = {
+            "cursor": "pointer",
+            "color": "#089710",
+            "font-size": "0.7em",
+            "text-align": "center",
+            "display": "inline-block", 
+            "width": widthPart.toString() + sizeType, 
+            "vertical-align": "top",
+            "border-right": "1px solid " + borderColor, 
+            "border-top": "1px solid " + borderColor, 
+            "border-bottom": "1px solid " + borderColor, 
+            "border-top-right-radius": radius, 
+            "border-bottom-right-radius": radius, 
+            "height": "100%",
+            "margin-top": marginHe,
+            "margin-bottom": marginHe
+        };
+
+        $(_root).css({ "display": "inline-block", "width": width, "height": height });
+        var switchRailOn = $("<div>&nbsp;</div>").css(railOnCss).attr("id", elementRailOn);
+        var switchRailNoSet = $("<div>&nbsp;</div>").css(railNoSetCss).attr("id", elementRailNoSet);
+        var switchRailOff = $("<div>&nbsp;</div>").css(railOffCss).attr("id", elementRailOff);
+        
+        setTheSwitchHandler(_root, options.action,  switchRailOn, switchRailNoSet, switchRailOff, options, action=>{
+            options.onSet(_root);
+        });
+    }
+
+    function setTheSwitchHandler(element, action,  switchRailOn, switchRailNoSet, switchRailOff, options, callBack) {
+
+        setOptionsAction(element, action, true);
+
+        var radius = (14/2).toString() + "px";
+
+        $(switchRailOn).html('');
+        $(switchRailNoSet).html('');
+        $(switchRailOff).html('');
+        
+        $(element).append(switchRailOff);
+        if(options.steps==3) {
+            $(element).append(switchRailNoSet)
+        }
+        $(element).append(switchRailOn);
+
+        var handlerCss = {
+            "cursor": "pointer",
+            "display": "inline-block",
+            "height": options.hsize.toString() + "px", 
+            "width": options.hsize.toString() + "px", 
+            "border-radius": radius,
+            "border": "1px solid #d5e1ee",
+            "background-image": "linear-gradient(bottom, rgb(234,241,249) 0%, rgb(234,241,249) 90%)",
+            "-moz-box-shadow": "1px 2px 4px #5d5d5d",
+            "-webkit-box-shadow": "1px 2px 4px #5d5d5d",
+            "box-shadow": "1px 2px 4px #5d5d5d"
+        };
+
+        if(options.disabled) { 
+
+            handlerCss.display = "none";
+
+        }
+
+
+        $(element).attr("data-value", action);
+
+        var handler = $("<div draggable='true'>&nbsp;</div>");
+
+        var onLabel = "<span>" + (!options.disabled ? options.onLabel : '') + "<span>";
+        var offLabel = "<span>" + (!options.disabled ? options.offLabel : '') + "<span>";
+
+        switch(action) {
+            case 'on':
+                handlerCss.float = 'right';
+                if(options.steps == 2) {
+                    $(offLabel).css({ "float": "right"});
+                }
+                $(handler).css(handlerCss);
+                
+                $(switchRailNoSet).css({ "background-color": options.bgOn });
+                $(switchRailOn).append(handler).css({ "background-color": options.bgOn });
+                $(switchRailOff).append(offLabel).css({ "background-color": options.bgOn });
+                
+                $(switchRailOn).css({ "background-color": options.bgOn });
+                $(switchRailNoSet).css({ "background-color": options.bgOn });
+                $(switchRailOff).css({ "background-color": options.bgOn });;
+            break;
+            case 'noset':
+                handlerCss.float = 'center';
+                $(handler).css(handlerCss);
+                $(switchRailNoSet).append(handler);
+                $(switchRailOn).append(onLabel);
+                $(switchRailOff).append(offLabel);
+
+                $(switchRailOn).css({ "background-color": options.bgNoSet });
+                $(switchRailNoSet).css({ "background-color": options.bgNoSet });
+                $(switchRailOff).css({ "background-color": options.bgNoSet });;
+            break;
+            case 'off':
+                handlerCss.float = 'left';
+                if(options.steps == 2) {
+                    $(onLabel).css({ "float": "left"});
+                }
+                $(handler).css(handlerCss);
+                $(switchRailOn).append(onLabel);
+                $(switchRailOff).append(handler);
+
+                $(switchRailOn).css({ "background-color": options.bgOff });
+                $(switchRailNoSet).css({ "background-color": options.bgOff });
+                $(switchRailOff).css({ "background-color": options.bgOff });;
+            break;
+        }
+
+        if(!options.disabled) { 
+
+            $(switchRailOn).off( "click" );
+            $(switchRailOn).click(e=>{
+                if(action!='on') {
+                    setTheSwitchHandler(element, 'on',  switchRailOn, switchRailNoSet, switchRailOff, options, function(action){  });       
+                    options.onClickOn(element);
+                }
+            });
+            if(options.steps==3) {
+                $(switchRailNoSet).off( "click" );
+                $(switchRailNoSet).click(e=>{
+                    if(action!='noset') {
+                        setTheSwitchHandler(element, 'noset',  switchRailOn, switchRailNoSet, switchRailOff, options, function(action){ });
+                        options.onClickNoSet(element);
+                    }
+                });
+            }
+            $(switchRailOff).off( "click" );
+            $(switchRailOff).click(e=>{
+                if(action!='off') {
+                    setTheSwitchHandler(element, 'off',  switchRailOn, switchRailNoSet, switchRailOff, options, function(action){ });
+                    options.onClickOff(element);
+                }
+            });
+            
+        }
+            
+        callBack(action);
+
+    }
+
+    $.fn.getTheSwitchValue = function(sendData) {
+        var value =  $(this).attr("data-value");
+        sendData(value);
+    }
+
+    $.fn.setTheSwitchValue = function(action) {
+        setOptionsAction(this, action);
+    }
+
+    $.fn.enabledTheSwitch = function(enabled) {
+        enabledSwitch(this, enabled);
+    }
+
+    function setOptionsAction(_root, action, nodraw) {
+        var index = parseInt($(_root).attr('data-option'));
+        g_o[index].action = action;
+        if( typeof nodraw === 'undefined' ) {
+            createSwitchComponent(_root, g_o[index]);
+        }      
+        else if(!nodraw) {
+            createSwitchComponent(_root, g_o[index]);
+        }          
+    }
+
+    function enabledSwitch(_root, enabled, nodraw) {
+        var index = parseInt($(_root).attr('data-option'));
+        g_o[index].disabled = !enabled;
+        if( typeof nodraw === 'undefined' ) {
+            createSwitchComponent(_root, g_o[index]);
+        }      
+        else if(!nodraw) {
+            createSwitchComponent(_root, g_o[index]);
+        }          
+    }
+
+}(jQuery))
