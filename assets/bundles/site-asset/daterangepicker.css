@@ -576,7 +576,24 @@
   display: flex;
   flex-wrap: wrap;
   max-width: 420px;
-  margin-top: 5px; }
+  margin-top: 7px; }
+  .date-picker-wrapper:after {
+    position: absolute;
+    content: '';
+    top: -6px;
+    left: 10px;
+    display: inline-block;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #fff;
+    border-left: 6px solid transparent; }
+  .date-picker-wrapper:before {
+    position: absolute;
+    content: '';
+    top: -7px;
+    left: 9px;
+    border-right: 7px solid transparent;
+    border-left: 7px solid transparent;
+    border-bottom: 7px solid #D1D1D1; }
 
 .dp-clearfix {
   clear: both;
@@ -696,7 +713,7 @@
       height: 20px;
       line-height: 20px;
       font-weight: 100;
-      text-transform: uppercase; }
+      text-transform: capitalize; }
     .date-picker-wrapper .month-wrapper table .day.has-tooltip {
       cursor: help !important; }
       .date-picker-wrapper .month-wrapper table .day.has-tooltip .tooltip {
