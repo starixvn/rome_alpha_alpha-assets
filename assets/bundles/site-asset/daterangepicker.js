@@ -4856,7 +4856,7 @@ var NexDatePickerHelper = NexDatePickerHelper ||
                 if (opt.customShortcuts) {
                     for (var i = 0; i < opt.customShortcuts.length; i++) {
                         var sh = opt.customShortcuts[i];
-                        html += '&nbsp;<span class="custom-shortcut"><a href="javascript:;" shortcut="custom">' + sh.name + '</a></span>';
+                        html += '<span class="custom-shortcut"><a href="javascript:;" shortcut="custom">' + sh.name + '</a></span>';
                     }
                 }
                 html += '</div>';

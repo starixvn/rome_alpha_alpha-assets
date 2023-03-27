@@ -4212,6 +4212,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+
 /*!
  * Datetimepicker for Bootstrap 3
  * version : 4.17.42
@@ -6027,6 +6028,7 @@ input[type=reset], .btn-reset {
     .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
       width: calc(100% - 56px) !important; } }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6076,6 +6078,7 @@ input[type=reset], .btn-reset {
     width: 0; }
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -6206,6 +6209,7 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6271,6 +6275,7 @@ input[type="number"], input[type="tel"] {
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6281,11 +6286,13 @@ input[type="number"], input[type="tel"] {
   border: 1px solid #d1d1d1;
   border-collapse: collapse;
   background-color: #fff; }
+  .tblRpt .dataTables_empty {
+    text-align: center; }
   .tblRpt.tblRpt-bordered > thead > tr > th, .tblRpt.tblRpt-bordered > tbody > tr > td, .tblRpt.tblRpt-bordered tfoot > tr > td {
     border: 1px solid #d1d1d1; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #eae9ee; }
-  .tblRpt.alternative-row-table tbody .even-row {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
     background-color: #eae9ee; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #f8eb95; }
@@ -6377,6 +6384,7 @@ input[type="number"], input[type="tel"] {
 
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -7228,11 +7236,13 @@ body .ui-tooltip { border-width: 2px; }
   font-size: 100% !important;
   margin: 3px 5px 3px 16px; }
 
+
 .input-group.date .input-group-addon {
   padding-right: 0; }
 
 .daterange-picker {
   display: none; }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -7805,6 +7815,7 @@ body .ui-tooltip { border-width: 2px; }
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
+
 
 /*******************************************/
 /* Devices */
