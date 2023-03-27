@@ -32,7 +32,7 @@
     &:after {
         position: absolute;
         content: '';
-        top: -6px;
+        top: -5px;
         left: 10px;
         display: inline-block;
         border-right: 6px solid transparent;
@@ -279,8 +279,8 @@
             &:after {
                 width: 8px;
                 height: 8px;
-                border-left: 3px solid #333;
-                border-top: 3px solid #333;
+                border-left: 2px solid #333;
+                border-top: 2px solid #333;
                 content: "";
                 display: block;
                 transform: rotate(-45deg);
@@ -416,9 +416,6 @@
             .normal-top {
                 display: block;
 
-                .selection-top {
-                    color: #333;
-                }
             }
         }
 
@@ -560,10 +557,5 @@
             color: #49e;
             font-weight: bold;
         }
-    }
-}
-.input-group.date {
-    .form-control{
-        font-size: 13px;
     }
 }

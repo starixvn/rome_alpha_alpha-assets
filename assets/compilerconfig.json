@@ -446,5 +446,9 @@
   {
     "outputFile": "styles/vendors/daterangepicker/jquery.daterangepicker.css",
     "inputFile": "styles/vendors/daterangepicker/jquery.daterangepicker.scss"
+  },
+  {
+    "outputFile": "styles/vendors/daterangepicker/jquery.daterangepicker-dark.css",
+    "inputFile": "styles/vendors/daterangepicker/jquery.daterangepicker-dark.scss"
   }
 ]

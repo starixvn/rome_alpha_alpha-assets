@@ -1465,7 +1465,6 @@ legend {
   font-weight: bold;
   font-style: normal; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -1478,6 +1477,8 @@ legend {
   background-color: #181919;
   color: #EDEDED;
   border-right: 0; }
+  .tblRpt .dataTables_empty {
+    text-align: center; }
   .tblRpt.tblRpt-bordered#tbl-report {
     border-bottom: 1px solid #5F626B;
     border-top: 0;
@@ -1502,7 +1503,7 @@ legend {
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }
@@ -4984,13 +4985,29 @@ body .ui-tooltip { border-width: 2px; }
   text-align: left; }
   .tablesorter th {
     padding: 0 14px; }
-  .tablesorter .sorting:after, .tablesorter .sorting.sorting-asc:after, .tablesorter .sorting.sorting-asc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting.sorting-desc:after, .tablesorter .sorting.sorting-desc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting.col-combine .prior-sortedcolumn:after {
+  .tablesorter .sorting_asc:after, .tablesorter .sorting_asc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting_desc:after, .tablesorter .sorting_desc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting:after, .tablesorter .sorting.sorting-asc:after, .tablesorter .sorting.sorting-asc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting.sorting-desc:after, .tablesorter .sorting.sorting-desc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting.col-combine .prior-sortedcolumn:after {
     cursor: pointer;
     font-family: 'Iconalpha';
     font-size: 12px;
     position: absolute;
     right: 0;
     padding: 0 2px; }
+  .tablesorter .sorting_asc {
+    background-clip: padding-box;
+    cursor: pointer;
+    position: relative;
+    padding-right: 14px; }
+    .tablesorter .sorting_asc:after, .tablesorter .sorting_asc.col-combine .prior-sortedcolumn:after {
+      content: '\e961';
+      color: #ff1500; }
+  .tablesorter .sorting_desc {
+    background-clip: padding-box;
+    cursor: pointer;
+    position: relative;
+    padding-right: 14px; }
+    .tablesorter .sorting_desc:after, .tablesorter .sorting_desc.col-combine .prior-sortedcolumn:after {
+      content: '\e962';
+      color: #ff1500; }
   .tablesorter .sorting {
     background-clip: padding-box;
     cursor: pointer;

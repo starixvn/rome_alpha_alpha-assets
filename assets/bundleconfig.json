@@ -1562,7 +1562,7 @@
     "inputFiles": [
       "styles/vendors/daterangepicker/daterangepicker.css",
       "styles/components/daterangepicker-customize-dark.css",
-      "styles/vendors/daterangepicker/jquery.daterangepicker.css"
+      "styles/vendors/daterangepicker/jquery.daterangepicker-dark.css"
     ]
   },
   {

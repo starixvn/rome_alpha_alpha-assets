@@ -561,7 +561,6 @@
     .daterangepicker .applyBtn, .daterangepicker .cancelBtn {
       height: 36px; } }
 
-
 .date-picker {
   width: 170px;
   height: 25px;
@@ -580,12 +579,12 @@
 .date-picker-wrapper {
   position: absolute;
   z-index: 1;
-  border: 1px solid #D1D1D1;
-  background-color: #ffffff;
+  border: 1px solid #474747;
+  background-color: #2b2b2b;
   padding: 10px 0 0;
   font-size: 13px;
   line-height: 20px;
-  color: #333333;
+  color: #ededed;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
@@ -594,11 +593,11 @@
   .date-picker-wrapper:after {
     position: absolute;
     content: '';
-    top: -6px;
+    top: -5px;
     left: 10px;
     display: inline-block;
     border-right: 6px solid transparent;
-    border-bottom: 6px solid #fff;
+    border-bottom: 6px solid #2b2b2b;
     border-left: 6px solid transparent; }
   .date-picker-wrapper:before {
     position: absolute;
@@ -607,7 +606,7 @@
     left: 9px;
     border-right: 7px solid transparent;
     border-left: 7px solid transparent;
-    border-bottom: 7px solid #D1D1D1; }
+    border-bottom: 7px solid #474747; }
 
 .dp-clearfix {
   clear: both;
@@ -631,17 +630,16 @@
 .date-picker-wrapper .footer {
   order: 2;
   padding: 10px 0;
-  border-right: 1px solid #d1d1d1;
+  border-right: 1px solid #474747;
   flex: 1; }
   .date-picker-wrapper .footer .shortcuts b, .date-picker-wrapper .footer .shortcuts a {
     display: block;
-    color: #333;
     padding: 5px 0 5px 10px; }
   .date-picker-wrapper .footer .shortcuts .custom-shortcut a {
-    text-decoration: none; }
+    text-decoration: none;
+    color: #ededed; }
     .date-picker-wrapper .footer .shortcuts .custom-shortcut a:hover {
-      background: #0B599C;
-      color: #ededed; }
+      background: #36587D; }
 
 .date-picker-wrapper b {
   font-weight: bold; }
@@ -688,7 +686,6 @@
   opacity: 0.01; }
 
 .date-picker-wrapper .month-wrapper {
-  background-color: #fff;
   padding: 10px 5px;
   cursor: default;
   position: relative;
@@ -709,7 +706,6 @@
       width: 32px;
       height: 32px; }
     .date-picker-wrapper .month-wrapper table .day {
-      color: #333;
       cursor: pointer;
       display: flex;
       align-items: center;
@@ -717,12 +713,12 @@
       justify-content: center;
       height: 100%; }
       .date-picker-wrapper .month-wrapper table .day:hover {
-        background: #E6E6E6; }
+        background: #474747; }
     .date-picker-wrapper .month-wrapper table div.day.lastMonth, .date-picker-wrapper .month-wrapper table div.day.nextMonth {
       color: #999;
       cursor: default; }
     .date-picker-wrapper .month-wrapper table .day.checked {
-      background-color: #E8F4FD; }
+      background-color: #233950; }
     .date-picker-wrapper .month-wrapper table .week-name {
       height: 20px;
       line-height: 20px;
@@ -733,18 +729,17 @@
       .date-picker-wrapper .month-wrapper table .day.has-tooltip .tooltip {
         white-space: nowrap; }
     .date-picker-wrapper .month-wrapper table .day.invalid {
-      color: #9C9C9C;
+      color: #696969;
       text-decoration: line-through; }
 
 .date-picker-wrapper .time label {
   white-space: nowrap; }
 
 .date-picker-wrapper .month-wrapper table .day.toMonth.valid {
-  color: #333;
   cursor: pointer; }
 
 .date-picker-wrapper .month-wrapper table .day.toMonth.hovering {
-  background-color: #cdecfa; }
+  background-color: #233950; }
 
 .date-picker-wrapper .month-wrapper table .day.nextMonth, .date-picker-wrapper .month-wrapper table .day.lastMonth {
   display: none; }
@@ -770,8 +765,8 @@
     .date-picker-wrapper table .caption .next:after, .date-picker-wrapper table .caption .prev:after {
       width: 8px;
       height: 8px;
-      border-left: 3px solid #333;
-      border-top: 3px solid #333;
+      border-left: 2px solid #ededed;
+      border-top: 2px solid #ededed;
       content: "";
       display: block;
       transform: rotate(-45deg);
@@ -782,8 +777,7 @@
     transform: rotate(135deg);
     left: 13px; }
   .date-picker-wrapper table .caption .next:hover, .date-picker-wrapper table .caption .prev:hover {
-    background-color: #ccc;
-    color: white; }
+    background-color: #474747; }
 
 .date-picker-wrapper .gap {
   position: relative;
@@ -853,7 +847,7 @@
   position: relative;
   padding: 0 40px 10px 10px;
   width: 100%;
-  border-bottom: 1px solid #D1D1D1; }
+  border-bottom: 1px solid #474747; }
   .date-picker-wrapper .drp_top-bar .error-top, .date-picker-wrapper .drp_top-bar .normal-top {
     display: none; }
   .date-picker-wrapper .drp_top-bar .default-top {
@@ -867,8 +861,6 @@
     display: none; }
   .date-picker-wrapper .drp_top-bar.normal .normal-top {
     display: block; }
-    .date-picker-wrapper .drp_top-bar.normal .normal-top .selection-top {
-      color: #333; }
   .date-picker-wrapper .drp_top-bar .apply-btn {
     position: absolute;
     right: 0px;
@@ -935,7 +927,7 @@
   display: none; }
 
 .date-picker-wrapper .first-date-selected, .date-picker-wrapper .last-date-selected {
-  background-color: #0B599C !important;
+  background-color: #36587D !important;
   color: #EDEDED !important; }
 
 .date-picker-wrapper .date-range-length-tip {
@@ -979,6 +971,3 @@
   .date-picker-wrapper .week-number.week-number-selected {
     color: #49e;
     font-weight: bold; }
-
-.input-group.date .form-control {
-  font-size: 13px; }

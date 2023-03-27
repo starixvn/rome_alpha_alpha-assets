@@ -580,7 +580,7 @@
   .date-picker-wrapper:after {
     position: absolute;
     content: '';
-    top: -6px;
+    top: -5px;
     left: 10px;
     display: inline-block;
     border-right: 6px solid transparent;
@@ -756,8 +756,8 @@
     .date-picker-wrapper table .caption .next:after, .date-picker-wrapper table .caption .prev:after {
       width: 8px;
       height: 8px;
-      border-left: 3px solid #333;
-      border-top: 3px solid #333;
+      border-left: 2px solid #333;
+      border-top: 2px solid #333;
       content: "";
       display: block;
       transform: rotate(-45deg);
@@ -853,8 +853,6 @@
     display: none; }
   .date-picker-wrapper .drp_top-bar.normal .normal-top {
     display: block; }
-    .date-picker-wrapper .drp_top-bar.normal .normal-top .selection-top {
-      color: #333; }
   .date-picker-wrapper .drp_top-bar .apply-btn {
     position: absolute;
     right: 0px;
@@ -965,6 +963,3 @@
   .date-picker-wrapper .week-number.week-number-selected {
     color: #49e;
     font-weight: bold; }
-
-.input-group.date .form-control {
-  font-size: 13px; }
