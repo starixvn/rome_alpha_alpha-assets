@@ -442,5 +442,9 @@
   {
     "outputFile": "styles/components/customize-checkbox-radio-dark.css",
     "inputFile": "styles/components/customize-checkbox-radio-dark.scss"
+  },
+  {
+    "outputFile": "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+    "inputFile": "styles/vendors/daterangepicker/jquery.daterangepicker.scss"
   }
 ]
