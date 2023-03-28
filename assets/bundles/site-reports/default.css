@@ -4718,7 +4718,6 @@ body .ui-tooltip { border-width: 2px; }
       .tablesorter .sorting.col-combine .prior-sortedcolumn:after {
         content: '\e960'; }
 
-
 @font-face {
   font-family: 'Roboto';
   src: url("../../styles/fonts/roboto/Roboto-Regular.woff2") format("woff2");
@@ -5534,7 +5533,7 @@ body .ui-tooltip { border-width: 2px; }
 .icon-excel {
   position: relative;
   cursor: pointer;
-  color: #1f7244;
+  color: #2E9E60;
   font-size: 19px;
   vertical-align: middle;
   height: 28px;

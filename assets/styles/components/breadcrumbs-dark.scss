@@ -19,3 +19,16 @@
         }
     }
 }
+.breadcrumb-table {
+    background: #212223;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 13px 0 10px;
+    min-height: 30px;
+
+    .breadcrumb {
+        border: 0;
+        padding: 0;
+    }
+}
