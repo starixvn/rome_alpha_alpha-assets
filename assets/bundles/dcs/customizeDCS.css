@@ -24,6 +24,7 @@
   font-weight: bold;
   font-style: normal; }
 
+
 @font-face {
   font-family: 'Iconalpha';
   src: url("../../styles/fonts/iconalpha/fonts/Iconalpha.eot?6g5qgr");
@@ -286,6 +287,9 @@ a {
 
 .block__item--near-last {
   border-bottom: none; }
+
+.block__item--before-extra-item {
+  border-right: 1px solid #cecece; }
 
 .full-width .block__item--near-last {
   border-bottom-color: #cecece; }

@@ -213,6 +213,10 @@ a {
     border-bottom: none;
 }
 
+.block__item--before-extra-item {
+    border-right: 1px solid $pt-border-color;
+}
+
 .full-width .block__item--near-last {
     border-bottom-color: $pt-border-color;
 }
