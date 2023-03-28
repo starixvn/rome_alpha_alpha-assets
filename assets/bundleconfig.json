@@ -906,16 +906,14 @@
       "js/libs/moment/locale/zh-cn.js",
       "js/libs/moment/locale/zh-tw.js",
       "js/libs/moment/switch-locale.js",
-      "js/components/daterangepicker/daterangepicker.js",
+      "js/components/daterangepicker/jquery.daterangepicker.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
-      "js/components/daterangepicker/nexDateRangePicker.js",
-      "js/components/daterangepicker/jquery.daterangepicker.js"
+      "js/components/daterangepicker/nexDateRangePicker.js"
     ]
   },
   {
     "outputFileName": "bundles/site-asset/daterangepicker.css",
     "inputFiles": [
-      "styles/vendors/daterangepicker/daterangepicker.css",
       "styles/components/daterangepicker-customize.css",
       "styles/vendors/daterangepicker/jquery.daterangepicker.css"
     ]
@@ -1560,7 +1558,6 @@
   {
     "outputFileName": "bundles/site-asset/daterangepicker-dark.css",
     "inputFiles": [
-      "styles/vendors/daterangepicker/daterangepicker.css",
       "styles/components/daterangepicker-customize-dark.css",
       "styles/vendors/daterangepicker/jquery.daterangepicker-dark.css"
     ]
