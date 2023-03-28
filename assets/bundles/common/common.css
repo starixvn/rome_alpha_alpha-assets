@@ -4388,6 +4388,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+
 @font-face {
   font-family: 'Iconalpha';
   src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?kyr3md');
@@ -4993,6 +4994,7 @@ a, a:focus, a:active, a:target, a:hover {
 .display-none {
   display: none; }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -5051,6 +5053,7 @@ a, a:focus, a:active, a:target, a:hover {
   .msg-error:before {
     content: '\e93e'; }
 
+
 .block-icon-small {
   display: inline-block;
   height: 16px;
@@ -5067,6 +5070,7 @@ a, a:focus, a:active, a:target, a:hover {
   height: 100px;
   background: url(../../styles/images/ajax-loader.gif) center center no-repeat;
   left: 47% !important; }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -5197,6 +5201,7 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
+
 .breadcrumb {
   background: none;
   border-bottom: 1px solid #cecece;
@@ -5214,6 +5219,7 @@ input[type=reset], .btn-reset {
       color: #333;
       padding: 0 8px; }
 
+
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
   position: relative;
@@ -5228,6 +5234,7 @@ input[type=radio].disabled, input[type=radio]:disabled {
 label[disabled] {
   cursor: not-allowed;
   opacity: 0.6; }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -5343,6 +5350,7 @@ select {
 
 .dropdown-menu {
   background-clip: border-box; }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -5463,6 +5471,7 @@ select {
     .label-week-box .label-week.active {
       font-weight: bold; }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -5527,6 +5536,7 @@ input[type="number"], input[type="tel"] {
     /* IE 10+ */
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -5880,6 +5890,7 @@ input[type=reset], .btn-reset {
     .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
       width: calc(100% - 56px) !important; } }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -5929,6 +5940,7 @@ input[type=reset], .btn-reset {
     width: 0; }
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -6501,6 +6513,7 @@ input[type=reset], .btn-reset {
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
+
 
 @font-face {
   font-family: 'password';

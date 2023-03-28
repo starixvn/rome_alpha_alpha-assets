@@ -1439,6 +1439,7 @@ legend {
   pointer-events: none;
   color: #757575; }
 
+
 .withripple {
   position: relative;
 }
@@ -3149,6 +3150,7 @@ yx-axis
   .header-msg {
     display: none; } }
 
+
 .navigation {
   position: absolute;
   top: 88px;
@@ -3178,6 +3180,7 @@ yx-axis
         color: #fff;
         white-space: nowrap;
         border-radius: 5px; }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -3264,45 +3267,6 @@ yx-axis
       .sidebar.collapsed.hovered .list-menu .menu-item .txt-item, .sidebar.collapsed.hovered list-menu .menu-item i {
         display: block; }
 
-/*******************************************/
-/* Devices */
-/*******************************************/
-.customer-profile {
-  background-color: #36587D; }
-
-.sidebar .main-tab li {
-  background-color: #141414;
-  color: #fff; }
-
-.header-nav {
-  background-color: #314453; }
-
-.sidebar .main-tab li.active a {
-  color: #36587D;
-  background-color: #505050; }
-
-.header-nav .list-top > li.language:hover,
-.header-nav .list-top > li.view-type:hover,
-.header-nav .list-top > li.dropdown:active:focus,
-.nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-  background: rgba(255, 255, 255, 0.1); }
-
-.mainmenu-container .sub-menu .sub-menu-item:hover a,
-.mainmenu-container .sub-menu .sub-menu-item.active a,
-.announcement-modal .modal-content .modal-header, .page-title {
-  color: #36587D; }
-
-.announcement-modal .modal-content .modal-header {
-  background-color: #263342; }
-
-@media only screen and (max-device-width: 767px) {
-  .header-nav .list-top > li.language:hover,
-  .header-nav .list-top > li.view-type:hover,
-  .header-nav .list-top > li.dropdown:active:focus,
-  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus {
-    background: none; }
-  .list-action .prevButton:before, .list-action .nextButton:before {
-    color: #36587D; } }
 
 .toast-title {
   font-weight: bold; }
@@ -3497,6 +3461,7 @@ button.toast-close-button {
     padding: 15px 15px 15px 50px;
     width: 25em; } }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -3588,6 +3553,7 @@ button.toast-close-button {
       right: 7px;
       left: initial;
       top: 7px; }
+
 
 /*!
  * resizable 1.0.0

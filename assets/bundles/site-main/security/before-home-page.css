@@ -460,6 +460,7 @@ input, button {
   .modal.information .modal-content .modal-body {
     font-size: 13px; } }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -547,6 +548,7 @@ input, button {
 
 .radio input[type="radio"]:checked + label:after {
   opacity: 1; }
+
 
 /*******************************************/
 /* Devices */

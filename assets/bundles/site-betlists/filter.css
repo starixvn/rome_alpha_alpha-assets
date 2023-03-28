@@ -144,6 +144,7 @@
   background: none;
   color: #333; }
 
+
 /*!
  * Datetimepicker for Bootstrap 3
  * version : 4.17.42
@@ -770,6 +771,7 @@
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
+
 
 .input-group.date .input-group-addon {
   padding-right: 0; }
