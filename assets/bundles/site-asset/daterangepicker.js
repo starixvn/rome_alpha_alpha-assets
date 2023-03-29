@@ -714,7 +714,7 @@
                 return $(this).val();
             },
             setValue: function (s) {
-                if (!$(this).attr('readonly') && !$(this).is(':disabled') && s != $(this).val()) {
+                if (!$(this).is(':disabled') && s != $(this).val()) {
                     $(this).val(s);
                 }
             },
@@ -1096,6 +1096,10 @@
                 if (start && end) {
                     setDateRange(start, end);
                     checkSelectionValid();
+                } else {
+                    $(self).trigger('datepicker-change', {
+                        'value': $(this).html()
+                    });
                 }
             });
 
