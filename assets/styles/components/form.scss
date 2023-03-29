@@ -52,6 +52,13 @@
         margin: 0 16px 15px 0;
         vertical-align: middle;
 
+        .label-form-control {
+            display: block;
+            font-weight: bold;
+            margin-right: 0;
+            margin-bottom: 2px
+        }
+
         label {
             font-weight: normal;
             margin-right: 5px;

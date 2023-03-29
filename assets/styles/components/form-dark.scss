@@ -49,8 +49,16 @@
         display: inline-block;
         margin: 0 16px 15px 0;
         vertical-align: middle;
-        &.product-detail-multiselect-container{
+
+        &.product-detail-multiselect-container {
             z-index: 10000;
+        }
+
+        .label-form-control {
+            display: block;
+            font-weight: bold;
+            margin-right: 0;
+            margin-bottom: 2px
         }
 
         label {

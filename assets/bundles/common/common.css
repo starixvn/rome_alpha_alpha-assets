@@ -5403,6 +5403,11 @@ select {
     display: inline-block;
     margin: 0 16px 15px 0;
     vertical-align: middle; }
+    .filter .form-group .label-form-control {
+      display: block;
+      font-weight: bold;
+      margin-right: 0;
+      margin-bottom: 2px; }
     .filter .form-group label {
       font-weight: normal;
       margin-right: 5px;
@@ -5481,7 +5486,6 @@ select {
       color: #0B599C; }
     .label-week-box .label-week.active {
       font-weight: bold; }
-
 
 /*******************************************/
 /* Ripple Effect */
