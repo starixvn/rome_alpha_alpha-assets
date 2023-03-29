@@ -3515,6 +3515,56 @@ body .ui-tooltip { border-width: 2px; }
   cursor: default;
 }
 
+.tablesorter {
+  text-align: left; }
+  .tablesorter th {
+    padding: 0 14px; }
+  .tablesorter .sorting_asc:after, .tablesorter .sorting_asc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting_desc:after, .tablesorter .sorting_desc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting:after, .tablesorter .sorting.sorting-asc:after, .tablesorter .sorting.sorting-asc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting.sorting-desc:after, .tablesorter .sorting.sorting-desc.col-combine .prior-sortedcolumn:after, .tablesorter .sorting.col-combine .prior-sortedcolumn:after {
+    cursor: pointer;
+    font-family: 'Iconalpha';
+    font-size: 12px;
+    position: absolute;
+    right: 0;
+    padding: 0 2px; }
+  .tablesorter .sorting_asc {
+    background-clip: padding-box;
+    cursor: pointer;
+    position: relative;
+    padding-right: 14px; }
+    .tablesorter .sorting_asc:after, .tablesorter .sorting_asc.col-combine .prior-sortedcolumn:after {
+      content: '\e961';
+      color: #ff1500; }
+  .tablesorter .sorting_desc {
+    background-clip: padding-box;
+    cursor: pointer;
+    position: relative;
+    padding-right: 14px; }
+    .tablesorter .sorting_desc:after, .tablesorter .sorting_desc.col-combine .prior-sortedcolumn:after {
+      content: '\e962';
+      color: #ff1500; }
+  .tablesorter .sorting {
+    background-clip: padding-box;
+    cursor: pointer;
+    position: relative;
+    padding-right: 14px; }
+    .tablesorter .sorting:after {
+      content: '\e960'; }
+    .tablesorter .sorting.sorting-asc:after, .tablesorter .sorting.sorting-asc.col-combine .prior-sortedcolumn:after {
+      content: '\e961';
+      color: #ff1500; }
+    .tablesorter .sorting.sorting-desc:after, .tablesorter .sorting.sorting-desc.col-combine .prior-sortedcolumn:after {
+      content: '\e962';
+      color: #ff1500; }
+    .tablesorter .sorting.col-combine:after {
+      display: none; }
+    .tablesorter .sorting.col-combine .prior-sortedcolumn {
+      display: inline-block;
+      position: relative;
+      padding-right: 16px; }
+      .tablesorter .sorting.col-combine .prior-sortedcolumn:after {
+        content: '\e960'; }
+
+
 .multiselect-container{position:absolute;list-style-type:none;margin:0;padding:0}.multiselect-container .input-group{margin:5px}.multiselect-container>li{padding:0}.multiselect-container>li>a.multiselect-all label{font-weight:700}.multiselect-container>li.multiselect-group label{margin:0;padding:3px 20px 3px 20px;height:100%;font-weight:700}.multiselect-container>li.multiselect-group-clickable label{cursor:pointer}.multiselect-container>li>a{padding:0}.multiselect-container>li>a>label{margin:0;height:100%;cursor:pointer;font-weight:400;padding:3px 20px 3px 40px}.multiselect-container>li>a>label.radio,.multiselect-container>li>a>label.checkbox{margin:0}.multiselect-container>li>a>label>input[type=checkbox]{margin-bottom:5px}.btn-group>.btn-group:nth-child(2)>.multiselect.btn{border-top-left-radius:4px;border-bottom-left-radius:4px}.form-inline .multiselect-container label.checkbox,.form-inline .multiselect-container label.radio{padding:3px 20px 3px 40px}.form-inline .multiselect-container li a label.checkbox input[type=checkbox],.form-inline .multiselect-container li a label.radio input[type=radio]{margin-left:-20px;margin-right:0}
 /*******************************************/
 /* Ripple Effect */
@@ -4119,25 +4169,26 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #333;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
       height: 24px;
-      padding-top: 5px;
-      margin-right: 3px;
-      text-indent: 5px; }
+      padding-top: 7px;
+      margin-right: 5px;
+      text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
       color: #D06400;
       background: #E3E3E3;
       border: 1px solid #D9D9D9;
       border-radius: 3px;
-      padding: 0 5px;
+      padding: 0 4px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 16px;
-      margin-right: 3px;
+      height: 18px;
+      line-height: 16px;
+      margin-right: 4px;
       margin-top: 4px; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #DB6900;
@@ -4145,7 +4196,8 @@ body .ui-tooltip { border-width: 2px; }
       float: left;
       height: 24px;
       padding-top: 5px;
-      margin-right: 3px; }
+      margin-right: 6px;
+      font-size: 17px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {
