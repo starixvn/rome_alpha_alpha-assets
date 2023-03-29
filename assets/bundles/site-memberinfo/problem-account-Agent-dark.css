@@ -6482,6 +6482,7 @@ input[type="number"], input[type="tel"] {
   .input-group.date .form-control {
     border: 1px solid #292929;
     height: 28px;
+    padding: 6px;
     font-size: 13px;
     background: #171717;
     color: #EDEDED;
