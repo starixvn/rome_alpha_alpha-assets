@@ -6438,6 +6438,7 @@ input[type="number"], input[type="tel"] {
   .input-group.date .form-control {
     border: none;
     height: 28px;
+    font-size: 13px;
     background: #fff;
     margin-left: 0;
     -webkit-border-radius: 1px;
@@ -6638,7 +6639,6 @@ input[type="number"], input[type="tel"] {
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
-
 
 /*! jQuery UI - v1.9.1 - 2012-11-21
 * http://jqueryui.com

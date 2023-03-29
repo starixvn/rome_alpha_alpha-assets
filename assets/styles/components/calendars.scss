@@ -30,9 +30,10 @@
         top: 3px;
     }
 
-    .form-control {        
+    .form-control {
         border: none;
         height: 28px;
+        font-size: 13px;
         background: #fff;
         margin-left: 0;
         @include effect-textbox;
