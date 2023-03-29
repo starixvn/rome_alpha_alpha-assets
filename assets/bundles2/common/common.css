@@ -5219,6 +5219,17 @@ input[type=reset], .btn-reset {
       color: #333;
       padding: 0 8px; }
 
+.breadcrumb-table {
+  background: #E3E3E3;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 13px 0 10px;
+  min-height: 30px; }
+  .breadcrumb-table .breadcrumb {
+    border: 0;
+    padding: 0; }
+
 
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
@@ -6257,7 +6268,7 @@ input[type=reset], .btn-reset {
 .icon-excel {
   position: relative;
   cursor: pointer;
-  color: #1f7244;
+  color: #2E9E60;
   font-size: 19px;
   vertical-align: middle;
   height: 28px;
