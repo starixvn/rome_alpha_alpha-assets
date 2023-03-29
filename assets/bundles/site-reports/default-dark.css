@@ -588,8 +588,6 @@
   .input-group.date .form-control {
     border: 1px solid #292929;
     height: 28px;
-    padding: 6px;
-    font-size: 13px;
     background: #171717;
     color: #EDEDED;
     margin-left: 0;
@@ -803,6 +801,7 @@
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
+
 
 /*! jQuery UI - v1.9.1 - 2012-11-21
 * http://jqueryui.com
@@ -5596,7 +5595,7 @@ body .ui-tooltip { border-width: 2px; }
 .icon-excel {
   position: relative;
   cursor: pointer;
-  color: #2E9E60;
+  color: #1f7244;
   font-size: 19px;
   vertical-align: middle;
   height: 28px;
@@ -5738,15 +5737,15 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 26px; }
+    height: 24px; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
       height: 24px;
-      padding-top: 7px;
-      margin-right: 5px;
-      text-indent: 6px; }
+      padding-top: 5px;
+      margin-right: 3px;
+      text-indent: 5px; }
     .entered-non-entered div.icon-non-entered div.number {
       color: #EB7100;
       background: #434343;
@@ -5755,9 +5754,8 @@ body .ui-tooltip { border-width: 2px; }
       padding: 0 5px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 18px;
-      line-height: 16px;
-      margin-right: 4px;
+      height: 16px;
+      margin-right: 3px;
       margin-top: 4px; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #EB7100;
@@ -5765,8 +5763,7 @@ body .ui-tooltip { border-width: 2px; }
       float: left;
       height: 24px;
       padding-top: 5px;
-      margin-right: 6px;
-      font-size: 17px; }
+      margin-right: 3px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {

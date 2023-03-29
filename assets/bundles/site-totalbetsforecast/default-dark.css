@@ -6131,6 +6131,74 @@ input[type=reset], .btn-reset {
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
+input[type='text'], input[type='password'], input[type='email'], input[type='tel'], input[type="number"] {
+  height: 28px;
+  line-height: 28px;
+  outline: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 120px;
+  -webkit-appearance: none;
+  -webkit-border-radius: 1px;
+  -khtml-border-radius: 1px;
+  -moz-border-radius: 1px;
+  -ms-border-radius: 1px;
+  -o-border-radius: 1px;
+  border-radius: 1px;
+  -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -khtml-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  -webkit-box-sizing: border-box;
+  -khtml-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+  font-size: 13px;
+  background-color: #171717;
+  border: 1px solid #292929;
+  color: #EDEDED; }
+  input[type='text'].hasBorder, input[type='password'].hasBorder, input[type='email'].hasBorder, input[type='tel'].hasBorder, input[type="number"].hasBorder {
+    border: 1px solid #dfdfdf; }
+  input[type='text']::-ms-clear, input[type='password']::-ms-clear, input[type='email']::-ms-clear, input[type='tel']::-ms-clear, input[type="number"]::-ms-clear {
+    display: none; }
+  input[type='text'][disabled], input[type='text'] .disabled, input[type='password'][disabled], input[type='password'] .disabled, input[type='email'][disabled], input[type='email'] .disabled, input[type='tel'][disabled], input[type='tel'] .disabled, input[type="number"][disabled], input[type="number"] .disabled {
+    opacity: .4;
+    cursor: not-allowed; }
+
+input[type="number"] {
+  -moz-appearance: textfield; }
+
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0; }
+
+input[type="number"], input[type="tel"] {
+  font-family: 'password';
+  font-size: 10px; }
+  input[type="number"].show-hint, input[type="tel"].show-hint {
+    font-family: inherit;
+    font-size: inherit; }
+  input[type="number"]::-webkit-input-placeholder, input[type="tel"]::-webkit-input-placeholder {
+    /* Chrome/Opera/Safari */
+    font-family: Roboto, Arial, Tahoma, sans-serif;
+    font-size: 13px; }
+  input[type="number"]::-moz-placeholder, input[type="tel"]::-moz-placeholder {
+    font-family: Roboto, Arial, Tahoma, sans-serif;
+    font-size: 13px; }
+  input[type="number"]:-ms-input-placeholder, input[type="tel"]:-ms-input-placeholder {
+    /* IE 10+ */
+    font-family: Roboto, Arial, Tahoma, sans-serif;
+    font-size: 13px; }
+
+
+/*******************************************/
+/* Ripple Effect */
+/*******************************************/
 select {
   border: 1px solid #292929;
   color: #EDEDED;

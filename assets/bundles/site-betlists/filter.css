@@ -571,8 +571,6 @@
   .input-group.date .form-control {
     border: none;
     height: 28px;
-    padding: 6px;
-    font-size: 13px;
     background: #fff;
     margin-left: 0;
     -webkit-border-radius: 1px;
@@ -773,6 +771,7 @@
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
+
 
 .input-group.date .input-group-addon {
   padding-right: 0; }

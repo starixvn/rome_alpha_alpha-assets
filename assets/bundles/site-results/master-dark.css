@@ -4639,8 +4639,6 @@ button.close {
   .input-group.date .form-control {
     border: 1px solid #292929;
     height: 28px;
-    padding: 6px;
-    font-size: 13px;
     background: #171717;
     color: #EDEDED;
     margin-left: 0;
@@ -4854,6 +4852,7 @@ button.close {
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
+
 
 .select2-container {
   box-sizing: border-box;
@@ -6619,8 +6618,3 @@ input[type="number"], input[type="tel"] {
     /* IE 10+ */
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
-
-
-/*******************************************/
-/* Devices */
-/*******************************************/
