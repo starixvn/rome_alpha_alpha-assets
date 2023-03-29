@@ -391,10 +391,9 @@
 
 .date-picker-wrapper .drp_top-bar {
   order: 3;
-  font-size: 14px;
   line-height: 1.4;
   position: relative;
-  padding: 10px 60px 10px 10px;
+  padding: 10px 75px 10px 10px;
   width: 100%;
   border-top: 1px solid #474747; }
   .date-picker-wrapper .drp_top-bar .error-top, .date-picker-wrapper .drp_top-bar .normal-top {
@@ -416,9 +415,10 @@
     appearance: none;
     right: 10px;
     top: 6px;
-    padding: 6px 16px;
+    padding: 6px 5px;
     margin: 0;
     font-size: 13px;
+    min-width: 65px;
     cursor: pointer;
     background: #36587D;
     color: #EDEDED;
