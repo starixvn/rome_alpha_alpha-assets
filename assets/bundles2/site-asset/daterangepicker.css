@@ -328,8 +328,6 @@
     margin-left: -2px;
     border-radius: 6px;
     background: #2197ff; }
-  .date-picker-wrapper .month-wrapper table .day.real-today.checked, .date-picker-wrapper .month-wrapper table .day.real-today.hovering {
-    background-color: #2197ff; }
 
 .date-picker-wrapper table .caption {
   height: 40px; }

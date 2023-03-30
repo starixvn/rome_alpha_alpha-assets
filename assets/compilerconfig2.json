@@ -475,5 +475,9 @@
   {
     "outputFile": "styles/abstracts/_variables-dark.css",
     "inputFile": "styles/abstracts/_variables2-dark.scss"
+  },
+  {
+    "outputFile": "styles/vendors/multiselect/newfanex.multiSelect.css",
+    "inputFile": "styles/vendors/multiselect/newfanex.multiSelect.scss"
   }
 ]

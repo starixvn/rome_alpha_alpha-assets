@@ -571,6 +571,8 @@
   .input-group.date .form-control {
     border: none;
     height: 28px;
+    padding: 6px;
+    font-size: 13px;
     background: #fff;
     margin-left: 0;
     -webkit-border-radius: 1px;

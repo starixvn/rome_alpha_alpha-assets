@@ -1,4 +1,20 @@
 /*******************************************/
+/* Devices */
+/*******************************************/
+
+
+/*******************************************/
+/* Devices */
+/*******************************************/
+.btn-default.with-level {
+  background-color: #36587D;
+  color: #fff !important;
+  font-weight: bold; }
+  .btn-default.with-level:hover, .btn-default.with-level:active {
+    background-color: #2e4b6b; }
+
+
+/*******************************************/
 /* Ripple Effect */
 /*******************************************/
 .checkbox {
@@ -92,3 +108,26 @@
 .radio input[type="radio"]:checked + label:before {
   border-color: #EDEDED !important;
   background-color: transparent !important; }
+
+
+/*******************************************/
+/* Devices */
+/*******************************************/
+.checkbox input[type="checkbox"]:checked + label:before {
+  background-color: #36587D;
+  border-color: #36587D; }
+
+.checkbox input[type="checkbox"]:checked + label:after {
+  border-color: #fff; }
+
+.radio label {
+  color: #cbcbcb; }
+
+.radio label:before {
+  background-color: #171717; }
+
+.radio input[type="radio"]:checked + label:before {
+  border-color: #CBCBCB; }
+
+.radio input[type="radio"]:checked + label:after {
+  background-color: #CBCBCB; }

@@ -470,3 +470,20 @@
 .icon-book:before {
   content: "\e98a";
 }
+
+.unsupport-browser {
+  background: url("../../../styles/images/oldbrowser-super-dark.jpg") center top no-repeat; }
+
+.unsupport-browser {
+  background-color: #171717; }
+
+#warning-browser-message {
+  background: #312F26 !important;
+  border: 1px solid #78776D;
+  box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.5) !important; }
+  #warning-browser-message .icon-close::before, #warning-browser-message .icon-alert::before, #warning-browser-message .title {
+    color: #CCBA43 !important; }
+  #warning-browser-message a:not(.icon-close) {
+    color: #41A4FF !important; }
+  #warning-browser-message .content-msg {
+    color: #CCBA43; }

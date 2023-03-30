@@ -554,7 +554,7 @@
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/vendors/bootstrap-multiselect.css",
-      "styles/vendors/multiselect/fanex.multiSelect.css",
+      "styles/vendors/multiselect/newfanex.multiSelect.css",
       "styles/components/bootstrap-multiselect.css",
       "styles/components/pagination.css",
       "styles/components/tablesorter.css",

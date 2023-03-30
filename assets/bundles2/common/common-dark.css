@@ -5419,6 +5419,11 @@ select {
     vertical-align: middle; }
     .filter .form-group.product-detail-multiselect-container {
       z-index: 10000; }
+    .filter .form-group .label-form-control {
+      display: block;
+      font-weight: bold;
+      margin-right: 0;
+      margin-bottom: 2px; }
     .filter .form-group label {
       font-weight: normal;
       margin-right: 5px;
@@ -6446,15 +6451,15 @@ input[type=reset], .btn-reset {
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
       height: 24px;
-      padding-top: 5px;
-      margin-right: 3px;
-      text-indent: 5px; }
+      padding-top: 7px;
+      margin-right: 5px;
+      text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
       color: #EB7100;
       background: #434343;
@@ -6463,8 +6468,9 @@ input[type=reset], .btn-reset {
       padding: 0 5px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 16px;
-      margin-right: 3px;
+      height: 18px;
+      line-height: 16px;
+      margin-right: 4px;
       margin-top: 4px; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #EB7100;
@@ -6472,7 +6478,8 @@ input[type=reset], .btn-reset {
       float: left;
       height: 24px;
       padding-top: 5px;
-      margin-right: 3px; }
+      margin-right: 6px;
+      font-size: 17px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {

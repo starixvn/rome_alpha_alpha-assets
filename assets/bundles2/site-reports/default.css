@@ -561,6 +561,8 @@
   .input-group.date .form-control {
     border: none;
     height: 28px;
+    padding: 6px;
+    font-size: 13px;
     background: #fff;
     margin-left: 0;
     -webkit-border-radius: 1px;
@@ -5676,25 +5678,26 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #333;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
       height: 24px;
-      padding-top: 5px;
-      margin-right: 3px;
-      text-indent: 5px; }
+      padding-top: 7px;
+      margin-right: 5px;
+      text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
       color: #D06400;
       background: #E3E3E3;
       border: 1px solid #D9D9D9;
       border-radius: 3px;
-      padding: 0 5px;
+      padding: 0 4px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 16px;
-      margin-right: 3px;
+      height: 18px;
+      line-height: 16px;
+      margin-right: 4px;
       margin-top: 4px; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #DB6900;
@@ -5702,7 +5705,8 @@ body .ui-tooltip { border-width: 2px; }
       float: left;
       height: 24px;
       padding-top: 5px;
-      margin-right: 3px; }
+      margin-right: 6px;
+      font-size: 17px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {

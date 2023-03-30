@@ -9209,6 +9209,11 @@ select {
     vertical-align: middle; }
     .filter .form-group.product-detail-multiselect-container {
       z-index: 10000; }
+    .filter .form-group .label-form-control {
+      display: block;
+      font-weight: bold;
+      margin-right: 0;
+      margin-bottom: 2px; }
     .filter .form-group label {
       font-weight: normal;
       margin-right: 5px;

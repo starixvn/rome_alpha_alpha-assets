@@ -9268,6 +9268,7 @@ select {
     .label-week-box .label-week.active {
       font-weight: bold; }
 
+
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
   position: relative;

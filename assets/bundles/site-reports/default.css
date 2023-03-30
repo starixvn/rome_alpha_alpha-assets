@@ -561,6 +561,8 @@
   .input-group.date .form-control {
     border: none;
     height: 28px;
+    padding: 6px;
+    font-size: 13px;
     background: #fff;
     margin-left: 0;
     -webkit-border-radius: 1px;
@@ -4423,512 +4425,97 @@ body .ui-tooltip { border-width: 2px; }
 
 
 .multiselect-container{position:absolute;list-style-type:none;margin:0;padding:0}.multiselect-container .input-group{margin:5px}.multiselect-container>li{padding:0}.multiselect-container>li>a.multiselect-all label{font-weight:700}.multiselect-container>li.multiselect-group label{margin:0;padding:3px 20px 3px 20px;height:100%;font-weight:700}.multiselect-container>li.multiselect-group-clickable label{cursor:pointer}.multiselect-container>li>a{padding:0}.multiselect-container>li>a>label{margin:0;height:100%;cursor:pointer;font-weight:400;padding:3px 20px 3px 40px}.multiselect-container>li>a>label.radio,.multiselect-container>li>a>label.checkbox{margin:0}.multiselect-container>li>a>label>input[type=checkbox]{margin-bottom:5px}.btn-group>.btn-group:nth-child(2)>.multiselect.btn{border-top-left-radius:4px;border-bottom-left-radius:4px}.form-inline .multiselect-container label.checkbox,.form-inline .multiselect-container label.radio{padding:3px 20px 3px 40px}.form-inline .multiselect-container li a label.checkbox input[type=checkbox],.form-inline .multiselect-container li a label.radio input[type=radio]{margin-left:-20px;margin-right:0}
-
-
-/* Corner radius */
-.fanex-multiselect-corner-all {
-    color: #000000;
-    -moz-border-radius-topleft: 2px;
-    -webkit-border-top-left-radius: 2px;
-    -khtml-border-top-left-radius: 2px;
-    border-top-left-radius: 2px;
-}
-
-.fanex-multiselect-corner-all {
-    -moz-border-radius-topright: 4px;
-    -webkit-border-top-right-radius: 2px;
-    -khtml-border-top-right-radius: 2px;
-    border-top-right-radius: 2px;
-}
-
-.fanex-multiselect-corner-all {
-    -moz-border-radius-bottomleft: 2px;
-    -webkit-border-bottom-left-radius: 2px;
-    -khtml-border-bottom-left-radius: 2px;
-    border-bottom-left-radius: 2px;
-}
-
-.fanex-multiselect-corner-all {
-    -moz-border-radius-bottomright: 2px;
-    -webkit-border-bottom-right-radius: 2px;
-    -khtml-border-bottom-right-radius: 2px;
-    border-bottom-right-radius: 2px;
-}
-
-/*
-important
-*/
-.fanex-multiselect-helper-reset {
-    margin: 0;
-    padding: 0;
-    border: 0;
-    list-style: none;
-}
-
-.fanex-multiselect-helper-clearfix:before, .fanex-multiselect-helper-clearfix:after {
-    content: "";
-    display: table;
-}
-
-.fanex-multiselect-helper-clearfix:after {
-    clear: both;
-}
-
-.custom-multi-select-rtUL {
-    padding-left: 21px;
-}
-
-
-.fanex-multiselect-widget-header {
-    border: 0px solid #e78f08;
-    font-weight: bold;
-}
-
-    .fanex-multiselect-state-default, .fanex-multiselect-widget-content .fanex-multiselect-state-default, .fanex-multiselect-widget-header .fanex-multiselect-state-default {
-        border: 1px solid #BDC7D8;
-        background: #FFFFFF;
-        font-weight: normal;
-        border-radius: 2px 2px 2px 2px;
-    }
-
-.fanex-multiselect-state-default {
-    padding-left: 3px;
-}
-
-.fanex-multiselect-div label {
-    font-weight: normal;
-    vertical-align: middle;
-}
-
-    .fanex-multiselect-div label:hover {
-        color: #0062ad;
-        cursor: pointer;
-        font-weight: bold !important;
-    }
-
-.fanex-multiselect-state-hover, .fanex-multiselect-widget-content .fanex-multiselect-state-hover, .fanex-multiselect-widget-header .fanex-multiselect-state-hover, .fanex-multiselect-state-focus, .fanex-multiselect-widget-content .fanex-multiselect-state-focus, .fanex-multiselect-widget-header .fanex-multiselect-state-focus {
-    /* border: 1px solid #00cccc; background: #ffffcc; */
-    font-weight: bold !important;
-}
-
-    .fanex-multiselect-state-hover label {
-        color: #0062ad;
-        font-weight: bold !important;
-    }
-
-.fanex-multiselect-icon {
-    width: 16px;
-    height: 19px;
-    background-image: url(../../styles/vendors/multiselect/images/ui-icons_2e83ff_256x240.png);
-}
-
-.fanex-multiselect-icon-dropdown {
-    width: 18px;
-    height: 14px;
-    display: inline;
-    float: right;
-    cursor: pointer;
-    background-image: url(../../styles/vendors/multiselect/images/sprites.png);
-}
-
 .fanex-multiselect-icon-triangle-1-s {
-    background-position: -64px -15px;
-}
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-top: 4px dashed;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+  color: #212121;
+  position: absolute;
+  right: 7px; }
 
-.fanex-multiselect-icon-circle-close {
-    background-position: -32px -192px;
-}
-
-.fanex-multiselect-icon-collapse, .fanex-multiselect-icon-expand {
-    margin-top: 2px;
-}
-
-.fanex-multiselect-icon-collapse {
-    background-position: -22px -169px;
-}
-
-    .fanex-multiselect-icon-collapse:hover {
-        background-position: -22px -186px;
-    }
-
-.fanex-multiselect-icon-expand {
-    background-position: 0 -169px;
-}
-
-    .fanex-multiselect-icon-expand:hover {
-        background-position: 0 -186px;
-    }
-
-.fanex-multiselect-update-result {
-    width: 30px;
-    font-weight: bold;
-}
-
-/*
-// Multiselect Css
-*/
 .fanex-multiselect {
-    font-weight: normal !important;
-    /*display: -moz-inline-block;*/
-    display: inline-block;
-    cursor: pointer;
-    text-decoration: none !important;
-    padding: 0;
-}
-
-    .fanex-multiselect input {
-        margin: 0;
-        border: none !important /* important fixes bug when inside ui-widget-content */;
-        cursor: pointer;
-        background: transparent;
-    }
-
-        .fanex-multiselect input[type='text']:focus {
-            border: none !important;
-        }
-
-    .fanex-multiselect span {
-        float: right;
-        margin-top: -18px;
-    }
-
-.fanex-multiselect-header {
-    margin-bottom: 0px;
-    padding: 2px;
-}
-
-    .fanex-multiselect-header ul {
-        font-size: 12px;
-    }
-
-        .fanex-multiselect-header ul li {
-            float: left;
-            padding: 0px;
-        }
-
-    .fanex-multiselect-header a, .fanex-multiselect-header label {
-        text-decoration: none;
-        font-size: 12px;
-        color: #fff;
-    }
-
-        .fanex-multiselect-header a:hover {
-            text-decoration: underline;
-        }
-
-    .fanex-multiselect-header .fanex-multiselect-icon {
-        float: left;
-    }
-
-    .fanex-multiselect-header li.fanex-multiselect-close {
-        float: right;
-        text-align: right;
-        padding-right: 0;
-    }
-
-label.fanex-multiselect-group-mark {
-    font-weight: bold !important;
-}
-
-.fanex-multiselect-footer {
-    margin-top: 2px;
-    padding: 4px;
-}
-
-    .fanex-multiselect-footer a {
-        text-decoration: none;
-        font-size: 12px;
-    }
-
-        .fanex-multiselect-footer a:hover {
-            text-decoration: underline;
-        }
-
-
-.fanex-multiselect-options {
-    display: none;
-    padding: 2px;
-    position: relative;
-    z-index: 10000;
-    border: 1px solid #BDC7D8;
-}
-
-    .fanex-multiselect-options .no-data-text {
-        font-weight: bold;
-        text-align: center;
-    }
-
-.first-group {
-    position: relative /* fixes bug in IE6/7 */;
-    overflow-y: auto;
-}
-
-ul.first-group {
-    margin-top: 4px !important;
-    padding-bottom: 4px !important;
-}
-
-/* remove label borders in IE6 because IE6 does not support transparency */
-* html .first-group label {
-    border: none;
-}
-
-/* shadow effect */
-.fanex-multiselect-shadow {
-    box-shadow: 0 0 10px #777;
-    -moz-box-shadow: 0 0 10px #777;
-    -webkit-box-shadow: 0 0 10px #777;
-}
-
-
-/*
-Rad tree view css
-*/
-
-.fanex-multiselect-treeview {
-    cursor: default;
-    background-color: #FFF;
-    text-align: left;
-}
-
-    .fanex-multiselect-treeview .fanex-multiselect-check-all {
-        color: #000;
-    }
-
-        .fanex-multiselect-treeview .fanex-multiselect-check-all:hover {
-            cursor: pointer;
-            color: #0062ad;
-        }
-
-    .fanex-multiselect-treeview .rtTop, .fanex-multiselect-treeview .rtMid, .fanex-multiselect-treeview .rtBot, .fanex-multiselect-treeview .rtUL {
-    }
-
-    .fanex-multiselect-treeview .rtSp, .fanex-multiselect-treeview .rtImg, .fanex-multiselect-treeview .rtIn, .fanex-multiselect-treeview .rtChk {
-        vertical-align: middle;
-    }
-
-    .fanex-multiselect-treeview .rtUL {
-        -moz-user-select: -moz-none;
-        margin: 0;
-        padding: 0;
-    }
-
-    .fanex-multiselect-treeview .rtLI {
-        list-style: none outside none;
-    }
-
-    .fanex-multiselect-treeview .rtUL .rtLI .rtUL {
-        padding-left: 20px;
-    }
-
-    .fanex-multiselect-treeview .rtTop, .fanex-multiselect-treeview .rtMid, .fanex-multiselect-treeview .rtBot {
-        padding: 0px 0 0px 20px;
-    }
-
-    .fanex-multiselect-treeview .rtPlus, .fanex-multiselect-treeview .rtMinus {
-        background-repeat: no-repeat;
-        cursor: pointer;
-        display: inline-block;
-        font-size: 0;
-        height: 11px;
-        margin: 6px 7px 0 -18px;
-        padding: 0;
-        vertical-align: top;
-        width: 11px;
-    }
-
-    * html .fanex-multiselect-treeview .rtPlus, * html .fanex-multiselect-treeview .rtMinus {
-        margin-right: 1px;
-    }
-
-    * + html .fanex-multiselect-treeview .rtPlus, * + html .fanex-multiselect-treeview .rtMinus {
-        margin-right: 1px;
-    }
-
-    .fanex-multiselect-treeview .rtPlus {
-        background-position: 0 0;
-    }
-
-    .fanex-multiselect-treeview .rtPlusHover {
-        background-position: 0 -22px;
-    }
-
-    .fanex-multiselect-treeview .rtMinus {
-        background-position: 0 -11px;
-    }
-
-    .fanex-multiselect-treeview .rtMinusHover {
-        background-position: 0 -33px;
-    }
-
-    .fanex-multiselect-treeview .rtIn {
-        margin-left: 1px;
-        padding: 4px 3px 3px;
-        text-decoration: none;
-    }
-
-    .fanex-multiselect-treeview a.rtIn {
-        cursor: pointer;
-    }
-
-    .fanex-multiselect-treeview div.rtIn {
-        display: inline-block;
-        vertical-align: top;
-    }
-
-    * html .fanex-multiselect-treeview div.rtIn {
-        display: inline-block;
-    }
-
-    * html .fanex-multiselect-treeview div.rtIn {
-        display: inline;
-    }
-
-    * + html .fanex-multiselect-treeview div.rtIn {
-        display: inline-block;
-    }
-
-    * + html .fanex-multiselect-treeview div.rtIn {
-        display: inline;
-    }
-
-
-    .fanex-multiselect-treeview .rtLines .rtLI, .fanex-multiselect-treeview .rtLines .rtFirst .rtUL {
-        background-position: 0 0;
-        background-repeat: repeat-y;
-    }
-
-    .fanex-multiselect-treeview .rtLines .rtFirst {
-        background-position: 0 1.273em;
-        background-repeat: no-repeat;
-    }
-
-        .fanex-multiselect-treeview .rtLines .rtFirst .rtUL {
-            background-position: 0 1.273em;
-            background-repeat: repeat-y;
-        }
-
-    .fanex-multiselect-treeview .rtLines .rtLast, .fanex-multiselect-treeview .rtLines .rtLast .rtUL {
-        /*background: none repeat scroll 0 0 transparent;*/
-    }
-
-    .fanex-multiselect-treeview .rtLines .rtTop, .fanex-multiselect-treeview .rtLines .rtMid, .fanex-multiselect-treeview .rtLines .rtBot {
-        background-position: 0 0;
-        background-repeat: no-repeat;
-    }
-
-    .fanex-multiselect-treeview .rtPlus, .fanex-multiselect-treeview .rtMinus {
-        margin-left: -18px;
-        margin-right: 7px;
-    }
-
-
-.fanex-multiselect-treeview {
-    color: #4F4F4F;
-    font: 12px/18px "Lucida Sans",Arial,sans-serif;
-}
-
-    .fanex-multiselect-treeview .rtPlus, .fanex-multiselect-treeview .rtMinus {
-        background-image: url("../../styles/vendors/multiselect/images/PlusMinus.png");
-    }
-
-
-    .fanex-multiselect-treeview_disabled .rtIn, .fanex-multiselect-treeview .rtDisabled .rtIn {
-        color: #CCCCCC;
-    }
-
-    .fanex-multiselect-treeview .rtLines .rtLI, .fanex-multiselect-treeview .rtLines .rtFirst .rtUL {
-        /*background-image: url("../../styles/vendors/multiselect/images/NodeSpan.png");*/
-    }
-
-
-    .fanex-multiselect-treeview .rtLines .rtFirst, .fanex-multiselect-treeview .rtLines .rtFirst .rtUL {
-        /*background-image: url("../../styles/vendors/multiselect/images/FirstNodeSpan.png");*/
-    }
-
-    .fanex-multiselect-treeview .rtLines .rtLast, .fanex-multiselect-treeview .rtLines .rtLast .rtUL {
-        /*background-image: none;*/
-    }
-
-    .fanex-multiselect-treeview .rtLines .rtTop {
-        /*background-image: url("../../styles/vendors/multiselect/images/TopLine.png") !important;*/
-    }
-
-
-    .fanex-multiselect-treeview .rtLines .rtMid {
-        /*background-image: url("../../styles/vendors/multiselect/images/MiddleLine.png");*/
-    }
-
-    .fanex-multiselect-treeview .rtLines .rtBot {
-        /*background-image: url("../../styles/vendors/multiselect/images/BottomLine.png");*/
-    }
-
-    .fanex-multiselect-treeview .custom-ui-widget-header {
-        font-weight: bold;
-        border-bottom: 1px solid #666666;
-    }
-
-    .fanex-multiselect-treeview .custom-ui-widget-footer {
-        font-weight: bold;
-        border-top: 1px solid #666666;
-    }
-
-.fanex-multiselect-widget-content ul {
-    margin-bottom: 0px !important;
-}
-
-.fanex-multiselect-options input {
-    /*vertical-align: -moz-calc();*/
-    margin: 3px;
-}
-
-.fanex-multiselect-options .high-light-item {
-    background-color: #abd7f8;
-}
-
-
-.fanex-multiselect-widget input[type='text'] {
-    text-align: left !important;
-    height: 20px !important;
-}
-
-.fanex-multiselect-filter input {
-}
-
-.fanex-multiselect-options .hide-item {
-    display: none !important;
-}
+  width: 160px !important;
+  display: flex;
+  align-items: center;
+  position: relative; }
+  .fanex-multiselect .fanex-multiselect-state-default {
+    width: 100% !important;
+    color: #212121; }
 
 .fanex-multiselect-filter {
-    position: relative;
-    margin-bottom: 3px;
-}
+  display: none; }
 
-    .fanex-multiselect-filter .filter-text {
-        color: #000;
-        display: inline-block;
-        width: 37px;
-        text-align: center;
-    }
+.fanex-multiselect-div {
+  position: relative; }
 
-    .fanex-multiselect-filter input {
-        margin: 3px 1px;
-    }
+.fanex-multiselect-options {
+  background: #fff;
+  box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+  border: 1px solid #dfdfdf;
+  font-size: 13px;
+  max-height: 300px;
+  min-width: 220px;
+  overflow: hidden auto; }
 
-    .fanex-multiselect-filter .delete-button {
-        width: 14px;
-        height: 14px;
-        cursor: pointer;
-        background-image: url(../../styles/vendors/multiselect/images/sprites.png);
-        background-position: -79px -38px;
-        position: absolute;
-        right: 5px;
-        top: 7px;
-    }
+.collapseClass {
+  display: block;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 11px;
+  left: 5px;
+  cursor: pointer; }
+  .collapseClass.rtMinus:after {
+    position: absolute;
+    content: "";
+    right: 0;
+    bottom: 0;
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 0 0 6px 6px;
+    border-color: transparent transparent #212121 transparent; }
+  .collapseClass.rtPlus:after {
+    position: absolute;
+    content: "";
+    width: 0;
+    height: 0;
+    border-style: solid;
+    border-width: 4px 0 4px 4px;
+    border-color: transparent transparent transparent #212121;
+    right: 2px;
+    bottom: 1px; }
 
-        .fanex-multiselect-filter .delete-button:hover {
-            background-position: -79px -26px;
-        }
+.custom-ui-widget-header {
+  border-bottom: 1px solid #cecece; }
+  .custom-ui-widget-header .fanex-multiselect-helper-reset {
+    margin-bottom: 0; }
+    .custom-ui-widget-header .fanex-multiselect-helper-reset .show-item {
+      display: block !important;
+      margin: 0;
+      padding: 2px 2px 2px 20px;
+      line-height: 28px; }
+      .custom-ui-widget-header .fanex-multiselect-helper-reset .show-item .fanex-multiselect-check-all {
+        margin: 0; }
+    .custom-ui-widget-header .fanex-multiselect-helper-reset .fanex-multiselect-icon-dropdown {
+      display: none; }
+
+.fanex-multiselect-ul-group .show-item .fanex-multiselect-div label {
+  display: block;
+  margin: 0;
+  padding: 2px 2px 2px 20px;
+  line-height: 28px; }
+  .fanex-multiselect-ul-group .show-item .fanex-multiselect-div label:hover {
+    background-color: #ddd; }
+
+.fanex-multiselect-ul-group .show-item ul {
+  padding: 0 0 0 20px; }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -6041,7 +5628,7 @@ Rad tree view css
 .icon-excel {
   position: relative;
   cursor: pointer;
-  color: #1f7244;
+  color: #2E9E60;
   font-size: 19px;
   vertical-align: middle;
   height: 28px;
@@ -6183,25 +5770,26 @@ Rad tree view css
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #333;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
       height: 24px;
-      padding-top: 5px;
-      margin-right: 3px;
-      text-indent: 5px; }
+      padding-top: 7px;
+      margin-right: 5px;
+      text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
       color: #D06400;
       background: #E3E3E3;
       border: 1px solid #D9D9D9;
       border-radius: 3px;
-      padding: 0 5px;
+      padding: 0 4px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 16px;
-      margin-right: 3px;
+      height: 18px;
+      line-height: 16px;
+      margin-right: 4px;
       margin-top: 4px; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #DB6900;
@@ -6209,7 +5797,8 @@ Rad tree view css
       float: left;
       height: 24px;
       padding-top: 5px;
-      margin-right: 3px; }
+      margin-right: 6px;
+      font-size: 17px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {
