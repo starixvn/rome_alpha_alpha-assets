@@ -26,7 +26,7 @@
 }
 
 .fanex-multiselect-filter {
-    padding: 5px;
+    padding-right: 12px;
 
     lable {
         display: flex;
@@ -36,7 +36,7 @@
 
     input {
         border: 1px solid #474747;
-        border-radius: 2px;
+        border-radius: 3px;
         height: 30px;
         padding: 0 20px 0 5px;
         flex: 1;
@@ -58,21 +58,24 @@
 }
 
 .no-data-text {
-    padding: 0 5px 5px 5px;
+    padding-top: 5px;
     font-weight: bold;
 }
 
 .fanex-multiselect-div {
     position: relative;
 }
-
+.first-group {
+    position: relative;
+    overflow-y: auto;
+}
 .fanex-multiselect-options {
     background: #2b2b2b;
     border: 1px solid #474747;
     font-size: 13px;
-    max-height: 300px;
-    min-width: 220px;
+    min-width: 250px;
     overflow: hidden auto;
+    padding: 12px 0px 12px 12px;
 
     .high-light-item {
         color: #41A4FF;
@@ -87,7 +90,7 @@
     height: 12px;
     width: 12px;
     top: 10px;
-    left: 3px;
+    right: 3px;
     position: absolute;
     cursor: pointer;
 
@@ -122,10 +125,10 @@
 }
 
 .custom-ui-widget-header {
-    border-bottom: 1px solid #474747;
-    border-top: 1px solid #474747;
+    padding-right: 12px;
 
     .fanex-multiselect-helper-reset {
+        border-bottom: 1px solid #474747;
         margin-bottom: 0;
         display: flex;
         align-items: center;
@@ -138,7 +141,7 @@
             .fanex-multiselect-check-all {
                 margin: 0;
                 display: block;
-                padding: 2px 2px 2px 20px;
+                padding: 2px 2px 2px 3px;
                 line-height: 28px;
 
                 &:hover {
@@ -150,14 +153,42 @@
         .fanex-multiselect-icon-dropdown {
             width: 20px;
             height: 20px;
-            background-image: url(images/collapse.png);
-            background-repeat: no-repeat;
-            background-position: -30px -30px;
-            margin: 0 10px 0 5px;
-            cursor: pointer;
+            position: relative;
+
+            &:after {
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 0 0 6px 6px;
+                border-color: transparent transparent #ededed transparent;
+                top: 50%;
+                left: 50%;
+                position: absolute;
+                content: "";
+                transform: rotate(45deg);
+                margin-top: -4px;
+                margin-left: -4px;
+                cursor: pointer;
+            }
 
             &.fanex-multiselect-icon-collapse {
-                background-position: 0 -30px;
+                &:after {
+                    transform: rotate(45deg);
+                    margin-top: -4px;
+                    margin-left: -4px;
+                }
+            }
+
+            &.fanex-multiselect-icon-expand {
+                &:after {
+                    transform: rotate(-45deg);
+                    margin-top: -3px;
+                    margin-left: -5px;
+                }
+            }
+
+            &.fanex-multiselect-icon-collapse {
+                background-position: 0px 0px;
             }
         }
     }
@@ -165,6 +196,7 @@
 
 .fanex-multiselect-ul-group {
     margin: 0;
+    padding-right: 12px;
 
     .hide-item {
         display: none;
@@ -175,7 +207,7 @@
             label {
                 display: block;
                 margin: 0;
-                padding: 2px 2px 2px 20px;
+                padding: 2px 20px 2px 3px;
                 line-height: 28px;
 
                 &:hover {

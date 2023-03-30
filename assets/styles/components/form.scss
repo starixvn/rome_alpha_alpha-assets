@@ -46,6 +46,7 @@
 .filter {
     padding-top: 15px;
     position: relative;
+    z-index: 10;
 
     .form-group {
         display: inline-block;
