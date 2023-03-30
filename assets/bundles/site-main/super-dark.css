@@ -1439,7 +1439,6 @@ legend {
   pointer-events: none;
   color: #757575; }
 
-
 .withripple {
   position: relative;
 }
@@ -3150,7 +3149,6 @@ yx-axis
   .header-msg {
     display: none; } }
 
-
 .navigation {
   position: absolute;
   top: 88px;
@@ -3180,7 +3178,6 @@ yx-axis
         color: #fff;
         white-space: nowrap;
         border-radius: 5px; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -3267,7 +3264,6 @@ yx-axis
       .sidebar.collapsed.hovered .list-menu .menu-item .txt-item, .sidebar.collapsed.hovered list-menu .menu-item i {
         display: block; }
 
-
 /*******************************************/
 /* Devices */
 /*******************************************/
@@ -3307,7 +3303,6 @@ yx-axis
     background: none; }
   .list-action .prevButton:before, .list-action .nextButton:before {
     color: #36587D; } }
-
 
 .toast-title {
   font-weight: bold; }
@@ -3502,7 +3497,6 @@ button.toast-close-button {
     padding: 15px 15px 15px 50px;
     width: 25em; } }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -3594,7 +3588,6 @@ button.toast-close-button {
       right: 7px;
       left: initial;
       top: 7px; }
-
 
 /*!
  * resizable 1.0.0

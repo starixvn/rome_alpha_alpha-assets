@@ -454,5 +454,9 @@
   {
     "outputFile": "styles/vendors/multiselect/newfanex.multiSelect.css",
     "inputFile": "styles/vendors/multiselect/newfanex.multiSelect.scss"
+  },
+  {
+    "outputFile": "styles/vendors/multiselect/newfanex.multiSelect-dark.css",
+    "inputFile": "styles/vendors/multiselect/newfanex.multiSelect-dark.scss"
   }
 ]

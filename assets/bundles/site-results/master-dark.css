@@ -4212,7 +4212,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-
 /*!
  * Datetimepicker for Bootstrap 3
  * version : 4.17.42
@@ -4855,7 +4854,6 @@ button.close {
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
 
-
 .select2-container {
   box-sizing: border-box;
   display: inline-block;
@@ -5397,7 +5395,6 @@ button.close {
 .select2-container {
   line-height: 20px;
   width: 300px; }
-
 
 @font-face {
   font-family: 'Iconalpha';
@@ -5997,7 +5994,6 @@ a, a:focus, a:active, a:target, a:hover {
 .display-none {
   display: none; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6362,7 +6358,6 @@ input[type=reset], .btn-reset {
     .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
       width: calc(100% - 56px) !important; } }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6418,7 +6413,6 @@ input[type=reset], .btn-reset {
     width: 0; }
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -6553,7 +6547,6 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6620,7 +6613,6 @@ input[type="number"], input[type="tel"] {
     /* IE 10+ */
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
-
 
 /*******************************************/
 /* Devices */

@@ -24,7 +24,6 @@
   font-weight: bold;
   font-style: normal; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -133,7 +132,6 @@
 
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
-
 
 /*!
  * Datetimepicker for Bootstrap 3
@@ -763,7 +761,6 @@
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
-
 
 /*! jQuery UI - v1.9.1 - 2012-11-21
 * http://jqueryui.com
@@ -4416,13 +4413,11 @@ body .ui-tooltip { border-width: 2px; }
   font-size: 100% !important;
   margin: 3px 5px 3px 16px; }
 
-
 .input-group.date .input-group-addon {
   padding-right: 0; }
 
 .daterange-picker {
   display: none; }
-
 
 .multiselect-container{position:absolute;list-style-type:none;margin:0;padding:0}.multiselect-container .input-group{margin:5px}.multiselect-container>li{padding:0}.multiselect-container>li>a.multiselect-all label{font-weight:700}.multiselect-container>li.multiselect-group label{margin:0;padding:3px 20px 3px 20px;height:100%;font-weight:700}.multiselect-container>li.multiselect-group-clickable label{cursor:pointer}.multiselect-container>li>a{padding:0}.multiselect-container>li>a>label{margin:0;height:100%;cursor:pointer;font-weight:400;padding:3px 20px 3px 40px}.multiselect-container>li>a>label.radio,.multiselect-container>li>a>label.checkbox{margin:0}.multiselect-container>li>a>label>input[type=checkbox]{margin-bottom:5px}.btn-group>.btn-group:nth-child(2)>.multiselect.btn{border-top-left-radius:4px;border-bottom-left-radius:4px}.form-inline .multiselect-container label.checkbox,.form-inline .multiselect-container label.radio{padding:3px 20px 3px 40px}.form-inline .multiselect-container li a label.checkbox input[type=checkbox],.form-inline .multiselect-container li a label.radio input[type=radio]{margin-left:-20px;margin-right:0}
 .fanex-multiselect-icon-triangle-1-s {
@@ -4445,10 +4440,34 @@ body .ui-tooltip { border-width: 2px; }
   position: relative; }
   .fanex-multiselect .fanex-multiselect-state-default {
     width: 100% !important;
-    color: #212121; }
+    color: #212121;
+    padding-right: 20px; }
 
 .fanex-multiselect-filter {
-  display: none; }
+  padding: 5px; }
+  .fanex-multiselect-filter lable {
+    display: flex;
+    align-items: center;
+    position: relative; }
+  .fanex-multiselect-filter input {
+    border: 1px solid #cecece;
+    border-radius: 2px;
+    height: 30px;
+    padding: 0 20px 0 5px;
+    flex: 1; }
+  .fanex-multiselect-filter .delete-button {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    background-image: url(../../styles/vendors/multiselect/images/sprites.png);
+    background-position: -78px -38px;
+    position: absolute;
+    right: 5px;
+    top: 7px; }
+
+.no-data-text {
+  padding: 0 5px 5px 5px;
+  font-weight: bold; }
 
 .fanex-multiselect-div {
   position: relative; }
@@ -4461,61 +4480,78 @@ body .ui-tooltip { border-width: 2px; }
   max-height: 300px;
   min-width: 220px;
   overflow: hidden auto; }
+  .fanex-multiselect-options .high-light-item {
+    color: #045ace; }
+    .fanex-multiselect-options .high-light-item label {
+      font-weight: bold; }
 
 .collapseClass {
-  display: block;
-  width: 10px;
-  height: 10px;
+  height: 12px;
+  width: 12px;
+  top: 10px;
+  left: 3px;
   position: absolute;
-  top: 11px;
-  left: 5px;
   cursor: pointer; }
-  .collapseClass.rtMinus:after {
-    position: absolute;
-    content: "";
-    right: 0;
-    bottom: 0;
+  .collapseClass:after {
     width: 0;
     height: 0;
     border-style: solid;
     border-width: 0 0 6px 6px;
-    border-color: transparent transparent #212121 transparent; }
-  .collapseClass.rtPlus:after {
+    border-color: transparent transparent #212121 transparent;
+    top: 0;
+    left: 3px;
     position: absolute;
     content: "";
-    width: 0;
-    height: 0;
-    border-style: solid;
-    border-width: 4px 0 4px 4px;
-    border-color: transparent transparent transparent #212121;
-    right: 2px;
-    bottom: 1px; }
+    transform: rotate(45deg); }
+  .collapseClass.rtMinus:after {
+    top: 0;
+    left: 3px;
+    transform: rotate(45deg); }
+  .collapseClass.rtPlus:after {
+    top: 3px;
+    left: 2px;
+    transform: rotate(-45deg); }
 
 .custom-ui-widget-header {
-  border-bottom: 1px solid #cecece; }
+  border-bottom: 1px solid #cecece;
+  border-top: 1px solid #cecece; }
   .custom-ui-widget-header .fanex-multiselect-helper-reset {
-    margin-bottom: 0; }
+    margin-bottom: 0;
+    display: flex;
+    align-items: center; }
     .custom-ui-widget-header .fanex-multiselect-helper-reset .show-item {
       display: block !important;
       margin: 0;
-      padding: 2px 2px 2px 20px;
-      line-height: 28px; }
+      flex: 1; }
       .custom-ui-widget-header .fanex-multiselect-helper-reset .show-item .fanex-multiselect-check-all {
-        margin: 0; }
+        margin: 0;
+        display: block;
+        padding: 2px 2px 2px 20px;
+        line-height: 28px; }
+        .custom-ui-widget-header .fanex-multiselect-helper-reset .show-item .fanex-multiselect-check-all:hover {
+          font-weight: bold; }
     .custom-ui-widget-header .fanex-multiselect-helper-reset .fanex-multiselect-icon-dropdown {
-      display: none; }
+      width: 20px;
+      height: 20px;
+      background-image: url(../../styles/vendors/multiselect/images/collapse.png);
+      background-repeat: no-repeat;
+      background-position: -30px 0px;
+      margin: 0 10px 0 5px;
+      cursor: pointer; }
+      .custom-ui-widget-header .fanex-multiselect-helper-reset .fanex-multiselect-icon-dropdown.fanex-multiselect-icon-collapse {
+        background-position: 0px 0px; }
 
-.fanex-multiselect-ul-group .show-item .fanex-multiselect-div label {
-  display: block;
-  margin: 0;
-  padding: 2px 2px 2px 20px;
-  line-height: 28px; }
-  .fanex-multiselect-ul-group .show-item .fanex-multiselect-div label:hover {
-    background-color: #ddd; }
-
-.fanex-multiselect-ul-group .show-item ul {
-  padding: 0 0 0 20px; }
-
+.fanex-multiselect-ul-group {
+  margin: 0; }
+  .fanex-multiselect-ul-group .show-item .fanex-multiselect-div label, .fanex-multiselect-ul-group .rtLI .fanex-multiselect-div label {
+    display: block;
+    margin: 0;
+    padding: 2px 2px 2px 20px;
+    line-height: 28px; }
+    .fanex-multiselect-ul-group .show-item .fanex-multiselect-div label:hover, .fanex-multiselect-ul-group .rtLI .fanex-multiselect-div label:hover {
+      font-weight: bold; }
+  .fanex-multiselect-ul-group .show-item ul, .fanex-multiselect-ul-group .rtLI ul {
+    padding: 0 0 0 20px; }
 
 /*******************************************/
 /* Ripple Effect */
@@ -4662,7 +4698,6 @@ body .ui-tooltip { border-width: 2px; }
   background: none;
   color: #333; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -4762,7 +4797,6 @@ body .ui-tooltip { border-width: 2px; }
     padding: 10px 0;
     border-top: 1px solid #d1d1d1; }
 
-
 .tablesorter {
   text-align: left; }
   .tablesorter th {
@@ -4812,7 +4846,6 @@ body .ui-tooltip { border-width: 2px; }
       .tablesorter .sorting.col-combine .prior-sortedcolumn:after {
         content: '\e960'; }
 
-
 @font-face {
   font-family: 'Roboto';
   src: url("../../styles/fonts/roboto/Roboto-Regular.woff2") format("woff2");
@@ -4838,7 +4871,6 @@ body .ui-tooltip { border-width: 2px; }
   src: url("../../styles/fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
-
 
 @font-face {
   font-family: 'Iconalpha';

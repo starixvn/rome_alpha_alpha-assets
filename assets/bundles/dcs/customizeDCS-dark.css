@@ -24,14 +24,12 @@
   font-weight: bold;
   font-style: normal; }
 
-
 @font-face {
   font-family: 'Iconalpha';
   src: url("../../styles/fonts/iconalpha/fonts/Iconalpha.eot?6g5qgr");
   src: url("../../styles/fonts/iconalpha/fonts/Iconalpha.eot?6g5qgr#iefix") format("embedded-opentype"), url("../../styles/fonts/iconalpha/fonts/Iconalpha.woff?6g5qgr") format("woff"), url("../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?6g5qgr") format("truetype"), url("../../styles/fonts/iconalpha/fonts/Iconalpha.svg?6g5qgr#Iconalpha") format("svg");
   font-weight: normal;
   font-style: normal; }
-
 
 /*******************************************/
 /* Ripple Effect */

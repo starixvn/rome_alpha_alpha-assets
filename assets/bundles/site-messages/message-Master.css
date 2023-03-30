@@ -398,7 +398,6 @@
   font-weight: bold;
   font-style: normal; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -507,7 +506,6 @@
 
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -764,7 +762,6 @@
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
 
-
 /*******************************************/
 /* Devices */
 /*******************************************/
@@ -779,13 +776,11 @@
 .nav-tabs > li > a {
   color: #333; }
 
-
 .input-group.date .input-group-addon {
   padding-right: 0; }
 
 .daterange-picker {
   display: none; }
-
 
 /*******************************************/
 /* Ripple Effect */
