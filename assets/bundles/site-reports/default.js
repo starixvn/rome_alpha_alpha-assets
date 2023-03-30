@@ -11014,65 +11014,72 @@ function requestData(url, successFunction, methodType) {
 // --------------------------------------------------------------------------
 'use strict';
 (function ($) {
-
     //// Method expose for user use
     var fanexMultiSelectMethods =
-        {
-            createfanexMultiSelect: function (opts) {
-                opts = $.extend({}, $.fn.fanexMultiSelect.defaults, opts);
-                return this.each(function () {
-                    return new fanex.MultiSelect(this, opts);
-                });
-            },
-            getItems: function (checked) {
-                var $me = $(this);
-                if ($me.parent().length === 0) {
-                    $me = $('#' + $me.attr('id'));
-                }
-
-                var checkedText = checked ? ':checked' : ':not(:checked)',
-                    items = $me.next().find('input[data-is-group=false]' + checkedText),
-                    itemLength = items.length,
-                    values = [];
-                for (var i = 0; i < itemLength; i++) {
-                    values.push(items[i].value);
-                }
-
-                return values;
-            },
-            getSelectedTexts: function (checked) {
-                var $me = $(this);
-                if ($me.parent().length === 0) {
-                    $me = $('#' + $me.attr('id'));
-                }
-
-                var checkedText = checked ? ':checked' : ':not(:checked)',
-                    items = $me.next().find('input[data-is-group=false]' + checkedText),
-                    itemLength = items.length,
-                    values = [];
-                for (var i = 0; i < itemLength; i++) {
-                    values.push(items[i].title);
-                }
-
-                return values;
-            },
-            setCheckAll: function (check) {
-                var $me = $(this);
-                if ($me.parent().length === 0) {
-                    $me = $('#' + $me.attr('id'));
-                }
-                var $headerCheckbox = $me.next().find("#" + $me.attr('id') + "HeaderCheckBox");
-                $headerCheckbox.prop('checked', !check).trigger('click');
-            },
-            isCheckAll: function () {
-                var $me = $(this);
-                if ($me.parent().length === 0) {
-                    $me = $('#' + $me.attr('id'));
-                }
-                var $headerCheckbox = $me.next().find("#" + $me.attr('id') + "HeaderCheckBox");
-                return $headerCheckbox.is(':checked');
+    {
+        createfanexMultiSelect: function (opts) {
+            opts = $.extend({}, $.fn.fanexMultiSelect.defaults, opts);
+            return this.each(function () {
+                return new fanex.MultiSelect(this, opts);
+            });
+        },
+        getItems: function (checked) {
+            var $me = $(this);
+            if ($me.parent().length === 0) {
+                $me = $('#' + $me.attr('id'));
             }
-        };
+
+            var checkedText = checked ? ':checked' : ':not(:checked)',
+                items = $me.next().find('input[data-is-group=false]' + checkedText),
+                itemLength = items.length,
+                values = [];
+            for (var i = 0; i < itemLength; i++) {
+                values.push(items[i].value);
+            }
+
+            return values;
+        },
+        getSelectedTexts: function (checked) {
+            var $me = $(this);
+            if ($me.parent().length === 0) {
+                $me = $('#' + $me.attr('id'));
+            }
+
+            var checkedText = checked ? ':checked' : ':not(:checked)',
+                items = $me.next().find('input[data-is-group=false]' + checkedText),
+                itemLength = items.length,
+                values = [];
+            for (var i = 0; i < itemLength; i++) {
+                values.push(items[i].title);
+            }
+
+            return values;
+        },
+        setCheckAll: function (check) {
+            var $me = $(this);
+            if ($me.parent().length === 0) {
+                $me = $('#' + $me.attr('id'));
+            }
+            var $headerCheckbox = $me.next().find("#" + $me.attr('id') + "HeaderCheckBox");
+            $headerCheckbox.prop('checked', !check).trigger('click');
+        },
+        isCheckAll: function () {
+            var $me = $(this);
+            if ($me.parent().length === 0) {
+                $me = $('#' + $me.attr('id'));
+            }
+            var $headerCheckbox = $me.next().find("#" + $me.attr('id') + "HeaderCheckBox");
+            return $headerCheckbox.is(':checked');
+        },
+        getItemsByCondition: function (query) {
+            var $me = $(this);
+            if ($me.parent().length === 0) {
+                $me = $('#' + $me.attr('id'));
+            }
+
+            return $me.next().find(query);
+        }
+    };
 
     //// Plugin
     $.fn.fanexMultiSelect = function (options) {
@@ -11315,6 +11322,7 @@ function requestData(url, successFunction, methodType) {
                     tempHtml = [],
                     title = row.data.text || '',
                     value = typeof row.data.value === "undefined" ? '' : row.data.value,
+                    name = row.data.name || value,
                     inputId = 'fanex-multiselect-' + me.id + '-' + row.data.id + '-option-' + row.groupId,
                     isDisabled = !row.data.enable,
                     labelClasses = row.data.cssClass || '',
@@ -11358,10 +11366,11 @@ function requestData(url, successFunction, methodType) {
 
                     labelClasses += isDisabled ? ' fanex-multiselect-state-disabled' : '';
                     labelClasses += row.hasChild && me.isShowGroup ? ' fanex-multiselect-group-mark' : '';
-                    tempHtml.push('<label for="' + inputId + '" class="' + labelClasses + '" style="' + row.data.cssClass + '">');
+                    //tempHtml.push('<label for="' + inputId + '" class="' + labelClasses + '" style="' + row.data.cssClass + '">');
+                    tempHtml.push('<label for="' + inputId + '" class="' + labelClasses + '">');
                     tempHtml.push('<input id="' + inputId
                         + '" type="' + (options.multiple ? 'checkbox' : 'radio')
-                        + '" name="' + value
+                        + '" name="' + name
                         + '" value="' + value
                         + '" class="show-item'
                         + '" title="' + title
@@ -11443,7 +11452,7 @@ function requestData(url, successFunction, methodType) {
                         if (typeof options.customCheckAllText === 'function') {
                             value = options.customCheckAllText();
                         } else {
-                            value = options.customCheckAllText;
+                            value = options.customCheckAllText.replace('#', numChecked);
                         }
                     }
                     else {
@@ -11711,10 +11720,10 @@ function requestData(url, successFunction, methodType) {
 
                             }
                             me.updateSelected();
-                            //$.fn.multiSelect.defaults.onLeave();
+                            options.onLeave.call(me.$multiSelect);
                             if (targetId &&
                                 (targetId !== me.$multiSelect.attr("id") || targetId === 'html') && me.isOpenning) {
-                                options.onLeave.call(me.$multiSelect);
+                                //options.onLeave.call(me.$multiSelect);
                                 me.isOpenning = false;
                             }
                         }
@@ -11915,8 +11924,6 @@ function requestData(url, successFunction, methodType) {
     fanex.MultiSelect.list = fanex.MultiSelect.list || {};
 
     fanex.MultiSelect.constant = fanex.MultiSelect.constant || {};
-
-
 })(jQuery);
 
 /*! Copyright (c) 2011 by Jonas Mosbech - https://github.com/jmosbech/StickyTableHeaders

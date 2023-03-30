@@ -613,6 +613,7 @@
       "js/components/autocomplete/autocomplete.js",
       "js/libs/jquery/jquery.cookie.js",
       "js/components/multiselect/bootstrap-multiselect.js",
+      "js/components/multiselect/fanex.multiSelect.js",
       "js/components/sticky-table-headers/jquery.stickytableheaders.js",
       "js/components/tablesorter/tablesorter.js",
       "js/components/draggable/tiny-draggable.js",
