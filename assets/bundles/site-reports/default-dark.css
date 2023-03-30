@@ -4745,6 +4745,8 @@ body .ui-tooltip { border-width: 2px; }
 
 .fanex-multiselect-ul-group {
   margin: 0; }
+  .fanex-multiselect-ul-group .hide-item {
+    display: none; }
   .fanex-multiselect-ul-group .show-item .fanex-multiselect-div label, .fanex-multiselect-ul-group .rtLI .fanex-multiselect-div label {
     display: block;
     margin: 0;

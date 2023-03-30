@@ -156,6 +156,10 @@
 .fanex-multiselect-ul-group {
     margin: 0;
 
+    .hide-item {
+        display: none;
+    }
+
     .show-item, .rtLI {
         .fanex-multiselect-div {
             label {
