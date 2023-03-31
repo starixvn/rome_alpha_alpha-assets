@@ -9168,7 +9168,7 @@ select {
 .filter {
   padding-top: 15px;
   position: relative;
-  z-index: 10; }
+  z-index: 9010; }
   .filter .form-group {
     display: inline-block;
     margin: 0 16px 15px 0;
@@ -9277,6 +9277,12 @@ label[disabled] {
 /*******************************************/
 .width-100per {
   width: 100%; }
+
+.dataTables_wrapper {
+  position: relative;
+  z-index: 1; }
+  .dataTables_wrapper .tblRpt .dataTables_empty {
+    border-bottom: 0 !important; }
 
 .tblRpt {
   border: 1px solid #d1d1d1;

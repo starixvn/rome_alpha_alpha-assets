@@ -6293,6 +6293,12 @@ input[type="number"], input[type="tel"] {
 .width-100per {
   width: 100%; }
 
+.dataTables_wrapper {
+  position: relative;
+  z-index: 1; }
+  .dataTables_wrapper .tblRpt .dataTables_empty {
+    border-bottom: 0 !important; }
+
 .tblRpt {
   border: 1px solid #5F626B;
   border-collapse: collapse;

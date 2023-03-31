@@ -4,7 +4,16 @@
 .width-100per {
     width: 100%;
 }
+.dataTables_wrapper {
+    position: relative;
+    z-index: 1;
 
+    .tblRpt {
+        .dataTables_empty {
+            border-bottom: 0 !important;
+        }
+    }
+}
 .tblRpt {
     border: 1px solid $table-border-color;
     border-collapse: collapse;

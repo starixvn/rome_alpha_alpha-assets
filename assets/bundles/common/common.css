@@ -5388,7 +5388,7 @@ select {
 .filter {
   padding-top: 15px;
   position: relative;
-  z-index: 10; }
+  z-index: 9010; }
   .filter .form-group {
     display: inline-block;
     margin: 0 16px 15px 0;
