@@ -9144,29 +9144,26 @@ select {
     position: absolute;
     top: 0;
     right: 0;
-    background: #D3DFEC;
-    color: #0B599C;
+    background: #F2F2F2;
+    border: 1px solid #A5A5A5;
+    color: #5A5A5A;
     font-size: 13px;
     line-height: 15px;
     font-weight: bold;
-    padding: 6px 12px 2px 12px;
+    padding: 5px 11px 1px 15px;
     display: inline-flex; }
-    .switch-version .btn-switch-version .icon-refresh2 {
+    .switch-version .btn-switch-version:hover {
+      opacity: 0.8; }
+    .switch-version .btn-switch-version .icon-swap-horizontal {
       font-size: 20px;
       position: relative;
-      margin-right: 5px;
-      top: -2px; }
-    .switch-version .btn-switch-version .hidden-pc {
-      display: none; }
+      top: -2px;
+      left: -4px; }
     @media only screen and (max-device-width: 767px) {
       .switch-version .btn-switch-version {
         position: relative;
         margin-bottom: 5px;
-        padding: 6px 6px 2px 6px; }
-        .switch-version .btn-switch-version .hidden-pc {
-          display: block; }
-        .switch-version .btn-switch-version .hidden-mobile {
-          display: none; } }
+        padding: 6px 6px 0 6px; } }
 
 .filter {
   padding-top: 15px;
