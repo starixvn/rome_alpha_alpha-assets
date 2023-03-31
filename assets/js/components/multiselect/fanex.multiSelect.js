@@ -190,7 +190,7 @@
                 me.$checkedInput = me.$labels.find('input:checked');
                 if (me.options.showFilter) {
                     me.$filterInput = me.$options.find('#fanex-multiselect-filter-input');
-                    me.$filterDeleteButton = me.$options.find('#filter-delete-button');
+                    //me.$filterDeleteButton = me.$options.find('#filter-delete-button');
                 }
 
                 me.addPropertyValue();
@@ -249,7 +249,7 @@
                     html.push('<lable for="fanex-multiselect-filter-input">');
                     html.push('<input type="textbox" id="fanex-multiselect-filter-input" placeholder="'
                         + options.filterPlaceHolder + '" autocomplete="off"/></label>');
-                    html.push('<span class="delete-button" id="filter-delete-button"></span>');
+                    //html.push('<span class="delete-button" id="filter-delete-button"></span>');
                     html.push('</div>');
 
                     html.push('<div id="no-data-text" class="no-data-text" style="display:none;">' + options.noItemFoundText + '</div>');
@@ -615,14 +615,14 @@
                             });
                         });
 
-                    me.$filterDeleteButton
-                        .off('click.multipleselect')
-                        .on('click.multipleselect', function () {
-                            if (me.$filterInput.val() !== '') {
-                                me.$filterInput.val('');
-                                me.$filterInput.trigger('keyup.multipleselect');
-                            }
-                        });
+                    //me.$filterDeleteButton
+                    //    .off('click.multipleselect')
+                    //    .on('click.multipleselect', function () {
+                    //        if (me.$filterInput.val() !== '') {
+                    //            me.$filterInput.val('');
+                    //            me.$filterInput.trigger('keyup.multipleselect');
+                    //        }
+                    //    });
                 }
                 //add handler event collapse
                 me.$listCollapse.each(function () {
