@@ -140,10 +140,14 @@
         font-size: 13px;
         line-height: 16px;
         color: #727272;
-        border: 1px solid #727272;
-        padding: 3px 10px;
+        padding: 4px 10px;
         margin: 0 12px 5px 0;
         text-decoration: none;
+        border: 1px solid #ffffff;
+        background: #FFFFFF;
+        box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+        height: 24px;
 
         &.active, &:hover {
             background: #E8F4FD;

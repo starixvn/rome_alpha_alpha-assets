@@ -4640,7 +4640,7 @@ body .ui-tooltip { border-width: 2px; }
   right: 7px; }
 
 .fanex-multiselect {
-  width: 160px !important;
+  width: 160px;
   display: flex;
   align-items: center;
   position: relative; }
