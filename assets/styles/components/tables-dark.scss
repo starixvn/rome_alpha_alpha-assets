@@ -12,6 +12,16 @@
         .dataTables_empty {
             border-bottom: 0 !important;
         }
+
+        tbody {
+            tr {
+                &:last-child {
+                    td {
+                        border-bottom: 0!important;
+                    }
+                }
+            }
+        }
     }
 }
 .tblRpt {
