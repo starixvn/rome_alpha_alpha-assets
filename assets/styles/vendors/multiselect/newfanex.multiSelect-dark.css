@@ -61,9 +61,8 @@
   background: #2b2b2b;
   border: 1px solid #474747;
   font-size: 13px;
-  min-width: 250px;
   overflow: hidden auto;
-  padding: 12px 0px 12px 12px; }
+  padding: 12px 0px 0 12px; }
   .fanex-multiselect-options .high-light-item {
     color: #41A4FF; }
     .fanex-multiselect-options .high-light-item label {
