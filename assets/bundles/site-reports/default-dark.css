@@ -4713,7 +4713,8 @@ body .ui-tooltip { border-width: 2px; }
   border: 1px solid #474747;
   font-size: 13px;
   overflow: hidden auto;
-  padding: 12px 0px 0 12px; }
+  padding: 12px 0px 0 12px;
+  z-index: 10; }
   .fanex-multiselect-options .high-light-item {
     color: #41A4FF; }
     .fanex-multiselect-options .high-light-item label {
