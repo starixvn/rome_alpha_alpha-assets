@@ -20,6 +20,7 @@
     .fanex-multiselect-state-default {
         width: 100% !important;
         color: #212121;
+        cursor: pointer;
         padding-right: 20px;
     }
 }
@@ -56,6 +57,8 @@
 }
 .fanex-multiselect-div {
     position: relative;
+    display: flex;
+    width: 100%; 
 }
 .first-group {
     position: relative;
@@ -78,38 +81,31 @@
     }
 }
 .collapseClass {
-    height: 12px;
-    width: 12px;
-    top: 10px;
-    right: 3px;
-    position: absolute;
+    order: 2;
+    display: block;
+    flex: 1;
     cursor: pointer;
 
     &:after {
         width: 0;
         height: 0;
+        display: block;
         border-style: solid;
         border-width: 0 0 6px 6px;
         border-color: transparent transparent #444444 transparent;
-        top: 0;
-        left: 3px;
-        position: absolute;
         content: "";
+        margin: 10px 0 0 auto;
         transform: rotate(45deg);
     }
 
     &.rtMinus {
         &:after {
-            top: 0;
-            left: 3px;
             transform: rotate(45deg);
         }
     }
 
     &.rtPlus {
         &:after {
-            top: 3px;
-            left: 2px;
             transform: rotate(-45deg);
         }
     }
@@ -126,7 +122,6 @@
         .show-item {
             display: block !important;
             margin: 0;
-            flex: 1;
 
             .fanex-multiselect-check-all {
                 margin: 0;
@@ -141,44 +136,34 @@
         }
 
         .fanex-multiselect-icon-dropdown {
-            width: 20px;
-            height: 20px;
             position: relative;
+            flex: 1;
+            cursor: pointer;
 
             &:after {
                 width: 0;
                 height: 0;
+                display: block;
                 border-style: solid;
                 border-width: 0 0 6px 6px;
                 border-color: transparent transparent #444444 transparent;
-                top: 50%;
-                left: 50%;
-                position: absolute;
                 content: "";
+                margin: 0 10px 0 auto;
                 transform: rotate(45deg);
-                margin-top: -4px;
-                margin-left: -4px;
-                cursor: pointer;
+                position: relative;
+                top: -12px;
             }
 
             &.fanex-multiselect-icon-collapse {
                 &:after {
                     transform: rotate(45deg);
-                    margin-top: -4px;
-                    margin-left: -4px;
                 }
             }
 
             &.fanex-multiselect-icon-expand {
                 &:after {
                     transform: rotate(-45deg);
-                    margin-top: -3px;
-                    margin-left: -5px;
                 }
-            }
-
-            &.fanex-multiselect-icon-collapse {
-                background-position: 0px 0px;
             }
         }
     }
@@ -195,8 +180,9 @@
         .fanex-multiselect-div {
             label {
                 display: block;
+                order: 1;
                 margin: 0;
-                padding: 2px 20px 2px 3px;
+                padding: 2px 2px 2px 3px;
                 line-height: 28px;
 
                 &:hover {
