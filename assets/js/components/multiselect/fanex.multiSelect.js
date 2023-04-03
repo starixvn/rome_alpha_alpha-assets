@@ -69,6 +69,16 @@
             }
 
             return $me.next().find(query);
+        },
+        toggleCollapseExpandAll: function () {
+            var $me = $(this);
+            if ($me.parent().length === 0) {
+                $me = $('#' + $me.attr('id'));
+            }
+
+            var $target = $me.next();
+            $target.find("span.collapseClass").trigger("click");
+            $target.find("#" + $me.attr('id') + "CollapseButton").trigger("click");
         }
     };
 
