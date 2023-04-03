@@ -15,6 +15,50 @@
 .input-group.date {
     position: initial;
 
+    &.datepicker {
+        &.datepicker {
+            position: relative;
+            padding-right: 30px;
+            background: #2B2B2B;
+            border: 1px solid $component-border-color;
+            background: $component-bg;
+
+            @media only screen and (max-device-width: 767px) {
+                box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3);
+            }
+
+            .input-group-addon {
+                position: absolute;
+                top: 3px;
+                right: 2px;
+                margin: 0;
+                padding: 0;
+                width: auto;
+
+                @media only screen and (max-device-width: 767px) {
+                    top: 6px;
+                }
+            }
+
+            .form-control {
+                background: transparent;
+                border: 0;
+                box-shadow: none;
+
+                @media only screen and (max-device-width: 767px) {
+                    height: 34px;
+                }
+            }
+        }
+
+
+        .input-group-addon {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+
     .icon-calendar {
         font-size: 24px;
         color: #EDEDED;
@@ -38,7 +82,6 @@
         background: $component-bg;
         color: $component-color;
         margin-left: 0;
-        @include effect-textbox;
     }
 }
 

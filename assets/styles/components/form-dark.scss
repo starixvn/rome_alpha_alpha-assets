@@ -1,14 +1,15 @@
 ﻿@import "../abstracts/_variables-dark.scss";
 @import "../abstracts/_mixins.scss";
 .switch-version {
-    position: relative;
+    position: absolute;
+    top: 15px;
+    right: 0;
+    white-space: nowrap;
 
     .btn-switch-version {
-        position: absolute;
-        top: 0;
-        right: 0;
-        background: #3B4652;
-        color: #ededed;
+        background: #696969;
+        border: 1px solid #8B8B8B;
+        color: $text-color;
         font-size: 13px;
         line-height: 15px;
         font-weight: bold;
@@ -16,7 +17,7 @@
         display: inline-flex;
 
         &:hover {
-            opacity: 0.8;
+            opacity: 0.9;
         }
 
         .icon-swap-horizontal {
@@ -32,11 +33,18 @@
             padding: 6px 6px 0 6px;
         }
     }
+
+    @media only screen and (max-device-width: 767px) {
+        position: relative;
+        top: 0;
+        margin-bottom: 3px;
+    }
 }
 .filter {
     padding-top: 15px;
     position: relative;
-    z-index: 10;
+    z-index: 9010;
+    padding-right: 150px;
 
     .form-group {
         display: inline-block;
