@@ -6279,6 +6279,12 @@ input[type="number"], input[type="tel"] {
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
+th.col-firstlastname, div.col-firstlastname {
+  width: 200px !important;
+  white-space: nowrap !important;
+  overflow: hidden !important;
+  text-overflow: ellipsis; }
+
 .width-100per {
   width: 100%; }
 
