@@ -11720,10 +11720,9 @@ function requestData(url, successFunction, methodType) {
 
                             }
                             me.updateSelected();
-                            options.onLeave.call(me.$multiSelect);
-                            if (targetId &&
-                                (targetId !== me.$multiSelect.attr("id") || targetId === 'html') && me.isOpenning) {
-                                //options.onLeave.call(me.$multiSelect);
+                            if ((typeof targetId === "undefined"
+                                || targetId && (targetId !== me.$multiSelect.attr("id") || targetId === 'html')) && me.isOpenning) {
+                                options.onLeave.call(me.$multiSelect);
                                 me.isOpenning = false;
                             }
                         }
