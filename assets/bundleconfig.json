@@ -986,6 +986,35 @@
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
     ]
   },
+  {
+    "outputFileName": "bundles/site-main/apikey.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/icon.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/apikey.js",
+    "inputFiles": [
+      "js/libs/moment/moment.js",
+      "js/components/datetimepicker/datepicker.js",
+      "js/components/datetimepicker/bootstrap-datetimepicker.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js",
+      "js/components/storejs/store.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/apikey/clipboard.js",
+    "inputFiles": [
+      "js/libs/bootstrap/tooltip.js",
+      "js/libs/clipboard/clipboard.js"
+    ]
+  },
   /************************** Dark Mode ************************/
   {
     "outputFileName": "bundles/common/common-dark.css",
@@ -1559,42 +1588,42 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-Super.css",
+    "outputFileName": "bundles/site-main/tab-super.css",
     "inputFiles": [
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-super.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-Master.css",
+    "outputFileName": "bundles/site-main/tab-master.css",
     "inputFiles": [
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-master.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-Agent.css",
+    "outputFileName": "bundles/site-main/tab-agent.css",
     "inputFiles": [
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-agent.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-Super-dark.css",
+    "outputFileName": "bundles/site-main/tab-super-dark.css",
     "inputFiles": [
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-super-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-Master-dark.css",
+    "outputFileName": "bundles/site-main/tab-master-dark.css",
     "inputFiles": [
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-master-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles/site-main/chatbot/tab-Agent-dark.css",
+    "outputFileName": "bundles/site-main/tab-agent-dark.css",
     "inputFiles": [
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-agent-dark.css"
@@ -1642,6 +1671,17 @@
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars-dark.css",
       "styles/components/bootstrap.nexDatePicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-main/apikey-dark.css",
+    "inputFiles": [
+      "styles/base/roboto-fonts.css",
+      "styles/components/tables-dark.css",
+      "styles/vendors/bootstrap-datetimepicker.css",
+      "styles/components/calendars-dark.css",
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/icon-dark.css"
     ]
   },
   {
