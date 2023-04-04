@@ -5111,9 +5111,13 @@ body .ui-tooltip { border-width: 2px; }
   -ms-box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
   -o-box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
   box-shadow: 0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23);
-  background-color: #171717;
+  background-color: #2b2b2b !important;
   color: #EDEDED;
   z-index: 10000; }
+  .multiselect-container.dropdown-menu li {
+    background-color: #2b2b2b !important; }
+    .multiselect-container.dropdown-menu li.active {
+      background-color: #2b2b2b !important; }
   .multiselect-container.dropdown-menu > li > a {
     color: #EDEDED; }
   .multiselect-container.dropdown-menu > li:hover > a {
@@ -5130,16 +5134,17 @@ body .ui-tooltip { border-width: 2px; }
   .multiselect-container.dropdown-menu .filter {
     padding: 0; }
     .multiselect-container.dropdown-menu .filter .input-group {
-      width: 91%; }
+      margin: 10px 0px 10px 10px;
+      display: block; }
       .multiselect-container.dropdown-menu .filter .input-group .input-group-addon, .multiselect-container.dropdown-menu .filter .input-group .input-group-btn {
         display: none; }
       .multiselect-container.dropdown-menu .filter .input-group .form-control.multiselect-search {
         width: 100%;
-        margin-left: 8px;
-        border-radius: 2px;
+        border-radius: 3px;
         box-shadow: none;
         border: 1px solid #474747;
-        line-height: 18px; }
+        line-height: 18px;
+        float: none; }
   .multiselect-container.dropdown-menu .checkbox input[type="checkbox"],
   .multiselect-container.dropdown-menu .checkbox-inline input[type="checkbox"] {
     margin-left: -22px;
@@ -5171,7 +5176,7 @@ body .ui-tooltip { border-width: 2px; }
   .multiselect-container.dropdown-menu .multiselect-nested-item a {
     padding-left: 16px; }
   .multiselect-container.dropdown-menu::-webkit-scrollbar {
-    background-color: #171717; }
+    background-color: #2b2b2b !important; }
 
 .form-inline .multiselect-container label.checkbox {
   padding: 2px 20px 2px 36px; }
