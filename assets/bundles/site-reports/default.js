@@ -13497,933 +13497,893 @@ function requestData(url, successFunction, methodType) {
 
 }(window.jQuery);
 
-// --------------------------------------------------------------------------
-// <copyright file="fanex.MultiSelect.js">
-// Copyright (c). All rights reserved.
-// </copyright>
-// --------------------------------------------------------------------------
-'use strict';
+"use strict";
 (function ($) {
-    //// Method expose for user use
-    var fanexMultiSelectMethods =
-    {
-        createfanexMultiSelect: function (opts) {
-            opts = $.extend({}, $.fn.fanexMultiSelect.defaults, opts);
-            return this.each(function () {
-                return new fanex.MultiSelect(this, opts);
+    function FanexMultiSelect(element, options) {
+        options.disabled = element.attr("disabled") === "disabled";
+        this.options = $.extend({}, this._defaults, options);
+        this.$multiSelect = element;
+        var multiSelectId = element.attr("id");
+
+        // ----- initialize
+        this.isOpenning = false;
+        this.browser = this._detectBrowser();
+        this.isHasGroup = this._isHasGroup(this.options.listData);
+        var dropdownContainerId = "fanex-multiselect-options-" + multiSelectId;
+
+        var html = [
+            this._renderButton(multiSelectId, dropdownContainerId),
+            '<div class="fanex-multiselect-options fanex-multiselect-treeview fanex-multiselect-shadow" id="', dropdownContainerId, '">'
+        ];
+        if (this.options.listData.length) {
+            html.push(this._renderFilterAndSelectAll(), this._renderCheckboxContainer(multiSelectId));
+        } else {
+            html.push(this._renderFilterAndSelectAllNoItem());
+        }
+        html.push("</div>");
+
+        // Global Variables
+        this.$multiSelect = this.$multiSelect
+            .after(html.join(""))
+            .next("#" + multiSelectId);
+        this.$dropdownContainer = this.$multiSelect.next("#" + dropdownContainerId).hide();
+        this.$noSearchFound = this.$dropdownContainer.find(".no-data-text");
+        this.$selectAllContainer = this.$dropdownContainer.find("div.custom-ui-widget-header");
+        this.$selectAll = this.$selectAllContainer.find(".fanex-multiselect-check-all > input[type=checkbox]");
+        this.$checkboxContainer = this.$dropdownContainer.find("ul.first-group");
+        this.$allLabel = this.$dropdownContainer.find("label");
+        this.$listItem = this.$dropdownContainer.find("ul.fanex-multiselect-ul-group");
+        this.$listGroupCheckBox = this.$dropdownContainer.find("label.fanex-multiselect-group-mark input[type=checkbox]");
+        this.$mainParentGroup = this.$dropdownContainer.find("ul.first-group > li > div.fanex-multiselect-div");
+
+        var $listLabelExceptSelectAll = this.$checkboxContainer.find("label");
+        this.$allCheckBoxesExceptSelectAll = $listLabelExceptSelectAll.not(".fanex-multiselect-state-disabled").find("input[type=checkbox]");
+        this.$allCheckBoxesWithoutGroupExceptSelectAll = $listLabelExceptSelectAll.not(".fanex-multiselect-group-mark").find("input[type=checkbox]");
+
+        this._registerEvents();
+
+        // update the number of selected elements when the page initially loads, and use that as the defaultValue.
+        // necessary for form resets when options are pre-selected.
+        this.$multiSelect.find("input[type=text]").defaultValue = this.updateSelected();
+        this.updateSelectAll();
+
+        // open by default
+        this.options.state === "open" && this.$dropdownContainer.trigger("open", [false]);
+        element.remove();
+    }
+
+    FanexMultiSelect.prototype = {
+        constructor: FanexMultiSelect,
+
+        getSelectedValues: function () {
+            var selected = [];
+            this.$allCheckBoxesWithoutGroupExceptSelectAll.filter(":checked").each(function (_, item) {
+                selected.push(item.value);
             });
+
+            return selected.join();
         },
-        getItems: function (checked) {
-            var $me = $(this);
-            if ($me.parent().length === 0) {
-                $me = $('#' + $me.attr('id'));
-            }
 
-            var checkedText = checked ? ':checked' : ':not(:checked)',
-                items = $me.next().find('input[data-is-group=false]' + checkedText),
-                itemLength = items.length,
-                values = [];
-            for (var i = 0; i < itemLength; i++) {
-                values.push(items[i].value);
-            }
+        getAllValues: function () {
+            var allValues = {};
+            this.$allCheckBoxesWithoutGroupExceptSelectAll.each(function (_, item) {
+                allValues[item.value] = item.checked;
+            });
 
-            return values;
+            return allValues;
         },
-        getSelectedTexts: function (checked) {
-            var $me = $(this);
-            if ($me.parent().length === 0) {
-                $me = $('#' + $me.attr('id'));
-            }
 
-            var checkedText = checked ? ':checked' : ':not(:checked)',
-                items = $me.next().find('input[data-is-group=false]' + checkedText),
-                itemLength = items.length,
-                values = [];
-            for (var i = 0; i < itemLength; i++) {
-                values.push(items[i].title);
-            }
+        getItemsByCustomAttributes: function (attributes) {
+            var query = [];
+            Object.entries(attributes).forEach(([key, value]) => query.push('[data-', key.toLowerCase(), '="', value, '"]'));
 
-            return values;
+            return this.$allCheckBoxesExceptSelectAll.filter(query.join(""));
         },
-        setCheckAll: function (check) {
-            var $me = $(this);
-            if ($me.parent().length === 0) {
-                $me = $('#' + $me.attr('id'));
-            }
-            var $headerCheckbox = $me.next().find("#" + $me.attr('id') + "HeaderCheckBox");
-            $headerCheckbox.prop('checked', !check).trigger('click');
+
+        getSelectedItemsByCustomAttributes: function (attributes) {
+            var query = [":checked"];
+            Object.entries(attributes).forEach(([key, value]) => query.push('[data-', key.toLowerCase(), '="', value, '"]'));
+
+            return this.$allCheckBoxesExceptSelectAll.filter(query.join(""));
         },
-        isCheckAll: function () {
-            var $me = $(this);
-            if ($me.parent().length === 0) {
-                $me = $('#' + $me.attr('id'));
+
+        select: function (selectValues) {
+            var me = this;
+            if (!$.isArray(selectValues)) {
+                selectValues = [selectValues];
             }
-            var $headerCheckbox = $me.next().find("#" + $me.attr('id') + "HeaderCheckBox");
-            return $headerCheckbox.is(':checked');
+
+            var selectValuesObject = selectValues.reduce((prevItem, item) => (prevItem[item] = true, prevItem), {});
+            this.$allCheckBoxesExceptSelectAll.each(function (_, item) {
+                if (selectValuesObject.hasOwnProperty(item.value)) {
+                    item.checked = true;
+                }
+            });
+
+            me.updateSelected();
+            me.updateSelectAll();
         },
-        getItemsByCondition: function (query) {
-            var $me = $(this);
-            if ($me.parent().length === 0) {
-                $me = $('#' + $me.attr('id'));
-            }
 
-            return $me.next().find(query);
+        selectByCustomAttributes: function (attributes) {
+            var matchedItems = this.getItemsByCustomAttributes(attributes);
+            if (matchedItems.length) {
+                matchedItems.each(function (_, item) {
+                    item.checked = true;
+                });
+
+                this.updateSelected();
+                this.updateSelectAll();
+            }
         },
-        toggleCollapseExpandAll: function () {
-            var $me = $(this);
-            if ($me.parent().length === 0) {
-                $me = $('#' + $me.attr('id'));
+
+        deselect: function (deselectValues) {
+            if (!this.options.multiple) {
+                // In single selection mode at least on option needs to be selected
+                return;
             }
 
-            var $target = $me.next();
-            $target.find("span.collapseClass").trigger("click");
-            $target.find("#" + $me.attr('id') + "CollapseButton").trigger("click");
-        }
-    };
+            var me = this;
+            if (!$.isArray(deselectValues)) {
+                deselectValues = [deselectValues];
+            }
 
-    //// Plugin
-    $.fn.fanexMultiSelect = function (options) {
-        if (fanexMultiSelectMethods[options]) {
-            return fanexMultiSelectMethods[options].apply(this, Array.prototype.slice.call(arguments, 1));
-        }
-        else if (typeof options === 'object' || !options) {
-            return fanexMultiSelectMethods.createfanexMultiSelect.apply(this, arguments);
-        }
-        else {
-            throw 'Method does not supported!';
-        }
-    };
-
-    //// Default Options
-    $.fn.fanexMultiSelect.defaults =
-        {
-            showHeader: true,
-            showFooter: false,
-            showTooltip: true,
-            showFilter: false,
-            maxHeight: 400,
-            minWidth: 200,
-            checkAllText: 'Check All',
-            noItemText: 'No item!',
-            noItemFoundText: 'No item found!',
-            footerButtonText: 'Update Result Table',
-            noneSelectedText: 'Select options',
-            selectedText: '# selected',
-            tooltipNoItem: 'There is no selected item.',
-            position: 'bottom', /* top|middle|bottom */
-            fadeSpeed: 100,
-            disabled: false,
-            state: 'closed',
-            multiple: true,
-            isCheckAll: false,
-            filterPaddingRight: 13,
-            filterPlaceHolder: 'Enter keywords',
-            isRetrieveDataAfterClose: false,
-            listData: [],
-            useCustomCheckAllText: false,
-            customCheckAllText: 'All Checked',
-            showParentSelectedText: false,
-            onLeave: function () { },
-            onCheck: function () { },
-            onOpen: function () { },
-            onCheckAll: function () { },
-            onFooterButtonClick: function () { }
-        };
-
-    var fanex = fanex || {};
-
-    fanex.MultiSelect = function (multiSelect, options) {
-        var me = this;
-        me.options = options;
-        me.id = multiSelect.id;
-        me.$multiSelect = $(multiSelect);
-        me.$original = $(multiSelect);
-
-        me.initialize();
-
-        return me.$multiSelect;
-    };
-
-    fanex.MultiSelect.prototype =
-        {
-            getjQueryInstance: function () {
-                return this.$multiSelect;
-            },
-            initialize: function () {
-                var me = this,
-                    html = [],
-                    options = me.options,
-                    id = me.id;
-                me.browser = fanex.MultiSelect.helper.detectBrowser();
-                me.isOpenning = false;
-                me.checkShowGroup();
-                me.bodyId = 'fanex-multiselect-options-' + id;
-                html.push(me.renderInterface(id, options.disabled, options.noneSelectedText));
-                html.push('<div class="fanex-multiselect-options fanex-multiselect-treeview fanex-multiselect-shadow" >');
-                if (options.listData.length > 0) {
-                    html.push(me.renderHeader(id, options.checkAllText));
-                    html.push(me.renderBody());
+            var deselectValuesObject = deselectValues.reduce((prevItem, item) => (prevItem[item] = true, prevItem), {});
+            this.$allCheckBoxesExceptSelectAll.each(function (_, item) {
+                if (deselectValuesObject.hasOwnProperty(item.value)) {
+                    item.checked = false;
                 }
-                else {
-                    html.push(me.renderHeaderNoItem(id, options.noItemText));
-                }
-                if (options.showFooter) {
-                    html.push(me.renderFooter());
-                }
-                html.push('</div>');
+            });
 
-                //add global variable
-                me.$multiSelect = me.$multiSelect.after(html.join('')).next('a.fanex-multiselect');
-                me.$options = me.$multiSelect.next('div.fanex-multiselect-options');
-                me.$options.attr('id', me.bodyId);
-                me.$options = $('#' + me.bodyId);
-                me.$header = me.$options.find('div.custom-ui-widget-header');
-                me.$body = me.$options.find('ul.first-group');
-                me.$footer = me.$options.find('div.fanex-multiselect-footer');
-                me.$labels = me.$options.find('label').not('.fanex-multiselect-group-mark');
-                me.$allLabel = me.$options.find('label');
-                me.$listItem = me.$options.find('ul.fanex-multiselect-ul-group');
-                me.$listCollapse = me.$options.find('span.collapseClass');
-                me.$listGroupCheckBox = me.$options.find('label.fanex-multiselect-group-mark input');
-                me.$divHover = me.$options.find('div.fanex-multiselect-div');
-                me.$mainParentGroup = me.$options.find('ul.first-group > li > div.fanex-multiselect-div');
-                me.$collapseButton = me.$options.find('#' + id + "CollapseButton");
-                me.$noDataText = me.$options.find('#no-data-text');
+            me.updateSelected();
+            me.$selectAll.prop("checked", false);
+        },
 
-                me.$allCheckBoxInputs = me.$options.find('label')
-                    .not('.fanex-multiselect-state-disabled')
-                    .find('input');
-                me.$allInputsExceptHeaderCheckBox = me.$labels.find('input').not("#" + id + "HeaderCheckBox");
-                me.$multiSelectinput = me.$multiSelect.find('input');
-                me.$headerCheckbox = me.$options.find("#" + id + "HeaderCheckBox");
-                me.$checkedInput = me.$labels.find('input:checked');
-                if (me.options.showFilter) {
-                    me.$filterInput = me.$options.find('#fanex-multiselect-filter-input');
-                    //me.$filterDeleteButton = me.$options.find('#filter-delete-button');
-                }
+        deselectByCustomAttributes: function (attributes) {
+            var matchedItems = this.getItemsByCustomAttributes(attributes);
+            if (matchedItems.length) {
+                matchedItems.each(function (_, item) {
+                    item.checked = false;
+                });
 
-                me.addPropertyValue();
-                me.registerEvents();
+                this.updateSelected();
+                this.$selectAll.prop("checked", false);
+            }
+        },
 
-                if (options.isCheckAll === true) {
-                    me.$headerCheckbox.prop('checked', true);
-                }
-                // open by default?
-                if (options.state === 'open') {
-                    me.$options.trigger('open', [false]);
-                }
+        setSelectAll: function (checked) {
+            this.$selectAll.prop("checked", checked);
+            this._handleSelectAll(checked);
+        },
 
-                // update the number of selected elements when the page initially loads, and use that as the defaultValue.  
-                // necessary for form resets when options are pre-selected.
-                me.$multiSelect.find('input')[0].defaultValue = me.updateSelected();
-                me.updateCheckall();
-                me.$options.hide();
-                me.$original.remove();
-            },
-            renderInterface: function (id, disable, nonSelectedText) {
-                var me = this,
-                    $multiSelect = me.$multiSelect;
-                if ($multiSelect.prev().is('div#' + me.bodyId)) {
-                    $multiSelect.prev().remove();
-                }
-                if ($multiSelect.next().is('div#' + me.bodyId)) {
-                    $multiSelect.next().remove();
-                }
+        updateSelectAll: function () {
+            if (this.numGroup === this.$checkboxContainer.find('input[childgroupid="fanex-multiselect-option-group-0"]').filter(":checked").length) {
+                this.$selectAll.prop("checked", true);
+                this.$listGroupCheckBox.prop("checked", true);
+            }
+        },
 
-                var html = [];
-                html.push('<a id="'
-                    + id + '" class="fanex-multiselect fanex-multiselect-widget fanex-multiselect-state-default '
-                    + (disable ? ' fanex-multiselect-state-disabled' : '') + '">');
-                html.push('<input readonly="readonly" type="text" class="fanex-multiselect-state-default" value="'
-                    + nonSelectedText
-                    + '" /><span class="fanex-multiselect-icon fanex-multiselect-icon-triangle-1-s"></span></a>');
-                return html.join('');
-            },
-            checkShowGroup: function () {
-                var me = this;
-                var options = this.options;
-                for (var i = 0; i < options.listData.length; i++) {
-                    if (options.listData[i].items && options.listData[i].items.length > 0) {
-                        me.isShowGroup = true;
-                        break;
+        updateSelected: function () {
+            var options = this.options,
+                $inputs = this.$allCheckBoxesWithoutGroupExceptSelectAll,
+                $checked = $inputs.filter(":checked"),
+                value = "",
+                numChecked = $checked.length;
+
+            if (numChecked === 0) {
+                value = options.noneSelectedText;
+            } else {
+                if (options.useCustomSelectAllText && $inputs.length === numChecked) {
+                    if (typeof options.customSelectAllText === "function") {
+                        value = options.customSelectAllText();
+                    } else {
+                        value = options.customSelectAllText.replace("#", numChecked);
+                    }
+                } else {
+                    if (options.showParentSelectedText) {
+                        $checked = this.$mainParentGroup.find("input:checked");
+                        numChecked = $checked.length;
+                    }
+
+                    if (numChecked > 0) {
+                        var arrayItemChecked = [];
+                        for (var i = 0; i < numChecked; i++) {
+                            arrayItemChecked.push($checked[i].title);
+                        }
+                        value = arrayItemChecked.join(", ");
+                        if (value.length * 8 > options.minWidth) {
+                            value = options.selectedText.replace("#", numChecked);
+                        }
+                    } else {
+                        value = options.noneSelectedText;
                     }
                 }
-            },
-            renderHeader: function (id, checkAllText) {
-                var me = this,
-                    options = me.options,
-                    html = [];
-                if (options.showFilter) {
-                    html.push('<div class="fanex-multiselect-filter">');
-                    html.push('<lable for="fanex-multiselect-filter-input">');
-                    html.push('<input type="textbox" id="fanex-multiselect-filter-input" placeholder="'
-                        + options.filterPlaceHolder + '" autocomplete="off"/></label>');
-                    //html.push('<span class="delete-button" id="filter-delete-button"></span>');
-                    html.push('</div>');
+            }
 
-                    html.push('<div id="no-data-text" class="no-data-text" style="display:none;">' + options.noItemFoundText + '</div>');
+            // Update tooltip
+            if (options.showTooltip) {
+                var tooltipValue = $checked
+                    .map(function () {
+                        return this.title;
+                    })
+                    .get()
+                    .join(", ");
+                if (tooltipValue === "") {
+                    tooltipValue = options.tooltipNoItem;
                 }
+                this.$multiSelect.attr("original-title", tooltipValue);
+                this.$multiSelect.attr("title", tooltipValue);
+            }
 
-                html.push('<div class="custom-ui-widget-header" ' + (options.showHeader ? '' : 'style="display:none;"') + '>');
-                html.push('<ul class="fanex-multiselect-helper-reset" style="overflow-y:hidden;">');
-                html.push('<li style="display:inline;" class="show-item">');
-                html.push('<label class="fanex-multiselect-check-all" for="' + id + "HeaderCheckBox" + '">');
-                html.push('<input type="checkbox" id="' + id + "HeaderCheckBox" + '">' + checkAllText + '</label></li>');
-                if (me.isShowGroup) {
-                    html.push('<li class="fanex-multiselect-icon-dropdown fanex-multiselect-icon-collapse" title="Collapse/Expand" id="'
-                        + id + "CollapseButton" + '" >&nbsp;</li>');
+            this.$multiSelect.find("input").val(value);
+            return value;
+        },
+
+        /* Private Functions */
+        _detectBrowser: function () {
+            //// multiSelect Scroller
+            var matchedBrowser, browserDectect;
+
+            // Use of jQuery.browser is frowned upon.
+            // More details: http://api.jquery.com/jQuery.browser
+            // jQuery.uaMatch maintained for back-compat
+            function ubMatch(ua) {
+                ua = ua.toLowerCase();
+
+                var match =
+                    /(chrome)[ \/]([\w.]+)/.exec(ua) ||
+                    /(webkit)[ \/]([\w.]+)/.exec(ua) ||
+                    /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua) ||
+                    /(msie) ([\w.]+)/.exec(ua) ||
+                    (ua.indexOf("compatible") < 0 &&
+                        /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua)) ||
+                    [];
+
+                return {
+                    browserDectect: match[1] || "",
+                    version: match[2] || "0"
+                };
+            }
+
+            matchedBrowser = ubMatch(navigator.userAgent);
+            browserDectect = {};
+
+            if (matchedBrowser.browserDectect) {
+                browserDectect[matchedBrowser.browserDectect] = true;
+                browserDectect.version = matchedBrowser.version;
+            }
+
+            // Chrome is Webkit, but Webkit is also Safari.
+            if (browserDectect.chrome) {
+                browserDectect.webkit = true;
+            } else if (browserDectect.webkit) {
+                browserDectect.safari = true;
+            }
+
+            return browserDectect;
+        },
+
+        _defaults: {
+            showTooltip: true,
+            tooltipNoItem: "Select None",
+            showFilter: false,
+            filterPlaceHolder: "Search...",
+            noItemFoundText: "No item found",
+            showSelectAll: true,
+            selectAllText: "Select All",
+            useCustomSelectAllText: true,
+            customSelectAllText: "Select All (#)",
+            noItemText: "No item",
+            noneSelectedText: "Select items (0)",
+            selectedText: "Select items (#)",
+            maxHeight: 400,
+            minWidth: 200,
+            position: "bottom" /* top|middle|bottom */,
+            fadeSpeed: 100,
+            disabled: false,
+            state: "closed",
+            multiple: true,
+            expandGroupsByDefault: true,
+            isCheckAll: false,
+            showParentSelectedText: false,
+            isRetrieveDataAfterClose: false,
+            listData: [],
+            onOpen: function () { },
+            onLeave: function () { },
+            onCheck: function () { },
+            onCheckAll: function () { }
+        },
+
+        _isHasGroup: function (listData) {
+            for (var i = 0, max = listData.length; i < max; i++) {
+                if (listData[i].items && listData[i].items.length > 0) {
+                    return true;
                 }
+            }
 
-                html.push('</ul>');
-                html.push('</div>');
-                return html.join('');
-            },
-            renderHeaderNoItem: function (id, noItemText) {
-                var html = [];
-                html.push('<div class="fanex-multiselect-widget-header fanex-multiselect-helper-clearfix \
-                        fanex-multiselect-corner-all fanex-multiselect-header custom-ui-widget-header">');
-                html.push('<ul class="fanex-multiselect-helper-reset fanex-multiselect-checkboxes-head" style="overflow-y:hidden;">');
-                html.push('<li style="display:inline;">');
-                html.push('<label class="fanex-multiselect-corner-all">' + noItemText + '</label>');
-                html.push('</ul>');
-                html.push('</div>');
-                return html.join('');
-            },
-            renderBody: function () {
-                var me = this,
-                    options = me.options,
-                    html = [],
-                    groupIdAttr = "fanex-multiselect-option-group-0";
-                me.numGroup = 0;
-                html.push('<ul class="first-group rtUL '
-                    + (me.isShowGroup ? "rtLines" : "")
-                    + ' fanex-multiselect-ul-group" childgroupid="' + groupIdAttr + '">');
-                for (var i = 0; i < options.listData.length; i++) {
-                    var tempGroup = options.listData[i];
-                    me.numGroup++;
+            return false;
+        },
 
-                    html.push(me.renderRow({
+        _renderButton: function (multiSelectId, dropdownContainerId) {
+            this.$multiSelect.prev().is("div#" + dropdownContainerId) && this.$multiSelect.prev().remove();
+            this.$multiSelect.next().is("div#" + dropdownContainerId) && this.$multiSelect.next().remove();
+
+            return [
+                '<a id="',
+                multiSelectId,
+                '" class="fanex-multiselect fanex-multiselect-widget fanex-multiselect-state-default',
+                this.options.disabled ? " fanex-multiselect-state-disabled" : "",
+                '">',
+                '<input type="text" readonly="readonly" class="fanex-multiselect-state-default" value="',
+                this.options.noneSelectedText,
+                '" /><span class="fanex-multiselect-icon fanex-multiselect-icon-triangle-1-s"></span></a>'
+            ].join("");
+        },
+
+        _renderFilterAndSelectAll: function () {
+            var html = this.options.showFilter
+                ? [
+                    '<div class="fanex-multiselect-filter">',
+                    '<input type="text" placeholder="',
+                    this.options.filterPlaceHolder,
+                    '" autocomplete="off"/></div>',
+                    '<div class="no-data-text" style="display:none;">',
+                    this.options.noItemFoundText,
+                    "</div>"
+                ] : [];
+
+            html.push(
+                '<div class="custom-ui-widget-header"', this.options.showSelectAll ? "" : ' style="display:none;"', ">",
+                '<ul class="fanex-multiselect-helper-reset" style="overflow-y:hidden;">',
+                '<li style="display:inline;" class="show-item">',
+                '<label class="fanex-multiselect-check-all">',
+                '<input type="checkbox" />', this.options.selectAllText, "</label></li>",
+            );
+
+            this.isHasGroup
+                && html.push('<li class="fanex-multiselect-icon-dropdown fanex-multiselect-icon-', this.options.expandGroupsByDefault ? 'collapse' : 'expand', '">&nbsp;</li>');
+
+            html.push("</ul></div>");
+            return html.join("");
+        },
+
+        _renderFilterAndSelectAllNoItem: function () {
+            return [
+                '<div class="fanex-multiselect-widget-header fanex-multiselect-helper-clearfix ',
+                'fanex-multiselect-corner-all fanex-multiselect-header custom-ui-widget-header">',
+                '<ul class="fanex-multiselect-helper-reset fanex-multiselect-checkboxes-head" style="overflow-y:hidden;">',
+                '<li style="display:inline;"><label class="fanex-multiselect-corner-all">', this.options.noItemText, "</label></li>",
+                '</ul></div>'
+            ].join("");
+        },
+
+        _renderCheckboxContainer: function (multiSelectId) {
+            this.numGroup = 0;
+            var groupIdAttr = "fanex-multiselect-option-group-0";
+            var html = [
+                '<ul class="first-group rtUL',
+                this.isHasGroup ? " rtLines" : "",
+                ' fanex-multiselect-ul-group" childgroupid="',
+                groupIdAttr,
+                '">'
+            ];
+
+            var listData = this.options.listData;
+            for (var i = 0, max = listData.length; i < max; i++) {
+                this.numGroup++;
+                var tempGroup = listData[i];
+                html.push(
+                    this._renderCheckbox(multiSelectId, {
                         data: tempGroup,
                         index: i,
                         hasChild: tempGroup.items && tempGroup.items.length > 0,
-                        isLastChild: i === options.listData.length - 1,
+                        isLastChild: i === max - 1,
                         parentGroupId: groupIdAttr,
                         groupId: "0-" + i
-                    }));
-                }
-                html.push('</ul>');
-                return html.join('');
-            },
-            //renderRow: function (tempData, index, hasChild, isLastChild, currentParentGroupId, currentGroupId) {
-            renderRow: function (row) {
-                row.data.id = row.data.id || '';
-                var me = this,
-                    options = me.options,
-                    tempHtml = [],
-                    title = row.data.text || '',
-                    value = typeof row.data.value === "undefined" ? '' : row.data.value,
-                    name = row.data.name || value,
-                    inputId = 'fanex-multiselect-' + me.id + '-' + row.data.id + '-option-' + row.groupId,
-                    isDisabled = !row.data.enable,
-                    labelClasses = row.data.cssClass || '',
-                    liClasses = 'rtLI show-item ',
-                    divClasses = 'fanex-multiselect-div ',
-                    groupIdAttr = 'fanex-multiselect-option-group-' + row.groupId;
+                    })
+                );
+            }
 
+            html.push("</ul>");
+            return html.join("");
+        },
 
-                row.hasChild = row.hasChild || false;
+        _renderCheckbox: function (multiSelectId, row) {
+            var tempHtml = [],
+                dataId = row.data.id || "",
+                title = row.data.text || "",
+                value = row.data.value || "",
+                name = row.data.name || value,
+                inputId =
+                    "fanex-multiselect-" +
+                    multiSelectId +
+                    "-" +
+                    dataId +
+                    "-option-" +
+                    row.groupId,
+                isDisabled = typeof row.data.enable !== "undefined" && !row.data.enable,
+                labelClasses = row.data.cssClass || "",
+                liClasses = "rtLI show-item",
+                divClasses = "fanex-multiselect-div",
+                groupIdAttr = "fanex-multiselect-option-group-" + row.groupId,
+                attributes = row.data.attributes || {};
+            row.hasChild = row.hasChild || false;
 
-                if (typeof row.data.value !== "undefined") {
-                    liClasses += (isDisabled ? ' fanex-multiselect-disabled ' : '')
-                        + (row.isLastChild ? ' rtLast' : '')
-                        + (row.index === 0 && row.hasChild ? ' rtFirst' : '');
+            if (value) {
+                liClasses +=
+                    (isDisabled ? " fanex-multiselect-disabled" : "") +
+                    (row.isLastChild ? " rtLast" : "") +
+                    (row.index === 0 && row.hasChild ? " rtFirst" : "");
+                tempHtml.push('<li class="', liClasses, '" data-content-text="', title.toLowerCase(), '">');
 
-                    //if (!me.isShowGroup && options.columnNumber > 0) {
-                    //    var liStyle = 'float: left; width:' + (100 / options.columnNumber).toFixed(0) + '%;';
-                    //    tempHtml.push('<li class="' + liClasses + '" style="' + liStyle + '">');
-                    //}
-                    //else {
-                    tempHtml.push('<li class="' + liClasses + '" data-content-text="' + title.toLowerCase() + '">');
-                    //}
-
-                    if (me.isShowGroup) {
-                        divClasses += row.isLastChild ? ' rtBot' : (row.index === 0 ? ' rtMid rtSelected' : ' rtMid');
-                        tempHtml.push('<div class="' + divClasses + '">');
-                        if (row.data.items && row.data.items.length > 0) {
-                            tempHtml.push('<span class="collapseClass rtMinus" data-group-show="' + (row.data.show !== false) + '"></span>');
-                        }
-                    }
-                    else {
-                        if (!row.hasChild && me.isShowGroup) {
-                            divClasses += !me.isShowGroup ? "" : (row.isLastChild ? ' rtBot' : ' rtMid');
-                            tempHtml.push('<div class="' + divClasses + '">');
-
-                        }
-                        else {
-                            tempHtml.push('<div class="' + divClasses + '" style="margin-left:10px;">');
-                        }
-                    }
-
-                    labelClasses += isDisabled ? ' fanex-multiselect-state-disabled' : '';
-                    labelClasses += row.hasChild && me.isShowGroup ? ' fanex-multiselect-group-mark' : '';
-                    //tempHtml.push('<label for="' + inputId + '" class="' + labelClasses + '" style="' + row.data.cssClass + '">');
-                    tempHtml.push('<label for="' + inputId + '" class="' + labelClasses + '">');
-                    tempHtml.push('<input id="' + inputId
-                        + '" type="' + (options.multiple ? 'checkbox' : 'radio')
-                        + '" name="' + name
-                        + '" value="' + value
-                        + '" class="show-item'
-                        + '" title="' + title
-                        + '" childgroupid="' + row.parentGroupId
-                        + '" data-is-group="' + row.hasChild
-                        + '"');
-                    tempHtml.push(options.isCheckAll ? ' checked="checked"' : '');
-                    tempHtml.push(row.data.checked ? ' checked="checked"' : '');
-                    tempHtml.push(isDisabled ? ' disabled="disabled"' : '');
-                    tempHtml.push(row.data.id !== '' ? ' data-item-id="' + row.data.id + '"' : '');
-                    tempHtml.push(' />' + title + '</label></div>');
-
-                    if (row.hasChild) {
-                        tempHtml.push('<ul class="fanex-multiselect-ul-group custom-multi-select-rtUL" childgroupid="' + groupIdAttr + '">');
-                        var currentChildLength = row.data.items.length;
-                        for (var j = 0; j < currentChildLength; j++) {
-                            var currentChildItem = row.data.items[j],
-                                currentIsLastChild = j === row.data.items.length - 1,
-                                currentRow = {
-                                    data: currentChildItem,
-                                    index: j,
-                                    hasChild: currentChildItem.items && currentChildItem.items.length > 0,
-                                    isLastChild: currentIsLastChild,
-                                    parentGroupId: groupIdAttr,
-                                    groupId: row.groupId + '-' + j
-                                };
-
-                            tempHtml.push(me.renderRow(currentRow));
-                        }
-                        tempHtml.push("</ul>");
-                    }
-
-                    tempHtml.push('</li>');
-                }
-                return tempHtml.join('');
-            },
-            renderFooter: function () {
-                var options = this.options,
-                    html = [];
-                html.push('<div class="fanex-multiselect-footer custom-ui-widget-footer">');
-                html.push('<a class="fanex-multiselect-update-result" href="">' + options.footerButtonText + '</a>');
-                html.push('</div>');
-                return html.join('');
-            },
-            addPropertyValue: function () {
-                var me = this,
-                    iconWidth = me.$multiSelect.find('span.fanex-multiselect-icon').width(),
-                    inputWidth = me.options.minWidth - iconWidth + 3;
-                // set widths
-                me.$multiSelect.css('width', me.options.minWidth + 'px')
-                    .find('input').css('width', inputWidth + 'px');
-                if (me.options.showFilter) {
-                    me.$filterInput.css('width', me.options.minWidth - 50 + 'px');
-                }
-            },
-            updateCheckall: function () {
-                var me = this;
-                if (me.numGroup === me.$options.find('input[childgroupid="fanex-multiselect-option-group-0"]').filter(':checked').length) {
-                    me.$headerCheckbox.prop('checked', true);
-                    me.$listGroupCheckBox.prop('checked', true);
-                }
-            },
-            updateSelected: function () {
-                var me = this,
-                    options = me.options,
-                    $inputs = me.$allInputsExceptHeaderCheckBox,
-                    $checked = $inputs.filter(':checked'),
-                    value = '',
-                    numChecked = $checked.length;
-
-                if (numChecked === 0) {
-                    value = options.noneSelectedText;
+                if (this.isHasGroup) {
+                    divClasses += row.isLastChild
+                        ? " rtBot"
+                        : row.index === 0
+                            ? " rtMid rtSelected"
+                            : " rtMid";
+                    tempHtml.push('<div class="', divClasses, '">');
+                    row.hasChild
+                        && tempHtml.push(
+                            '<span class="collapseClass rtMinus" data-group-show="',
+                            this.options.expandGroupsByDefault !== false,
+                            '"></span>');
                 } else {
-                    if ($inputs.length === numChecked) {
-                        options.onCheckAll();
-                    }
-
-                    if (options.useCustomCheckAllText && $inputs.length === numChecked) {
-                        if (typeof options.customCheckAllText === 'function') {
-                            value = options.customCheckAllText();
-                        } else {
-                            value = options.customCheckAllText.replace('#', numChecked);
-                        }
-                    }
-                    else {
-                        if (options.showParentSelectedText) {
-                            $checked = me.$mainParentGroup.find('input:checked');
-                            numChecked = $checked.length;
-                            //me.$multiSelect.attr('parent-checked-value', parentCheckValue.join(','));
-                        }
-
-                        if (numChecked > 0) {
-                            var arrayItemChecked = [];
-                            for (var i = 0; i < numChecked; i++) {
-                                arrayItemChecked.push($checked[i].title);
-                            }
-                            value = arrayItemChecked.join(', ');
-                            if (value.length * 8 > options.minWidth) {
-                                value = options.selectedText.replace('#', numChecked);
-                            }
-                        }
-                        else {
-                            value = options.noneSelectedText;
-                        }
-
+                    if (!row.hasChild && this.isHasGroup) {
+                        divClasses += !this.isHasGroup
+                            ? ""
+                            : row.isLastChild
+                                ? " rtBot"
+                                : " rtMid";
+                        tempHtml.push('<div class="', divClasses, '">');
+                    } else {
+                        tempHtml.push('<div class="', divClasses, '" style="margin-left:10px;">');
                     }
                 }
 
-                // Update tooltip
-                if (options.showTooltip) {
-                    var tooltipValue = $checked.map(function () { return this.title; }).get().join(', ');
-                    if (tooltipValue === '') {
-                        tooltipValue = options.tooltipNoItem;
-                    }
-                    me.$multiSelect.attr("original-title", tooltipValue);
-                    me.$multiSelect.attr("title", tooltipValue);
-                }
-
-                me.$multiSelect.find('input').val(value);
-                return value;
-            },
-            updateParentSelected: function (currentGroup) {
-                var me = this,
-                    parentGroup = currentGroup.parent().parent();
-                if (parentGroup.prop("tagName").toLowerCase() === 'ul' && parentGroup.length > 0) {
-                    var currentChildren = parentGroup.find("li.show-item > div > label > input.show-item"),
-                        currentChildSelected = currentChildren.filter(':checked').length;
-                    if (currentChildren.length === currentChildSelected) {
-                        parentGroup.prev().find('input').prop('checked', true);
-                    }
-                    me.updateParentSelected(parentGroup);
-                }
-            },
-            removeParentSelected: function (currentGroup) {
-                var me = this;
-                if (currentGroup.hasClass('fanex-multiselect-ul-group') && currentGroup.length > 0) {
-                    if (currentGroup.prev().find('input').prop('checked')) {
-                        currentGroup.prev().find('input').prop('checked', false);
-                        me.$headerCheckbox.prop('checked', false);
-                    }
-                    me.removeParentSelected(currentGroup.parent().parent());
-                }
-            },
-            registerEvents: function () {
-                var me = this,
-                    options = me.options;
-                // build header links
-                me.$headerCheckbox.click(function () {
-                    var $this = $(this);
-                    if ($this.prop('checked')) {
-                        me.$allCheckBoxInputs.filter('.show-item').prop('checked', true);
-                    }
-                    else {
-                        me.$allCheckBoxInputs.filter('.show-item').prop('checked', false);
-                    }
+                labelClasses += isDisabled ? " fanex-multiselect-state-disabled" : "";
+                labelClasses += row.hasChild && this.isHasGroup ? " fanex-multiselect-group-mark" : "";
+                tempHtml.push(
+                    '<label class="', labelClasses, '">',
+                    '<input class="show-item" type="', this.options.multiple ? "checkbox" : "radio",
+                    '" id="', inputId,
+                    '" name="', name,
+                    '" value="', value,
+                    '" title="', title,
+                    '" childgroupid="',
+                    row.parentGroupId,
+                    '" data-is-group="', row.hasChild, '"',
+                    this.options.isCheckAll ? ' checked="checked"' : "",
+                    row.data.checked ? ' checked="checked"' : "",
+                    isDisabled ? ' disabled="disabled"' : "",
+                    dataId ? ' data-item-id="' + dataId + '"' : ""
+                );
+                Object.keys(attributes).forEach(function (key) {
+                    tempHtml.push(' data-', key.toLowerCase(), '="', attributes[key], '"');
                 });
-                //build footer link
-                if (options.showFooter) {
-                    me.$footer.find('a').click(function (e) {
-                        options.onFooterButtonClick.call(this);
-                        me.$options.fadeOut(options.fadeSpeed);
-                        e.preventDefault();
-                    });
+                tempHtml.push('/>', title, '</label></div>');
+
+                if (row.hasChild) {
+                    tempHtml.push('<ul class="fanex-multiselect-ul-group custom-multi-select-rtUL" childgroupid="', groupIdAttr, '">');
+
+                    var children = row.data.items;
+                    for (var j = 0, childrenLength = children.length; j < childrenLength; j++) {
+                        var childItem = children[j];
+                        tempHtml.push(
+                            this._renderCheckbox(multiSelectId, {
+                                data: childItem,
+                                index: j,
+                                hasChild: childItem.items && childItem.items.length > 0,
+                                isLastChild: j === childrenLength - 1,
+                                parentGroupId: groupIdAttr,
+                                groupId: row.groupId + "-" + j
+                            })
+                        );
+                    }
+
+                    tempHtml.push("</ul>");
                 }
 
-                //if (options.showTooltip) {
-                //    //try {
-                //    //    me.$multiSelect.tipsy(
-                //    //        {
-                //    //            html: true,
-                //    //            opacity: 0.9,
-                //    //            gravity: 'sw'
-                //    //        }
-                //    //    );
+                tempHtml.push("</li>");
+            }
 
-                //    //}
-                //    //catch (e) { };
-                //}
+            return tempHtml.join("");
+        },
 
-                if (options.showFilter) {
-                    me.$filterInput
-                        .off('keyup.multipleselect')
-                        .on('keyup.multipleselect', function () {
-                            var $this = $(this);
-                            var filterVal = $this.val().toLowerCase();
-                            if (filterVal !== '') {
-                                me.$listItem
-                                    .find('li').removeAttr('data-dont-hide-me')
-                                    .removeClass('show-item')
-                                    .find('div').removeClass('high-light-item')
-                                    .find('input').removeClass('show-item');
+        _registerEvents: function () {
+            var me = this,
+                options = me.options;
+            // handle seach filter textbox
+            if (options.showFilter) {
+                this.$dropdownContainer.find(".fanex-multiselect-filter > input[type=text]")
+                    .off()
+                    .on("keyup", function () {
+                        var $this = $(this);
+                        var filterVal = $this.val().toLowerCase();
+                        if (filterVal.length) {
+                            me.$listItem
+                                .find("li")
+                                .removeAttr("data-dont-hide-me")
+                                .removeClass("show-item")
+                                .find("div")
+                                .removeClass("high-light-item")
+                                .find("input")
+                                .removeClass("show-item");
 
-                                var dontHideElements = me.$listItem.find('li[data-content-text*="' + filterVal + '"]')
-                                    .removeClass('hide-item')
-                                    .addClass('show-item')
-                                    .attr('data-dont-hide-me', 'true');
+                            var dontHideElements = me.$listItem
+                                .find('li[data-content-text*="' + filterVal + '"]')
+                                .removeClass("hide-item")
+                                .addClass("show-item")
+                                .attr("data-dont-hide-me", "true");
 
-                                dontHideElements.find('input').addClass('show-item');
-                                if (dontHideElements.length > 0) {
-                                    me.$noDataText.hide();
-                                    me.$header.show();
-                                    dontHideElements.each(function () {
-                                        var dontHideElement = $(this);
-                                        dontHideElement.children().first().addClass('high-light-item');
+                            dontHideElements.find("input").addClass("show-item");
+                            if (dontHideElements.length > 0) {
+                                me.$noSearchFound.hide();
+                                me.$selectAllContainer.show();
+                                dontHideElements.each(function () {
+                                    var dontHideElement = $(this);
+                                    dontHideElement
+                                        .children()
+                                        .first()
+                                        .addClass("high-light-item");
 
-                                        var prevParent = dontHideElement.parent().prev();
-                                        var grandParent = dontHideElement.parent().parent();
+                                    var prevParent = dontHideElement.parent().prev();
+                                    var grandParent = dontHideElement.parent().parent();
 
-                                        while (grandParent.hasClass('rtLI')) {
-                                            grandParent.removeClass('hide-item')
-                                                .addClass('show-item').attr('data-dont-hide-me', 'true');
-                                            prevParent.find('input').addClass('show-item');
-                                            prevParent = grandParent.parent().prev();
-                                            grandParent = grandParent.parent().parent();
-
-                                        }
-
-                                        dontHideElement
-                                            .find('li.rtLI').removeClass('hide-item').addClass('show-item').attr('data-dont-hide-me', 'true')
-                                            .find('input').addClass('show-item');
-                                    });
-                                }
-                                else {
-                                    me.$header.hide();
-                                    me.$noDataText.show();
-                                }
-
-                                me.$listItem.find('li[data-dont-hide-me!="true"]').addClass('hide-item');
-                                //updateParentSelected
-                            }
-                            else {
-                                me.$noDataText.hide();
-                                me.$header.show();
-                                me.$listItem.find('li').removeAttr('data-dont-hide-me')
-                                    .removeClass('hide-item')
-                                    .addClass('show-item')
-                                    .find('div').removeClass('high-light-item')
-                                    .find('input').addClass('show-item');
-                            }
-
-                            me.$listItem.find('input.show-item:checked').each(function () {
-                                var inputShowItem = $(this);
-                                var grantParent = inputShowItem.parent().parent();
-                                if (grantParent.next().find('li').length === 0) {
-                                    //me.updateParentSelected(grantParent.parent().parent());
-                                    me.updateParentSelected(grantParent);
-                                }
-                            });
-                            me.$listItem.find('input.show-item:not(:checked)').each(function () {
-                                me.removeParentSelected($(this).parent().parent().parent().parent());
-                            });
-                        });
-
-                    //me.$filterDeleteButton
-                    //    .off('click.multipleselect')
-                    //    .on('click.multipleselect', function () {
-                    //        if (me.$filterInput.val() !== '') {
-                    //            me.$filterInput.val('');
-                    //            me.$filterInput.trigger('keyup.multipleselect');
-                    //        }
-                    //    });
-                }
-                //add handler event collapse
-                me.$listCollapse.each(function () {
-                    var $this = $(this);
-                    $this.click(function () {
-                        if ($this.hasClass('rtMinus')) {
-                            $this.removeClass('rtMinus').addClass('rtPlus');
-                        }
-                        else {
-                            $this.removeClass('rtPlus').addClass('rtMinus');
-                        }
-                        $this.parent().next().toggle();
-                    });
-
-                    var currentStatus = $this.attr('data-group-show');
-                    if (currentStatus === 'false') {
-                        $this.removeClass('rtMinus').addClass('rtPlus');
-                        $this.parent().next().hide();
-                    }
-                });
-                // the select box events
-                me.$multiSelect.bind({
-                    click: function () {
-                        me.$options.trigger('toggle');
-                    },
-                    keypress: function () {
-                        //                    switch (e.keyCode) {
-                        //                        case 27: // esc
-                        //                        case 38: // up
-                        //                            me.$options.trigger('close');
-                        //                            break;
-                        //                        case 40: // down
-                        //                        case 0: // space
-                        //                            me.$options.trigger('toggle');
-                        //                            break;
-                        //                    }
-                    },
-                    mouseenter: function () {
-                        if (!me.$multiSelect.hasClass('fanex-multiselect-state-disabled')) {
-                            $(this).addClass('fanex-multiselect-state-hover');
-                        }
-
-                    },
-                    mouseleave: function () {
-                        $(this).removeClass('fanex-multiselect-state-hover');
-                    },
-                    focus: function () {
-                        if (!me.$multiSelect.hasClass('fanex-multiselect-state-disabled')) {
-                            $(this).addClass('fanex-multiselect-state-focus');
-                        }
-                    },
-                    blur: function () {
-                        $(this).removeClass('fanex-multiselect-state-focus');
-                    }
-                });
-                // bind custom events to the options div
-                me.$options.bind({
-                    'close': function (e, others, isRetrieveData, targetId) {
-                        if (me.$options.css('display') !== 'none') {
-                            others = others || false;
-
-                            // hides all other options but the one clicked
-                            if (others) {
-                                $('div.fanex-multiselect-options')
-                                    .filter(':visible')
-                                    .fadeOut(options.fadeSpeed)
-                                    .prev('a.fanex-multiselect')
-                                    .removeClass('fanex-multiselect-state-active')
-                                    .trigger('mouseout');
-
-                                // hides the clicked options
-                            } else {
-                                me.$multiSelect.removeClass('fanex-multiselect-state-active').trigger('mouseout');
-                                me.$options.fadeOut(options.fadeSpeed);
-                            }
-                            if (options.isRetrieveDataAfterClose) {
-                                isRetrieveData = isRetrieveData || false;
-                                if (isRetrieveData) {
-                                    me.$allLabel.find('input[ischeck="true"]').prop('checked', true);
-                                    if (me.isOpenning) {
-                                        me.$allLabel.find('input[ischeck!="true"]').prop('checked', false);
+                                    while (grandParent.hasClass("rtLI")) {
+                                        grandParent
+                                            .removeClass("hide-item")
+                                            .addClass("show-item")
+                                            .attr("data-dont-hide-me", "true");
+                                        prevParent.find("input").addClass("show-item");
+                                        prevParent = grandParent.parent().prev();
+                                        grandParent = grandParent.parent().parent();
                                     }
-                                }
-                                me.$allLabel.find('input').removeAttr('isCheck');
-                                me.isOpenning = false;
 
+                                    dontHideElement
+                                        .find("li.rtLI")
+                                        .removeClass("hide-item")
+                                        .addClass("show-item")
+                                        .attr("data-dont-hide-me", "true")
+                                        .find("input")
+                                        .addClass("show-item");
+                                });
+                            } else {
+                                me.$selectAllContainer.hide();
+                                me.$noSearchFound.show();
                             }
-                            me.updateSelected();
-                            if ((typeof targetId === "undefined"
-                                || targetId && (targetId !== me.$multiSelect.attr("id") || targetId === 'html')) && me.isOpenning) {
-                                options.onLeave.call(me.$multiSelect);
-                                me.isOpenning = false;
-                            }
-                        }
-                    },
-                    'open': function (e, closeOthers) {
 
-                        // bail if this widget is disabled
-                        if (me.$multiSelect.hasClass('fanex-multiselect-state-disabled')) {
-                            return;
-                        }
-
-                        //currentTriggerEvents.push(e.)
-
-                        // use position() if inside ui-widget-content, because offset() won't cut it.
-                        var offset = me.$multiSelect.position(),
-                            $container = me.$options.find('ul:last'),
-                            top, width;
-
-                        // calling select is active
-                        me.$multiSelect.addClass('fanex-multiselect-state-active');
-
-                        // hide all other options
-                        if (closeOthers || typeof closeOthers === 'undefined') {
-                            //$options.trigger('close', [true, true]);
-                            $('div.fanex-multiselect-options').trigger('close', [true, true, 'html']);
-                        }
-
-                        // calculate positioning
-                        if (options.position === 'middle') {
-                            top = (offset.top + (me.$multiSelect.height() / 2) - (me.$options.outerHeight() / 2));
-                        } else if (options.position === 'top') {
-                            top = (offset.top - me.$options.outerHeight()) - 7;
+                            me.$listItem
+                                .find('li[data-dont-hide-me!="true"]')
+                                .addClass("hide-item");
                         } else {
-                            top = (offset.top + me.$multiSelect.outerHeight());
+                            me.$noSearchFound.hide();
+                            me.$selectAllContainer.show();
+                            me.$listItem
+                                .find("li")
+                                .removeAttr("data-dont-hide-me")
+                                .removeClass("hide-item")
+                                .addClass("show-item")
+                                .find("div")
+                                .removeClass("high-light-item")
+                                .find("input")
+                                .addClass("show-item");
                         }
-                        top += 3; // padding extra 3px to seperate options with multi select div 
 
-                        // calculate the width of the options menu
-                        if (me.browser.msie) {
-                            width = me.$multiSelect.width() - 2 - parseInt(me.$options.css('padding-left'), 10) - parseInt(me.$options.css('padding-right'), 10);
-                        } else {
-                            width = me.$multiSelect.width() + 2 - parseInt(me.$options.css('padding-left'), 10) - parseInt(me.$options.css('padding-right'), 10);
-                        }
-
-                        // show the options div + position it
-                        me.$options.css({
-                            position: 'absolute',
-                            top: top + 'px',
-                            left: offset.left + 'px',
-                            width: width + 'px'
-                        }).show();
-
-                        // set the scroll of the checkbox container
-                        $container.scrollTop(0);
-
-                        // set the height of the checkbox container
-
-                        if (options.maxHeight) {
-                            if (options.maxHeight <= me.$body.height()) {
-                                me.$body.css('max-height', options.maxHeight);
+                        me.$listItem.find("input.show-item:checked").each(function () {
+                            var inputShowItem = $(this);
+                            var grantParent = inputShowItem.parent().parent();
+                            if (grantParent.next().find("li").length === 0) {
+                                me._updateParentSelected(grantParent);
                             }
+                        });
+                        me.$listItem
+                            .find("input.show-item:not(:checked)")
+                            .each(function () {
+                                me._removeParentSelected(
+                                    $(this).parent().parent().parent().parent()
+                                );
+                            });
+                    });
+            }
+
+            // handle Select All
+            this.$selectAll.click(function () {
+                me._handleSelectAll(this.checked);
+                me.options.onCheckAll.call(this);
+            });
+
+            // handle collapse/expand All
+            this.$selectAllContainer.find(".fanex-multiselect-icon-dropdown").click(function () {
+                var $this = $(this);
+                if ($this.hasClass("fanex-multiselect-icon-collapse")) {
+                    $this
+                        .removeClass("fanex-multiselect-icon-collapse")
+                        .addClass("fanex-multiselect-icon-expand");
+                    me.$checkboxContainer
+                        .find("ul.fanex-multiselect-ul-group:visible")
+                        .hide();
+                    me.$checkboxContainer
+                        .find("span.collapseClass")
+                        .removeClass("rtMinus")
+                        .addClass("rtPlus");
+                } else {
+                    me.$checkboxContainer
+                        .find("ul.fanex-multiselect-ul-group:hidden")
+                        .show();
+                    me.$checkboxContainer
+                        .find("span.collapseClass")
+                        .removeClass("rtPlus")
+                        .addClass("rtMinus");
+                    $this
+                        .removeClass("fanex-multiselect-icon-expand")
+                        .addClass("fanex-multiselect-icon-collapse");
+                }
+            });
+
+            // handle collapse/expand icon
+            this.$dropdownContainer.find("span.collapseClass").each(function () {
+                var $this = $(this);
+                $this.click(function () {
+                    if ($this.hasClass("rtMinus")) {
+                        $this.removeClass("rtMinus").addClass("rtPlus");
+                    } else {
+                        $this.removeClass("rtPlus").addClass("rtMinus");
+                    }
+                    $this.parent().next().toggle();
+                });
+
+                if (!$this.data("group-show")) {
+                    $this.removeClass("rtMinus").addClass("rtPlus");
+                    $this.parent().next().hide();
+                }
+            });
+
+            // handle button events
+            me.$multiSelect.click(function (e) {
+                e.stopPropagation();
+                if (me.$dropdownContainer.is(":hidden")) {
+                    me.$dropdownContainer.trigger("open");
+                } else {
+                    me.$dropdownContainer.trigger("close", [true, true, me.$dropdownContainer.attr("id")]);
+                }
+            });
+
+            // handle dropdown container events
+            me.$dropdownContainer.bind({
+                close: function (e, others, isRetrieveData, targetId) {
+                    if (me.$dropdownContainer.css("display") !== "none") {
+                        others = others || false;
+
+                        // hides all other options but the one clicked
+                        if (others) {
+                            $("div.fanex-multiselect-options")
+                                .filter(":visible")
+                                .fadeOut(options.fadeSpeed);
+                        } else {
+                            me.$dropdownContainer.fadeOut(options.fadeSpeed);
                         }
+
                         if (options.isRetrieveDataAfterClose) {
-                            me.$allLabel.find('input').filter(':checked').attr("ischeck", "true");
+                            isRetrieveData = isRetrieveData || false;
+                            if (isRetrieveData) {
+                                me.$allLabel
+                                    .find('input[ischeck="true"]')
+                                    .prop("checked", true);
+                                if (me.isOpenning) {
+                                    me.$allLabel
+                                        .find('input[ischeck!="true"]')
+                                        .prop("checked", false);
+                                }
+                            }
 
+                            me.$allLabel.find("input").removeAttr("isCheck");
+                            me.isOpenning = false;
                         }
-                        me.isOpenning = true;
-                        options.onOpen.call();
-                    },
-                    'toggle': function () {
-                        var isHide = $(this).is(':hidden');
-                        if (isHide) {
-                            me.$options.trigger('open');
-                        }
-                        else {
-                            me.$options.trigger('close', [true, true]);
+
+                        me.updateSelected();
+
+                        if (targetId && (targetId === 'html' || targetId !== me.$multiSelect.attr("id")) && me.isOpenning) {
+                            options.onLeave.call(me.$multiSelect);
+                            me.isOpenning = false;
                         }
                     }
+                },
+                open: function (e, closeOthers) {
+                    // bail if this widget is disabled
+                    if (me.$multiSelect.hasClass("fanex-multiselect-state-disabled")) {
+                        return;
+                    }
+
+                    // use position() if inside ui-widget-content, because offset() won't cut it.
+                    var offset = me.$multiSelect.position(),
+                        $container = me.$dropdownContainer.find("ul:last"),
+                        top;
+
+                    // hide all other options
+                    if (closeOthers || typeof closeOthers === "undefined") {
+                        $("div.fanex-multiselect-options").trigger("close", [true, true, "html"]);
+                    }
+
+                    // calculate positioning
+                    if (options.position === "middle") {
+                        top = offset.top +
+                            me.$multiSelect.height() / 2 -
+                            me.$dropdownContainer.outerHeight() / 2;
+                    } else if (options.position === "top") {
+                        top = offset.top - me.$dropdownContainer.outerHeight() - 7;
+                    } else {
+                        top = offset.top + me.$multiSelect.outerHeight();
+                    }
+                    top += 3; // padding extra 3px to seperate options with multi select div
+
+                    // show the options div + position it
+                    me.$dropdownContainer.css({
+                        position: "absolute",
+                        top: top + "px",
+                        left: offset.left + "px",
+                        width: me.options.minWidth + "px"
+                    }).show();
+
+                    // set the scroll of the checkbox container
+                    $container.scrollTop(0);
+
+                    // set the height of the checkbox container
+                    if (options.maxHeight) {
+                        if (options.maxHeight <= me.$checkboxContainer.height()) {
+                            me.$checkboxContainer.css("max-height", options.maxHeight);
+                        }
+                    }
+
+                    if (options.isRetrieveDataAfterClose) {
+                        me.$allLabel
+                            .find("input")
+                            .filter(":checked")
+                            .attr("ischeck", "true");
+                    }
+
+                    me.isOpenning = true;
+                    options.onOpen.call();
+                },
+                click: function (e) { e.stopPropagation(); }
+            });
+
+            // checkbox click event handle
+            me.$listItem.each(function () {
+                var $this = $(this);
+
+                // handler chilren checkbox event
+                var childrenNodes = $this.find('li.show-item input[childgroupid="' + $this.attr("childgroupid") + '"]');
+                childrenNodes.click(function () {
+                    var parent = $this,
+                        current = $(this);
+                    if (!this.checked) {
+                        me._removeParentSelected(parent);
+                    } else {
+                        var currentGroup = parent,
+                            currentChildSelected = childrenNodes
+                                .filter(".show-item")
+                                .filter(":checked").length,
+                            currentChildLength = childrenNodes.filter(".show-item").length;
+                        if (currentChildLength === currentChildSelected) {
+                            currentGroup.prev().find("input").prop("checked", true);
+                            me._updateParentSelected(current.parent().parent().parent().parent());
+                        }
+
+                        me.updateSelectAll();
+                    }
+
+                    !current.data("is-group") && options.onCheck.call(this);
+                    me.updateSelected();
                 });
-                // checkbox click event handle
-                me.$listItem.each(function () {
-                    var $this = $(this);
 
+                // handle group checkbox click event
+                $this
+                    .prev("div:not(.custom-ui-widget-header)")
+                    .children()
+                    .not("span.collapseClass")
+                    .find("input")
+                    .click(function () {
+                        if ($(this).prop("checked")) {
+                            $(this)
+                                .parent()
+                                .parent()
+                                .next()
+                                .find("li.show-item input.show-item:not(:disabled)")
+                                .prop("checked", true);
+                            me._updateParentSelected($this);
+                            me.updateSelectAll();
+                        } else {
+                            $(this)
+                                .parent()
+                                .parent()
+                                .next()
+                                .find("li.show-item input.show-item:not(:disabled)")
+                                .prop("checked", false);
+                            me.$selectAll.prop("checked", false);
+                        }
 
-                    //handler chilren checkbox event
-                    var childrenNodes = $this.find('li.show-item input[childgroupid="' + $this.attr("childgroupid") + '"]');
-                    childrenNodes.click(function () {
-                        var parent = $this,
-                            current = $(this);
-                        if (!current.prop('checked')) {
-                            me.removeParentSelected(parent);
-                        }
-                        else if (current.prop('checked')) {
-                            var currentGroup = parent,
-                                currentChildSelected = childrenNodes.filter('.show-item').filter(':checked').length,
-                                currentChildLength = childrenNodes.filter('.show-item').length;
-                            if (currentChildLength === currentChildSelected) {
-                                currentGroup.prev().find('input').prop('checked', true);
-                                me.updateParentSelected(current.parent().parent().parent().parent());
-                            }
-
-                            me.updateCheckall();
-                        }
-                        if (current.attr('data-is-group') === 'false') {
-                            options.onCheck.call(this);
-                        }
-                        me.updateSelected();
-                    });
-
-                    //handle group checkbox click event
-                    $this.prev().children().not('span.collapseClass').find('input').click(function () {
-                        if ($(this).prop('checked')) {
-                            $(this).parent().parent().next().find('li.show-item input.show-item:not(:disabled)').prop('checked', true);
-                            me.updateParentSelected($this);
-                            me.updateCheckall();
-                        }
-                        else {
-                            $(this).parent().parent().next().find('li.show-item input.show-item:not(:disabled)').prop('checked', false);
-                            me.$headerCheckbox.prop('checked', false);
-                        }
                         options.onCheck.call(this);
                         me.updateSelected();
                     });
-                });
-                //handle collapse button
-                me.$collapseButton.click(function () {
-                    var $this = $(this);
-                    if ($this.hasClass("fanex-multiselect-icon-collapse")) {
-                        $this.removeClass("fanex-multiselect-icon-collapse").addClass("fanex-multiselect-icon-expand");
-                        me.$options.find('ul.fanex-multiselect-ul-group:not(.first-group):visible').hide();
-                        me.$options.find('span.collapseClass').removeClass('rtMinus').addClass('rtPlus');
-                        //$(this).text('Expande All');
-                    }
-                    else {
-                        me.$options.find('ul.fanex-multiselect-ul-group:not(.first-group):hidden').show();
-                        me.$options.find('span.collapseClass').removeClass('rtPlus').addClass('rtMinus');
-                        $this.removeClass("fanex-multiselect-icon-expand").addClass("fanex-multiselect-icon-collapse");
-                    }
-                });
+            });
 
-                //// Register windows delegate event for closing milti select
-                $(document).delegate('html', 'click', function (e) {
-                    var $target = $(e.target);
-                    if (!$target.closest('div.fanex-multiselect-options').length && !$target.parent().hasClass('fanex-multiselect')) {
-                        if (!$target.hasClass('exeption-multiselect-click')) {
-                            $('div.fanex-multiselect-options').trigger('close', [true, true, ($target.attr("id") || 'html')]);
-                        }
-                    }
-                });
+            //// Register windows delegate event for closing milti select
+            $(document).delegate("html", "click", function (e) {
+                var $target = $(e.target);
+                if (!$target.closest("div.fanex-multiselect-options").length
+                    && !$target.parent().hasClass("fanex-multiselect")
+                    && !$target.hasClass("exeption-multiselect-click")) {
+                    $("div.fanex-multiselect-options").trigger("close", [true, true, $target.attr("id") || "html"]);
+                }
+            });
+        },
+
+        _handleSelectAll: function (checked) {
+            this.$allCheckBoxesExceptSelectAll.filter(".show-item").prop("checked", checked);
+            this.updateSelected();
+        },
+
+        _removeParentSelected: function (currentGroup) {
+            if (currentGroup.hasClass("fanex-multiselect-ul-group")
+                && currentGroup.length > 0) {
+                if (currentGroup.prev().find("input").prop("checked")) {
+                    currentGroup.prev().find("input").prop("checked", false);
+                    this.$selectAll.prop("checked", false);
+                }
+
+                this._removeParentSelected(currentGroup.parent().parent());
             }
-        };
+        },
 
-    //// multiSelect Helper
-    fanex.MultiSelect.helper =
-        {
-            detectBrowser: function () {
-                //// multiSelect Scroller
-                var matchedBrowser, browserDectect;
-
-                // Use of jQuery.browser is frowned upon.
-                // More details: http://api.jquery.com/jQuery.browser
-                // jQuery.uaMatch maintained for back-compat
-                function ubMatch(ua) {
-                    ua = ua.toLowerCase();
-
-                    var match = /(chrome)[ \/]([\w.]+)/.exec(ua) ||
-                        /(webkit)[ \/]([\w.]+)/.exec(ua) ||
-                        /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua) ||
-                        /(msie) ([\w.]+)/.exec(ua) ||
-                        ua.indexOf("compatible") < 0 && /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua) ||
-                        [];
-
-                    return {
-                        browserDectect: match[1] || "",
-                        version: match[2] || "0"
-                    };
+        _updateParentSelected: function (currentGroup) {
+            var parentGroup = currentGroup.parent().parent();
+            if (parentGroup.prop("tagName").toLowerCase() === "ul"
+                && parentGroup.length > 0) {
+                var currentChildren = parentGroup.find("li.show-item > div > label > input.show-item"),
+                    currentChildSelected = currentChildren.filter(":checked").length;
+                if (currentChildren.length === currentChildSelected) {
+                    parentGroup.prev().find("input").prop("checked", true);
                 }
 
-                matchedBrowser = ubMatch(navigator.userAgent);
-                browserDectect = {};
-
-                if (matchedBrowser.browserDectect) {
-                    browserDectect[matchedBrowser.browserDectect] = true;
-                    browserDectect.version = matchedBrowser.version;
-                }
-
-                // Chrome is Webkit, but Webkit is also Safari.
-                if (browserDectect.chrome) {
-                    browserDectect.webkit = true;
-                } else if (browserDectect.webkit) {
-                    browserDectect.safari = true;
-                }
-
-                return browserDectect;
+                this._updateParentSelected(parentGroup);
             }
-        };
+        }
+    };
 
-    fanex.MultiSelect.list = fanex.MultiSelect.list || {};
+    $.fn.fanexMultiSelect = function (option, parameter) {
+        var data;
+        if (typeof option === "string") {
+            data = this.data("fanexMultiSelect");
+            return data[option](parameter);
+        }
 
-    fanex.MultiSelect.constant = fanex.MultiSelect.constant || {};
-})(jQuery);
+        return this.each(function () {
+            var $this = $(this);
+            data = $this.data("fanexMultiSelect");
+
+            if (!data) {
+                var options = typeof option === "object" && option;
+                data = new FanexMultiSelect($this, options);
+                $this.data("fanexMultiSelect", data);
+            }
+        });
+
+        //return this.each(function () {
+        //    var $this = $(this);
+        //    var data = $this.data("fanexMultiSelect");
+
+        //    if (!data) {
+        //        var options = typeof option === "object" && option;
+        //        data = new FanexMultiSelect($this, options);
+        //        $this.data("fanexMultiSelect", data);
+        //    }
+
+        //    typeof option === "string" && typeof data[option] === "function" && data[option].apply(data, parameter);
+        //});
+    };
+
+    $.fn.fanexMultiSelect.Constructor = FanexMultiSelect;
+})(window.jQuery);
 
 /*! Copyright (c) 2011 by Jonas Mosbech - https://github.com/jmosbech/StickyTableHeaders
 	MIT license info: https://github.com/jmosbech/StickyTableHeaders/blob/master/license.txt */

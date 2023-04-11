@@ -24,28 +24,13 @@
 
 .fanex-multiselect-filter {
   padding-right: 12px; }
-  .fanex-multiselect-filter lable {
-    display: flex;
-    align-items: center;
-    position: relative; }
   .fanex-multiselect-filter input {
     border: 1px solid #474747;
     border-radius: 3px;
     height: 30px;
     padding: 0 20px 0 5px;
-    flex: 1;
+    width: 100%;
     background: #2b2b2b; }
-  .fanex-multiselect-filter .delete-button {
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-    background-image: url(images/icon-close.png);
-    background-position: center center;
-    background-size: 85%;
-    background-repeat: no-repeat;
-    position: absolute;
-    right: 5px;
-    top: 7px; }
 
 .no-data-text {
   padding-top: 5px;
