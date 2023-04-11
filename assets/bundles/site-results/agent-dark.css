@@ -4212,6 +4212,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+
 /*!
  * Datetimepicker for Bootstrap 3
  * version : 4.17.42
@@ -4599,36 +4600,6 @@ button.close {
 
 .input-group.date {
   position: initial; }
-  .input-group.date.datepicker.datepicker {
-    position: relative;
-    padding-right: 30px;
-    background: #2B2B2B;
-    border: 1px solid #292929;
-    background: #171717; }
-    @media only screen and (max-device-width: 767px) {
-      .input-group.date.datepicker.datepicker {
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); } }
-    .input-group.date.datepicker.datepicker .input-group-addon {
-      position: absolute;
-      top: 3px;
-      right: 2px;
-      margin: 0;
-      padding: 0;
-      width: auto; }
-      @media only screen and (max-device-width: 767px) {
-        .input-group.date.datepicker.datepicker .input-group-addon {
-          top: 6px; } }
-    .input-group.date.datepicker.datepicker .form-control {
-      background: transparent;
-      border: 0;
-      box-shadow: none; }
-      @media only screen and (max-device-width: 767px) {
-        .input-group.date.datepicker.datepicker .form-control {
-          height: 34px; } }
-  .input-group.date.datepicker .input-group-addon {
-    position: absolute;
-    top: 0;
-    right: 0; }
   .input-group.date .icon-calendar {
     font-size: 24px;
     color: #EDEDED;
@@ -4667,12 +4638,23 @@ button.close {
     top: 3px; }
   .input-group.date .form-control {
     border: 1px solid #292929;
+    font-size: 12px;
     height: 28px;
-    padding: 6px;
-    font-size: 13px;
     background: #171717;
     color: #EDEDED;
-    margin-left: 0; }
+    margin-left: 0;
+    -webkit-border-radius: 1px;
+    -khtml-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    -khtml-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
 
 .bootstrap-datetimepicker-widget {
   border: 1px solid #292929;
@@ -4871,6 +4853,7 @@ button.close {
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
+
 
 .select2-container {
   box-sizing: border-box;
@@ -5413,6 +5396,7 @@ button.close {
 .select2-container {
   line-height: 20px;
   width: 300px; }
+
 
 @font-face {
   font-family: 'Iconalpha';
@@ -6376,6 +6360,7 @@ input[type=reset], .btn-reset {
     .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
       width: calc(100% - 56px) !important; } }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6431,6 +6416,7 @@ input[type=reset], .btn-reset {
     width: 0; }
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -6565,6 +6551,7 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6631,6 +6618,7 @@ input[type="number"], input[type="tel"] {
     /* IE 10+ */
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
+
 
 /*******************************************/
 /* Devices */

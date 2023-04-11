@@ -448,10 +448,6 @@
     "inputFile": "styles/vendors/daterangepicker/jquery.daterangepicker.scss"
   },
   {
-    "outputFile": "styles/vendors/daterangepicker/jquery.daterangepicker-dark.css",
-    "inputFile": "styles/vendors/daterangepicker/jquery.daterangepicker-dark.scss"
-  },
-  {
     "outputFile": "styles/vendors/multiselect/newfanex.multiSelect.css",
     "inputFile": "styles/vendors/multiselect/newfanex.multiSelect.scss"
   },

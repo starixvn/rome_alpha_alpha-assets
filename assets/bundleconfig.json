@@ -916,8 +916,8 @@
   {
     "outputFileName": "bundles/site-asset/daterangepicker.css",
     "inputFiles": [
-      "styles/components/daterangepicker-customize.css",
-      "styles/vendors/daterangepicker/jquery.daterangepicker.css"
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize.css"
     ]
   },
   {
@@ -1561,8 +1561,8 @@
   {
     "outputFileName": "bundles/site-asset/daterangepicker-dark.css",
     "inputFiles": [
-      "styles/components/daterangepicker-customize-dark.css",
-      "styles/vendors/daterangepicker/jquery.daterangepicker-dark.css"
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize-dark.css"
     ]
   },
   {

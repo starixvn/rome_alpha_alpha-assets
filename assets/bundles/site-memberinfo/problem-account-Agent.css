@@ -4212,6 +4212,7 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
+
 /*!
  * Datetimepicker for Bootstrap 3
  * version : 4.17.42
@@ -6026,6 +6027,7 @@ input[type=reset], .btn-reset {
     .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
       width: calc(100% - 56px) !important; } }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6075,6 +6077,7 @@ input[type=reset], .btn-reset {
     width: 0; }
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -6205,6 +6208,7 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6270,31 +6274,22 @@ input[type="number"], input[type="tel"] {
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
 .width-100per {
   width: 100%; }
 
-.dataTables_wrapper {
-  position: relative;
-  z-index: 1; }
-  .dataTables_wrapper .tblRpt .dataTables_empty {
-    border-bottom: 0 !important; }
-  .dataTables_wrapper .tblRpt tbody tr:last-child td {
-    border-bottom: 0; }
-
 .tblRpt {
   border: 1px solid #d1d1d1;
   border-collapse: collapse;
   background-color: #fff; }
-  .tblRpt .dataTables_empty {
-    text-align: center; }
   .tblRpt.tblRpt-bordered > thead > tr > th, .tblRpt.tblRpt-bordered > tbody > tr > td, .tblRpt.tblRpt-bordered tfoot > tr > td {
     border: 1px solid #d1d1d1; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #eae9ee; }
-  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
+  .tblRpt.alternative-row-table tbody .even-row {
     background-color: #eae9ee; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #f8eb95; }
@@ -6387,6 +6382,7 @@ input[type="number"], input[type="tel"] {
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6400,38 +6396,6 @@ input[type="number"], input[type="tel"] {
 
 .input-group.date {
   position: initial; }
-  .input-group.date.datepicker {
-    position: relative;
-    padding-right: 30px;
-    background: #fff;
-    -webkit-border-radius: 1px;
-    -khtml-border-radius: 1px;
-    -moz-border-radius: 1px;
-    -ms-border-radius: 1px;
-    -o-border-radius: 1px;
-    border-radius: 1px;
-    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    -khtml-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
-    @media only screen and (max-device-width: 767px) {
-      .input-group.date.datepicker {
-        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); } }
-    .input-group.date.datepicker .input-group-addon {
-      position: absolute;
-      top: 3px;
-      right: 2px;
-      margin: 0;
-      padding: 0;
-      width: auto; }
-      @media only screen and (max-device-width: 767px) {
-        .input-group.date.datepicker .input-group-addon {
-          top: 6px; } }
-    .input-group.date.datepicker .form-control {
-      background: transparent;
-      box-shadow: none !important; }
   .input-group.date .icon-calendar {
     font-size: 24px;
     color: #7f7f7f;
@@ -6470,9 +6434,8 @@ input[type="number"], input[type="tel"] {
     top: 3px; }
   .input-group.date .form-control {
     border: none;
+    font-size: 12px;
     height: 28px;
-    padding: 6px;
-    font-size: 13px;
     background: #fff;
     margin-left: 0;
     -webkit-border-radius: 1px;
@@ -6673,6 +6636,7 @@ input[type="number"], input[type="tel"] {
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
+
 
 /*! jQuery UI - v1.9.1 - 2012-11-21
 * http://jqueryui.com
@@ -7270,11 +7234,13 @@ body .ui-tooltip { border-width: 2px; }
   font-size: 100% !important;
   margin: 3px 5px 3px 16px; }
 
+
 .input-group.date .input-group-addon {
   padding-right: 0; }
 
 .daterange-picker {
   display: none; }
+
 
 /*******************************************/
 /* Ripple Effect */
@@ -7591,7 +7557,7 @@ body .ui-tooltip { border-width: 2px; }
 .icon-excel {
   position: relative;
   cursor: pointer;
-  color: #2E9E60;
+  color: #1f7244;
   font-size: 19px;
   vertical-align: middle;
   height: 28px;
@@ -7666,6 +7632,21 @@ body .ui-tooltip { border-width: 2px; }
   height: 24px;
   vertical-align: middle; }
 
+.icon-cancel {
+  mask: url("../../styles/images/components/cancel.svg");
+  -webkit-mask-image: url("../../styles/images/components/cancel.svg");
+  mask-image: url("../../styles/images/components/cancel.svg");
+  cursor: pointer;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  background-color: #333;
+  fill: #333; }
+  .icon-cancel:hover, .icon-cancel:active {
+    background-color: #eb5757;
+    fill: #eb5757; }
+
 .icon-book {
   position: relative;
   color: #0b599c;
@@ -7733,26 +7714,25 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 26px; }
+    height: 24px; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #333;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
       height: 24px;
-      padding-top: 7px;
-      margin-right: 5px;
-      text-indent: 6px; }
+      padding-top: 5px;
+      margin-right: 3px;
+      text-indent: 5px; }
     .entered-non-entered div.icon-non-entered div.number {
       color: #D06400;
       background: #E3E3E3;
       border: 1px solid #D9D9D9;
       border-radius: 3px;
-      padding: 0 4px;
+      padding: 0 5px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 18px;
-      line-height: 16px;
-      margin-right: 4px;
+      height: 16px;
+      margin-right: 3px;
       margin-top: 4px; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #DB6900;
@@ -7760,8 +7740,7 @@ body .ui-tooltip { border-width: 2px; }
       float: left;
       height: 24px;
       padding-top: 5px;
-      margin-right: 6px;
-      font-size: 17px; }
+      margin-right: 3px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {
@@ -7849,6 +7828,7 @@ body .ui-tooltip { border-width: 2px; }
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
+
 
 /*******************************************/
 /* Devices */
