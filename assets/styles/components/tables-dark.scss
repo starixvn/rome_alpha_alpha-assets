@@ -1,6 +1,13 @@
 ﻿@import "../abstracts/_variables-dark.scss";
 @import "../abstracts/_mixins.scss";
 
+th.col-firstlastname, div.col-firstlastname {
+    width: 200px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+
 .width-100per {
     width: 100%;
 }
@@ -15,7 +22,7 @@
 
     &.tblRpt-bordered {
         &#tbl-report {
-         
+
 
             > thead > tr > th, > tbody > tr > td, tfoot > tr > td {
                 border: 1px solid #5F626B;
