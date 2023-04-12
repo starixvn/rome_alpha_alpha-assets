@@ -358,6 +358,15 @@
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
+.input-group.datepicker {
+  width: 100%;
+  border: 1px solid #292929; }
+  .input-group.datepicker .input-group-addon {
+    top: 1px; }
+  .input-group.datepicker .form-control {
+    box-shadow: none;
+    border: 0; }
+
 .daterangepicker {
   font-family: inherit;
   background: #2b2b2b;
@@ -761,6 +770,7 @@
     .date-picker-wrapper .drp_top-bar .apply-btn {
       position: absolute;
       border: 0;
+      border-radius: 0;
       appearance: none;
       right: 10px;
       top: 6px;

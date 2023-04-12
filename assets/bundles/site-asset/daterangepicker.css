@@ -358,6 +358,18 @@
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
+.input-group.datepicker {
+  width: 100%;
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+  background: #fff; }
+  .input-group.datepicker .input-group-addon {
+    top: 1px; }
+  .input-group.datepicker .form-control {
+    box-shadow: none; }
+
+.daterangepicker-container .label-form-control {
+  width: 100%; }
+
 .daterangepicker {
   border-color: #D1D1D1;
   border-radius: 0;
@@ -508,6 +520,8 @@
   max-width: 420px;
   margin-top: 7px;
   box-shadow: none; }
+  .date-picker-wrapper b {
+    color: #444; }
   .date-picker-wrapper.two-months {
     width: 100%;
     max-width: 650px; }
@@ -747,6 +761,7 @@
     .date-picker-wrapper .drp_top-bar .apply-btn {
       position: absolute;
       border: 0;
+      border-radius: 0;
       appearance: none;
       right: 10px;
       top: 6px;

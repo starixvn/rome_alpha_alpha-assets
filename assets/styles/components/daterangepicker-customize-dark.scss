@@ -1,6 +1,20 @@
 ﻿@import "../abstracts/_variables.scss";
 @import "../abstracts/_mixins.scss";
+.input-group {
+    &.datepicker {
+        width: 100%;
+        border: 1px solid #292929;
 
+        .input-group-addon {
+            top: 1px;
+        }
+
+        .form-control {
+            box-shadow: none;
+            border: 0;
+        }
+    }
+}
 .daterangepicker {
     font-family: inherit;
     background: #2b2b2b;
@@ -617,6 +631,7 @@
         .apply-btn {
             position: absolute;
             border: 0;
+            border-radius: 0;
             appearance: none;
             right: 10px;
             top: 6px;

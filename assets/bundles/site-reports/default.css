@@ -4486,25 +4486,13 @@ body .ui-tooltip { border-width: 2px; }
 
 .fanex-multiselect-filter {
   padding-right: 12px; }
-  .fanex-multiselect-filter lable {
-    display: flex;
-    align-items: center;
-    position: relative; }
   .fanex-multiselect-filter input {
     border: 1px solid #cccccc;
     border-radius: 3px;
     height: 30px;
     padding: 0 20px 0 5px;
-    flex: 1; }
-  .fanex-multiselect-filter .delete-button {
-    width: 14px;
-    height: 14px;
-    cursor: pointer;
-    background-image: url(../../styles/vendors/multiselect/images/sprites.png);
-    background-position: -78px -38px;
-    position: absolute;
-    right: 5px;
-    top: 7px; }
+    width: 100%;
+    box-shadow: none; }
 
 .no-data-text {
   padding-top: 5px;
