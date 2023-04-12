@@ -9,6 +9,7 @@
 #page-popup, .modal {
     height: auto;
     @include effect-special;
+    z-index: 9020;
 }
 
 #modal-draggable-mask {

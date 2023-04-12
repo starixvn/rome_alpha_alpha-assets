@@ -76,14 +76,18 @@
 
         getItemsByCustomAttributes: function (attributes) {
             var query = [];
-            Object.entries(attributes).forEach(([key, value]) => query.push('[data-', key.toLowerCase(), '="', value, '"]'));
+            Object.entries(attributes).forEach(function (key) {
+                query.push('[data-', key.toLowerCase(), '="', attributes[key], '"]');
+            });
 
             return this.$allCheckBoxesExceptSelectAll.filter(query.join(""));
         },
 
         getSelectedItemsByCustomAttributes: function (attributes) {
             var query = [":checked"];
-            Object.entries(attributes).forEach(([key, value]) => query.push('[data-', key.toLowerCase(), '="', value, '"]'));
+            Object.entries(attributes).forEach(function (key) {
+                query.push('[data-', key.toLowerCase(), '="', attributes[key], '"]');
+            });
 
             return this.$allCheckBoxesExceptSelectAll.filter(query.join(""));
         },
