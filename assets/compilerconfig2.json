@@ -477,11 +477,11 @@
     "inputFile": "styles/abstracts/_variables2-dark.scss"
   },
   {
-    "outputFile": "styles/vendors/multiselect/newfanex.multiSelect.css",
-    "inputFile": "styles/vendors/multiselect/newfanex.multiSelect.scss"
+    "outputFile": "styles/vendors/multiselect/fanex.multiSelect.css",
+    "inputFile": "styles/vendors/multiselect/fanex.multiSelect.scss"
   },
   {
-    "outputFile": "styles/vendors/multiselect/newfanex.multiSelect-dark.css",
-    "inputFile": "styles/vendors/multiselect/newfanex.multiSelect-dark.scss"
+    "outputFile": "styles/vendors/multiselect/fanex.multiSelect-dark.css",
+    "inputFile": "styles/vendors/multiselect/fanex.multiSelect-dark.scss"
   }
 ]

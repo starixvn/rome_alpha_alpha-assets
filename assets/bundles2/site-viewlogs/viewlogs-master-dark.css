@@ -9171,38 +9171,42 @@ select {
 /* Ripple Effect */
 /*******************************************/
 .switch-version {
-  position: relative; }
+  position: absolute;
+  top: 15px;
+  right: 0;
+  white-space: nowrap; }
   .switch-version .btn-switch-version {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #3B4652;
-    color: #ededed;
+    background: #696969;
+    border: 1px solid #8B8B8B;
+    color: #EDEDED;
     font-size: 13px;
     line-height: 15px;
     font-weight: bold;
-    padding: 6px 12px 2px 12px;
+    padding: 5px 11px 1px 15px;
     display: inline-flex; }
-    .switch-version .btn-switch-version .icon-refresh2 {
+    .switch-version .btn-switch-version:hover {
+      opacity: 0.9; }
+    .switch-version .btn-switch-version .icon-swap-horizontal {
       font-size: 20px;
       position: relative;
-      margin-right: 5px;
-      top: -2px; }
-    .switch-version .btn-switch-version .hidden-pc {
-      display: none; }
+      top: -2px;
+      left: -4px; }
     @media only screen and (max-device-width: 767px) {
       .switch-version .btn-switch-version {
         position: relative;
         margin-bottom: 5px;
-        padding: 6px 6px 2px 6px; }
-        .switch-version .btn-switch-version .hidden-pc {
-          display: block; }
-        .switch-version .btn-switch-version .hidden-mobile {
-          display: none; } }
+        padding: 6px 6px 0 6px; } }
+  @media only screen and (max-device-width: 767px) {
+    .switch-version {
+      position: relative;
+      top: 0;
+      margin-bottom: 3px; } }
 
 .filter {
   padding-top: 15px;
-  position: relative; }
+  position: relative;
+  z-index: 9010;
+  padding-right: 150px; }
   .filter .form-group {
     display: inline-block;
     margin: 0 16px 15px 0;
@@ -9281,14 +9285,18 @@ select {
     font-weight: 400;
     font-size: 13px;
     line-height: 16px;
-    color: #696969;
-    border: 1px solid #696969;
-    padding: 3px 10px;
-    margin: 0 12px 5px 0;
-    text-decoration: none; }
+    color: #C5C5C5;
+    border: 1px solid #373737;
+    padding: 4px 10px;
+    margin: 0 10px 5px 0;
+    text-decoration: none;
+    background: #373737;
+    border-radius: 3px; }
     .label-week-box .label-week.active, .label-week-box .label-week:hover {
-      border: 1px solid #ededed;
-      color: #ededed; }
+      background: #183049;
+      border: 1px solid #41A4FF;
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+      color: #41A4FF; }
     .label-week-box .label-week.active {
       font-weight: bold; }
 
@@ -9314,6 +9322,14 @@ label[disabled] {
 /*******************************************/
 .width-100per {
   width: 100%; }
+
+.dataTables_wrapper {
+  position: relative;
+  z-index: 1; }
+  .dataTables_wrapper .tblRpt .dataTables_empty {
+    border-bottom: 0 !important; }
+  .dataTables_wrapper .tblRpt tbody tr:last-child td {
+    border-bottom: 0 !important; }
 
 .tblRpt {
   border: 1px solid #5F626B;

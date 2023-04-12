@@ -4212,7 +4212,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-
 /*!
  * Datetimepicker for Bootstrap 3
  * version : 4.17.42
@@ -6032,7 +6031,6 @@ input[type=reset], .btn-reset {
     .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
       width: calc(100% - 56px) !important; } }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6088,7 +6086,6 @@ input[type=reset], .btn-reset {
     width: 0; }
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -6223,7 +6220,6 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6291,12 +6287,19 @@ input[type="number"], input[type="tel"] {
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
 .width-100per {
   width: 100%; }
+
+.dataTables_wrapper {
+  position: relative;
+  z-index: 1; }
+  .dataTables_wrapper .tblRpt .dataTables_empty {
+    border-bottom: 0 !important; }
+  .dataTables_wrapper .tblRpt tbody tr:last-child td {
+    border-bottom: 0 !important; }
 
 .tblRpt {
   border: 1px solid #5F626B;
@@ -6304,6 +6307,8 @@ input[type="number"], input[type="tel"] {
   background-color: #181919;
   color: #EDEDED;
   border-right: 0; }
+  .tblRpt .dataTables_empty {
+    text-align: center; }
   .tblRpt.tblRpt-bordered#tbl-report {
     border-bottom: 1px solid #5F626B;
     border-top: 0;
@@ -6328,7 +6333,7 @@ input[type="number"], input[type="tel"] {
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }
@@ -6426,7 +6431,6 @@ input[type="number"], input[type="tel"] {
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6440,6 +6444,36 @@ input[type="number"], input[type="tel"] {
 
 .input-group.date {
   position: initial; }
+  .input-group.date.datepicker.datepicker {
+    position: relative;
+    padding-right: 30px;
+    background: #2B2B2B;
+    border: 1px solid #292929;
+    background: #171717; }
+    @media only screen and (max-device-width: 767px) {
+      .input-group.date.datepicker.datepicker {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); } }
+    .input-group.date.datepicker.datepicker .input-group-addon {
+      position: absolute;
+      top: 3px;
+      right: 2px;
+      margin: 0;
+      padding: 0;
+      width: auto; }
+      @media only screen and (max-device-width: 767px) {
+        .input-group.date.datepicker.datepicker .input-group-addon {
+          top: 6px; } }
+    .input-group.date.datepicker.datepicker .form-control {
+      background: transparent;
+      border: 0;
+      box-shadow: none; }
+      @media only screen and (max-device-width: 767px) {
+        .input-group.date.datepicker.datepicker .form-control {
+          height: 34px; } }
+  .input-group.date.datepicker .input-group-addon {
+    position: absolute;
+    top: 0;
+    right: 0; }
   .input-group.date .icon-calendar {
     font-size: 24px;
     color: #EDEDED;
@@ -6478,23 +6512,12 @@ input[type="number"], input[type="tel"] {
     top: 3px; }
   .input-group.date .form-control {
     border: 1px solid #292929;
-    font-size: 12px;
     height: 28px;
+    padding: 6px;
+    font-size: 13px;
     background: #171717;
     color: #EDEDED;
-    margin-left: 0;
-    -webkit-border-radius: 1px;
-    -khtml-border-radius: 1px;
-    -moz-border-radius: 1px;
-    -ms-border-radius: 1px;
-    -o-border-radius: 1px;
-    border-radius: 1px;
-    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    -khtml-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
-    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
+    margin-left: 0; }
 
 .bootstrap-datetimepicker-widget {
   border: 1px solid #292929;
@@ -6693,7 +6716,6 @@ input[type="number"], input[type="tel"] {
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
-
 
 /*! jQuery UI - v1.9.1 - 2012-11-21
 * http://jqueryui.com
@@ -7302,13 +7324,11 @@ body .ui-tooltip { border-width: 2px; }
   font-size: 100% !important;
   margin: 3px 5px 3px 16px; }
 
-
 .input-group.date .input-group-addon {
   padding-right: 0; }
 
 .daterange-picker {
   display: none; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -7626,7 +7646,7 @@ body .ui-tooltip { border-width: 2px; }
 .icon-excel {
   position: relative;
   cursor: pointer;
-  color: #1f7244;
+  color: #2E9E60;
   font-size: 19px;
   vertical-align: middle;
   height: 28px;
@@ -7734,21 +7754,6 @@ body .ui-tooltip { border-width: 2px; }
     -webkit-animation: ripple 1s ease-out;
     animation: ripple 1s ease-out; }
 
-.icon-cancel {
-  mask: url("../../styles/images/components/cancel.svg");
-  -webkit-mask-image: url("../../styles/images/components/cancel.svg");
-  mask-image: url("../../styles/images/components/cancel.svg");
-  background-color: #ededed;
-  fill: #ededed;
-  cursor: pointer;
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  vertical-align: middle; }
-  .icon-cancel:hover, .icon-cancel:active {
-    background-color: #eb5757;
-    fill: #eb5757; }
-
 .entered-non-entered {
   line-height: 1em;
   padding-top: 5px;
@@ -7783,15 +7788,15 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
       height: 24px;
-      padding-top: 5px;
-      margin-right: 3px;
-      text-indent: 5px; }
+      padding-top: 7px;
+      margin-right: 5px;
+      text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
       color: #EB7100;
       background: #434343;
@@ -7800,8 +7805,9 @@ body .ui-tooltip { border-width: 2px; }
       padding: 0 5px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 16px;
-      margin-right: 3px;
+      height: 18px;
+      line-height: 16px;
+      margin-right: 4px;
       margin-top: 4px; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #EB7100;
@@ -7809,7 +7815,8 @@ body .ui-tooltip { border-width: 2px; }
       float: left;
       height: 24px;
       padding-top: 5px;
-      margin-right: 3px; }
+      margin-right: 6px;
+      font-size: 17px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {
@@ -7897,7 +7904,6 @@ body .ui-tooltip { border-width: 2px; }
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
-
 
 /*******************************************/
 /* Devices */

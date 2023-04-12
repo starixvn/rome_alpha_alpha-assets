@@ -5813,6 +5813,14 @@ a, a:focus, a:active, a:target, a:hover {
 .width-100per {
   width: 100%; }
 
+.dataTables_wrapper {
+  position: relative;
+  z-index: 1; }
+  .dataTables_wrapper .tblRpt .dataTables_empty {
+    border-bottom: 0 !important; }
+  .dataTables_wrapper .tblRpt tbody tr:last-child td {
+    border-bottom: 0; }
+
 .tblRpt {
   border: 1px solid #d1d1d1;
   border-collapse: collapse;

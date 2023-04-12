@@ -6297,6 +6297,14 @@ input[type="number"], input[type="tel"] {
 .width-100per {
   width: 100%; }
 
+.dataTables_wrapper {
+  position: relative;
+  z-index: 1; }
+  .dataTables_wrapper .tblRpt .dataTables_empty {
+    border-bottom: 0 !important; }
+  .dataTables_wrapper .tblRpt tbody tr:last-child td {
+    border-bottom: 0; }
+
 .tblRpt {
   border: 1px solid #d1d1d1;
   border-collapse: collapse;
@@ -6414,6 +6422,38 @@ input[type="number"], input[type="tel"] {
 
 .input-group.date {
   position: initial; }
+  .input-group.date.datepicker {
+    position: relative;
+    padding-right: 30px;
+    background: #fff;
+    -webkit-border-radius: 1px;
+    -khtml-border-radius: 1px;
+    -moz-border-radius: 1px;
+    -ms-border-radius: 1px;
+    -o-border-radius: 1px;
+    border-radius: 1px;
+    -webkit-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    -khtml-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    -moz-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    -ms-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    -o-box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3);
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.3); }
+    @media only screen and (max-device-width: 767px) {
+      .input-group.date.datepicker {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); } }
+    .input-group.date.datepicker .input-group-addon {
+      position: absolute;
+      top: 3px;
+      right: 2px;
+      margin: 0;
+      padding: 0;
+      width: auto; }
+      @media only screen and (max-device-width: 767px) {
+        .input-group.date.datepicker .input-group-addon {
+          top: 6px; } }
+    .input-group.date.datepicker .form-control {
+      background: transparent;
+      box-shadow: none !important; }
   .input-group.date .icon-calendar {
     font-size: 24px;
     color: #7f7f7f;

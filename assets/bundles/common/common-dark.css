@@ -4388,7 +4388,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-
 @font-face {
   font-family: 'Iconalpha';
   src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?kyr3md');
@@ -5045,7 +5044,6 @@ a, a:focus, a:active, a:target, a:hover {
   .msg-error:before {
     content: '\e93e'; }
 
-
 .block-icon-small {
   display: inline-block;
   height: 16px;
@@ -5062,7 +5060,6 @@ a, a:focus, a:active, a:target, a:hover {
   height: 100px;
   background: url(../../styles/images/ajax-loader-dark.gif) center center no-repeat;
   left: 47% !important; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5197,7 +5194,6 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
-
 .breadcrumb {
   background: none;
   border-bottom: 1px solid #313334;
@@ -5215,6 +5211,16 @@ input[type=reset], .btn-reset {
       color: #ededed;
       padding: 0 8px; }
 
+.breadcrumb-table {
+  background: #212223;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 13px 0 10px;
+  min-height: 30px; }
+  .breadcrumb-table .breadcrumb {
+    border: 0;
+    padding: 0; }
 
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
@@ -5230,7 +5236,6 @@ input[type=radio].disabled, input[type=radio]:disabled {
 label[disabled] {
   cursor: not-allowed;
   opacity: 0.6; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5364,19 +5369,57 @@ select {
   border-color: #292929;
   color: #EDEDED; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
+.switch-version {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  white-space: nowrap; }
+  .switch-version .btn-switch-version {
+    background: #696969;
+    border: 1px solid #8B8B8B;
+    color: #EDEDED;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: bold;
+    padding: 5px 11px 1px 15px;
+    display: inline-flex; }
+    .switch-version .btn-switch-version:hover {
+      opacity: 0.9; }
+    .switch-version .btn-switch-version .icon-swap-horizontal {
+      font-size: 20px;
+      position: relative;
+      top: -2px;
+      left: -4px; }
+    @media only screen and (max-device-width: 767px) {
+      .switch-version .btn-switch-version {
+        position: relative;
+        margin-bottom: 5px;
+        padding: 6px 6px 0 6px; } }
+  @media only screen and (max-device-width: 767px) {
+    .switch-version {
+      position: relative;
+      top: 0;
+      margin-bottom: 3px; } }
+
 .filter {
   padding-top: 15px;
-  position: relative; }
+  position: relative;
+  z-index: 9010;
+  padding-right: 150px; }
   .filter .form-group {
     display: inline-block;
     margin: 0 16px 15px 0;
     vertical-align: middle; }
     .filter .form-group.product-detail-multiselect-container {
       z-index: 10000; }
+    .filter .form-group .label-form-control {
+      display: block;
+      font-weight: bold;
+      margin-right: 0;
+      margin-bottom: 2px; }
     .filter .form-group label {
       font-weight: normal;
       margin-right: 5px;
@@ -5437,6 +5480,27 @@ select {
   content: '\e91f';
   color: #7ECC4D; }
 
+.label-week-box {
+  margin-bottom: 10px; }
+  .label-week-box .label-week {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #C5C5C5;
+    border: 1px solid #373737;
+    padding: 4px 10px;
+    margin: 0 10px 5px 0;
+    text-decoration: none;
+    background: #373737;
+    border-radius: 3px; }
+    .label-week-box .label-week.active, .label-week-box .label-week:hover {
+      background: #183049;
+      border: 1px solid #41A4FF;
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+      color: #41A4FF; }
+    .label-week-box .label-week.active {
+      font-weight: bold; }
 
 /*******************************************/
 /* Ripple Effect */
@@ -5504,7 +5568,6 @@ input[type="number"], input[type="tel"] {
     /* IE 10+ */
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5870,7 +5933,6 @@ input[type=reset], .btn-reset {
     .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
       width: calc(100% - 56px) !important; } }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -5926,7 +5988,6 @@ input[type=reset], .btn-reset {
     width: 0; }
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -6244,7 +6305,7 @@ input[type=reset], .btn-reset {
 .icon-excel {
   position: relative;
   cursor: pointer;
-  color: #1f7244;
+  color: #2E9E60;
   font-size: 19px;
   vertical-align: middle;
   height: 28px;
@@ -6352,21 +6413,6 @@ input[type=reset], .btn-reset {
     -webkit-animation: ripple 1s ease-out;
     animation: ripple 1s ease-out; }
 
-.icon-cancel {
-  mask: url("../../styles/images/components/cancel.svg");
-  -webkit-mask-image: url("../../styles/images/components/cancel.svg");
-  mask-image: url("../../styles/images/components/cancel.svg");
-  background-color: #ededed;
-  fill: #ededed;
-  cursor: pointer;
-  display: inline-block;
-  width: 24px;
-  height: 24px;
-  vertical-align: middle; }
-  .icon-cancel:hover, .icon-cancel:active {
-    background-color: #eb5757;
-    fill: #eb5757; }
-
 .entered-non-entered {
   line-height: 1em;
   padding-top: 5px;
@@ -6401,15 +6447,15 @@ input[type=reset], .btn-reset {
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
       height: 24px;
-      padding-top: 5px;
-      margin-right: 3px;
-      text-indent: 5px; }
+      padding-top: 7px;
+      margin-right: 5px;
+      text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
       color: #EB7100;
       background: #434343;
@@ -6418,8 +6464,9 @@ input[type=reset], .btn-reset {
       padding: 0 5px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 16px;
-      margin-right: 3px;
+      height: 18px;
+      line-height: 16px;
+      margin-right: 4px;
       margin-top: 4px; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #EB7100;
@@ -6427,7 +6474,8 @@ input[type=reset], .btn-reset {
       float: left;
       height: 24px;
       padding-top: 5px;
-      margin-right: 3px; }
+      margin-right: 6px;
+      font-size: 17px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {
@@ -6515,7 +6563,6 @@ input[type=reset], .btn-reset {
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
-
 
 @font-face {
   font-family: 'password';

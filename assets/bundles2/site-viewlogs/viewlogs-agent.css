@@ -9148,38 +9148,42 @@ select {
 /* Ripple Effect */
 /*******************************************/
 .switch-version {
-  position: relative; }
+  position: absolute;
+  top: 15px;
+  right: 0;
+  white-space: nowrap; }
   .switch-version .btn-switch-version {
-    position: absolute;
-    top: 0;
-    right: 0;
-    background: #D3DFEC;
-    color: #0B599C;
+    background: #F2F2F2;
+    border: 1px solid #A5A5A5;
+    color: #5A5A5A;
     font-size: 13px;
     line-height: 15px;
     font-weight: bold;
-    padding: 6px 12px 2px 12px;
+    padding: 5px 11px 1px 15px;
     display: inline-flex; }
-    .switch-version .btn-switch-version .icon-refresh2 {
+    .switch-version .btn-switch-version:hover {
+      box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.25); }
+    .switch-version .btn-switch-version .icon-swap-horizontal {
       font-size: 20px;
       position: relative;
-      margin-right: 5px;
-      top: -2px; }
-    .switch-version .btn-switch-version .hidden-pc {
-      display: none; }
+      top: -2px;
+      left: -4px; }
     @media only screen and (max-device-width: 767px) {
       .switch-version .btn-switch-version {
         position: relative;
         margin-bottom: 5px;
-        padding: 6px 6px 2px 6px; }
-        .switch-version .btn-switch-version .hidden-pc {
-          display: block; }
-        .switch-version .btn-switch-version .hidden-mobile {
-          display: none; } }
+        padding: 6px 6px 0 6px; } }
+  @media only screen and (max-device-width: 767px) {
+    .switch-version {
+      position: relative;
+      top: 0;
+      margin-bottom: 3px; } }
 
 .filter {
   padding-top: 15px;
-  position: relative; }
+  position: relative;
+  z-index: 9010;
+  padding-right: 150px; }
   .filter .form-group {
     display: inline-block;
     margin: 0 16px 15px 0;
@@ -9257,10 +9261,14 @@ select {
     font-size: 13px;
     line-height: 16px;
     color: #727272;
-    border: 1px solid #727272;
-    padding: 3px 10px;
-    margin: 0 12px 5px 0;
-    text-decoration: none; }
+    padding: 4px 10px;
+    margin: 0 10px 5px 0;
+    text-decoration: none;
+    border: 1px solid #ffffff;
+    background: #FFFFFF;
+    box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+    border-radius: 3px;
+    height: 24px; }
     .label-week-box .label-week.active, .label-week-box .label-week:hover {
       background: #E8F4FD;
       border: 1px solid #0B599C;
@@ -9290,6 +9298,14 @@ label[disabled] {
 /*******************************************/
 .width-100per {
   width: 100%; }
+
+.dataTables_wrapper {
+  position: relative;
+  z-index: 1; }
+  .dataTables_wrapper .tblRpt .dataTables_empty {
+    border-bottom: 0 !important; }
+  .dataTables_wrapper .tblRpt tbody tr:last-child td {
+    border-bottom: 0; }
 
 .tblRpt {
   border: 1px solid #d1d1d1;
