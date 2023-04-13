@@ -24,6 +24,7 @@
   font-weight: bold;
   font-style: normal; }
 
+
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -167,6 +168,7 @@
 
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
+
 
 /*!
  * Datetimepicker for Bootstrap 3
@@ -828,11 +830,13 @@
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
 
+
 .input-group.date .input-group-addon {
   padding-right: 0; }
 
 .daterange-picker {
   display: none; }
+
 
 /*******************************************/
 /* Ripple Effect */

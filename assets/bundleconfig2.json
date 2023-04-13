@@ -761,7 +761,8 @@
     "outputFileName": "bundles2/site-betlists/default.js",
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
-      "js/libs/bootstrap/collapse.js"
+      "js/libs/bootstrap/collapse.js",
+      "js/libs/storejs/store.js"
     ]
   },
   {
@@ -775,6 +776,14 @@
     ]
   },
   {
+    "outputFileName": "bundles2/site-betlists/filter-new.css",
+    "inputFiles": [
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize.css",
+      "styles/vendors/multiselect/fanex.multiSelect.css"
+    ]
+  },
+  {
     "outputFileName": "bundles2/site-betlists/filter.js",
     "inputFiles": [
       "js/components/multiselect/bootstrap-multiselect.js",
@@ -783,6 +792,22 @@
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles2/site-betlists/filter-new.js",
+    "inputFiles": [
+      "js/libs/moment/moment.js",
+      "js/libs/moment/locale/en-gb.js",
+      "js/libs/moment/locale/ja.js",
+      "js/libs/moment/locale/ko.js",
+      "js/libs/moment/locale/th.js",
+      "js/libs/moment/locale/vi.js",
+      "js/libs/moment/locale/zh-cn.js",
+      "js/libs/moment/locale/zh-tw.js",
+      "js/libs/moment/switch-locale.js",
+      "js/components/daterangepicker/jquery.daterangepicker.js",
+      "js/components/multiselect/fanex.multiSelect.js"
     ]
   },
   {
@@ -1566,6 +1591,14 @@
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars-dark.css",
       "styles/components/bootstrap.nexDatePicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2/site-betlists/filter-new-dark.css",
+    "inputFiles": [
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize-dark.css",
+      "styles/vendors/multiselect/fanex.multiSelect-dark.css"
     ]
   },
   {

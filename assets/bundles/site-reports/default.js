@@ -13544,8 +13544,8 @@ function requestData(url, successFunction, methodType) {
 
         // update the number of selected elements when the page initially loads, and use that as the defaultValue.
         // necessary for form resets when options are pre-selected.
-        this.$multiSelect.find("input[type=text]").defaultValue = this.updateSelected();
-        this.updateSelectAll();
+        this.$multiSelect.find("input[type=text]").defaultValue = this._updateSelected();
+        this._updateSelectAll();
 
         // open by default
         this.options.state === "open" && this.$dropdownContainer.trigger("open", [false]);
@@ -13575,7 +13575,7 @@ function requestData(url, successFunction, methodType) {
 
         getItemsByCustomAttributes: function (attributes) {
             var query = [];
-            Object.entries(attributes).forEach(function (key) {
+            Object.keys(attributes).forEach(function (key) {
                 query.push('[data-', key.toLowerCase(), '="', attributes[key], '"]');
             });
 
@@ -13584,7 +13584,7 @@ function requestData(url, successFunction, methodType) {
 
         getSelectedItemsByCustomAttributes: function (attributes) {
             var query = [":checked"];
-            Object.entries(attributes).forEach(function (key) {
+            Object.keys(attributes).forEach(function (key) {
                 query.push('[data-', key.toLowerCase(), '="', attributes[key], '"]');
             });
 
@@ -13601,22 +13601,19 @@ function requestData(url, successFunction, methodType) {
             this.$allCheckBoxesExceptSelectAll.each(function (_, item) {
                 if (selectValuesObject.hasOwnProperty(item.value)) {
                     item.checked = true;
+                    me._handleCheckboxClick($(item));
                 }
             });
-
-            me.updateSelected();
-            me.updateSelectAll();
         },
 
         selectByCustomAttributes: function (attributes) {
             var matchedItems = this.getItemsByCustomAttributes(attributes);
             if (matchedItems.length) {
+                var me = this;
                 matchedItems.each(function (_, item) {
                     item.checked = true;
+                    me._handleCheckboxClick($(item));
                 });
-
-                this.updateSelected();
-                this.updateSelectAll();
             }
         },
 
@@ -13635,91 +13632,25 @@ function requestData(url, successFunction, methodType) {
             this.$allCheckBoxesExceptSelectAll.each(function (_, item) {
                 if (deselectValuesObject.hasOwnProperty(item.value)) {
                     item.checked = false;
+                    me._handleCheckboxClick($(item));
                 }
             });
-
-            me.updateSelected();
-            me.$selectAll.prop("checked", false);
         },
 
         deselectByCustomAttributes: function (attributes) {
             var matchedItems = this.getItemsByCustomAttributes(attributes);
             if (matchedItems.length) {
+                var me = this;
                 matchedItems.each(function (_, item) {
                     item.checked = false;
+                    me._handleCheckboxClick($(item));
                 });
-
-                this.updateSelected();
-                this.$selectAll.prop("checked", false);
             }
         },
 
         setSelectAll: function (checked) {
             this.$selectAll.prop("checked", checked);
             this._handleSelectAll(checked);
-        },
-
-        updateSelectAll: function () {
-            if (this.numGroup === this.$checkboxContainer.find('input[childgroupid="fanex-multiselect-option-group-0"]').filter(":checked").length) {
-                this.$selectAll.prop("checked", true);
-                this.$listGroupCheckBox.prop("checked", true);
-            }
-        },
-
-        updateSelected: function () {
-            var options = this.options,
-                $inputs = this.$allCheckBoxesWithoutGroupExceptSelectAll,
-                $checked = $inputs.filter(":checked"),
-                value = "",
-                numChecked = $checked.length;
-
-            if (numChecked === 0) {
-                value = options.noneSelectedText;
-            } else {
-                if (options.useCustomSelectAllText && $inputs.length === numChecked) {
-                    if (typeof options.customSelectAllText === "function") {
-                        value = options.customSelectAllText();
-                    } else {
-                        value = options.customSelectAllText.replace("#", numChecked);
-                    }
-                } else {
-                    if (options.showParentSelectedText) {
-                        $checked = this.$mainParentGroup.find("input:checked");
-                        numChecked = $checked.length;
-                    }
-
-                    if (numChecked > 0) {
-                        var arrayItemChecked = [];
-                        for (var i = 0; i < numChecked; i++) {
-                            arrayItemChecked.push($checked[i].title);
-                        }
-                        value = arrayItemChecked.join(", ");
-                        if (value.length * 8 > options.minWidth) {
-                            value = options.selectedText.replace("#", numChecked);
-                        }
-                    } else {
-                        value = options.noneSelectedText;
-                    }
-                }
-            }
-
-            // Update tooltip
-            if (options.showTooltip) {
-                var tooltipValue = $checked
-                    .map(function () {
-                        return this.title;
-                    })
-                    .get()
-                    .join(", ");
-                if (tooltipValue === "") {
-                    tooltipValue = options.tooltipNoItem;
-                }
-                this.$multiSelect.attr("original-title", tooltipValue);
-                this.$multiSelect.attr("title", tooltipValue);
-            }
-
-            this.$multiSelect.find("input").val(value);
-            return value;
         },
 
         /* Private Functions */
@@ -13782,7 +13713,7 @@ function requestData(url, successFunction, methodType) {
             maxHeight: 400,
             minWidth: 200,
             position: "bottom" /* top|middle|bottom */,
-            fadeSpeed: 100,
+            duration: 10,
             disabled: false,
             state: "closed",
             multiple: true,
@@ -14144,7 +14075,6 @@ function requestData(url, successFunction, methodType) {
 
             // handle button events
             me.$multiSelect.click(function (e) {
-                e.stopPropagation();
                 if (me.$dropdownContainer.is(":hidden")) {
                     me.$dropdownContainer.trigger("open");
                 } else {
@@ -14160,11 +14090,9 @@ function requestData(url, successFunction, methodType) {
 
                         // hides all other options but the one clicked
                         if (others) {
-                            $("div.fanex-multiselect-options")
-                                .filter(":visible")
-                                .fadeOut(options.fadeSpeed);
+                            $("div.fanex-multiselect-options").filter(":visible").slideUp(options.duration);
                         } else {
-                            me.$dropdownContainer.fadeOut(options.fadeSpeed);
+                            me.$dropdownContainer.slideUp(options.duration);
                         }
 
                         if (options.isRetrieveDataAfterClose) {
@@ -14184,7 +14112,7 @@ function requestData(url, successFunction, methodType) {
                             me.isOpenning = false;
                         }
 
-                        me.updateSelected();
+                        me._updateSelected();
 
                         if (targetId && (targetId === 'html' || targetId !== me.$multiSelect.attr("id")) && me.isOpenning) {
                             options.onLeave.call(me.$multiSelect);
@@ -14225,8 +14153,8 @@ function requestData(url, successFunction, methodType) {
                         position: "absolute",
                         top: top + "px",
                         left: offset.left + "px",
-                        width: me.options.minWidth + "px"
-                    }).show();
+                        width: options.minWidth + "px"
+                    }).slideDown(options.duration);
 
                     // set the scroll of the checkbox container
                     $container.scrollTop(0);
@@ -14258,26 +14186,9 @@ function requestData(url, successFunction, methodType) {
                 // handler chilren checkbox event
                 var childrenNodes = $this.find('li.show-item input[childgroupid="' + $this.attr("childgroupid") + '"]');
                 childrenNodes.click(function () {
-                    var parent = $this,
-                        current = $(this);
-                    if (!this.checked) {
-                        me._removeParentSelected(parent);
-                    } else {
-                        var currentGroup = parent,
-                            currentChildSelected = childrenNodes
-                                .filter(".show-item")
-                                .filter(":checked").length,
-                            currentChildLength = childrenNodes.filter(".show-item").length;
-                        if (currentChildLength === currentChildSelected) {
-                            currentGroup.prev().find("input").prop("checked", true);
-                            me._updateParentSelected(current.parent().parent().parent().parent());
-                        }
-
-                        me.updateSelectAll();
-                    }
-
+                    var current = $(this);
+                    me._handleCheckboxClick(current, $this, childrenNodes);
                     !current.data("is-group") && options.onCheck.call(this);
-                    me.updateSelected();
                 });
 
                 // handle group checkbox click event
@@ -14295,7 +14206,7 @@ function requestData(url, successFunction, methodType) {
                                 .find("li.show-item input.show-item:not(:disabled)")
                                 .prop("checked", true);
                             me._updateParentSelected($this);
-                            me.updateSelectAll();
+                            me._updateSelectAll();
                         } else {
                             $(this)
                                 .parent()
@@ -14307,7 +14218,7 @@ function requestData(url, successFunction, methodType) {
                         }
 
                         options.onCheck.call(this);
-                        me.updateSelected();
+                        me._updateSelected();
                     });
             });
 
@@ -14324,7 +14235,27 @@ function requestData(url, successFunction, methodType) {
 
         _handleSelectAll: function (checked) {
             this.$allCheckBoxesExceptSelectAll.filter(".show-item").prop("checked", checked);
-            this.updateSelected();
+            this._updateSelected();
+        },
+
+        _handleCheckboxClick: function (checkbox, parent, childrenNodes) {
+            parent = parent || checkbox.closest("ul.fanex-multiselect-ul-group");
+            if (checkbox.is(":checked")) {
+                childrenNodes = childrenNodes || parent.find('li.show-item input[childgroupid="' + parent.attr("childgroupid") + '"]');
+                var currentGroup = parent,
+                    currentChildSelected = childrenNodes.filter(".show-item").filter(":checked").length,
+                    currentChildLength = childrenNodes.filter(".show-item").length;
+                if (currentChildLength === currentChildSelected) {
+                    currentGroup.prev().find("input").prop("checked", true);
+                    this._updateParentSelected(parent/*current.parent().parent().parent().parent()*/);
+                }
+
+                this._updateSelectAll();
+            } else {
+                this._removeParentSelected(parent);
+            }
+
+            this._updateSelected();
         },
 
         _removeParentSelected: function (currentGroup) {
@@ -14351,6 +14282,69 @@ function requestData(url, successFunction, methodType) {
 
                 this._updateParentSelected(parentGroup);
             }
+        },
+
+        _updateSelectAll: function () {
+            if (this.numGroup === this.$checkboxContainer.find('input[childgroupid="fanex-multiselect-option-group-0"]').filter(":checked").length) {
+                this.$selectAll.prop("checked", true);
+                this.$listGroupCheckBox.prop("checked", true);
+            }
+        },
+
+        _updateSelected: function () {
+            var options = this.options,
+                $inputs = this.$allCheckBoxesWithoutGroupExceptSelectAll,
+                $checked = $inputs.filter(":checked"),
+                value = "",
+                numChecked = $checked.length;
+
+            if (numChecked === 0) {
+                value = options.noneSelectedText;
+            } else {
+                if (options.useCustomSelectAllText && $inputs.length === numChecked) {
+                    if (typeof options.customSelectAllText === "function") {
+                        value = options.customSelectAllText();
+                    } else {
+                        value = options.customSelectAllText.replace("#", numChecked);
+                    }
+                } else {
+                    if (options.showParentSelectedText) {
+                        $checked = this.$mainParentGroup.find("input:checked");
+                        numChecked = $checked.length;
+                    }
+
+                    if (numChecked > 0) {
+                        var arrayItemChecked = [];
+                        for (var i = 0; i < numChecked; i++) {
+                            arrayItemChecked.push($checked[i].title);
+                        }
+                        value = arrayItemChecked.join(", ");
+                        if (value.length * 8 > options.minWidth) {
+                            value = options.selectedText.replace("#", numChecked);
+                        }
+                    } else {
+                        value = options.noneSelectedText;
+                    }
+                }
+            }
+
+            // Update tooltip
+            if (options.showTooltip) {
+                var tooltipValue = $checked
+                    .map(function () {
+                        return this.title;
+                    })
+                    .get()
+                    .join(", ");
+                if (tooltipValue === "") {
+                    tooltipValue = options.tooltipNoItem;
+                }
+                this.$multiSelect.attr("original-title", tooltipValue);
+                this.$multiSelect.attr("title", tooltipValue);
+            }
+
+            this.$multiSelect.find("input").val(value);
+            return value;
         }
     };
 
