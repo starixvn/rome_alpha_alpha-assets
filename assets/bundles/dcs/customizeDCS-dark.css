@@ -290,7 +290,7 @@ a {
   border-bottom: none; }
 
 .block__item--before-extra-item {
-  border-right: 1px solid #5F626B; }
+  border-right: 1px solid #5F626B !important; }
 
 .full-width .block__item--near-last {
   border-bottom-color: #5F626B; }
