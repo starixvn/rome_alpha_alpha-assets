@@ -5041,8 +5041,8 @@ a, a:focus, a:active, a:target, a:hover {
 
 .msg-error {
   background-color: #361212;
-  border-color: #E54748;
-  color: #E54748; }
+  border-color: #CC7070;
+  color: #CC7070; }
   .msg-error:before {
     content: '\e93e'; }
 
@@ -5432,7 +5432,7 @@ select {
 
 .form-validation .txt.error ~ .validation:before {
   content: '\e92c';
-  color: #E54748; }
+  color: #CC7070; }
 
 .form-validation .txt.valid ~ .validation:before {
   content: '\e91f';

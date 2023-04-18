@@ -447,7 +447,6 @@
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
     ]
   },
-
   {
     "outputFileName": "bundles2/site-main/security/before-home-page.js",
     "inputFiles": [
@@ -1123,7 +1122,6 @@
       "styles/themes/components/buttons/button-super2-dark.css",
       "styles/components/customize-checkbox-radio-dark.css",
       "styles/themes/components/checkbox-radio/checkbox-radio-super2-dark.css"
-
     ]
   },
   {
@@ -1737,6 +1735,12 @@
   },
   {
     "outputFileName": "bundles2/site-messages/backup-domains.js",
+    "inputFiles": [
+      "js/libs/clipboard/clipboard.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles2/site-memberinfo/copy-account.js",
     "inputFiles": [
       "js/libs/clipboard/clipboard.js"
     ]
