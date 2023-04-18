@@ -17,6 +17,10 @@
     align-items: center;
     position: relative;
 
+    &:hover {
+        text-decoration: none;
+    }
+
     .fanex-multiselect-state-default {
         width: 100% !important;
         color: #212121;

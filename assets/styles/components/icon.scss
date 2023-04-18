@@ -154,14 +154,15 @@
         margin-right: 5px;
         font-weight: bold;
         float: left;
-        height: 24px;
+        height: 26px;
+        display: flex;
+        align-items: center;
 
         div.text {
             color: #333;
             font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
             float: left;
-            height: 24px;
-            padding-top: 5px;
+            padding-top: 0;
             margin-right: 3px;
             text-indent: 5px;
         }
@@ -170,8 +171,7 @@
             color: #1E8E4B;
             background: transparent;
             float: left;
-            height: 24px;
-            padding-top: 5px;
+            padding-top: 0;
             margin-right: 3px;
         }
     }
@@ -184,13 +184,15 @@
         font-weight: bold;
         float: left;
         height: 26px;
+        display: flex;
+        align-items: center;
 
         div.text {
             color: #333;
             font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
             float: left;
-            height: 24px;
-            padding-top: 7px;
+            height: auto;
+            padding-top: 0;
             margin-right: 5px;
             text-indent: 6px;
         }
@@ -203,20 +205,17 @@
             padding: 0 4px;
             font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
             float: left;
-            height: 18px;
             line-height: 16px;
             margin-right: 4px;
-            margin-top: 4px;
+            margin-top: 0;
         }
 
         div.icon-clock {
             color: #DB6900;
             background: transparent;
             float: left;
-            height: 24px;
-            padding-top: 5px;
+            padding-top: 0;
             margin-right: 6px;
-            font-size: 17px;
         }
     }
 }

@@ -5226,7 +5226,9 @@ input[type=reset], .btn-reset {
   .breadcrumb-table .breadcrumb {
     border: 0;
     padding: 0; }
-
+    .breadcrumb-table .breadcrumb a:hover {
+      color: #F60;
+      text-decoration: none; }
 
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
@@ -6437,21 +6439,21 @@ input[type=reset], .btn-reset {
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px;
       text-indent: 5px; }
     .entered-non-entered div.icon-entered div.icon-check-circle {
       color: #23A858;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px; }
   .entered-non-entered div.icon-non-entered {
     background: #2B2B2B;
@@ -6460,13 +6462,15 @@ input[type=reset], .btn-reset {
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 26px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 7px;
+      height: auto;
+      padding-top: 0;
       margin-right: 5px;
       text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
@@ -6474,21 +6478,18 @@ input[type=reset], .btn-reset {
       background: #434343;
       border: 1px solid #434343;
       border-radius: 3px;
-      padding: 0 5px;
+      padding: 0 4px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 18px;
       line-height: 16px;
       margin-right: 4px;
-      margin-top: 4px; }
+      margin-top: 0; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #EB7100;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 6px;
-      font-size: 17px; }
+      padding-top: 0;
+      margin-right: 6px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {
@@ -6576,7 +6577,6 @@ input[type=reset], .btn-reset {
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
-
 
 @font-face {
   font-family: 'password';

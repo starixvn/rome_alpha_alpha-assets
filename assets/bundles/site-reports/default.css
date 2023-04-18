@@ -28,12 +28,6 @@
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
-th.col-firstlastname, div.col-firstlastname {
-  width: 200px !important;
-  white-space: nowrap !important;
-  overflow: hidden !important;
-  text-overflow: ellipsis; }
-
 .width-100per {
   width: 100%; }
 
@@ -4489,6 +4483,8 @@ body .ui-tooltip { border-width: 2px; }
   display: flex;
   align-items: center;
   position: relative; }
+  .fanex-multiselect:hover {
+    text-decoration: none; }
   .fanex-multiselect .fanex-multiselect-state-default {
     width: 100% !important;
     color: #212121;
@@ -4604,7 +4600,6 @@ body .ui-tooltip { border-width: 2px; }
       font-weight: bold; }
   .fanex-multiselect-ul-group .show-item ul, .fanex-multiselect-ul-group .rtLI ul {
     padding: 0 0 0 20px; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5840,21 +5835,21 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-entered div.text {
       color: #333;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px;
       text-indent: 5px; }
     .entered-non-entered div.icon-entered div.icon-check-circle {
       color: #1E8E4B;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px; }
   .entered-non-entered div.icon-non-entered {
     background: #fff;
@@ -5863,13 +5858,15 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 26px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #333;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 7px;
+      height: auto;
+      padding-top: 0;
       margin-right: 5px;
       text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
@@ -5880,18 +5877,15 @@ body .ui-tooltip { border-width: 2px; }
       padding: 0 4px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 18px;
       line-height: 16px;
       margin-right: 4px;
-      margin-top: 4px; }
+      margin-top: 0; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #DB6900;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 6px;
-      font-size: 17px; }
+      padding-top: 0;
+      margin-right: 6px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {

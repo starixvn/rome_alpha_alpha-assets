@@ -1200,6 +1200,8 @@
   display: flex;
   align-items: center;
   position: relative; }
+  .fanex-multiselect:hover {
+    text-decoration: none; }
   .fanex-multiselect .fanex-multiselect-state-default {
     width: 100% !important;
     color: #ededed;
