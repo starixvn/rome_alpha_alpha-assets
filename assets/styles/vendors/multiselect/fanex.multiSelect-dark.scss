@@ -16,6 +16,7 @@
     display: flex;
     align-items: center;
     position: relative;
+    border: 1px solid transparent;
 
     &.fanex-multiselect-state-disabled {
         opacity: .4;
@@ -28,6 +29,11 @@
 
     &:hover {
         text-decoration: none;
+    }
+
+    &.error {
+        border: 1px solid #e9322d;
+        padding: 0 !important
     }
 
     .fanex-multiselect-state-default {

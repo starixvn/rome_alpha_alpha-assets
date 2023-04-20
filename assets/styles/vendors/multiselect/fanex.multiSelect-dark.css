@@ -15,7 +15,8 @@
   width: 160px;
   display: flex;
   align-items: center;
-  position: relative; }
+  position: relative;
+  border: 1px solid transparent; }
   .fanex-multiselect.fanex-multiselect-state-disabled {
     opacity: .4;
     cursor: not-allowed; }
@@ -23,6 +24,9 @@
       cursor: not-allowed; }
   .fanex-multiselect:hover {
     text-decoration: none; }
+  .fanex-multiselect.error {
+    border: 1px solid #e9322d;
+    padding: 0 !important; }
   .fanex-multiselect .fanex-multiselect-state-default {
     width: 100% !important;
     color: #ededed;
