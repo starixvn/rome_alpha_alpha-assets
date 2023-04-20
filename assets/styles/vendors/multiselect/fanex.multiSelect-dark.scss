@@ -16,9 +16,20 @@
     display: flex;
     align-items: center;
     position: relative;
-    &:hover{
+
+    &.fanex-multiselect-state-disabled {
+        opacity: .4;
+        cursor: not-allowed;
+
+        .fanex-multiselect-state-default {
+            cursor: not-allowed;
+        }
+    }
+
+    &:hover {
         text-decoration: none;
     }
+
     .fanex-multiselect-state-default {
         width: 100% !important;
         color: #ededed;

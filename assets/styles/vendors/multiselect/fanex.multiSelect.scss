@@ -17,6 +17,15 @@
     align-items: center;
     position: relative;
 
+    &.fanex-multiselect-state-disabled {
+        opacity: .4;
+        cursor: not-allowed;
+
+        .fanex-multiselect-state-default {
+            cursor: not-allowed;
+        }
+    }
+
     &:hover {
         text-decoration: none;
     }

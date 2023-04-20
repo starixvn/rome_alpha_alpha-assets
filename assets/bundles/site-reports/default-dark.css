@@ -4675,6 +4675,11 @@ body .ui-tooltip { border-width: 2px; }
   display: flex;
   align-items: center;
   position: relative; }
+  .fanex-multiselect.fanex-multiselect-state-disabled {
+    opacity: .4;
+    cursor: not-allowed; }
+    .fanex-multiselect.fanex-multiselect-state-disabled .fanex-multiselect-state-default {
+      cursor: not-allowed; }
   .fanex-multiselect:hover {
     text-decoration: none; }
   .fanex-multiselect .fanex-multiselect-state-default {
