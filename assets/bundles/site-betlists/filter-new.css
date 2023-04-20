@@ -1298,7 +1298,7 @@
 .fanex-multiselect-ul-group {
   margin: 0;
   padding-right: 12px; }
-  .fanex-multiselect-ul-group .hide-item {
+  .fanex-multiselect-ul-group .hide-item, .fanex-multiselect-ul-group .hide-item-global {
     display: none; }
   .fanex-multiselect-ul-group .show-item .fanex-multiselect-div label, .fanex-multiselect-ul-group .rtLI .fanex-multiselect-div label {
     display: block;

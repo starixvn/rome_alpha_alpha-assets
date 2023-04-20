@@ -1,51 +1,49 @@
 ﻿"use strict";
 (function ($) {
     function FanexMultiSelect(element, options) {
+        element.prev().is("#" + dropdownContainerId) && element.prev().remove();
+        element.next().is("#" + dropdownContainerId) && element.next().remove();
+
         options.disabled = element.attr("disabled") === "disabled";
         this.options = $.extend({}, this._defaults, options);
-        this.$multiSelect = element;
-        var multiSelectId = element.attr("id");
+        this.$multiselect = element;
+        this.multiselectId = element.attr("id") || this._generateUniqueId();
 
         // ----- initialize
         this.isOpenning = false;
-        this.browser = this._detectBrowser();
         this.isHasGroup = this._isHasGroup(this.options.listData);
-        var dropdownContainerId = "fanex-multiselect-options-" + multiSelectId;
+        var dropdownContainerId = "fanex-multiselect-options-" + this.multiselectId;
 
         var html = [
-            this._renderButton(multiSelectId, dropdownContainerId),
+            this._renderButton(),
             '<div class="fanex-multiselect-options fanex-multiselect-treeview fanex-multiselect-shadow" id="', dropdownContainerId, '">'
         ];
         if (this.options.listData.length) {
-            html.push(this._renderFilterAndSelectAll(), this._renderCheckboxContainer(multiSelectId));
+            html.push(this._renderFilterAndSelectAll(), this._renderCheckboxContainer());
         } else {
             html.push(this._renderFilterAndSelectAllNoItem());
         }
         html.push("</div>");
 
         // Global Variables
-        this.$multiSelect = this.$multiSelect
+        this.$multiselect = this.$multiselect
             .after(html.join(""))
-            .next("#" + multiSelectId);
-        this.$dropdownContainer = this.$multiSelect.next("#" + dropdownContainerId).hide();
-        this.$noSearchFound = this.$dropdownContainer.find(".no-data-text");
-        this.$selectAllContainer = this.$dropdownContainer.find("div.custom-ui-widget-header");
-        this.$selectAll = this.$selectAllContainer.find(".fanex-multiselect-check-all > input[type=checkbox]");
+            .next("#" + this.multiselectId);
+        this.$dropdownContainer = this.$multiselect.next("#" + dropdownContainerId).hide();
+        this.$selectAll = this.$dropdownContainer.find("#select-all-checkbox-" + this.multiselectId);
         this.$checkboxContainer = this.$dropdownContainer.find("ul.first-group");
-        this.$allLabel = this.$dropdownContainer.find("label");
         this.$listItem = this.$dropdownContainer.find("ul.fanex-multiselect-ul-group");
-        this.$listGroupCheckBox = this.$dropdownContainer.find("label.fanex-multiselect-group-mark input[type=checkbox]");
+        //this.$listGroupCheckBox = this.$dropdownContainer.find("label.fanex-multiselect-group-mark input[type=checkbox]");
         this.$mainParentGroup = this.$dropdownContainer.find("ul.first-group > li > div.fanex-multiselect-div");
 
         var $listLabelExceptSelectAll = this.$checkboxContainer.find("label");
-        this.$allCheckBoxesExceptSelectAll = $listLabelExceptSelectAll.not(".fanex-multiselect-state-disabled").find("input[type=checkbox]");
         this.$allCheckBoxesWithoutGroupExceptSelectAll = $listLabelExceptSelectAll.not(".fanex-multiselect-group-mark").find("input[type=checkbox]");
 
         this._registerEvents();
 
         // update the number of selected elements when the page initially loads, and use that as the defaultValue.
         // necessary for form resets when options are pre-selected.
-        this.$multiSelect.find("input[type=text]").defaultValue = this._updateSelected();
+        this.$multiselect.find("#interface-button-" + this.multiselectId).defaultValue = this._updateSelected();
         this._updateSelectAll();
 
         // open by default
@@ -58,7 +56,7 @@
 
         getSelectedValues: function () {
             var selected = [];
-            this.$allCheckBoxesWithoutGroupExceptSelectAll.filter(":checked").each(function (_, item) {
+            this._getCheckboxesWithoutGroup(":checked").each(function (_, item) {
                 selected.push(item.value);
             });
 
@@ -67,11 +65,34 @@
 
         getAllValues: function () {
             var allValues = {};
-            this.$allCheckBoxesWithoutGroupExceptSelectAll.each(function (_, item) {
+            this._getCheckboxesWithoutGroup().each(function (_, item) {
                 allValues[item.value] = item.checked;
             });
 
             return allValues;
+        },
+
+        showAllItems: function (value) {
+            var matchedItems = value
+                ? this.$checkboxContainer.find("li.hide-item-global input[type=checkbox]")
+                : this.$checkboxContainer.find("li:not(.hide-item-global) input[type=checkbox]");
+            matchedItems.length && this._showHideCheckboxes(value, matchedItems);
+        },
+
+        showItemsByCustomAttributes: function (attributes) {
+            var matchedItems = this.getItemsByCustomAttributes(attributes);
+            if (matchedItems.length) {
+                this._showHideCheckboxes(true, matchedItems);
+                this.disable(false);
+            }
+        },
+
+        hideItemsByCustomAttributes: function (attributes) {
+            var matchedItems = this.getItemsByCustomAttributes(attributes);
+            if (matchedItems.length) {
+                this._showHideCheckboxes(false, matchedItems);
+                this.disable(this.getSelectedValues().length === 0);
+            }
         },
 
         getItemsByCustomAttributes: function (attributes) {
@@ -80,124 +101,16 @@
                 query.push('[data-', key.toLowerCase(), '="', attributes[key], '"]');
             });
 
-            return this.$allCheckBoxesExceptSelectAll.filter(query.join(""));
+            return this.$checkboxContainer.find("input[type=checkbox]" + query.join(""));
         },
 
-        getSelectedItemsByCustomAttributes: function (attributes) {
-            var query = [":checked"];
-            Object.keys(attributes).forEach(function (key) {
-                query.push('[data-', key.toLowerCase(), '="', attributes[key], '"]');
-            });
-
-            return this.$allCheckBoxesExceptSelectAll.filter(query.join(""));
-        },
-
-        select: function (selectValues) {
-            var me = this;
-            if (!$.isArray(selectValues)) {
-                selectValues = [selectValues];
-            }
-
-            var selectValuesObject = selectValues.reduce((prevItem, item) => (prevItem[item] = true, prevItem), {});
-            this.$allCheckBoxesExceptSelectAll.each(function (_, item) {
-                if (selectValuesObject.hasOwnProperty(item.value)) {
-                    item.checked = true;
-                    me._handleCheckboxClick($(item));
-                }
-            });
-        },
-
-        selectByCustomAttributes: function (attributes) {
-            var matchedItems = this.getItemsByCustomAttributes(attributes);
-            if (matchedItems.length) {
-                var me = this;
-                matchedItems.each(function (_, item) {
-                    item.checked = true;
-                    me._handleCheckboxClick($(item));
-                });
-            }
-        },
-
-        deselect: function (deselectValues) {
-            if (!this.options.multiple) {
-                // In single selection mode at least on option needs to be selected
-                return;
-            }
-
-            var me = this;
-            if (!$.isArray(deselectValues)) {
-                deselectValues = [deselectValues];
-            }
-
-            var deselectValuesObject = deselectValues.reduce((prevItem, item) => (prevItem[item] = true, prevItem), {});
-            this.$allCheckBoxesExceptSelectAll.each(function (_, item) {
-                if (deselectValuesObject.hasOwnProperty(item.value)) {
-                    item.checked = false;
-                    me._handleCheckboxClick($(item));
-                }
-            });
-        },
-
-        deselectByCustomAttributes: function (attributes) {
-            var matchedItems = this.getItemsByCustomAttributes(attributes);
-            if (matchedItems.length) {
-                var me = this;
-                matchedItems.each(function (_, item) {
-                    item.checked = false;
-                    me._handleCheckboxClick($(item));
-                });
-            }
-        },
-
-        setSelectAll: function (checked) {
-            this.$selectAll.prop("checked", checked);
-            this._handleSelectAll(checked);
+        disable: function (value) {
+            value
+                ? this.$multiselect.addClass("fanex-multiselect-state-disabled")
+                : this.$multiselect.removeClass("fanex-multiselect-state-disabled");
         },
 
         /* Private Functions */
-        _detectBrowser: function () {
-            //// multiSelect Scroller
-            var matchedBrowser, browserDectect;
-
-            // Use of jQuery.browser is frowned upon.
-            // More details: http://api.jquery.com/jQuery.browser
-            // jQuery.uaMatch maintained for back-compat
-            function ubMatch(ua) {
-                ua = ua.toLowerCase();
-
-                var match =
-                    /(chrome)[ \/]([\w.]+)/.exec(ua) ||
-                    /(webkit)[ \/]([\w.]+)/.exec(ua) ||
-                    /(opera)(?:.*version|)[ \/]([\w.]+)/.exec(ua) ||
-                    /(msie) ([\w.]+)/.exec(ua) ||
-                    (ua.indexOf("compatible") < 0 &&
-                        /(mozilla)(?:.*? rv:([\w.]+)|)/.exec(ua)) ||
-                    [];
-
-                return {
-                    browserDectect: match[1] || "",
-                    version: match[2] || "0"
-                };
-            }
-
-            matchedBrowser = ubMatch(navigator.userAgent);
-            browserDectect = {};
-
-            if (matchedBrowser.browserDectect) {
-                browserDectect[matchedBrowser.browserDectect] = true;
-                browserDectect.version = matchedBrowser.version;
-            }
-
-            // Chrome is Webkit, but Webkit is also Safari.
-            if (browserDectect.chrome) {
-                browserDectect.webkit = true;
-            } else if (browserDectect.webkit) {
-                browserDectect.safari = true;
-            }
-
-            return browserDectect;
-        },
-
         _defaults: {
             showTooltip: true,
             tooltipNoItem: "Select None",
@@ -229,6 +142,10 @@
             onCheckAll: function () { }
         },
 
+        _generateUniqueId: function () {
+            return Math.random().toString(36).substr(2);
+        },
+
         _isHasGroup: function (listData) {
             for (var i = 0, max = listData.length; i < max; i++) {
                 if (listData[i].items && listData[i].items.length > 0) {
@@ -239,46 +156,66 @@
             return false;
         },
 
-        _renderButton: function (multiSelectId, dropdownContainerId) {
-            this.$multiSelect.prev().is("div#" + dropdownContainerId) && this.$multiSelect.prev().remove();
-            this.$multiSelect.next().is("div#" + dropdownContainerId) && this.$multiSelect.next().remove();
+        _renderButton: function () {
+            var buttonId = "interface-button-" + this.multiselectId;
 
             return [
                 '<a id="',
-                multiSelectId,
+                this.multiselectId,
                 '" class="fanex-multiselect fanex-multiselect-widget fanex-multiselect-state-default',
                 this.options.disabled ? " fanex-multiselect-state-disabled" : "",
                 '">',
                 '<input type="text" readonly="readonly" class="fanex-multiselect-state-default" value="',
                 this.options.noneSelectedText,
+                '" id="',
+                buttonId,
                 '" /><span class="fanex-multiselect-icon fanex-multiselect-icon-triangle-1-s"></span></a>'
             ].join("");
         },
 
         _renderFilterAndSelectAll: function () {
-            var html = this.options.showFilter
-                ? [
+            var html = [];
+            if (this.options.showFilter) {
+                var filterId = "filter-input-" + this.multiselectId,
+                    noDataTextId = "no-data-text-div-" + this.multiselectId;
+                html.push(
                     '<div class="fanex-multiselect-filter">',
-                    '<input type="text" placeholder="',
+                    '<input type="text" id="',
+                    filterId,
+                    '" placeholder = "',
                     this.options.filterPlaceHolder,
                     '" autocomplete="off"/></div>',
-                    '<div class="no-data-text" style="display:none;">',
+                    '<div id="',
+                    noDataTextId,
+                    '" class="no-data-text" style="display:none;">',
                     this.options.noItemFoundText,
-                    "</div>"
-                ] : [];
+                    "</div>");
+            }
 
-            html.push(
-                '<div class="custom-ui-widget-header"', this.options.showSelectAll ? "" : ' style="display:none;"', ">",
-                '<ul class="fanex-multiselect-helper-reset" style="overflow-y:hidden;">',
-                '<li style="display:inline;" class="show-item">',
-                '<label class="fanex-multiselect-check-all">',
-                '<input type="checkbox" />', this.options.selectAllText, "</label></li>",
-            );
+            if (this.options.showSelectAll) {
+                var selectAllId = "select-all-checkbox-" + this.multiselectId,
+                    collapseExpandAllId = "collapse-expand-all-icon-" + this.multiselectId;
+                html.push(
+                    '<div class="custom-ui-widget-header">',
+                    '<ul class="fanex-multiselect-helper-reset" style="overflow-y:hidden;">',
+                    '<li style="display:inline;" class="show-item">',
+                    '<label class="fanex-multiselect-check-all">',
+                    '<input type="checkbox" id="',
+                    selectAllId,
+                    '"/>',
+                    this.options.selectAllText,
+                    "</label></li>");
+                if (this.isHasGroup) {
+                    html.push(
+                        '<li id="',
+                        collapseExpandAllId,
+                        '" class="fanex-multiselect-icon-dropdown fanex-multiselect-icon-',
+                        this.options.expandGroupsByDefault ? 'collapse' : 'expand', '">&nbsp;</li>');
+                }
 
-            this.isHasGroup
-                && html.push('<li class="fanex-multiselect-icon-dropdown fanex-multiselect-icon-', this.options.expandGroupsByDefault ? 'collapse' : 'expand', '">&nbsp;</li>');
+                html.push("</ul></div>");
+            }
 
-            html.push("</ul></div>");
             return html.join("");
         },
 
@@ -292,8 +229,7 @@
             ].join("");
         },
 
-        _renderCheckboxContainer: function (multiSelectId) {
-            this.numGroup = 0;
+        _renderCheckboxContainer: function () {
             var groupIdAttr = "fanex-multiselect-option-group-0";
             var html = [
                 '<ul class="first-group rtUL',
@@ -305,10 +241,9 @@
 
             var listData = this.options.listData;
             for (var i = 0, max = listData.length; i < max; i++) {
-                this.numGroup++;
                 var tempGroup = listData[i];
                 html.push(
-                    this._renderCheckbox(multiSelectId, {
+                    this._renderCheckbox({
                         data: tempGroup,
                         index: i,
                         hasChild: tempGroup.items && tempGroup.items.length > 0,
@@ -323,15 +258,15 @@
             return html.join("");
         },
 
-        _renderCheckbox: function (multiSelectId, row) {
+        _renderCheckbox: function (row) {
             var tempHtml = [],
                 dataId = row.data.id || "",
                 title = row.data.text || "",
                 value = row.data.value || "",
                 name = row.data.name || value,
-                inputId =
+                checkboxId =
                     "fanex-multiselect-" +
-                    multiSelectId +
+                    this.multiselectId +
                     "-" +
                     dataId +
                     "-option-" +
@@ -370,10 +305,9 @@
                             : row.isLastChild
                                 ? " rtBot"
                                 : " rtMid";
-                        tempHtml.push('<div class="', divClasses, '">');
-                    } else {
-                        tempHtml.push('<div class="', divClasses, '" style="margin-left:10px;">');
                     }
+
+                    tempHtml.push('<div class="', divClasses, '">');
                 }
 
                 labelClasses += isDisabled ? " fanex-multiselect-state-disabled" : "";
@@ -381,7 +315,7 @@
                 tempHtml.push(
                     '<label class="', labelClasses, '">',
                     '<input class="show-item" type="', this.options.multiple ? "checkbox" : "radio",
-                    '" id="', inputId,
+                    '" id="', checkboxId,
                     '" name="', name,
                     '" value="', value,
                     '" title="', title,
@@ -405,7 +339,7 @@
                     for (var j = 0, childrenLength = children.length; j < childrenLength; j++) {
                         var childItem = children[j];
                         tempHtml.push(
-                            this._renderCheckbox(multiSelectId, {
+                            this._renderCheckbox({
                                 data: childItem,
                                 index: j,
                                 hasChild: childItem.items && childItem.items.length > 0,
@@ -427,16 +361,20 @@
 
         _registerEvents: function () {
             var me = this,
-                options = me.options;
+                options = me.options,
+                $noSearchFound = this.$dropdownContainer.find("#no-data-text-div-" + this.multiselectId),
+                $selectAllContainer = this.$dropdownContainer.find(".custom-ui-widget-header"),
+                $collapseExpandAll = $selectAllContainer.find("#collapse-expand-all-icon-" + this.multiselectId),
+                $allLabel = this.$dropdownContainer.find("label"),
+                $listItem = this.$dropdownContainer.find("ul.fanex-multiselect-ul-group");
             // handle seach filter textbox
             if (options.showFilter) {
-                this.$dropdownContainer.find(".fanex-multiselect-filter > input[type=text]")
+                this.$dropdownContainer.find("#filter-input-" + this.multiselectId)
                     .off()
                     .on("keyup", function () {
-                        var $this = $(this);
-                        var filterVal = $this.val().toLowerCase();
+                        var filterVal = this.value.toLowerCase();
                         if (filterVal.length) {
-                            me.$listItem
+                            $listItem
                                 .find("li")
                                 .removeAttr("data-dont-hide-me")
                                 .removeClass("show-item")
@@ -445,7 +383,7 @@
                                 .find("input")
                                 .removeClass("show-item");
 
-                            var dontHideElements = me.$listItem
+                            var dontHideElements = $listItem
                                 .find('li[data-content-text*="' + filterVal + '"]')
                                 .removeClass("hide-item")
                                 .addClass("show-item")
@@ -453,8 +391,9 @@
 
                             dontHideElements.find("input").addClass("show-item");
                             if (dontHideElements.length > 0) {
-                                me.$noSearchFound.hide();
-                                me.$selectAllContainer.show();
+                                me._handleExpandAll($collapseExpandAll);
+                                $noSearchFound.hide();
+                                $selectAllContainer.show();
                                 dontHideElements.each(function () {
                                     var dontHideElement = $(this);
                                     dontHideElement
@@ -484,17 +423,17 @@
                                         .addClass("show-item");
                                 });
                             } else {
-                                me.$selectAllContainer.hide();
-                                me.$noSearchFound.show();
+                                $selectAllContainer.hide();
+                                $noSearchFound.show();
                             }
 
-                            me.$listItem
+                            $listItem
                                 .find('li[data-dont-hide-me!="true"]')
                                 .addClass("hide-item");
                         } else {
-                            me.$noSearchFound.hide();
-                            me.$selectAllContainer.show();
-                            me.$listItem
+                            $noSearchFound.hide();
+                            $selectAllContainer.show();
+                            $listItem
                                 .find("li")
                                 .removeAttr("data-dont-hide-me")
                                 .removeClass("hide-item")
@@ -505,14 +444,14 @@
                                 .addClass("show-item");
                         }
 
-                        me.$listItem.find("input.show-item:checked").each(function () {
+                        $listItem.find("input.show-item:checked").each(function () {
                             var inputShowItem = $(this);
                             var grantParent = inputShowItem.parent().parent();
                             if (grantParent.next().find("li").length === 0) {
                                 me._updateParentSelected(grantParent);
                             }
                         });
-                        me.$listItem
+                        $listItem
                             .find("input.show-item:not(:checked)")
                             .each(function () {
                                 me._removeParentSelected(
@@ -529,31 +468,10 @@
             });
 
             // handle collapse/expand All
-            this.$selectAllContainer.find(".fanex-multiselect-icon-dropdown").click(function () {
-                var $this = $(this);
-                if ($this.hasClass("fanex-multiselect-icon-collapse")) {
-                    $this
-                        .removeClass("fanex-multiselect-icon-collapse")
-                        .addClass("fanex-multiselect-icon-expand");
-                    me.$checkboxContainer
-                        .find("ul.fanex-multiselect-ul-group:visible")
-                        .hide();
-                    me.$checkboxContainer
-                        .find("span.collapseClass")
-                        .removeClass("rtMinus")
-                        .addClass("rtPlus");
-                } else {
-                    me.$checkboxContainer
-                        .find("ul.fanex-multiselect-ul-group:hidden")
-                        .show();
-                    me.$checkboxContainer
-                        .find("span.collapseClass")
-                        .removeClass("rtPlus")
-                        .addClass("rtMinus");
-                    $this
-                        .removeClass("fanex-multiselect-icon-expand")
-                        .addClass("fanex-multiselect-icon-collapse");
-                }
+            $collapseExpandAll.click(function () {
+                $collapseExpandAll.hasClass("fanex-multiselect-icon-collapse")
+                    ? me._handleCollapseAll($collapseExpandAll)
+                    : me._handleExpandAll($collapseExpandAll);
             });
 
             // handle collapse/expand icon
@@ -575,7 +493,7 @@
             });
 
             // handle button events
-            me.$multiSelect.click(function (e) {
+            me.$multiselect.click(function (e) {
                 if (me.$dropdownContainer.is(":hidden")) {
                     me.$dropdownContainer.trigger("open");
                 } else {
@@ -599,36 +517,36 @@
                         if (options.isRetrieveDataAfterClose) {
                             isRetrieveData = isRetrieveData || false;
                             if (isRetrieveData) {
-                                me.$allLabel
+                                $allLabel
                                     .find('input[ischeck="true"]')
                                     .prop("checked", true);
                                 if (me.isOpenning) {
-                                    me.$allLabel
+                                    $allLabel
                                         .find('input[ischeck!="true"]')
                                         .prop("checked", false);
                                 }
                             }
 
-                            me.$allLabel.find("input").removeAttr("isCheck");
+                            $allLabel.find("input").removeAttr("isCheck");
                             me.isOpenning = false;
                         }
 
                         me._updateSelected();
 
-                        if (targetId && (targetId === 'html' || targetId !== me.$multiSelect.attr("id")) && me.isOpenning) {
-                            options.onLeave.call(me.$multiSelect);
+                        if (targetId && (targetId === 'html' || targetId !== this.multiselectId) && me.isOpenning) {
+                            options.onLeave.call(me.$multiselect);
                             me.isOpenning = false;
                         }
                     }
                 },
                 open: function (e, closeOthers) {
                     // bail if this widget is disabled
-                    if (me.$multiSelect.hasClass("fanex-multiselect-state-disabled")) {
+                    if (me.$multiselect.hasClass("fanex-multiselect-state-disabled")) {
                         return;
                     }
 
                     // use position() if inside ui-widget-content, because offset() won't cut it.
-                    var offset = me.$multiSelect.position(),
+                    var offset = me.$multiselect.position(),
                         $container = me.$dropdownContainer.find("ul:last"),
                         top;
 
@@ -640,12 +558,12 @@
                     // calculate positioning
                     if (options.position === "middle") {
                         top = offset.top +
-                            me.$multiSelect.height() / 2 -
+                            me.$multiselect.height() / 2 -
                             me.$dropdownContainer.outerHeight() / 2;
                     } else if (options.position === "top") {
                         top = offset.top - me.$dropdownContainer.outerHeight() - 7;
                     } else {
-                        top = offset.top + me.$multiSelect.outerHeight();
+                        top = offset.top + me.$multiselect.outerHeight();
                     }
                     top += 3; // padding extra 3px to seperate options with multi select div
 
@@ -668,7 +586,7 @@
                     }
 
                     if (options.isRetrieveDataAfterClose) {
-                        me.$allLabel
+                        $allLabel
                             .find("input")
                             .filter(":checked")
                             .attr("ischeck", "true");
@@ -681,7 +599,7 @@
             });
 
             // checkbox click event handle
-            me.$listItem.each(function () {
+            $listItem.each(function () {
                 var $this = $(this);
 
                 // handler chilren checkbox event
@@ -735,8 +653,34 @@
         },
 
         _handleSelectAll: function (checked) {
-            this.$allCheckBoxesExceptSelectAll.filter(".show-item").prop("checked", checked);
+            this._getAllCheckboxes(".show-item").prop("checked", checked);
             this._updateSelected();
+        },
+
+        _handleCollapseAll: function (collapseExpandAll) {
+            collapseExpandAll
+                .removeClass("fanex-multiselect-icon-collapse")
+                .addClass("fanex-multiselect-icon-expand");
+            this.$checkboxContainer
+                .find("ul.fanex-multiselect-ul-group:visible")
+                .hide();
+            this.$checkboxContainer
+                .find("span.collapseClass")
+                .removeClass("rtMinus")
+                .addClass("rtPlus");
+        },
+
+        _handleExpandAll: function (collapseExpandAll) {
+            this.$checkboxContainer
+                .find("ul.fanex-multiselect-ul-group:hidden")
+                .show();
+            this.$checkboxContainer
+                .find("span.collapseClass")
+                .removeClass("rtPlus")
+                .addClass("rtMinus");
+            collapseExpandAll
+                .removeClass("fanex-multiselect-icon-expand")
+                .addClass("fanex-multiselect-icon-collapse");
         },
 
         _handleCheckboxClick: function (checkbox, parent, childrenNodes) {
@@ -786,18 +730,18 @@
         },
 
         _updateSelectAll: function () {
-            if (this.numGroup === this.$checkboxContainer.find('input[childgroupid="fanex-multiselect-option-group-0"]').filter(":checked").length) {
+            if (!this._getCheckboxesWithoutGroup(":not(:checked)").length) {
                 this.$selectAll.prop("checked", true);
-                this.$listGroupCheckBox.prop("checked", true);
+                //this.$listGroupCheckBox.prop("checked", true);
             }
         },
 
         _updateSelected: function () {
             var options = this.options,
-                $inputs = this.$allCheckBoxesWithoutGroupExceptSelectAll,
+                $inputs = this._getCheckboxesWithoutGroup(),
                 $checked = $inputs.filter(":checked"),
-                value = "",
-                numChecked = $checked.length;
+                numChecked = $checked.length,
+                value = "";
 
             if (numChecked === 0) {
                 value = options.noneSelectedText;
@@ -840,12 +784,45 @@
                 if (tooltipValue === "") {
                     tooltipValue = options.tooltipNoItem;
                 }
-                this.$multiSelect.attr("original-title", tooltipValue);
-                this.$multiSelect.attr("title", tooltipValue);
+                this.$multiselect.attr("original-title", tooltipValue);
+                this.$multiselect.attr("title", tooltipValue);
             }
 
-            this.$multiSelect.find("input").val(value);
+            this.$multiselect.find("input").val(value);
             return value;
+        },
+
+        _getCheckboxesWithoutGroup(query) {
+            return this.$checkboxContainer.find("li:not(.hide-item-global) label:not(.fanex-multiselect-group-mark) input[type=checkbox]" + (query || ""));
+        },
+
+        _getAllCheckboxes(query) {
+            return this.$checkboxContainer.find("li:not(.hide-item-global) input[type=checkbox]" + (query || ""));
+        },
+
+        _showHideCheckboxes: function (value, checkboxes) {
+            var me = this;
+            checkboxes.each(function (_, checkbox) {
+                checkbox.checked = value;
+                me._showHideCheckboxParent(value, $(checkbox).closest(".rtLI"));
+                //me._handleCheckboxClick($checkbox);
+            });
+
+            this._updateSelected();
+            this._updateSelectAll();
+        },
+
+        _showHideCheckboxParent: function (value, li) {
+            var contentText;
+            if (value) {
+                li.removeClass("hide-item-global");
+                contentText = li.data("content-text-hide");
+                li.attr("data-content-text", contentText).removeAttr("data-content-text-hide");
+            } else {
+                li.addClass("hide-item-global");
+                contentText = li.data("content-text");
+                li.attr("data-content-text-hide", contentText).removeAttr("data-content-text");
+            }
         }
     };
 
