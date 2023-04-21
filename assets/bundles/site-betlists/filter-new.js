@@ -8165,13 +8165,13 @@
     FanexMultiSelect.prototype = {
         constructor: FanexMultiSelect,
 
-        getSelectedValues: function () {
-            var selected = [];
+        getCheckedValues: function () {
+            var checked = [];
             this._getCheckboxesWithoutGroup(":checked").each(function (_, item) {
-                selected.push(item.value);
+                checked.push(item.value);
             });
 
-            return selected.join();
+            return checked.join();
         },
 
         getAllValues: function () {
@@ -8202,7 +8202,7 @@
             var matchedItems = this.getItemsByCustomAttributes(attributes);
             if (matchedItems.length) {
                 this._showHideCheckboxes(false, matchedItems);
-                this.disable(this.getSelectedValues().length === 0);
+                this.disable(this._getAllCheckboxes().length === 0);
             }
         },
 
@@ -8215,10 +8215,60 @@
             return this.$checkboxContainer.find("input[type=checkbox]" + query.join(""));
         },
 
+        uncheck: function (uncheckValues) {
+            if (!this.options.multiple) {
+                // In single selection mode at least on option needs to be selected
+                return;
+            }
+
+            if (!$.isArray(uncheckValues)) {
+                uncheckValues = [uncheckValues];
+            }
+
+            var uncheckValuesObject = uncheckValues.reduce((prevItem, item) => (prevItem[item] = true, prevItem), {});
+            this._getCheckboxesWithoutGroup().each(function (_, item) {
+                if (uncheckValuesObject.hasOwnProperty(item.value)) {
+                    item.checked = true;
+                    $(item).trigger("click");
+                }
+            });
+        },
+
         disable: function (value) {
             value
                 ? this.$multiselect.addClass("fanex-multiselect-state-disabled")
                 : this.$multiselect.removeClass("fanex-multiselect-state-disabled");
+        },
+
+        addError: function (value) {
+            value
+                ? this.$multiselect.addClass("error")
+                : this.$multiselect.removeClass("error");
+        },
+
+        getUncheckedProductIds: function () {
+            var productIdsObject = {};
+            var checkboxes = this._getCheckboxesWithoutGroup();
+            checkboxes.filter(":not(:checked)").each(function (_, item) {
+                productIdsObject[$(item).data("productid")] = true;
+            });
+
+            var productIds = Object.keys(productIdsObject);
+            if (productIds.length) {
+                checkboxes.filter(":checked").each(function (_, item) {
+                    var productId = $(item).data("productid");
+                    if (productIdsObject.hasOwnProperty(productId)) {
+                        productIdsObject[productId] = false;
+                    }
+                });
+
+                productIds.length = 0;
+                Object.keys(productIdsObject).forEach(function (key) {
+                    productIdsObject[key] && productIds.push(key);
+                });
+            }
+
+            return productIds;
         },
 
         /* Private Functions */
@@ -8903,11 +8953,11 @@
             return value;
         },
 
-        _getCheckboxesWithoutGroup(query) {
+        _getCheckboxesWithoutGroup: function (query) {
             return this.$checkboxContainer.find("li:not(.hide-item-global) label:not(.fanex-multiselect-group-mark) input[type=checkbox]" + (query || ""));
         },
 
-        _getAllCheckboxes(query) {
+        _getAllCheckboxes: function (query) {
             return this.$checkboxContainer.find("li:not(.hide-item-global) input[type=checkbox]" + (query || ""));
         },
 
