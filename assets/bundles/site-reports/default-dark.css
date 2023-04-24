@@ -71,7 +71,7 @@
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even, .tblRpt.alternative-row-table tbody tr:nth-child(2n) {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }
@@ -4674,8 +4674,7 @@ body .ui-tooltip { border-width: 2px; }
   width: 160px;
   display: flex;
   align-items: center;
-  position: relative;
-  border: 1px solid transparent; }
+  position: relative; }
   .fanex-multiselect.fanex-multiselect-state-disabled {
     opacity: .4;
     cursor: not-allowed; }
@@ -4683,9 +4682,6 @@ body .ui-tooltip { border-width: 2px; }
       cursor: not-allowed; }
   .fanex-multiselect:hover {
     text-decoration: none; }
-  .fanex-multiselect.error {
-    border: 1px solid #e9322d;
-    padding: 0 !important; }
   .fanex-multiselect .fanex-multiselect-state-default {
     width: 100% !important;
     color: #ededed;
@@ -5802,6 +5798,8 @@ body .ui-tooltip { border-width: 2px; }
     -o-animation: ripple 1s ease-out;
     -webkit-animation: ripple 1s ease-out;
     animation: ripple 1s ease-out; }
+  .icon-excel:hover {
+    color: #2E9E60; }
   .icon-excel:before {
     position: relative;
     top: 5px; }
