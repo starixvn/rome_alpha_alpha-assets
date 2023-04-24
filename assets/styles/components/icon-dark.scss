@@ -108,6 +108,10 @@
     height: $height-normal;
     float: left;
 
+    &:hover {
+        color: #2E9E60;
+    }
+
     &:before {
         position: relative;
         top: 5px;
