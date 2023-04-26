@@ -5224,8 +5224,9 @@ input[type=reset], .btn-reset {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 13px 0 10px;
-  min-height: 30px; }
+  padding: 5px 7px 3px 10px;
+  min-height: 30px;
+  line-height: 18px; }
   .breadcrumb-table .breadcrumb {
     border: 0;
     padding: 0; }
