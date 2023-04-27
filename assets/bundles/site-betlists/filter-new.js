@@ -8174,6 +8174,15 @@
             return checked.join();
         },
 
+        getUncheckedValues: function () {
+            var unchecked = [];
+            this._getCheckboxesWithoutGroup(":not(:checked)").each(function (_, item) {
+                unchecked.push(item.value);
+            });
+
+            return unchecked.join();
+        },
+
         getAllValues: function () {
             var allValues = {};
             this._getCheckboxesWithoutGroup().each(function (_, item) {
@@ -8338,6 +8347,7 @@
             var html = [];
             if (this.options.showFilter) {
                 var filterId = "filter-input-" + this.multiselectId,
+                    iconDeleteId = "filter-icon-delete-" + this.multiselectId,
                     noDataTextId = "no-data-text-div-" + this.multiselectId;
                 html.push(
                     '<div class="fanex-multiselect-filter">',
@@ -8345,8 +8355,9 @@
                     filterId,
                     '" placeholder = "',
                     this.options.filterPlaceHolder,
-                    '" autocomplete="off"/></div>',
-                    '<div id="',
+                    '" autocomplete="off"/><span class="icon-close" id="',
+                    iconDeleteId,
+                    '"></span></div><div id="',
                     noDataTextId,
                     '" class="no-data-text" style="display:none;">',
                     this.options.noItemFoundText,
@@ -8530,7 +8541,8 @@
                 $listItem = this.$dropdownContainer.find("ul.fanex-multiselect-ul-group");
             // handle seach filter textbox
             if (options.showFilter) {
-                this.$dropdownContainer.find("#filter-input-" + this.multiselectId)
+                const $filterInput = this.$dropdownContainer.find("#filter-input-" + this.multiselectId);
+                $filterInput
                     .off()
                     .on("keyup", function () {
                         var filterVal = this.value.toLowerCase();
@@ -8620,38 +8632,51 @@
                                 );
                             });
                     });
+
+                this.$dropdownContainer.find("#filter-icon-delete-" + this.multiselectId)
+                    .off()
+                    .click(function () {
+                        if ($filterInput.val().length > 0) {
+                            $filterInput.val("");
+                            $filterInput.trigger("keyup");
+                        }
+                    });
             }
 
             // handle Select All
-            this.$selectAll.click(function () {
-                me._handleSelectAll(this.checked);
-                me.options.onCheckAll.call(this);
-            });
+            if (options.showSelectAll) {
+                this.$selectAll.click(function () {
+                    me._handleSelectAll(this.checked);
+                    me.options.onCheckAll.call(this);
+                });
+            }
 
             // handle collapse/expand All
-            $collapseExpandAll.click(function () {
-                $collapseExpandAll.hasClass("fanex-multiselect-icon-collapse")
-                    ? me._handleCollapseAll($collapseExpandAll)
-                    : me._handleExpandAll($collapseExpandAll);
-            });
-
-            // handle collapse/expand icon
-            this.$dropdownContainer.find("span.collapseClass").each(function () {
-                var $this = $(this);
-                $this.click(function () {
-                    if ($this.hasClass("rtMinus")) {
-                        $this.removeClass("rtMinus").addClass("rtPlus");
-                    } else {
-                        $this.removeClass("rtPlus").addClass("rtMinus");
-                    }
-                    $this.parent().next().toggle();
+            if (this.isHasGroup) {
+                $collapseExpandAll.click(function () {
+                    $collapseExpandAll.hasClass("fanex-multiselect-icon-collapse")
+                        ? me._handleCollapseAll($collapseExpandAll)
+                        : me._handleExpandAll($collapseExpandAll);
                 });
 
-                if (!$this.data("group-show")) {
-                    $this.removeClass("rtMinus").addClass("rtPlus");
-                    $this.parent().next().hide();
-                }
-            });
+                // handle collapse/expand icon
+                this.$dropdownContainer.find("span.collapseClass").each(function () {
+                    var $this = $(this);
+                    $this.click(function () {
+                        if ($this.hasClass("rtMinus")) {
+                            $this.removeClass("rtMinus").addClass("rtPlus");
+                        } else {
+                            $this.removeClass("rtPlus").addClass("rtMinus");
+                        }
+                        $this.parent().next().toggle();
+                    });
+
+                    if (!$this.data("group-show")) {
+                        $this.removeClass("rtMinus").addClass("rtPlus");
+                        $this.parent().next().hide();
+                    }
+                });
+            }
 
             // handle button events
             me.$multiselect.click(function (e) {
