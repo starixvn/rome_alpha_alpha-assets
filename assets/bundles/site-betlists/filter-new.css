@@ -1206,7 +1206,8 @@
     padding-right: 20px; }
 
 .fanex-multiselect-filter {
-  padding-right: 12px; }
+  padding-right: 12px;
+  position: relative; }
   .fanex-multiselect-filter input {
     border: 1px solid #cccccc;
     border-radius: 3px;
@@ -1214,6 +1215,14 @@
     padding: 0 20px 0 5px;
     width: 100%;
     box-shadow: none; }
+  .fanex-multiselect-filter .icon-close {
+    color: #808080;
+    cursor: pointer;
+    font-size: 12px;
+    font-weight: bold;
+    padding: 9px;
+    position: absolute;
+    right: 9px; }
 
 .no-data-text {
   padding-top: 5px;
