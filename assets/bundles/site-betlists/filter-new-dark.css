@@ -284,7 +284,6 @@
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
 
-
 .date-picker {
   width: 170px;
   height: 25px;
@@ -641,7 +640,6 @@
   .date-picker-wrapper .week-number.week-number-selected {
     color: #49e;
     font-weight: bold; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -1180,7 +1178,6 @@
   .date-picker-wrapper .footer {
     flex: auto;
     width: 150px; } }
-
 
 .fanex-multiselect-icon-triangle-1-s {
   display: inline-block;

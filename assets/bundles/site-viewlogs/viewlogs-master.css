@@ -4383,7 +4383,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-
 @font-face {
   font-family: 'Roboto';
   src: url("../../styles/fonts/roboto/Roboto-Regular.woff2") format("woff2");
@@ -4516,7 +4515,6 @@ a, a:focus, a:active, a:target, a:hover {
 .display-none {
   display: none; }
 
-
 @font-face {
   font-family: 'Roboto';
   src: url("../../styles/fonts/roboto/Roboto-Regular.woff2") format("woff2");
@@ -4542,7 +4540,6 @@ a, a:focus, a:active, a:target, a:hover {
   src: url("../../styles/fonts/roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: bold;
   font-style: normal; }
-
 
 @font-face {
   font-family: 'Iconalpha';
@@ -8765,7 +8762,6 @@ body .ui-tooltip { border-width: 2px; }
   font-size: 100% !important;
   margin: 3px 5px 3px 16px; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -8816,7 +8812,6 @@ body .ui-tooltip { border-width: 2px; }
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
 
-
 /*******************************************/
 /* Devices */
 /*******************************************/
@@ -8830,7 +8825,6 @@ body .ui-tooltip { border-width: 2px; }
 
 .nav-tabs > li > a {
   color: #333; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -8961,7 +8955,6 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -9026,7 +9019,6 @@ input[type="number"], input[type="tel"] {
     /* IE 10+ */
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -9142,7 +9134,6 @@ select {
 
 .dropdown-menu {
   background-clip: border-box; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -9276,7 +9267,6 @@ select {
     .label-week-box .label-week.active {
       font-weight: bold; }
 
-
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
   position: relative;
@@ -9291,7 +9281,6 @@ input[type=radio].disabled, input[type=radio]:disabled {
 label[disabled] {
   cursor: not-allowed;
   opacity: 0.6; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -9508,7 +9497,6 @@ label[disabled] {
     width: 100%;
     padding: 10px 0;
     border-top: 1px solid #d1d1d1; }
-
 
 .block-icon-small {
   display: inline-block;

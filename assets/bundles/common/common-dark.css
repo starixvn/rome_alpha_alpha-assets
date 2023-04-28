@@ -4388,7 +4388,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-
 @font-face {
   font-family: 'Iconalpha';
   src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?kyr3md');
@@ -4987,7 +4986,6 @@ a, a:focus, a:active, a:target, a:hover {
 .display-none {
   display: none; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -5046,7 +5044,6 @@ a, a:focus, a:active, a:target, a:hover {
   .msg-error:before {
     content: '\e93e'; }
 
-
 .block-icon-small {
   display: inline-block;
   height: 16px;
@@ -5063,7 +5060,6 @@ a, a:focus, a:active, a:target, a:hover {
   height: 100px;
   background: url(../../styles/images/ajax-loader-dark.gif) center center no-repeat;
   left: 47% !important; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5198,7 +5194,6 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
-
 .breadcrumb {
   background: none;
   border-bottom: 1px solid #313334;
@@ -5245,7 +5240,6 @@ input[type=radio].disabled, input[type=radio]:disabled {
 label[disabled] {
   cursor: not-allowed;
   opacity: 0.6; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5378,7 +5372,6 @@ select {
   background-color: #171717;
   border-color: #292929;
   color: #EDEDED; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5513,7 +5506,6 @@ select {
     .label-week-box .label-week.active {
       font-weight: bold; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -5580,7 +5572,6 @@ input[type="number"], input[type="tel"] {
     /* IE 10+ */
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5947,7 +5938,6 @@ input[type=reset], .btn-reset {
     .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
       width: calc(100% - 56px) !important; } }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6003,7 +5993,6 @@ input[type=reset], .btn-reset {
     width: 0; }
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
-
 
 /*******************************************/
 /* Ripple Effect */
