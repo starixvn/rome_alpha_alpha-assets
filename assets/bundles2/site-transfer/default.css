@@ -49,7 +49,7 @@
     border: 1px solid #d1d1d1; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #eae9ee; }
-  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even, .tblRpt.alternative-row-table tbody tr:nth-child(2n) {
     background-color: #eae9ee; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #f8eb95; }
@@ -4069,6 +4069,8 @@ body .ui-tooltip { border-width: 2px; }
     -o-animation: ripple 1s ease-out;
     -webkit-animation: ripple 1s ease-out;
     animation: ripple 1s ease-out; }
+  .icon-excel:hover {
+    color: #2E9E60; }
   .icon-excel:before {
     position: relative;
     top: 5px; }
@@ -4158,21 +4160,21 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-entered div.text {
       color: #333;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px;
       text-indent: 5px; }
     .entered-non-entered div.icon-entered div.icon-check-circle {
       color: #1E8E4B;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px; }
   .entered-non-entered div.icon-non-entered {
     background: #fff;
@@ -4181,13 +4183,15 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 26px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #333;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 7px;
+      height: auto;
+      padding-top: 0;
       margin-right: 5px;
       text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
@@ -4198,18 +4202,15 @@ body .ui-tooltip { border-width: 2px; }
       padding: 0 4px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 18px;
       line-height: 16px;
       margin-right: 4px;
-      margin-top: 4px; }
+      margin-top: 0; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #DB6900;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 6px;
-      font-size: 17px; }
+      padding-top: 0;
+      margin-right: 6px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {

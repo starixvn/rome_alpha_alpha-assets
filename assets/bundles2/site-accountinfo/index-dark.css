@@ -44,7 +44,7 @@
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even, .tblRpt.alternative-row-table tbody tr:nth-child(2n) {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }

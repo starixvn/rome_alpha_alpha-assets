@@ -912,7 +912,18 @@
   width: 160px;
   display: flex;
   align-items: center;
-  position: relative; }
+  position: relative;
+  border: 1px solid transparent; }
+  .fanex-multiselect.fanex-multiselect-state-disabled {
+    opacity: .4;
+    cursor: not-allowed; }
+    .fanex-multiselect.fanex-multiselect-state-disabled .fanex-multiselect-state-default {
+      cursor: not-allowed; }
+  .fanex-multiselect:hover {
+    text-decoration: none; }
+  .fanex-multiselect.error {
+    border: 1px solid #e9322d;
+    padding: 0 !important; }
   .fanex-multiselect .fanex-multiselect-state-default {
     width: 100% !important;
     color: #ededed;
@@ -920,7 +931,8 @@
     padding-right: 20px; }
 
 .fanex-multiselect-filter {
-  padding-right: 12px; }
+  padding-right: 12px;
+  position: relative; }
   .fanex-multiselect-filter input {
     border: 1px solid #474747;
     border-radius: 3px;
@@ -928,6 +940,12 @@
     padding: 0 20px 0 5px;
     width: 100%;
     background: #2b2b2b; }
+  .fanex-multiselect-filter .icon-close {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 9px;
+    position: absolute;
+    right: 9px; }
 
 .no-data-text {
   padding-top: 5px;
@@ -1015,7 +1033,7 @@
 .fanex-multiselect-ul-group {
   margin: 0;
   padding-right: 12px; }
-  .fanex-multiselect-ul-group .hide-item {
+  .fanex-multiselect-ul-group .hide-item, .fanex-multiselect-ul-group .hide-item-global {
     display: none; }
   .fanex-multiselect-ul-group .show-item .fanex-multiselect-div label, .fanex-multiselect-ul-group .rtLI .fanex-multiselect-div label {
     display: block;

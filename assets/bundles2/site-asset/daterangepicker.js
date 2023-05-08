@@ -877,7 +877,6 @@
             }
             $(this).data('date-picker-opened', true);
 
-
             box = createDom().hide();
             box.append('<div class="date-range-length-tip"></div>');
 
@@ -909,7 +908,6 @@
 
             //showSelectedInfo();
 
-
             var defaultTopText = '';
             if (opt.singleDate)
                 defaultTopText = translate('default-single');
@@ -928,7 +926,6 @@
             } else {
                 box.addClass('two-months');
             }
-
 
             setTimeout(function () {
                 updateCalendarWidth();
@@ -967,7 +964,6 @@
                 showMonth(nextMonth2, 'month2');
                 showSelectedDays();
             }
-
 
             box.find('.prev').on('click', function () {
                 if (!opt.stickyMonths)
@@ -1116,9 +1112,7 @@
                     min = target.name == 'minute' ? $(target).val().replace(/^(\d{1})$/, '0$1') : undefined;
                 setTime('time2', hour, min);
             });
-
         }
-
 
         function calcPosition() {
             if (!opt.inline) {
@@ -1309,7 +1303,6 @@
             return r;
         }
 
-
         function dayClicked(day) {
             if (day.hasClass('invalid')) return;
             var time = day.attr('time');
@@ -1382,7 +1375,6 @@
             autoclose();
         }
 
-
         function weekNumberClicked(weekNumberDom) {
             var thisTime = parseInt(weekNumberDom.attr('data-start-time'), 10);
             var date1, date2;
@@ -1441,7 +1433,6 @@
             return true;
         }
 
-
         function updateSelectableRange() {
             box.find('.day.invalid.tmp').removeClass('tmp invalid').addClass('valid');
             if (opt.start && !opt.end) {
@@ -1456,7 +1447,6 @@
 
             return true;
         }
-
 
         function dayHovering(day) {
             var hoverTime = parseInt(day.attr('time'));
@@ -1870,7 +1860,6 @@
             )
             return generateSelect('year', selectData);
         }
-
 
         function generateSelectData(range, current, valueBeautifier) {
             var data = [];
@@ -2432,7 +2421,6 @@
                 if (box.is(':visible')) closeDatePicker();
             }
         }
-
     };
 }));
 /* File Created: November 14, 2012 */

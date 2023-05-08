@@ -71,7 +71,7 @@
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even, .tblRpt.alternative-row-table tbody tr:nth-child(2n) {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }
@@ -4674,7 +4674,18 @@ body .ui-tooltip { border-width: 2px; }
   width: 160px;
   display: flex;
   align-items: center;
-  position: relative; }
+  position: relative;
+  border: 1px solid transparent; }
+  .fanex-multiselect.fanex-multiselect-state-disabled {
+    opacity: .4;
+    cursor: not-allowed; }
+    .fanex-multiselect.fanex-multiselect-state-disabled .fanex-multiselect-state-default {
+      cursor: not-allowed; }
+  .fanex-multiselect:hover {
+    text-decoration: none; }
+  .fanex-multiselect.error {
+    border: 1px solid #e9322d;
+    padding: 0 !important; }
   .fanex-multiselect .fanex-multiselect-state-default {
     width: 100% !important;
     color: #ededed;
@@ -4682,7 +4693,8 @@ body .ui-tooltip { border-width: 2px; }
     padding-right: 20px; }
 
 .fanex-multiselect-filter {
-  padding-right: 12px; }
+  padding-right: 12px;
+  position: relative; }
   .fanex-multiselect-filter input {
     border: 1px solid #474747;
     border-radius: 3px;
@@ -4690,6 +4702,12 @@ body .ui-tooltip { border-width: 2px; }
     padding: 0 20px 0 5px;
     width: 100%;
     background: #2b2b2b; }
+  .fanex-multiselect-filter .icon-close {
+    cursor: pointer;
+    font-size: 12px;
+    padding: 9px;
+    position: absolute;
+    right: 9px; }
 
 .no-data-text {
   padding-top: 5px;
@@ -4777,7 +4795,7 @@ body .ui-tooltip { border-width: 2px; }
 .fanex-multiselect-ul-group {
   margin: 0;
   padding-right: 12px; }
-  .fanex-multiselect-ul-group .hide-item {
+  .fanex-multiselect-ul-group .hide-item, .fanex-multiselect-ul-group .hide-item-global {
     display: none; }
   .fanex-multiselect-ul-group .show-item .fanex-multiselect-div label, .fanex-multiselect-ul-group .rtLI .fanex-multiselect-div label {
     display: block;
@@ -5792,6 +5810,8 @@ body .ui-tooltip { border-width: 2px; }
     -o-animation: ripple 1s ease-out;
     -webkit-animation: ripple 1s ease-out;
     animation: ripple 1s ease-out; }
+  .icon-excel:hover {
+    color: #2E9E60; }
   .icon-excel:before {
     position: relative;
     top: 5px; }
@@ -5881,21 +5901,21 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px;
       text-indent: 5px; }
     .entered-non-entered div.icon-entered div.icon-check-circle {
       color: #23A858;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px; }
   .entered-non-entered div.icon-non-entered {
     background: #2B2B2B;
@@ -5904,13 +5924,15 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 26px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 7px;
+      height: auto;
+      padding-top: 0;
       margin-right: 5px;
       text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
@@ -5918,21 +5940,18 @@ body .ui-tooltip { border-width: 2px; }
       background: #434343;
       border: 1px solid #434343;
       border-radius: 3px;
-      padding: 0 5px;
+      padding: 0 4px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 18px;
       line-height: 16px;
       margin-right: 4px;
-      margin-top: 4px; }
+      margin-top: 0; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #EB7100;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 6px;
-      font-size: 17px; }
+      padding-top: 0;
+      margin-right: 6px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {

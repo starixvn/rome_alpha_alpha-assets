@@ -5320,11 +5320,15 @@ a, a:focus, a:active, a:target, a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 13px 0 10px;
-  min-height: 30px; }
+  padding: 5px 7px 3px 10px;
+  min-height: 30px;
+  line-height: 18px; }
   .breadcrumb-table .breadcrumb {
     border: 0;
     padding: 0; }
+    .breadcrumb-table .breadcrumb a:hover {
+      color: #F60;
+      text-decoration: none; }
 
 
 .block-icon-small {
@@ -5391,7 +5395,7 @@ a, a:focus, a:active, a:target, a:hover {
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even, .tblRpt.alternative-row-table tbody tr:nth-child(2n) {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }
