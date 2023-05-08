@@ -778,6 +778,7 @@
   {
     "outputFileName": "bundles2/site-betlists/filter-new.css",
     "inputFiles": [
+      "styles/components/calendars.css",
       "styles/vendors/daterangepicker/jquery.daterangepicker.css",
       "styles/components/daterangepicker-customize.css",
       "styles/vendors/multiselect/fanex.multiSelect.css"
@@ -980,8 +981,8 @@
   {
     "outputFileName": "bundles2/site-asset/daterangepicker.css",
     "inputFiles": [
-      "styles/components/daterangepicker-customize.css",
-      "styles/vendors/daterangepicker/jquery.daterangepicker.css"
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize.css"
     ]
   },
   {
