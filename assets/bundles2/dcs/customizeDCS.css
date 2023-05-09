@@ -288,6 +288,9 @@ a {
 .block__item--near-last {
   border-bottom: none; }
 
+.block__item--before-extra-item {
+  border-right: 1px solid #cecece !important; }
+
 .full-width .block__item--near-last {
   border-bottom-color: #cecece; }
 
@@ -319,6 +322,9 @@ a {
 
 .settingtype8 .block__cell--no-border-bottom {
   border-bottom: none; }
+
+.settingtype23 .block__subType-header {
+  border-top: 1px solid #cecece; }
 
 .setting-field {
   border: 1px solid #cecece;
