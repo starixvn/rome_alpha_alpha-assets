@@ -324,7 +324,7 @@ a {
   border-bottom: none; }
 
 .settingtype23 .block__subType-header {
-  border-top: 1px solid #cecece; }
+  border-top: 1px solid #cecece !important; }
 
 .setting-field {
   border: 1px solid #cecece;

@@ -331,7 +331,7 @@ a {
   border-bottom: none; }
 
 .settingtype23 .block__subType-header {
-  border-top: 1px solid #5F626B; }
+  border-top: 1px solid #5F626B !important; }
 
 .setting-field {
   /*border: 1px solid $component-border-color;
