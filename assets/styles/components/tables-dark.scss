@@ -100,7 +100,7 @@
 
     &.alternative-row-table {
         tbody {
-            .even-row, .even , tr:nth-child(2n) {
+            .even-row, .even {
                 background-color: $table-even-bg;
             }
         }

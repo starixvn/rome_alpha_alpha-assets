@@ -9182,8 +9182,7 @@ select {
 .filter {
   padding-top: 15px;
   position: relative;
-  z-index: 9010;
-  padding-right: 150px; }
+  z-index: 9010; }
   .filter .form-group {
     display: inline-block;
     margin: 0 16px 15px 0;
@@ -9276,7 +9275,6 @@ select {
     .label-week-box .label-week.active {
       font-weight: bold; }
 
-
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
   position: relative;
@@ -9317,7 +9315,7 @@ label[disabled] {
     border: 1px solid #d1d1d1; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #eae9ee; }
-  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even, .tblRpt.alternative-row-table tbody tr:nth-child(2n) {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
     background-color: #eae9ee; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #f8eb95; }
@@ -9409,7 +9407,6 @@ label[disabled] {
 
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
-
 
 /*******************************************/
 /* Ripple Effect */

@@ -5405,8 +5405,7 @@ select {
 .filter {
   padding-top: 15px;
   position: relative;
-  z-index: 9010;
-  padding-right: 150px; }
+  z-index: 9010; }
   .filter .form-group {
     display: inline-block;
     margin: 0 16px 15px 0;
@@ -5498,7 +5497,6 @@ select {
       color: #0B599C; }
     .label-week-box .label-week.active {
       font-weight: bold; }
-
 
 /*******************************************/
 /* Ripple Effect */

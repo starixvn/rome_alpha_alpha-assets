@@ -1491,7 +1491,7 @@ legend {
     border: 1px solid #d1d1d1; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #eae9ee; }
-  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even, .tblRpt.alternative-row-table tbody tr:nth-child(2n) {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
     background-color: #eae9ee; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #f8eb95; }
@@ -1583,7 +1583,6 @@ legend {
 
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
-
 
 /*! jQuery UI - v1.9.1 - 2012-11-21
 * http://jqueryui.com

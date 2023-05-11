@@ -5846,7 +5846,7 @@ a, a:focus, a:active, a:target, a:hover {
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even, .tblRpt.alternative-row-table tbody tr:nth-child(2n) {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }
@@ -5943,7 +5943,6 @@ a, a:focus, a:active, a:target, a:hover {
 
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
-
 
 /*******************************************/
 /* Ripple Effect */
