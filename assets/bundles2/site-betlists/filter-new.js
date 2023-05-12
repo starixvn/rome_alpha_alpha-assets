@@ -6314,77 +6314,155 @@
         },
         "cn": //simplified chinese
         {
-            "selected": "已选择:",
-            "day": "天",
+            "selected": "已选:",
+            "day": "Day",
             "days": "天",
-            "apply": "确定",
-            "week-1": "一",
-            "week-2": "二",
-            "week-3": "三",
-            "week-4": "四",
-            "week-5": "五",
-            "week-6": "六",
-            "week-7": "日",
-            "week-number": "周",
-            "month-name": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-            "shortcuts": "快捷选择",
-            "past": "过去",
-            "following": "将来",
-            "previous": "&nbsp;&nbsp;&nbsp;",
-            "prev-week": "上周",
-            "prev-month": "上个月",
-            "prev-year": "去年",
-            "next": "&nbsp;&nbsp;&nbsp;",
-            "next-week": "下周",
-            "next-month": "下个月",
-            "next-year": "明年",
-            "less-than": "所选日期范围不能大于%d天",
-            "more-than": "所选日期范围不能小于%d天",
-            "default-more": "请选择大于%d天的日期范围",
-            "default-less": "请选择小于%d天的日期范围",
-            "default-range": "请选择%d天到%d天的日期范围",
-            "default-single": "请选择一个日期",
-            "default-default": "请选择一个日期范围",
-            "time": "时间",
-            "hour": "小时",
-            "minute": "分钟"
+            "apply": "应用",
+            "week-1": "mo",
+            "week-2": "tu",
+            "week-3": "we",
+            "week-4": "th",
+            "week-5": "fr",
+            "week-6": "sa",
+            "week-7": "su",
+            "week-number": "W",
+            "month-name": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+            "shortcuts": "Shortcuts",
+            "custom-values": "Custom Values",
+            "past": "Past",
+            "following": "Following",
+            "previous": "Previous",
+            "prev-week": "Week",
+            "prev-month": "Month",
+            "prev-year": "Year",
+            "next": "Next",
+            "next-week": "Week",
+            "next-month": "Month",
+            "next-year": "Year",
+            "less-than": "Date range should not be more than %d days",
+            "more-than": "Date range should not be less than %d days",
+            "default-more": "Please select a date range longer than %d days",
+            "default-single": "Please select a date",
+            "default-less": "Please select a date range less than %d days",
+            "default-range": "Please select a date range between %d and %d days",
+            "default-default": "Please select a date range",
+            "time": "Time",
+            "hour": "Hour",
+            "minute": "Minute"
         },
         "tc": // traditional chinese
         {
-            "selected": "已選擇:",
-            "day": "天",
+            "selected": "已選:",
+            "day": "Day",
             "days": "天",
-            "apply": "確定",
-            "week-1": "一",
-            "week-2": "二",
-            "week-3": "三",
-            "week-4": "四",
-            "week-5": "五",
-            "week-6": "六",
-            "week-7": "日",
-            "week-number": "週",
-            "month-name": ["一月", "二月", "三月", "四月", "五月", "六月", "七月", "八月", "九月", "十月", "十一月", "十二月"],
-            "shortcuts": "快速選擇",
-            "past": "過去",
-            "following": "將來",
-            "previous": "&nbsp;&nbsp;&nbsp;",
-            "prev-week": "上週",
-            "prev-month": "上個月",
-            "prev-year": "去年",
-            "next": "&nbsp;&nbsp;&nbsp;",
-            "next-week": "下週",
-            "next-month": "下個月",
-            "next-year": "明年",
-            "less-than": "所選日期範圍不能大於%d天",
-            "more-than": "所選日期範圍不能小於%d天",
-            "default-more": "請選擇大於%d天的日期範圍",
-            "default-less": "請選擇少於%d天的日期範圍",
-            "default-range": "請選擇%d天到%d天的日期範圍",
-            "default-single": "請選擇一個日期",
-            "default-default": "請選擇一個日期範圍",
-            "time": "日期",
-            "hour": "小時",
-            "minute": "分鐘"
+            "apply": "應用",
+            "week-1": "mo",
+            "week-2": "tu",
+            "week-3": "we",
+            "week-4": "th",
+            "week-5": "fr",
+            "week-6": "sa",
+            "week-7": "su",
+            "week-number": "W",
+            "month-name": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+            "shortcuts": "Shortcuts",
+            "custom-values": "Custom Values",
+            "past": "Past",
+            "following": "Following",
+            "previous": "Previous",
+            "prev-week": "Week",
+            "prev-month": "Month",
+            "prev-year": "Year",
+            "next": "Next",
+            "next-week": "Week",
+            "next-month": "Month",
+            "next-year": "Year",
+            "less-than": "Date range should not be more than %d days",
+            "more-than": "Date range should not be less than %d days",
+            "default-more": "Please select a date range longer than %d days",
+            "default-single": "Please select a date",
+            "default-less": "Please select a date range less than %d days",
+            "default-range": "Please select a date range between %d and %d days",
+            "default-default": "Please select a date range",
+            "time": "Time",
+            "hour": "Hour",
+            "minute": "Minute"
+        },
+        "th":
+        {
+            "selected": "ที่เลือกไว้:",
+            "day": "Day",
+            "days": "วัน",
+            "apply": "นำไปใช้",
+            "week-1": "mo",
+            "week-2": "tu",
+            "week-3": "we",
+            "week-4": "th",
+            "week-5": "fr",
+            "week-6": "sa",
+            "week-7": "su",
+            "week-number": "W",
+            "month-name": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+            "shortcuts": "Shortcuts",
+            "custom-values": "Custom Values",
+            "past": "Past",
+            "following": "Following",
+            "previous": "Previous",
+            "prev-week": "Week",
+            "prev-month": "Month",
+            "prev-year": "Year",
+            "next": "Next",
+            "next-week": "Week",
+            "next-month": "Month",
+            "next-year": "Year",
+            "less-than": "Date range should not be more than %d days",
+            "more-than": "Date range should not be less than %d days",
+            "default-more": "Please select a date range longer than %d days",
+            "default-single": "Please select a date",
+            "default-less": "Please select a date range less than %d days",
+            "default-range": "Please select a date range between %d and %d days",
+            "default-default": "Please select a date range",
+            "time": "Time",
+            "hour": "Hour",
+            "minute": "Minute"
+        },
+        "vi":
+        {
+            "selected": "Đã chọn:",
+            "day": "Day",
+            "days": "ngày",
+            "apply": "Áp dụng",
+            "week-1": "mo",
+            "week-2": "tu",
+            "week-3": "we",
+            "week-4": "th",
+            "week-5": "fr",
+            "week-6": "sa",
+            "week-7": "su",
+            "week-number": "W",
+            "month-name": ["january", "february", "march", "april", "may", "june", "july", "august", "september", "october", "november", "december"],
+            "shortcuts": "Shortcuts",
+            "custom-values": "Custom Values",
+            "past": "Past",
+            "following": "Following",
+            "previous": "Previous",
+            "prev-week": "Week",
+            "prev-month": "Month",
+            "prev-year": "Year",
+            "next": "Next",
+            "next-week": "Week",
+            "next-month": "Month",
+            "next-year": "Year",
+            "less-than": "Date range should not be more than %d days",
+            "more-than": "Date range should not be less than %d days",
+            "default-more": "Please select a date range longer than %d days",
+            "default-single": "Please select a date",
+            "default-less": "Please select a date range less than %d days",
+            "default-range": "Please select a date range between %d and %d days",
+            "default-default": "Please select a date range",
+            "time": "Time",
+            "hour": "Hour",
+            "minute": "Minute"
         }
     };
 
@@ -8140,6 +8218,7 @@
         this.$multiselect = this.$multiselect
             .after(html.join(""))
             .next("#" + this.multiselectId);
+        this.$buttonText = this.$multiselect.find("#interface-button-" + this.multiselectId);
         this.$dropdownContainer = this.$multiselect.next("#" + dropdownContainerId).hide();
         this.$selectAll = this.$dropdownContainer.find("#select-all-checkbox-" + this.multiselectId);
         this.$checkboxContainer = this.$dropdownContainer.find("ul.first-group");
@@ -8154,7 +8233,7 @@
 
         // update the number of selected elements when the page initially loads, and use that as the defaultValue.
         // necessary for form resets when options are pre-selected.
-        this.$multiselect.find("#interface-button-" + this.multiselectId).defaultValue = this._updateSelected();
+        this.$buttonText.defaultValue = this._updateSelected();
         this._updateSelectAll();
 
         // open by default
@@ -8199,20 +8278,30 @@
             matchedItems.length && this._showHideCheckboxes(value, matchedItems);
         },
 
+        showItemsByValues: function (values) {
+            var query = [];
+            values.forEach(function (value) {
+                query.push('[value="' + value + '"]');
+            });
+
+            this._showCheckboxes(this.$checkboxContainer.find("li label:not(.fanex-multiselect-group-mark) input[type=checkbox]" + query.join()));
+        },
+
         showItemsByCustomAttributes: function (attributes) {
-            var matchedItems = this.getItemsByCustomAttributes(attributes);
-            if (matchedItems.length) {
-                this._showHideCheckboxes(true, matchedItems);
-                this.disable(false);
-            }
+            this._showCheckboxes(this.getItemsByCustomAttributes(attributes));
+        },
+
+        hideItemsByValues: function (values) {
+            var query = [];
+            values.forEach(function (value) {
+                query.push('[value="' + value + '"]');
+            });
+
+            this._hideCheckboxes(this.$checkboxContainer.find("li label:not(.fanex-multiselect-group-mark) input[type=checkbox]" + query.join()));
         },
 
         hideItemsByCustomAttributes: function (attributes) {
-            var matchedItems = this.getItemsByCustomAttributes(attributes);
-            if (matchedItems.length) {
-                this._showHideCheckboxes(false, matchedItems);
-                this.disable(this._getAllCheckboxes().length === 0);
-            }
+            this._hideCheckboxes(this.getItemsByCustomAttributes(attributes));
         },
 
         getItemsByCustomAttributes: function (attributes) {
@@ -8234,7 +8323,8 @@
                 uncheckValues = [uncheckValues];
             }
 
-            var uncheckValuesObject = uncheckValues.reduce((prevItem, item) => (prevItem[item] = true, prevItem), {});
+            const uncheckValuesObject = {};
+            uncheckValues.forEach(function (item) { uncheckValuesObject[item] = true; });
             this._getCheckboxesWithoutGroup().each(function (_, item) {
                 if (uncheckValuesObject.hasOwnProperty(item.value)) {
                     item.checked = true;
@@ -8283,14 +8373,12 @@
         /* Private Functions */
         _defaults: {
             showTooltip: true,
-            tooltipNoItem: "Select None",
             showFilter: false,
             filterPlaceHolder: "Search...",
             noItemFoundText: "No item found",
             showSelectAll: true,
             selectAllText: "Select All",
-            useCustomSelectAllText: true,
-            customSelectAllText: "Select All (#)",
+            customSelectAllText: "All (#)",
             noItemText: "No item",
             noneSelectedText: "Select items (0)",
             selectedText: "Select items (#)",
@@ -8443,19 +8531,22 @@
                     dataId +
                     "-option-" +
                     row.groupId,
-                isDisabled = typeof row.data.enable !== "undefined" && !row.data.enable,
+                isDisabled = row.data.disabled === true,
+                isVisible = typeof row.data.visible === "undefined" || row.data.visible === true,
                 labelClasses = row.data.cssClass || "",
                 liClasses = "rtLI show-item",
                 divClasses = "fanex-multiselect-div",
                 groupIdAttr = "fanex-multiselect-option-group-" + row.groupId,
-                attributes = row.data.attributes || {};
-            row.hasChild = row.hasChild || false;
+                attributes = row.data.attributes || {},
+                isHasChild = row.hasChild || false;
 
             if (value) {
                 liClasses +=
                     (isDisabled ? " fanex-multiselect-disabled" : "") +
                     (row.isLastChild ? " rtLast" : "") +
-                    (row.index === 0 && row.hasChild ? " rtFirst" : "");
+                    (row.index === 0 && isHasChild ? " rtFirst" : "") +
+                    (isVisible ? "" : " hide-item-global") +
+                    (isHasChild ? " fanex-multiselect-li-group" : "");
                 tempHtml.push('<li class="', liClasses, '" data-content-text="', title.toLowerCase(), '">');
 
                 if (this.isHasGroup) {
@@ -8465,13 +8556,13 @@
                             ? " rtMid rtSelected"
                             : " rtMid";
                     tempHtml.push('<div class="', divClasses, '">');
-                    row.hasChild
+                    isHasChild
                         && tempHtml.push(
                             '<span class="collapseClass rtMinus" data-group-show="',
                             this.options.expandGroupsByDefault !== false,
                             '"></span>');
                 } else {
-                    if (!row.hasChild && this.isHasGroup) {
+                    if (!isHasChild && this.isHasGroup) {
                         divClasses += !this.isHasGroup
                             ? ""
                             : row.isLastChild
@@ -8483,7 +8574,7 @@
                 }
 
                 labelClasses += isDisabled ? " fanex-multiselect-state-disabled" : "";
-                labelClasses += row.hasChild && this.isHasGroup ? " fanex-multiselect-group-mark" : "";
+                labelClasses += isHasChild && this.isHasGroup ? " fanex-multiselect-group-mark" : "";
                 tempHtml.push(
                     '<label class="', labelClasses, '">',
                     '<input class="show-item" type="', this.options.multiple ? "checkbox" : "radio",
@@ -8493,7 +8584,7 @@
                     '" title="', title,
                     '" childgroupid="',
                     row.parentGroupId,
-                    '" data-is-group="', row.hasChild, '"',
+                    '" data-is-group="', isHasChild, '"',
                     this.options.isCheckAll ? ' checked="checked"' : "",
                     row.data.checked ? ' checked="checked"' : "",
                     isDisabled ? ' disabled="disabled"' : "",
@@ -8504,7 +8595,7 @@
                 });
                 tempHtml.push('/>', title, '</label></div>');
 
-                if (row.hasChild) {
+                if (isHasChild) {
                     tempHtml.push('<ul class="fanex-multiselect-ul-group custom-multi-select-rtUL" childgroupid="', groupIdAttr, '">');
 
                     var children = row.data.items;
@@ -8717,7 +8808,7 @@
                             me.isOpenning = false;
                         }
 
-                        me._updateSelected();
+                        //me._updateSelected();
 
                         if (targetId && (targetId === 'html' || targetId !== this.multiselectId) && me.isOpenning) {
                             options.onLeave.call(me.$multiselect);
@@ -8788,11 +8879,11 @@
             $listItem.each(function () {
                 var $this = $(this);
 
-                // handler chilren checkbox event
+                // handle chilren checkbox event
                 var childrenNodes = $this.find('li.show-item input[childgroupid="' + $this.attr("childgroupid") + '"]');
                 childrenNodes.click(function () {
                     var current = $(this);
-                    me._handleCheckboxClick(current, $this, childrenNodes);
+                    me._handleCheckboxClick(current, $this);
                     !current.data("is-group") && options.onCheck.call(this);
                 });
 
@@ -8803,22 +8894,16 @@
                     .not("span.collapseClass")
                     .find("input")
                     .click(function () {
-                        if ($(this).prop("checked")) {
-                            $(this)
-                                .parent()
-                                .parent()
-                                .next()
-                                .find("li.show-item input.show-item:not(:disabled)")
-                                .prop("checked", true);
+                        var checked = this.checked;
+                        $(this)
+                            .closest(".fanex-multiselect-div")
+                            .next()
+                            .find("li.show-item:not(.hide-item-global) input.show-item:not(:disabled)")
+                            .prop("checked", checked);
+                        if (checked) {
                             me._updateParentSelected($this);
                             me._updateSelectAll();
                         } else {
-                            $(this)
-                                .parent()
-                                .parent()
-                                .next()
-                                .find("li.show-item input.show-item:not(:disabled)")
-                                .prop("checked", false);
                             me.$selectAll.prop("checked", false);
                         }
 
@@ -8872,13 +8957,13 @@
         _handleCheckboxClick: function (checkbox, parent, childrenNodes) {
             parent = parent || checkbox.closest("ul.fanex-multiselect-ul-group");
             if (checkbox.is(":checked")) {
-                childrenNodes = childrenNodes || parent.find('li.show-item input[childgroupid="' + parent.attr("childgroupid") + '"]');
+                childrenNodes = childrenNodes || parent.find('li.show-item:not(.hide-item-global) input[childgroupid="' + parent.attr("childgroupid") + '"]');
                 var currentGroup = parent,
                     currentChildSelected = childrenNodes.filter(".show-item").filter(":checked").length,
                     currentChildLength = childrenNodes.filter(".show-item").length;
                 if (currentChildLength === currentChildSelected) {
                     currentGroup.prev().find("input").prop("checked", true);
-                    this._updateParentSelected(parent/*current.parent().parent().parent().parent()*/);
+                    this._updateParentSelected(parent);
                 }
 
                 this._updateSelectAll();
@@ -8932,7 +9017,7 @@
             if (numChecked === 0) {
                 value = options.noneSelectedText;
             } else {
-                if (options.useCustomSelectAllText && $inputs.length === numChecked) {
+                if ($inputs.length === numChecked) {
                     if (typeof options.customSelectAllText === "function") {
                         value = options.customSelectAllText();
                     } else {
@@ -8967,23 +9052,36 @@
                     })
                     .get()
                     .join(", ");
-                if (tooltipValue === "") {
-                    tooltipValue = options.tooltipNoItem;
+                if (tooltipValue.length) {
+                    this.$multiselect.attr("original-title", tooltipValue);
+                    this.$multiselect.attr("title", tooltipValue);
                 }
-                this.$multiselect.attr("original-title", tooltipValue);
-                this.$multiselect.attr("title", tooltipValue);
             }
 
-            this.$multiselect.find("input").val(value);
+            this.$buttonText.val(value);
             return value;
         },
 
         _getCheckboxesWithoutGroup: function (query) {
-            return this.$checkboxContainer.find("li:not(.hide-item-global) label:not(.fanex-multiselect-group-mark) input[type=checkbox]" + (query || ""));
+            return this.$checkboxContainer.find("li:not(.hide-item-global,.fanex-multiselect-li-group) label:not(.fanex-multiselect-group-mark) input[type=checkbox]" + (query || ""));
         },
 
         _getAllCheckboxes: function (query) {
             return this.$checkboxContainer.find("li:not(.hide-item-global) input[type=checkbox]" + (query || ""));
+        },
+
+        _showCheckboxes: function (items) {
+            if (items.length) {
+                this._showHideCheckboxes(true, items);
+                this.disable(false);
+            }
+        },
+
+        _hideCheckboxes: function (items) {
+            if (items.length) {
+                this._showHideCheckboxes(false, items);
+                this.disable(this._getAllCheckboxes().length === 0);
+            }
         },
 
         _showHideCheckboxes: function (value, checkboxes) {
