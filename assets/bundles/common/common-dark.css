@@ -5227,6 +5227,8 @@ input[type=reset], .btn-reset {
   .breadcrumb-table .breadcrumb {
     border: 0;
     padding: 0; }
+    .breadcrumb-table .breadcrumb a {
+      color: #41A4FF; }
     .breadcrumb-table .breadcrumb a:hover {
       color: #F60;
       text-decoration: none; }
