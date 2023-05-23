@@ -5491,12 +5491,24 @@ select {
     box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
     border-radius: 3px;
     height: 24px; }
+    .label-week-box .label-week[disable], .label-week-box .label-week.disabled {
+      color: #888888;
+      background: #D9D9D9;
+      box-shadow: none;
+      border-color: #D9D9D9;
+      cursor: not-allowed; }
+      .label-week-box .label-week[disable]:hover, .label-week-box .label-week.disabled:hover {
+        color: #888888;
+        background: #D9D9D9;
+        box-shadow: none;
+        border-color: #D9D9D9; }
     .label-week-box .label-week.active, .label-week-box .label-week:hover {
       background: #E8F4FD;
       border: 1px solid #0B599C;
       color: #0B599C; }
     .label-week-box .label-week.active {
       font-weight: bold; }
+
 
 /*******************************************/
 /* Ripple Effect */

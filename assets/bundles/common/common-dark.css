@@ -5505,6 +5505,17 @@ select {
     text-decoration: none;
     background: #373737;
     border-radius: 3px; }
+    .label-week-box .label-week[disable], .label-week-box .label-week.disabled {
+      color: #767676;
+      background: #292929;
+      box-shadow: none;
+      border-color: #292929;
+      cursor: not-allowed; }
+      .label-week-box .label-week[disable]:hover, .label-week-box .label-week.disabled:hover {
+        color: #767676;
+        background: #292929;
+        box-shadow: none;
+        border-color: #292929; }
     .label-week-box .label-week.active, .label-week-box .label-week:hover {
       background: #183049;
       border: 1px solid #41A4FF;
@@ -5512,6 +5523,7 @@ select {
       color: #41A4FF; }
     .label-week-box .label-week.active {
       font-weight: bold; }
+
 
 /*******************************************/
 /* Ripple Effect */

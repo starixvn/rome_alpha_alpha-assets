@@ -9205,8 +9205,7 @@ select {
 .filter {
   padding-top: 15px;
   position: relative;
-  z-index: 9010;
-  padding-right: 150px; }
+  z-index: 9010; }
   .filter .form-group {
     display: inline-block;
     margin: 0 16px 15px 0;
@@ -9292,6 +9291,17 @@ select {
     text-decoration: none;
     background: #373737;
     border-radius: 3px; }
+    .label-week-box .label-week[disable], .label-week-box .label-week.disabled {
+      color: #767676;
+      background: #292929;
+      box-shadow: none;
+      border-color: #292929;
+      cursor: not-allowed; }
+      .label-week-box .label-week[disable]:hover, .label-week-box .label-week.disabled:hover {
+        color: #767676;
+        background: #292929;
+        box-shadow: none;
+        border-color: #292929; }
     .label-week-box .label-week.active, .label-week-box .label-week:hover {
       background: #183049;
       border: 1px solid #41A4FF;
@@ -9363,7 +9373,7 @@ label[disabled] {
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even, .tblRpt.alternative-row-table tbody tr:nth-child(2n) {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }

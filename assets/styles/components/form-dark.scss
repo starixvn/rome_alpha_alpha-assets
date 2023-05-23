@@ -158,6 +158,21 @@
         background: #373737;
         border-radius: 3px;
 
+        &[disable], &.disabled {
+            color: #767676;
+            background: #292929;
+            box-shadow: none;
+            border-color: #292929;
+            cursor: not-allowed;
+
+            &:hover {
+                color: #767676;
+                background: #292929;
+                box-shadow: none;
+                border-color: #292929;
+            }
+        }
+
         &.active, &:hover {
             background: #183049;
             border: 1px solid #41A4FF;
