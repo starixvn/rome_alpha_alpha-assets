@@ -1121,6 +1121,29 @@
       "js/libs/clipboard/clipboard.js"
     ]
   },
+  {
+    "outputFileName": "bundles2/site-reports/winlossdetail-new.js",
+    "inputFiles": [
+      "js/libs/moment/locale/en-gb.js",
+      "js/libs/moment/locale/ja.js",
+      "js/libs/moment/locale/ko.js",
+      "js/libs/moment/locale/th.js",
+      "js/libs/moment/locale/vi.js",
+      "js/libs/moment/locale/zh-cn.js",
+      "js/libs/moment/locale/zh-tw.js",
+      "js/libs/moment/switch-locale.js",
+      "js/components/daterangepicker/jquery.daterangepicker.js",
+      "js/components/typeahead/typeahead.js",
+      "js/libs/clipboard/clipboard.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles2/site-reports/winlossdetail-new.css",
+    "inputFiles": [
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize.css"
+    ]
+  },
   /************************** Dark Mode ************************/
   {
     "outputFileName": "bundles2/common/common-dark.css",
@@ -1769,6 +1792,13 @@
       "styles/components/calendars-dark.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/icon-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2/site-asset/winlossdetail-new-dark.css",
+    "inputFiles": [
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize-dark.css"
     ]
   },
   {
