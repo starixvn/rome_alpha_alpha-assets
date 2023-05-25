@@ -5331,6 +5331,25 @@ a, a:focus, a:active, a:target, a:hover {
     .breadcrumb-table .breadcrumb a:hover {
       color: #F60;
       text-decoration: none; }
+  .breadcrumb-table .list-icon ul {
+    display: flex;
+    align-items: center;
+    margin: 0; }
+    .breadcrumb-table .list-icon ul li {
+      display: flex;
+      align-items: center;
+      margin-right: 10px; }
+      .breadcrumb-table .list-icon ul li .tooltip {
+        pointer-events: none; }
+      .breadcrumb-table .list-icon ul li .icon-excel + .tooltip {
+        white-space: nowrap; }
+        .breadcrumb-table .list-icon ul li .icon-excel + .tooltip.top .tooltip-inner:before {
+          margin-left: 20px; }
+        .breadcrumb-table .list-icon ul li .icon-excel + .tooltip.top .tooltip-inner:after {
+          margin-left: 22px; }
+      .breadcrumb-table .list-icon ul li .icon-content-copy {
+        font-size: 20px;
+        color: #7f7f7f; }
 
 
 .block-icon-small {

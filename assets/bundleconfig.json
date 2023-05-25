@@ -1742,7 +1742,7 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-asset/winlossdetail-new-dark.css",
+    "outputFileName": "bundles/site-reports/winlossdetail-new-dark.css",
     "inputFiles": [
       "styles/vendors/daterangepicker/jquery.daterangepicker.css",
       "styles/components/daterangepicker-customize-dark.css"
