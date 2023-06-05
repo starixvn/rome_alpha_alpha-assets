@@ -1597,6 +1597,7 @@
   {
     "outputFileName": "bundles2/site-betlists/filter-new-dark.css",
     "inputFiles": [
+      "styles/components/calendars-dark.css",
       "styles/vendors/daterangepicker/jquery.daterangepicker.css",
       "styles/components/daterangepicker-customize-dark.css",
       "styles/vendors/multiselect/fanex.multiSelect-dark.css"
