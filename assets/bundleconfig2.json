@@ -1718,7 +1718,7 @@
     "outputFileName": "bundles2/site-memberinfo/daterangepicker-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
-      "styles/components/calendars-dark",
+      "styles/components/calendars-dark.css",
       "styles/components/bootstrap.nexDatePicker.css"
     ]
   },
