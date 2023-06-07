@@ -2109,11 +2109,11 @@
                     html += '<div class="custom-top">' + opt.customTopBar + '</div>';
                 } else {
                     html += '<div class="normal-top">' +
-                        '<span class="selection-top">' + translate('selected') + ' </span> <b class="start-day">...</b>';
+                        '<span class="selection-top">' + translate('selected') + ' </span><div class="selected-days-container"><b class="start-day">...</b>';
                     if (!opt.singleDate) {
                         html += ' <span class="separator-day">' + opt.separator + '</span> <b class="end-day">...</b> <i class="selected-days">(<span class="selected-days-num">3</span> ' + translate('days') + ')</i>';
                     }
-                    html += '</div>';
+                    html += '</div></div>';
                     html += '<div class="error-top">error</div>' +
                         '<div class="default-top">default</div>';
                 }
