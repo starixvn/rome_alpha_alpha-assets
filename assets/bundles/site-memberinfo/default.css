@@ -5843,7 +5843,6 @@ body .ui-tooltip { border-width: 2px; }
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
 
-
 .suspended-bg, .RowBgSuspended {
   background-color: #f8ded7 !important; }
 
