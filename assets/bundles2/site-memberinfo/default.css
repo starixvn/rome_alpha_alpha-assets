@@ -5581,7 +5581,7 @@ body .ui-tooltip { border-width: 2px; }
 .icon-excel {
   position: relative;
   cursor: pointer;
-  color: #2E9E60;
+  color: #1f7244;
   font-size: 19px;
   vertical-align: middle;
   height: 28px;
@@ -5611,6 +5611,8 @@ body .ui-tooltip { border-width: 2px; }
     -o-animation: ripple 1s ease-out;
     -webkit-animation: ripple 1s ease-out;
     animation: ripple 1s ease-out; }
+  .icon-excel-new {
+    color: #2E9E60; }
   .icon-excel:hover {
     color: #2E9E60; }
   .icon-excel:before {
