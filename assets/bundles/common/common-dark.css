@@ -6596,6 +6596,7 @@ input[type=reset], .btn-reset {
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
 
+
 @font-face {
   font-family: 'password';
   src: url("../../styles/fonts/password/password.ttf") format("ttf");
