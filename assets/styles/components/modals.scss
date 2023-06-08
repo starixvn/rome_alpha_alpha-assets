@@ -155,7 +155,8 @@
         padding-bottom: 4px;
 
         .btn.btn-primary:not(.btn-raised) {
-            color: #045ace;
+            background-color: #0B599C;
+            color: #EDEDED;
         }
 
         .btn {
@@ -172,14 +173,19 @@
             min-width: 86px;
             text-transform: capitalize;
             text-transform: uppercase;
+            outline: none;
 
             &:hover, &:focus {
                 background-color: #ececec;
             }
 
             &.btn-default {
-                color: $text-color;
-                float: right;
+                background: #909090;
+                color: #FFFFFF;
+
+                &:hover {
+                    background: #909090;
+                }
             }
         }
     }
