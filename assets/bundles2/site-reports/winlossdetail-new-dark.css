@@ -767,14 +767,25 @@
     .date-picker-wrapper .drp_top-bar.normal .default-top {
       display: none; }
     .date-picker-wrapper .drp_top-bar.normal .normal-top {
-      display: block; }
+      display: flex;
+      align-items: center; }
+      .date-picker-wrapper .drp_top-bar.normal .normal-top .selection-top {
+        margin-right: 4px; }
+    .date-picker-wrapper .drp_top-bar .selected-days-container {
+      background: #233950;
+      color: #ffffff;
+      border-radius: 5px;
+      padding: 0 4px;
+      line-height: 22px; }
+      .date-picker-wrapper .drp_top-bar .selected-days-container > * {
+        color: inherit; }
     .date-picker-wrapper .drp_top-bar .apply-btn {
       position: absolute;
       border: 0;
       border-radius: 0;
       appearance: none;
       right: 10px;
-      top: 6px;
+      top: 8px;
       padding: 6px 5px;
       margin: 0;
       font-size: 13px;
