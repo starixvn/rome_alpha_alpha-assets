@@ -60,10 +60,18 @@
     border: 1px solid $dropdown-border;
     font-size: 13px;
     @include effect-normal;
-    background-color: $dropdown-bg-color;
+    background-color: #2b2b2b !important;
     color: $dropdown-color;
     z-index: 10000;
 
+
+    li {
+        background-color: #2b2b2b !important;
+
+        &.active {
+            background-color: #2b2b2b !important;
+        }
+    }
 
     > li > a {
         color: $dropdown-color;
@@ -95,7 +103,8 @@
 
 
         .input-group {
-            width: 91%;
+            margin: 10px 0px 10px 10px;
+            display: block;
 
             .input-group-addon, .input-group-btn {
                 display: none;
@@ -103,11 +112,11 @@
 
             .form-control.multiselect-search {
                 width: 100%;
-                margin-left: 8px;
-                border-radius: 2px;
+                border-radius: 3px;
                 box-shadow: none;
                 border: 1px solid #474747;
                 line-height: 18px;
+                float: none;
             }
         }
     }
@@ -162,7 +171,7 @@
     }
 
     &::-webkit-scrollbar {
-        background-color: $dropdown-bg-color;
+        background-color: #2b2b2b !important;
     }
 }
 

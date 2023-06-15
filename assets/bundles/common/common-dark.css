@@ -5216,6 +5216,23 @@ input[type=reset], .btn-reset {
       color: #ededed;
       padding: 0 8px; }
 
+.breadcrumb-table {
+  background: #212223;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 7px 3px 10px;
+  min-height: 30px;
+  line-height: 18px; }
+  .breadcrumb-table .breadcrumb {
+    border: 0;
+    padding: 0; }
+    .breadcrumb-table .breadcrumb a {
+      color: #41A4FF; }
+    .breadcrumb-table .breadcrumb a:hover {
+      color: #F60;
+      text-decoration: none; }
+
 
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
@@ -5369,15 +5386,53 @@ select {
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
+.switch-version {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  white-space: nowrap; }
+  .switch-version .btn-switch-version {
+    background: #696969;
+    border: 1px solid #8B8B8B;
+    color: #EDEDED;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: bold;
+    padding: 5px 11px 1px 15px;
+    display: inline-flex; }
+    .switch-version .btn-switch-version:hover {
+      opacity: 0.9; }
+    .switch-version .btn-switch-version .icon-swap-horizontal {
+      font-size: 20px;
+      position: relative;
+      top: -2px;
+      left: -4px; }
+    @media only screen and (max-device-width: 767px) {
+      .switch-version .btn-switch-version {
+        position: relative;
+        margin-bottom: 5px;
+        padding: 6px 6px 0 6px; } }
+  @media only screen and (max-device-width: 767px) {
+    .switch-version {
+      position: relative;
+      top: 0;
+      margin-bottom: 3px; } }
+
 .filter {
   padding-top: 15px;
-  position: relative; }
+  position: relative;
+  z-index: 9010; }
   .filter .form-group {
     display: inline-block;
     margin: 0 16px 15px 0;
     vertical-align: middle; }
     .filter .form-group.product-detail-multiselect-container {
       z-index: 10000; }
+    .filter .form-group .label-form-control {
+      display: block;
+      font-weight: bold;
+      margin-right: 0;
+      margin-bottom: 2px; }
     .filter .form-group label {
       font-weight: normal;
       margin-right: 5px;
@@ -5437,6 +5492,39 @@ select {
 .form-validation .txt.valid ~ .validation:before {
   content: '\e91f';
   color: #7ECC4D; }
+
+.label-week-box {
+  margin-bottom: 10px; }
+  .label-week-box .label-week {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #C5C5C5;
+    border: 1px solid #373737;
+    padding: 4px 10px;
+    margin: 0 10px 5px 0;
+    text-decoration: none;
+    background: #373737;
+    border-radius: 3px; }
+    .label-week-box .label-week[disable], .label-week-box .label-week.disabled {
+      color: #767676;
+      background: #292929;
+      box-shadow: none;
+      border-color: #292929;
+      cursor: not-allowed; }
+      .label-week-box .label-week[disable]:hover, .label-week-box .label-week.disabled:hover {
+        color: #767676;
+        background: #292929;
+        box-shadow: none;
+        border-color: #292929; }
+    .label-week-box .label-week.active, .label-week-box .label-week:hover {
+      background: #183049;
+      border: 1px solid #41A4FF;
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+      color: #41A4FF; }
+    .label-week-box .label-week.active {
+      font-weight: bold; }
 
 
 /*******************************************/
@@ -5659,7 +5747,8 @@ input[type=reset], .btn-reset {
   -moz-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
   -ms-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
   -o-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
-  box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23); }
+  box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
+  z-index: 9020; }
 
 #modal-draggable-mask {
   border: dashed 2px #dfdfdf;
@@ -6275,6 +6364,10 @@ input[type=reset], .btn-reset {
     -o-animation: ripple 1s ease-out;
     -webkit-animation: ripple 1s ease-out;
     animation: ripple 1s ease-out; }
+  .icon-excel-new {
+    color: #2E9E60; }
+  .icon-excel:hover {
+    color: #2E9E60; }
   .icon-excel:before {
     position: relative;
     top: 5px; }
@@ -6364,21 +6457,21 @@ input[type=reset], .btn-reset {
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px;
       text-indent: 5px; }
     .entered-non-entered div.icon-entered div.icon-check-circle {
       color: #23A858;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px; }
   .entered-non-entered div.icon-non-entered {
     background: #2B2B2B;
@@ -6387,33 +6480,34 @@ input[type=reset], .btn-reset {
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 3px;
-      text-indent: 5px; }
+      height: auto;
+      padding-top: 0;
+      margin-right: 5px;
+      text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
       color: #EB7100;
       background: #434343;
       border: 1px solid #434343;
       border-radius: 3px;
-      padding: 0 5px;
+      padding: 0 4px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 16px;
-      margin-right: 3px;
-      margin-top: 4px; }
+      line-height: 16px;
+      margin-right: 4px;
+      margin-top: 0; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #EB7100;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 3px; }
+      padding-top: 0;
+      margin-right: 6px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {

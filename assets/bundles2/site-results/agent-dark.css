@@ -4600,6 +4600,32 @@ button.close {
 
 .input-group.date {
   position: initial; }
+  .input-group.date.datepicker {
+    position: relative;
+    padding-right: 30px;
+    background: #2B2B2B;
+    border: 1px solid #292929;
+    background: #171717; }
+    @media only screen and (max-device-width: 767px) {
+      .input-group.date.datepicker {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); } }
+    .input-group.date.datepicker .input-group-addon {
+      position: absolute;
+      top: 3px;
+      right: 2px;
+      margin: 0;
+      padding: 0;
+      width: auto; }
+      @media only screen and (max-device-width: 767px) {
+        .input-group.date.datepicker .input-group-addon {
+          top: 6px; } }
+    .input-group.date.datepicker .form-control {
+      background: transparent;
+      border: 0;
+      box-shadow: none; }
+      @media only screen and (max-device-width: 767px) {
+        .input-group.date.datepicker .form-control {
+          height: 34px; } }
   .input-group.date .icon-calendar {
     font-size: 24px;
     color: #EDEDED;
@@ -4638,8 +4664,9 @@ button.close {
     top: 3px; }
   .input-group.date .form-control {
     border: 1px solid #292929;
-    font-size: 12px;
     height: 28px;
+    padding: 6px;
+    font-size: 13px;
     background: #171717;
     color: #EDEDED;
     margin-left: 0;
@@ -6149,7 +6176,8 @@ input[type=reset], .btn-reset {
   -moz-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
   -ms-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
   -o-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
-  box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23); }
+  box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
+  z-index: 9020; }
 
 #modal-draggable-mask {
   border: dashed 2px #dfdfdf;

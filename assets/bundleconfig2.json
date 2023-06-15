@@ -586,6 +586,7 @@
       "styles/components/month-picker.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/vendors/bootstrap-multiselect.css",
+      "styles/vendors/multiselect/fanex.multiSelect.css",
       "styles/components/bootstrap-multiselect.css",
       "styles/components/pagination.css",
       "styles/components/tablesorter.css",
@@ -613,6 +614,7 @@
       "js/components/autocomplete/autocomplete.js",
       "js/libs/jquery/jquery.cookie.js",
       "js/components/multiselect/bootstrap-multiselect.js",
+      "js/components/multiselect/fanex.multiSelect.js",
       "js/components/sticky-table-headers/jquery.stickytableheaders.js",
       "js/components/tablesorter/tablesorter.js",
       "js/components/draggable/tiny-draggable.js",
@@ -759,7 +761,8 @@
     "outputFileName": "bundles2/site-betlists/default.js",
     "inputFiles": [
       "js/libs/bootstrap/transition.js",
-      "js/libs/bootstrap/collapse.js"
+      "js/libs/bootstrap/collapse.js",
+      "js/libs/storejs/store.js"
     ]
   },
   {
@@ -773,6 +776,15 @@
     ]
   },
   {
+    "outputFileName": "bundles2/site-betlists/filter-new.css",
+    "inputFiles": [
+      "styles/components/calendars.css",
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize.css",
+      "styles/vendors/multiselect/fanex.multiSelect.css"
+    ]
+  },
+  {
     "outputFileName": "bundles2/site-betlists/filter.js",
     "inputFiles": [
       "js/components/multiselect/bootstrap-multiselect.js",
@@ -781,6 +793,22 @@
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles2/site-betlists/filter-new.js",
+    "inputFiles": [
+      "js/libs/moment/moment.js",
+      "js/libs/moment/locale/en-gb.js",
+      "js/libs/moment/locale/ja.js",
+      "js/libs/moment/locale/ko.js",
+      "js/libs/moment/locale/th.js",
+      "js/libs/moment/locale/vi.js",
+      "js/libs/moment/locale/zh-cn.js",
+      "js/libs/moment/locale/zh-tw.js",
+      "js/libs/moment/switch-locale.js",
+      "js/components/daterangepicker/jquery.daterangepicker.js",
+      "js/components/multiselect/fanex.multiSelect.js"
     ]
   },
   {
@@ -945,7 +973,7 @@
       "js/libs/moment/locale/zh-cn.js",
       "js/libs/moment/locale/zh-tw.js",
       "js/libs/moment/switch-locale.js",
-      "js/components/daterangepicker/daterangepicker.js",
+      "js/components/daterangepicker/jquery.daterangepicker.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
       "js/components/daterangepicker/nexDateRangePicker.js"
     ]
@@ -953,7 +981,7 @@
   {
     "outputFileName": "bundles2/site-asset/daterangepicker.css",
     "inputFiles": [
-      "styles/vendors/daterangepicker/daterangepicker.css",
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
       "styles/components/daterangepicker-customize.css"
     ]
   },
@@ -1459,6 +1487,7 @@
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect-dark.css",
+      "styles/vendors/multiselect/fanex.multiSelect-dark.css",
       "styles/components/pagination-dark.css",
       "styles/components/tablesorter.css",
       "styles/base/roboto-fonts.css",
@@ -1566,6 +1595,15 @@
     ]
   },
   {
+    "outputFileName": "bundles2/site-betlists/filter-new-dark.css",
+    "inputFiles": [
+      "styles/components/calendars-dark.css",
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize-dark.css",
+      "styles/vendors/multiselect/fanex.multiSelect-dark.css"
+    ]
+  },
+  {
     "outputFileName": "bundles2/site-betlists/pagination-dark.css",
     "inputFiles": [
       "styles/vendors/jquery-easyui-1.5/easyui.css",
@@ -1636,8 +1674,8 @@
   {
     "outputFileName": "bundles2/site-asset/daterangepicker-dark.css",
     "inputFiles": [
-      "styles/vendors/daterangepicker/daterangepicker.css",
-      "styles/components/daterangepicker-customize.css"
+      "styles/components/daterangepicker-customize-dark.css",
+      "styles/vendors/daterangepicker/jquery.daterangepicker-dark.css"
     ]
   },
   {
@@ -1718,7 +1756,7 @@
     "outputFileName": "bundles2/site-memberinfo/daterangepicker-dark.css",
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
-      "styles/components/calendars-dark",
+      "styles/components/calendars-dark.css",
       "styles/components/bootstrap.nexDatePicker.css"
     ]
   },

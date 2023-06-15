@@ -9170,15 +9170,53 @@ select {
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
+.switch-version {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  white-space: nowrap; }
+  .switch-version .btn-switch-version {
+    background: #696969;
+    border: 1px solid #8B8B8B;
+    color: #EDEDED;
+    font-size: 13px;
+    line-height: 15px;
+    font-weight: bold;
+    padding: 5px 11px 1px 15px;
+    display: inline-flex; }
+    .switch-version .btn-switch-version:hover {
+      opacity: 0.9; }
+    .switch-version .btn-switch-version .icon-swap-horizontal {
+      font-size: 20px;
+      position: relative;
+      top: -2px;
+      left: -4px; }
+    @media only screen and (max-device-width: 767px) {
+      .switch-version .btn-switch-version {
+        position: relative;
+        margin-bottom: 5px;
+        padding: 6px 6px 0 6px; } }
+  @media only screen and (max-device-width: 767px) {
+    .switch-version {
+      position: relative;
+      top: 0;
+      margin-bottom: 3px; } }
+
 .filter {
   padding-top: 15px;
-  position: relative; }
+  position: relative;
+  z-index: 9010; }
   .filter .form-group {
     display: inline-block;
     margin: 0 16px 15px 0;
     vertical-align: middle; }
     .filter .form-group.product-detail-multiselect-container {
       z-index: 10000; }
+    .filter .form-group .label-form-control {
+      display: block;
+      font-weight: bold;
+      margin-right: 0;
+      margin-bottom: 2px; }
     .filter .form-group label {
       font-weight: normal;
       margin-right: 5px;
@@ -9239,6 +9277,39 @@ select {
   content: '\e91f';
   color: #7ECC4D; }
 
+.label-week-box {
+  margin-bottom: 10px; }
+  .label-week-box .label-week {
+    display: inline-block;
+    font-weight: 400;
+    font-size: 13px;
+    line-height: 16px;
+    color: #C5C5C5;
+    border: 1px solid #373737;
+    padding: 4px 10px;
+    margin: 0 10px 5px 0;
+    text-decoration: none;
+    background: #373737;
+    border-radius: 3px; }
+    .label-week-box .label-week[disable], .label-week-box .label-week.disabled {
+      color: #767676;
+      background: #292929;
+      box-shadow: none;
+      border-color: #292929;
+      cursor: not-allowed; }
+      .label-week-box .label-week[disable]:hover, .label-week-box .label-week.disabled:hover {
+        color: #767676;
+        background: #292929;
+        box-shadow: none;
+        border-color: #292929; }
+    .label-week-box .label-week.active, .label-week-box .label-week:hover {
+      background: #183049;
+      border: 1px solid #41A4FF;
+      box-shadow: 1px 2px 2px rgba(0, 0, 0, 0.25);
+      color: #41A4FF; }
+    .label-week-box .label-week.active {
+      font-weight: bold; }
+
 
 input[type="radio"], input[type="checkbox"] {
   margin: 0;
@@ -9262,12 +9333,22 @@ label[disabled] {
 .width-100per {
   width: 100%; }
 
+.dataTables_wrapper {
+  position: relative;
+  z-index: 1; }
+  .dataTables_wrapper .tblRpt .dataTables_empty {
+    border-bottom: 0 !important; }
+  .dataTables_wrapper .tblRpt tbody tr:last-child td {
+    border-bottom: 0 !important; }
+
 .tblRpt {
   border: 1px solid #5F626B;
   border-collapse: collapse;
   background-color: #181919;
   color: #EDEDED;
   border-right: 0; }
+  .tblRpt .dataTables_empty {
+    text-align: center; }
   .tblRpt.tblRpt-bordered#tbl-report {
     border-bottom: 1px solid #5F626B;
     border-top: 0;
@@ -9292,7 +9373,7 @@ label[disabled] {
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }

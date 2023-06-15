@@ -5315,6 +5315,23 @@ a, a:focus, a:active, a:target, a:hover {
       color: #ededed;
       padding: 0 8px; }
 
+.breadcrumb-table {
+  background: #212223;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 5px 7px 3px 10px;
+  min-height: 30px;
+  line-height: 18px; }
+  .breadcrumb-table .breadcrumb {
+    border: 0;
+    padding: 0; }
+    .breadcrumb-table .breadcrumb a {
+      color: #41A4FF; }
+    .breadcrumb-table .breadcrumb a:hover {
+      color: #F60;
+      text-decoration: none; }
+
 
 .block-icon-small {
   display: inline-block;
@@ -5340,12 +5357,22 @@ a, a:focus, a:active, a:target, a:hover {
 .width-100per {
   width: 100%; }
 
+.dataTables_wrapper {
+  position: relative;
+  z-index: 1; }
+  .dataTables_wrapper .tblRpt .dataTables_empty {
+    border-bottom: 0 !important; }
+  .dataTables_wrapper .tblRpt tbody tr:last-child td {
+    border-bottom: 0 !important; }
+
 .tblRpt {
   border: 1px solid #5F626B;
   border-collapse: collapse;
   background-color: #181919;
   color: #EDEDED;
   border-right: 0; }
+  .tblRpt .dataTables_empty {
+    text-align: center; }
   .tblRpt.tblRpt-bordered#tbl-report {
     border-bottom: 1px solid #5F626B;
     border-top: 0;
@@ -5370,7 +5397,7 @@ a, a:focus, a:active, a:target, a:hover {
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }

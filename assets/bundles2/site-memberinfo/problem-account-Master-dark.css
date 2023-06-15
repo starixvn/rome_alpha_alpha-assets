@@ -5821,7 +5821,8 @@ input[type=reset], .btn-reset {
   -moz-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
   -ms-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
   -o-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
-  box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23); }
+  box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
+  z-index: 9020; }
 
 #modal-draggable-mask {
   border: dashed 2px #dfdfdf;
@@ -6299,12 +6300,22 @@ input[type="number"], input[type="tel"] {
 .width-100per {
   width: 100%; }
 
+.dataTables_wrapper {
+  position: relative;
+  z-index: 1; }
+  .dataTables_wrapper .tblRpt .dataTables_empty {
+    border-bottom: 0 !important; }
+  .dataTables_wrapper .tblRpt tbody tr:last-child td {
+    border-bottom: 0 !important; }
+
 .tblRpt {
   border: 1px solid #5F626B;
   border-collapse: collapse;
   background-color: #181919;
   color: #EDEDED;
   border-right: 0; }
+  .tblRpt .dataTables_empty {
+    text-align: center; }
   .tblRpt.tblRpt-bordered#tbl-report {
     border-bottom: 1px solid #5F626B;
     border-top: 0;
@@ -6329,7 +6340,7 @@ input[type="number"], input[type="tel"] {
     background-color: transparent; }
   .tblRpt.tblRpt-striped tbody > tr:nth-of-type(2n) {
     background-color: #262829; }
-  .tblRpt.alternative-row-table tbody .even-row {
+  .tblRpt.alternative-row-table tbody .even-row, .tblRpt.alternative-row-table tbody .even {
     background-color: #262829; }
   .tblRpt.tblRpt-hover > tbody > tr:hover > td {
     background-color: #36362E; }
@@ -6441,6 +6452,32 @@ input[type="number"], input[type="tel"] {
 
 .input-group.date {
   position: initial; }
+  .input-group.date.datepicker {
+    position: relative;
+    padding-right: 30px;
+    background: #2B2B2B;
+    border: 1px solid #292929;
+    background: #171717; }
+    @media only screen and (max-device-width: 767px) {
+      .input-group.date.datepicker {
+        box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.3); } }
+    .input-group.date.datepicker .input-group-addon {
+      position: absolute;
+      top: 3px;
+      right: 2px;
+      margin: 0;
+      padding: 0;
+      width: auto; }
+      @media only screen and (max-device-width: 767px) {
+        .input-group.date.datepicker .input-group-addon {
+          top: 6px; } }
+    .input-group.date.datepicker .form-control {
+      background: transparent;
+      border: 0;
+      box-shadow: none; }
+      @media only screen and (max-device-width: 767px) {
+        .input-group.date.datepicker .form-control {
+          height: 34px; } }
   .input-group.date .icon-calendar {
     font-size: 24px;
     color: #EDEDED;
@@ -6479,8 +6516,9 @@ input[type="number"], input[type="tel"] {
     top: 3px; }
   .input-group.date .form-control {
     border: 1px solid #292929;
-    font-size: 12px;
     height: 28px;
+    padding: 6px;
+    font-size: 13px;
     background: #171717;
     color: #EDEDED;
     margin-left: 0;
@@ -7657,6 +7695,10 @@ body .ui-tooltip { border-width: 2px; }
     -o-animation: ripple 1s ease-out;
     -webkit-animation: ripple 1s ease-out;
     animation: ripple 1s ease-out; }
+  .icon-excel-new {
+    color: #2E9E60; }
+  .icon-excel:hover {
+    color: #2E9E60; }
   .icon-excel:before {
     position: relative;
     top: 5px; }
@@ -7746,21 +7788,21 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px;
       text-indent: 5px; }
     .entered-non-entered div.icon-entered div.icon-check-circle {
       color: #23A858;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
+      padding-top: 0;
       margin-right: 3px; }
   .entered-non-entered div.icon-non-entered {
     background: #2B2B2B;
@@ -7769,33 +7811,34 @@ body .ui-tooltip { border-width: 2px; }
     margin-right: 5px;
     font-weight: bold;
     float: left;
-    height: 24px; }
+    height: 26px;
+    display: flex;
+    align-items: center; }
     .entered-non-entered div.icon-non-entered div.text {
       color: #EDEDED;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 3px;
-      text-indent: 5px; }
+      height: auto;
+      padding-top: 0;
+      margin-right: 5px;
+      text-indent: 6px; }
     .entered-non-entered div.icon-non-entered div.number {
       color: #EB7100;
       background: #434343;
       border: 1px solid #434343;
       border-radius: 3px;
-      padding: 0 5px;
+      padding: 0 4px;
       font-family: Roboto,Arial,Tahoma,helvetica,sans-serif;
       float: left;
-      height: 16px;
-      margin-right: 3px;
-      margin-top: 4px; }
+      line-height: 16px;
+      margin-right: 4px;
+      margin-top: 0; }
     .entered-non-entered div.icon-non-entered div.icon-clock {
       color: #EB7100;
       background: transparent;
       float: left;
-      height: 24px;
-      padding-top: 5px;
-      margin-right: 3px; }
+      padding-top: 0;
+      margin-right: 6px; }
 
 @media only screen and (max-device-width: 1024px) {
   .icon {

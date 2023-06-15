@@ -80,6 +80,11 @@
         }
     }
 
+    li.multiselect-all {
+        background: transparent !important;
+        border: 0 !important;
+    }
+
     .filter {
         padding: 0;
 
@@ -88,7 +93,8 @@
         }
 
         .input-group {
-            width: 91%;
+            margin: 10px 0px 10px 10px;
+            display: block;
 
             .input-group-addon, .input-group-btn {
                 display: none;
@@ -96,11 +102,11 @@
 
             .form-control.multiselect-search {
                 width: 100%;
-                margin-left: 8px;
-                border-radius: 2px;
+                border-radius: 3px;
                 box-shadow: none;
-                border: 1px solid #aaa;
+                border: 1px solid #ccc;
                 line-height: 18px;
+                float: none;
 
                 &:hover {
                     background: #fff;
@@ -125,7 +131,7 @@
         display: flex;
         align-items: center;
 
-        input[type="checkbox"]{
+        input[type="checkbox"] {
             top: 0;
         }
 
@@ -135,13 +141,11 @@
             align-items: center;
             justify-content: space-between;
         }
-
         /*.caret {
             float: right;
             position: relative;
             top: 7px;
         }*/
-
         input[type="checkbox"] {
             margin-right: 3px !important;
         }
@@ -149,6 +153,7 @@
 
     .multiselect-item.multiselect-group-clickable a {
         padding: 8px 0 8px 8px !important;
+
         &:hover {
             color: inherit;
         }
@@ -156,7 +161,6 @@
 
     .multiselect-nested-item a {
         padding-left: 16px;
-
     }
 }
 

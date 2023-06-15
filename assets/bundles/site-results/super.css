@@ -5824,7 +5824,8 @@ input[type=reset], .btn-reset {
   -moz-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
   -ms-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
   -o-box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
-  box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23); }
+  box-shadow: 0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23);
+  z-index: 9020; }
 
 #modal-draggable-mask {
   border: dashed 2px #dfdfdf;
@@ -5932,7 +5933,8 @@ input[type=reset], .btn-reset {
   border-top: none;
   padding-bottom: 4px; }
   .bootbox .modal-footer .btn.btn-primary:not(.btn-raised) {
-    color: #045ace; }
+    background-color: #0B599C;
+    color: #EDEDED; }
   .bootbox .modal-footer .btn {
     -webkit-border-radius: 1px;
     -khtml-border-radius: 1px;
@@ -5956,12 +5958,15 @@ input[type=reset], .btn-reset {
     margin: 8px;
     min-width: 86px;
     text-transform: capitalize;
-    text-transform: uppercase; }
+    text-transform: uppercase;
+    outline: none; }
     .bootbox .modal-footer .btn:hover, .bootbox .modal-footer .btn:focus {
       background-color: #ececec; }
     .bootbox .modal-footer .btn.btn-default {
-      color: #333;
-      float: right; }
+      background: #909090;
+      color: #FFFFFF; }
+      .bootbox .modal-footer .btn.btn-default:hover {
+        background: #909090; }
 
 @media \0screen\,screen\9 {
   .modal-dialog {
