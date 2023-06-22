@@ -519,7 +519,7 @@
                                 .addClass("show-item");
                         }
 
-                        $listItem.find("input.show-item:checked").each(function () {
+                        $listItem.find("li:not(.hide-item-global) input.show-item:checked").each(function () {
                             var inputShowItem = $(this);
                             var grantParent = inputShowItem.parent().parent();
                             if (grantParent.next().find("li").length === 0) {
@@ -527,11 +527,14 @@
                             }
                         });
                         $listItem
-                            .find("input.show-item:not(:checked)")
+                            .find("li:not(.hide-item-global) input.show-item:not(:checked)")
                             .each(function () {
-                                me._removeParentSelected(
-                                    $(this).parent().parent().parent().parent()
-                                );
+                                var inputShowItem = $(this);
+                                if (!inputShowItem.closest("li").hasClass("hide-item-global")) {
+                                    me._removeParentSelected(
+                                        $(this).parent().parent().parent().parent()
+                                    );
+                                }
                             });
                     });
 
