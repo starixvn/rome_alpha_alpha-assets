@@ -41,4 +41,41 @@
             text-decoration: none;
         }
     }
+
+    .list-icon {
+        ul {
+            display: flex;
+            align-items: center;
+            margin: 0;
+
+            li {
+                display: flex;
+                align-items: center;
+                margin-right: 10px;
+
+                .tooltip {
+                    pointer-events: none;
+                }
+
+                .icon-excel + .tooltip {
+                    white-space: nowrap;
+
+                    &.top .tooltip-inner {
+                        &:before {
+                            margin-left: 20px;
+                        }
+
+                        &:after {
+                            margin-left: 22px;
+                        }
+                    }
+                }
+
+                .icon-content-copy {
+                    font-size: 20px;
+                    color: #7f7f7f;
+                }
+            }
+        }
+    }
 }
