@@ -1158,6 +1158,13 @@
       "styles/components/daterangepicker-customize.css"
     ]
   },
+  {
+    "outputFileName": "bundles2-v2/site-betlists/monitoring-bets.js",
+    "inputFiles": [
+      "js/components/multiselect/bootstrap-multiselect.js",
+      "js/libs/clipboard/clipboard.js"
+    ]
+  },
   /************************** Dark Mode ************************/
   {
     "outputFileName": "bundles2/common/common-dark.css",
