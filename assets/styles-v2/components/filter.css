@@ -1,0 +1,89 @@
+﻿:root {
+  --font-family: Roboto, Arial, Tahoma, sans-serif;
+  --font-size: 13px;
+  --text-color: #333333;
+  --text-color-label: #444444;
+  --border-color: #D1D1D1;
+  --link-color: #045ace;
+  --link-hover-color: #F60;
+  --btn-height: 28px; }
+
+:root [data-theme='light'] {
+  --font-family: Roboto, Arial, Tahoma, sans-serif;
+  --font-size: 13px;
+  --text-color: #333333;
+  --text-color-label: #444444;
+  --border-color: #D1D1D1;
+  --link-color: #045ace;
+  --link-hover-color: #F60;
+  --btn-height: 28px; }
+
+:root [data-theme='dark'] {
+  --font-family: Roboto, Arial, Tahoma, sans-serif;
+  --font-size: 13px;
+  --text-color: #EDEDED;
+  --text-color-label: #EDEDED;
+  --border-color: #474747;
+  --link-color: #045ace;
+  --link-hover-color: #F60;
+  --btn-height: 28px; }
+
+/*******************************************/
+/* Ripple Effect */
+/*******************************************/
+:root {
+  --filter-btn-link-color: #0B599C;
+  --filter-btn-link-bg: #D3DFEC;
+  --filter-btn-link-bg-hover: #c3d3e5;
+  --filter-bg-ic: #E6E6E6;
+  --filter-bg-ic-hover: #dadada; }
+
+:root [data-theme='light'] {
+  --filter-btn-link-color: #0B599C;
+  --filter-btn-link-bg: #D3DFEC;
+  --filter-btn-link-bg-hover: #c3d3e5;
+  --filter-bg-ic: #E6E6E6;
+  --filter-bg-ic-hover: #dadada; }
+
+:root [data-theme='dark'] {
+  --filter-btn-link-color: #41A4FF;
+  --filter-btn-link-bg: #303740;
+  --filter-btn-link-bg-hover: #2d343c;
+  --filter-bg-ic: #2F2F2F;
+  --filter-bg-ic-hover: #2c2c2c; }
+
+.button-link {
+  display: block;
+  height: var(--btn-height);
+  color: var(--filter-btn-link-color);
+  background: var(--filter-btn-link-bg);
+  border-radius: 3px;
+  font-weight: bold;
+  padding: 8px 16px;
+  text-decoration: none; }
+  .button-link:hover, .button-link:focus {
+    text-decoration: none;
+    color: var(--filter-btn-link-color);
+    background: var(--filter-btn-link-bg-hover); }
+
+.filter [class^="ic-"], .filter [class*=" ic-"] {
+  font-size: 24px; }
+
+.filter .ic-copy {
+  background: var(--filter-bg-ic);
+  width: 28px;
+  height: 28px;
+  display: block;
+  text-align: center;
+  border-radius: 3px;
+  padding: 2px;
+  cursor: pointer; }
+  .filter .ic-copy:hover {
+    background: var(--filter-bg-ic-hover); }
+
+.filter .form-group {
+  margin: 0 24px 16px 0; }
+  .filter .form-group .label-form-control {
+    color: var(--text-color-label);
+    line-height: 16px;
+    margin-bottom: 4px; }

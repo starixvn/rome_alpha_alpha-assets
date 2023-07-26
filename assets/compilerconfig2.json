@@ -483,5 +483,53 @@
   {
     "outputFile": "styles/vendors/multiselect/fanex.multiSelect-dark.css",
     "inputFile": "styles/vendors/multiselect/fanex.multiSelect-dark.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/buttons.css",
+    "inputFile": "styles-v2/components/buttons.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/tables.css",
+    "inputFile": "styles-v2/components/tables.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/textboxes.css",
+    "inputFile": "styles-v2/components/textboxes.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/dropdown.css",
+    "inputFile": "styles-v2/components/dropdown.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/utilities.css",
+    "inputFile": "styles-v2/components/utilities.scss"
+  },
+  {
+    "outputFile": "styles-v2/base/scaffolding.css",
+    "inputFile": "styles-v2/base/scaffolding.scss"
+  },
+  {
+    "outputFile": "styles-v2/base/roboto-fonts.css",
+    "inputFile": "styles-v2/base/roboto-fonts.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/multiselect.css",
+    "inputFile": "styles-v2/components/multiselect.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/filter.css",
+    "inputFile": "styles-v2/components/filter.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/tipsy-modify.css",
+    "inputFile": "styles-v2/components/tipsy-modify.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/alert.css",
+    "inputFile": "styles-v2/components/alert.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/modal.css",
+    "inputFile": "styles-v2/components/modal.scss"
   }
 ]
