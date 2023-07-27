@@ -1,37 +1,4 @@
 ﻿:root {
-  --font-family: Roboto, Arial, Tahoma, sans-serif;
-  --font-size: 13px;
-  --text-color: #333333;
-  --text-color-label: #444444;
-  --border-color: #D1D1D1;
-  --link-color: #045ace;
-  --link-hover-color: #F60;
-  --btn-height: 28px; }
-
-:root [data-theme='light'] {
-  --font-family: Roboto, Arial, Tahoma, sans-serif;
-  --font-size: 13px;
-  --text-color: #333333;
-  --text-color-label: #444444;
-  --border-color: #D1D1D1;
-  --link-color: #045ace;
-  --link-hover-color: #F60;
-  --btn-height: 28px; }
-
-:root [data-theme='dark'] {
-  --font-family: Roboto, Arial, Tahoma, sans-serif;
-  --font-size: 13px;
-  --text-color: #EDEDED;
-  --text-color-label: #EDEDED;
-  --border-color: #474747;
-  --link-color: #045ace;
-  --link-hover-color: #F60;
-  --btn-height: 28px; }
-
-/*******************************************/
-/* Ripple Effect */
-/*******************************************/
-:root {
   --multiselect-bg: #fff;
   --multiselect-bg-hover: #E6E6E6;
   --multiselect-border: #d1d1d1; }
@@ -87,7 +54,6 @@ ul.multiselect-container.dropdown-menu {
   border: 1px solid var(--multiselect-border) !important;
   box-shadow: none;
   box-shadow: none;
-  width: 100%;
   margin: 2px 0 0 0;
   border-radius: 3px;
   position: absolute;
@@ -108,13 +74,15 @@ ul.multiselect-container.dropdown-menu {
     text-decoration: none;
     color: var(--text-color);
     display: block;
-    white-space: normal;
+    white-space: nowrap;
     padding: 0; }
+    ul.multiselect-container.dropdown-menu li a label {
+      white-space: nowrap; }
     ul.multiselect-container.dropdown-menu li a label.checkbox, ul.multiselect-container.dropdown-menu li a label.radio {
-      padding: 6px 9px 5px 9px !important;
+      padding: 0 !important;
       line-height: 1.462;
       margin: 0;
-      display: inline-flex;
+      display: flex;
       align-items: flex-start; }
       ul.multiselect-container.dropdown-menu li a label.checkbox [type="checkbox"], ul.multiselect-container.dropdown-menu li a label.radio [type="checkbox"] {
         margin: 0 5px 0 0;

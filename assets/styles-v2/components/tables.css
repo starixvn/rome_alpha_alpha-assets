@@ -1,37 +1,4 @@
 ﻿:root {
-  --font-family: Roboto, Arial, Tahoma, sans-serif;
-  --font-size: 13px;
-  --text-color: #333333;
-  --text-color-label: #444444;
-  --border-color: #D1D1D1;
-  --link-color: #045ace;
-  --link-hover-color: #F60;
-  --btn-height: 28px; }
-
-:root [data-theme='light'] {
-  --font-family: Roboto, Arial, Tahoma, sans-serif;
-  --font-size: 13px;
-  --text-color: #333333;
-  --text-color-label: #444444;
-  --border-color: #D1D1D1;
-  --link-color: #045ace;
-  --link-hover-color: #F60;
-  --btn-height: 28px; }
-
-:root [data-theme='dark'] {
-  --font-family: Roboto, Arial, Tahoma, sans-serif;
-  --font-size: 13px;
-  --text-color: #EDEDED;
-  --text-color-label: #EDEDED;
-  --border-color: #474747;
-  --link-color: #045ace;
-  --link-hover-color: #F60;
-  --btn-height: 28px; }
-
-/*******************************************/
-/* Ripple Effect */
-/*******************************************/
-:root {
   --table-header-bg: #BCCBDC;
   --table-height: 33px;
   --table-border: #A4A4A4;
@@ -39,6 +6,7 @@
   --table-bg: #fff;
   --table-bg-highlight: #FFF5E8;
   --table-bg-hover: #f8eb95;
+  --table-color: var(--text-color);
   --icon-color: #444; }
 
 :root [data-theme='light'] {
@@ -49,6 +17,7 @@
   --table-bg: #fff;
   --table-bg-hover: #F8F9FD;
   --table-bg-highlight: #FFF5E8;
+  --table-color: var(--text-color);
   --icon-color: #444; }
 
 :root [data-theme='dark'] {
@@ -59,13 +28,15 @@
   --table-bg: #171717;
   --table-bg-hover: #2E2F33;
   --table-bg-highlight: #332E24;
+  --table-color: var(--text-color);
   --icon-color: #ededed; }
 
 .w-full {
   width: 100%; }
 
 .tb {
-  background-color: transparent; }
+  background-color: transparent;
+  color: var(--table-color); }
   .tb thead th {
     background-color: var(--table-header-bg);
     text-align: center; }

@@ -1,15 +1,17 @@
-﻿@import "../abstracts/_variables.scss";
-@import "../abstracts/_mixins.scss";
-
+﻿
 :root {
-    // button     
+    // button
     --btn-small-height: 22px;
-    --btn-bg: #0B599C;
+    --btn-bg: #0b599c;
+    --btn-bg-hover: #0a5494;
     --btn-color: #FFFFFF;
     --btn-border-radius: 3px;
     --btn-bg-cancel: #696969;
-    --btn-bg-apply: #0B599C;
+    --btn-bg-cancel-hover: #636363;
+    --btn-bg-apply: #0b599c;
+    --btn-bg-apply-hover: #0a5494;
     --btn-bg-save: #18965B;
+    --btn-bg-save-hover: #168e56;
     --btn-bg-remove: #ffffff;
     --btn-color-remove: #CC0000;
     --btn-border-remove: #CC0000;
@@ -226,6 +228,6 @@ input[type=submit], input[type=reset] {
         justify-content: space-between;
         align-items: center;
         padding: 0 6px;
-        min-width: 47px;
+        min-width: 47px!important;
     }
 }

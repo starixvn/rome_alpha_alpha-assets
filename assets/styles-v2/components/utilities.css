@@ -1,34 +1,4 @@
 ﻿:root {
-  --font-family: Roboto, Arial, Tahoma, sans-serif;
-  --font-size: 13px;
-  --text-color: #333333;
-  --text-color-label: #444444;
-  --border-color: #D1D1D1;
-  --link-color: #045ace;
-  --link-hover-color: #F60;
-  --btn-height: 28px; }
-
-:root [data-theme='light'] {
-  --font-family: Roboto, Arial, Tahoma, sans-serif;
-  --font-size: 13px;
-  --text-color: #333333;
-  --text-color-label: #444444;
-  --border-color: #D1D1D1;
-  --link-color: #045ace;
-  --link-hover-color: #F60;
-  --btn-height: 28px; }
-
-:root [data-theme='dark'] {
-  --font-family: Roboto, Arial, Tahoma, sans-serif;
-  --font-size: 13px;
-  --text-color: #EDEDED;
-  --text-color-label: #EDEDED;
-  --border-color: #474747;
-  --link-color: #045ace;
-  --link-hover-color: #F60;
-  --btn-height: 28px; }
-
-:root {
   --color-loading: #ffffff; }
 
 .hide {
@@ -51,6 +21,9 @@
 
 .text-left {
   text-align: left; }
+
+.require, .red {
+  color: var(--color-require); }
 
 @keyframes lds-spinner {
   0% {

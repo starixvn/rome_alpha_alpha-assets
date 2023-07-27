@@ -1,5 +1,4 @@
-﻿@import "../abstracts/_variables.scss";
-
+﻿
 :root {
     --color-loading: #ffffff;
 }
@@ -32,7 +31,9 @@
 .text-left{
     text-align: left;
 }
- 
+.require, .red {
+    color: var(--color-require);
+}
 
 @keyframes lds-spinner {
     0% {

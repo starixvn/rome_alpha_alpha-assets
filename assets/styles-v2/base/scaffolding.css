@@ -6,7 +6,8 @@
   --border-color: #D1D1D1;
   --link-color: #045ace;
   --link-hover-color: #F60;
-  --btn-height: 28px; }
+  --btn-height: 28px;
+  --color-require: #A11515; }
 
 :root [data-theme='light'] {
   --font-family: Roboto, Arial, Tahoma, sans-serif;
@@ -16,7 +17,8 @@
   --border-color: #D1D1D1;
   --link-color: #045ace;
   --link-hover-color: #F60;
-  --btn-height: 28px; }
+  --btn-height: 28px;
+  --color-require: #A11515; }
 
 :root [data-theme='dark'] {
   --font-family: Roboto, Arial, Tahoma, sans-serif;
@@ -26,8 +28,12 @@
   --border-color: #474747;
   --link-color: #045ace;
   --link-hover-color: #F60;
-  --btn-height: 28px; }
+  --btn-height: 28px;
+  --color-require: #FF4F50; }
 
+/*******************************************/
+/* Ripple Effect */
+/*******************************************/
 @font-face {
   font-family: 'Roboto';
   src: url("../fonts/roboto/Roboto-Regular.woff2") format("woff2");

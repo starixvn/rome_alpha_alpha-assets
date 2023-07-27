@@ -1,9 +1,7 @@
-﻿@import "../abstracts/_variables.scss";
-@import "../abstracts/_mixins.scss";
-
+﻿
 :root {
     --modal-bg: #fff;
-    --modal-border: #C7C7C9;
+    --modal-border: #fff;
     --modal-color: var(--text-color);
     --modal-shadow: rgba(0, 0, 0, 0.3);
     --modal-colot-title-gray: #333333;
@@ -12,7 +10,7 @@
 
 :root [data-theme='light'] {
     --modal-bg: #fff;
-    --modal-border: #C7C7C9;
+    --modal-border: #fff;
     --modal-color: var(--text-color);
     --modal-shadow: rgba(0, 0, 0, 0.3);
     --modal-colot-title-gray: #333333;
@@ -21,7 +19,7 @@
 
 :root [data-theme='dark'] {
     --modal-bg: #171717;
-    --modal-border: #3C3E40;
+    --modal-border: #515151;
     --modal-color: var(--text-color);
     --modal-shadow: rgba(0, 0, 0, 0.3);
     --modal-colot-title-gray: #ededed;
@@ -46,16 +44,17 @@
             transform: translate(-50%, -50%);
             top: 20%;
             left: 50%;
-         
-
-            
         }
     }
 }
 .modal-dialog {
     margin: 0 auto;
-    width: 600px;
+    width: 500px;
     position: relative;
+    &.modal-form{
+        width: 545px;
+    }
+
 }
 .modal {
     box-shadow: none;
@@ -72,8 +71,9 @@
     .modal-content {
         background-color: var(--modal-bg);
         border-radius: 3px;
-        border: 0;
-        box-shadow: 2.923166513442993px 7.795110702514648px 5.846333026885986px 2.923166513442993px var(--modal-shadow);
+        border: 1px solid var(--modal-border);
+        box-shadow: 0px 2px 6px 0px var(--modal-shadow);
+
 
         .modal-header {
             padding: 0 12px;
@@ -86,10 +86,11 @@
                 -webkit-appearance: none;
                 width: auto;
                 height: auto;
-                right: 5px;
-                top: 8px;
+                right: 7px;
+                top: 7px;
                 left: auto;
-                font-size: 25px;
+                font-size: 23px;
+                text-shadow: none;
 
                 &:before {
                     left: 0;
@@ -97,18 +98,19 @@
             }
 
             .modal-title {
-                padding: 10px 0 13px 0;
+                padding: 11px 0;
                 margin: 0;
                 font-size: 13px;
                 font-weight: bold;
-                line-height: 1.42857;
+                line-height: 16px;
                 border-bottom: 1px solid var(--border-color);
                 color: var(--modal-color);
+                cursor: default;
             }
         }
 
         .modal-body {
-            padding: 25px 12px 16px;
+            padding: 15px 12px 15px;
             line-height: 22px;
 
             .ttl {
@@ -119,6 +121,8 @@
                 margin-bottom: 3px;
                 line-height: 22px;
             }
+
+
 
             input[type="text"] {
                 display: block;
@@ -145,18 +149,21 @@
 
             .block-btn {
                 margin-left: auto;
+                margin-bottom: 0;
 
-                .button {
+                > * {
+                    margin-right: 8px;
+
                     &:last-child {
                         margin-right: 0;
                     }
-                }
+                } 
             }
         }
     }
 
     &.modal-text {
-        
+
         .modal-content {
             padding: 10px 4px 13px;
             box-shadow: 0px 2px 6px 0px var(--modal-shadow);

@@ -1,6 +1,4 @@
-﻿@import "../abstracts/_variables.scss";
-@import "../abstracts/_mixins.scss";
-
+﻿
 :root {
     //table
     --table-header-bg: #BCCBDC;
@@ -10,6 +8,7 @@
     --table-bg: #fff;
     --table-bg-highlight: #FFF5E8;
     --table-bg-hover: #f8eb95;
+    --table-color: var(--text-color);
     --icon-color: #444;
 }
 
@@ -22,6 +21,7 @@
     --table-bg: #fff;
     --table-bg-hover: #F8F9FD;
     --table-bg-highlight: #FFF5E8;
+    --table-color: var(--text-color);
     --icon-color: #444;
 }
 
@@ -34,6 +34,7 @@
     --table-bg: #171717;
     --table-bg-hover: #2E2F33;
     --table-bg-highlight: #332E24;
+    --table-color: var(--text-color);
     --icon-color: #ededed;
 }
 .w-full{
@@ -41,6 +42,7 @@
 }
 .tb {
     background-color: transparent;
+    color: var(--table-color);
 
     thead {
         th {
@@ -66,7 +68,7 @@
                 &:before {
                     color: var(--icon-color);
                 }
-            }       
+            }
 
             &.row-highlight {
                 td {

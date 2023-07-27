@@ -1,11 +1,10 @@
-﻿@import "../abstracts/_variables.scss";
-@import "../abstracts/_mixins.scss";
-
+﻿
 :root {
     //dropdown
     --dropdown-bg: #ffffff;
     --dropdown-bg-hover: #e5e5e5;
     --dropdown-border: #D1D1D1;
+    --dropdown-color: var(--text-color);
 }
 
 :root [data-theme='light'] {
@@ -13,13 +12,18 @@
     --dropdown-bg: #ffffff;
     --dropdown-bg-hover: #e5e5e5;
     --dropdown-border: #D1D1D1;
+    --dropdown-color: var(--text-color);
 }
 
 :root [data-theme='dark'] {
     //dropdown
-    --dropdown-bg: #ffffff;
-    --dropdown-bg-hover: #e5e5e5;
-    --dropdown-border: #D1D1D1;
+    --dropdown-bg: #2b2b2b;
+    --dropdown-bg-hover: #3c3c3c;
+    --dropdown-border: #474747;
+    --dropdown-color: var(--text-color);
+}
+.open > .dropdown-menu {
+    display: block;
 }
 .dropdown {
     background: var(--dropdown-bg);
@@ -39,6 +43,11 @@
         padding: 0 20px 0 7px;
         font-size: 14px;
         line-height: 24px;
+        color: var(--dropdown-color);
+
+        &:hover, &:focus {
+            color: var(--dropdown-color);
+        }
 
         .caret {
             top: 9px;
@@ -46,29 +55,33 @@
             position: absolute;
         }
     }
+}
+.dropdown-menu {
+    position: absolute;
+    background: var(--dropdown-bg);
+    border: 1px solid var(--dropdown-border) !important;
+    top: 100%;
+    left: 0;
+    padding: 0;
+    margin: 2px 0 0;
+    list-style: none;
+    box-shadow: none; 
+    min-width: 100%!important;
+    li {
+        &.active {
+            background-color: var(--dropdown-bg-hover);
+        }
 
-    .dropdown-menu {
-        position: absolute;
-        background: var(--dropdown-bg);
-        border: 1px solid var(--dropdown-border);
-        top: 100%;
-        left: 0;
-        padding: 0;
-        margin: 2px 0 0;
-        list-style: none;
-        box-shadow: none;
-        width: 100%;
+        a {
+            padding: 8px!important;
+            white-space: nowrap;
+            display: block;
+            color: inherit;
+            color: var(--dropdown-color);
 
-        li {
-            a {
-                padding: 8px;
-                white-space: nowrap;
-                display: block;
-                color: inherit;
-
-                &:hover {
-                    background-color: var(--dropdown-bg-hover);
-                }
+            &:hover {
+                background-color: var(--dropdown-bg-hover);
+                color: var(--dropdown-color) !important;
             }
         }
     }
