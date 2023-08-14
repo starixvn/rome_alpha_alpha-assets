@@ -43,7 +43,8 @@
     background: var(--filter-btn-link-bg-hover); }
 
 .filter {
-  z-index: 100; }
+  z-index: 100;
+  padding-top: 0; }
   .filter .ic-copy {
     font-size: 24px; }
   .filter .ic-copy, .filter .icon-copy {
@@ -57,6 +58,9 @@
     cursor: pointer; }
     .filter .ic-copy:hover, .filter .icon-copy:hover {
       background: var(--filter-bg-ic-hover); }
+  .filter * {
+    user-select: none;
+    -webkit-user-select: none; }
   .filter .form-group {
     margin: 0 24px 16px 0;
     vertical-align: bottom; }

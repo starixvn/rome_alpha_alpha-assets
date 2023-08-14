@@ -172,7 +172,7 @@ input[type=submit], input[type=reset] {
         left: auto;
         right: 3px;
         width: 47px;
-        min-width: 47px;
+        min-width: 47px !important;
 
         li {
             &:hover {

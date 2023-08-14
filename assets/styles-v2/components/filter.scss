@@ -55,6 +55,7 @@
 }
 .filter {
     z-index: 100;
+    padding-top: 0;
 
     .ic-copy {
         font-size: 24px;
@@ -74,6 +75,12 @@
             background: var(--filter-bg-ic-hover);
         }
     }
+
+    * {
+        user-select: none;
+        -webkit-user-select: none;
+    }
+    
 
     .form-group {
         margin: 0 24px 16px 0;

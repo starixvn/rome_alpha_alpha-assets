@@ -39,7 +39,7 @@
   background: var(--multiselect-bg); }
 
 .multiselect .multiselect-selected-text {
-  width: 128px;
+  width: 170px;
   margin-right: 10px;
   display: inline-block;
   text-overflow: ellipsis;
