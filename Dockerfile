@@ -16,6 +16,8 @@ USER root
 # Copy needed files/folders
 RUN cp -r assets/styles/ /usr/share/nginx/html/styles
 
+RUN cp -r assets/styles-v2/ /usr/share/nginx/html/styles-v2
+
 RUN cp assets/nginx.conf /etc/nginx/conf.d/default.conf
 
 RUN if [ "$TRANSFORM_CONFIG" = "LOCAL2" ] \
@@ -29,7 +31,9 @@ RUN if [ "$TRANSFORM_CONFIG" = "LOCAL2" ] \
 		|| [ "$TRANSFORM_CONFIG" = "MNLNAP2" ]; \
 	then cp -r assets/bundles2/ /usr/share/nginx/html/bundles; \
 		 cp -r assets/bundles2-v2/ /usr/share/nginx/html/bundles-v2; \
-	else cp -r assets/bundles/ /usr/share/nginx/html/bundles; fi
+	else cp -r assets/bundles/ /usr/share/nginx/html/bundles; \
+		 cp -r assets/bundles-v2/ /usr/share/nginx/html/bundles-v2; \
+	fi
 
 # Remove default page of nginx
 RUN rm /usr/share/nginx/html/index.html
