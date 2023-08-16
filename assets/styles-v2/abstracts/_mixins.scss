@@ -1,0 +1,205 @@
+/// Adds a browser prefix to the property
+/// @param {*} $property Property
+/// @param {*} $value Value
+
+@mixin css3-prefix($property, $value) {
+  -webkit-#{$property}: #{$value};
+   -khtml-#{$property}: #{$value};
+     -moz-#{$property}: #{$value};
+      -ms-#{$property}: #{$value};
+       -o-#{$property}: #{$value};
+          #{$property}: #{$value};
+}
+
+/// Box Shadow
+
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+  @if ($inset != "") {
+    @include css3-prefix('box-shadow', $inset $x $y $blur $color);
+  } @else {
+    @include css3-prefix('box-shadow', $x $y $blur $color);
+  }
+}
+
+@mixin box-shadow-multiple($string) {
+    @include css3-prefix('box-shadow', $string);
+}
+
+
+/// Box Sizing
+/// @param {*} $type [border-box] - Type
+/// @require {mixin} css3-prefix
+
+@mixin box-sizing($type: border-box) {
+  @include css3-prefix('box-sizing', $type);
+}
+
+/// Border Radius
+/// @param {Size} $radius [5px] - Radius
+/// @require {mixin} css3-prefix
+
+@mixin border-radius($radius: 5px) {
+    @include css3-prefix('border-radius', $radius);
+}
+
+/// Transition
+/// @param {List} $properties - Properties
+/// @require {mixin} css3-prefix
+
+@mixin transition($properties...) {
+
+  @if length($properties) >= 1 {
+    @include css3-prefix('transition', $properties);
+  }
+
+  @else {
+    @include css3-prefix('transition',  "all 0.2s ease-in-out 0s");
+  }
+}
+
+/// Transform
+/// @param {List} $params - Params
+/// @require {mixin} css3-prefix
+
+@mixin transform($params) {
+  @include css3-prefix('transform', $params);
+}
+
+@mixin shadow($top, $left, $blur, $color, $inset: false) {
+ @if $inset {
+    -webkit-box-shadow:inset $top $left $blur $color;
+    -moz-box-shadow:inset $top $left $blur $color;
+    box-shadow:inset $top $left $blur $color;
+  } @else {
+    -webkit-box-shadow: $top $left $blur $color;
+    -moz-box-shadow: $top $left $blur $color;
+    box-shadow: $top $left $blur $color;
+  }
+}
+
+//Keyframes
+@mixin keyframes($animationName) {
+    @-webkit-keyframes #{$animationName} {
+        @content;
+    }
+    @-moz-keyframes #{$animationName} {
+        @content;
+    }
+    @-o-keyframes #{$animationName} {
+        @content;
+    }
+    @keyframes #{$animationName} {
+        @content;
+    }
+}
+
+@mixin icon($height, $width, $x, $y) {
+    background: url(../Images/sprite_01.png);
+    background-position: $x $y;
+    display: inline-block;
+    height: $height;
+    width: $width;
+}
+
+@mixin font($color, $font-size, $font-family) {
+    color: $color;
+    font-size: $font-size;
+    font-family: $font-family;
+}
+
+/*******************************************/
+/* Ripple Effect */
+/*******************************************/
+@mixin keyframes-ripple() {
+    @include keyframes(ripple) {
+        0% {
+            @include transform(scale(0));
+        }
+
+        20% {
+            @include transform(scale(1));
+        }
+
+        100% {
+            opacity: 0;
+            @include transform(scale(1));
+        }
+    }
+    
+}
+
+@mixin keyframes-rippleDuplicate() {
+    @include keyframes(rippleDuplicate) {
+          0% {
+            transform: scale(0);
+          }
+          40% {
+            transform: scale(1);
+          }
+          100% {
+            opacity: 0;
+            transform: scale(1);
+          }
+    }
+}
+
+@mixin ripple-effect-icon($background: #b1aea3, $top: 2px, $margin-left: -3px, $margin-right: -4px, $width: 26px, $height: 26px) {
+    position: relative;
+
+    &:after {
+        position: relative;
+        content: '';
+        display: block;
+    }      
+
+    &:hover:after {
+        position: absolute;
+        left: 0;
+        top: $top;
+        width: $width;
+        height: $height;
+        margin-left: $margin-left;
+        margin-top: $margin-right;
+        background: $background;
+        border-radius: 100%;
+        opacity: 1;
+        @include transform(scale(0));
+        -moz-animation: ripple 1s ease-out;
+        -o-animation: ripple 1s ease-out;
+        -webkit-animation: ripple 1s ease-out;
+        animation: ripple 1s ease-out;
+    }
+}
+
+@mixin effect-normal() {
+    @include border-radius(1px);  
+    @include box-shadow-multiple('0 3px 6px rgba(0,0,0,.16),0 3px 6px rgba(0,0,0,.23)'); 
+}
+
+@mixin effect-special() {
+    @include border-radius(1px); 
+    @include box-shadow-multiple('0 10px 20px rgba(0,0,0,.19),0 6px 6px rgba(0,0,0,.23)'); 
+}
+
+@mixin effect-textbox() {
+    @include border-radius(1px);
+    @include box-shadow(0px, 1px, 1px, rgba(0, 0, 0, 0.3));
+}
+
+@mixin effect-button() {
+    @include border-radius(1px);
+    @include box-shadow(0px, 2px, 2px, rgba(0, 0, 0, 0.3));
+}
+
+
+// Calculate sizes when <meta name="viewport"> tag set scale = 0.7
+
+@function calculateScale($num, $scale: 0.7) {
+  @return $num / $scale;
+}
+
+//minxin background-opacity
+@mixin background-opacity($color, $opacity: 0.25) {
+    background: $color; /* The Fallback */
+    background: rgba($color, $opacity);
+}

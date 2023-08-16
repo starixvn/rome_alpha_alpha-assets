@@ -1,0 +1,106 @@
+﻿
+:root {
+    --msg-success-bg: #E2FFF2;
+    --msg-success-border: #1FC276;
+    --msg-success-color: #137849;
+    --msg-info-bg: #E1F1FF;
+    --msg-info-border: #7FB3E0;
+    --msg-info-color: #1C62A3;
+    --msg-warning-bg: #F6F2D7;
+    --msg-warning-border: #FFDD9C;
+    --msg-warning-color: #7F3D1D;
+    --msg-error-bg: #FFF2F2;
+    --msg-error-border: #FE0000;
+    --msg-error-color: #FE0000;
+}
+
+:root [data-theme='light'] {
+    --msg-success-bg: #E2FFF2;
+    --msg-success-border: #1FC276;
+    --msg-success-color: #137849;
+    --msg-info-bg: #E1F1FF;
+    --msg-info-border: #7FB3E0;
+    --msg-info-color: #1C62A3;
+    --msg-warning-bg: #F6F2D7;
+    --msg-warning-border: #FFDD9C;
+    --msg-warning-color: #7F3D1D;
+    --msg-error-bg: #FFF2F2;
+    --msg-error-border: #FE0000;
+    --msg-error-color: #FE0000;
+}
+
+:root [data-theme='dark'] {
+    --msg-success-bg: #3A5031;
+    --msg-success-border: #7ECC4D;
+    --msg-success-color: #7ECC4D;
+    --msg-info-bg: #13314D;
+    --msg-info-border: #40A3FF;
+    --msg-info-color: #40A3FF;
+    --msg-warning-bg: #312F26;
+    --msg-warning-border: #78776D;
+    --msg-warning-color: #E5E2C9;
+    --msg-error-bg: #361212;
+    --msg-error-border: #CC7070;
+    --msg-error-color: #CC7070;
+}
+
+.msg {
+    border-width: 1px;
+    border-style: solid;
+    padding: 8px 7px 7px 35px;
+    position: relative;
+    margin: 12px 0;
+    border-radius: 3px;
+    font-size: var(--font-size);
+    line-height: 1.3;
+    font-weight: bold;
+
+    &:before {
+        font-family: Iconalpha;
+        font-size: 20px;
+        position: absolute;
+        left: 9px;
+        top: 5px;
+    }
+}
+
+.msg-success {
+    background-color: var(--msg-success-bg);
+    border-color: var(--msg-success-border);
+    color: var(--msg-success-color);
+
+    &:before {
+        content: '\e93b';
+    }
+}
+
+.msg-info {
+    background-color: var(--msg-info-bg);
+    border-color: var(--msg-info-border);
+    color: var(--msg-info-color);
+
+    &:before {
+        content: '\e93c';
+    }
+}
+
+.msg-warning {
+    background-color: var(--msg-warning-bg);
+    border-color: var(--msg-warning-border);
+    color: var(--msg-warning-color);
+
+    &:before {
+        content: '\e93d';
+        color: var(--msg-warning-color);
+    }
+}
+
+.msg-error {
+    background-color: var(--msg-error-bg);
+    border-color: var(--msg-error-border);
+    color: var(--msg-error-color);
+
+    &:before {
+        content: '\e93e';
+    }
+}

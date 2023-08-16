@@ -1,0 +1,233 @@
+﻿
+:root {
+    // button
+    --btn-small-height: 22px;
+    --btn-bg: #0b599c;
+    --btn-bg-hover: #0a5494;
+    --btn-color: #FFFFFF;
+    --btn-border-radius: 3px;
+    --btn-bg-cancel: #696969;
+    --btn-bg-cancel-hover: #636363;
+    --btn-bg-apply: #0b599c;
+    --btn-bg-apply-hover: #0a5494;
+    --btn-bg-save: #18965B;
+    --btn-bg-save-hover: #168e56;
+    --btn-bg-remove: #ffffff;
+    --btn-color-remove: #CC0000;
+    --btn-border-remove: #CC0000;
+    --btn-bg-refresh: rgba(24, 150, 91, 0.25);
+    --btn-bg-refresh-off: #737373;
+    //multiselect
+    --multiselect-bg: #fff;
+    --multiselect-bg-hover: #ddd;
+    --multiselect-border: var(--border-color);
+}
+
+:root [data-theme='light'] {
+    // button    
+    --btn-small-height: 22px;
+    --btn-bg: #0b599c;
+    --btn-bg-hover: #0a5494;
+    --btn-color: #FFFFFF;
+    --btn-border-radius: 3px;
+    --btn-bg-cancel: #696969;
+    --btn-bg-cancel-hover: #636363;
+    --btn-bg-apply: #0b599c;
+    --btn-bg-apply-hover: #0a5494;
+    --btn-bg-save: #18965B;
+    --btn-bg-save-hover: #168e56;
+    --btn-bg-remove: #ffffff;
+    --btn-color-remove: #CC0000;
+    --btn-border-remove: #CC0000;
+    --btn-bg-refresh: rgba(24, 150, 91, 0.25);
+    --btn-bg-refresh-off: #737373;
+    //multiselect
+    --multiselect-bg: #fff;
+    --multiselect-bg-hover: #ddd;
+    --multiselect-border: var(--border-color);
+}
+
+:root [data-theme='dark'] {
+    // button     
+    --btn-small-height: 22px;
+    --btn-bg: #36587D;
+    --btn-bg-hover: #335376;
+    --btn-color: #FFFFFF;
+    --btn-border-radius: 3px;
+    --btn-bg-cancel: #696969;
+    --btn-bg-cancel-hover: #636363;
+    --btn-bg-apply: #36587D;
+    --btn-bg-apply-hover: #335376;
+    --btn-bg-save: #147D4C;
+    --btn-bg-save-hover: #137648;
+    --btn-bg-remove: #171717;
+    --btn-color-remove: #DD3333;
+    --btn-border-remove: #DD3333;
+    --btn-bg-refresh: rgba(24, 150, 91, 0.25);
+    --btn-bg-refresh-off: #737373;
+    //multiselect
+    --multiselect-bg: #2b2b2b;
+    --multiselect-bg-hover: #ddd;
+    --multiselect-border: var(--border-color);
+}
+
+input[type=submit], input[type=reset] {
+    border-radius: var(--btn-border-radius);
+}
+
+%btn {
+    border: none;
+    cursor: pointer;
+    height: var(--btn-height);
+    line-height: var(--btn-height);
+    outline: none;
+    margin: 0;
+    padding: 0 16px;
+    white-space: nowrap;
+    -webkit-appearance: none;
+    border-radius: var(--btn-border-radius);
+    color: var(--btn-color);
+    font-size: 13px;
+    font-weight: bold;
+    -webkit-appearance: none;
+    box-shadow: none;
+    text-decoration: none !important;
+    display: inline-block;
+
+    &[disabled], .disabled {
+        opacity: .8;
+        cursor: not-allowed;
+    }
+
+    &:hover, &:focus {
+        color: var(--btn-color);
+        background-color: var(--btn-bg-hover);
+    }
+}
+
+.button-cancel, .btn-remove {
+    @extend %btn;
+    background-color: var(--btn-bg-cancel);
+
+    &:hover, &:focus {
+        background-color: var(--btn-bg-cancel-hover);
+    }
+}
+.button-apply, .btn-submit {
+    @extend %btn;
+    background-color: var(--btn-bg-apply);
+
+    &:hover, &:focus {
+        background-color: var(--btn-bg-apply-hover);
+    }
+}
+.button-save {
+    @extend %btn;
+    background-color: var(--btn-bg-save);
+
+    &:hover, &:focus {
+        background-color: var(--btn-bg-save-hover);
+    }
+}
+.button-remove {
+    @extend %btn;
+    background-color: var(--btn-bg-remove);
+    border: 1px solid var(--btn-border-remove);
+    color: var(--btn-color-remove);
+
+    &:hover, &:focus {
+        background-color: var(--btn-color-remove);
+        color: var(--btn-bg-remove);
+    }
+
+    &[disabled], .disabled {
+        background-color: var(--btn-bg-remove);
+        border: 1px solid var(--btn-border-remove);
+        color: var(--btn-color-remove);
+    }
+}
+.btn-group-refresh {
+    border-radius: var(--btn-border-radius);
+    padding: 3px;
+    display: inline-flex;
+    background-color: var(--btn-bg-refresh);
+    position: relative;
+
+    &.off {
+        .button-refresh {
+            background-color: var(--btn-bg-refresh-off);
+        }
+    }
+
+    .dropdown-menu {
+        background: var(--multiselect-bg);
+        border: 1px solid var(--multiselect-border);
+        box-shadow: none;
+        margin: 2px 0 0 0;
+        border-radius: var(--btn-border-radius);
+        padding: 0;
+        box-shadow: none !important;
+        position: absolute;
+        top: 100%;
+        left: auto;
+        right: 3px;
+        width: 47px;
+        min-width: 47px !important;
+
+        li {
+            &:hover {
+                a {
+                    background-color: var(--multiselect-bg-hover);
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--text-color);
+                font-size: var(--font-size);
+                display: block;
+                padding: 6px 20px 6px 8px;
+                line-height: 1.462;
+            }
+        }
+    }
+}
+.button-long{
+    padding: 0 33px;
+}
+.button-refresh {
+    height: var(--btn-small-height);
+    @extend %btn;
+    line-height: var(--btn-small-height);
+    background-color: var(--btn-bg-save);
+
+    &:hover, &:focus {
+        background-color: var(--btn-bg-save-hover);
+    }
+
+    .ic-reload {
+        font-size: 20px !important;
+    }
+
+    .caret {
+        color: inherit;
+    }
+
+    &#btn-status {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 6px 0 1px;
+        margin-right: 3px;
+        text-transform: uppercase;
+        min-width: 52px;
+    }
+
+    &.dropdown-toggle {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 6px;
+        min-width: 47px!important;
+    }
+}

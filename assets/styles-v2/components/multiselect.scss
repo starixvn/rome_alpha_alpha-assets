@@ -1,0 +1,138 @@
+﻿
+:root {
+    //multiselect
+    --multiselect-bg: #fff;
+    --multiselect-bg-hover: #E6E6E6;
+    --multiselect-border: #d1d1d1;
+}
+
+:root [data-theme='light'] {
+    //multiselect
+    --multiselect-bg: #fff;
+    --multiselect-bg-hover: #E6E6E6;
+    --multiselect-border: #d1d1d1;
+}
+
+:root [data-theme='dark'] {
+    //multiselect
+    --multiselect-bg: #2b2b2b;
+    --multiselect-bg-hover: #3c3c3c;
+    --multiselect-border: #474747;
+}
+
+.btn-group {
+    position: relative;
+
+    button.multiselect.dropdown-toggle.btn.btn-default {
+        background: var(--multiselect-bg);
+        font-size: var(--font-size);
+        margin-right: 0;
+        position: relative;
+        padding: 0 10px;
+        line-height: 30px;
+        height: var(--btn-height);
+        -webkit-appearance: none;
+        outline: none;
+        border: 1px solid var(--multiselect-border) !important;
+        border-radius: 3px;
+        box-shadow: none !important;
+
+
+        &:hover {
+            color: inherit;
+        }
+
+        .caret {
+            position: absolute;
+            right: 10px;
+            top: 12px;
+        }
+    }
+}
+.multiselect {
+    &.btn-default.active, &.btn-default:active {
+        background: var(--multiselect-bg);
+    }
+
+    .multiselect-selected-text {
+        width: 170px;
+        margin-right: 10px;
+        display: inline-block;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        overflow: hidden;
+        text-align: left;
+        line-height: 1;
+        color: var(--text-color);
+    }
+}
+ul.multiselect-container {
+    &.dropdown-menu {
+        background: var(--multiselect-bg) !important;
+        border: 1px solid var(--multiselect-border) !important;
+        box-shadow: none;
+        box-shadow: none;
+        margin: 2px 0 0 0;
+        border-radius: 3px;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        padding: 0;
+
+        input[type=radio] {
+            display: none;
+        }
+
+        .active {
+            background: none !important;
+
+            a {
+                label {
+                    color: var(--text-color) !important;
+                }
+            }
+        }
+
+        li {
+            &:hover {
+                background-color: var(--multiselect-bg-hover) !important;
+
+                a {
+                    background-color: var(--multiselect-bg-hover) !important;
+                }
+            }
+
+            a {
+                text-decoration: none;
+                color: var(--text-color);
+                display: block;
+                white-space: nowrap;
+                padding: 0;
+
+                label {
+                    white-space: nowrap;
+                }
+
+                label.checkbox, label.radio {
+                    padding: 0 !important;
+                    line-height: 1.462;
+                    margin: 0;
+                    display: flex;
+                    align-items: flex-start;
+
+                    [type="checkbox"] {
+                        margin: 0 5px 0 0;
+                        top: 2px;
+                        position: relative;
+                    }
+                }
+            }
+        }
+
+        .multiselect-all {
+            a {
+                border-bottom: 1px solid var(--multiselect-border) !important;
+            }
+        }
+    }
+}

@@ -28,6 +28,7 @@ RUN if [ "$TRANSFORM_CONFIG" = "LOCAL2" ] \
 		|| [ "$TRANSFORM_CONFIG" = "MNL2" ] \
 		|| [ "$TRANSFORM_CONFIG" = "MNLNAP2" ]; \
 	then cp -r assets/bundles2/ /usr/share/nginx/html/bundles; \
+		 cp -r assets/bundles2-v2/ /usr/share/nginx/html/bundles-v2; \
 	else cp -r assets/bundles/ /usr/share/nginx/html/bundles; fi
 
 # Remove default page of nginx
