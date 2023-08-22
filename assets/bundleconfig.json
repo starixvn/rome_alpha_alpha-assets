@@ -803,6 +803,16 @@
     ]
   },
   {
+    "outputFileName": "bundles/site-transfer/pagination.js",
+    "inputFiles": [
+      "js/components/pagination/jquery.draggable.js",
+      "js/components/pagination/jquery.resizable.js",
+      "js/components/pagination/jquery.parser.js",
+      "js/components/pagination/jquery.linkbutton.js",
+      "js/components/pagination/jquery.pagination.js"
+    ]
+  },
+  {
     "outputFileName": "bundles/site-accountinfo/index.css",
     "inputFiles": [
       "styles/components/tables.css"
@@ -861,7 +871,8 @@
       "styles/components/tablesorter.css",
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect.css",
-      "styles/components/icon.css"
+      "styles/components/icon.css",
+      "styles/components/pagination.css"
     ]
   },
   {
@@ -876,8 +887,10 @@
       "js/components/sticky-table-headers/jquery.stickytableheaders.js",
       "js/components/tablesorter/tablesorter.js",
       "js/components/multiselect/bootstrap-multiselect.js",
+      "js/components/countdown/jquery.countdown.js",
       "js/components/storejs/store.js",
-      "js/components/autocomplete/autocomplete.js"
+      "js/components/autocomplete/autocomplete.js",
+      "js/components/three-state-button/jquery.theswitch.js"
     ]
   },
   {
@@ -885,7 +898,8 @@
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars.css",
-      "styles/components/bootstrap.nexDatePicker.css"
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/dropdown.css"
     ]
   },
   {
@@ -1596,7 +1610,8 @@
       "styles/components/tablesorter.css",
       "styles/vendors/bootstrap-multiselect.css",
       "styles/components/bootstrap-multiselect-dark.css",
-      "styles/components/icon-dark.css"
+      "styles/components/icon-dark.css",
+      "styles/components/pagination-dark.css"
     ]
   },
   {
@@ -1604,7 +1619,8 @@
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars-dark.css",
-      "styles/components/bootstrap.nexDatePicker.css"
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/components/dropdown-dark.css"
     ]
   },
   {

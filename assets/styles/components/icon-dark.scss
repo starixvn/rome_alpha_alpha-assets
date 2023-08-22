@@ -17,9 +17,11 @@
     left: 3px;
     margin-right: 0;
 }
-.icon-qr-code-top:before{
+
+.icon-qr-code-top:before {
     color: #EDEDED;
 }
+
 .icon-flag:before {
     background-image: url("../images/flag.png");
     background-image: url("../images/flag.svg");
@@ -88,7 +90,7 @@
 }
 
 .icon-bell {
-     @include ripple-effect-icon($margin-left: 0px, $margin-right: -4px, $height: 32px, $width: 32px, $top: 5px);
+    @include ripple-effect-icon($margin-left: 0px, $margin-right: -4px, $height: 32px, $width: 32px, $top: 5px);
 }
 
 .icon-logout,
@@ -147,6 +149,24 @@
     display: inline-block;
     font-size: 15px;
     vertical-align: middle;
+}
+
+.icon-cancel {
+    mask: url('../images/components/cancel.svg');
+    -webkit-mask-image: url('../images/components/cancel.svg');
+    mask-image: url('../images/components/cancel.svg');
+    background-color: #ededed;
+    fill: #ededed;
+    cursor: pointer;
+    display: inline-block;
+    width: 24px;
+    height: 24px;
+    vertical-align: middle;
+
+    &:hover, &:active {
+        background-color: #eb5757;
+        fill: #eb5757;
+    }
 }
 
 .entered-non-entered {

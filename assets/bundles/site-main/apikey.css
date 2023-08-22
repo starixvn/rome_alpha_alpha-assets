@@ -1206,6 +1206,21 @@
   height: 24px;
   vertical-align: middle; }
 
+.icon-cancel {
+  mask: url("../../styles/images/components/cancel.svg");
+  -webkit-mask-image: url("../../styles/images/components/cancel.svg");
+  mask-image: url("../../styles/images/components/cancel.svg");
+  cursor: pointer;
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: middle;
+  background-color: #333;
+  fill: #333; }
+  .icon-cancel:hover, .icon-cancel:active {
+    background-color: #eb5757;
+    fill: #eb5757; }
+
 .icon-book {
   position: relative;
   color: #0b599c;
