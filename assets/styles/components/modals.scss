@@ -189,6 +189,42 @@
             }
         }
     }
+
+    &.bootbox-confirm {
+        font-size: 14px;
+        font-weight: bold;
+
+        .ul-confirm {
+            color: #4D4D4D;
+            font-size: 13px;
+            margin: 9px 0 0 0;
+            line-height: 15.23px;
+            font-weight: normal;
+
+            span {
+                color: #0B599C;
+                font-weight: bold;
+            }
+
+            .tip {
+                margin-top: 12px;
+                padding: 12px 10px 10px 32px;
+                background-color: #F0F7FF;
+                position: relative;
+
+                .icon-lightbulb-on {
+                    position: absolute;
+                    top: 12px;
+                    left: 6px;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url("../images/lightbulb.svg");
+                    background-repeat: no-repeat;
+                    background-position: center center;
+                }
+            }
+        }
+    }
 }
 
 @media \0screen\,screen\9 {

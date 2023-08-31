@@ -6324,6 +6324,33 @@ input[type=reset], .btn-reset {
         background-color: #4571a1;
         outline: none; }
 
+.bootbox.bootbox-confirm {
+  font-size: 14px;
+  font-weight: bold; }
+  .bootbox.bootbox-confirm .ul-confirm {
+    color: #EDEDED;
+    font-size: 13px;
+    margin: 9px 0 0 0;
+    line-height: 15.23px;
+    font-weight: normal; }
+    .bootbox.bootbox-confirm .ul-confirm span {
+      color: #41A4FF;
+      font-weight: bold; }
+    .bootbox.bootbox-confirm .ul-confirm .tip {
+      margin-top: 12px;
+      padding: 12px 10px 10px 32px;
+      background-color: #333E4B;
+      position: relative; }
+      .bootbox.bootbox-confirm .ul-confirm .tip .icon-lightbulb-on {
+        position: absolute;
+        top: 12px;
+        left: 6px;
+        width: 24px;
+        height: 24px;
+        background-image: url("../../styles/images/lightbulb-dark.svg");
+        background-repeat: no-repeat;
+        background-position: center center; }
+
 @media \0screen\,screen\9 {
   .modal-dialog {
     margin: 0 auto !important; } }
@@ -6388,7 +6415,6 @@ input[type=reset], .btn-reset {
   @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) {
     .sidebar.collapsed ~ .modal.parlay-max-payout-popup {
       width: calc(100% - 56px) !important; } }
-
 
 /*******************************************/
 /* Ripple Effect */
