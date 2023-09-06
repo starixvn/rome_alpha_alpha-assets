@@ -1,6 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
 <PackageManifest Version="2.0.0" xmlns="http://schemas.microsoft.com/developer/vsx-schema/2011">
   <Metadata>
-    <Identity Id="a0ae318b-4f07-4f71-93cb-f21d3f03c6d3" Version="1.9.157" Language="en-US" Publisher="Mads Kristensen" />
+    <Identity Id="a0ae318b-4f07-4f71-93cb-f21d3f03c6d3" Version="2.8.396" Language="en-US" Publisher="Mads Kristensen" />
     <DisplayName>Bundler &amp; Minifier</DisplayName>
     <Description xml:space="preserve">Adds support for bundling and minifying JavaScript, CSS and HTML files in any project.</Description>
     <MoreInfo>https://github.com/madskristensen/BundlerMinifier</MoreInfo>
@@ -11,12 +12,11 @@
     <Tags>bundle, bundling, minify, minification, js, css, html</Tags>
   </Metadata>
   <Installation>
-    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0]" />
+    <InstallationTarget Id="Microsoft.VisualStudio.Community" Version="[14.0,17.0)" />
   </Installation>
-  <Dependencies>
-    <Dependency Id="Microsoft.Framework.NDP" DisplayName="Microsoft .NET Framework" Version="[4.5,)" />
-    <Dependency Id="Microsoft.VisualStudio.MPF.14.0" DisplayName="Visual Studio MPF 14.0" Version="[14.0]" />
-  </Dependencies>
+  <Prerequisites>
+    <Prerequisite Id="Microsoft.VisualStudio.Component.CoreEditor" Version="[15.0,)" DisplayName="Visual Studio core editor" />
+  </Prerequisites>
   <Assets>
     <Asset Type="Microsoft.VisualStudio.VsPackage" Path="BundlerMinifierVsix.pkgdef" />
     <Asset Type="Microsoft.VisualStudio.MefComponent" Path="BundlerMinifierVsix.dll" />
