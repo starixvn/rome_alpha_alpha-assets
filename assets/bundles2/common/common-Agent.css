@@ -12,7 +12,6 @@
 .nav-tabs > li > a {
   color: #333; }
 
-
 /*******************************************/
 /* Devices */
 /*******************************************/
@@ -22,7 +21,6 @@
   .btn-default.with-level:hover, .btn-default.with-level:active {
     background-color: #283743;
     color: #fff; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -111,7 +109,6 @@
 
 .radio input[type="radio"]:checked + label:after {
   opacity: 1; }
-
 
 /*******************************************/
 /* Devices */

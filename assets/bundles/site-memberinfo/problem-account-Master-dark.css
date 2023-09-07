@@ -4212,7 +4212,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-
 /*!
  * Datetimepicker for Bootstrap 3
  * version : 4.17.42
@@ -5668,7 +5667,6 @@ a, a:focus, a:active, a:target, a:hover {
 .display-none {
   display: none; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6117,7 +6115,6 @@ input[type=reset], .btn-reset {
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6251,7 +6248,6 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -6318,7 +6314,6 @@ input[type="number"], input[type="tel"] {
     /* IE 10+ */
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -6463,7 +6458,6 @@ input[type="number"], input[type="tel"] {
 
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -6758,7 +6752,6 @@ input[type="number"], input[type="tel"] {
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
-
 
 /*! jQuery UI - v1.9.1 - 2012-11-21
 * http://jqueryui.com
@@ -7367,13 +7360,11 @@ body .ui-tooltip { border-width: 2px; }
   font-size: 100% !important;
   margin: 3px 5px 3px 16px; }
 
-
 .input-group.date .input-group-addon {
   padding-right: 0; }
 
 .daterange-picker {
   display: none; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -7967,7 +7958,6 @@ body .ui-tooltip { border-width: 2px; }
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
-
 
 /*******************************************/
 /* Devices */

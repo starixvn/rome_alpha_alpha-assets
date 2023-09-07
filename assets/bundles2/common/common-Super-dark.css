@@ -2,7 +2,6 @@
 /* Devices */
 /*******************************************/
 
-
 /*******************************************/
 /* Devices */
 /*******************************************/
@@ -12,7 +11,6 @@
   font-weight: bold; }
   .btn-default.with-level:hover, .btn-default.with-level:active {
     background-color: #694a3e; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -108,7 +106,6 @@
 .radio input[type="radio"]:checked + label:before {
   border-color: #EDEDED !important;
   background-color: transparent !important; }
-
 
 /*******************************************/
 /* Devices */
