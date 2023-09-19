@@ -126,9 +126,7 @@
     height: auto; }
     .modal.message-modal .modal-content .modal-header .icon-close {
       right: 8px;
-      top: 9px; }
-    .modal.message-modal .modal-content .modal-header .modal-title {
-      min-height: 44px; }
+      top: 7px; }
   .modal.message-modal .modal-content .modal-body {
     padding: 15px 12px 9px;
     font-size: 14px;
