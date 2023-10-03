@@ -3,6 +3,11 @@
 
 #toast-container > div {
     opacity: 1;
+    box-shadow: none;
+    &:hover{
+        box-shadow: none!important;
+    }
+
 }
 
 #toast-container.toast-top-full-width > div, #toast-container.toast-bottom-full-width > div {
@@ -12,66 +17,115 @@
 %toast {
     border-width: 1px;
     border-style: solid;
-    padding: 8px 8px 8px 36px;
+    padding: 8px 9px 9px;
     position: relative;
-    @include border-radius(2px);
-    @include box-sizing;
+    @include border-radius(3px);
 
     &:before {
         font-family: Iconalpha;
-        font-size: 24px;
+        font-size: 20px;
         position: absolute;
-        left: 8px;
-        top: 8px;
+        left: 9px;
+        top: 9px;
         line-height: 20px;
+    }
+
+    .toast-title {
+        font-weight: bold;
+        line-height: 16px;
+        margin-bottom: 10px !important;
+        font-size: 14px;
+        padding: 4px 27px 9px 30px;
+        display: flex;
+        margin-right: 0;
+
+        .mins-diff {
+            white-space: nowrap;
+            margin-left: auto;
+            font-weight: normal;
+            color: #333;
+            padding-left: 15px;
+            font-size: 12px;
+            margin-top: -1px;
+        }
+    }
+
+    .toast-message {
+        color: $toast-color;
+        font-size: 14px;
+
+        a {
+            color: $toast-color-link;
+            text-decoration: underline;
+
+            &:hover {
+                opacity: 0.85;
+            }
+        }
     }
 }
 
 #toast-container > .toast-info {
     @extend %toast;
-    background: $msg-info-bg !important;
-    border-color: $msg-info-border;
-    color: $msg-info-color;
+    background: $toast-bg-info !important;
+    border-color: $toast-border-info;
+    color: $toast-corlor-info;
+
+    .toast-title {
+        border-bottom: 1px solid $toast-border-info;
+    }
 
     &:before {
         content: '\e93c';
-        color: $msg-info-color;
+        color: $toast-border-info;
     }
 }
 
 #toast-container > .toast-error {
     @extend %toast;
-    background: $msg-error-bg !important;
-    border-color: $msg-error-border;
-    color: $msg-error-color;
+    background: $toast-bg-error !important;
+    border-color: $toast-border-error;
+    color: $toast-corlor-error;
+
+    .toast-title {
+        border-bottom: 1px solid $toast-border-error;
+    }
 
     &:before {
         content: '\e93e';
-        color: $msg-error-color;
+        color: $toast-corlor-error;
     }
 }
 
 #toast-container > .toast-success {
     @extend %toast;
-    background: $msg-success-bg !important;
-    border-color: $msg-success-border;
-    color: $msg-success-color;
+    background: $toast-bg-success !important;
+    border-color: $toast-border-success;
+    color: $toast-border-success;
+
+    .toast-title {
+        border-bottom: 1px solid $toast-border-success;
+    }
 
     &:before {
         content: '\e93b';
-        color: $msg-success-color;
+        color: $toast-border-success;
     }
 }
 
 #toast-container > .toast-warning {
     @extend %toast;
-    background: $msg-warning-bg !important;
-    border-color: $msg-warning-border;
-    color: $msg-warning-color;
+    background: $toast-bg-warning !important;
+    border-color: $toast-border-warning;
+    color: $toast-corlor-warning;
+
+    .toast-title {
+        border-bottom: 1px solid $toast-border-warning;
+    }
 
     &:before {
         content: '\e93d';
-        color: $msg-warning-icon-color;
+        color: $toast-corlor-warning;
     }
 }
 
@@ -103,5 +157,24 @@
             left: initial;
             top: 7px;
         }
+    }
+}
+.toast-close-button {
+    border-radius: 2px;
+    background-color: rgba(0,0,0,0.1) !important;
+    Width: 20px;
+    height: 20px;
+    text-align: center;
+    line-height: 20px;
+    font-weight: normal !important;
+    text-shadow: none !important;
+    color: #444444;
+    top: 9px !important;
+    right: 9px !important;
+    position: absolute;
+
+    &:hover {
+        color: #444444;
+        background-color: rgba(0,0,0,0.1) !important;
     }
 }

@@ -122,6 +122,24 @@ $icon-color-dark: #333;
 $icon-hover-color: #e38514;
 $icon-disable-color: lighten($icon-color, 20%);
 
+$toast-color: #ededed;
+$toast-color-link: #3873E9;
+$toast-border-error: #FF8C8C;
+$toast-corlor-error: #FF6464;
+$toast-bg-error: #501B1B;
+
+$toast-border-warning: #78776D;
+$toast-corlor-warning: #E5E2C9;
+$toast-bg-warning: #312F26;
+
+$toast-border-success: #7ECC4D;
+$toast-corlor-success: #3A5031;
+$toast-bg-success: #3A5031;
+
+$toast-border-info: #40A3FF;
+$toast-corlor-info: #40A3FF;
+$toast-bg-info: #13314D;
+
 $filter-error-border-color: #e9322d;
 
 // Devices 

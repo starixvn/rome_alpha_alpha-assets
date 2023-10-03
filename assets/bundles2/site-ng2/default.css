@@ -4698,7 +4698,6 @@ button.close {
   .hidden-print {
     display: none !important; } }
 
-
 @font-face {
   font-family: 'Iconalpha';
   src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?kyr3md');
@@ -5304,7 +5303,6 @@ a, a:focus, a:active, a:target, a:hover {
 .display-none {
   display: none; }
 
-
 .breadcrumb {
   background: none;
   border-bottom: 1px solid #cecece;
@@ -5356,7 +5354,6 @@ a, a:focus, a:active, a:target, a:hover {
         font-size: 20px;
         color: #7f7f7f; }
 
-
 .block-icon-small {
   display: inline-block;
   height: 16px;
@@ -5373,7 +5370,6 @@ a, a:focus, a:active, a:target, a:hover {
   height: 100px;
   background: url(../../styles/images/ajax-loader.gif) center center no-repeat;
   left: 47% !important; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5492,7 +5488,6 @@ a, a:focus, a:active, a:target, a:hover {
 .combined-fixed-pagination-bottom {
   margin-bottom: 48px; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -5542,7 +5537,6 @@ a, a:focus, a:active, a:target, a:hover {
     width: 0; }
   .nav.nav-tabs > li.active:after {
     width: 100%; } }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5673,7 +5667,6 @@ input[type=reset], .btn-reset {
 .btn:focus, .btn:active, .btn:visited {
   outline: none; }
 
-
 /*******************************************/
 /* Ripple Effect */
 /*******************************************/
@@ -5738,7 +5731,6 @@ input[type="number"], input[type="tel"] {
     /* IE 10+ */
     font-family: Roboto, Arial, Tahoma, sans-serif;
     font-size: 13px; }
-
 
 /*******************************************/
 /* Ripple Effect */
@@ -5854,7 +5846,6 @@ select {
 
 .dropdown-menu {
   background-clip: border-box; }
-
 
 /*******************************************/
 /* Ripple Effect */

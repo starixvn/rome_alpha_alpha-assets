@@ -184,7 +184,7 @@
 
                 &:hover, &:focus {
                     background-color: #696969;
-                    outline : none;
+                    outline: none;
                 }
             }
 
@@ -195,6 +195,42 @@
                 &:hover, &:focus {
                     background-color: lighten(#36587D, 10%);
                     outline: none;
+                }
+            }
+        }
+    }
+
+    &.bootbox-confirm {
+        font-size: 14px;
+        font-weight: bold;
+
+        .ul-confirm {
+            color: #EDEDED;
+            font-size: 13px;
+            margin: 9px 0 0 0;
+            line-height: 15.23px;
+            font-weight: normal;
+
+            span {
+                color: #41A4FF;
+                font-weight: bold;
+            }
+
+            .tip {
+                margin-top: 12px;
+                padding: 12px 10px 10px 32px;
+                background-color: #333E4B;
+                position: relative;
+
+                .icon-lightbulb-on {
+                    position: absolute;
+                    top: 12px;
+                    left: 6px;
+                    width: 24px;
+                    height: 24px;
+                    background-image: url("../images/lightbulb-dark.svg");
+                    background-repeat: no-repeat;
+                    background-position: center center;
                 }
             }
         }
