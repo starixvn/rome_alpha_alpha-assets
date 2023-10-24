@@ -1827,7 +1827,8 @@
   {
     "outputFileName": "bundles2/site-messages/backup-domains.js",
     "inputFiles": [
-      "js/libs/clipboard/clipboard.js"
+      "js/libs/clipboard/clipboard.js",
+      "js/libs/bootstrap/tab.js"
     ]
   },
   {
