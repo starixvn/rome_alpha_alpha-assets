@@ -126,7 +126,8 @@
         border-bottom: 1px solid $border-color-dark;
     }
 
-    .multiselect-item.multiselect-group a {
+    .multiselect-item.multiselect-group div {
+        cursor: pointer;
         padding: 6px 0 6px 36px !important;
         display: flex;
         align-items: center;
@@ -151,7 +152,7 @@
         }
     }
 
-    .multiselect-item.multiselect-group-clickable a {
+    .multiselect-item.multiselect-group-clickable div {
         padding: 8px 0 8px 8px !important;
 
         &:hover {
