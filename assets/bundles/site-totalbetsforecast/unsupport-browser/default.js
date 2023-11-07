@@ -14290,7 +14290,7 @@ module.exports = Countdown;
                     group.stopPropagation();
                 }, this));
                 
-                $("li.multiselect-group > a > b", this.$ul).on("click", $.proxy(function(t) {
+                $("li.multiselect-group > div > b", this.$ul).on("click", $.proxy(function(t) {
                     t.stopPropagation();
                     var n = $(t.target).closest('li');
                     var r = n.nextUntil("li.multiselect-group");
@@ -14303,7 +14303,7 @@ module.exports = Countdown;
                     r.toggleClass('hidden', !i);
                 }, this));
                 
-                $("li.multiselect-group > a > input", this.$ul).on("change", $.proxy(function(t) {
+                $("li.multiselect-group > div > input", this.$ul).on("change", $.proxy(function(t) {
                     t.stopPropagation();
                     var n = $(t.target).closest('li');
                     var r = n.nextUntil("li.multiselect-group", ':not(.disabled)');
@@ -14353,8 +14353,8 @@ module.exports = Countdown;
                 }, this));
                 
                 $("li.multiselect-all", this.$ul).css('background', '#f3f3f3').css('border-bottom', '1px solid #eaeaea');
-                $("li.multiselect-group > a, li.multiselect-all > a > label.checkbox", this.$ul).css('padding', '3px 20px 3px 35px');
-                $("li.multiselect-group > a > input", this.$ul).css('margin', '4px 0px 5px -20px');
+                $("li.multiselect-group > div, li.multiselect-all > div > label.checkbox", this.$ul).css('padding', '3px 20px 3px 35px');
+                $("li.multiselect-group > div > input", this.$ul).css('margin', '4px 0px 5px -20px');
             }
         },
 
@@ -14443,7 +14443,7 @@ module.exports = Countdown;
             if (this.options.enableCollapsibleOptGroups && this.options.multiple) {
                 var label = $(group).attr("label");
                 var value = $(group).attr("value");
-                var r = $('<li class="multiselect-item multiselect-group"><a href="javascript:void(0);"><input type="checkbox" value="' + value + '"/><b> ' + label + '<b class="caret"></b></b></a></li>');
+                var r = $('<li class="multiselect-item multiselect-group"><div><input type="checkbox" value="' + value + '"/><b> ' + label + '<b class="caret"></b></b></div></li>');
 
                 if (this.options.enableClickableOptGroups) {
                     r.addClass("multiselect-group-clickable")

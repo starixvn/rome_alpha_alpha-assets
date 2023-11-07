@@ -137,7 +137,8 @@
         background-color: #474747 !important;
     }
 
-    .multiselect-item.multiselect-group a {
+    .multiselect-item.multiselect-group div {
+        cursor: pointer;
         padding: 6px 0 6px 36px !important;
         display: flex;
         align-items: center;
