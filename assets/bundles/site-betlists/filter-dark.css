@@ -130,9 +130,9 @@
       justify-content: space-between; }
     .multiselect-container.dropdown-menu .multiselect-item.multiselect-group div input[type="checkbox"] {
       margin-right: 3px !important; }
-  .multiselect-container.dropdown-menu .multiselect-item.multiselect-group-clickable a {
+  .multiselect-container.dropdown-menu .multiselect-item.multiselect-group-clickable div {
     padding: 8px 0 8px 8px !important; }
-    .multiselect-container.dropdown-menu .multiselect-item.multiselect-group-clickable a:hover {
+    .multiselect-container.dropdown-menu .multiselect-item.multiselect-group-clickable div:hover {
       color: inherit; }
   .multiselect-container.dropdown-menu .multiselect-nested-item a {
     padding-left: 16px; }
