@@ -5968,31 +5968,49 @@ input[type=reset], .btn-reset {
         outline: none; }
 
 .bootbox.bootbox-confirm {
-  font-size: 14px;
-  font-weight: bold; }
-  .bootbox.bootbox-confirm .ul-confirm {
-    color: #EDEDED;
-    font-size: 13px;
-    margin: 9px 0 0 0;
-    line-height: 15.23px;
+  font-size: 14px; }
+
+.ul-confirm {
+  color: #EDEDED;
+  font-size: 13px;
+  padding: 9px 0 0 0;
+  line-height: 15.23px;
+  font-weight: normal; }
+  .ul-confirm span {
+    color: #41A4FF;
+    font-weight: bold; }
+  .ul-confirm li {
+    margin-bottom: 12px; }
+  .ul-confirm .li-schedule .spn-schedule {
+    color: #ededed;
     font-weight: normal; }
-    .bootbox.bootbox-confirm .ul-confirm span {
-      color: #41A4FF;
-      font-weight: bold; }
-    .bootbox.bootbox-confirm .ul-confirm .tip {
-      margin-top: 12px;
-      padding: 12px 10px 10px 32px;
-      background-color: #333E4B;
-      position: relative; }
-      .bootbox.bootbox-confirm .ul-confirm .tip .icon-lightbulb-on {
-        position: absolute;
-        top: 12px;
-        left: 6px;
-        width: 24px;
-        height: 24px;
-        background-image: url("../../styles/images/lightbulb-dark.svg");
-        background-repeat: no-repeat;
-        background-position: center center; }
+    .ul-confirm .li-schedule .spn-schedule + .spn-schedule {
+      margin-left: 7px; }
+  .ul-confirm .clear-schedule-note {
+    color: #FF6262; }
+  .ul-confirm .tip {
+    padding: 12px 10px 10px 32px;
+    background-color: #333E4B;
+    position: relative; }
+    .ul-confirm .tip .icon-lightbulb-on {
+      position: absolute;
+      top: 12px;
+      left: 6px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../../styles/images/lightbulb-dark.svg");
+      background-repeat: no-repeat;
+      background-position: center center; }
+
+.action-auto-transfer {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-top: 5px; }
+  .action-auto-transfer label {
+    font-size: 13px;
+    color: #ededed;
+    cursor: pointer; }
 
 @media \0screen\,screen\9 {
   .modal-dialog {

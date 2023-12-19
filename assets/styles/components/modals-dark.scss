@@ -202,41 +202,69 @@
 
     &.bootbox-confirm {
         font-size: 14px;
-        font-weight: bold;
+    }
+}
+.ul-confirm {
+    color: #EDEDED;
+    font-size: 13px;
+    padding: 9px 0 0 0;
+    line-height: 15.23px;
+    font-weight: normal;
 
-        .ul-confirm {
-            color: #EDEDED;
-            font-size: 13px;
-            margin: 9px 0 0 0;
-            line-height: 15.23px;
+    span {
+        color: #41A4FF;
+        font-weight: bold;
+    }
+
+    li {
+        margin-bottom: 12px;
+    }
+
+    .li-schedule {
+
+        .spn-schedule {
+            color: #ededed;
             font-weight: normal;
 
-            span {
-                color: #41A4FF;
-                font-weight: bold;
-            }
-
-            .tip {
-                margin-top: 12px;
-                padding: 12px 10px 10px 32px;
-                background-color: #333E4B;
-                position: relative;
-
-                .icon-lightbulb-on {
-                    position: absolute;
-                    top: 12px;
-                    left: 6px;
-                    width: 24px;
-                    height: 24px;
-                    background-image: url("../images/lightbulb-dark.svg");
-                    background-repeat: no-repeat;
-                    background-position: center center;
-                }
+            + .spn-schedule {
+                margin-left: 7px;
             }
         }
     }
-}
 
+    .clear-schedule-note {
+        color: #FF6262;
+    }
+
+    .tip {
+        padding: 12px 10px 10px 32px;
+        background-color: #333E4B;
+        position: relative;
+
+        .icon-lightbulb-on {
+            position: absolute;
+            top: 12px;
+            left: 6px;
+            width: 24px;
+            height: 24px;
+            background-image: url("../images/lightbulb-dark.svg");
+            background-repeat: no-repeat;
+            background-position: center center;
+        }
+    }
+}
+.action-auto-transfer {
+    display: flex;
+    align-items: flex-start;
+    flex-wrap: nowrap;
+    margin-top: 5px;
+
+    label {
+        font-size: 13px;
+        color: #ededed;
+        cursor: pointer;
+    }
+}
 @media \0screen\,screen\9 {
     .modal-dialog {
         margin: 0 auto !important;

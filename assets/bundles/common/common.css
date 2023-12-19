@@ -5878,31 +5878,49 @@ input[type=reset], .btn-reset {
         background: #909090; }
 
 .bootbox.bootbox-confirm {
-  font-size: 14px;
-  font-weight: bold; }
-  .bootbox.bootbox-confirm .ul-confirm {
+  font-size: 14px; }
+
+.ul-confirm {
+  color: #4D4D4D;
+  font-size: 13px;
+  padding: 9px 0 0 0;
+  line-height: 15.23px;
+  font-weight: normal; }
+  .ul-confirm span {
+    color: #0B599C;
+    font-weight: bold; }
+  .ul-confirm li {
+    margin-bottom: 12px; }
+  .ul-confirm .li-schedule .spn-schedule {
     color: #4D4D4D;
-    font-size: 13px;
-    margin: 9px 0 0 0;
-    line-height: 15.23px;
     font-weight: normal; }
-    .bootbox.bootbox-confirm .ul-confirm span {
-      color: #0B599C;
-      font-weight: bold; }
-    .bootbox.bootbox-confirm .ul-confirm .tip {
-      margin-top: 12px;
-      padding: 12px 10px 10px 32px;
-      background-color: #F0F7FF;
-      position: relative; }
-      .bootbox.bootbox-confirm .ul-confirm .tip .icon-lightbulb-on {
-        position: absolute;
-        top: 12px;
-        left: 6px;
-        width: 24px;
-        height: 24px;
-        background-image: url("../../styles/images/lightbulb.svg");
-        background-repeat: no-repeat;
-        background-position: center center; }
+    .ul-confirm .li-schedule .spn-schedule + .spn-schedule {
+      margin-left: 7px; }
+  .ul-confirm .clear-schedule-note {
+    color: #DD3333; }
+  .ul-confirm .tip {
+    padding: 12px 10px 10px 32px;
+    background-color: #F0F7FF;
+    position: relative; }
+    .ul-confirm .tip .icon-lightbulb-on {
+      position: absolute;
+      top: 12px;
+      left: 6px;
+      width: 24px;
+      height: 24px;
+      background-image: url("../../styles/images/lightbulb.svg");
+      background-repeat: no-repeat;
+      background-position: center center; }
+
+.action-auto-transfer {
+  display: flex;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+  margin-top: 5px; }
+  .action-auto-transfer label {
+    font-size: 13px;
+    color: #333;
+    cursor: pointer; }
 
 @media \0screen\,screen\9 {
   .modal-dialog {
