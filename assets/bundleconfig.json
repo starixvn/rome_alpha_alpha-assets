@@ -188,6 +188,7 @@
     "outputFileName": "bundles/site-results/default.js",
     "inputFiles": [
       "js/libs/jquery/jquery-1.11.3.js",
+      "js/components/blockui/jquery.blockUI.js",
       "js/libs/bootstrap/button.js",
       "js/libs/bootstrap/dropdown.js",
       "js/libs/bootstrap/modal.js",
