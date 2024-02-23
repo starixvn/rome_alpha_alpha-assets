@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-alpha-v2';
-  src:  url('fonts/icon-alpha-v2.eot?jum89f');
-  src:  url('fonts/icon-alpha-v2.eot?jum89f#iefix') format('embedded-opentype'),
-    url('fonts/icon-alpha-v2.ttf?jum89f') format('truetype'),
-    url('fonts/icon-alpha-v2.woff?jum89f') format('woff'),
-    url('fonts/icon-alpha-v2.svg?jum89f#icon-alpha-v2') format('svg');
+  src:  url('fonts/icon-alpha-v2.eot?p3p9za');
+  src:  url('fonts/icon-alpha-v2.eot?p3p9za#iefix') format('embedded-opentype'),
+    url('fonts/icon-alpha-v2.ttf?p3p9za') format('truetype'),
+    url('fonts/icon-alpha-v2.woff?p3p9za') format('woff'),
+    url('fonts/icon-alpha-v2.svg?p3p9za#icon-alpha-v2') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-notification:before {
+  content: "\e907";
+}
 .ic-save:before {
   content: "\e906";
 }
@@ -49,4 +52,7 @@
 }
 .ic-edit:before {
   content: "\e903";
+}
+.ic-notification-off:before {
+  content: "\e908";
 }
