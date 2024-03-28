@@ -316,7 +316,27 @@
     }
 
     &.no-shortcuts {
-        padding-bottom: 12px;
+        max-width: 372px;
+        padding-bottom: 0;
+
+        .month-wrapper {
+            width: auto !important;
+        }
+
+        .drp_top-bar {
+            padding-right: 10px;
+
+            &.normal {
+                .normal-top {
+                    flex-wrap: wrap;
+                }
+            }
+        }
+
+        .footer {
+            border: 0;
+            flex: 0;
+        }
     }
 
     &.no-topbar {

@@ -39,6 +39,8 @@
     }
 
     .list-icon {
+        margin-left: auto;
+
         ul {
             display: flex;
             align-items: center;
@@ -49,12 +51,19 @@
                 align-items: center;
                 margin-left: 10px;
 
+                a, span {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
+
                 .tooltip {
                     pointer-events: none;
                 }
 
+
                 .icon-excel + .tooltip {
                     white-space: nowrap;
+
                     &.top .tooltip-inner {
                         &:before {
                             margin-left: 20px;

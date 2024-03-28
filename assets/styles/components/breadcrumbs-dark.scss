@@ -43,6 +43,8 @@
     }
 
     .list-icon {
+        margin-left: auto;
+
         ul {
             display: flex;
             align-items: center;
@@ -52,6 +54,11 @@
                 display: flex;
                 align-items: center;
                 margin-right: 10px;
+
+                a, span {
+                    margin-top: 0;
+                    margin-bottom: 0;
+                }
 
                 .tooltip {
                     pointer-events: none;
