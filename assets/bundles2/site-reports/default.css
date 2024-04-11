@@ -4608,7 +4608,8 @@ body .ui-tooltip { border-width: 2px; }
     order: 1;
     margin: 0;
     padding: 2px 2px 2px 3px;
-    line-height: 28px; }
+    line-height: 28px;
+    cursor: pointer; }
     .fanex-multiselect-ul-group .show-item .fanex-multiselect-div label:hover, .fanex-multiselect-ul-group .rtLI .fanex-multiselect-div label:hover {
       font-weight: bold; }
   .fanex-multiselect-ul-group .show-item ul, .fanex-multiselect-ul-group .rtLI ul {

@@ -6852,7 +6852,7 @@
                     }
                 }
                 if (start && end) {
-                    setDateRange(start, end);
+                    setDateRange(start, end, undefined, true);
                     checkSelectionValid();
                 } else {
                     $(self).trigger('datepicker-change', {
@@ -7326,14 +7326,14 @@
             showGap();
         }
 
-        function autoclose() {
+        function autoclose(forceClose) {
             if (opt.singleDate === true) {
                 if (initiated && opt.start) {
                     if (opt.autoClose) closeDatePicker();
                 }
             } else {
                 if (initiated && opt.start && opt.end) {
-                    if (opt.autoClose) closeDatePicker();
+                    if (opt.autoClose || forceClose === true) closeDatePicker();
                 }
             }
         }
@@ -7425,7 +7425,7 @@
             return Math.abs(moment(start).diff(moment(end), 'd')) + 1;
         }
 
-        function setDateRange(date1, date2, silent) {
+        function setDateRange(date1, date2, silent, forceClose) {
             if (date1.getTime() > date2.getTime()) {
                 var tmp = date2;
                 date2 = date1;
@@ -7478,7 +7478,7 @@
             showGap();
             checkSelectionValid();
             showSelectedInfo(false, silent);
-            autoclose();
+            autoclose(forceClose);
         }
 
         function setSingleDate(date1) {
