@@ -1094,7 +1094,9 @@
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars.css",
-      "styles/components/bootstrap.nexDatePicker.css"
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize.css"
     ]
   },
   {
@@ -1104,7 +1106,8 @@
       "js/components/datetimepicker/datepicker.js",
       "js/components/datetimepicker/bootstrap-datetimepicker.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
-      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js"
+      "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js",
+      "js/components/daterangepicker/jquery.daterangepicker.js"
     ]
   },
   {
@@ -1804,7 +1807,9 @@
     "inputFiles": [
       "styles/vendors/bootstrap-datetimepicker.css",
       "styles/components/calendars-dark.css",
-      "styles/components/bootstrap.nexDatePicker.css"
+      "styles/components/bootstrap.nexDatePicker.css",
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize-dark.css"
     ]
   },
   {
