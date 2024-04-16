@@ -1229,7 +1229,17 @@
   .date-picker-wrapper.single-date {
     width: auto; }
   .date-picker-wrapper.no-shortcuts {
-    padding-bottom: 12px; }
+    max-width: 372px;
+    padding-bottom: 0; }
+    .date-picker-wrapper.no-shortcuts .month-wrapper {
+      width: auto !important; }
+    .date-picker-wrapper.no-shortcuts .drp_top-bar {
+      padding-right: 10px; }
+      .date-picker-wrapper.no-shortcuts .drp_top-bar.normal .normal-top {
+        flex-wrap: wrap; }
+    .date-picker-wrapper.no-shortcuts .footer {
+      border: 0;
+      flex: 0; }
   .date-picker-wrapper.no-topbar {
     padding-top: 12px; }
   .date-picker-wrapper .footer {
