@@ -5852,3 +5852,27 @@ body .ui-tooltip { border-width: 2px; }
       -o-animation: ripple 1s ease-out;
       -webkit-animation: ripple 1s ease-out;
       animation: ripple 1s ease-out; } }
+
+.suspended-bg, .RowBgSuspended {
+  background-color: #f8ded7 !important; }
+
+.disabled-bg, .RowBgDisabled {
+  background-color: #A0A97A !important; }
+
+.locked-falsePassword {
+  background-color: #ccc7ba !important; }
+
+.closed-byadmin {
+  background-color: #b3a2c7 !important; }
+
+.closed-byupline {
+  background-color: #f79646 !important; }
+
+.locked-falseOTPSC {
+  background-color: #86c5e4 !important; }
+
+.closed-byArchive {
+  background-color: #969696 !important; }
+
+.icon-information-outline {
+  float: none; }
