@@ -1885,5 +1885,12 @@
       "js-v2/components/tipsy/jquery.tipsy.js",
       "js-v2/components/tipsy/tipsy-helper.js"
     ]
+  },
+  {
+    "outputFileName": "bundles/site-handbook/common.js",
+    "inputFiles": [
+      "js/libs/jquery/jquery.cookie.js",
+      "js/components/draggable/tiny-draggable.js"
+    ]
   }
 ]
