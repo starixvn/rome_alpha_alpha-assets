@@ -4700,11 +4700,11 @@ button.close {
 
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?kfgw8p');
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?kfgw8p#iefix') format('embedded-opentype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?kfgw8p') format('truetype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?kfgw8p') format('woff'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?kfgw8p#Iconalpha') format('svg');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?kc7r8q');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?kc7r8q#iefix') format('embedded-opentype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?kc7r8q') format('truetype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?kc7r8q') format('woff'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?kc7r8q#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -4725,6 +4725,14 @@ button.close {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-mythresholds:before {
+  content: "\e989";
+  color: #919191;
+}
+.icon-mywatchlist:before {
+  content: "\e98b";
+  color: #919191;
+}
 .icon-credit:before {
   content: "\e990";
 }
@@ -4739,14 +4747,6 @@ button.close {
 }
 .icon-riskmanagement:before {
   content: "\e98d";
-}
-.icon-mywatchlist:before {
-  content: "\e989";
-  color: #919191;
-}
-.icon-mythresholds:before {
-  content: "\e98b";
-  color: #919191;
 }
 .icon-Live-chat:before {
   content: "\e986";
