@@ -7339,7 +7339,8 @@
         }
 
         function checkSelectionValid() {
-            var days = Math.ceil((opt.end - opt.start) / 86400000) + 1;
+            //var days = Math.ceil((opt.end - opt.start) / 86400000) + 1;
+            var days = Math.floor((opt.end - opt.start) / 86400000) + 1;
             if (opt.singleDate) { // Validate if only start is there
                 if (opt.start && !opt.end)
                     box.find('.drp_top-bar').removeClass('error').addClass('normal');
