@@ -1845,4 +1845,25 @@
       "js/components/draggable/tiny-draggable.js"
     ]
   },
+  {
+    "outputFileName": "bundles-v2/site-memberinfo/member-betting-behavior.css",
+    "inputFiles": [
+      "styles-v2/vendors/tipsy.css",
+      "styles-v2/components/tipsy-modify.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-asset/chart_v4.4.2.js",
+    "inputFiles": [
+      "js-v2/components/chartjs/chart_v4.4.2.js",
+      "js-v2/components/chartjs/chartjs-plugin-datalabels.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-memberinfo/member-betting-behavior.js",
+    "inputFiles": [
+      "js-v2/components/tipsy/jquery.tipsy.js",
+      "js-v2/components/tipsy/tipsy-helper.js"
+    ]
+  }
 ]
