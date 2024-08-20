@@ -531,5 +531,9 @@
   {
     "outputFile": "styles-v2/components/modal.css",
     "inputFile": "styles-v2/components/modal.scss"
+  },
+  {
+    "outputFile": "styles/base/anybody-fonts.css",
+    "inputFile": "styles/base/anybody-fonts.scss"
   }
 ]
