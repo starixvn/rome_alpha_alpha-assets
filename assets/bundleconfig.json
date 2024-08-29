@@ -1066,13 +1066,6 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/apikey/clipboard.js",
-    "inputFiles": [
-      "js/libs/bootstrap/tooltip.js",
-      "js/libs/clipboard/clipboard.js"
-    ]
-  },
-  {
     "outputFileName": "bundles/site-reports/winlossdetail-new.js",
     "inputFiles": [
       "js/libs/moment/locale/en-gb.js",
@@ -1096,9 +1089,39 @@
     ]
   },
   {
+    "outputFileName": "bundles/site-main/apikey/clipboard.js",
+    "inputFiles": [
+      "js/libs/bootstrap/tooltip.js",
+      "js/libs/clipboard/clipboard.js"
+    ]
+  },
+  {
     "outputFileName": "bundles-v2/site-betlists/monitoring-bets.js",
     "inputFiles": [
       "js/components/multiselect/bootstrap-multiselect.js",
+      "js/libs/clipboard/clipboard.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-reports/filter-new.css",
+    "inputFiles": [
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles/site-reports/filter-new.js",
+    "inputFiles": [
+      "js/libs/moment/locale/en-gb.js",
+      "js/libs/moment/locale/ja.js",
+      "js/libs/moment/locale/ko.js",
+      "js/libs/moment/locale/th.js",
+      "js/libs/moment/locale/vi.js",
+      "js/libs/moment/locale/zh-cn.js",
+      "js/libs/moment/locale/zh-tw.js",
+      "js/libs/moment/switch-locale.js",
+      "js/components/daterangepicker/jquery.daterangepicker.js",
+      "js/components/typeahead/typeahead.js",
       "js/libs/clipboard/clipboard.js"
     ]
   },
@@ -1794,6 +1817,7 @@
       "styles/components/daterangepicker-customize-dark.css"
     ]
   },
+
   {
     "outputFileName": "bundles/site-messages/backup-domains.js",
     "inputFiles": [
@@ -1885,9 +1909,10 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-main/anybody-fonts.css",
+    "outputFileName": "bundles/site-reports/filter-new-dark.css",
     "inputFiles": [
-      "styles/base/anybody-fonts.css"
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize-dark.css"
     ]
   },
   {
@@ -1903,4 +1928,5 @@
       "styles-v2/components/autosuggest.css"
     ]
   }
+
 ]
