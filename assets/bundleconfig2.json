@@ -1918,5 +1918,11 @@
       "js-v2/components/tipsy/jquery.tipsy.js",
       "js-v2/components/tipsy/tipsy-helper.js"
     ]
+  },
+  {
+    "outputFileName": "bundles2/site-main/anybody-fonts.css",
+    "inputFiles": [
+      "styles/base/anybody-fonts.css"
+    ]
   }
 ]
