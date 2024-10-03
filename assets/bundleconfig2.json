@@ -943,7 +943,8 @@
       "styles/components/calendars.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/dropdown.css",
-      "styles/components/daterangepicker-customize.css"
+      "styles/components/daterangepicker-customize.css",
+      "styles/vendors/multiselect/fanex.multiSelect.css"
     ]
   },
   {
@@ -963,7 +964,8 @@
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePickerHelper.js",
       "js/components/bootstrap.nexDatePicker/bootstrap.nexDatePicker.js",
       "js/components/daterangepicker/jquery.daterangepicker.js",
-      "js/components/typeahead/typeahead.js"
+      "js/components/typeahead/typeahead.js",
+      "js/components/multiselect/fanex.multiSelect.js"
     ]
   },
   {
@@ -1724,7 +1726,8 @@
       "styles/components/calendars-dark.css",
       "styles/components/bootstrap.nexDatePicker.css",
       "styles/components/dropdown-dark.css",
-      "styles/components/daterangepicker-customize-dark.css"
+      "styles/components/daterangepicker-customize-dark.css",
+      "styles/vendors/multiselect/fanex.multiSelect-dark.css"
     ]
   },
   {
