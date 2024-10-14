@@ -7363,11 +7363,11 @@
                     box.find('.drp_top-bar').removeClass('error').removeClass('normal');
             }
 
-            if ((opt.singleDate && opt.start && !opt.end) || (!opt.singleDate && opt.start && opt.end)) {
-                box.find('.apply-btn').removeClass('disabled');
-            } else {
-                box.find('.apply-btn').addClass('disabled');
-            }
+            //if ((opt.singleDate && opt.start && !opt.end) || (!opt.singleDate && opt.start && opt.end)) {
+            //    box.find('.apply-btn').removeClass('disabled');
+            //} else {
+            //    box.find('.apply-btn').addClass('disabled');
+            //}
 
             if (opt.batchMode) {
                 if (
@@ -7393,7 +7393,7 @@
             }
             var dateRange;
             if (opt.start && opt.singleDate) {
-                box.find('.apply-btn').removeClass('disabled');
+                //box.find('.apply-btn').removeClass('disabled');
                 dateRange = getDateString(new Date(opt.start));
                 opt.setValue.call(selfDom, dateRange, getDateString(new Date(opt.start)), getDateString(new Date(opt.end)));
 
@@ -7405,7 +7405,7 @@
                 }
             } else if (opt.start && opt.end) {
                 box.find('.selected-days').show().find('.selected-days-num').html(countDays(opt.end, opt.start));
-                box.find('.apply-btn').removeClass('disabled');
+                //box.find('.apply-btn').removeClass('disabled');
                 dateRange = getDateString(new Date(opt.start)) + opt.separator + getDateString(new Date(opt.end));
                 opt.setValue.call(selfDom, dateRange, getDateString(new Date(opt.start)), getDateString(new Date(opt.end)));
                 if (initiated && !silent) {
@@ -7415,11 +7415,11 @@
                         'date2': new Date(opt.end)
                     });
                 }
-            } else if (forceValid) {
+            } /*else if (forceValid) {
                 box.find('.apply-btn').removeClass('disabled');
             } else {
                 box.find('.apply-btn').addClass('disabled');
-            }
+            }*/
         }
 
         function countDays(start, end) {
@@ -7722,6 +7722,7 @@
         function closeDatePicker() {
             if (opt.alwaysOpen) return;
 
+            !opt.end && dayClicked(box.find('.day.first-date-selected'));
             var afterAnim = function () {
                 $(self).data('date-picker-opened', false);
                 $(self).trigger('datepicker-closed', {
@@ -7803,7 +7804,7 @@
                         '<div class="default-top">default</div>';
                 }
 
-                html += '<input type="button" class="apply-btn disabled' + getApplyBtnClass() + '" value="' + translate('apply') + '" />';
+                html += '<input type="button" class="apply-btn' + getApplyBtnClass() + '" value="' + translate('apply') + '" />';
                 html += '</div>';
             }
 
