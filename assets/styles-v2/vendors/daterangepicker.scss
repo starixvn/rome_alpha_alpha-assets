@@ -1,0 +1,13 @@
+﻿.input-group.date.datepicker {
+    box-shadow: none !important;
+    border: 1px solid var(--input-border);
+    border-radius: 3px;
+
+    .form-control {
+        height: 26px;
+    }
+
+    .icon-calendar {
+        font-size: 22px;
+    }
+}

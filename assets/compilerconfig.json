@@ -506,5 +506,21 @@
   {
     "outputFile": "styles/base/anybody-fonts.css",
     "inputFile": "styles/base/anybody-fonts.scss"
+  },
+  {
+    "outputFile": "styles-v2/vendors/daterangepicker.css",
+    "inputFile": "styles-v2/vendors/daterangepicker.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/pager.css",
+    "inputFile": "styles-v2/components/pager.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/tab.css",
+    "inputFile": "styles-v2/components/tab.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/daterangepicker-customize.css",
+    "inputFile": "styles-v2/components/daterangepicker-customize.scss"
   }
 ]

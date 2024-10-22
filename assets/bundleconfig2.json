@@ -515,7 +515,6 @@
   {
     "outputFileName": "bundles2/site-main/otp/otp-agent.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-agent2.css"
     ]
@@ -1742,8 +1741,8 @@
   {
     "outputFileName": "bundles2/site-asset/daterangepicker-dark.css",
     "inputFiles": [
-      "styles/components/daterangepicker-customize-dark.css",
-      "styles/vendors/daterangepicker/jquery.daterangepicker-dark.css"
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize-dark.css"
     ]
   },
   {
@@ -1941,6 +1940,17 @@
     "outputFileName": "bundles2/site-main/anybody-fonts.css",
     "inputFiles": [
       "styles/base/anybody-fonts.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-transfer/reward.css",
+    "inputFiles": [
+      "styles-v2/components/tab.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/pager.css",
+      "styles-v2/components/daterangepicker-customize.css",
+      "styles-v2/vendors/daterangepicker.css"
     ]
   }
 ]

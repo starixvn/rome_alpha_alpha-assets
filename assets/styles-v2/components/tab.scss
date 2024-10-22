@@ -1,0 +1,45 @@
+﻿
+:root, :root [data-theme='light'] {
+    .tabs {
+        &.super {
+            --tab-text-color: #97141e;
+            --tab-line-background: #67151b;
+        }
+
+        &.master {
+            --tab-text-color: #209656;
+            --tab-line-background: #276443;
+        }
+
+        &.agent {
+            --tab-text-color: #2267b6;
+            --tab-line-background: #516e8f;
+        }
+    }
+}
+
+:root [data-theme='dark'] {
+    .tabs {
+        &.super, &.master, &.agent {
+            --tab-text-color: #ededed;
+            --tab-line-background: #EDEDED;
+        }
+    }
+}
+
+.tabs {
+    .nav-tabs {
+        > li {
+            &.active, &:hover, &:focus {
+                a {
+                    color: var(--tab-text-color);
+                }
+
+
+                &:after {
+                    background: var(--tab-line-background);
+                }
+            }
+        }
+    }
+}

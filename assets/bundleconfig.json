@@ -518,7 +518,6 @@
   {
     "outputFileName": "bundles/site-main/otp/otp-agent.css",
     "inputFiles": [
-      "styles/vendors-extensions/site-main/otp/bootstrap-ex.css",
       "styles/components/accordions.css",
       "styles/themes/components/tabs/tab-agent.css"
     ]
@@ -1888,6 +1887,18 @@
     "outputFileName": "bundles/site-main/anybody-fonts.css",
     "inputFiles": [
       "styles/base/anybody-fonts.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-transfer/reward.css",
+    "inputFiles": [
+      "styles-v2/components/tab.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/pager.css",
+      "styles-v2/components/daterangepicker-customize.css",
+      "styles-v2/vendors/daterangepicker.css"
+
     ]
   }
 ]

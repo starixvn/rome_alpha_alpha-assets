@@ -61,6 +61,9 @@
     display: block;
     color: inherit;
     color: var(--dropdown-color); }
+    .dropdown-menu li a label {
+      padding: 0 !important;
+      line-height: inherit !important; }
     .dropdown-menu li a:hover {
       background-color: var(--dropdown-bg-hover);
       color: var(--dropdown-color) !important; }

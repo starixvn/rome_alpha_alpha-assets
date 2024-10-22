@@ -1,0 +1,21 @@
+﻿:root .tabs.super, :root [data-theme='light'] .tabs.super {
+  --tab-text-color: #97141e;
+  --tab-line-background: #67151b; }
+
+:root .tabs.master, :root [data-theme='light'] .tabs.master {
+  --tab-text-color: #209656;
+  --tab-line-background: #276443; }
+
+:root .tabs.agent, :root [data-theme='light'] .tabs.agent {
+  --tab-text-color: #2267b6;
+  --tab-line-background: #516e8f; }
+
+:root [data-theme='dark'] .tabs.super, :root [data-theme='dark'] .tabs.master, :root [data-theme='dark'] .tabs.agent {
+  --tab-text-color: #ededed;
+  --tab-line-background: #EDEDED; }
+
+.tabs .nav-tabs > li.active a, .tabs .nav-tabs > li:hover a, .tabs .nav-tabs > li:focus a {
+  color: var(--tab-text-color); }
+
+.tabs .nav-tabs > li.active:after, .tabs .nav-tabs > li:hover:after, .tabs .nav-tabs > li:focus:after {
+  background: var(--tab-line-background); }

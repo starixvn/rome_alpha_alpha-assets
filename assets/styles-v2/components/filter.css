@@ -44,7 +44,11 @@
 
 .filter {
   z-index: 100;
-  padding-top: 0; }
+  padding-top: 0;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  position: relative; }
   .filter .ic-copy {
     font-size: 24px; }
   .filter .ic-copy, .filter .icon-copy {
@@ -63,7 +67,8 @@
     -webkit-user-select: none; }
   .filter .form-group {
     margin: 0 24px 16px 0;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    position: relative; }
     .filter .form-group .label-form-control, .filter .form-group label {
       color: var(--text-color-label);
       line-height: 16px;

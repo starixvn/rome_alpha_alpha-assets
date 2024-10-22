@@ -1,0 +1,103 @@
+﻿.control-pager {
+    padding: 4px 10px;
+    border: 1px solid var(--table-border);
+    border-top: 0;
+    border-radius: 0 0 3px 3px;
+    background: #fff;
+
+    td {
+        vertical-align: middle;
+    }
+
+
+
+    &.pagination {
+        .pagination-page-list, .pagination-num {
+            border-radius: 3px;
+            border: 1px solid var(--input-border);
+        }
+
+        span, .pagination-info {
+            display: flex;
+            align-items: center;
+            vertical-align: middle;
+        }
+
+        .l-btn-empty, .r-btn-empty {
+            display: none;
+        }
+
+        .l-btn, .r-btn {
+            border: 0;
+            padding: 0;
+        }
+
+        .pagination-first, .pagination-prev, .pagination-last, .pagination-next {
+            background: #D9D9D9;
+            color: #171717;
+            margin: 0 3px;
+            width: 24px;
+            height: 24px;
+            top: auto;
+            left: auto;
+            border-radius: 3px;
+            position: relative;
+            line-height: inherit;
+            font-size: 0;
+            text-align: center;
+            position: relative;
+            padding: 0 2px;
+            cursor: pointer;
+
+            &:before {
+                color: #333;
+                font-size: 20px;
+                display: block;
+                font-family: 'icon-alpha-v2' !important;
+                speak: never;
+                font-style: normal;
+                font-weight: normal;
+                font-variant: normal;
+                text-transform: none;
+                line-height: 1;
+                -webkit-font-smoothing: antialiased;
+            }
+        }
+
+        .l-btn-disabled {
+            opacity: 1;
+
+            .pagination-first, .pagination-prev, .pagination-last, .pagination-next {
+                background-color: #F2F2F2;
+
+                &:before {
+                    color: #BABABA;
+                }
+            }
+        }
+
+        .pagination-first {
+            &:before {
+                content: "\e90c";
+            }
+        }
+
+        .pagination-prev {
+            &:before {
+                content: "\e909";
+            }
+        }
+
+        .pagination-last {
+            &:before {
+                content: "\e90d";
+            }
+        }
+
+        .pagination-next {
+            &:before {
+                content: "\e90b";
+            }
+        }
+    }
+}

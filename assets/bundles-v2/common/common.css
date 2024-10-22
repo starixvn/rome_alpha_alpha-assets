@@ -564,11 +564,11 @@ mark,
 
 @font-face {
   font-family: 'icon-alpha-v2';
-  src:  url('../../styles-v2/fonts/iconalpha/fonts/icon-alpha-v2.eot?p3p9za');
-  src:  url('../../styles-v2/fonts/iconalpha/fonts/icon-alpha-v2.eot?p3p9za#iefix') format('embedded-opentype'),
-    url('../../styles-v2/fonts/iconalpha/fonts/icon-alpha-v2.ttf?p3p9za') format('truetype'),
-    url('../../styles-v2/fonts/iconalpha/fonts/icon-alpha-v2.woff?p3p9za') format('woff'),
-    url('../../styles-v2/fonts/iconalpha/fonts/icon-alpha-v2.svg?p3p9za#icon-alpha-v2') format('svg');
+  src:  url('../../styles-v2/fonts/iconalpha/fonts/icon-alpha-v2.eot?osexig');
+  src:  url('../../styles-v2/fonts/iconalpha/fonts/icon-alpha-v2.eot?osexig#iefix') format('embedded-opentype'),
+    url('../../styles-v2/fonts/iconalpha/fonts/icon-alpha-v2.ttf?osexig') format('truetype'),
+    url('../../styles-v2/fonts/iconalpha/fonts/icon-alpha-v2.woff?osexig') format('woff'),
+    url('../../styles-v2/fonts/iconalpha/fonts/icon-alpha-v2.svg?osexig#icon-alpha-v2') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -589,6 +589,31 @@ mark,
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-sort:before {
+  content: "\e90e";
+}
+.ic-sorting-asc:before {
+  content: "\e90f";
+}
+.ic-sorting-desc:before {
+  content: "\e910";
+}
+.ic-arrow-left:before {
+  content: "\e909";
+}
+.ic-arrow-right:before {
+  content: "\e90b";
+}
+.ic-first:before {
+  content: "\e90c";
+}
+.ic-last:before {
+  content: "\e90d";
+}
+.ic-excel:before {
+  content: "\e90a";
+  color: #1f7244;
+}
 .ic-notification:before {
   content: "\e907";
 }
@@ -619,6 +644,9 @@ mark,
 }
 .ic-notification-off:before {
   content: "\e908";
+}
+.ic-chevron-double-right:before {
+  content: "\e951";
 }
 
 :root {
@@ -781,8 +809,15 @@ body {
 .title-agent {
   color: #516e8f; }
 
+.text-red {
+  color: #C60000; }
+
+.text-green {
+  color: #1B7D42; }
+
 a, a:focus, a:active, a:target, a:hover {
-  outline: none; }
+  outline: none;
+  text-decoration: none; }
 
 .bold {
   font-weight: bold; }
@@ -836,6 +871,8 @@ a, a:focus, a:active, a:target, a:hover {
   --btn-border-remove: #CC0000;
   --btn-bg-refresh: rgba(24, 150, 91, 0.25);
   --btn-bg-refresh-off: #737373;
+  --btn-bg-unpaid: #CC0000;
+  --btn-bg-unpaid-hover: #b30000;
   --multiselect-bg: #fff;
   --multiselect-bg-hover: #ddd;
   --multiselect-border: var(--border-color); }
@@ -857,6 +894,8 @@ a, a:focus, a:active, a:target, a:hover {
   --btn-border-remove: #DD3333;
   --btn-bg-refresh: rgba(24, 150, 91, 0.25);
   --btn-bg-refresh-off: #737373;
+  --btn-bg-unpaid: #CC0000;
+  --btn-bg-unpaid-hover: #b30000;
   --multiselect-bg: #2b2b2b;
   --multiselect-bg-hover: #ddd;
   --multiselect-border: var(--border-color); }
@@ -864,7 +903,7 @@ a, a:focus, a:active, a:target, a:hover {
 input[type=submit], input[type=reset] {
   border-radius: var(--btn-border-radius); }
 
-.button-cancel, .btn-remove, .button-apply, .btn-submit, .button-save, .button-remove, .button-refresh {
+.button-cancel, .btn-remove, .button-apply, .btn-submit, .button-unpaid, .button-save, .button-remove, .button-refresh {
   border: none;
   cursor: pointer;
   height: var(--btn-height);
@@ -882,10 +921,10 @@ input[type=submit], input[type=reset] {
   box-shadow: none;
   text-decoration: none !important;
   display: inline-block; }
-  [disabled].button-cancel, [disabled].btn-remove, [disabled].button-apply, [disabled].btn-submit, [disabled].button-save, [disabled].button-remove, [disabled].button-refresh, .button-cancel .disabled, .btn-remove .disabled, .button-apply .disabled, .btn-submit .disabled, .button-save .disabled, .button-remove .disabled, .button-refresh .disabled {
+  [disabled].button-cancel, [disabled].btn-remove, [disabled].button-apply, [disabled].btn-submit, [disabled].button-unpaid, [disabled].button-save, [disabled].button-remove, [disabled].button-refresh, .button-cancel .disabled, .btn-remove .disabled, .button-apply .disabled, .btn-submit .disabled, .button-unpaid .disabled, .button-save .disabled, .button-remove .disabled, .button-refresh .disabled {
     opacity: .8;
     cursor: not-allowed; }
-  .button-cancel:hover, .btn-remove:hover, .button-apply:hover, .btn-submit:hover, .button-save:hover, .button-remove:hover, .button-refresh:hover, .button-cancel:focus, .btn-remove:focus, .button-apply:focus, .btn-submit:focus, .button-save:focus, .button-remove:focus, .button-refresh:focus {
+  .button-cancel:hover, .btn-remove:hover, .button-apply:hover, .btn-submit:hover, .button-unpaid:hover, .button-save:hover, .button-remove:hover, .button-refresh:hover, .button-cancel:focus, .btn-remove:focus, .button-apply:focus, .btn-submit:focus, .button-unpaid:focus, .button-save:focus, .button-remove:focus, .button-refresh:focus {
     color: var(--btn-color);
     background-color: var(--btn-bg-hover); }
 
@@ -898,6 +937,11 @@ input[type=submit], input[type=reset] {
   background-color: var(--btn-bg-apply); }
   .button-apply:hover, .button-apply:focus, .btn-submit:hover, .btn-submit:focus {
     background-color: var(--btn-bg-apply-hover); }
+
+.button-unpaid {
+  background-color: var(--btn-bg-unpaid); }
+  .button-unpaid:hover, .button-unpaid:focus {
+    background-color: var(--btn-bg-unpaid-hover); }
 
 .button-save {
   background-color: var(--btn-bg-save); }
@@ -1117,6 +1161,9 @@ input[type="password"] {
     display: block;
     color: inherit;
     color: var(--dropdown-color); }
+    .dropdown-menu li a label {
+      padding: 0 !important;
+      line-height: inherit !important; }
     .dropdown-menu li a:hover {
       background-color: var(--dropdown-bg-hover);
       color: var(--dropdown-color) !important; }
@@ -1280,7 +1327,11 @@ input[type="password"] {
 
 .filter {
   z-index: 100;
-  padding-top: 0; }
+  padding-top: 0;
+  display: flex;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  position: relative; }
   .filter .ic-copy {
     font-size: 24px; }
   .filter .ic-copy, .filter .icon-copy {
@@ -1299,7 +1350,8 @@ input[type="password"] {
     -webkit-user-select: none; }
   .filter .form-group {
     margin: 0 24px 16px 0;
-    vertical-align: bottom; }
+    vertical-align: bottom;
+    position: relative; }
     .filter .form-group .label-form-control, .filter .form-group label {
       color: var(--text-color-label);
       line-height: 16px;

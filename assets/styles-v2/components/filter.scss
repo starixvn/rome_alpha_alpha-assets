@@ -56,6 +56,10 @@
 .filter {
     z-index: 100;
     padding-top: 0;
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+    position: relative;
 
     .ic-copy {
         font-size: 24px;
@@ -80,11 +84,12 @@
         user-select: none;
         -webkit-user-select: none;
     }
-    
+
 
     .form-group {
         margin: 0 24px 16px 0;
         vertical-align: bottom;
+        position: relative;
 
         .label-form-control, label {
             color: var(--text-color-label);
