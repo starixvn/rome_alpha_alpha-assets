@@ -176,6 +176,15 @@ body {
 
 .text-red {
   color: var(--color-red); }
+.text-green {
+  color: var(--color-green); }
+.text-error {
+  color: var(--color-text-error); }
+
+.text-success {
+  color: var(--color-text-success); }
+.text-red {
+  color: var(--color-red); }
 
 .text-green {
   color: var(--color-green); }
@@ -185,12 +194,6 @@ body {
 
 .text-success {
   color: var(--color-text-success); }
-
-.text-red {
-  color: #C60000; }
-
-.text-green {
-  color: #1B7D42; }
 
 a, a:focus, a:active, a:target, a:hover {
   outline: none;

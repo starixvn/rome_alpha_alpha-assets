@@ -123,13 +123,42 @@ body {
         pointer-events: none;
         transform: scale(0);
     }
-
     &:hover {
         &:after {
             opacity: 1;
             animation: ripple 1s ease-out;
         }
     }
+}
+
+.text-red {
+    color: var(--color-red);
+        content: "";
+        left: 50%;
+        top: 50%;
+        margin-left: -18px;
+        margin-top: -18px;
+        width: 36px;
+        height: 36px;
+        background: #b1aea3;
+        border-radius: 100%;
+        opacity: 0;
+        pointer-events: none;
+        transform: scale(0);
+    }
+
+.text-green {
+    color: var(--color-green);
+            opacity: 1;
+            animation: ripple 1s ease-out;
+        }
+    }
+.text-error {
+    color: var(--color-text-error);
+}
+
+.text-success {
+    color: var(--color-text-success);
 }
 
 .text-red {
@@ -146,12 +175,6 @@ body {
 
 .text-success {
     color: var(--color-text-success);
-}
-.text-red {
-    color: #C60000;
-}
-.text-green {
-    color: #1B7D42;
 }
 
 a, a:focus, a:active, a:target, a:hover {
