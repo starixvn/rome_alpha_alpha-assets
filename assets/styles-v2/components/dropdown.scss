@@ -74,14 +74,16 @@
         }
 
         a {
-            padding: 8px !important;
+            padding: 0 !important;
             white-space: nowrap;
             display: block;
             color: inherit;
             color: var(--dropdown-color);
+            cursor: pointer;
 
             label {
-                padding: 0 !important;
+                padding: 8px !important;
+                cursor: pointer;
                 line-height: inherit !important;
             }
 

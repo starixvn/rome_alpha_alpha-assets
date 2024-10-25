@@ -1,26 +1,53 @@
-﻿.control-pager {
-  padding: 4px 10px;
+﻿:root, :root [data-theme='light'] {
+  --pager-background: #fff;
+  --pager-button-background1: #F2F2F2;
+  --pager-button-background2: #D9D9D9;
+  --pager-button-background-hover: #D9D9D9;
+  --pager-button-disable-color: #BABABA;
+  --pager-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15); }
+
+:root [data-theme='dark'] {
+  --pager-background: #171717;
+  --pager-button-background1: #212121;
+  --pager-button-background2: #2B2B2B;
+  --pager-button-background-hover: #373737;
+  --pager-button-disable-color: #696969;
+  --pager-button-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25); }
+
+.control-pager {
+  padding: 6px 10px 6px 4px;
   border: 1px solid var(--table-border);
   border-top: 0;
   border-radius: 0 0 3px 3px;
-  background: #fff; }
+  background: var(--pager-background);
+  display: flex;
+  align-items: center;
+  color: var(--text-color); }
   .control-pager td {
     vertical-align: middle; }
+  .control-pager.pagination .pagination-page-list {
+    height: 24px;
+    min-width: 70px; }
+  .control-pager.pagination .pagination-num {
+    width: 38px; }
   .control-pager.pagination .pagination-page-list, .control-pager.pagination .pagination-num {
     border-radius: 3px;
-    border: 1px solid var(--input-border); }
+    border: 1px solid var(--input-border);
+    margin: 0 6px;
+    background-color: var(--input-bg); }
   .control-pager.pagination span, .control-pager.pagination .pagination-info {
     display: flex;
     align-items: center;
-    vertical-align: middle; }
+    vertical-align: middle;
+    margin-left: auto; }
   .control-pager.pagination .l-btn-empty, .control-pager.pagination .r-btn-empty {
     display: none; }
   .control-pager.pagination .l-btn, .control-pager.pagination .r-btn {
     border: 0;
     padding: 0; }
   .control-pager.pagination .pagination-first, .control-pager.pagination .pagination-prev, .control-pager.pagination .pagination-last, .control-pager.pagination .pagination-next {
-    background: #D9D9D9;
-    color: #171717;
+    background: var(--pager-button-background2);
+    color: var(--text-color);
     margin: 0 3px;
     width: 24px;
     height: 24px;
@@ -34,8 +61,11 @@
     position: relative;
     padding: 0 2px;
     cursor: pointer; }
+    .control-pager.pagination .pagination-first:hover, .control-pager.pagination .pagination-prev:hover, .control-pager.pagination .pagination-last:hover, .control-pager.pagination .pagination-next:hover {
+      background: var(--pager-button-background-hover);
+      box-shadow: var(--pager-button-shadow); }
     .control-pager.pagination .pagination-first:before, .control-pager.pagination .pagination-prev:before, .control-pager.pagination .pagination-last:before, .control-pager.pagination .pagination-next:before {
-      color: #333;
+      color: var(--text-color);
       font-size: 20px;
       display: block;
       font-family: 'icon-alpha-v2' !important;
@@ -47,11 +77,17 @@
       line-height: 1;
       -webkit-font-smoothing: antialiased; }
   .control-pager.pagination .l-btn-disabled {
-    opacity: 1; }
+    opacity: 1;
+    cursor: not-allowed; }
+    .control-pager.pagination .l-btn-disabled * {
+      cursor: not-allowed; }
     .control-pager.pagination .l-btn-disabled .pagination-first, .control-pager.pagination .l-btn-disabled .pagination-prev, .control-pager.pagination .l-btn-disabled .pagination-last, .control-pager.pagination .l-btn-disabled .pagination-next {
-      background-color: #F2F2F2; }
+      background-color: var(--pager-button-background1); }
       .control-pager.pagination .l-btn-disabled .pagination-first:before, .control-pager.pagination .l-btn-disabled .pagination-prev:before, .control-pager.pagination .l-btn-disabled .pagination-last:before, .control-pager.pagination .l-btn-disabled .pagination-next:before {
-        color: #BABABA; }
+        color: var(--pager-button-disable-color); }
+      .control-pager.pagination .l-btn-disabled .pagination-first:hover, .control-pager.pagination .l-btn-disabled .pagination-prev:hover, .control-pager.pagination .l-btn-disabled .pagination-last:hover, .control-pager.pagination .l-btn-disabled .pagination-next:hover {
+        background-color: var(--pager-button-background1);
+        box-shadow: none; }
   .control-pager.pagination .pagination-first:before {
     content: "\e90c"; }
   .control-pager.pagination .pagination-prev:before {

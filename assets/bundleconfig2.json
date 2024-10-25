@@ -1872,6 +1872,7 @@
       "styles-v2/components/utilities.css",
       "styles-v2/components/filter.css",
       "styles-v2/components/alert.css",
+      "styles-v2/components/title.css",
       "styles-v2/components/modal.css"
 
     ]
@@ -1946,11 +1947,13 @@
     "outputFileName": "bundles2-v2/site-transfer/reward.css",
     "inputFiles": [
       "styles-v2/components/tab.css",
+      "styles-v2/components/tooltip.css",
       "styles-v2/components/tables.css",
       "styles-v2/components/multiselect.css",
+      "styles-v2/components/fanex-multiselect.css",
       "styles-v2/components/pager.css",
       "styles-v2/components/daterangepicker-customize.css",
-      "styles-v2/vendors/daterangepicker.css"
+      "styles-v2/components/autosuggest.css"
     ]
   }
 ]

@@ -1,6 +1,5 @@
 ﻿
-:root {
-    // filter
+:root, :root [data-theme='light'] {
     --filter-btn-link-color: #0B599C;
     --filter-btn-link-bg: #D3DFEC;
     --filter-btn-link-bg-hover: #c3d3e5;
@@ -10,18 +9,9 @@
     --link-version-border: #A5A5A5;
     --link-version-color: #5A5A5A;
     --link-version-bg: #F2F2F2;
-}
-
-:root [data-theme='light'] {
-    --filter-btn-link-color: #0B599C;
-    --filter-btn-link-bg: #D3DFEC;
-    --filter-btn-link-bg-hover: #c3d3e5;
-    --filter-bg-ic: #E6E6E6;
-    --filter-bg-ic-hover: #dadada;
-    //switch version
-    --link-version-border: #A5A5A5;
-    --link-version-color: #5A5A5A;
-    --link-version-bg: #F2F2F2;
+    //color ic
+    --color-ic-copy: #444;
+    --color-ic-excel: #1F7244;
 }
 
 :root [data-theme='dark'] {
@@ -35,6 +25,9 @@
     --link-version-border: #8B8B8B;
     --link-version-color: #EDEDED;
     --link-version-bg: #696969;
+    //color ic
+    --color-ic-copy: #ededed;
+    --color-ic-excel: #18965B;
 }
 
 .button-link {
@@ -61,18 +54,28 @@
     flex-wrap: wrap;
     position: relative;
 
-    .ic-copy {
-        font-size: 24px;
+    .ic-copy, .ic-excel {
+        font-size: 20px;
     }
 
-    .ic-copy, .icon-copy {
+    .ic-copy {
+        color: var(--color-ic-copy);
+    }
+
+    .ic-excel {
+        &:before {
+            color: var(--color-ic-excel);
+        }
+    }
+
+    .ic-copy, .icon-copy, .ic-excel {
         background: var(--filter-bg-ic);
         width: 28px;
         height: 28px;
         display: block;
         text-align: center;
         border-radius: 3px;
-        padding: 2px;
+        padding: 4px;
         cursor: pointer;
 
         &:hover {
@@ -97,6 +100,7 @@
             margin-bottom: 4px;
             display: flex;
             align-items: center;
+            font-weight: bold;
 
             [class^="ic-"], [class*=" ic-"] {
                 font-size: 16px;
@@ -114,6 +118,15 @@
                     opacity: 0.75;
                 }
             }
+        }
+
+        input[type='text'] {
+            width: 160px;
+            color: var(--text-color);
+        }
+
+        #txt-username {
+            width: 210px
         }
     }
 

@@ -1,6 +1,7 @@
 ﻿
 :root, :root [data-theme='light'] {
     .tabs {
+        --tab-border-color: #ddd;
         &.super {
             --tab-text-color: #97141e;
             --tab-line-background: #67151b;
@@ -20,6 +21,8 @@
 
 :root [data-theme='dark'] {
     .tabs {
+        --tab-border-color: #313334;
+
         &.super, &.master, &.agent {
             --tab-text-color: #ededed;
             --tab-line-background: #EDEDED;
@@ -27,9 +30,50 @@
     }
 }
 
+.title-super {
+    color: #67151b;
+}
+
+.title-master {
+    color: #276443;
+}
+
+.title-agent {
+    color: #516e8f;
+}
+
 .tabs {
+   height: auto;
+
     .nav-tabs {
+        border: 0;
+        display: flex;
+
         > li {
+            display: inline-block;
+            margin: 0 4px -1px 0;
+            padding: 0;
+            position: relative;
+            border: 0;
+            float: none;
+
+            &:after {
+                content: '';
+                display: block;
+                height: 3px;
+                width: 0;
+                background: transparent;
+                transition: width .5s ease, background-color .5s ease;
+            }
+
+            a {
+                padding: 10px 20px 8px;
+                text-transform: none;
+                color: #666;
+                font-weight: bold;
+                outline: none;
+            }
+
             &.active, &:hover, &:focus {
                 a {
                     color: var(--tab-text-color);
@@ -37,6 +81,7 @@
 
 
                 &:after {
+                    width: 100%;
                     background: var(--tab-line-background);
                 }
             }

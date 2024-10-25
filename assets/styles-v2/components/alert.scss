@@ -56,11 +56,13 @@
     font-weight: bold;
 
     &:before {
-        font-family: Iconalpha;
+        font-family: icon-alpha-v2;
+        font-weight: normal;
         font-size: 20px;
         position: absolute;
         left: 9px;
-        top: 5px;
+        top:5px;
+        line-height: 1;
     }
 }
 
