@@ -65,19 +65,27 @@
     padding: 0;
     margin: 2px 0 0;
     list-style: none;
-    box-shadow: none; 
-    min-width: 100%!important;
+    box-shadow: none;
+    min-width: 100% !important;
+
     li {
         &.active {
             background-color: var(--dropdown-bg-hover);
         }
 
         a {
-            padding: 8px!important;
+            padding: 0 !important;
             white-space: nowrap;
             display: block;
             color: inherit;
             color: var(--dropdown-color);
+            cursor: pointer;
+
+            label {
+                padding: 8px !important;
+                cursor: pointer;
+                line-height: inherit !important;
+            }
 
             &:hover {
                 background-color: var(--dropdown-bg-hover);

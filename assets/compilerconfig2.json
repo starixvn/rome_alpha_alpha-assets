@@ -535,5 +535,33 @@
   {
     "outputFile": "styles/base/anybody-fonts.css",
     "inputFile": "styles/base/anybody-fonts.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/pager.css",
+    "inputFile": "styles-v2/components/pager.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/tab.css",
+    "inputFile": "styles-v2/components/tab.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/daterangepicker-customize.css",
+    "inputFile": "styles-v2/components/daterangepicker-customize.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/fanex-multiselect.css",
+    "inputFile": "styles-v2/components/fanex-multiselect.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/tooltip.css",
+    "inputFile": "styles-v2/components/tooltip.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/title.css",
+    "inputFile": "styles-v2/components/title.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/autosuggest.css",
+    "inputFile": "styles-v2/components/autosuggest.scss"
   }
 ]

@@ -1,27 +1,21 @@
-﻿:root {
+﻿:root, :root [data-theme='light'] {
   --table-header-bg: #BCCBDC;
   --table-height: 33px;
   --table-border: #A4A4A4;
   --table-bg-header: #A4A4A4;
-  --table-bg: #fff;
-  --table-bg-highlight: #FFF5E8;
-  --table-bg-hover: #f8eb95;
-  --table-color: var(--text-color);
-  --icon-color: #444; }
-
-:root [data-theme='light'] {
-  --table-header-bg: #BCCBDC;
-  --table-height: 33px;
-  --table-border: #A4A4A4;
-  --table-bg-header: #A4A4A4;
+  --table-header-bg2: #AEBCCC;
   --table-bg: #fff;
   --table-bg-hover: #F8F9FD;
   --table-bg-highlight: #FFF5E8;
   --table-color: var(--text-color);
-  --icon-color: #444; }
+  --table-footer-background: #65768A;
+  --table-footer-color: #FFFFFF;
+  --icon-color: #444;
+  --downline-background: #fff; }
 
 :root [data-theme='dark'] {
-  --table-header-bg: #253041;
+  --table-header-bg: #344259;
+  --table-header-bg2: #252F40;
   --table-height: 33px;
   --table-border: #464646;
   --table-bg-header: #A4A4A4;
@@ -29,10 +23,58 @@
   --table-bg-hover: #2E2F33;
   --table-bg-highlight: #332E24;
   --table-color: var(--text-color);
-  --icon-color: #ededed; }
+  --table-footer-background: #212A38;
+  --table-footer-color: #FFFFFF;
+  --icon-color: #ededed;
+  --downline-background: #171717; }
 
 .w-full {
   width: 100%; }
+
+.downline-table {
+  border: 1px solid var(--table-border);
+  border-bottom: 0;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  background: var(--downline-background);
+  border-radius: 3px 3px 0 0; }
+  .downline-table .list-downline {
+    background: none;
+    border-radius: 0;
+    overflow: hidden;
+    margin: 0; }
+    .downline-table .list-downline li {
+      color: #9d1c1c;
+      font-weight: 700;
+      text-transform: uppercase;
+      position: relative;
+      display: inline-block; }
+      .downline-table .list-downline li + li:before {
+        content: '\276F';
+        color: #333;
+        padding: 0 8px; }
+      .downline-table .list-downline li a {
+        color: #337ab7; }
+  .downline-table .list-icon {
+    margin-left: auto; }
+    .downline-table .list-icon ul {
+      display: flex;
+      align-items: center; }
+    .downline-table .list-icon li {
+      display: inline-block;
+      margin-left: 7px; }
+      .downline-table .list-icon li a {
+        display: block; }
+    .downline-table .list-icon [class^="ic-"], .downline-table .list-icon [class*=" ic-"] {
+      font-size: 20px;
+      cursor: pointer;
+      width: 24px;
+      height: 24px;
+      text-align: center;
+      padding: 2px;
+      border-radius: 3px;
+      background: rgba(0, 0, 0, 0.1); }
 
 .tb {
   background-color: transparent;
@@ -40,6 +82,34 @@
   .tb thead th {
     background-color: var(--table-header-bg);
     text-align: center; }
+    .tb thead th.sorting {
+      padding-right: 16px;
+      position: relative;
+      cursor: pointer; }
+      .tb thead th.sorting:after {
+        position: absolute;
+        content: "\e90e";
+        font-family: 'icon-alpha-v2' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        font-size: 16px;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%); }
+      .tb thead th.sorting.sorting-asc:after {
+        content: "\e90f";
+        color: #ff1500; }
+      .tb thead th.sorting.sorting-desc:after {
+        content: "\e910";
+        color: #ff1500; }
+  .tb thead .thead-row2 th {
+    background: var(--table-header-bg2);
+    border-top: 0; }
   .tb thead th, .tb tbody td, .tb tfoot td {
     height: var(--table-height);
     padding: 3px 6px;
@@ -51,34 +121,46 @@
     color: var(--icon-color); }
   .tb tbody tr.row-highlight td {
     background-color: var(--table-bg-highlight); }
+  .tb .tbl-footer {
+    font-weight: bold; }
+    .tb .tbl-footer td, .tb .tbl-footer th {
+      background: var(--table-footer-background);
+      color: var(--table-footer-color); }
 
 .tb-bordered {
-  border-collapse: collapse;
   border: 1px solid var(--table-border);
-  border-top: 0; }
+  border-collapse: separate;
+  /* Don't collapse */
+  border-spacing: 0;
+  border: 0; }
   .tb-bordered tbody tr th, .tb-bordered tbody tr td, .tb-bordered tfoot tr th, .tb-bordered tfoot tr td {
-    border-collapse: collapse;
-    border: 1px solid var(--table-border); }
+    border-bottom: 1px solid var(--table-border);
+    border-right: 1px solid var(--table-border); }
+    .tb-bordered tbody tr th:first-child, .tb-bordered tbody tr td:first-child, .tb-bordered tfoot tr th:first-child, .tb-bordered tfoot tr td:first-child {
+      border-left: 1px solid var(--table-border); }
   .tb-bordered thead tr th, .tb-bordered thead tr td {
-    border: 1px solid var(--table-border);
-    border-bottom: 0;
-    border-top: 0;
-    border-collapse: collapse;
-    box-shadow: inset 0 -1px 0 var(--table-border), inset 0 1px 0 var(--table-border); }
-  .tb-bordered tbody tr:first-child th, .tb-bordered tbody tr:first-child td {
-    border-top: 0; }
+    border-top: 1px solid var(--table-border);
+    border-bottom: 1px solid var(--table-border);
+    border-right: 1px solid var(--table-border);
+    border-collapse: collapse; }
+    .tb-bordered thead tr th:first-child, .tb-bordered thead tr td:first-child {
+      border-left: 1px solid var(--table-border); }
+
+.tb-alternative tbody tr:nth-child(even) th, .tb-alternative tbody tr:nth-child(even) td {
+  background: #E1E2E5; }
 
 .tb-hover tbody tr:hover td {
   background-color: var(--table-bg-hover); }
 
-.tb-freeze-header {
-  border-top: 0 !important; }
-  .tb-freeze-header thead tr th {
-    position: sticky !important;
-    position: -webkit-sticky !important;
-    top: 0 !important;
-    border-top: 0 !important;
-    z-index: 23;
-    background-clip: padding-box; }
-  .tb-freeze-header tbody tr:last-child td {
-    border-bottom: 0; }
+.tb-freeze-header thead tr th {
+  border-collapse: separate;
+  position: sticky !important;
+  position: -webkit-sticky !important;
+  top: 0 !important;
+  z-index: 23;
+  border-top: 1px solid var(--table-border);
+  border-bottom: 1px solid var(--table-border);
+  border-right: 1px solid var(--table-border); }
+
+.tb-freeze-header thead tr.thead-row2 th:first-child {
+  border-left: 0 !important; }

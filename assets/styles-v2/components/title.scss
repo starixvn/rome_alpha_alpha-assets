@@ -1,0 +1,33 @@
+﻿.page-title {
+    &.tabs {
+        border-bottom: 1px solid var(--border-title);
+    }
+
+    width: 100%;
+    border-bottom: 1px solid var(--border-title);
+    color: #9d1c1c;
+    font-size: var(--font-size);
+    font-weight: 700;
+    line-height: 39px;
+    margin: 0;
+    text-transform: uppercase;
+    display: flex;
+
+    .list-icon {
+        margin-left: auto;
+        text-transform: none;
+
+        .ic-arrow-up-circle {
+            color: #888;
+            font-size: 22px;
+            padding: 0 10px;
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+
+            &.icon-arrow-down-drop-circle {
+                transform: rotate(180deg);
+            }
+        }
+    }
+}

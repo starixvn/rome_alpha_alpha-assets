@@ -36,17 +36,25 @@
         border: 1px solid var(--multiselect-border) !important;
         border-radius: 3px;
         box-shadow: none !important;
-
+        text-align: left;
 
         &:hover {
             color: inherit;
         }
 
         .caret {
+            display: block;
             position: absolute;
             right: 10px;
-            top: 12px;
+            top: 50%;
+            transform: translateY(-50%);
         }
+    }
+
+    .btn {
+        box-shadow: none !important;
+        border: 1px solid var(--input-border);
+        border-radius: 3px;
     }
 }
 .multiselect {
@@ -55,7 +63,7 @@
     }
 
     .multiselect-selected-text {
-        width: 170px;
+        width: 128px;
         margin-right: 10px;
         display: inline-block;
         text-overflow: ellipsis;
@@ -72,33 +80,88 @@ ul.multiselect-container {
         border: 1px solid var(--multiselect-border) !important;
         box-shadow: none;
         box-shadow: none;
-        margin: 2px 0 0 0;
+        margin: 3px 0 0 0;
         border-radius: 3px;
         position: absolute;
         top: 100%;
         left: 0;
         padding: 0;
+        display: none;
+        z-index: 10;
+
+        .open & {
+            display: block;
+        }
 
         input[type=radio] {
             display: none;
         }
 
-        .active {
-            background: none !important;
-
-            a {
-                label {
-                    color: var(--text-color) !important;
-                }
-            }
-        }
-
         li {
-            &:hover {
-                background-color: var(--multiselect-bg-hover) !important;
+            .active, &:hover {
+                background: var(--multiselect-bg-hover) !important;
 
                 a {
-                    background-color: var(--multiselect-bg-hover) !important;
+                    label {
+                        color: var(--text-color) !important;
+                    }
+                }
+            }
+
+            &.multiselect-item.filter {
+                .input-group {
+                    width: 100%;
+                    margin: 10px;
+                    position: relative;
+
+                    .input-group-addon {
+                        display: none;
+                    }
+
+                    .multiselect-search {
+                        width: 100%;
+                        color: var(--text-color);
+                    }
+
+                    .input-group-btn {
+                        display: block;
+                        position: absolute;
+                        right: 0;
+                        top: 50%;
+                        transform: translateY(-50%);
+                        z-index: 10;
+
+                        .btn {
+                            border: 0;
+                            background: none;
+                            padding: 0;
+                            display: block;
+                        }
+
+                        .glyphicon-remove-circle {
+                            display: block;
+                            padding: 0 5px;
+
+                            &:before {
+                                font-family: 'icon-alpha-v2' !important;
+                                speak: never;
+                                font-style: normal;
+                                font-weight: normal;
+                                font-variant: normal;
+                                text-transform: none;
+                                line-height: 1;
+                                -webkit-font-smoothing: antialiased;
+                                content: "\e901";
+                                font-size: 16px;
+                                color: #808080;
+                                display: block;
+                            }
+                        }
+                    }
+                }
+
+                &:hover {
+                    background-color: transparent !important;
                 }
             }
 
@@ -108,14 +171,18 @@ ul.multiselect-container {
                 display: block;
                 white-space: nowrap;
                 padding: 0;
+                background-color: transparent !important;
+
+                &:focus {
+                    background: none;
+                }
 
                 label {
-                    white-space: nowrap;
+                    white-space: normal;
                 }
 
                 label.checkbox, label.radio {
-                    padding: 0 !important;
-                    line-height: 1.462;
+                    line-height: 1 !important;
                     margin: 0;
                     display: flex;
                     align-items: flex-start;

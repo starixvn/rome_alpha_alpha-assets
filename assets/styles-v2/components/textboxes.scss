@@ -50,6 +50,10 @@ input[type='text'], input[type='password'], input[type='email'], input[type='tel
         vertical-align: middle;
     }
 
+    .error & {
+        border: 1px solid var(--input-border-error);
+    }
+
     &:focus {
         box-shadow: none;
         border-radius: 3px;

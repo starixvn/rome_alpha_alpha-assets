@@ -56,11 +56,16 @@
   .dropdown-menu li.active {
     background-color: var(--dropdown-bg-hover); }
   .dropdown-menu li a {
-    padding: 8px !important;
+    padding: 0 !important;
     white-space: nowrap;
     display: block;
     color: inherit;
-    color: var(--dropdown-color); }
+    color: var(--dropdown-color);
+    cursor: pointer; }
+    .dropdown-menu li a label {
+      padding: 8px !important;
+      cursor: pointer;
+      line-height: inherit !important; }
     .dropdown-menu li a:hover {
       background-color: var(--dropdown-bg-hover);
       color: var(--dropdown-color) !important; }

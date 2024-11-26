@@ -5352,7 +5352,7 @@ a, a:focus, a:active, a:target, a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 7px 3px 10px;
+  padding: 5px 7px 5px 10px;
   min-height: 30px;
   line-height: 18px; }
   .breadcrumb-table .breadcrumb {

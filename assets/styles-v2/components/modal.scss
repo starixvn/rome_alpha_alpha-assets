@@ -67,6 +67,7 @@
     -webkit-overflow-scrolling: touch;
     outline: 0;
     height: auto;
+    display: none;
 
     .modal-content {
         background-color: var(--modal-bg);
@@ -84,17 +85,38 @@
                 margin: 0;
                 position: absolute;
                 -webkit-appearance: none;
-                width: auto;
-                height: auto;
+                appearance: none;
+                width: 20px;
+                height: 20px;
                 right: 7px;
                 top: 7px;
                 left: auto;
                 font-size: 23px;
                 text-shadow: none;
+                background: none;
+                border: 0;
+                outline: none;
+                padding: 0;
+
+
 
                 &:before {
+                    font-family: 'icon-alpha-v2' !important;
+                    speak: never;
+                    font-style: normal;
+                    font-weight: normal;
+                    font-variant: normal;
+                    text-transform: none;
+                    line-height: 1;
+                    -webkit-font-smoothing: antialiased;
+                    content: "\e901";
+                    display: block;
                     left: 0;
+                    font-size: 20px;
                 }
+
+
+               
             }
 
             .modal-title {
@@ -140,6 +162,8 @@
             padding: 0px 12px 15px;
 
             label {
+                cursor: pointer;
+
                 input {
                     display: inline-block;
                     vertical-align: bottom;
@@ -172,7 +196,7 @@
                 .icon-close {
                     right: 8px;
                     top: 7px;
-                }               
+                }
             }
 
             .modal-body {

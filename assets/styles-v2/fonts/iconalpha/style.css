@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-alpha-v2';
-  src:  url('fonts/icon-alpha-v2.eot?p3p9za');
-  src:  url('fonts/icon-alpha-v2.eot?p3p9za#iefix') format('embedded-opentype'),
-    url('fonts/icon-alpha-v2.ttf?p3p9za') format('truetype'),
-    url('fonts/icon-alpha-v2.woff?p3p9za') format('woff'),
-    url('fonts/icon-alpha-v2.svg?p3p9za#icon-alpha-v2') format('svg');
+  src:  url('fonts/icon-alpha-v2.eot?mgk1xa');
+  src:  url('fonts/icon-alpha-v2.eot?mgk1xa#iefix') format('embedded-opentype'),
+    url('fonts/icon-alpha-v2.ttf?mgk1xa') format('truetype'),
+    url('fonts/icon-alpha-v2.woff?mgk1xa') format('woff'),
+    url('fonts/icon-alpha-v2.svg?mgk1xa#icon-alpha-v2') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,49 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-error:before {
+  content: "\e93e";
+}
+.ic-info:before {
+  content: "\e93c";
+}
+.ic-success:before {
+  content: "\e93b";
+}
+.ic-warning:before {
+  content: "\e93d";
+}
+.ic-arrow-up-circle:before {
+  content: "\e95c";
+}
+.ic-calendar:before {
+  content: "\e94f";
+}
+.ic-sort:before {
+  content: "\e90e";
+}
+.ic-sorting-asc:before {
+  content: "\e90f";
+}
+.ic-sorting-desc:before {
+  content: "\e910";
+}
+.ic-arrow-left:before {
+  content: "\e909";
+}
+.ic-arrow-right:before {
+  content: "\e90b";
+}
+.ic-first:before {
+  content: "\e90c";
+}
+.ic-last:before {
+  content: "\e90d";
+}
+.ic-excel:before {
+  content: "\e90a";
+  color: #1f7244;
+}
 .ic-notification:before {
   content: "\e907";
 }
@@ -55,4 +98,7 @@
 }
 .ic-notification-off:before {
   content: "\e908";
+}
+.ic-chevron-double-right:before {
+  content: "\e951";
 }

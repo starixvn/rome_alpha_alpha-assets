@@ -1,5 +1,5 @@
 ﻿
-:root {
+:root, :root [data-theme='light'] {
     // button
     --btn-small-height: 22px;
     --btn-bg: #0b599c;
@@ -17,30 +17,8 @@
     --btn-border-remove: #CC0000;
     --btn-bg-refresh: rgba(24, 150, 91, 0.25);
     --btn-bg-refresh-off: #737373;
-    //multiselect
-    --multiselect-bg: #fff;
-    --multiselect-bg-hover: #ddd;
-    --multiselect-border: var(--border-color);
-}
-
-:root [data-theme='light'] {
-    // button    
-    --btn-small-height: 22px;
-    --btn-bg: #0b599c;
-    --btn-bg-hover: #0a5494;
-    --btn-color: #FFFFFF;
-    --btn-border-radius: 3px;
-    --btn-bg-cancel: #696969;
-    --btn-bg-cancel-hover: #636363;
-    --btn-bg-apply: #0b599c;
-    --btn-bg-apply-hover: #0a5494;
-    --btn-bg-save: #18965B;
-    --btn-bg-save-hover: #168e56;
-    --btn-bg-remove: #ffffff;
-    --btn-color-remove: #CC0000;
-    --btn-border-remove: #CC0000;
-    --btn-bg-refresh: rgba(24, 150, 91, 0.25);
-    --btn-bg-refresh-off: #737373;
+    --btn-bg-unpaid: #CC0000;
+    --btn-bg-unpaid-hover: #c20000;
     //multiselect
     --multiselect-bg: #fff;
     --multiselect-bg-hover: #ddd;
@@ -48,7 +26,7 @@
 }
 
 :root [data-theme='dark'] {
-    // button     
+    // button
     --btn-small-height: 22px;
     --btn-bg: #36587D;
     --btn-bg-hover: #335376;
@@ -65,6 +43,8 @@
     --btn-border-remove: #DD3333;
     --btn-bg-refresh: rgba(24, 150, 91, 0.25);
     --btn-bg-refresh-off: #737373;
+    --btn-bg-unpaid: #DD3333;
+    --btn-bg-unpaid-hover: #db2727;
     //multiselect
     --multiselect-bg: #2b2b2b;
     --multiselect-bg-hover: #ddd;
@@ -119,6 +99,14 @@ input[type=submit], input[type=reset] {
 
     &:hover, &:focus {
         background-color: var(--btn-bg-apply-hover);
+    }
+}
+.button-unpaid {
+    @extend %btn;
+    background-color: var(--btn-bg-unpaid);
+
+    &:hover, &:focus {
+        background-color: var(--btn-bg-unpaid-hover);
     }
 }
 .button-save {
