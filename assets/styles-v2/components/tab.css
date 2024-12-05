@@ -36,7 +36,8 @@
       padding: 0;
       position: relative;
       border: 0;
-      float: none; }
+      float: none;
+      font-size: var(--font-size); }
       .tabs .nav-tabs > li:after {
         content: '';
         display: block;

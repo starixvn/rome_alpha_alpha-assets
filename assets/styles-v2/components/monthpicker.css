@@ -1,0 +1,120 @@
+﻿:root, :root [data-theme='light'] {
+  --month-picker-border: #d1d1d1;
+  --month-picker-background: #fff;
+  --month-picker-color: #212121;
+  --month-picker-background-hover: #ddd;
+  --month-picker-color-arrow: #212121; }
+
+:root [data-theme='dark'] {
+  --month-picker-border: #474747;
+  --month-picker-background: #2b2b2b;
+  --month-picker-color: #ededed;
+  --month-picker-background-hover: #3c3c3c;
+  --month-picker-color-arrow: #ededed; }
+
+.monpickr-super-wrapper {
+  display: flex; }
+  .monpickr-super-wrapper > * {
+    float: none; }
+  .monpickr-super-wrapper .monpickr-down {
+    position: absolute;
+    right: 10px;
+    top: 7px; }
+  .monpickr-super-wrapper .ui-icon-circle-triangle-s {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    vertical-align: middle;
+    border-top: 5px dashed;
+    border-right: 5px solid transparent;
+    border-left: 5px solid transparent;
+    color: var(--month-picker-color-arrow);
+    cursor: pointer; }
+  .monpickr-super-wrapper .monpickr-label {
+    margin: 3px 12px 3px 12px; }
+    .monpickr-super-wrapper .monpickr-label .separator {
+      margin: 0 12px;
+      line-height: 2; }
+
+.monpickr-wrap-parent {
+  display: flex;
+  float: none !important;
+  height: auto !important; }
+  .monpickr-wrap-parent .monpickr-wrap {
+    position: relative !important; }
+    .monpickr-wrap-parent .monpickr-wrap .monpickr-input {
+      height: var(--input-height) !important;
+      line-height: var(--input-line-height);
+      border: 1px solid var(--input-border);
+      font-size: var(--font-size);
+      border-radius: 3px;
+      text-align: center;
+      width: 100% !important; }
+    .monpickr-wrap-parent .monpickr-wrap .prev, .monpickr-wrap-parent .monpickr-wrap .next {
+      position: absolute;
+      top: 0;
+      height: 100%;
+      width: 20px; }
+      .monpickr-wrap-parent .monpickr-wrap .prev span, .monpickr-wrap-parent .monpickr-wrap .next span {
+        display: inline-block;
+        vertical-align: middle;
+        border-top: 5px dashed;
+        border-right: 5px solid transparent;
+        border-left: 5px solid transparent;
+        color: var(--month-picker-color-arrow);
+        cursor: pointer;
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        overflow: hidden;
+        text-indent: 30px;
+        transform: rotate(90deg);
+        top: 8px;
+        left: 3px;
+        position: absolute; }
+    .monpickr-wrap-parent .monpickr-wrap .prev {
+      left: 0; }
+    .monpickr-wrap-parent .monpickr-wrap .next {
+      right: 0; }
+      .monpickr-wrap-parent .monpickr-wrap .next span {
+        transform: rotate(-90deg);
+        left: 7px; }
+
+.daypickr {
+  position: relative; }
+
+.daypickr-wrap-parent .daypickr-selected-day {
+  height: var(--input-height) !important;
+  line-height: var(--input-line-height);
+  border: 1px solid var(--input-border);
+  font-size: var(--font-size);
+  border-radius: 3px;
+  width: 56px !important;
+  cursor: pointer; }
+
+.monpickr-dropdown, .daypickr-dropdown {
+  position: absolute;
+  background: var(--month-picker-background);
+  border: 1px solid var(--month-picker-border);
+  border-radius: 3px;
+  overflow: auto;
+  width: 100% !important;
+  margin-top: 3px;
+  display: none;
+  max-height: 400px; }
+  .monpickr-dropdown li.year *, .daypickr-dropdown li.year * {
+    font-weight: bold;
+    font-size: 13px; }
+  .monpickr-dropdown li a, .daypickr-dropdown li a {
+    word-break: break-word;
+    white-space: normal;
+    padding: 8px 15px;
+    font-size: 11px;
+    font-weight: normal;
+    line-height: 1.42857;
+    color: var(--month-picker-color);
+    display: block; }
+    .monpickr-dropdown li a:hover, .daypickr-dropdown li a:hover {
+      background-color: var(--month-picker-background-hover); }
+  .monpickr-dropdown li.ui-state-active a, .daypickr-dropdown li.ui-state-active a {
+    background-color: var(--month-picker-background-hover); }

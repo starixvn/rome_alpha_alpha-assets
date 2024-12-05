@@ -12,6 +12,7 @@
     //color ic
     --color-ic-copy: #444;
     --color-ic-excel: #1F7244;
+    --color-ic-information: #0b599c;
 }
 
 :root [data-theme='dark'] {
@@ -28,6 +29,7 @@
     //color ic
     --color-ic-copy: #ededed;
     --color-ic-excel: #18965B;
+    --color-ic-information: #41a4ff;
 }
 
 .button-link {
@@ -68,6 +70,19 @@
         }
     }
 
+    .ic-information {
+        font-size: 18px;
+        position: relative;
+        top: -4px;
+
+        &:before {
+            color: var(--color-ic-information);
+        }
+    }
+
+    [class^="ic-"], [class*=" ic-"]{
+        cursor: pointer;
+    }
     .ic-copy, .icon-copy, .ic-excel {
         background: var(--filter-bg-ic);
         width: 28px;
@@ -93,7 +108,9 @@
         margin: 0 24px 16px 0;
         vertical-align: bottom;
         position: relative;
-
+        &-short{
+            margin-right: 12px;
+        }
         .label-form-control, label {
             color: var(--text-color-label);
             line-height: 16px;

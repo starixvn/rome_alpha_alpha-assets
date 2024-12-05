@@ -8,6 +8,7 @@
     --color-red: #C60000;
     --color-text-success: #137849;
     --color-text-error: #FE0000;
+    --color-note-star: #ff0101;
 }
 
 :root [data-theme='dark'] {
@@ -17,6 +18,7 @@
     --color-red: #E54748;
     --color-text-success: #7ECC4D;
     --color-text-error: #CC7070;
+    --color-note-star: #e54748;
 }
 
 ::-webkit-scrollbar {
@@ -103,6 +105,7 @@ html, body {
 body {
     font-family: var(--font-family);
     font-size: var(--font-size);
+    color: var(--text-color);
 }
 
 .ripple {
@@ -127,6 +130,7 @@ body {
         &:after {
             opacity: 1;
             animation: ripple 1s ease-out;
+        }
         }
     }
 }
@@ -172,10 +176,16 @@ a, a:focus, a:active, a:target, a:hover {
     font-weight: bold;
 }
 .center {
-    text-align: center;
+    text-align: center !important;
 }
-.text-right{
-    text-align: right;
+.text-right {
+    text-align: right !important;
+}
+.text-center {
+    text-align: center !important;
+}
+.text-left {
+    text-align: left!important;
 }
 .link {
     color: var(--link-color);
@@ -184,10 +194,23 @@ a, a:focus, a:active, a:target, a:hover {
         color: var(--link-hover-color);
     }
 }
-
+.ic-arrow-up-circle.down {
+    transform: rotate(180deg);
+}
 
 .display-none {
     display: none;
+}
+.hidden{
+    display: none!important;
+}
+.note {
+    width: 100%;
+    margin-bottom: 10px; 
+    .star {
+        color: var(--color-note-star);
+        padding-right: 8px;
+    }
 }
 @keyframes ripple {
     0% {

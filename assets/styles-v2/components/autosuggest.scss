@@ -1,6 +1,20 @@
-﻿.typeahead.dropdown-menu {
-    background: var(--multiselect-bg) !important;
-    border: 1px solid var(--multiselect-border) !important;
+﻿
+:root, :root [data-theme='light'] {
+    //multiselect
+    --typeahead-bg: #fff;
+    --typeahead-bg-hover: #E6E6E6;
+    --typeahead-border: #d1d1d1;
+}
+
+:root [data-theme='dark'] {
+    //multiselect
+    --typeahead-bg: #2b2b2b;
+    --typeahead-bg-hover: #3c3c3c;
+    --typeahead-border: #474747;
+}
+.typeahead.dropdown-menu {
+    background: var(--typeahead-bg) !important;
+    border: 1px solid var(--typeahead-border) !important;
     width: 250px;
     position: absolute;
     z-index: 10;
@@ -11,6 +25,12 @@
     font-size: 14px;
 
     li {
+        &.active {
+            a {
+                background: var(--typeahead-bg-hover);
+            }
+        }
+
         a {
             word-break: break-word;
             white-space: normal;

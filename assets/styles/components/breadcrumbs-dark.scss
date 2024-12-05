@@ -24,7 +24,7 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 5px 7px 5px 10px;
+    padding: 3px 7px 0px 10px;
     min-height: 30px;
     line-height: 18px;
 
@@ -55,6 +55,10 @@
 
                 .tooltip {
                     pointer-events: none;
+                }
+
+                .icon {
+                    margin: 0;
                 }
 
                 .icon-excel + .tooltip {

@@ -75,7 +75,8 @@
   --color-green: #1A991A;
   --color-red: #C60000;
   --color-text-success: #137849;
-  --color-text-error: #FE0000; }
+  --color-text-error: #FE0000;
+  --color-note-star: #ff0101; }
 
 :root [data-theme='dark'] {
   --bg-scroll-bar-thumb: #7E7E7E;
@@ -83,7 +84,8 @@
   --color-green: #1EB51E;
   --color-red: #E54748;
   --color-text-success: #7ECC4D;
-  --color-text-error: #CC7070; }
+  --color-text-error: #CC7070;
+  --color-note-star: #e54748; }
 
 ::-webkit-scrollbar {
   height: 16px;
@@ -152,8 +154,9 @@ html, body {
 
 body {
   font-family: var(--font-family);
-  font-size: var(--font-size); }
-
+    left: 50%;
+  color: var(--text-color); }
+  .ripple:hover:after {
 .ripple {
   position: relative; }
   .ripple:after {
@@ -206,7 +209,16 @@ a, a:focus, a:active, a:target, a:hover {
   font-weight: bold; }
 
 .center {
-  text-align: center; }
+  text-align: center !important; }
+
+.text-right {
+  text-align: right !important; }
+
+.text-center {
+  text-align: center !important; }
+
+.text-left {
+  text-align: left !important; }
 
 .text-right {
   text-align: right; }
@@ -216,8 +228,21 @@ a, a:focus, a:active, a:target, a:hover {
   .link:hover {
     color: var(--link-hover-color); }
 
+.ic-arrow-up-circle.down {
+  transform: rotate(180deg); }
+
 .display-none {
   display: none; }
+
+.hidden {
+  display: none !important; }
+
+.note {
+  width: 100%;
+  margin-bottom: 10px; }
+  .note .star {
+    color: var(--color-note-star);
+    padding-right: 8px; }
 
 @keyframes ripple {
   0% {

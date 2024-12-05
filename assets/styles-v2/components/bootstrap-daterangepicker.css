@@ -1,0 +1,160 @@
+﻿:root, :root [data-theme='light'] {
+  --bootstrap-dropdown-background: #fff;
+  --bootstrap-dropdown-border: #d1d1d1;
+  --bootstrap-dropdown-color: #333;
+  --bootstrap-dropdown-icon-color: #5B5B5B;
+  --bootstrap-dropdown-arrow-color-after: #fff;
+  --bootstrap-dropdown-arrow-color-before: #d1d1d1;
+  --bootstrap-dropdown-calendar-color-head: #333;
+  --bootstrap-dropdown-calendar-color: #444444;
+  --bootstrap-dropdown-calendar-color-active: #EDEDED;
+  --bootstrap-dropdown-calendar-color-disable: #9C9C9C;
+  --bootstrap-dropdown-calendar-color-today: #EDEDED;
+  --bootstrap-dropdown-calendar-background: #0B599C;
+  --bootstrap-dropdown-calendar-background-hover: #E6E6E6; }
+
+:root [data-theme='dark'] {
+  --bootstrap-dropdown-background: #2b2b2b;
+  --bootstrap-dropdown-border: #474747;
+  --bootstrap-dropdown-color: #ededed;
+  --bootstrap-dropdown-icon-color: #ededed;
+  --bootstrap-dropdown-arrow-color-after: #2b2b2b;
+  --bootstrap-dropdown-arrow-color-before: #474747;
+  --bootstrap-dropdown-calendar-color-head: #E7E7E7;
+  --bootstrap-dropdown-calendar-color: #EDEDED;
+  --bootstrap-dropdown-calendar-color-active: #EDEDED;
+  --bootstrap-dropdown-calendar-color-disable: #696969;
+  --bootstrap-dropdown-calendar-color-today: #EDEDED;
+  --bootstrap-dropdown-calendar-background: #36587D;
+  --bootstrap-dropdown-calendar-background-hover: #474747; }
+
+.input-group.date {
+  position: relative;
+  display: flex; }
+  .input-group.date input[type="text"] {
+    padding-right: 30px; }
+  .input-group.date .input-group-addon {
+    position: absolute;
+    top: 3px;
+    right: 2px; }
+    .input-group.date .input-group-addon .icon-calendar {
+      font-size: 24px;
+      color: var(--bootstrap-dropdown-icon-color);
+      display: inline-block;
+      position: relative; }
+      .input-group.date .input-group-addon .icon-calendar:before {
+        font-family: 'icon-alpha-v2' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        content: "\e94f"; }
+
+.bootstrap-datetimepicker-widget {
+  border: 1px solid var(--bootstrap-dropdown-border);
+  background-color: var(--bootstrap-dropdown-background);
+  width: 250px;
+  position: absolute;
+  margin-top: 5px;
+  padding: 4px; }
+  .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before, .bootstrap-datetimepicker-widget.dropdown-menu.bottom:after {
+    content: '';
+    display: inline-block;
+    position: absolute; }
+  .bootstrap-datetimepicker-widget.dropdown-menu.bottom:before {
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid var(--bootstrap-dropdown-arrow-color-before);
+    top: -7px;
+    left: 7px; }
+  .bootstrap-datetimepicker-widget.dropdown-menu.bottom:after {
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid var(--bootstrap-dropdown-arrow-color-after);
+    top: -6px;
+    left: 8px; }
+  .bootstrap-datetimepicker-widget .datepicker .table-condensed {
+    width: 100%; }
+    .bootstrap-datetimepicker-widget .datepicker .table-condensed thead th {
+      font-size: 14px;
+      padding: 2px 0px;
+      height: 31px;
+      color: var(--bootstrap-dropdown-calendar-color-head); }
+    .bootstrap-datetimepicker-widget .datepicker .table-condensed th, .bootstrap-datetimepicker-widget .datepicker .table-condensed td {
+      vertical-align: middle;
+      color: var(--bootstrap-dropdown-calendar-color);
+      font-size: 13px;
+      padding: 2px 0px;
+      position: relative;
+      text-align: center; }
+      .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day {
+        height: 30px;
+        line-height: 30px;
+        width: 30px; }
+        .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day:hover {
+          cursor: pointer; }
+        .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.old, .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.new, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.old, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.new {
+          color: #9C9C9C; }
+        .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.today, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.today {
+          color: #2491ef; }
+          .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.today:before, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.today:before {
+            content: "";
+            position: absolute;
+            width: 4px;
+            height: 4px;
+            bottom: 2px;
+            left: 50%;
+            margin-left: -2px;
+            border-radius: 6px;
+            background: #2197ff; }
+      .bootstrap-datetimepicker-widget .datepicker .table-condensed th .decade, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .year, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .month, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .decade, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .year, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .month {
+        display: inline-flex;
+        width: 54px;
+        height: 54px;
+        align-items: center;
+        justify-content: center;
+        line-height: 23px;
+        margin: 2px 1.5px;
+        cursor: pointer; }
+      .bootstrap-datetimepicker-widget .datepicker .table-condensed th .decade, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .year, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .month, .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .decade, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .year, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .month, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day {
+        color: var(--bootstrap-dropdown-calendar-color);
+        position: relative; }
+        .bootstrap-datetimepicker-widget .datepicker .table-condensed th .decade.disabled, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .year.disabled, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .month.disabled, .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.disabled, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .decade.disabled, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .year.disabled, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .month.disabled, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.disabled {
+          color: #9C9C9C;
+          cursor: not-allowed; }
+          .bootstrap-datetimepicker-widget .datepicker .table-condensed th .decade.disabled:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .year.disabled:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .month.disabled:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.disabled:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .decade.disabled:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .year.disabled:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .month.disabled:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.disabled:hover {
+            background: none !important; }
+          .bootstrap-datetimepicker-widget .datepicker .table-condensed th .decade.disabled:before, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .year.disabled:before, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .month.disabled:before, .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.disabled:before, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .decade.disabled:before, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .year.disabled:before, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .month.disabled:before, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.disabled:before {
+            display: none !important; }
+        .bootstrap-datetimepicker-widget .datepicker .table-condensed th .decade.active, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .year.active, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .month.active, .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.active, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .decade.active, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .year.active, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .month.active, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.active {
+          background-color: var(--bootstrap-dropdown-calendar-background) !important;
+          color: var(--bootstrap-dropdown-calendar-color-active); }
+        .bootstrap-datetimepicker-widget .datepicker .table-condensed th .decade:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .year:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed th .month:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .decade:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .year:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed td .month:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day:hover {
+          background: var(--bootstrap-dropdown-calendar-background-hover); }
+    .bootstrap-datetimepicker-widget .datepicker .table-condensed thead tr th, .bootstrap-datetimepicker-widget .datepicker .table-condensed thead tr td {
+      color: var(--bootstrap-dropdown-calendar-color-head); }
+    .bootstrap-datetimepicker-widget .datepicker .table-condensed thead .glyphicon {
+      display: block;
+      cursor: pointer; }
+      .bootstrap-datetimepicker-widget .datepicker .table-condensed thead .glyphicon:before {
+        font-family: 'icon-alpha-v2' !important;
+        speak: never;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        font-size: 22px; }
+    .bootstrap-datetimepicker-widget .datepicker .table-condensed thead .glyphicon-chevron-left:before {
+      content: "\e909"; }
+    .bootstrap-datetimepicker-widget .datepicker .table-condensed thead .glyphicon-chevron-right:before {
+      content: "\e90b"; }
+    .bootstrap-datetimepicker-widget .datepicker .table-condensed thead .picker-switch {
+      font-size: 14px;
+      cursor: pointer; }

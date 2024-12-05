@@ -19,7 +19,11 @@
     --multiselect-bg-hover: #3c3c3c;
     --multiselect-border: #474747;
 }
-
+.multiselect-short {
+    .dropdown-menu.multiselect-container{
+        padding-right: 10px!important;
+    }
+}
 .btn-group {
     position: relative;
 
@@ -37,6 +41,10 @@
         border-radius: 3px;
         box-shadow: none !important;
         text-align: left;
+
+        &.error {
+            border-color: var(--input-border-error) !important;
+        }
 
         &:hover {
             color: inherit;
@@ -70,7 +78,7 @@
         white-space: nowrap;
         overflow: hidden;
         text-align: left;
-        line-height: 1;
+        line-height: 26px;
         color: var(--text-color);
     }
 }
@@ -179,6 +187,7 @@ ul.multiselect-container {
 
                 label {
                     white-space: normal;
+                    font-weight: normal;
                 }
 
                 label.checkbox, label.radio {
@@ -189,7 +198,7 @@ ul.multiselect-container {
 
                     [type="checkbox"] {
                         margin: 0 5px 0 0;
-                        top: 2px;
+                        top: 1px;
                         position: relative;
                     }
                 }

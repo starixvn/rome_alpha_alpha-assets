@@ -13,6 +13,9 @@
   --multiselect-bg-hover: #3c3c3c;
   --multiselect-border: #474747; }
 
+.multiselect-short .dropdown-menu.multiselect-container {
+  padding-right: 10px !important; }
+
 .btn-group {
   position: relative; }
   .btn-group button.multiselect.dropdown-toggle.btn.btn-default {
@@ -29,6 +32,8 @@
     border-radius: 3px;
     box-shadow: none !important;
     text-align: left; }
+    .btn-group button.multiselect.dropdown-toggle.btn.btn-default.error {
+      border-color: var(--input-border-error) !important; }
     .btn-group button.multiselect.dropdown-toggle.btn.btn-default:hover {
       color: inherit; }
     .btn-group button.multiselect.dropdown-toggle.btn.btn-default .caret {
@@ -53,7 +58,7 @@
   white-space: nowrap;
   overflow: hidden;
   text-align: left;
-  line-height: 1;
+  line-height: 26px;
   color: var(--text-color); }
 
 ul.multiselect-container.dropdown-menu {
@@ -126,7 +131,8 @@ ul.multiselect-container.dropdown-menu {
     ul.multiselect-container.dropdown-menu li a:focus {
       background: none; }
     ul.multiselect-container.dropdown-menu li a label {
-      white-space: normal; }
+      white-space: normal;
+      font-weight: normal; }
     ul.multiselect-container.dropdown-menu li a label.checkbox, ul.multiselect-container.dropdown-menu li a label.radio {
       line-height: 1 !important;
       margin: 0;
@@ -134,7 +140,7 @@ ul.multiselect-container.dropdown-menu {
       align-items: flex-start; }
       ul.multiselect-container.dropdown-menu li a label.checkbox [type="checkbox"], ul.multiselect-container.dropdown-menu li a label.radio [type="checkbox"] {
         margin: 0 5px 0 0;
-        top: 2px;
+        top: 1px;
         position: relative; }
   ul.multiselect-container.dropdown-menu .multiselect-all a {
     border-bottom: 1px solid var(--multiselect-border) !important; }

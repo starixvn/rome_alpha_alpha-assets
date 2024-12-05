@@ -5352,7 +5352,7 @@ a, a:focus, a:active, a:target, a:hover {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 7px 5px 10px;
+  padding: 3px 7px 0px 10px;
   min-height: 30px;
   line-height: 18px; }
   .breadcrumb-table .breadcrumb {
@@ -5373,6 +5373,8 @@ a, a:focus, a:active, a:target, a:hover {
       margin-right: 10px; }
       .breadcrumb-table .list-icon ul li .tooltip {
         pointer-events: none; }
+      .breadcrumb-table .list-icon ul li .icon {
+        margin: 0; }
       .breadcrumb-table .list-icon ul li .icon-excel + .tooltip {
         white-space: nowrap; }
         .breadcrumb-table .list-icon ul li .icon-excel + .tooltip.top .tooltip-inner:before {

@@ -1,0 +1,65 @@
+﻿:root, :root [data-theme='light'] {
+    --daterange-dropdown-background: #fff;
+    --daterange-dropdown-background-hover: #ddd;
+    --daterange-dropdown-color: #212121;
+    --daterange-dropdown-border: #dfdfdf;
+}
+
+:root [data-theme='dark'] {
+    --daterange-dropdown-background: #2b2b2b;
+    --daterange-dropdown-background-hover: #3c3c3c;
+    --daterange-dropdown-color: #ededed;
+    --daterange-dropdown-border: #474747;
+}
+
+.dropdown.daterange-dropdown {
+    border: 0;
+    width: auto;
+
+    &.open {
+        .dropdown-menu {
+            display: block;
+        }
+    }
+
+    .dropdown-toggle {
+        color: var(--btn-color);
+        padding: 0 30px 0 16px;
+        top: 11px;
+        right: 10px;
+
+        .caret {
+            color: inherit;
+            top: 11px;
+            right: 9px;
+        }
+    }
+
+    .dropdown-menu {
+        position: absolute;
+        top: 31px;
+        border: 1px solid var(--daterange-dropdown-border);
+        background: var(--daterange-dropdown-background);
+        border-radius: 3px;
+        padding: 0;
+        min-width: 160px;
+        display: none;
+
+        li {
+            a {
+                word-break: break-word;
+                white-space: normal;
+                padding: 8px 15px;
+                font-size: 13px;
+                font-weight: normal;
+                line-height: 1.42857;
+                color: var(--daterange-dropdown-color);
+                display: block;
+
+                &:hover {
+                    background: var(--daterange-dropdown-background-hover);
+                }
+            }
+        }
+    }
+}

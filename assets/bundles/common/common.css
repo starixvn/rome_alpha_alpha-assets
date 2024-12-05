@@ -5253,7 +5253,7 @@ input[type=reset], .btn-reset {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 5px 7px 5px 10px;
+  padding: 3px 7px 0px 10px;
   min-height: 30px;
   line-height: 18px; }
   .breadcrumb-table .breadcrumb {
@@ -5272,6 +5272,8 @@ input[type=reset], .btn-reset {
       margin-left: 10px; }
       .breadcrumb-table .list-icon ul li .tooltip {
         pointer-events: none; }
+      .breadcrumb-table .list-icon ul li .icon {
+        margin: 0; }
       .breadcrumb-table .list-icon ul li .icon-excel + .tooltip {
         white-space: nowrap; }
         .breadcrumb-table .list-icon ul li .icon-excel + .tooltip.top .tooltip-inner:before {

@@ -4,11 +4,14 @@
 }
 
 :root [data-theme='light'] {
-     
+    --color-loading: #ffffff;
+    --loading-overlay: #fff;
+    --loading-image: url(../images/ajax-loader.gif);
 }
 
 :root [data-theme='dark'] {
-     
+    --loading-overlay: #000;
+    --loading-image: url(../images/ajax-loader-dark.gif);
 }
 .hide {
     display: none !important;
@@ -25,12 +28,7 @@
     border-left: 5px solid transparent;
     color: var(--text-color);
 }
-.text-center{
-    text-align: center;
-}
-.text-left{
-    text-align: left;
-}
+
 .require, .red {
     color: var(--color-require);
 }
@@ -116,9 +114,17 @@
     }
 }
 
-.blockOverlay{
-    z-index: 10000!important;
+.blockOverlay {
+    z-index: 10000 !important;
+    background: var(--loading-overlay);
 }
+.blockMsg {
+    width: 100px;
+    height: 100px;
+    z-index: 10001 !important;
+    background: var(--loading-image) center center no-repeat;
+}
+
 .fade {
     opacity: 0;
     -webkit-transition: opacity 0.15s linear;

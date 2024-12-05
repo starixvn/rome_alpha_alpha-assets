@@ -8,7 +8,8 @@
   --link-version-color: #5A5A5A;
   --link-version-bg: #F2F2F2;
   --color-ic-copy: #444;
-  --color-ic-excel: #1F7244; }
+  --color-ic-excel: #1F7244;
+  --color-ic-information: #0b599c; }
 
 :root [data-theme='dark'] {
   --filter-btn-link-color: #41A4FF;
@@ -20,7 +21,8 @@
   --link-version-color: #EDEDED;
   --link-version-bg: #696969;
   --color-ic-copy: #ededed;
-  --color-ic-excel: #18965B; }
+  --color-ic-excel: #18965B;
+  --color-ic-information: #41a4ff; }
 
 .button-link {
   display: block;
@@ -49,6 +51,14 @@
     color: var(--color-ic-copy); }
   .filter .ic-excel:before {
     color: var(--color-ic-excel); }
+  .filter .ic-information {
+    font-size: 18px;
+    position: relative;
+    top: -4px; }
+    .filter .ic-information:before {
+      color: var(--color-ic-information); }
+  .filter [class^="ic-"], .filter [class*=" ic-"] {
+    cursor: pointer; }
   .filter .ic-copy, .filter .icon-copy, .filter .ic-excel {
     background: var(--filter-bg-ic);
     width: 28px;
@@ -67,6 +77,8 @@
     margin: 0 24px 16px 0;
     vertical-align: bottom;
     position: relative; }
+    .filter .form-group-short {
+      margin-right: 12px; }
     .filter .form-group .label-form-control, .filter .form-group label {
       color: var(--text-color-label);
       line-height: 16px;

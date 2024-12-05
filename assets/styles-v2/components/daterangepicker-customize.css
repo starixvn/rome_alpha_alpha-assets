@@ -286,7 +286,7 @@
         height: 100%;
         opacity: 0;
         appearance: none;
-        background-color: var(--datarangepicker-background);
+        background: transparent;
         border: 0;
         text-transform: uppercase;
         outline: 0; }

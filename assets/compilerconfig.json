@@ -534,5 +534,17 @@
   {
     "outputFile": "styles-v2/components/autosuggest.css",
     "inputFile": "styles-v2/components/autosuggest.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/daterange-dropdown.css",
+    "inputFile": "styles-v2/components/daterange-dropdown.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/bootstrap-daterangepicker.css",
+    "inputFile": "styles-v2/components/bootstrap-daterangepicker.scss"
+  },
+  {
+    "outputFile": "styles-v2/components/monthpicker.css",
+    "inputFile": "styles-v2/components/monthpicker.scss"
   }
 ]

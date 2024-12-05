@@ -1,23 +1,25 @@
-﻿:root {
+﻿:root, :root [data-theme='light'] {
   --dropdown-bg: #ffffff;
   --dropdown-bg-hover: #e5e5e5;
   --dropdown-border: #D1D1D1;
-  --dropdown-color: var(--text-color); }
-
-:root [data-theme='light'] {
-  --dropdown-bg: #ffffff;
-  --dropdown-bg-hover: #e5e5e5;
-  --dropdown-border: #D1D1D1;
-  --dropdown-color: var(--text-color); }
+  --dropdown-color: var(--text-color);
+  --dropdown-border2: #cccccc; }
 
 :root [data-theme='dark'] {
   --dropdown-bg: #2b2b2b;
   --dropdown-bg-hover: #3c3c3c;
   --dropdown-border: #474747;
-  --dropdown-color: var(--text-color); }
+  --dropdown-color: var(--text-color);
+  --dropdown-border2: #474747; }
 
 .open > .dropdown-menu {
   display: block; }
+
+select.select-multiple {
+  border: 1px solid var(--input-border);
+  height: 28px;
+  width: 100%;
+  background: transparent; }
 
 .dropdown {
   background: var(--dropdown-bg);
@@ -32,7 +34,7 @@
   .dropdown .dropdown-toggle {
     display: block;
     padding: 0 20px 0 7px;
-    font-size: 14px;
+    font-size: 13px;
     line-height: 24px;
     color: var(--dropdown-color); }
     .dropdown .dropdown-toggle:hover, .dropdown .dropdown-toggle:focus {
@@ -42,7 +44,7 @@
       right: 4px;
       position: absolute; }
 
-.dropdown-menu {
+.dropdown-menu.multiselect-container {
   position: absolute;
   background: var(--dropdown-bg);
   border: 1px solid var(--dropdown-border) !important;
@@ -53,22 +55,62 @@
   list-style: none;
   box-shadow: none;
   min-width: 100% !important; }
-  .dropdown-menu li.active {
+  .dropdown-menu.multiselect-container li.active {
     background-color: var(--dropdown-bg-hover); }
-  .dropdown-menu li a {
+  .dropdown-menu.multiselect-container li a {
     padding: 0 !important;
     white-space: nowrap;
     display: block;
     color: inherit;
     color: var(--dropdown-color);
     cursor: pointer; }
-    .dropdown-menu li a label {
+    .dropdown-menu.multiselect-container li a label {
       padding: 8px !important;
       cursor: pointer;
       line-height: inherit !important; }
-    .dropdown-menu li a:hover {
+    .dropdown-menu.multiselect-container li a:hover {
       background-color: var(--dropdown-bg-hover);
       color: var(--dropdown-color) !important; }
+  .dropdown-menu.multiselect-container li.multiselect-group > div {
+    display: flex;
+    align-items: center;
+    padding: 6px 2px 6px 3px !important;
+    line-height: 1.6 !important;
+    color: var(--text-color-label); }
+    .dropdown-menu.multiselect-container li.multiselect-group > div > b {
+      display: flex;
+      width: 100%; }
+      .dropdown-menu.multiselect-container li.multiselect-group > div > b .caret {
+        margin-left: auto;
+        align-self: center; }
+    .dropdown-menu.multiselect-container li.multiselect-group > div [type="checkbox"] {
+      margin: 0 5px 0 0 !important;
+      align-items: center;
+      top: 0;
+      position: relative; }
+  .dropdown-menu.multiselect-container li.multiselect-nested-item {
+    padding-left: 20px; }
+
+.product-multiselect-container .multiselect ~ .dropdown-menu.multiselect-container {
+  padding: 5px 0 0 10px; }
+  .product-multiselect-container .multiselect ~ .dropdown-menu.multiselect-container li {
+    background-color: transparent !important;
+    border: 0 !important; }
+    .product-multiselect-container .multiselect ~ .dropdown-menu.multiselect-container li:hover {
+      background-color: transparent !important; }
+    .product-multiselect-container .multiselect ~ .dropdown-menu.multiselect-container li.multiselect-all {
+      background-color: transparent !important;
+      border: 0 !important;
+      border-bottom: 1px solid var(--dropdown-border2) !important; }
+      .product-multiselect-container .multiselect ~ .dropdown-menu.multiselect-container li.multiselect-all a {
+        background-color: transparent !important;
+        border: 0 !important; }
+    .product-multiselect-container .multiselect ~ .dropdown-menu.multiselect-container li a {
+      background-color: transparent !important;
+      border: 0 !important; }
+      .product-multiselect-container .multiselect ~ .dropdown-menu.multiselect-container li a label.checkbox {
+        padding: 6px 2px 6px 3px !important;
+        line-height: 1.6 !important; }
 
 .select2-container.select2-container--default .select2-selection--single {
   border: 1px solid var(--input-border);

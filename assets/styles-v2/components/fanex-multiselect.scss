@@ -118,13 +118,79 @@
         margin-bottom: 0;
         display: flex;
         align-items: center;
+        position: relative;
 
         .fanex-multiselect-helper-reset {
             border: 0;
+
+            .fanex-multiselect-icon-dropdown {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 7px;
+                right: 0;
+
+                &.fanex-multiselect-icon-expand {
+                    transform: rotate(-90deg);
+                }
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    vertical-align: middle;
+                    border-top: 5px dashed;
+                    border-right: 5px solid transparent;
+                    border-left: 5px solid transparent;
+                    color: var(--fanex-multiselect-color-arrow);
+                    left: 50%;
+                    top: 50%;
+                    cursor: pointer;
+                    transform: translate(-50%, -50%)
+                }
+            }
         }
     }
 
- 
+    .fanex-multiselect-li-group {
+        .fanex-multiselect-div {
+            position: relative;
+
+            .collapseClass {
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                top: 7px;
+                right: 0;
+                cursor: pointer;
+
+                &.rtPlus {
+                    transform: rotate(-90deg);
+                }
+
+                &:after {
+                    position: absolute;
+                    content: "";
+                    width: 0;
+                    height: 0;
+                    vertical-align: middle;
+                    border-top: 5px dashed;
+                    border-right: 5px solid transparent;
+                    border-left: 5px solid transparent;
+                    color: var(--fanex-multiselect-color-arrow);
+                    left: 50%;
+                    top: 50%;
+                    cursor: pointer;
+                    transform: translate(-50%, -50%);
+                }
+            }
+        }
+
+        .fanex-multiselect-ul-group {
+            padding-left: 20px;
+        }
+    }
 }
 .hide-item{
     display: none!important;

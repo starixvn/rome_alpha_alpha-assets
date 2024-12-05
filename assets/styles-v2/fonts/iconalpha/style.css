@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-alpha-v2';
-  src:  url('fonts/icon-alpha-v2.eot?mgk1xa');
-  src:  url('fonts/icon-alpha-v2.eot?mgk1xa#iefix') format('embedded-opentype'),
-    url('fonts/icon-alpha-v2.ttf?mgk1xa') format('truetype'),
-    url('fonts/icon-alpha-v2.woff?mgk1xa') format('woff'),
-    url('fonts/icon-alpha-v2.svg?mgk1xa#icon-alpha-v2') format('svg');
+  src:  url('fonts/icon-alpha-v2.eot?uxfnip');
+  src:  url('fonts/icon-alpha-v2.eot?uxfnip#iefix') format('embedded-opentype'),
+    url('fonts/icon-alpha-v2.ttf?uxfnip') format('truetype'),
+    url('fonts/icon-alpha-v2.woff?uxfnip') format('woff'),
+    url('fonts/icon-alpha-v2.svg?uxfnip#icon-alpha-v2') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-arrow-down-circle:before {
+  content: "\e914";
+}
+.ic-information:before {
+  content: "\e913";
+  color: #22a2ff;
+}
+.ic-time:before {
+  content: "\e91a";
+}
+.ic-minus:before {
+  content: "\e911";
+  color: #fff;
+}
+.ic-plus:before {
+  content: "\e912";
+  color: #fff;
+}
 .ic-error:before {
   content: "\e93e";
 }
@@ -66,7 +84,7 @@
 }
 .ic-excel:before {
   content: "\e90a";
-  color: #1f7244;
+  color: #2e9e60;
 }
 .ic-notification:before {
   content: "\e907";

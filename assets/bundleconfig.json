@@ -1930,6 +1930,97 @@
       "styles-v2/components/daterangepicker-customize.css",
       "styles-v2/components/autosuggest.css"
     ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-report/outstanding.css",
+    "inputFiles": [
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-report/enteredresult.css",
+    "inputFiles": [
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-report/winlossdetailnew.css",
+    "inputFiles": [
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/tooltip.css",
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/fanex-multiselect.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/autosuggest.css",
+      "styles-v2/components/daterangepicker-customize.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-report/winlossanalysischart.css",
+    "inputFiles": [
+      "styles-v2/components/monthpicker.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-report/winlossbyproduct.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-report/superwinlossdetailbypt.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-report/commissionbybettype.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-report/statement.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-report/progressivecontribution.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-report/betcredittracking.css",
+    "inputFiles": [
+      "styles-v2/components/tab.css",
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/monthpicker.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/pager.css"
+    ]
   }
 
 ]
