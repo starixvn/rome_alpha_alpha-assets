@@ -881,7 +881,7 @@
     },
     ja : {
       OK      : "OK",
-      CANCEL  : "キャンセル",
+      CANCEL  : "キャンセルする",
       CONFIRM : "確認"
     },
     lt : {

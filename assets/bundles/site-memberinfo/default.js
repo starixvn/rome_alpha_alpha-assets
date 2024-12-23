@@ -4239,7 +4239,7 @@ _36.onRefresh.call(this,_36.pageNumber,_36.pageSize);
     },
     ja : {
       OK      : "OK",
-      CANCEL  : "キャンセル",
+      CANCEL  : "キャンセルする",
       CONFIRM : "確認"
     },
     lt : {
