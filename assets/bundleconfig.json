@@ -1899,7 +1899,10 @@
     "inputFiles": [
       "js-v2/components/chartjs/chart_v4.4.2.js",
       "js-v2/components/chartjs/chartjs-plugin-datalabels.js"
-    ]
+    ],
+    "minify": {
+      "enabled": false
+    }
   },
   {
     "outputFileName": "bundles-v2/site-memberinfo/member-betting-behavior.js",

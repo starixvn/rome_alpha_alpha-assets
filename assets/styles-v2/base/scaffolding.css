@@ -176,13 +176,16 @@ body {
 
 .text-red {
   color: var(--color-red); }
+
 .text-green {
   color: var(--color-green); }
+
 .text-error {
   color: var(--color-text-error); }
 
 .text-success {
   color: var(--color-text-success); }
+
 .text-red {
   color: var(--color-red); }
 
