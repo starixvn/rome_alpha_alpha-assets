@@ -240,6 +240,17 @@
         }
     }
 }
+.tb-alternative {
+    tbody {
+        tr {
+            &:nth-child(even) {
+                th, td {
+                    background: #E1E2E5;
+                }
+            }
+        }
+    }
+}
 .tb-hover {
     tbody {
         tr {

@@ -149,9 +149,14 @@
 .tb-alternative tbody tr:nth-child(even) th, .tb-alternative tbody tr:nth-child(even) td {
   background: #E1E2E5; }
 
+.tb-alternative tbody tr:nth-child(even) th, .tb-alternative tbody tr:nth-child(even) td {
+  background: #E1E2E5; }
+
 .tb-hover tbody tr:hover td {
   background-color: var(--table-bg-hover); }
 
+  .tb-freeze-header thead tr.thead-row1 th[colspan] {
+    box-shadow: inset 0 1px 0 var(--table-border); }
 .tb-freeze-header thead tr th {
   border-collapse: separate;
   position: sticky !important;
