@@ -1183,6 +1183,29 @@
       "js/libs/clipboard/clipboard.js"
     ]
   },
+  {
+    "outputFileName": "bundles2/site-reports/filter-new.css",
+    "inputFiles": [
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2/site-reports/filter-new.js",
+    "inputFiles": [
+      "js/libs/moment/locale/en-gb.js",
+      "js/libs/moment/locale/ja.js",
+      "js/libs/moment/locale/ko.js",
+      "js/libs/moment/locale/th.js",
+      "js/libs/moment/locale/vi.js",
+      "js/libs/moment/locale/zh-cn.js",
+      "js/libs/moment/locale/zh-tw.js",
+      "js/libs/moment/switch-locale.js",
+      "js/components/daterangepicker/jquery.daterangepicker.js",
+      "js/components/typeahead/typeahead.js",
+      "js/libs/clipboard/clipboard.js"
+    ]
+  },
   /************************** Dark Mode ************************/
   {
     "outputFileName": "bundles2/common/common-dark.css",
@@ -1928,7 +1951,10 @@
     "inputFiles": [
       "js-v2/components/chartjs/chart_v4.4.2.js",
       "js-v2/components/chartjs/chartjs-plugin-datalabels.js"
-    ]
+    ],
+    "minify": {
+      "enabled": false
+    }
   },
   {
     "outputFileName": "bundles2-v2/site-memberinfo/member-betting-behavior.js",
@@ -1944,7 +1970,14 @@
     ]
   },
   {
-    "outputFileName": "bundles2-v2/site-transfer/reward.css",
+    "outputFileName": "bundles/site-reports/filter-new-dark.css",
+    "inputFiles": [
+      "styles/vendors/daterangepicker/jquery.daterangepicker.css",
+      "styles/components/daterangepicker-customize-dark.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles-v2/site-transfer/reward.css",
     "inputFiles": [
       "styles-v2/components/tab.css",
       "styles-v2/components/tooltip.css",
@@ -1956,4 +1989,5 @@
       "styles-v2/components/autosuggest.css"
     ]
   }
+
 ]

@@ -11950,7 +11950,9 @@ var NexDatePickerHelper = NexDatePickerHelper ||
 
         var html = [
             this._renderButton(),
-            '<div class="fanex-multiselect-options fanex-multiselect-treeview fanex-multiselect-shadow" id="', dropdownContainerId, '">'
+            '<div class="fanex-multiselect-options fanex-multiselect-treeview fanex-multiselect-shadow',
+            !this.options.showFilter ? ' multiselect-nosearch' : '',
+            '" id="', dropdownContainerId, '">'
         ];
         if (this.options.listData.length) {
             html.push(this._renderFilterAndSelectAll(), this._renderCheckboxContainer());

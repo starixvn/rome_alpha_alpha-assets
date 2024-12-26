@@ -88,6 +88,10 @@
     padding: 12px 0px 0 12px;
     z-index: 10;
 
+    &.multiselect-nosearch {
+        padding-top: 4px;
+    }
+
     .high-light-item {
         color: #045ace;
 

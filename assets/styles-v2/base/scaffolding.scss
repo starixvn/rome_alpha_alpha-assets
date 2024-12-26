@@ -123,13 +123,28 @@ body {
         pointer-events: none;
         transform: scale(0);
     }
-
     &:hover {
         &:after {
             opacity: 1;
             animation: ripple 1s ease-out;
         }
     }
+}
+
+.text-red {
+    color: var(--color-red);
+}
+
+.text-green {
+    color: var(--color-green);
+}
+
+.text-error {
+    color: var(--color-text-error);
+}
+
+.text-success {
+    color: var(--color-text-success);
 }
 
 .text-red {

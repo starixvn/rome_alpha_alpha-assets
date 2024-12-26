@@ -186,6 +186,18 @@ body {
 .text-success {
   color: var(--color-text-success); }
 
+.text-red {
+  color: var(--color-red); }
+
+.text-green {
+  color: var(--color-green); }
+
+.text-error {
+  color: var(--color-text-error); }
+
+.text-success {
+  color: var(--color-text-success); }
+
 a, a:focus, a:active, a:target, a:hover {
   outline: none;
   text-decoration: none; }
