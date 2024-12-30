@@ -35,12 +35,13 @@
     padding-right: 30px; }
   .input-group.date .input-group-addon {
     position: absolute;
-    top: 3px;
-    right: 2px; }
+    top: 4px;
+    right: 4px;
+    cursor: pointer; }
     .input-group.date .input-group-addon .icon-calendar {
-      font-size: 24px;
+      font-size: 20px;
       color: var(--bootstrap-dropdown-icon-color);
-      display: inline-block;
+      display: block;
       position: relative; }
       .input-group.date .input-group-addon .icon-calendar:before {
         font-family: 'icon-alpha-v2' !important;
@@ -52,7 +53,8 @@
         line-height: 1;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-        content: "\e94f"; }
+        content: "\e94f";
+        display: block; }
 
 .bootstrap-datetimepicker-widget {
   border: 1px solid var(--bootstrap-dropdown-border);
@@ -97,8 +99,6 @@
         width: 30px; }
         .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day:hover, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day:hover {
           cursor: pointer; }
-        .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.old, .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.new, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.old, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.new {
-          color: #9C9C9C; }
         .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.today, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.today {
           color: #2491ef; }
           .bootstrap-datetimepicker-widget .datepicker .table-condensed th.day.today:before, .bootstrap-datetimepicker-widget .datepicker .table-condensed td.day.today:before {

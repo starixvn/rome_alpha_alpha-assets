@@ -16,12 +16,21 @@
     --fanex-multiselect-color-arrow: #ededed; 
     --fanex-multiselect-color-line: #474747;
 }
- 
+
 .fanex-multiselect {
     color: var(--fanex-multiselect-color);
     position: relative;
     display: flex;
     align-items: center;
+
+    &.fanex-multiselect-state-disabled {
+        opacity: 0.7;
+        cursor: not-allowed;
+
+        input {
+            cursor: not-allowed;
+        }
+    }
 
     input {
         color: var(--fanex-multiselect-color);
@@ -48,7 +57,7 @@
     background: var(--fanex-multiselect-background);
     border-radius: 3px;
     border: 1px solid var(--fanex-multiselect-border);
-    overflow: auto;
+    
     z-index: 10;
 
     .fanex-multiselect-filter {
@@ -88,7 +97,9 @@
         font-weight: bold;
         color: var(--fanex-multiselect-color);
     }
-
+    .fanex-multiselect-ul-group{
+        overflow: auto;
+    }
     .custom-ui-widget-header, .fanex-multiselect-ul-group {
         li {
             label {

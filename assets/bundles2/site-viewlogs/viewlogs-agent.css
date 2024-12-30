@@ -4543,11 +4543,11 @@ a, a:focus, a:active, a:target, a:hover {
 
 @font-face {
   font-family: 'Iconalpha';
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?fynvlg');
-  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?fynvlg#iefix') format('embedded-opentype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?fynvlg') format('truetype'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?fynvlg') format('woff'),
-    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?fynvlg#Iconalpha') format('svg');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?mngptz');
+  src:  url('../../styles/fonts/iconalpha/fonts/Iconalpha.eot?mngptz#iefix') format('embedded-opentype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.ttf?mngptz') format('truetype'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.woff?mngptz') format('woff'),
+    url('../../styles/fonts/iconalpha/fonts/Iconalpha.svg?mngptz#Iconalpha') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -4568,6 +4568,9 @@ a, a:focus, a:active, a:target, a:hover {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-directmember:before {
+  content: "\e999";
+}
 .icon-whitelabel:before {
   content: "\e998";
 }

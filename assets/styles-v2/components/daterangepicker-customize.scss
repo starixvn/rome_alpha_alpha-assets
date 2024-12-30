@@ -411,7 +411,7 @@
                     height: 100%;
                     opacity: 0;
                     appearance: none;
-                    background: transparent;
+                    background: var(--datarangepicker-background);
                     border: 0;
                     text-transform: uppercase;
                     outline: 0;

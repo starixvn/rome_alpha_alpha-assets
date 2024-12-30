@@ -50,12 +50,15 @@
         text-transform: none;
         color: #666;
         font-weight: bold;
-        outline: none; }
+        outline: none;
+        cursor: pointer; }
       .tabs .nav-tabs > li.active a, .tabs .nav-tabs > li:hover a, .tabs .nav-tabs > li:focus a {
         color: var(--tab-text-color); }
       .tabs .nav-tabs > li.active:after, .tabs .nav-tabs > li:hover:after, .tabs .nav-tabs > li:focus:after {
         width: 100%;
         background: var(--tab-line-background); }
+      .tabs .nav-tabs > li.tab-icon:hover:after {
+        display: none; }
 
 :root, :root [data-theme='light'] {
   --tooltip-color: #fff;
@@ -171,7 +174,7 @@
   --table-bg-header: #A4A4A4;
   --table-header-bg2: #AEBCCC;
   --table-bg: #fff;
-  --table-bg-hover: #F8F9FD;
+  --table-bg-hover: #E5E2D3;
   --table-bg-highlight: #FFF5E8;
   --table-color: var(--text-color);
   --table-footer-background: #65768A;
@@ -190,13 +193,13 @@
   --table-header-bg: #344259;
   --table-header-bg2: #252F40;
   --table-height: 33px;
-  --table-border: #464646;
+  --table-border: #696969;
   --table-bg-header: #A4A4A4;
   --table-bg: #171717;
-  --table-bg-hover: #2E2F33;
+  --table-bg-hover: #4D4A41;
   --table-bg-highlight: #332E24;
   --table-color: var(--text-color);
-  --table-footer-background: #212A38;
+  --table-footer-background: #2E4466;
   --table-footer-color: #FFFFFF;
   --table-link-color: #41A4FF;
   --icon-color: #ededed;
@@ -296,7 +299,8 @@
     background-color: var(--table-header-bg);
     text-align: center; }
     .tb thead th.sorting_asc, .tb thead th.sorting_desc {
-      cursor: pointer; }
+      cursor: pointer;
+      padding-right: 16px; }
       .tb thead th.sorting_asc:after, .tb thead th.sorting_desc:after {
         position: absolute;
         content: "\e90e";
@@ -343,6 +347,36 @@
       .tb thead th.sorting.sorting-desc:after {
         content: "\e910";
         color: #ff1500; }
+      .tb thead th.sorting.col-combine {
+        padding-right: 6px; }
+        .tb thead th.sorting.col-combine:after {
+          display: none; }
+        .tb thead th.sorting.col-combine.sorting-asc .prior-sortedcolumn:after {
+          content: "\e90f";
+          color: #ff1500; }
+        .tb thead th.sorting.col-combine.sorting-desc .prior-sortedcolumn:after {
+          content: "\e910";
+          color: #ff1500; }
+        .tb thead th.sorting.col-combine .prior-sortedcolumn {
+          padding-right: 16px;
+          position: relative;
+          cursor: pointer; }
+          .tb thead th.sorting.col-combine .prior-sortedcolumn:after {
+            position: absolute;
+            content: "\e90e";
+            font-family: 'icon-alpha-v2' !important;
+            speak: never;
+            font-style: normal;
+            font-weight: normal;
+            font-variant: normal;
+            text-transform: none;
+            line-height: 1;
+            -webkit-font-smoothing: antialiased;
+            font-size: 16px;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            margin-top: -1px; }
   .tb thead .thead-row2 th {
     background: var(--table-header-bg2);
     border-top: 0; }
@@ -381,6 +415,8 @@
       border-left: 1px solid var(--table-border); }
   .tb-bordered thead tr.thead-row2 th:first-child {
     border-left: 0 !important; }
+  .tb-bordered thead tr.thead-row2 th.has-border {
+    border-left: 1px solid var(--table-border) !important; }
   .tb-bordered thead tr th, .tb-bordered thead tr td {
     border-top: 1px solid var(--table-border);
     border-bottom: 1px solid var(--table-border);
@@ -435,6 +471,27 @@
 .stack-mode .hidden-stack-mode {
   display: none; }
 
+.text-icon {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  align-items: center; }
+  .text-icon [class^="ic-"], .text-icon [class*=" ic-"] {
+    font-size: 20px;
+    margin-left: 5px;
+    color: var(--table-color);
+    cursor: pointer; }
+
+.text-icon-left {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  cursor: pointer; }
+  .text-icon-left [class^="ic-"], .text-icon-left [class*=" ic-"] {
+    font-size: 20px;
+    color: var(--table-color);
+    cursor: pointer; }
+
 @media only screen and (max-device-width: 767px) {
   .w-60p {
     width: 100%; } }
@@ -472,7 +529,8 @@
     border: 1px solid var(--multiselect-border) !important;
     border-radius: 3px;
     box-shadow: none !important;
-    text-align: left; }
+    text-align: left;
+    display: block; }
     .btn-group button.multiselect.dropdown-toggle.btn.btn-default.error {
       border-color: var(--input-border-error) !important; }
     .btn-group button.multiselect.dropdown-toggle.btn.btn-default:hover {
@@ -586,6 +644,9 @@ ul.multiselect-container.dropdown-menu {
   ul.multiselect-container.dropdown-menu .multiselect-all a {
     border-bottom: 1px solid var(--multiselect-border) !important; }
 
+.product-multiselect-long .dropdown-menu.multiselect-container {
+  min-width: 220px !important; }
+
 :root, :root [data-theme='light'] {
   --fanex-multiselect-background: #fff;
   --fanex-multiselect-color: #212121;
@@ -627,7 +688,6 @@ ul.multiselect-container.dropdown-menu {
   background: var(--fanex-multiselect-background);
   border-radius: 3px;
   border: 1px solid var(--fanex-multiselect-border);
-  overflow: auto;
   z-index: 10; }
   .fanex-multiselect-options .fanex-multiselect-filter {
     position: relative;
@@ -657,6 +717,8 @@ ul.multiselect-container.dropdown-menu {
     padding: 10px 0;
     font-weight: bold;
     color: var(--fanex-multiselect-color); }
+  .fanex-multiselect-options .fanex-multiselect-ul-group {
+    overflow: auto; }
   .fanex-multiselect-options .custom-ui-widget-header li label, .fanex-multiselect-options .fanex-multiselect-ul-group li label {
     margin: 0;
     display: inline-flex;
@@ -1119,7 +1181,7 @@ ul.multiselect-container.dropdown-menu {
         height: 100%;
         opacity: 0;
         appearance: none;
-        background: transparent;
+        background: var(--datarangepicker-background);
         border: 0;
         text-transform: uppercase;
         outline: 0; }

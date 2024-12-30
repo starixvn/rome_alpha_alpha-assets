@@ -3,7 +3,7 @@
     --filter-btn-link-color: #0B599C;
     --filter-btn-link-bg: #D3DFEC;
     --filter-btn-link-bg-hover: #c3d3e5;
-    --filter-bg-ic: #E6E6E6;
+    --filter-bg-ic: #ebeaea;
     --filter-bg-ic-hover: #dadada;
     //switch version
     --link-version-border: #A5A5A5;
@@ -12,7 +12,7 @@
     //color ic
     --color-ic-copy: #444;
     --color-ic-excel: #1F7244;
-    --color-ic-information: #0b599c;
+    --color-ic-information: #118AF2;
 }
 
 :root [data-theme='dark'] {
@@ -20,7 +20,7 @@
     --filter-btn-link-color: #41A4FF;
     --filter-btn-link-bg: #303740;
     --filter-btn-link-bg-hover: #2d343c;
-    --filter-bg-ic: #2F2F2F;
+    --filter-bg-ic: #252525;
     --filter-bg-ic-hover: #2c2c2c;
     //switch version
     --link-version-border: #8B8B8B;
@@ -29,7 +29,7 @@
     //color ic
     --color-ic-copy: #ededed;
     --color-ic-excel: #18965B;
-    --color-ic-information: #41a4ff;
+    --color-ic-information: #118AF2;
 }
 
 .button-link {
@@ -49,7 +49,7 @@
     }
 }
 .filter {
-    z-index: 100;
+    z-index: 190;
     padding-top: 0;
     display: flex;
     align-items: flex-end;
@@ -73,23 +73,23 @@
     .ic-information {
         font-size: 18px;
         position: relative;
-        top: -4px;
 
         &:before {
             color: var(--color-ic-information);
         }
     }
 
-    [class^="ic-"], [class*=" ic-"]{
+    [class^="ic-"], [class*=" ic-"] {
         cursor: pointer;
     }
-    .ic-copy, .icon-copy, .ic-excel {
+
+    .ic-copy, .icon-copy, .ic-excel, .ic-information {
         background: var(--filter-bg-ic);
         width: 28px;
         height: 28px;
         display: block;
         text-align: center;
-        border-radius: 3px;
+        border-radius: 5px;
         padding: 4px;
         cursor: pointer;
 
@@ -98,19 +98,28 @@
         }
     }
 
-    * {
-        user-select: none;
-        -webkit-user-select: none;
-    }
-
-
     .form-group {
-        margin: 0 24px 16px 0;
+        margin: 0 16px 16px 0;
         vertical-align: bottom;
         position: relative;
-        &-short{
-            margin-right: 12px;
+        display: inline-block;
+
+        @for $i from 1 through 20 {
+            &:nth-child(#{$i}) {
+                z-index: (25 - $i);
+            }
         }
+
+        &.from-date-box {
+            margin-right: 6px;
+        }
+
+        &.from-date-box, &.to-date-box {
+            input[type='text'], input[type='datetime'] {
+                width: 110px;
+            }
+        }
+
         .label-form-control, label {
             color: var(--text-color-label);
             line-height: 16px;
@@ -137,7 +146,7 @@
             }
         }
 
-        input[type='text'] {
+        input[type='text'], input[type='datetime'] {
             width: 160px;
             color: var(--text-color);
         }

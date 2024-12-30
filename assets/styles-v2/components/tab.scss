@@ -73,6 +73,7 @@
                 color: #666;
                 font-weight: bold;
                 outline: none;
+                cursor: pointer;
             }
 
             &.active, &:hover, &:focus {
@@ -84,6 +85,14 @@
                 &:after {
                     width: 100%;
                     background: var(--tab-line-background);
+                }
+            }
+
+            &.tab-icon{
+                &:hover{
+                    &:after{
+                        display: none;
+                    }
                 }
             }
         }

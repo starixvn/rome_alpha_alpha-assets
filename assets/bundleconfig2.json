@@ -1068,24 +1068,6 @@
     ]
   },
   {
-    "outputFileName": "bundles2/site-reports/tab-super.css",
-    "inputFiles": [
-      "styles/themes/components/tabs/tab-super2.css"
-    ]
-  },
-  {
-    "outputFileName": "bundles2/site-reports/tab-master.css",
-    "inputFiles": [
-      "styles/themes/components/tabs/tab-master2.css"
-    ]
-  },
-  {
-    "outputFileName": "bundles2/site-reports/tab-agent.css",
-    "inputFiles": [
-      "styles/themes/components/tabs/tab-agent2.css"
-    ]
-  },
-  {
     "outputFileName": "bundles2/site-memberinfo/tab-super.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super2.css"
@@ -1807,24 +1789,6 @@
     ]
   },
   {
-    "outputFileName": "bundles2/site-reports/tab-super-dark.css",
-    "inputFiles": [
-      "styles/themes/components/tabs/tab-super2-dark.css"
-    ]
-  },
-  {
-    "outputFileName": "bundles2/site-reports/tab-master-dark.css",
-    "inputFiles": [
-      "styles/themes/components/tabs/tab-master2-dark.css"
-    ]
-  },
-  {
-    "outputFileName": "bundles2/site-reports/tab-agent-dark.css",
-    "inputFiles": [
-      "styles/themes/components/tabs/tab-agent2-dark.css"
-    ]
-  },
-  {
     "outputFileName": "bundles2/site-memberinfo/tab-super-dark.css",
     "inputFiles": [
       "styles/themes/components/tabs/tab-super2-dark.css"
@@ -1970,14 +1934,14 @@
     ]
   },
   {
-    "outputFileName": "bundles/site-reports/filter-new-dark.css",
+    "outputFileName": "bundles2/site-reports/filter-new-dark.css",
     "inputFiles": [
       "styles/vendors/daterangepicker/jquery.daterangepicker.css",
       "styles/components/daterangepicker-customize-dark.css"
     ]
   },
   {
-    "outputFileName": "bundles-v2/site-transfer/reward.css",
+    "outputFileName": "bundles2-v2/site-transfer/reward.css",
     "inputFiles": [
       "styles-v2/components/tab.css",
       "styles-v2/components/tooltip.css",
@@ -1988,6 +1952,164 @@
       "styles-v2/components/daterangepicker-customize.css",
       "styles-v2/components/autosuggest.css"
     ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/outstanding.css",
+    "inputFiles": [
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/enteredresult.css",
+    "inputFiles": [
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/winloss.css",
+    "inputFiles": [
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/tooltip.css",
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/monthpicker.css",
+      "styles-v2/components/bootstrap-daterangepicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/winlossdetailnew.css",
+    "inputFiles": [
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/tooltip.css",
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/fanex-multiselect.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/autosuggest.css",
+      "styles-v2/components/daterangepicker-customize.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/winlossanalysischart.css",
+    "inputFiles": [
+      "styles-v2/components/monthpicker.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/winlossbyproduct.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tooltip.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/superwinlossdetailbypt.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/commissionbybettype.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/consolidation.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/statement.css",
+    "inputFiles": [
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/pager.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/progressivecontribution.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/monthpicker.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/tables.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/bonusdetail.css",
+    "inputFiles": [
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/pager.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/betcredittracking.css",
+    "inputFiles": [
+      "styles-v2/components/tab.css",
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/monthpicker.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/pager.css",
+      "styles-v2/vendors/tipsy.css",
+      "styles-v2/components/tipsy-modify.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/betchoicematching.css",
+    "inputFiles": [
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/monthpicker.css",
+      "styles-v2/components/bootstrap-daterangepicker.css"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/betcredittracking.js",
+    "inputFiles": [
+      "js-v2/components/tipsy/jquery.tipsy.js",
+      "js-v2/components/tipsy/tipsy-helper.js"
+    ]
+  },
+  {
+    "outputFileName": "bundles2-v2/site-reports/whitelabel.css",
+    "inputFiles": [
+      "styles-v2/components/tab.css",
+      "styles-v2/components/multiselect.css",
+      "styles-v2/components/fanex-multiselect.css",
+      "styles-v2/components/tables.css",
+      "styles-v2/components/daterange-dropdown.css",
+      "styles-v2/components/monthpicker.css",
+      "styles-v2/components/bootstrap-daterangepicker.css",
+      "styles-v2/components/daterangepicker-customize.css",
+      "styles-v2/components/tooltip.css"
+    ]
   }
-
 ]

@@ -31,7 +31,8 @@
     border: 1px solid var(--multiselect-border) !important;
     border-radius: 3px;
     box-shadow: none !important;
-    text-align: left; }
+    text-align: left;
+    display: block; }
     .btn-group button.multiselect.dropdown-toggle.btn.btn-default.error {
       border-color: var(--input-border-error) !important; }
     .btn-group button.multiselect.dropdown-toggle.btn.btn-default:hover {
@@ -144,3 +145,6 @@ ul.multiselect-container.dropdown-menu {
         position: relative; }
   ul.multiselect-container.dropdown-menu .multiselect-all a {
     border-bottom: 1px solid var(--multiselect-border) !important; }
+
+.product-multiselect-long .dropdown-menu.multiselect-container {
+  min-width: 220px !important; }

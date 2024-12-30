@@ -50,9 +50,12 @@
         text-transform: none;
         color: #666;
         font-weight: bold;
-        outline: none; }
+        outline: none;
+        cursor: pointer; }
       .tabs .nav-tabs > li.active a, .tabs .nav-tabs > li:hover a, .tabs .nav-tabs > li:focus a {
         color: var(--tab-text-color); }
       .tabs .nav-tabs > li.active:after, .tabs .nav-tabs > li:hover:after, .tabs .nav-tabs > li:focus:after {
         width: 100%;
         background: var(--tab-line-background); }
+      .tabs .nav-tabs > li.tab-icon:hover:after {
+        display: none; }

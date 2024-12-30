@@ -22,7 +22,7 @@
   --input-bg-error: #361212;
   --input-border-error: #CC7070; }
 
-input[type='text'], input[type='password'], input[type='email'], input[type='tel'], input[type="number"] {
+input[type='text'], input[type='password'], input[type='email'], input[type='tel'], input[type="number"], input[type='datetime'] {
   height: var(--input-height);
   line-height: var(--input-line-height);
   border: none;
@@ -37,22 +37,42 @@ input[type='text'], input[type='password'], input[type='email'], input[type='tel
   box-shadow: none;
   background-color: var(--input-bg);
   font-family: inherit; }
-  .filter input[type='text'], .form-inline input[type='text'], .filter input[type='password'], .form-inline input[type='password'], .filter input[type='email'], .form-inline input[type='email'], .filter input[type='tel'], .form-inline input[type='tel'], .filter input[type="number"], .form-inline input[type="number"] {
+  .filter input[type='text'], .form-inline input[type='text'], .filter input[type='password'], .form-inline input[type='password'], .filter input[type='email'], .form-inline input[type='email'], .filter input[type='tel'], .form-inline input[type='tel'], .filter input[type="number"], .form-inline input[type="number"], .filter input[type='datetime'], .form-inline input[type='datetime'] {
     width: 160px;
     display: block;
     vertical-align: middle; }
-  .error input[type='text'], .error input[type='password'], .error input[type='email'], .error input[type='tel'], .error input[type="number"] {
+  .error input[type='text'], .error input[type='password'], .error input[type='email'], .error input[type='tel'], .error input[type="number"], .error input[type='datetime'] {
     border: 1px solid var(--input-border-error); }
-  input[type='text']:focus, input[type='password']:focus, input[type='email']:focus, input[type='tel']:focus, input[type="number"]:focus {
+  input[type='text']:focus, input[type='password']:focus, input[type='email']:focus, input[type='tel']:focus, input[type="number"]:focus, input[type='datetime']:focus {
     box-shadow: none;
     border-radius: 3px;
     border-color: var(--input-border); }
-  input[type='text']::-ms-clear, input[type='password']::-ms-clear, input[type='email']::-ms-clear, input[type='tel']::-ms-clear, input[type="number"]::-ms-clear {
+  input[type='text']::-ms-clear, input[type='password']::-ms-clear, input[type='email']::-ms-clear, input[type='tel']::-ms-clear, input[type="number"]::-ms-clear, input[type='datetime']::-ms-clear {
     display: none; }
-  input[type='text'][disabled], input[type='text'] .disabled, input[type='password'][disabled], input[type='password'] .disabled, input[type='email'][disabled], input[type='email'] .disabled, input[type='tel'][disabled], input[type='tel'] .disabled, input[type="number"][disabled], input[type="number"] .disabled {
+  input[type='text'][disabled], input[type='text'] .disabled, input[type='password'][disabled], input[type='password'] .disabled, input[type='email'][disabled], input[type='email'] .disabled, input[type='tel'][disabled], input[type='tel'] .disabled, input[type="number"][disabled], input[type="number"] .disabled, input[type='datetime'][disabled], input[type='datetime'] .disabled {
     opacity: .4;
     cursor: not-allowed; }
-  input[type='text'].error, input[type='password'].error, input[type='email'].error, input[type='tel'].error, input[type="number"].error {
+  input[type='text'].error, input[type='password'].error, input[type='email'].error, input[type='tel'].error, input[type="number"].error, input[type='datetime'].error {
+    border-color: var(--input-border-error) !important;
+    background-color: var(--input-bg-error); }
+
+.original-select {
+  height: var(--input-height);
+  line-height: var(--input-line-height);
+  border: none;
+  outline: none;
+  padding-left: 8px;
+  padding-right: 8px;
+  width: 80px;
+  border: 1px solid var(--input-border);
+  font-size: var(--font-size);
+  border-radius: 3px;
+  box-shadow: none;
+  background-color: var(--input-bg);
+  font-family: inherit; }
+  .error .original-select {
+    border: 1px solid var(--input-border-error); }
+  .original-select.error {
     border-color: var(--input-border-error) !important;
     background-color: var(--input-bg-error); }
 

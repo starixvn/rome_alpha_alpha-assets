@@ -28,7 +28,7 @@
     --input-border-error: #CC7070;
 }
 
-input[type='text'], input[type='password'], input[type='email'], input[type='tel'], input[type="number"] {
+input[type='text'], input[type='password'], input[type='email'], input[type='tel'], input[type="number"], input[type='datetime'] {
     height: var(--input-height);
     line-height: var(--input-line-height);
     border: none;
@@ -74,7 +74,30 @@ input[type='text'], input[type='password'], input[type='email'], input[type='tel
         background-color: var(--input-bg-error);
     }
 }
+.original-select {
+    height: var(--input-height);
+    line-height: var(--input-line-height);
+    border: none;
+    outline: none;
+    padding-left: 8px;
+    padding-right: 8px;
+    width: 80px;
+    border: 1px solid var(--input-border);
+    font-size: var(--font-size);
+    border-radius: 3px;
+    box-shadow: none;
+    background-color: var(--input-bg);
+    font-family: inherit;
 
+    .error & {
+        border: 1px solid var(--input-border-error);
+    }
+
+    &.error {
+        border-color: var(--input-border-error) !important;
+        background-color: var(--input-bg-error);
+    }
+}
 input[type="number"] {
     -moz-appearance: textfield;
 }

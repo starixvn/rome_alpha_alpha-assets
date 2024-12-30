@@ -39,7 +39,6 @@
   background: var(--fanex-multiselect-background);
   border-radius: 3px;
   border: 1px solid var(--fanex-multiselect-border);
-  overflow: auto;
   z-index: 10; }
   .fanex-multiselect-options .fanex-multiselect-filter {
     position: relative;
@@ -69,6 +68,8 @@
     padding: 10px 0;
     font-weight: bold;
     color: var(--fanex-multiselect-color); }
+  .fanex-multiselect-options .fanex-multiselect-ul-group {
+    overflow: auto; }
   .fanex-multiselect-options .custom-ui-widget-header li label, .fanex-multiselect-options .fanex-multiselect-ul-group li label {
     margin: 0;
     display: inline-flex;

@@ -45,6 +45,13 @@
 
 @font-face {
   font-family: 'Roboto';
+  src: url("../fonts/roboto/Roboto-Regular.eot");
+  src: url("../fonts/roboto/Roboto-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/roboto/Roboto-Regular.woff2") format("woff2"), url("../fonts/roboto/Roboto-Regular.woff") format("woff"), url("../fonts/roboto/Roboto-Regular.ttf") format("truetype"), url("../fonts/roboto/Roboto-Regular.svg#Roboto") format("svg");
+  font-weight: 400;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'Roboto';
   src: url("../fonts/roboto/Roboto-Regular.woff2") format("woff2");
   src: url("../fonts/roboto/Roboto-Regular.woff") format("woff");
   font-weight: normal;
@@ -154,9 +161,9 @@ html, body {
 
 body {
   font-family: var(--font-family);
-    left: 50%;
+  font-size: var(--font-size);
   color: var(--text-color); }
-  .ripple:hover:after {
+
 .ripple {
   position: relative; }
   .ripple:after {
@@ -220,8 +227,8 @@ a, a:focus, a:active, a:target, a:hover {
 .text-left {
   text-align: left !important; }
 
-.text-right {
-  text-align: right; }
+.text-nowrap {
+  white-space: nowrap; }
 
 .link {
   color: var(--link-color); }
@@ -243,6 +250,25 @@ a, a:focus, a:active, a:target, a:hover {
   .note .star {
     color: var(--color-note-star);
     padding-right: 8px; }
+  .note a {
+    color: #118AF2; }
+
+.report-by {
+  margin-bottom: 10px;
+  display: block;
+  width: 100%; }
+  .report-by span {
+    padding-right: 10px;
+    display: inline-flex;
+    vertical-align: middle;
+    cursor: pointer; }
+    .report-by span label {
+      cursor: pointer; }
+  .report-by input[type="radio"] {
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 4px;
+    cursor: pointer; }
 
 @keyframes ripple {
   0% {

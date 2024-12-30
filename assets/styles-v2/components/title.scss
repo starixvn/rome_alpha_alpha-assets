@@ -11,7 +11,7 @@
     --entered-border-number: #d9d9d9;
     --entered-color-icon: #db6900;
     --entered-color-icon2: #1e8e4b;
-    --title-icon-information: #0b599c;
+    --title-icon-information: #118AF2;
     --title-icon-toggle-up-color: #404040;
     --title-icon-toggle-up-background: rgba(0, 0, 0, 0.05);
 }
@@ -29,7 +29,7 @@
     --entered-border-number: #434343;
     --entered-color-icon: #eb7100;
     --entered-color-icon2: #23a858;
-    --title-icon-information: #41a4ff;
+    --title-icon-information: #118AF2;
     --title-icon-toggle-up-color: #ededed;
     --title-icon-toggle-up-background: rgba(255, 255, 255, 0.05);
 }
@@ -47,7 +47,7 @@
     flex-wrap: wrap;
 
     .text-title {
-        margin-right: 12px;
+        margin-right: 10px;
     }
 
     &.tabs {
@@ -68,7 +68,7 @@
         vertical-align: middle;
         position: relative;
         top: -2px;
-        margin-left: 10px;
+        margin-right: 10px;
     }
 
     .list-icon {
@@ -81,7 +81,7 @@
         }
 
         li {
-            margin-left: 15px;
+            margin-left: 12px;
             display: block;
 
 
@@ -97,6 +97,16 @@
             cursor: pointer;
             border-radius: 5px;
             font-size: 24px;
+            background: var(--title-icon-toggle-up-background);
+        }
+
+        .ic-switchmode {
+            color: var(--title-icon-toggle-up-color);
+            display: inline-block;
+            vertical-align: middle;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 24px;        
             background: var(--title-icon-toggle-up-background);
         }
     }
@@ -276,6 +286,28 @@
             position: absolute;
             top: 0;
             right: 0;
+        }
+    }
+    .title-has-info {
+        border-bottom: 1px solid var(--border-title);
+        margin: 0 0 12px 0;
+
+        .page-title {
+            margin: 0;
+
+            .text-title {
+                border: 0;
+                width: auto;
+                margin-right: 10px;
+            }
+        }
+    }
+
+    .title-has-entered {
+        .page-title {
+            .list-icon {
+                top: 34px;
+            }
         }
     }
 }

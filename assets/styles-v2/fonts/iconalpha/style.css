@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'icon-alpha-v2';
-  src:  url('fonts/icon-alpha-v2.eot?uxfnip');
-  src:  url('fonts/icon-alpha-v2.eot?uxfnip#iefix') format('embedded-opentype'),
-    url('fonts/icon-alpha-v2.ttf?uxfnip') format('truetype'),
-    url('fonts/icon-alpha-v2.woff?uxfnip') format('woff'),
-    url('fonts/icon-alpha-v2.svg?uxfnip#icon-alpha-v2') format('svg');
+  src:  url('fonts/icon-alpha-v2.eot?f08062');
+  src:  url('fonts/icon-alpha-v2.eot?f08062#iefix') format('embedded-opentype'),
+    url('fonts/icon-alpha-v2.ttf?f08062') format('truetype'),
+    url('fonts/icon-alpha-v2.woff?f08062') format('woff'),
+    url('fonts/icon-alpha-v2.svg?f08062#icon-alpha-v2') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,24 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.ic-filter:before {
+  content: "\e91c";
+}
+.ic-payment:before {
+  content: "\e91b";
+}
+.ic-percent:before {
+  content: "\e918";
+}
+.ic-mywatchlist:before {
+  content: "\e916";
+}
+.ic-plus-box:before {
+  content: "\e917";
+}
+.ic-directmember:before {
+  content: "\e915";
+}
 .ic-arrow-down-circle:before {
   content: "\e914";
 }
@@ -76,6 +94,9 @@
 .ic-arrow-right:before {
   content: "\e90b";
 }
+.ic-arrow-down:before {
+  content: "\e919";
+}
 .ic-first:before {
   content: "\e90c";
 }
@@ -119,4 +140,10 @@
 }
 .ic-chevron-double-right:before {
   content: "\e951";
+}
+.ic-normal-column:before {
+  content: "\e95b";
+}
+.ic-stack-column:before {
+  content: "\e95e";
 }

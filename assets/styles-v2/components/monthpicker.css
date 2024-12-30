@@ -16,6 +16,10 @@
   display: flex; }
   .monpickr-super-wrapper > * {
     float: none; }
+  .monpickr-super-wrapper .monpickr-wrap-parent {
+    width: 152px !important; }
+  .monpickr-super-wrapper .daypickr-wrap-parent {
+    width: 56px !important; }
   .monpickr-super-wrapper .monpickr-down {
     position: absolute;
     right: 10px;
@@ -69,7 +73,7 @@
         overflow: hidden;
         text-indent: 30px;
         transform: rotate(90deg);
-        top: 8px;
+        top: 10px;
         left: 3px;
         position: absolute; }
     .monpickr-wrap-parent .monpickr-wrap .prev {
